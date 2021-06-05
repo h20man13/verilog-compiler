@@ -1,0 +1,1 @@
+/usr/bin/clang++     CMakeFiles/SourceTest.dir/__/__/test/common/SourceTest.cpp.o  -o SourceTest ../../libSRCLIB.a 

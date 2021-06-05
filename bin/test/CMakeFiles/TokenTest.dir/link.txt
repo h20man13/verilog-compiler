@@ -1,0 +1,1 @@
+/usr/bin/clang++     CMakeFiles/TokenTest.dir/__/__/test/TokenTest.cpp.o  -o TokenTest ../../libSRCLIB.a 

@@ -1,0 +1,17 @@
+#include "common/Position.h"
+#include "common/ErrorLog.h"
+#include "common/Error.h"
+#include "common/Source.h"
+#include "Token.h"
+
+#include <list>
+
+class Lexer{
+private:
+  const ErrorLog error_log;
+  Source* source;
+public:
+  Lexer(const ErrorLog error_log);
+  void attach_source(const Source source);
+  const std::list<const Token> gen_tokens();
+};

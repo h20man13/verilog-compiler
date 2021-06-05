@@ -1,0 +1,40 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/jacob/Desktop/verilog_compiler/test/TokenTest.cpp
+Token.h
+/home/jacob/Desktop/verilog_compiler/test/Token.h
+common/Position.h
+/home/jacob/Desktop/verilog_compiler/test/common/Position.h
+test/TestUtils.h
+/home/jacob/Desktop/verilog_compiler/test/test/TestUtils.h
+
+include/Token.h
+string
+-
+common/Position.h
+include/common/Position.h
+
+include/common/Colors.h
+string
+-
+
+include/common/Position.h
+string
+-
+
+include/test/TestUtils.h
+iostream
+-
+string
+-
+stdlib.h
+-
+common/Colors.h
+include/test/common/Colors.h
+

@@ -1,0 +1,122 @@
+Start testing: Jun 05 18:37 EDT
+----------------------------------------------------------
+1/7 Testing: TokenTest
+1/7 Test: TokenTest
+Command: "/home/jacob/Desktop/verilog_compiler/bin/test/TokenTest"
+Directory: /home/jacob/Desktop/verilog_compiler/bin/test
+"TokenTest" start time: Jun 05 18:37 EDT
+Output:
+----------------------------------------------------------
+[1m[32mSuccess[0m[1m[37m:[0m Test [1m[37mop_not_found_test[0m passed
+[1m[32mSuccess[0m[1m[37m:[0m Test [1m[37mop_found_test[0m passed
+[1m[32mSuccess[0m[1m[37m:[0m Test [1m[37mis_keyword_test[0m passed
+[1m[32mSuccess[0m[1m[37m:[0m Test [1m[37misnt_keyword_test[0m passed
+[1m[32mSuccess[0m[1m[37m:[0m Test [1m[37mstring_test[0m passed
+[1m[32mSuccess[0m[1m[37m:[0m Test [1m[37mnumber_test[0m passed
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"TokenTest" end time: Jun 05 18:37 EDT
+"TokenTest" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/7 Testing: DestinationTest
+2/7 Test: DestinationTest
+Command: "/home/jacob/Desktop/verilog_compiler/bin/test/DestinationTest"
+Directory: /home/jacob/Desktop/verilog_compiler/bin/test
+"DestinationTest" start time: Jun 05 18:37 EDT
+Output:
+----------------------------------------------------------
+[1m[32mSuccess[0m[1m[37m:[0m Test [1m[37mstring_stream_test[0m passed
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"DestinationTest" end time: Jun 05 18:37 EDT
+"DestinationTest" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/7 Testing: ErrorLogTest
+3/7 Test: ErrorLogTest
+Command: "/home/jacob/Desktop/verilog_compiler/bin/test/ErrorLogTest"
+Directory: /home/jacob/Desktop/verilog_compiler/bin/test
+"ErrorLogTest" start time: Jun 05 18:37 EDT
+Output:
+----------------------------------------------------------
+[1m[32mSuccess[0m[1m[37m:[0m Test [1m[37merror_log_test[0m passed
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"ErrorLogTest" end time: Jun 05 18:37 EDT
+"ErrorLogTest" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/7 Testing: ErrorTest
+4/7 Test: ErrorTest
+Command: "/home/jacob/Desktop/verilog_compiler/bin/test/ErrorTest"
+Directory: /home/jacob/Desktop/verilog_compiler/bin/test
+"ErrorTest" start time: Jun 05 18:37 EDT
+Output:
+----------------------------------------------------------
+[1m[32mSuccess[0m[1m[37m:[0m Test [1m[37mbasic_error_test[0m passed
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"ErrorTest" end time: Jun 05 18:37 EDT
+"ErrorTest" time elapsed: 00:00:00
+----------------------------------------------------------
+
+5/7 Testing: PositionTest
+5/7 Test: PositionTest
+Command: "/home/jacob/Desktop/verilog_compiler/bin/test/PositionTest"
+Directory: /home/jacob/Desktop/verilog_compiler/bin/test
+"PositionTest" start time: Jun 05 18:37 EDT
+Output:
+----------------------------------------------------------
+[1m[32mSuccess[0m[1m[37m:[0m Test [1m[37mbasic_position_test[0m passed
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"PositionTest" end time: Jun 05 18:37 EDT
+"PositionTest" time elapsed: 00:00:00
+----------------------------------------------------------
+
+6/7 Testing: SourceTest
+6/7 Test: SourceTest
+Command: "/home/jacob/Desktop/verilog_compiler/bin/test/SourceTest"
+Directory: /home/jacob/Desktop/verilog_compiler/bin/test
+"SourceTest" start time: Jun 05 18:37 EDT
+Output:
+----------------------------------------------------------
+[1m[32mSuccess[0m[1m[37m:[0m Test [1m[37msource_init_test[0m passed
+[1m[32mSuccess[0m[1m[37m:[0m Test [1m[37msource_total_test[0m passed
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"SourceTest" end time: Jun 05 18:37 EDT
+"SourceTest" time elapsed: 00:00:00
+----------------------------------------------------------
+
+7/7 Testing: LexerTest
+7/7 Test: LexerTest
+Command: "/home/jacob/Desktop/verilog_compiler/bin/test/LexerTest"
+Directory: /home/jacob/Desktop/verilog_compiler/bin/test
+"LexerTest" start time: Jun 05 18:37 EDT
+Output:
+----------------------------------------------------------
+Error: expected tok::IDENTIFIER but got NUMBER at [Line number -> 12 | Line position -> 1]
+[1m[31mError[0m[1m[37m:[0m Test [1m[37mtest_identifier[0m failed
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Failed.
+"LexerTest" end time: Jun 05 18:37 EDT
+"LexerTest" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Jun 05 18:37 EDT

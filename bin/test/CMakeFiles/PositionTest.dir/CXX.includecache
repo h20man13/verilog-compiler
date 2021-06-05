@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/jacob/Desktop/verilog_compiler/test/common/PositionTest.cpp
+common/Position.h
+/home/jacob/Desktop/verilog_compiler/test/common/common/Position.h
+common/Colors.h
+/home/jacob/Desktop/verilog_compiler/test/common/common/Colors.h
+test/TestUtils.h
+/home/jacob/Desktop/verilog_compiler/test/common/test/TestUtils.h
+iostream
+-
+
+include/common/Colors.h
+string
+-
+
+include/common/Position.h
+string
+-
+
+include/test/TestUtils.h
+iostream
+-
+string
+-
+stdlib.h
+-
+common/Colors.h
+include/test/common/Colors.h
+

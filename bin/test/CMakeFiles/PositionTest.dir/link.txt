@@ -1,0 +1,1 @@
+/usr/bin/clang++     CMakeFiles/PositionTest.dir/__/__/test/common/PositionTest.cpp.o  -o PositionTest ../../libSRCLIB.a 
