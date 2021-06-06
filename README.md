@@ -16,11 +16,11 @@
 
 # Build and Dependency Info
 
-<p> This project uses CMAKE with a default build tool GNU Make. The default compiler I used was Clang however you are free to use which ever one that suits your needs.  The commands CMAKE generates are the defaults however to run unit tests I would recomend using <b> make check </b> instead of make test or ctest</p>
+<p> This project uses CMAKE with a default build tool GNU Make. The default compiler I used was Clang however you are free to use which ever one that suits your needs. The commands CMAKE generates are the defaults however to run unit tests I would recomend using <b> make check </b> instead of make test or ctest</p>
   
 # Testing Format
 
-<p> There is a framework I created to make testing easier. Each test file must contain a main function to execute the tests. To add multiple tests to a single file you need to forfill the requirements below them like below</p>
+<p> There is a framework I created to make testing easier. Each test file must contain a main function to execute the tests. To add multiple tests to a single file you need to fulfill the requirements below them like below</p>
 
 <ul>
   <li> Boolean Functions: Tests need to be formatted so that they return a true or a false based on if they pass or fail respectively </li>
