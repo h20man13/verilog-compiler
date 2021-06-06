@@ -17,6 +17,51 @@
 # Build and Dependency Info
 
 <p> This project uses CMAKE with a default build tool GNU Make. The default compiler I used was Clang however you are free to use which ever one that suits your needs. The commands CMAKE generates are the defaults however to run unit tests I would recommend using <b> make check </b> instead of make test or ctest</p>
+
+.
+├── bin
+│   ├── CMakeLists.txt
+│   └── test
+│       └── CMakeLists.txt
+├── CMakeLists.txt
+├── include
+│   ├── common
+│   │   ├── Colors.h
+│   │   ├── Destination.h
+│   │   ├── Error.h
+│   │   ├── ErrorLog.h
+│   │   ├── Position.h
+│   │   └── Source.h
+│   ├── main
+│   │   └── Lexer.h
+│   ├── test
+│   │   └── TestUtils.h
+│   └── Token.h
+├── lib
+├── README.md
+├── src
+│   ├── common
+│   │   ├── CMakeFiles
+│   │   ├── Colors.cpp
+│   │   ├── Destination.cpp
+│   │   ├── Error.cpp
+│   │   ├── ErrorLog.cpp
+│   │   ├── Position.cpp
+│   │   └── Source.cpp
+│   ├── main
+│   │   └── Lexer.cpp
+│   └── Token.cpp
+└── test
+    ├── common
+    │   ├── DestinationTest.cpp
+    │   ├── ErrorLogTest.cpp
+    │   ├── ErrorTest.cpp
+    │   ├── PositionTest.cpp
+    │   └── SourceTest.cpp
+    ├── main
+    │   └── LexerTest.cpp
+    └── TokenTest.cpp
+
   
 # Testing Format
 
