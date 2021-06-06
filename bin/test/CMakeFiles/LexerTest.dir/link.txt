@@ -1,1 +1,0 @@
-/usr/bin/clang++     CMakeFiles/LexerTest.dir/__/__/test/main/LexerTest.cpp.o  -o LexerTest ../../libSRCLIB.a 

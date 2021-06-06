@@ -44,7 +44,7 @@ const std::optional<const Token> Lexer::parse_identifier(){
   Position pos(source->get_current_position());
   char c = source->current();
   std::string lexeme;
-  while(c == '_' || isalpha(c)){
+  while((c == '_' || isalpha(c) || isdigit(c)) && !source->eof()){
     lexeme += c;
     source->advance();
     c = source->current();
@@ -56,11 +56,25 @@ const std::optional<const Token> Lexer::parse_macro(){
   Position pos(source->get_current_position());
   char c = source->current();
   std::string lexeme;
-  while(c == '_' || isalpha(c)){
+  lexeme += c; // add '`' to lexeme
+  source->advance();
+  c = source->current();
+  if(c != '_' && !isalpha(c)){
+    parse_error();
+    return std::nullopt;
+  }
+  while((c == '_' || isalpha(c) || isdigit(c)) && !source->eof()){
     lexeme += c;
     source->advance();
     c = source->current();
   }
+
+  if(lexeme == "`"){
+    Error err("No identifier found for macro definition", pos);
+    error_log.add(err);
+    return std::nullopt;
+  }
+  
   return { Token::make_macro_token(lexeme, pos) };
 }
 
@@ -74,6 +88,12 @@ const std::optional<const Token> Lexer::parse_string(){
   while(c != '\"'){
     if(c == '/' && source->next() == '*'){
       parse_multiple_line_comment();
+      c = source->current(); //update c after current changed in function
+    } else if (source->eof()){
+      Error error("Unexpected end of file while parsing string", pos);
+      error_log.add(error);
+      parse_error();
+      return std::nullopt;
     } else {
       source->advance();
       lexeme += c;
@@ -90,15 +110,22 @@ void Lexer::parse_single_line_comment(){
   char c = source->current();
   while(c != '\n' && !source->eof()){
     source->advance();
+    c = source->current();
   }
   source->advance();
 }
 
 void Lexer::parse_multiple_line_comment(){
+  Position pos(source->get_current_position());
   source->advance(2); // advance past the double / ie /*
   char c = source->current();
-  while(c != '*' && source->next() != '/' && !source->eof()){
+  while(c != '*' && source->next() != '/'){
+    if(source->eof()){
+      Error err("Unterminated comment found at eof", pos);
+      error_log.add(err);
+    }
     source->advance();
+    c = source->current();
   }
   source->advance(2); //skip over */ ending
 }
@@ -147,7 +174,7 @@ const std::optional<const Token> Lexer::parse_operator(){
 
 void Lexer::parse_error(){
   char c = source->current();
-  while(!isspace(c) || c == '\n'){
+  while(!isspace(c) && c != '\n' && !source->eof()){
     source->advance();
     c = source->current();
   }
@@ -164,12 +191,14 @@ const std::optional<const std::string> Lexer::parse_real(){
     source->advance();
     c = source->current();
   }
+  
   if(!isspace(c)){
     Error error("Unexpected hexidecimnal literal found ", source->get_current_position());
     error_log.add(error);
     parse_error();
     return std::nullopt;
   }
+  
   return { lexeme };
 }
 

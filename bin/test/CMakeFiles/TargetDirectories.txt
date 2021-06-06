@@ -1,2 +1,0 @@
-/home/jacob/Desktop/emulator_ide/bin/test/CMakeFiles/rebuild_cache.dir
-/home/jacob/Desktop/emulator_ide/bin/test/CMakeFiles/edit_cache.dir

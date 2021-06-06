@@ -14,7 +14,7 @@
     int count = 0;							\
     for(std::list<const Token>::iterator it = toks.begin(); it != toks.end(); it++){ \
       if(it->get_type() != type){					\
-	std::cout << "Error: expected " << #type << " but got " << type_to_string(it->get_type())  << " at " << it->get_position().to_string() << std::endl; \
+      std::cout << "Error: At token " << count << " expected " << #type << " but got " << type_to_string(it->get_type())  << " at " << it->get_position().to_string() << std::endl; \
 	return false;							\
       }									\
       count++;								\

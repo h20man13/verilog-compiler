@@ -32,3 +32,4 @@ add_library(SRCLIB STATIC ${SRCFILES})
 add_subdirectory(bin)
 
 add_custom_target(check COMMAND ${CMAKE_CTEST_COMMAND} --verbose)
+add_custom_target(delete COMMAND find . -type f -name '*~' -delete)

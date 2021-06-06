@@ -33,7 +33,7 @@ void Source::advance(const unsigned int num){
     if(_current == '\n'){
       line_number++;
       line_position = 0;
-    } else {
+    } else if (!eof()){
       line_position++;
     }
     i++;

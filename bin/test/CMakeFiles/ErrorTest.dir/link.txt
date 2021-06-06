@@ -1,1 +1,0 @@
-/usr/bin/clang++     CMakeFiles/ErrorTest.dir/__/__/test/common/ErrorTest.cpp.o  -o ErrorTest ../../libSRCLIB.a 
