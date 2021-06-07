@@ -200,6 +200,23 @@ static bool test_strings(){
   return true;
 }
 
+static bool test_comments(){
+
+  std::stringstream ss("\" /* This is a comment */ \"//                                  \n");
+  Source source(ss);
+  Destination dest(std::cout);
+  ErrorLog error_log(dest);
+  Lexer lex(error_log);
+
+  lex.attach_source(source);
+
+  std::list<const Token> toks = lex.gen_tokens();
+
+  test_one_type(tok::STRING);
+  
+  return true;
+}
+
 static bool test_operators(){
 
   std::stringstream ss("(){}[],+-*%/?:<><=>=;@$= == === != !== &&||!&~ | ^^~~^ ~& ~| <<>>");
@@ -270,6 +287,7 @@ int main(){
   run_test(test_octal);
   run_test(test_binary);
   run_test(test_strings);
+  run_test(test_comments);
   run_test(test_operators);
   return 0;
 }
