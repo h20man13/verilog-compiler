@@ -20,67 +20,67 @@
 #define BOLDCYAN    "\033[1m\033[36m"      /* Bold Cyan */
 #define BOLDWHITE   "\033[1m\033[37m"      /* Bold White */
 
-std::string white(std::string text){
+const std::string white(const std::string& text){
   return WHITE + text + RESET;
 }
 
-std::string black(std::string text){
+const std::string black(const std::string& text){
   return BLACK + text + RESET;
 }
 
-std::string red(std::string text){
+const std::string red(const std::string& text){
   return RED + text + RESET;
 }
 
-std::string green(std::string text){
+const std::string green(const std::string& text){
   return GREEN + text + RESET;
 }
 
-std::string yellow(std::string text){
+const std::string yellow(const std::string& text){
   return YELLOW + text + RESET;
 }
 
-std::string blue(std::string text){
+const std::string blue(const std::string& text){
  return BLUE + text + RESET;
 }
 
-std::string magenta(std::string text){
+const std::string magenta(const std::string& text){
  return MAGENTA + text + RESET;
 }
 
-std::string cyan(std::string text){
+const std::string cyan(const std::string& text){
  return CYAN + text + RESET;
 }
 
-std::string bold_white(std::string text){
+const std::string bold_white(const std::string& text){
   return BOLDWHITE + text + RESET;
 }
 
-std::string bold_black(std::string text){
+const std::string bold_black(const std::string& text){
   return BOLDBLACK + text + RESET;
 }
 
-std::string bold_red(std::string text){
+const std::string bold_red(const std::string& text){
   return BOLDRED + text + RESET;
 }
 
-std::string bold_green(std::string text){
+const std::string bold_green(const std::string& text){
   return BOLDGREEN + text + RESET;
 }
 
-std::string bold_yellow(std::string text){
+const std::string bold_yellow(const std::string& text){
   return BOLDYELLOW + text + RESET;
 }
 
-std::string bold_blue(std::string text){
+const std::string bold_blue(const std::string& text){
  return BOLDBLUE + text + RESET;
 }
 
-std::string bold_magenta(std::string text){
+const std::string bold_magenta(const std::string& text){
  return BOLDMAGENTA + text + RESET;
 }
 
-std::string bold_cyan(std::string text){
+const std::string bold_cyan(const std::string& text){
  return BOLDCYAN + text + RESET;
 }
 
