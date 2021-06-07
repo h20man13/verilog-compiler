@@ -3,46 +3,36 @@
 
 #include <string>
 
-std::string white(std::string text);
+const std::string white(const std::string& text);
 
-std::string black(std::string text);
+const std::string black(const std::string& text);
 
-std::string red(std::string text);
+const std::string red(const std::string& text);
 
+const std::string green(const std::string& text);
 
-std::string green(std::string text);
+const std::string yellow(const std::string& text);
 
+const std::string blue(const std::string& text);
 
-std::string yellow(std::string text);
+const std::string magenta(const std::string& text);
 
+const std::string cyan(const std::string& text);
 
-std::string blue(std::string text);
+const std::string bold_white(const std::string& text);
 
+const std::string bold_black(const std::string& text);
 
-std::string magenta(std::string text);
+const std::string bold_red(const std::string& text);
 
+const std::string bold_green(const std::string& text);
 
-std::string cyan(std::string text);
+const std::string bold_yellow(const std::string& text);
 
+const std::string bold_blue(const std::string& text);
 
-std::string bold_white(std::string text);
+const std::string bold_magenta(const std::string& text);
 
-
-std::string bold_black(std::string text);
-
-
-std::string bold_red(std::string text);
-
-
-std::string bold_green(std::string text);
-
-
-std::string bold_yellow(std::string text);
-
-std::string bold_blue(std::string text);
-
-std::string bold_magenta(std::string text);
-
-std::string bold_cyan(std::string text);
+const std::string bold_cyan(const std::string& text);
 
 #endif
