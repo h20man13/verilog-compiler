@@ -70,7 +70,6 @@ enum tok{
   ASSIGN,
   POSEGE,
   NEGEGE,
-  OR,
   IF,
   ELSE,
   WHILE,
@@ -87,13 +86,13 @@ enum tok{
   CASEX,
   DEFAULT,
   WIRE,
-  ORGATE,
-  NORGATE,
-  NANDGATE,
-  ANDGATE,
-  XORGATE,
-  XNORGATE,
-  NOTGATE
+  OR,
+  NOR,
+  NAND,
+  AND,
+  XOR,
+  XNOR,
+  NOT
 };
 
   

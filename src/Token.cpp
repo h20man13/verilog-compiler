@@ -22,21 +22,24 @@ const std::string type_to_string(const tok type){
   return enum_strings[type];
 }
 
-#define ADD_OPERATOR(text, symbol)		\
-  do{						\
-    operators[symbol] = text;			\
-    enum_strings.push_back(#text);		\
+#define ADD_OPERATOR(text, symbol)				\
+  do{								\
+    operators[symbol] = text;					\
+    if(enum_strings.empty() || enum_strings.back() != #text)	\
+      enum_strings.push_back(#text);				\
   } while(false)
 
-#define ADD_KEYWORD(text)			\
-  do{						\
-    keywords[#text] = text;			\
-    enum_strings.push_back(#text);		\
+#define ADD_KEYWORD(text)					\
+  do{								\
+    keywords[#text] = text;					\
+    if(enum_strings.empty() || enum_strings.back() != #text)	\
+      enum_strings.push_back(#text);				\
   } while(false)
 
-#define ADD_MISC(text)				\
-  do {						\
-    enum_strings.push_back(#text);		\
+#define ADD_MISC(text)						\
+  do{								\
+    if(enum_strings.empty() || enum_strings.back() != #text)	\
+      enum_strings.push_back(#text);				\
   } while(false)
 
 struct TokDecl{
@@ -51,22 +54,22 @@ public:
 
     ADD_OPERATOR(LPAR, "(");
     ADD_OPERATOR(RPAR, ")");
+    ADD_OPERATOR(RCURL, "}");
     ADD_OPERATOR(LCURL, "{");
-    ADD_OPERATOR(RCURL, "(");
-    ADD_OPERATOR(LBRACK, "[");
     ADD_OPERATOR(RBRACK, "]");
+    ADD_OPERATOR(LBRACK, "[");
     ADD_OPERATOR(COMMA, ",");
     ADD_OPERATOR(PLUS, "+");
     ADD_OPERATOR(MINUS, "-");
     ADD_OPERATOR(TIMES, "*");
-    ADD_OPERATOR(DIV, "/");
     ADD_OPERATOR(MOD, "%");
+    ADD_OPERATOR(DIV, "/");
     ADD_OPERATOR(QUEST, "?");
     ADD_OPERATOR(COLON, ":");
     ADD_OPERATOR(LT, "<");
     ADD_OPERATOR(GT, ">");
-    ADD_OPERATOR(GE, ">=");
     ADD_OPERATOR(LE, "<=");
+    ADD_OPERATOR(GE, ">=");
     ADD_OPERATOR(DELAY, "#");
     ADD_OPERATOR(SEMI, ";");
     ADD_OPERATOR(AT, "@");
@@ -80,8 +83,8 @@ public:
     ADD_OPERATOR(LOR, "||");
     ADD_OPERATOR(LNEG, "!");
     ADD_OPERATOR(BAND, "&");
-    ADD_OPERATOR(BOR, "|");
     ADD_OPERATOR(BNEG, "~");
+    ADD_OPERATOR(BOR, "|");
     ADD_OPERATOR(BXOR, "^");
     ADD_OPERATOR(BXNOR, "~^");
     ADD_OPERATOR(BXNOR, "^~");
@@ -106,7 +109,6 @@ public:
     ADD_KEYWORD(ASSIGN);
     ADD_KEYWORD(POSEGE);
     ADD_KEYWORD(NEGEGE);
-    ADD_KEYWORD(OR);
     ADD_KEYWORD(IF);
     ADD_KEYWORD(ELSE);
     ADD_KEYWORD(WHILE);
@@ -123,13 +125,13 @@ public:
     ADD_KEYWORD(CASEX);
     ADD_KEYWORD(DEFAULT);
     ADD_KEYWORD(WIRE);
-    ADD_KEYWORD(ORGATE);
-    ADD_KEYWORD(NORGATE);
-    ADD_KEYWORD(NANDGATE);
-    ADD_KEYWORD(ANDGATE);
-    ADD_KEYWORD(XORGATE);
-    ADD_KEYWORD(XNORGATE);
-    ADD_KEYWORD(NOTGATE);
+    ADD_KEYWORD(OR);
+    ADD_KEYWORD(NOR);
+    ADD_KEYWORD(NAND);
+    ADD_KEYWORD(AND);
+    ADD_KEYWORD(XOR);
+    ADD_KEYWORD(XNOR);
+    ADD_KEYWORD(NOT);
   }
 };
 

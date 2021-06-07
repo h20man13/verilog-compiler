@@ -1,7 +1,7 @@
 #include "common/Position.h"
 #include <string>
 
-Position::Position(const unsigned int linePosition, const unsigned int lineNumber) : linePosition(linePosition), lineNumber(lineNumber){};
+Position::Position(const unsigned int lineNumber, const unsigned int linePosition) : linePosition(linePosition), lineNumber(lineNumber){};
 
 Position::Position(const Position& position): linePosition(position.linePosition), lineNumber(position.lineNumber){}
 

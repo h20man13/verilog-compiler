@@ -22,6 +22,7 @@ const std::optional<const Token> Lexer::gen_token(){
     case ' ': source->advance(); continue;
     case '\t': source-> advance(); continue;
     case '`': return parse_macro();
+    case '\'': return parse_number();
     case '\"': return parse_string();
     case '/':
       if(source->next() == '/') { parse_single_line_comment(); continue; }
@@ -144,7 +145,7 @@ const std::optional<const Token> Lexer::parse_operator(){
     }
   } else if(c == '>'){
     lexeme += c;
-    if(source->next() == '=' || source->next() == '<'){
+    if(source->next() == '=' || source->next() == '>'){
       lexeme += source->next();
       source->advance(2);
     } else {
@@ -155,6 +156,10 @@ const std::optional<const Token> Lexer::parse_operator(){
     if(source->next() == '='){
       lexeme += source->next();
       source->advance(2);
+      if(source->current() == '='){
+	lexeme += source->current();
+	source->advance();
+      }
     } else {
       source->advance();
     }
@@ -166,8 +171,45 @@ const std::optional<const Token> Lexer::parse_operator(){
     } else {
       source->advance();
     }
+  } else if(c == '=') {
+    lexeme += c;
+    if(source->next() == '='){
+      lexeme += source->next();
+      source->advance(2);
+      if(source->current() == '='){
+	lexeme += source->current();
+	source->advance();
+      }
+    } else {
+      source->advance();
+    }
+  } else if(c == '&') {
+    if(source->next() == '&'){
+      lexeme = lexeme + source->current() + source->next();
+      source->advance(2);
+    } else {
+      lexeme += source->current();
+      source->advance();
+    }
+  } else if(c == '|'){
+    if(source->next() == '|'){
+      lexeme = lexeme + source->current() + source->next();
+      source->advance(2);
+    } else {
+      lexeme += source->current();
+      source->advance();
+    }
+  } else if(c == '^') {
+    if(source->next() == '~'){
+      lexeme = lexeme + source->current() + source->next();
+      source->advance(2);
+    } else {
+      lexeme += source->current();
+      source->advance();
+    }
   } else {
     lexeme += c;
+    source->advance();
   }
   return { Token::make_operator_token(lexeme, pos) };
 }
@@ -193,7 +235,7 @@ const std::optional<const std::string> Lexer::parse_real(){
   }
   
   if(!isspace(c)){
-    Error error("Unexpected hexidecimnal literal found ", source->get_current_position());
+    Error error("Unexpected real literal found ", source->get_current_position());
     error_log.add(error);
     parse_error();
     return std::nullopt;
@@ -229,28 +271,28 @@ const std::optional<const Token> Lexer::parse_number(){
 
     if(toupper(c) == 'H'){
       const std::optional<std::string> str = parse_hexidecimal();
-      if(str){
+      if(!str){
 	return std::nullopt;
       } else {
 	return { Token::make_number_token(lexeme + *str, pos) };
       }
     } else if(toupper(c) == 'B'){
       const std::optional<std::string> str = parse_binary();
-      if(str){
+      if(!str){
 	return std::nullopt;
       } else {
 	return { Token::make_number_token(lexeme + *str, pos) };
       }
     } else if(toupper(c) == 'D'){
       std::optional<std::string> str = parse_decimal();
-      if(str){
+      if(!str){
 	return std::nullopt;
       } else {
 	return { Token::make_number_token(lexeme + *str, pos) };
       }
     } else if(toupper(c) == 'O'){
       std::optional<std::string> str = parse_octal();
-      if(str){
+      if(!str){
 	return std::nullopt;
       } else {
 	return { Token::make_number_token(lexeme + *str, pos) };
