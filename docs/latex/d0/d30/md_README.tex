@@ -1,0 +1,22 @@
+This project is a continuation of my previous work on the EDE (see repo for info). I am in the process of converting all of the Java code over to C++. This was due to the lack of unsigned types in Java which could be an issue when the CPU design is a 64 bit ISA. Also I decided to separate the components into their own github repositories because someone may want to only develop the Verilog Compiler by itself further.\hypertarget{md_README_autotoc_md1}{}\doxysection{Directory Structure}\label{md_README_autotoc_md1}
+The directory structure of the project is shown below\+: 
+
+
+\begin{DoxyEnumerate}
+\item 
+\end{DoxyEnumerate}~\newline
+  {\bfseries{Test\+: }} all of the test folders lie inside this folder  {\bfseries{Include\+: }} all of the header files lie in this folder   {\bfseries{Src\+: }} all of the cpp and c files lie in this folder  {\bfseries{Bin\+: }} all of the executables get put into this folder after compilation  {\bfseries{Bin/\+Test\+: }} all of the test executables go into this subfolder \hypertarget{md_README_autotoc_md2}{}\doxysection{Build and Dependency Info}\label{md_README_autotoc_md2}
+This project uses CMAKE with a default build tool GNU Make. The default compiler I used was Clang however you are free to use which ever one that suits your needs. The commands CMAKE generates are the defaults however to run unit tests I would recommend using {\bfseries{ make check }} instead of make test or ctest\hypertarget{md_README_autotoc_md3}{}\doxysection{Testing Format}\label{md_README_autotoc_md3}
+There is a framework I created to make testing easier. Each test file must contain a main function to execute the tests. To add multiple tests to a single file you need to fulfill the requirements below them like below
+
+
+\begin{DoxyItemize}
+\item Boolean Functions\+: Tests need to be formatted so that they return a true or a false based on if they pass or fail respectively  
+\item Run Test Method\+: To be called at run time test names must passed into the run\+\_\+test method in the main method of the file. The run\+\_\+test method can be found in the \mbox{\hyperlink{TestUtils_8h_source}{include/test/\+Test\+Utils.\+h}} header file  
+\item As an extra note the run\+\_\+test method is designed to stop calling itself when one of your tests fails. If you don\textquotesingle{}t see all of your test results make sure none of them are failing inside the given file 
+\end{DoxyItemize}\hypertarget{md_README_autotoc_md4}{}\doxysection{Naming Standards}\label{md_README_autotoc_md4}
+
+\begin{DoxyEnumerate}
+\item 
+\end{DoxyEnumerate}~\newline
+  {\bfseries{Camel\+Case\+: }} files and class names   {\bfseries{under\+\_\+scores\+: }} All method and function and variable names   {\bfseries{Note\+: }} try to keep variable names as one word if possible semantically  
