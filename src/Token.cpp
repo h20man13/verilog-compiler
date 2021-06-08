@@ -42,6 +42,7 @@ const std::string type_to_string(const tok type){
       enum_strings.push_back(#text);				\
   } while(false)
 
+
 struct TokDecl{
 public:
   TokDecl(){
@@ -137,13 +138,26 @@ public:
 
 static const TokDecl t; //create this so the tokens are initialized;
 
-
 Token::Token(const tok type, const std::string& lexeme, const Position& position): type(type), lexeme(lexeme), position(position){}
 
+/**
+ * Creates a token representing a number in the verilog language
+ * @param lexeme string you want representing the number 1, 4, 'b1101010 etc...
+ * @param position the position of the current Token
+ * @return Token of the type NUMBER
+ */
 const Token Token::make_number_token(const std::string& lexeme, const Position& position){
   Token tok(NUMBER, lexeme, position);
   return tok;
 }
+
+/**
+ * Creates a token representing a String in verilog
+ * @param lexeme string you want representing the string value \"my string here\"
+ * @param  position the position of the current Token
+ * @return Token of type STRING
+ */
+ */
 
 const Token Token::make_string_token(const std::string& lexeme, const Position& position){
   Token tok(STRING, lexeme, position);

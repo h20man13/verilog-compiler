@@ -18,18 +18,16 @@ const std\+::string {\bfseries to\+\_\+string} () const
 \doxysubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classToken_adebc775df817072f8a7ebf0574ed686c}\label{classToken_adebc775df817072f8a7ebf0574ed686c}} 
-static const \mbox{\hyperlink{classToken}{Token}} {\bfseries make\+\_\+number\+\_\+token} (const std\+::string \&lexeme, const \mbox{\hyperlink{classPosition}{Position}} \&position)
-\item 
+static const \mbox{\hyperlink{classToken}{Token}} \mbox{\hyperlink{classToken_adebc775df817072f8a7ebf0574ed686c}{make\+\_\+number\+\_\+token}} (const std\+::string \&lexeme, const \mbox{\hyperlink{classPosition}{Position}} \&position)
+\begin{DoxyCompactList}\small\item\em Creates a token representing a number in the verilog language. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classToken_a0d77acdb54e0c7231fd7fc3c3b0d338d}\label{classToken_a0d77acdb54e0c7231fd7fc3c3b0d338d}} 
 static const \mbox{\hyperlink{classToken}{Token}} {\bfseries make\+\_\+identifier\+\_\+token} (const std\+::string \&lexeme, const \mbox{\hyperlink{classPosition}{Position}} \&position)
 \item 
 \mbox{\Hypertarget{classToken_ad5f5f43b5feb24a382a8a6d77a0d448a}\label{classToken_ad5f5f43b5feb24a382a8a6d77a0d448a}} 
 static const \mbox{\hyperlink{classToken}{Token}} {\bfseries make\+\_\+macro\+\_\+token} (const std\+::string \&lexeme, const \mbox{\hyperlink{classPosition}{Position}} \&position)
 \item 
-\mbox{\Hypertarget{classToken_ac9556e65013bdc51afdfb78180594aa8}\label{classToken_ac9556e65013bdc51afdfb78180594aa8}} 
-static const \mbox{\hyperlink{classToken}{Token}} {\bfseries make\+\_\+string\+\_\+token} (const std\+::string \&lexeme, const \mbox{\hyperlink{classPosition}{Position}} \&position)
-\item 
+static const \mbox{\hyperlink{classToken}{Token}} \mbox{\hyperlink{classToken_a2e7acbbae17bda15c002a54eeedd8b76}{make\+\_\+string\+\_\+token}} (const std\+::string \&lexeme, const \mbox{\hyperlink{classPosition}{Position}} \&position)
+\begin{DoxyCompactList}\small\item\em Creates a token representing a String in verilog. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classToken_a6fff80b9ae258212a35dde2f509b8e2b}\label{classToken_a6fff80b9ae258212a35dde2f509b8e2b}} 
 static const \mbox{\hyperlink{classToken}{Token}} {\bfseries make\+\_\+operator\+\_\+token} (const std\+::string \&lexeme, const \mbox{\hyperlink{classPosition}{Position}} \&position)
 \end{DoxyCompactItemize}
@@ -39,6 +37,57 @@ static const \mbox{\hyperlink{classToken}{Token}} {\bfseries make\+\_\+operator\
 
 
 Definition at line 99 of file Token.\+h.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classToken_adebc775df817072f8a7ebf0574ed686c}\label{classToken_adebc775df817072f8a7ebf0574ed686c}} 
+\index{Token@{Token}!make\_number\_token@{make\_number\_token}}
+\index{make\_number\_token@{make\_number\_token}!Token@{Token}}
+\doxysubsubsection{\texorpdfstring{make\_number\_token()}{make\_number\_token()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classToken}{Token}} Token\+::make\+\_\+number\+\_\+token (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{lexeme,  }\item[{const \mbox{\hyperlink{classPosition}{Position}} \&}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Creates a token representing a number in the verilog language. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lexeme} & string you want representing the number 1, 4, \textquotesingle{}b1101010 etc... \\
+\hline
+{\em position} & the position of the current \mbox{\hyperlink{classToken}{Token}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classToken}{Token}} of the type NUMBER 
+\end{DoxyReturn}
+
+
+Definition at line 149 of file Token.\+cpp.
+
+\mbox{\Hypertarget{classToken_a2e7acbbae17bda15c002a54eeedd8b76}\label{classToken_a2e7acbbae17bda15c002a54eeedd8b76}} 
+\index{Token@{Token}!make\_string\_token@{make\_string\_token}}
+\index{make\_string\_token@{make\_string\_token}!Token@{Token}}
+\doxysubsubsection{\texorpdfstring{make\_string\_token()}{make\_string\_token()}}
+{\footnotesize\ttfamily $\ast$const \mbox{\hyperlink{classToken}{Token}} Token\+::make\+\_\+string\+\_\+token (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{lexeme,  }\item[{const \mbox{\hyperlink{classPosition}{Position}} \&}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Creates a token representing a String in verilog. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lexeme} & string you want representing the string value "{}my string here"{} \\
+\hline
+{\em position} & the position of the current \mbox{\hyperlink{classToken}{Token}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classToken}{Token}} of type STRING 
+\end{DoxyReturn}
+
+
+Definition at line 162 of file Token.\+cpp.
 
 
 
