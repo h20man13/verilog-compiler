@@ -75,19 +75,27 @@ $(function() {
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;ostream&gt;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
-<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="../../dc/df4/classDestination.html">    6</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../dc/df4/classDestination.html">Destination</a>{</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;  std::ostream* <span class="keyword">const</span> output;</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;  </div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;  <a class="code" href="../../dc/df4/classDestination.html">Destination</a>(std::ostream &amp;output);</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  <span class="keywordtype">void</span> no_flush(<span class="keyword">const</span> <span class="keywordtype">bool</span> tf) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  <span class="keywordtype">void</span> print(<span class="keyword">const</span> std::string &amp;to_print) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  <span class="keywordtype">void</span> println(<span class="keyword">const</span> std::string &amp;to_print) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;};</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="aclassDestination_html"><div class="ttname"><a href="../../dc/df4/classDestination.html">Destination</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d8/dab/Destination_8h_source.html#l00006">Destination.h:6</a></div></div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="../../dc/df4/classDestination.html">   10</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../dc/df4/classDestination.html">Destination</a>{</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  std::ostream* <span class="keyword">const</span> output; <span class="comment">//the stream where the destination prints to</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <a class="code" href="../../dc/df4/classDestination.html#a7a8d2ae9a1f4e33942b9c7060e2e107a">Destination</a>(std::ostream &amp;output);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../dc/df4/classDestination.html#a3281804a34a79e6f6624cde84213bdea">no_flush</a>(<span class="keyword">const</span> <span class="keywordtype">bool</span> tf) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; <span class="keywordtype">void</span> <a class="code" href="../../dc/df4/classDestination.html#a10af2e2e2b95f0b38392fe75f5404272">print</a>(<span class="keyword">const</span> std::string &amp;to_print) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; <span class="keywordtype">void</span> <a class="code" href="../../dc/df4/classDestination.html#a3d77528dbf5e88efd764cb517eeb5b09">println</a>(<span class="keyword">const</span> std::string &amp;to_print) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;};</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclassDestination_html"><div class="ttname"><a href="../../dc/df4/classDestination.html">Destination</a></div><div class="ttdoc">The Destination class is used to create destination objects which are pretty much just decorated outp...</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/dab/Destination_8h_source.html#l00010">Destination.h:10</a></div></div>
+<div class="ttc" id="aclassDestination_html_a10af2e2e2b95f0b38392fe75f5404272"><div class="ttname"><a href="../../dc/df4/classDestination.html#a10af2e2e2b95f0b38392fe75f5404272">Destination::print</a></div><div class="ttdeci">void print(const std::string &amp;to_print) const</div><div class="ttdoc">Prints the string to the buffer.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/ddb/Destination_8cpp_source.html#l00030">Destination.cpp:30</a></div></div>
+<div class="ttc" id="aclassDestination_html_a3281804a34a79e6f6624cde84213bdea"><div class="ttname"><a href="../../dc/df4/classDestination.html#a3281804a34a79e6f6624cde84213bdea">Destination::no_flush</a></div><div class="ttdeci">void no_flush(const bool tf) const</div><div class="ttdoc">This method is used to decide if the buffer should flush automatically.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/ddb/Destination_8cpp_source.html#l00016">Destination.cpp:16</a></div></div>
+<div class="ttc" id="aclassDestination_html_a3d77528dbf5e88efd764cb517eeb5b09"><div class="ttname"><a href="../../dc/df4/classDestination.html#a3d77528dbf5e88efd764cb517eeb5b09">Destination::println</a></div><div class="ttdeci">void println(const std::string &amp;to_print) const</div><div class="ttdoc">Prints the string to the buffer with a newline character appended to the end of the string.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/ddb/Destination_8cpp_source.html#l00039">Destination.cpp:39</a></div></div>
+<div class="ttc" id="aclassDestination_html_a7a8d2ae9a1f4e33942b9c7060e2e107a"><div class="ttname"><a href="../../dc/df4/classDestination.html#a7a8d2ae9a1f4e33942b9c7060e2e107a">Destination::Destination</a></div><div class="ttdeci">Destination(std::ostream &amp;output)</div><div class="ttdoc">The default constructor for a Destination.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/ddb/Destination_8cpp_source.html#l00009">Destination.cpp:9</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

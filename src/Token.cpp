@@ -152,17 +152,25 @@ const Token Token::make_number_token(const std::string& lexeme, const Position& 
 }
 
 /**
- * Creates a token representing a String in verilog
- * @param lexeme string you want representing the string value \"my string here\"
- * @param  position the position of the current Token
- * @return Token of type STRING
- */
+ * Creates a token representing a string in the verilog language
+ * @param lexeme string you want the token to represent "1" "4", "'b1101010" etc...
+ * @param position position of the current Token
+ * @return Token of the type STRING
  */
 
 const Token Token::make_string_token(const std::string& lexeme, const Position& position){
   Token tok(STRING, lexeme, position);
   return tok;
 }
+
+
+
+/**
+ * Creates a token representing a identifier or a keyword in the verilog language
+ * @param lexeme string you want representing the indentifier var, a, while etc.. if this token is equal to one of the keywords in the verilog language it will return that instead
+ * @param position the position of the current Token
+ * @return Token of the type IDENTIFIER or WHILE, IF, (other keywords) ...
+ */
 
 const Token Token::make_identifier_token(const std::string& lexeme, const Position& position){
   if(keywords.find(to_upper_case(lexeme)) != keywords.end()){
@@ -174,6 +182,14 @@ const Token Token::make_identifier_token(const std::string& lexeme, const Positi
   }
 }
 
+
+/**
+ * Creates a token representing a macro or an identifier for a macro in the verilog language
+ * @param lexeme string you want representing the indentifier `var, `a, `define etc.. if this token is equal to one of the keywords in the verilog language it will return that instead
+ * @param position the position of the current Token
+ * @return Token of the type MACROIDENTIFIER or MACRODEF, (other keywords) ...
+ */
+
 const Token Token::make_macro_token(const std::string& lexeme, const Position& position){
   if(lexeme == "`define"){
     Token tok(MACRODEFINITION, lexeme, position);
@@ -184,10 +200,19 @@ const Token Token::make_macro_token(const std::string& lexeme, const Position& p
   }
 }
 
+/**
+ * Creates a token representing an operator in the verilog language
+ * @param lexeme string you want the token to represent * % << + - || etc...
+ * @param position position of the current Token
+ * @return Token of the type OPERATOR
+ */
+
 const Token Token::make_operator_token(const std::string& lexeme, const Position& position){
   Token tok(operators[lexeme], lexeme, position);
   return tok;
 }
+
+
 
 const Position Token::get_position() const {
   return position;

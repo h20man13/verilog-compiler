@@ -1,44 +1,193 @@
 \hypertarget{classSource}{}\doxysection{Source Class Reference}
 \label{classSource}\index{Source@{Source}}
+
+
+The source class is used to collect input from various input streams.  
+
+
+
+
+{\ttfamily \#include $<$Source.\+h$>$}
+
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classSource_a0d4e9c8ed600132dd3e5bd15de3c79ab}\label{classSource_a0d4e9c8ed600132dd3e5bd15de3c79ab}} 
-{\bfseries Source} (std\+::istream \&input)
+\mbox{\hyperlink{classSource_a0d4e9c8ed600132dd3e5bd15de3c79ab}{Source}} (std\+::istream \&input)
+\begin{DoxyCompactList}\small\item\em The default constructor for all source objects. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classSource_acc2331fc6c1936f91c307a0f3bfb8201}{Source}} (const \mbox{\hyperlink{classSource}{Source}} \&source)
+\begin{DoxyCompactList}\small\item\em The copy constructor for all source objects. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSource_a7cad1788901baf26878a3a88571512d0}{advance}} (const unsigned int numtimes=1)
+\begin{DoxyCompactList}\small\item\em The advannce function moves the stream forward by one Byte. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{classSource_ac6d9e50703514285f9a543f95c3efa00}{past}} () const
 \item 
-\mbox{\Hypertarget{classSource_acc2331fc6c1936f91c307a0f3bfb8201}\label{classSource_acc2331fc6c1936f91c307a0f3bfb8201}} 
-{\bfseries Source} (const \mbox{\hyperlink{classSource}{Source}} \&source)
+char \mbox{\hyperlink{classSource_a0c215af75297e5e72912c0602b3ca354}{current}} () const
 \item 
-\mbox{\Hypertarget{classSource_a7cad1788901baf26878a3a88571512d0}\label{classSource_a7cad1788901baf26878a3a88571512d0}} 
-void {\bfseries advance} (const unsigned int numtimes=1)
+char \mbox{\hyperlink{classSource_adbcf339671f347071bc019f4440bf4fd}{next}} () const
 \item 
-\mbox{\Hypertarget{classSource_ac6d9e50703514285f9a543f95c3efa00}\label{classSource_ac6d9e50703514285f9a543f95c3efa00}} 
-char {\bfseries past} () const
+bool \mbox{\hyperlink{classSource_af48a49f04432dde57ee099b91d0c7d68}{has\+\_\+next}} () const
 \item 
-\mbox{\Hypertarget{classSource_a0c215af75297e5e72912c0602b3ca354}\label{classSource_a0c215af75297e5e72912c0602b3ca354}} 
-char {\bfseries current} () const
+bool \mbox{\hyperlink{classSource_aa783bb2f55ef1d8c6976b63ea455f660}{eof}} () const
 \item 
-\mbox{\Hypertarget{classSource_adbcf339671f347071bc019f4440bf4fd}\label{classSource_adbcf339671f347071bc019f4440bf4fd}} 
-char {\bfseries next} () const
-\item 
-\mbox{\Hypertarget{classSource_af48a49f04432dde57ee099b91d0c7d68}\label{classSource_af48a49f04432dde57ee099b91d0c7d68}} 
-bool {\bfseries has\+\_\+next} () const
-\item 
-\mbox{\Hypertarget{classSource_aa783bb2f55ef1d8c6976b63ea455f660}\label{classSource_aa783bb2f55ef1d8c6976b63ea455f660}} 
-bool {\bfseries eof} () const
-\item 
-\mbox{\Hypertarget{classSource_a57ee51444c0999ab7862e5c656b7eae7}\label{classSource_a57ee51444c0999ab7862e5c656b7eae7}} 
-const \mbox{\hyperlink{classPosition}{Position}} {\bfseries get\+\_\+current\+\_\+position} () const
+const \mbox{\hyperlink{classPosition}{Position}} \mbox{\hyperlink{classSource_a57ee51444c0999ab7862e5c656b7eae7}{get\+\_\+current\+\_\+position}} () const
 \item 
 \mbox{\Hypertarget{classSource_a31b05a066135a445a5117ff33c4627a8}\label{classSource_a31b05a066135a445a5117ff33c4627a8}} 
-\mbox{\hyperlink{classSource}{Source}} \& {\bfseries operator=} (const \mbox{\hyperlink{classSource}{Source}} \&source)
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{classSource}{Source}} \& \mbox{\hyperlink{classSource_a31b05a066135a445a5117ff33c4627a8}{operator=}} (const \mbox{\hyperlink{classSource}{Source}} \&source)
+\begin{DoxyCompactList}\small\item\em Assigns a copy of one source to another source (It should be noted that the stream that is coppied over is a shallow copy) \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
+The source class is used to collect input from various input streams. 
+
+\begin{DoxyAuthor}{Author}
+Jacob Bauer 
+\end{DoxyAuthor}
 
 
-Definition at line 7 of file Source.\+h.
+Definition at line 11 of file Source.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classSource_a0d4e9c8ed600132dd3e5bd15de3c79ab}\label{classSource_a0d4e9c8ed600132dd3e5bd15de3c79ab}} 
+\index{Source@{Source}!Source@{Source}}
+\index{Source@{Source}!Source@{Source}}
+\doxysubsubsection{\texorpdfstring{Source()}{Source()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Source\+::\+Source (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{input }\end{DoxyParamCaption})}
+
+
+
+The default constructor for all source objects. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & an inputs stream to receive characters from \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 11 of file Source.\+cpp.
+
+\mbox{\Hypertarget{classSource_acc2331fc6c1936f91c307a0f3bfb8201}\label{classSource_acc2331fc6c1936f91c307a0f3bfb8201}} 
+\index{Source@{Source}!Source@{Source}}
+\index{Source@{Source}!Source@{Source}}
+\doxysubsubsection{\texorpdfstring{Source()}{Source()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Source\+::\+Source (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classSource}{Source}} \&}]{source }\end{DoxyParamCaption})}
+
+
+
+The copy constructor for all source objects. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em source} & the source to copy from \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 27 of file Source.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classSource_a7cad1788901baf26878a3a88571512d0}\label{classSource_a7cad1788901baf26878a3a88571512d0}} 
+\index{Source@{Source}!advance@{advance}}
+\index{advance@{advance}!Source@{Source}}
+\doxysubsubsection{\texorpdfstring{advance()}{advance()}}
+{\footnotesize\ttfamily void Source\+::advance (\begin{DoxyParamCaption}\item[{const unsigned int}]{num = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+
+
+The advannce function moves the stream forward by one Byte. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em numtimes} & the number of times to advance the stream the default is 1 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 43 of file Source.\+cpp.
+
+\mbox{\Hypertarget{classSource_a0c215af75297e5e72912c0602b3ca354}\label{classSource_a0c215af75297e5e72912c0602b3ca354}} 
+\index{Source@{Source}!current@{current}}
+\index{current@{current}!Source@{Source}}
+\doxysubsubsection{\texorpdfstring{current()}{current()}}
+{\footnotesize\ttfamily char Source\+::current (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+a character representing the current position in the stream 
+\end{DoxyReturn}
+
+
+Definition at line 77 of file Source.\+cpp.
+
+\mbox{\Hypertarget{classSource_aa783bb2f55ef1d8c6976b63ea455f660}\label{classSource_aa783bb2f55ef1d8c6976b63ea455f660}} 
+\index{Source@{Source}!eof@{eof}}
+\index{eof@{eof}!Source@{Source}}
+\doxysubsubsection{\texorpdfstring{eof()}{eof()}}
+{\footnotesize\ttfamily bool Source\+::eof (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+Returns whether the source is currently at the end of the file 
+\end{DoxyReturn}
+
+
+Definition at line 63 of file Source.\+cpp.
+
+\mbox{\Hypertarget{classSource_a57ee51444c0999ab7862e5c656b7eae7}\label{classSource_a57ee51444c0999ab7862e5c656b7eae7}} 
+\index{Source@{Source}!get\_current\_position@{get\_current\_position}}
+\index{get\_current\_position@{get\_current\_position}!Source@{Source}}
+\doxysubsubsection{\texorpdfstring{get\_current\_position()}{get\_current\_position()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classPosition}{Position}} Source\+::get\+\_\+current\+\_\+position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+Returns the current position the source is at in the file 
+\end{DoxyReturn}
+
+
+Definition at line 104 of file Source.\+cpp.
+
+\mbox{\Hypertarget{classSource_af48a49f04432dde57ee099b91d0c7d68}\label{classSource_af48a49f04432dde57ee099b91d0c7d68}} 
+\index{Source@{Source}!has\_next@{has\_next}}
+\index{has\_next@{has\_next}!Source@{Source}}
+\doxysubsubsection{\texorpdfstring{has\_next()}{has\_next()}}
+{\footnotesize\ttfamily bool Source\+::has\+\_\+next (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+returns true if there is a next character in the source 
+\end{DoxyReturn}
+
+
+Definition at line 70 of file Source.\+cpp.
+
+\mbox{\Hypertarget{classSource_adbcf339671f347071bc019f4440bf4fd}\label{classSource_adbcf339671f347071bc019f4440bf4fd}} 
+\index{Source@{Source}!next@{next}}
+\index{next@{next}!Source@{Source}}
+\doxysubsubsection{\texorpdfstring{next()}{next()}}
+{\footnotesize\ttfamily char Source\+::next (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+a character representing the next token in the stream 
+\end{DoxyReturn}
+
+
+Definition at line 92 of file Source.\+cpp.
+
+\mbox{\Hypertarget{classSource_ac6d9e50703514285f9a543f95c3efa00}\label{classSource_ac6d9e50703514285f9a543f95c3efa00}} 
+\index{Source@{Source}!past@{past}}
+\index{past@{past}!Source@{Source}}
+\doxysubsubsection{\texorpdfstring{past()}{past()}}
+{\footnotesize\ttfamily char Source\+::past (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+a character representing one character behind the current position in the stream 
+\end{DoxyReturn}
+
+
+Definition at line 84 of file Source.\+cpp.
 
 
 

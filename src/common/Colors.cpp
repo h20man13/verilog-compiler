@@ -20,65 +20,149 @@
 #define BOLDCYAN    "\033[1m\033[36m"      /* Bold Cyan */
 #define BOLDWHITE   "\033[1m\033[37m"      /* Bold White */
 
+
+
+
+/**
+ * @param text the raw input string that will change color
+ * @return a string that is the color white
+ */
+
 const std::string white(const std::string& text){
   return WHITE + text + RESET;
 }
+
+/**
+ * @param text the raw input string that will change color
+ * @return a string that is the color black
+ */
 
 const std::string black(const std::string& text){
   return BLACK + text + RESET;
 }
 
+/**
+ * @param text the raw input string that will change color
+ * @return a string that is the color red
+ */
+
 const std::string red(const std::string& text){
   return RED + text + RESET;
 }
+
+/**
+ * @param text the raw input string that will change color
+ * @return a string that is the color green
+ */
 
 const std::string green(const std::string& text){
   return GREEN + text + RESET;
 }
 
+/**
+ * @param text the raw input string that will change color
+ * @return a string that is the color yellow
+ */
+
 const std::string yellow(const std::string& text){
   return YELLOW + text + RESET;
 }
+
+
+/**
+ * @param text the raw input string that will change color
+ * @return a string that is the color blue
+ */
 
 const std::string blue(const std::string& text){
  return BLUE + text + RESET;
 }
 
+/**
+ * @param text the raw input string that will change color
+ * @return a string that is the color magenta(purple)
+ */
+
 const std::string magenta(const std::string& text){
  return MAGENTA + text + RESET;
 }
+
+/**
+ * @param text the raw input string that will change color
+ * @return a string that is the color cyan
+ */
 
 const std::string cyan(const std::string& text){
  return CYAN + text + RESET;
 }
 
+/**
+ * @param text the raw input string that will change color and embolden
+ * @return a bold string that is the color white
+ */
+
 const std::string bold_white(const std::string& text){
   return BOLDWHITE + text + RESET;
 }
+
+/**
+ * @param text the raw input string that will change color
+ * @return a bold string that is the color black
+ */
 
 const std::string bold_black(const std::string& text){
   return BOLDBLACK + text + RESET;
 }
 
+/**
+ * @param text the raw input string that will change color and embolden
+ * @return a bold string that is the color red
+ */
+
 const std::string bold_red(const std::string& text){
   return BOLDRED + text + RESET;
 }
+
+/**
+ * @param text the raw input string that will change color and embolden
+ * @return a bold string that is the color green
+ */
 
 const std::string bold_green(const std::string& text){
   return BOLDGREEN + text + RESET;
 }
 
+/**
+ * @param text the raw input string that will change color and embolden
+ * @return a bold string that is the color yellow
+ */
+
 const std::string bold_yellow(const std::string& text){
   return BOLDYELLOW + text + RESET;
 }
+
+/**
+ * @param text the raw input string that will change color and embolden
+ * @return a bold string that is the color blue
+ */
 
 const std::string bold_blue(const std::string& text){
  return BOLDBLUE + text + RESET;
 }
 
+/**
+ * @param text the raw input string that will change color and embolden
+ * @return a bold string that is the color magenta(purple)
+ */
+
 const std::string bold_magenta(const std::string& text){
  return BOLDMAGENTA + text + RESET;
 }
+
+/**
+ * @param text the raw input string that will change color and embolden
+ * @return a bold string that is the color cyan
+ */
 
 const std::string bold_cyan(const std::string& text){
  return BOLDCYAN + text + RESET;

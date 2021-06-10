@@ -1,26 +1,129 @@
 \hypertarget{classDestination}{}\doxysection{Destination Class Reference}
 \label{classDestination}\index{Destination@{Destination}}
+
+
+The \mbox{\hyperlink{classDestination}{Destination}} class is used to create destination objects which are pretty much just decorated output streams.  
+
+
+
+
+{\ttfamily \#include $<$Destination.\+h$>$}
+
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classDestination_a7a8d2ae9a1f4e33942b9c7060e2e107a}\label{classDestination_a7a8d2ae9a1f4e33942b9c7060e2e107a}} 
-{\bfseries Destination} (std\+::ostream \&output)
-\item 
-\mbox{\Hypertarget{classDestination_a3281804a34a79e6f6624cde84213bdea}\label{classDestination_a3281804a34a79e6f6624cde84213bdea}} 
-void {\bfseries no\+\_\+flush} (const bool tf) const
-\item 
-\mbox{\Hypertarget{classDestination_a10af2e2e2b95f0b38392fe75f5404272}\label{classDestination_a10af2e2e2b95f0b38392fe75f5404272}} 
-void {\bfseries print} (const std\+::string \&to\+\_\+print) const
-\item 
-\mbox{\Hypertarget{classDestination_a3d77528dbf5e88efd764cb517eeb5b09}\label{classDestination_a3d77528dbf5e88efd764cb517eeb5b09}} 
-void {\bfseries println} (const std\+::string \&to\+\_\+print) const
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{classDestination_a7a8d2ae9a1f4e33942b9c7060e2e107a}{Destination}} (std\+::ostream \&output)
+\begin{DoxyCompactList}\small\item\em The default constructor for a \mbox{\hyperlink{classDestination}{Destination}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDestination_a3281804a34a79e6f6624cde84213bdea}{no\+\_\+flush}} (const bool tf) const
+\begin{DoxyCompactList}\small\item\em This method is used to decide if the buffer should flush automatically. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDestination_a10af2e2e2b95f0b38392fe75f5404272}{print}} (const std\+::string \&to\+\_\+print) const
+\begin{DoxyCompactList}\small\item\em Prints the string to the buffer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDestination_a3d77528dbf5e88efd764cb517eeb5b09}{println}} (const std\+::string \&to\+\_\+print) const
+\begin{DoxyCompactList}\small\item\em Prints the string to the buffer with a newline character appended to the end of the string. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classDestination}{Destination}} class is used to create destination objects which are pretty much just decorated output streams. 
+
+These can be used to route different errorlog or debug outputs to seperate locations whether it be stdout or over an internet stream \begin{DoxyAuthor}{Author}
+Jacob Bauer 
+\end{DoxyAuthor}
 
 
-Definition at line 6 of file Destination.\+h.
+Definition at line 10 of file Destination.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classDestination_a7a8d2ae9a1f4e33942b9c7060e2e107a}\label{classDestination_a7a8d2ae9a1f4e33942b9c7060e2e107a}} 
+\index{Destination@{Destination}!Destination@{Destination}}
+\index{Destination@{Destination}!Destination@{Destination}}
+\doxysubsubsection{\texorpdfstring{Destination()}{Destination()}}
+{\footnotesize\ttfamily Destination\+::\+Destination (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{output }\end{DoxyParamCaption})}
+
+
+
+The default constructor for a \mbox{\hyperlink{classDestination}{Destination}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em output} & the output stream that the destination needs to print to \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 9 of file Destination.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classDestination_a3281804a34a79e6f6624cde84213bdea}\label{classDestination_a3281804a34a79e6f6624cde84213bdea}} 
+\index{Destination@{Destination}!no\_flush@{no\_flush}}
+\index{no\_flush@{no\_flush}!Destination@{Destination}}
+\doxysubsubsection{\texorpdfstring{no\_flush()}{no\_flush()}}
+{\footnotesize\ttfamily void Destination\+::no\+\_\+flush (\begin{DoxyParamCaption}\item[{const bool}]{tf }\end{DoxyParamCaption}) const}
+
+
+
+This method is used to decide if the buffer should flush automatically. 
+
+The default in c++ is yes however in certain situations like when printing to a string stream for testing purpousing it is advised you set this to false. 
+\begin{DoxyParams}{Parameters}
+{\em tf} & this should be true if you want buffering or false if you do not want buffering \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 16 of file Destination.\+cpp.
+
+\mbox{\Hypertarget{classDestination_a10af2e2e2b95f0b38392fe75f5404272}\label{classDestination_a10af2e2e2b95f0b38392fe75f5404272}} 
+\index{Destination@{Destination}!print@{print}}
+\index{print@{print}!Destination@{Destination}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void Destination\+::print (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{str }\end{DoxyParamCaption}) const}
+
+
+
+Prints the string to the buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em the} & string to print to the output stream \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 30 of file Destination.\+cpp.
+
+\mbox{\Hypertarget{classDestination_a3d77528dbf5e88efd764cb517eeb5b09}\label{classDestination_a3d77528dbf5e88efd764cb517eeb5b09}} 
+\index{Destination@{Destination}!println@{println}}
+\index{println@{println}!Destination@{Destination}}
+\doxysubsubsection{\texorpdfstring{println()}{println()}}
+{\footnotesize\ttfamily void Destination\+::println (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{str }\end{DoxyParamCaption}) const}
+
+
+
+Prints the string to the buffer with a newline character appended to the end of the string. 
+
+Prints the string to the buffer.
+
+
+\begin{DoxyParams}{Parameters}
+{\em the} & string to print to the output stream \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line 39 of file Destination.\+cpp.
 
 
 

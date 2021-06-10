@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['make_5fnumber_5ftoken_4',['make_number_token',['../d2/d6e/classToken.html#adebc775df817072f8a7ebf0574ed686c',1,'Token']]],
-  ['make_5fstring_5ftoken_5',['make_string_token',['../d2/d6e/classToken.html#a2e7acbbae17bda15c002a54eeedd8b76',1,'Token']]]
+  ['eof_3',['eof',['../d6/d2e/classSource.html#aa783bb2f55ef1d8c6976b63ea455f660',1,'Source']]],
+  ['error_4',['Error',['../d9/dd6/classError.html',1,'']]],
+  ['errorlog_5',['ErrorLog',['../df/d17/classErrorLog.html',1,'']]]
 ];

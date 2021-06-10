@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['make_5fnumber_5ftoken_19',['make_number_token',['../d2/d6e/classToken.html#adebc775df817072f8a7ebf0574ed686c',1,'Token']]],
-  ['make_5fstring_5ftoken_20',['make_string_token',['../d2/d6e/classToken.html#a2e7acbbae17bda15c002a54eeedd8b76',1,'Token']]]
+  ['advance_37',['advance',['../d6/d2e/classSource.html#a7cad1788901baf26878a3a88571512d0',1,'Source']]]
 ];

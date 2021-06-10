@@ -3,21 +3,78 @@
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classPosition_a9e0a5a954040d4ad4d2038300bbffd8f}\label{classPosition_a9e0a5a954040d4ad4d2038300bbffd8f}} 
-{\bfseries Position} (const unsigned int line\+Number, const unsigned int line\+Position)
-\item 
-\mbox{\Hypertarget{classPosition_abcb3fa2a811a492d1e0701a49f801c35}\label{classPosition_abcb3fa2a811a492d1e0701a49f801c35}} 
-{\bfseries Position} (const \mbox{\hyperlink{classPosition}{Position}} \&position)
-\item 
-\mbox{\Hypertarget{classPosition_a57612dd3e6ef03edaf6598700216a5d1}\label{classPosition_a57612dd3e6ef03edaf6598700216a5d1}} 
-std\+::string {\bfseries to\+\_\+string} () const
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{classPosition_a9e0a5a954040d4ad4d2038300bbffd8f}{Position}} (const unsigned int line\+Number, const unsigned int line\+Position)
+\begin{DoxyCompactList}\small\item\em Default constructor for \mbox{\hyperlink{classPosition}{Position}} Object that stores the line number and position in the line of each token. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classPosition_abcb3fa2a811a492d1e0701a49f801c35}{Position}} (const \mbox{\hyperlink{classPosition}{Position}} \&position)
+\begin{DoxyCompactList}\small\item\em Copy constructor for the position object. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classPosition_a57612dd3e6ef03edaf6598700216a5d1}{to\+\_\+string}} () const
+\begin{DoxyCompactList}\small\item\em Converts the position to the string. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 
 
 Definition at line 6 of file Position.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classPosition_a9e0a5a954040d4ad4d2038300bbffd8f}\label{classPosition_a9e0a5a954040d4ad4d2038300bbffd8f}} 
+\index{Position@{Position}!Position@{Position}}
+\index{Position@{Position}!Position@{Position}}
+\doxysubsubsection{\texorpdfstring{Position()}{Position()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Position\+::\+Position (\begin{DoxyParamCaption}\item[{const unsigned int}]{line\+Number,  }\item[{const unsigned int}]{line\+Position }\end{DoxyParamCaption})}
+
+
+
+Default constructor for \mbox{\hyperlink{classPosition}{Position}} Object that stores the line number and position in the line of each token. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em line\+Number} & the line number of the token \\
+\hline
+{\em line\+Position} & the position in the line of the 1st letter in the token \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 10 of file Position.\+cpp.
+
+\mbox{\Hypertarget{classPosition_abcb3fa2a811a492d1e0701a49f801c35}\label{classPosition_abcb3fa2a811a492d1e0701a49f801c35}} 
+\index{Position@{Position}!Position@{Position}}
+\index{Position@{Position}!Position@{Position}}
+\doxysubsubsection{\texorpdfstring{Position()}{Position()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Position\+::\+Position (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classPosition}{Position}} \&}]{position }\end{DoxyParamCaption})}
+
+
+
+Copy constructor for the position object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & \mbox{\hyperlink{classPosition}{Position}} object to make a copy of \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 17 of file Position.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classPosition_a57612dd3e6ef03edaf6598700216a5d1}\label{classPosition_a57612dd3e6ef03edaf6598700216a5d1}} 
+\index{Position@{Position}!to\_string@{to\_string}}
+\index{to\_string@{to\_string}!Position@{Position}}
+\doxysubsubsection{\texorpdfstring{to\_string()}{to\_string()}}
+{\footnotesize\ttfamily std\+::string Position\+::to\+\_\+string (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Converts the position to the string. 
+
+It is formatted like the example below\+: \mbox{[}line\+Position -\/$>$ 0, line\+Number -\/$>$ 0\mbox{]} 
+
+Definition at line 23 of file Position.\+cpp.
 
 
 
