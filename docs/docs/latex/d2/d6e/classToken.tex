@@ -4,11 +4,11 @@
 \begin{DoxyCompactItemize}
 \item 
 const \mbox{\hyperlink{classPosition}{Position}} \mbox{\hyperlink{classToken_add2e46eda0cc728e3ac8149fc0145cff}{get\+\_\+position}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Gets the position of the token. \end{DoxyCompactList}\item 
 const tok \mbox{\hyperlink{classToken_a4b6aff1a9d2703b3ea6ce6941f9110f2}{get\+\_\+type}} () const
 \item 
 const std\+::string \mbox{\hyperlink{classToken_a23b86ce0c12ce2830c359746936e0dec}{get\+\_\+lexeme}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Gets the actual string found when creating the token. \end{DoxyCompactList}\item 
 const std\+::string \mbox{\hyperlink{classToken_a6ebea2567387ccba0f2c3a8f056408d2}{to\+\_\+string}} () const
 \end{DoxyCompactItemize}
 \doxysubsection*{Static Public Member Functions}
@@ -41,16 +41,22 @@ Definition at line 101 of file Token.\+h.
 {\footnotesize\ttfamily const std\+::string Token\+::get\+\_\+lexeme (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
+
+Gets the actual string found when creating the token. 
+
+
 \begin{DoxyParams}{Parameters}
 {\em None} & \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-The lexeme or the literal text of the token (Ex\+: the text for a token of type LT is \char`\"{}$<$\char`\"{}) 
+The lexeme or the literal text of the token (Ex\+: the text for a token of type LT is \char`\"{}$<$\char`\"{})
+
+the lexeme representing the token (ex\+: \char`\"{}while\char`\"{}) 
 \end{DoxyReturn}
 
 
-Definition at line 221 of file Token.\+cpp.
+Definition at line 229 of file Token.\+cpp.
 
 \mbox{\Hypertarget{classToken_add2e46eda0cc728e3ac8149fc0145cff}\label{classToken_add2e46eda0cc728e3ac8149fc0145cff}} 
 \index{Token@{Token}!get\_position@{get\_position}}
@@ -59,16 +65,25 @@ Definition at line 221 of file Token.\+cpp.
 {\footnotesize\ttfamily const \mbox{\hyperlink{classPosition}{Position}} Token\+::get\+\_\+position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
+
+Gets the position of the token. 
+
+
 \begin{DoxyParams}{Parameters}
 {\em None} & \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-The position of the first letter of the lexeme representing the token 
+The position of the first letter of the lexeme representing the token
+
+the position of the token object 
 \end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{Position_8h_source}{include/common/\+Position.\+h}} 
+\end{DoxySeeAlso}
 
 
-Definition at line 217 of file Token.\+cpp.
+Definition at line 220 of file Token.\+cpp.
 
 \mbox{\Hypertarget{classToken_a4b6aff1a9d2703b3ea6ce6941f9110f2}\label{classToken_a4b6aff1a9d2703b3ea6ce6941f9110f2}} 
 \index{Token@{Token}!get\_type@{get\_type}}
@@ -82,11 +97,13 @@ Definition at line 217 of file Token.\+cpp.
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-The Type (this is represented as an int from the tok\+::enum) 
+The Type (this is represented as an int from the tok\+::enum)
+
+an enum representation of the token 
 \end{DoxyReturn}
 
 
-Definition at line 225 of file Token.\+cpp.
+Definition at line 237 of file Token.\+cpp.
 
 \mbox{\Hypertarget{classToken_a0d77acdb54e0c7231fd7fc3c3b0d338d}\label{classToken_a0d77acdb54e0c7231fd7fc3c3b0d338d}} 
 \index{Token@{Token}!make\_identifier\_token@{make\_identifier\_token}}
@@ -100,7 +117,7 @@ Creates a token representing a identifier or a keyword in the verilog language.
 
 
 \begin{DoxyParams}{Parameters}
-{\em lexeme} & string you want representing the indentifier var, a, while etc.. if this token is equal to one of the keywords in the verilog language it will return that instead \\
+{\em lexeme} & string you want representing the identifier var, a, while etc.. if this token is equal to one of the keywords in the verilog language it will return that instead \\
 \hline
 {\em position} & the position of the current \mbox{\hyperlink{classToken}{Token}} \\
 \hline
@@ -125,6 +142,16 @@ Creates a token representing a macro or an identifier for a macro in the verilog
 
 \begin{DoxyParams}{Parameters}
 {\em lexeme} & string you want representing the indentifier {\ttfamily var,}a, \`{}define etc.. if this token is equal to one of the keywords in the verilog language it will return that instead \\
+\hline
+{\em position} & the position of the current \mbox{\hyperlink{classToken}{Token}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classToken}{Token}} of the type MACROIDENTIFIER or MACRODEF, (other keywords) ...
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em lexeme} & string you want representing the identifier {\ttfamily var,}a, \`{}define etc.. if this token is equal to one of the keywords in the verilog language it will return that instead \\
 \hline
 {\em position} & the position of the current \mbox{\hyperlink{classToken}{Token}} \\
 \hline
@@ -220,11 +247,19 @@ Definition at line 161 of file Token.\+cpp.
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-A text that displays all of the characteristics of a \mbox{\hyperlink{classToken}{Token}} (Ex\+: the text for a token of type LT is \char`\"{}$<$\char`\"{}) 
+A text that displays all of the characteristics of a \mbox{\hyperlink{classToken}{Token}} (Ex\+: the text for a token of type LT is \char`\"{}$<$\char`\"{})
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a string representing the entire \mbox{\hyperlink{classToken}{Token}} containing the position the string variant of the enum and the position 
 \end{DoxyReturn}
 
 
-Definition at line 229 of file Token.\+cpp.
+Definition at line 246 of file Token.\+cpp.
 
 
 

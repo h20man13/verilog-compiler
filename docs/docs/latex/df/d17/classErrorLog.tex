@@ -1,29 +1,132 @@
 \hypertarget{classErrorLog}{}\doxysection{Error\+Log Class Reference}
 \label{classErrorLog}\index{ErrorLog@{ErrorLog}}
+
+
+The error log class is used to create an error log object.  
+
+
+
+
+{\ttfamily \#include $<$Error\+Log.\+h$>$}
+
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classErrorLog_ac7f9d1493d757d663b57d3fa21ae2d52}\label{classErrorLog_ac7f9d1493d757d663b57d3fa21ae2d52}} 
-{\bfseries Error\+Log} (const \mbox{\hyperlink{classDestination}{Destination}} \&destination)
-\item 
-\mbox{\Hypertarget{classErrorLog_a06ca6de189a752b7a78f8ee6d43a9419}\label{classErrorLog_a06ca6de189a752b7a78f8ee6d43a9419}} 
-{\bfseries Error\+Log} (const \mbox{\hyperlink{classErrorLog}{Error\+Log}} \&error\+\_\+log)
-\item 
-\mbox{\Hypertarget{classErrorLog_aacf88c90a270738b4dea8d741e8e0a59}\label{classErrorLog_aacf88c90a270738b4dea8d741e8e0a59}} 
-void {\bfseries add} (const \mbox{\hyperlink{classError}{Error}} \&error)
-\item 
-\mbox{\Hypertarget{classErrorLog_a0377b642aa18647a35ed74f7f64976ca}\label{classErrorLog_a0377b642aa18647a35ed74f7f64976ca}} 
-void {\bfseries print} () const
-\item 
-\mbox{\Hypertarget{classErrorLog_ae2a430bb87665e5dab7c924b54256727}\label{classErrorLog_ae2a430bb87665e5dab7c924b54256727}} 
-int {\bfseries size} () const
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{classErrorLog_ac7f9d1493d757d663b57d3fa21ae2d52}{Error\+Log}} (const \mbox{\hyperlink{classDestination}{Destination}} \&destination)
+\begin{DoxyCompactList}\small\item\em The default constructor for the \mbox{\hyperlink{classErrorLog}{Error\+Log}} class just takes a \mbox{\hyperlink{classDestination}{Destination}} object to determine where to print. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classErrorLog_a06ca6de189a752b7a78f8ee6d43a9419}{Error\+Log}} (const \mbox{\hyperlink{classErrorLog}{Error\+Log}} \&error\+\_\+log)
+\begin{DoxyCompactList}\small\item\em The error log copy constructor takes in an error log reference and produces a string representing a error log. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classErrorLog_aacf88c90a270738b4dea8d741e8e0a59}{add}} (const \mbox{\hyperlink{classError}{Error}} \&error)
+\begin{DoxyCompactList}\small\item\em The add function adds an error to an error log. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classErrorLog_a0377b642aa18647a35ed74f7f64976ca}{print}} () const
+\begin{DoxyCompactList}\small\item\em The print method prints an error log. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classErrorLog_ae2a430bb87665e5dab7c924b54256727}{size}} () const
+\begin{DoxyCompactList}\small\item\em The size function returns a size of an error log. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
+The error log class is used to create an error log object. 
+
+This object is where the lexer and the parser log errors before they are printed \begin{DoxyAuthor}{Author}
+Jacob Bauer 
+\end{DoxyAuthor}
 
 
-Definition at line 8 of file Error\+Log.\+h.
+Definition at line 12 of file Error\+Log.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classErrorLog_ac7f9d1493d757d663b57d3fa21ae2d52}\label{classErrorLog_ac7f9d1493d757d663b57d3fa21ae2d52}} 
+\index{ErrorLog@{ErrorLog}!ErrorLog@{ErrorLog}}
+\index{ErrorLog@{ErrorLog}!ErrorLog@{ErrorLog}}
+\doxysubsubsection{\texorpdfstring{ErrorLog()}{ErrorLog()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Error\+Log\+::\+Error\+Log (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classDestination}{Destination}} \&}]{destination }\end{DoxyParamCaption})}
+
+
+
+The default constructor for the \mbox{\hyperlink{classErrorLog}{Error\+Log}} class just takes a \mbox{\hyperlink{classDestination}{Destination}} object to determine where to print. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em destination} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 9 of file Error\+Log.\+cpp.
+
+\mbox{\Hypertarget{classErrorLog_a06ca6de189a752b7a78f8ee6d43a9419}\label{classErrorLog_a06ca6de189a752b7a78f8ee6d43a9419}} 
+\index{ErrorLog@{ErrorLog}!ErrorLog@{ErrorLog}}
+\index{ErrorLog@{ErrorLog}!ErrorLog@{ErrorLog}}
+\doxysubsubsection{\texorpdfstring{ErrorLog()}{ErrorLog()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Error\+Log\+::\+Error\+Log (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classErrorLog}{Error\+Log}} \&}]{error\+\_\+log }\end{DoxyParamCaption})}
+
+
+
+The error log copy constructor takes in an error log reference and produces a string representing a error log. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em error\+\_\+log} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 18 of file Error\+Log.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classErrorLog_aacf88c90a270738b4dea8d741e8e0a59}\label{classErrorLog_aacf88c90a270738b4dea8d741e8e0a59}} 
+\index{ErrorLog@{ErrorLog}!add@{add}}
+\index{add@{add}!ErrorLog@{ErrorLog}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily void Error\+Log\+::add (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classError}{Error}} \&}]{error }\end{DoxyParamCaption})}
+
+
+
+The add function adds an error to an error log. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em error} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 34 of file Error\+Log.\+cpp.
+
+\mbox{\Hypertarget{classErrorLog_a0377b642aa18647a35ed74f7f64976ca}\label{classErrorLog_a0377b642aa18647a35ed74f7f64976ca}} 
+\index{ErrorLog@{ErrorLog}!print@{print}}
+\index{print@{print}!ErrorLog@{ErrorLog}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void Error\+Log\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+The print method prints an error log. 
+
+Each error is separated by a newline character or /n 
+
+Definition at line 43 of file Error\+Log.\+cpp.
+
+\mbox{\Hypertarget{classErrorLog_ae2a430bb87665e5dab7c924b54256727}\label{classErrorLog_ae2a430bb87665e5dab7c924b54256727}} 
+\index{ErrorLog@{ErrorLog}!size@{size}}
+\index{size@{size}!ErrorLog@{ErrorLog}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily int Error\+Log\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+The size function returns a size of an error log. 
+
+\begin{DoxyReturn}{Returns}
+the amount of errors stored in the error log currently 
+\end{DoxyReturn}
+
+
+Definition at line 55 of file Error\+Log.\+cpp.
 
 
 

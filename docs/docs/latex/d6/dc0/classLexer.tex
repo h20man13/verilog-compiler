@@ -1,23 +1,90 @@
 \hypertarget{classLexer}{}\doxysection{Lexer Class Reference}
 \label{classLexer}\index{Lexer@{Lexer}}
+
+
+The \mbox{\hyperlink{classLexer}{Lexer}} class generates a \mbox{\hyperlink{classLexer}{Lexer}} capable of Tokenizing the Verilog language.  
+
+
+
+
+{\ttfamily \#include $<$Lexer.\+h$>$}
+
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classLexer_af2d561870b0bd74d0bfc99387a4411ec}\label{classLexer_af2d561870b0bd74d0bfc99387a4411ec}} 
-{\bfseries Lexer} (const \mbox{\hyperlink{classErrorLog}{Error\+Log}} \&error\+\_\+log)
-\item 
-\mbox{\Hypertarget{classLexer_a238405ff09ea8f2c275488fe72cbf6e7}\label{classLexer_a238405ff09ea8f2c275488fe72cbf6e7}} 
-void {\bfseries attach\+\_\+source} (const \mbox{\hyperlink{classSource}{Source}} \&source)
-\item 
-\mbox{\Hypertarget{classLexer_a81d9829d97ca529dda90b5d500ceba91}\label{classLexer_a81d9829d97ca529dda90b5d500ceba91}} 
-std\+::list$<$ const \mbox{\hyperlink{classToken}{Token}} $>$ {\bfseries gen\+\_\+tokens} ()
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{classLexer_af2d561870b0bd74d0bfc99387a4411ec}{Lexer}} (const \mbox{\hyperlink{classErrorLog}{Error\+Log}} \&error\+\_\+log)
+\begin{DoxyCompactList}\small\item\em THe default constructor takes in an error log and generates a \mbox{\hyperlink{classLexer}{Lexer}} capable of Tokenizing a Verilog file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classLexer_a238405ff09ea8f2c275488fe72cbf6e7}{attach\+\_\+source}} (const \mbox{\hyperlink{classSource}{Source}} \&source)
+\begin{DoxyCompactList}\small\item\em THe default constructor takes in an error log and generates a \mbox{\hyperlink{classLexer}{Lexer}} capable of Tokenizing a Verilog file. \end{DoxyCompactList}\item 
+std\+::list$<$ const \mbox{\hyperlink{classToken}{Token}} $>$ \mbox{\hyperlink{classLexer_a81d9829d97ca529dda90b5d500ceba91}{gen\+\_\+tokens}} ()
+\begin{DoxyCompactList}\small\item\em generates a list of tokens from the given source \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classLexer}{Lexer}} class generates a \mbox{\hyperlink{classLexer}{Lexer}} capable of Tokenizing the Verilog language. 
+
+Definition at line 16 of file Lexer.\+h.
 
 
-Definition at line 13 of file Lexer.\+h.
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classLexer_af2d561870b0bd74d0bfc99387a4411ec}\label{classLexer_af2d561870b0bd74d0bfc99387a4411ec}} 
+\index{Lexer@{Lexer}!Lexer@{Lexer}}
+\index{Lexer@{Lexer}!Lexer@{Lexer}}
+\doxysubsubsection{\texorpdfstring{Lexer()}{Lexer()}}
+{\footnotesize\ttfamily Lexer\+::\+Lexer (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classErrorLog}{Error\+Log}} \&}]{error\+\_\+log }\end{DoxyParamCaption})}
+
+
+
+THe default constructor takes in an error log and generates a \mbox{\hyperlink{classLexer}{Lexer}} capable of Tokenizing a Verilog file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em error\+\_\+log} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 13 of file Lexer.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classLexer_a238405ff09ea8f2c275488fe72cbf6e7}\label{classLexer_a238405ff09ea8f2c275488fe72cbf6e7}} 
+\index{Lexer@{Lexer}!attach\_source@{attach\_source}}
+\index{attach\_source@{attach\_source}!Lexer@{Lexer}}
+\doxysubsubsection{\texorpdfstring{attach\_source()}{attach\_source()}}
+{\footnotesize\ttfamily void Lexer\+::attach\+\_\+source (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classSource}{Source}} \&}]{source }\end{DoxyParamCaption})}
+
+
+
+THe default constructor takes in an error log and generates a \mbox{\hyperlink{classLexer}{Lexer}} capable of Tokenizing a Verilog file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em error\+\_\+log} & an error log to print to when the \mbox{\hyperlink{classLexer}{Lexer}} encounters an error \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 22 of file Lexer.\+cpp.
+
+\mbox{\Hypertarget{classLexer_a81d9829d97ca529dda90b5d500ceba91}\label{classLexer_a81d9829d97ca529dda90b5d500ceba91}} 
+\index{Lexer@{Lexer}!gen\_tokens@{gen\_tokens}}
+\index{gen\_tokens@{gen\_tokens}!Lexer@{Lexer}}
+\doxysubsubsection{\texorpdfstring{gen\_tokens()}{gen\_tokens()}}
+{\footnotesize\ttfamily std\+::list$<$ const \mbox{\hyperlink{classToken}{Token}} $>$ Lexer\+::gen\+\_\+tokens (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+generates a list of tokens from the given source 
+
+\begin{DoxyReturn}{Returns}
+the list of tokens generated from the source 
+\end{DoxyReturn}
+
+
+Definition at line 425 of file Lexer.\+cpp.
 
 
 

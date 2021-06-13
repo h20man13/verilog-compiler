@@ -76,19 +76,24 @@ $(function() {
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;Position.h&quot;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
-<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="../../d9/dd6/classError.html">    7</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d9/dd6/classError.html">Error</a>{</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;  <span class="keyword">const</span> std::string message;</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;  <span class="keyword">const</span> <a class="code" href="../../da/d8b/classPosition.html">Position</a>* <span class="keyword">const</span> position;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  <a class="code" href="../../d9/dd6/classError.html">Error</a>(<span class="keyword">const</span> std::string&amp; message, <span class="keyword">const</span> <a class="code" href="../../da/d8b/classPosition.html">Position</a> &amp;position);</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  <a class="code" href="../../d9/dd6/classError.html">Error</a>(<span class="keyword">const</span> std::string&amp; message);</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  <a class="code" href="../../d9/dd6/classError.html">Error</a>(<span class="keyword">const</span> <a class="code" href="../../d9/dd6/classError.html">Error</a>&amp; error);</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  <span class="keyword">const</span> std::string to_string() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;};</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="aclassError_html"><div class="ttname"><a href="../../d9/dd6/classError.html">Error</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/dba/Error_8h_source.html#l00007">Error.h:7</a></div></div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="../../d9/dd6/classError.html">   11</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d9/dd6/classError.html">Error</a>{</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  <span class="keyword">const</span> std::string message; <span class="comment">//error message</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  <span class="keyword">const</span> <a class="code" href="../../da/d8b/classPosition.html">Position</a>* <span class="keyword">const</span> position; <span class="comment">//position where the error occurred</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  <a class="code" href="../../d9/dd6/classError.html#a3c5c12d040c775fe8dd279ceb6cfc5a9">Error</a>(<span class="keyword">const</span> std::string&amp; message, <span class="keyword">const</span> <a class="code" href="../../da/d8b/classPosition.html">Position</a> &amp;position);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <a class="code" href="../../d9/dd6/classError.html#a3c5c12d040c775fe8dd279ceb6cfc5a9">Error</a>(<span class="keyword">const</span> std::string&amp; message);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <a class="code" href="../../d9/dd6/classError.html#a3c5c12d040c775fe8dd279ceb6cfc5a9">Error</a>(<span class="keyword">const</span> <a class="code" href="../../d9/dd6/classError.html">Error</a>&amp; error);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <span class="keyword">const</span> std::string <a class="code" href="../../d9/dd6/classError.html#a2b681d8529cd6fec79f192ff36346c70">to_string</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;};</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclassError_html"><div class="ttname"><a href="../../d9/dd6/classError.html">Error</a></div><div class="ttdoc">The Error class is used to create error objects.</div><div class="ttdef"><b>Definition:</b> <a href="../../de/dba/Error_8h_source.html#l00011">Error.h:11</a></div></div>
+<div class="ttc" id="aclassError_html_a2b681d8529cd6fec79f192ff36346c70"><div class="ttname"><a href="../../d9/dd6/classError.html#a2b681d8529cd6fec79f192ff36346c70">Error::to_string</a></div><div class="ttdeci">const std::string to_string() const</div><div class="ttdoc">The to_string method converts the Error message to string.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d06/Error_8cpp_source.html#l00032">Error.cpp:32</a></div></div>
+<div class="ttc" id="aclassError_html_a3c5c12d040c775fe8dd279ceb6cfc5a9"><div class="ttname"><a href="../../d9/dd6/classError.html#a3c5c12d040c775fe8dd279ceb6cfc5a9">Error::Error</a></div><div class="ttdeci">Error(const std::string &amp;message, const Position &amp;position)</div><div class="ttdoc">Default constructor that creates an Error.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d06/Error_8cpp_source.html#l00010">Error.cpp:10</a></div></div>
 <div class="ttc" id="aclassPosition_html"><div class="ttname"><a href="../../da/d8b/classPosition.html">Position</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/dff/Position_8h_source.html#l00006">Position.h:6</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
