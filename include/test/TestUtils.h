@@ -7,6 +7,10 @@
 
 #include "common/Colors.h"
 
+/**
+ * The test utility macro function defines a macro function that can be used in test cases to run multiple tests in sequence
+ */
+
 #define run_test(test)							\
   do{									\
     if(true == (*test)()){						\

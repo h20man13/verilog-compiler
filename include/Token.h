@@ -147,7 +147,7 @@ class Token{
   
 /**
  * Creates a token representing a identifier or a keyword in the verilog language
- * @param lexeme string you want representing the indentifier var, a, while etc.. if this token is equal to one of the keywords in the verilog language it will return that instead
+ * @param lexeme string you want representing the identifier var, a, while etc.. if this token is equal to one of the keywords in the verilog language it will return that instead
  * @param position the position of the current Token
  * @return Token of the type IDENTIFIER or WHILE, IF, (other keywords) ...
  */
@@ -197,7 +197,7 @@ const bool is_operator(const std::string& lexeme);
 const bool is_operator(const char lexeme);
 
 /**
- * The type_to_string function is used to get a string equivelent of the type only. This is needed so that the Types dont just print out numbers because type is an enum.
+ * The type_to_string function is used to get a string equivalent of the type only. This is needed so that the Types dont just print out numbers because type is an enum.
  * @param lexeme char you want to use to check if the operator exists in the verilog language
  * @return std::string a string representing the number passed in to it
  */

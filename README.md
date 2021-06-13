@@ -2,6 +2,8 @@
 
 <p> This project is a continuation of my previous work on the EDE (see repo for info). I am in the process of converting all of the Java code over to C++. This was due to the lack of unsigned types in Java which could be an issue when the CPU design is a 64 bit ISA. Also I decided to separate the components into their own github repositories because someone may want to only develop the Verilog Compiler by itself further.</p>
 
+<p>A link to the documentation can be found <a href="https://h20man13.github.io/docs/docs/html">here</a> . </p>
+
 # Directory Structure
 
 <p> The directory structure of the project is shown below: </p>
