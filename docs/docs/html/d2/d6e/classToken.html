@@ -86,9 +86,9 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:adebc775df817072f8a7ebf0574ed686c"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="../../d2/d6e/classToken.html">Token</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d6e/classToken.html#adebc775df817072f8a7ebf0574ed686c">make_number_token</a> (const std::string &amp;lexeme, const <a class="el" href="../../da/d8b/classPosition.html">Position</a> &amp;position)</td></tr>
-<tr class="memdesc:adebc775df817072f8a7ebf0574ed686c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a token representing a number in the verilog language.  <a href="../../d2/d6e/classToken.html#adebc775df817072f8a7ebf0574ed686c">More...</a><br /></td></tr>
-<tr class="separator:adebc775df817072f8a7ebf0574ed686c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac51cf123e9af6606f3ff54d610740c14"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="../../d2/d6e/classToken.html">Token</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d6e/classToken.html#ac51cf123e9af6606f3ff54d610740c14">make_NumWrap_token</a> (const std::string &amp;lexeme, const <a class="el" href="../../da/d8b/classPosition.html">Position</a> &amp;position)</td></tr>
+<tr class="memdesc:ac51cf123e9af6606f3ff54d610740c14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a token representing a <a class="el" href="../../d6/d54/classNumWrap.html">NumWrap</a> in the verilog language.  <a href="../../d2/d6e/classToken.html#ac51cf123e9af6606f3ff54d610740c14">More...</a><br /></td></tr>
+<tr class="separator:ac51cf123e9af6606f3ff54d610740c14"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0d77acdb54e0c7231fd7fc3c3b0d338d"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="../../d2/d6e/classToken.html">Token</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d6e/classToken.html#a0d77acdb54e0c7231fd7fc3c3b0d338d">make_identifier_token</a> (const std::string &amp;lexeme, const <a class="el" href="../../da/d8b/classPosition.html">Position</a> &amp;position)</td></tr>
 <tr class="memdesc:a0d77acdb54e0c7231fd7fc3c3b0d338d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a token representing a identifier or a keyword in the verilog language.  <a href="../../d2/d6e/classToken.html#a0d77acdb54e0c7231fd7fc3c3b0d338d">More...</a><br /></td></tr>
 <tr class="separator:a0d77acdb54e0c7231fd7fc3c3b0d338d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -299,8 +299,8 @@ an enum representation of the token </dd></dl>
 
 </div>
 </div>
-<a id="adebc775df817072f8a7ebf0574ed686c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adebc775df817072f8a7ebf0574ed686c">&#9670;&nbsp;</a></span>make_number_token()</h2>
+<a id="ac51cf123e9af6606f3ff54d610740c14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac51cf123e9af6606f3ff54d610740c14">&#9670;&nbsp;</a></span>make_NumWrap_token()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -309,7 +309,7 @@ an enum representation of the token </dd></dl>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="../../d2/d6e/classToken.html">Token</a> Token::make_number_token </td>
+          <td class="memname">const <a class="el" href="../../d2/d6e/classToken.html">Token</a> Token::make_NumWrap_token </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>lexeme</em>, </td>
@@ -333,15 +333,15 @@ an enum representation of the token </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p>Creates a token representing a number in the verilog language. </p>
+<p>Creates a token representing a <a class="el" href="../../d6/d54/classNumWrap.html">NumWrap</a> in the verilog language. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">lexeme</td><td>string you want representing the number 1, 4, 'b1101010 etc... </td></tr>
+    <tr><td class="paramname">lexeme</td><td>string you want representing the <a class="el" href="../../d6/d54/classNumWrap.html">NumWrap</a> 1, 4, 'b1101010 etc... </td></tr>
     <tr><td class="paramname">position</td><td>the position of the current <a class="el" href="../../d2/d6e/classToken.html">Token</a> </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="../../d2/d6e/classToken.html">Token</a> of the type NUMBER </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="../../d2/d6e/classToken.html">Token</a> of the type <a class="el" href="../../d6/d54/classNumWrap.html">NumWrap</a> </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="../../d1/dd0/Token_8cpp_source.html#l00149">149</a> of file <a class="el" href="../../d1/dd0/Token_8cpp_source.html">Token.cpp</a>.</p>
 

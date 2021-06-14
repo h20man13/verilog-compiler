@@ -127,7 +127,7 @@ static bool test_decimal(){
 
   std::list<const Token> toks = lex.gen_tokens();
 
-  test_one_type(tok::NUMBER);
+  test_one_type(tok::NumWrap);
   
   return true;
 }
@@ -144,7 +144,7 @@ static bool test_hexidecimal(){
 
   std::list<const Token> toks = lex.gen_tokens();
 
-  test_one_type(tok::NUMBER);
+  test_one_type(tok::NumWrap);
   
   return true;
 }
@@ -161,7 +161,7 @@ static bool test_octal(){
 
   std::list<const Token> toks = lex.gen_tokens();
 
-  test_one_type(tok::NUMBER);
+  test_one_type(tok::NumWrap);
   
   return true;
 }
@@ -178,7 +178,7 @@ static bool test_binary(){
 
   std::list<const Token> toks = lex.gen_tokens();
 
-  test_one_type(tok::NUMBER);
+  test_one_type(tok::NumWrap);
   
   return true;
 }

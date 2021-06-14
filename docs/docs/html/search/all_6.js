@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['lexer_14',['Lexer',['../d6/dc0/classLexer.html',1,'Lexer'],['../d6/dc0/classLexer.html#af2d561870b0bd74d0bfc99387a4411ec',1,'Lexer::Lexer()']]]
+  ['has_5fnext_24',['has_next',['../d6/d2e/classSource.html#af48a49f04432dde57ee099b91d0c7d68',1,'Source']]]
 ];

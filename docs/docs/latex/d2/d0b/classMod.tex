@@ -1,0 +1,79 @@
+\hypertarget{classMod}{}\doxysection{Mod Class Reference}
+\label{classMod}\index{Mod@{Mod}}
+
+
+The subtract class is used for modulo operations.  
+
+
+
+
+{\ttfamily \#include $<$Mod.\+h$>$}
+
+Inheritance diagram for Mod\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{d2/d0b/classMod}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classNumWrap}{Integer}} \mbox{\hyperlink{classMod_ab7cde874913d1a2eb41c538f0378c920}{interpret}} ()
+\begin{DoxyCompactList}\small\item\em A function to perform interpretation on the modulo expression. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMod_a8e16b91ed88f16af8f7c1693d3d04418}{code\+\_\+gen}} ()
+\begin{DoxyCompactList}\small\item\em The code gen function is used to generate the code for the modulo expression via syntax directed translation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+The subtract class is used for modulo operations. 
+
+(Ex\+: a \% b where a and b are Num\+Wraps) \begin{DoxyAuthor}{Author}
+Jacob Bauer 
+\end{DoxyAuthor}
+
+
+Definition at line 19 of file Mod.\+h.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classMod_a8e16b91ed88f16af8f7c1693d3d04418}\label{classMod_a8e16b91ed88f16af8f7c1693d3d04418}} 
+\index{Mod@{Mod}!code\_gen@{code\_gen}}
+\index{code\_gen@{code\_gen}!Mod@{Mod}}
+\doxysubsubsection{\texorpdfstring{code\_gen()}{code\_gen()}}
+{\footnotesize\ttfamily void Mod\+::code\+\_\+gen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+The code gen function is used to generate the code for the modulo expression via syntax directed translation. 
+
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classBinary}{Binary$<$ Integer $>$}}.
+
+\mbox{\Hypertarget{classMod_ab7cde874913d1a2eb41c538f0378c920}\label{classMod_ab7cde874913d1a2eb41c538f0378c920}} 
+\index{Mod@{Mod}!interpret@{interpret}}
+\index{interpret@{interpret}!Mod@{Mod}}
+\doxysubsubsection{\texorpdfstring{interpret()}{interpret()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classNumWrap}{Integer}} Mod\+::interpret (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+A function to perform interpretation on the modulo expression. 
+
+\begin{DoxyReturn}{Returns}
+an integer that is the result of the binary operation 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classBinary}{Binary$<$ Integer $>$}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/ast/expression/binary\+\_\+operation/Mod.\+h\end{DoxyCompactItemize}

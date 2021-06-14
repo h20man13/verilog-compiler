@@ -18,7 +18,7 @@ private:
 	ErrorLog error_log; //stores the error log assigned to the lexer
 	std::optional<Source> source; //the file the lexer needs to lex
 	const std::optional<const Token> gen_token(); //generates a single token
-	const std::optional<const Token> parse_number(); //generates a single number
+	const std::optional<const Token> parse_NumWrap(); //generates a single NumWrap
 	const std::optional<const Token> parse_string(); //generates a string token
 	const std::optional<const Token> parse_identifier(); //generates a identifier token
 	const std::optional<const Token> parse_operator(); //generates an operator token
@@ -28,8 +28,8 @@ private:
 	void parse_multiple_line_comment(); //skips a multiple line comment
 	void parse_single_line_comment(); //skips a single line comment
 
-	const std::optional<const std::string> parse_binary(); //generates a binary number token
-	const std::optional<const std::string> parse_octal(); //generates an octal number token
+	const std::optional<const std::string> parse_binary(); //generates a binary NumWrap token
+	const std::optional<const std::string> parse_octal(); //generates an octal NumWrap token
 	const std::optional<const std::string> parse_hexidecimal(); //generates a hexadecimal token
 	const std::optional<const std::string> parse_decimal(); //generates a decimal token
 	const std::optional<const std::string> parse_real(); //generates a real token

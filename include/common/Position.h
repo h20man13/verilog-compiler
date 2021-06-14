@@ -5,17 +5,17 @@
 
 class Position{
  private:
- const unsigned int lineNumber;
+ const unsigned int lineNumWrap;
  const unsigned int linePosition;
 
  public:
 
  /**
- * Default constructor for Position Object that stores the line number and position in the line of each token
- * @param lineNumber the line number of the token
+ * Default constructor for Position Object that stores the line NumWrap and position in the line of each token
+ * @param lineNumWrap the line NumWrap of the token
  * @param linePosition the position in the line of the 1st letter in the token
  */
- Position(const unsigned int lineNumber, const unsigned int linePosition);
+ Position(const unsigned int lineNumWrap, const unsigned int linePosition);
 
  /**
  * Copy constructor for the position object
@@ -25,7 +25,7 @@ class Position{
 
  /**
  * Converts the position to the string. It is formatted like the example below:
- * [linePosition -> 0, lineNumber -> 0]
+ * [linePosition -> 0, lineNumWrap -> 0]
  */
  std::string to_string() const;
 };

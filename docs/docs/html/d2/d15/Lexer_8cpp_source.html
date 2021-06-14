@@ -103,7 +103,7 @@ $(function() {
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="keywordflow">case</span> <span class="charliteral">&#39;`&#39;</span>:</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            <span class="keywordflow">return</span> parse_macro();</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keywordflow">case</span> <span class="charliteral">&#39;\&#39;&#39;</span>:</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            <span class="keywordflow">return</span> parse_number();</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            <span class="keywordflow">return</span> parse_NumWrap();</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keywordflow">case</span> <span class="charliteral">&#39;\&quot;&#39;</span>:</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            <span class="keywordflow">return</span> parse_string();</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keywordflow">case</span> <span class="charliteral">&#39;/&#39;</span>:</div>
@@ -120,7 +120,7 @@ $(function() {
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (isalpha(c))</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                <span class="keywordflow">return</span> parse_identifier();</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (isdigit(c))</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                <span class="keywordflow">return</span> parse_number();</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                <span class="keywordflow">return</span> parse_NumWrap();</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            <a class="code" href="../../d9/dd6/classError.html">Error</a> error(<span class="stringliteral">&quot;Unexpected initial token found &quot;</span>,</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                    source-&gt;get_current_position());</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            error_log.<a class="code" href="../../df/d17/classErrorLog.html#aacf88c90a270738b4dea8d741e8e0a59">add</a>(error);</div>
@@ -336,7 +336,7 @@ $(function() {
 <div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    <span class="keywordflow">return</span> {lexeme};</div>
 <div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;}</div>
 <div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160; </div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;<span class="keyword">const</span> std::optional&lt;const Token&gt; Lexer::parse_number() {</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;<span class="keyword">const</span> std::optional&lt;const Token&gt; Lexer::parse_NumWrap() {</div>
 <div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    <span class="keywordtype">char</span> c = source-&gt;current();</div>
 <div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    <a class="code" href="../../da/d8b/classPosition.html">Position</a> pos(source-&gt;get_current_position());</div>
 <div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    std::string lexeme;</div>
@@ -348,13 +348,13 @@ $(function() {
 <div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;    }</div>
 <div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160; </div>
 <div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    <span class="keywordflow">if</span> (c != <span class="charliteral">&#39;\&#39;&#39;</span> &amp;&amp; c != <span class="charliteral">&#39;.&#39;</span>) {</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../d2/d6e/classToken.html#adebc775df817072f8a7ebf0574ed686c">Token::make_number_token</a>(lexeme, pos); <span class="comment">//return default decimal value 1 20 1000 etc ...</span></div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../d2/d6e/classToken.html#ac51cf123e9af6606f3ff54d610740c14">Token::make_NumWrap_token</a>(lexeme, pos); <span class="comment">//return default decimal value 1 20 1000 etc ...</span></div>
 <div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (c == <span class="charliteral">&#39;.&#39;</span>) {</div>
 <div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;        <span class="keyword">const</span> std::optional&lt;const std::string&gt; str = Lexer::parse_real();</div>
 <div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;        <span class="keywordflow">if</span> (!str)</div>
 <div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;            <span class="keywordflow">return</span> std::nullopt;</div>
 <div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;        <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="../../d2/d6e/classToken.html#adebc775df817072f8a7ebf0574ed686c">Token::make_number_token</a>(lexeme + *str, pos);</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="../../d2/d6e/classToken.html#ac51cf123e9af6606f3ff54d610740c14">Token::make_NumWrap_token</a>(lexeme + *str, pos);</div>
 <div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;    } <span class="keywordflow">else</span> {</div>
 <div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160; </div>
 <div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;        lexeme += c;</div>
@@ -366,28 +366,28 @@ $(function() {
 <div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;            <span class="keywordflow">if</span> (!str) {</div>
 <div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;                <span class="keywordflow">return</span> std::nullopt;</div>
 <div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;            } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;                <span class="keywordflow">return</span> {<a class="code" href="../../d2/d6e/classToken.html#adebc775df817072f8a7ebf0574ed686c">Token::make_number_token</a>(lexeme + *str, pos)};</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;                <span class="keywordflow">return</span> {<a class="code" href="../../d2/d6e/classToken.html#ac51cf123e9af6606f3ff54d610740c14">Token::make_NumWrap_token</a>(lexeme + *str, pos)};</div>
 <div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;            }</div>
 <div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (toupper(c) == <span class="charliteral">&#39;B&#39;</span>) {</div>
 <div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;            <span class="keyword">const</span> std::optional&lt;std::string&gt; str = parse_binary();</div>
 <div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;            <span class="keywordflow">if</span> (!str) {</div>
 <div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;                <span class="keywordflow">return</span> std::nullopt;</div>
 <div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;            } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;                <span class="keywordflow">return</span> {<a class="code" href="../../d2/d6e/classToken.html#adebc775df817072f8a7ebf0574ed686c">Token::make_number_token</a>(lexeme + *str, pos)};</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;                <span class="keywordflow">return</span> {<a class="code" href="../../d2/d6e/classToken.html#ac51cf123e9af6606f3ff54d610740c14">Token::make_NumWrap_token</a>(lexeme + *str, pos)};</div>
 <div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;            }</div>
 <div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (toupper(c) == <span class="charliteral">&#39;D&#39;</span>) {</div>
 <div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;            std::optional&lt;std::string&gt; str = parse_decimal();</div>
 <div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;            <span class="keywordflow">if</span> (!str) {</div>
 <div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;                <span class="keywordflow">return</span> std::nullopt;</div>
 <div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;            } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;                <span class="keywordflow">return</span> {<a class="code" href="../../d2/d6e/classToken.html#adebc775df817072f8a7ebf0574ed686c">Token::make_number_token</a>(lexeme + *str, pos)};</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;                <span class="keywordflow">return</span> {<a class="code" href="../../d2/d6e/classToken.html#ac51cf123e9af6606f3ff54d610740c14">Token::make_NumWrap_token</a>(lexeme + *str, pos)};</div>
 <div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;            }</div>
 <div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (toupper(c) == <span class="charliteral">&#39;O&#39;</span>) {</div>
 <div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;            std::optional&lt;std::string&gt; str = parse_octal();</div>
 <div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;            <span class="keywordflow">if</span> (!str) {</div>
 <div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;                <span class="keywordflow">return</span> std::nullopt;</div>
 <div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;            } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;                <span class="keywordflow">return</span> {<a class="code" href="../../d2/d6e/classToken.html#adebc775df817072f8a7ebf0574ed686c">Token::make_number_token</a>(lexeme + *str, pos)};</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;                <span class="keywordflow">return</span> {<a class="code" href="../../d2/d6e/classToken.html#ac51cf123e9af6606f3ff54d610740c14">Token::make_NumWrap_token</a>(lexeme + *str, pos)};</div>
 <div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;            }</div>
 <div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;        } <span class="keywordflow">else</span> {</div>
 <div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;            <a class="code" href="../../d9/dd6/classError.html">Error</a> error(</div>
@@ -502,9 +502,9 @@ $(function() {
 <div class="ttc" id="aclassSource_html"><div class="ttname"><a href="../../d6/d2e/classSource.html">Source</a></div><div class="ttdoc">The source class is used to collect input from various input streams.</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d14/Source_8h_source.html#l00011">Source.h:11</a></div></div>
 <div class="ttc" id="aclassToken_html_a0d77acdb54e0c7231fd7fc3c3b0d338d"><div class="ttname"><a href="../../d2/d6e/classToken.html#a0d77acdb54e0c7231fd7fc3c3b0d338d">Token::make_identifier_token</a></div><div class="ttdeci">static const Token make_identifier_token(const std::string &amp;lexeme, const Position &amp;position)</div><div class="ttdoc">Creates a token representing a identifier or a keyword in the verilog language.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/dd0/Token_8cpp_source.html#l00175">Token.cpp:175</a></div></div>
 <div class="ttc" id="aclassToken_html_a6fff80b9ae258212a35dde2f509b8e2b"><div class="ttname"><a href="../../d2/d6e/classToken.html#a6fff80b9ae258212a35dde2f509b8e2b">Token::make_operator_token</a></div><div class="ttdeci">static const Token make_operator_token(const std::string &amp;lexeme, const Position &amp;position)</div><div class="ttdoc">Creates a token representing an operator in the verilog language.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/dd0/Token_8cpp_source.html#l00210">Token.cpp:210</a></div></div>
+<div class="ttc" id="aclassToken_html_ac51cf123e9af6606f3ff54d610740c14"><div class="ttname"><a href="../../d2/d6e/classToken.html#ac51cf123e9af6606f3ff54d610740c14">Token::make_NumWrap_token</a></div><div class="ttdeci">static const Token make_NumWrap_token(const std::string &amp;lexeme, const Position &amp;position)</div><div class="ttdoc">Creates a token representing a NumWrap in the verilog language.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/dd0/Token_8cpp_source.html#l00149">Token.cpp:149</a></div></div>
 <div class="ttc" id="aclassToken_html_ac9556e65013bdc51afdfb78180594aa8"><div class="ttname"><a href="../../d2/d6e/classToken.html#ac9556e65013bdc51afdfb78180594aa8">Token::make_string_token</a></div><div class="ttdeci">static const Token make_string_token(const std::string &amp;lexeme, const Position &amp;position)</div><div class="ttdoc">Creates a token representing a string in the verilog language.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/dd0/Token_8cpp_source.html#l00161">Token.cpp:161</a></div></div>
 <div class="ttc" id="aclassToken_html_ad5f5f43b5feb24a382a8a6d77a0d448a"><div class="ttname"><a href="../../d2/d6e/classToken.html#ad5f5f43b5feb24a382a8a6d77a0d448a">Token::make_macro_token</a></div><div class="ttdeci">static const Token make_macro_token(const std::string &amp;lexeme, const Position &amp;position)</div><div class="ttdoc">Creates a token representing a macro or an identifier for a macro in the verilog language.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/dd0/Token_8cpp_source.html#l00193">Token.cpp:193</a></div></div>
-<div class="ttc" id="aclassToken_html_adebc775df817072f8a7ebf0574ed686c"><div class="ttname"><a href="../../d2/d6e/classToken.html#adebc775df817072f8a7ebf0574ed686c">Token::make_number_token</a></div><div class="ttdeci">static const Token make_number_token(const std::string &amp;lexeme, const Position &amp;position)</div><div class="ttdoc">Creates a token representing a number in the verilog language.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/dd0/Token_8cpp_source.html#l00149">Token.cpp:149</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

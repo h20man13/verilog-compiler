@@ -8,7 +8,7 @@
 bool basic_error_test(){
   Position p(50, 50);
   Error e("This is my error", p);
-  return e.to_string() == bold_red("Error") + bold_white(": ") + "This is my error at [Line number -> 50 | Line position -> 50]";
+  return e.to_string() == bold_red("Error") + bold_white(": ") + "This is my error at [Line NumWrap -> 50 | Line position -> 50]";
 }
 
 int main(){

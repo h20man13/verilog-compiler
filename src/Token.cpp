@@ -48,7 +48,7 @@ public:
   TokDecl(){
 
     ADD_MISC(IDENTIFIER);
-    ADD_MISC(NUMBER);
+    ADD_MISC(NumWrap);
     ADD_MISC(STRING);
     ADD_MISC(MACRODEFINITION);
     ADD_MISC(MACROIDENTIFIER);
@@ -141,13 +141,13 @@ static const TokDecl t; //create this so the tokens are initialized; // @suppres
 Token::Token(const tok type, const std::string& lexeme, const Position& position): type(type), lexeme(lexeme), position(position){}
 
 /**
- * Creates a token representing a number in the verilog language
- * @param lexeme string you want representing the number 1, 4, 'b1101010 etc...
+ * Creates a token representing a NumWrap in the verilog language
+ * @param lexeme string you want representing the NumWrap 1, 4, 'b1101010 etc...
  * @param position the position of the current Token
- * @return Token of the type NUMBER
+ * @return Token of the type NumWrap
  */
-const Token Token::make_number_token(const std::string& lexeme, const Position& position){
-  Token tok(NUMBER, lexeme, position);
+const Token Token::make_NumWrap_token(const std::string& lexeme, const Position& position){
+  Token tok(NumWrap, lexeme, position);
   return tok;
 }
 

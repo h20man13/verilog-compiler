@@ -39,7 +39,7 @@ const std::optional<const Token> Lexer::gen_token() {
 		case '`':
 			return parse_macro();
 		case '\'':
-			return parse_number();
+			return parse_NumWrap();
 		case '\"':
 			return parse_string();
 		case '/':
@@ -56,7 +56,7 @@ const std::optional<const Token> Lexer::gen_token() {
 			else if (isalpha(c))
 				return parse_identifier();
 			else if (isdigit(c))
-				return parse_number();
+				return parse_NumWrap();
 			Error error("Unexpected initial token found ",
 					source->get_current_position());
 			error_log.add(error);
@@ -272,7 +272,7 @@ const std::optional<const std::string> Lexer::parse_real() {
 	return {lexeme};
 }
 
-const std::optional<const Token> Lexer::parse_number() {
+const std::optional<const Token> Lexer::parse_NumWrap() {
 	char c = source->current();
 	Position pos(source->get_current_position());
 	std::string lexeme;
@@ -284,13 +284,13 @@ const std::optional<const Token> Lexer::parse_number() {
 	}
 
 	if (c != '\'' && c != '.') {
-		return Token::make_number_token(lexeme, pos); //return default decimal value 1 20 1000 etc ...
+		return Token::make_NumWrap_token(lexeme, pos); //return default decimal value 1 20 1000 etc ...
 	} else if (c == '.') {
 		const std::optional<const std::string> str = Lexer::parse_real();
 		if (!str)
 			return std::nullopt;
 		else
-			return Token::make_number_token(lexeme + *str, pos);
+			return Token::make_NumWrap_token(lexeme + *str, pos);
 	} else {
 
 		lexeme += c;
@@ -302,28 +302,28 @@ const std::optional<const Token> Lexer::parse_number() {
 			if (!str) {
 				return std::nullopt;
 			} else {
-				return {Token::make_number_token(lexeme + *str, pos)};
+				return {Token::make_NumWrap_token(lexeme + *str, pos)};
 			}
 		} else if (toupper(c) == 'B') {
 			const std::optional<std::string> str = parse_binary();
 			if (!str) {
 				return std::nullopt;
 			} else {
-				return {Token::make_number_token(lexeme + *str, pos)};
+				return {Token::make_NumWrap_token(lexeme + *str, pos)};
 			}
 		} else if (toupper(c) == 'D') {
 			std::optional<std::string> str = parse_decimal();
 			if (!str) {
 				return std::nullopt;
 			} else {
-				return {Token::make_number_token(lexeme + *str, pos)};
+				return {Token::make_NumWrap_token(lexeme + *str, pos)};
 			}
 		} else if (toupper(c) == 'O') {
 			std::optional<std::string> str = parse_octal();
 			if (!str) {
 				return std::nullopt;
 			} else {
-				return {Token::make_number_token(lexeme + *str, pos)};
+				return {Token::make_NumWrap_token(lexeme + *str, pos)};
 			}
 		} else {
 			Error error(

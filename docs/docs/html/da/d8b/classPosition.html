@@ -72,9 +72,9 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a9e0a5a954040d4ad4d2038300bbffd8f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d8b/classPosition.html#a9e0a5a954040d4ad4d2038300bbffd8f">Position</a> (const unsigned int lineNumber, const unsigned int linePosition)</td></tr>
-<tr class="memdesc:a9e0a5a954040d4ad4d2038300bbffd8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor for <a class="el" href="../../da/d8b/classPosition.html">Position</a> Object that stores the line number and position in the line of each token.  <a href="../../da/d8b/classPosition.html#a9e0a5a954040d4ad4d2038300bbffd8f">More...</a><br /></td></tr>
-<tr class="separator:a9e0a5a954040d4ad4d2038300bbffd8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7e611ff0aaa815bfabfdc1df46bf307"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d8b/classPosition.html#ad7e611ff0aaa815bfabfdc1df46bf307">Position</a> (const unsigned int lineNumWrap, const unsigned int linePosition)</td></tr>
+<tr class="memdesc:ad7e611ff0aaa815bfabfdc1df46bf307"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor for <a class="el" href="../../da/d8b/classPosition.html">Position</a> Object that stores the line <a class="el" href="../../d6/d54/classNumWrap.html">NumWrap</a> and position in the line of each token.  <a href="../../da/d8b/classPosition.html#ad7e611ff0aaa815bfabfdc1df46bf307">More...</a><br /></td></tr>
+<tr class="separator:ad7e611ff0aaa815bfabfdc1df46bf307"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abcb3fa2a811a492d1e0701a49f801c35"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d8b/classPosition.html#abcb3fa2a811a492d1e0701a49f801c35">Position</a> (const <a class="el" href="../../da/d8b/classPosition.html">Position</a> &amp;position)</td></tr>
 <tr class="memdesc:abcb3fa2a811a492d1e0701a49f801c35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor for the position object.  <a href="../../da/d8b/classPosition.html#abcb3fa2a811a492d1e0701a49f801c35">More...</a><br /></td></tr>
 <tr class="separator:abcb3fa2a811a492d1e0701a49f801c35"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -86,8 +86,8 @@ Public Member Functions</h2></td></tr>
 <div class="textblock">
 <p class="definition">Definition at line <a class="el" href="../../de/dff/Position_8h_source.html#l00006">6</a> of file <a class="el" href="../../de/dff/Position_8h_source.html">Position.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a9e0a5a954040d4ad4d2038300bbffd8f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9e0a5a954040d4ad4d2038300bbffd8f">&#9670;&nbsp;</a></span>Position() <span class="overload">[1/2]</span></h2>
+<a id="ad7e611ff0aaa815bfabfdc1df46bf307"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7e611ff0aaa815bfabfdc1df46bf307">&#9670;&nbsp;</a></span>Position() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -96,7 +96,7 @@ Public Member Functions</h2></td></tr>
           <td class="memname">Position::Position </td>
           <td>(</td>
           <td class="paramtype">const unsigned int&#160;</td>
-          <td class="paramname"><em>lineNumber</em>, </td>
+          <td class="paramname"><em>lineNumWrap</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -112,10 +112,10 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Default constructor for <a class="el" href="../../da/d8b/classPosition.html">Position</a> Object that stores the line number and position in the line of each token. </p>
+<p>Default constructor for <a class="el" href="../../da/d8b/classPosition.html">Position</a> Object that stores the line <a class="el" href="../../d6/d54/classNumWrap.html">NumWrap</a> and position in the line of each token. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">lineNumber</td><td>the line number of the token </td></tr>
+    <tr><td class="paramname">lineNumWrap</td><td>the line <a class="el" href="../../d6/d54/classNumWrap.html">NumWrap</a> of the token </td></tr>
     <tr><td class="paramname">linePosition</td><td>the position in the line of the 1st letter in the token </td></tr>
   </table>
   </dd>
@@ -170,7 +170,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Converts the position to the string. </p>
-<p >It is formatted like the example below: [linePosition -&gt; 0, lineNumber -&gt; 0] </p>
+<p >It is formatted like the example below: [linePosition -&gt; 0, lineNumWrap -&gt; 0] </p>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/df6/Position_8cpp_source.html#l00023">23</a> of file <a class="el" href="../../d4/df6/Position_8cpp_source.html">Position.cpp</a>.</p>
 

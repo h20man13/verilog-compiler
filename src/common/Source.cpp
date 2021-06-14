@@ -14,7 +14,7 @@ Source::Source(std::istream& input) : input(&input) {
   _next = input.get();
   _past = -1;
   if(_current != -1){
-    line_number = 1;
+    line_NumWrap = 1;
     line_position = 0;
   }
 }
@@ -29,7 +29,7 @@ Source::Source(const Source& source) : input(source.input) {
     _next = source._next;
     _current = source._current;
     _past = source._past;
-    line_number = source.line_number;
+    line_NumWrap = source.line_NumWrap;
     line_position = source.line_position;
   }
 }
@@ -37,7 +37,7 @@ Source::Source(const Source& source) : input(source.input) {
 
 /**
  * The advannce function moves the stream forward by one Byte
- * @param numtimes  the number of times to advance the stream the default is 1
+ * @param numtimes  the NumWrap of times to advance the stream the default is 1
  * @return None
  */
 void Source::advance(const unsigned int num){
@@ -47,7 +47,7 @@ void Source::advance(const unsigned int num){
     _current = _next;
     _next = input->get();
     if(_current == '\n'){
-      line_number++;
+      line_NumWrap++;
       line_position = 0;
     } else if (!eof()){
       line_position++;
@@ -102,7 +102,7 @@ int Source::current_raw() const {
 }
 
 const Position Source::get_current_position() const {
-  Position pos(line_number, line_position);
+  Position pos(line_NumWrap, line_position);
   return pos;
 }
 

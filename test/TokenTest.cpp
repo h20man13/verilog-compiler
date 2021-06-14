@@ -31,11 +31,11 @@ static bool string_test(){
   return t.get_type() == STRING;
 }
 
-static bool number_test(){
+static bool NumWrap_test(){
   Position p(0, 0);
   std::string lexeme = "150000";
-  Token t = Token::make_number_token(lexeme, p);
-  return t.get_type() == NUMBER;
+  Token t = Token::make_NumWrap_token(lexeme, p);
+  return t.get_type() == NumWrap;
 }
 
 int main(){
@@ -44,5 +44,5 @@ int main(){
   run_test(is_keyword_test);
   run_test(isnt_keyword_test);
   run_test(string_test);
-  run_test(number_test);
+  run_test(NumWrap_test);
 }

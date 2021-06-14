@@ -9,7 +9,7 @@
  */
 enum tok{
   IDENTIFIER, //identifiers
-  NUMBER, //Numbers
+  NumWrap, //NumWraps
   STRING, //String constants
   MACRODEFINITION,
   MACROIDENTIFIER,
@@ -136,12 +136,12 @@ class Token{
 
   
 /**
- * Creates a token representing a number in the verilog language
- * @param lexeme string you want representing the number 1, 4, 'b1101010 etc...
+ * Creates a token representing a NumWrap in the verilog language
+ * @param lexeme string you want representing the NumWrap 1, 4, 'b1101010 etc...
  * @param position the position of the current Token
- * @return Token of the type NUMBER
+ * @return Token of the type NumWrap
  */
-  static const Token make_number_token(const std::string& lexeme, const Position& position);
+  static const Token make_NumWrap_token(const std::string& lexeme, const Position& position);
 
 
   
@@ -197,9 +197,9 @@ const bool is_operator(const std::string& lexeme);
 const bool is_operator(const char lexeme);
 
 /**
- * The type_to_string function is used to get a string equivalent of the type only. This is needed so that the Types dont just print out numbers because type is an enum.
+ * The type_to_string function is used to get a string equivalent of the type only. This is needed so that the Types dont just print out NumWraps because type is an enum.
  * @param lexeme char you want to use to check if the operator exists in the verilog language
- * @return std::string a string representing the number passed in to it
+ * @return std::string a string representing the NumWrap passed in to it
  */
 const std::string type_to_string(const tok str);
 

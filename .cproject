@@ -47,7 +47,7 @@
 		<project id="verilog_compiler.null.1668143726" name="verilog_compiler"/>
 	</storageModule>
 	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
-	<storageModule moduleId="refreshScope" versionNumber="2">
+	<storageModule moduleId="refreshScope" versionNumWrap="2">
 		<configuration configurationName="Default">
 			<resource resourceType="PROJECT" workspacePath="/verilog_compiler"/>
 		</configuration>

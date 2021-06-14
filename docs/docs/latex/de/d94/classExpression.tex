@@ -1,0 +1,52 @@
+\hypertarget{classExpression}{}\doxysection{Expression$<$ ret\+\_\+type $>$ Class Template Reference}
+\label{classExpression}\index{Expression$<$ ret\_type $>$@{Expression$<$ ret\_type $>$}}
+
+
+The \mbox{\hyperlink{classExpression}{Expression}} is an Interface that can be used to represent Expressions.  
+
+
+
+
+{\ttfamily \#include $<$Expression.\+h$>$}
+
+Inheritance diagram for Expression$<$ ret\+\_\+type $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.684211cm]{de/d94/classExpression}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classExpression_a89ace949434aa0f561c638c6f1b2b679}\label{classExpression_a89ace949434aa0f561c638c6f1b2b679}} 
+\mbox{\hyperlink{classPosition}{Position}} {\bfseries get\+\_\+position} ()
+\item 
+\mbox{\Hypertarget{classExpression_a7b2716f02396c608ceda99004f63ae89}\label{classExpression_a7b2716f02396c608ceda99004f63ae89}} 
+virtual {\bfseries Expression} (const \mbox{\hyperlink{classPosition}{Position}} \&position) virtual $\sim$\mbox{\hyperlink{classExpression}{Expression}}()=0
+\item 
+\mbox{\Hypertarget{classExpression_a349b6fc1649ba9f9eafb2217a940ac74}\label{classExpression_a349b6fc1649ba9f9eafb2217a940ac74}} 
+virtual void {\bfseries code\+\_\+gen} ()=0
+\item 
+\mbox{\Hypertarget{classExpression_adef9b2b34ec94bbb2fcd8cf0585ffee0}\label{classExpression_adef9b2b34ec94bbb2fcd8cf0585ffee0}} 
+virtual ret\+\_\+type {\bfseries interpret} ()=0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$class ret\+\_\+type$>$\newline
+class Expression$<$ ret\+\_\+type $>$}
+The \mbox{\hyperlink{classExpression}{Expression}} is an Interface that can be used to represent Expressions. 
+
+\begin{DoxyAuthor}{Author}
+Jacob Bauer 
+\end{DoxyAuthor}
+
+
+Definition at line 19 of file Expression.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/ast/expression/Expression.\+h\item 
+src/ast/expression/Expression.\+cpp\end{DoxyCompactItemize}

@@ -16,7 +16,7 @@ class Source{
   int _next;
 
   unsigned int line_position;
-  unsigned int line_number;
+  unsigned int line_NumWrap;
 
   int current_raw() const;
   int next_raw() const;
@@ -37,7 +37,7 @@ class Source{
 
   /**
    * The advannce function moves the stream forward by one Byte
-   * @param numtimes  the number of times to advance the stream the default is 1
+   * @param numtimes  the NumWrap of times to advance the stream the default is 1
    * @return None
    */
   void advance(const unsigned int numtimes = 1);
