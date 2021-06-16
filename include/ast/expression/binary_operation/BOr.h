@@ -11,9 +11,22 @@
 #include "ast/expression/binary_operation/Binary.h"
 #include "common/NumWrap.h"
 
+/**
+ * The Bitwise or operation is used to perform a bitwise or operation
+ * @author Jacob Bauer
+ */
+
 class BOr: public Binary<Integer>{
 public:
+	/**
+	 * The interpret function returns a number representing the
+	 * @return Integer as a result of the operation
+	 */
 	Integer interpret();
+
+	/**
+	 * The code_gen operation generates LLVM IR to represent a bitwise or operation
+	 */
 	void code_gen();
 };
 

@@ -5,14 +5,17 @@
  *      Author: jacob
  */
 
-#include "Expression.h"
+#include "ast/expression/Expression.h"
+#include "common/Position.h"
 
-Expression::Expression() {
-	// TODO Auto-generated constructor stub
+/**
+ * The Expression constructor is only used to set the position of Expression sub objects
+ * @param position  the position of the expression within the ast
+ */
+virtual Expression::Expression(const Position& position) : position(position){}
 
+const Position Expression::get_position() const {
+	return position;
 }
 
-Expression::~Expression() {
-	// TODO Auto-generated destructor stub
-}
 

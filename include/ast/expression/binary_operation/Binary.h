@@ -9,19 +9,28 @@
 #define BINARY_H
 
 #include "ast/expression/Expression.h"
+#include "common/NumWrap.h"
 
-template <typename ret_type>
-class Binary: public Expression<ret_type>{
-private:
-	const Expression<ret_type> left;
-	const Expression<ret_type> right;
+class Binary: public Expression{
 protected:
-	Binary(const Position& position, const Expression<ret_type>& left, const Expression<ret_type>& right);
-public:
+	const Expression left;
+	const Expression right;
+	Binary(const Position& position, const Expression& left, const Expression& right);
 	Binary(const Binary& binop);
-	virtual ~Binary();
-	virtual ret_type interpret() = 0;
-	virtual void code_gen();
+public:
+
+	/**
+	 * The evaluate function computes the result of a Binary Expression
+	 * @tparam num_type the return type of the expression
+	 * @return
+	 */
+	template<typename num_type>
+	virtual NumWrap<num_type> evaluate() = 0;
+
+	/**
+	 * The code gen method is used to generate the LLVM ir of an expression object
+	 */
+	virtual void code_gen() = 0;
 };
 
 

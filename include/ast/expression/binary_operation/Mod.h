@@ -16,16 +16,16 @@
  * (Ex: a % b where a and b are NumWraps)
  * @author Jacob Bauer
  */
-class Mod: public Binary<Integer>{
+class Mod: public Binary{
 public:
 	/**
 	 * A function to perform interpretation on the modulo expression
 	 * @return an integer that is the result of the binary operation
 	 */
-	Integer interpret();
+	Boolean evaluate();
 
 	/**
-	 * The code gen function is used to generate the code for the modulo expression via syntax directed translation
+	 * The code_gen function is used to generate the code for the modulo expression via syntax directed translation
 	 * @return None
 	 */
 	void code_gen();

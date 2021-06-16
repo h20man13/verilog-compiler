@@ -5,14 +5,13 @@
  *      Author: jacob
  */
 
-#ifndef LAND_H
-#define LAND_H
+#ifndef LOR_H
+#define LOR_H
 
 #include "ast/expression/binary_operation/Binary.h"
 #include "common/NumWrap.h"
 
-template<typename num_type>
-class LAnd: public Binary{
+class LOr: public Binary{
 public:
 	/**
 	 * The evaluate method is used to interpret the Logical and Expression

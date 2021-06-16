@@ -11,10 +11,24 @@
 #include "ast/expression/binary_operation/Binary.h"
 #include "common/NumWrap.h"
 
-template <class num_type>
-class Div: public Binary<Number>{
+/**
+ * The Div class can be used to divide two numbers
+ * @param num_type returns a Number type which can be an Integer or a Float
+ */
+
+class Div: public Binary{
 public:
-	Number interpret();
+	/**
+	 * The evaluate method returns an
+	 * @tparam num_type  a generic type from the NumWrapper class
+	 * @return a NumWrap object
+	 */
+
+	Double evaluate();
+
+	/**
+	 * The code_gen method is used to generate LLVM IR for a Div expression
+	 */
 	void code_gen();
 };
 

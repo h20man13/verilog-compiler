@@ -1,5 +1,5 @@
 /*
- * Modulo.h
+ * Sub.h
  *
  *  Created on: Jun 14, 2021
  *      Author: jacob
@@ -17,16 +17,18 @@
  * @author Jacob Bauer
  */
 template<typename num_type>
-class Sub: public Binary<Number>{
+class Sub: public Binary{
 public:
+
 	/**
 	 * A function to perform interpretation on the subtraction operation
 	 * @return an integer that is the result of the binary operation
 	 */
-	Number interpret();
+	template <typename num_wrap>
+	NumWrap<num_wrap> evaluate();
 
 	/**
-	 * The code gen function is used to generate the code for the subtraction expression via syntax directed translation
+	 * The code_gen function is used to generate the code for the subtraction expression via syntax directed translation
 	 * @return None
 	 */
 	void code_gen();
