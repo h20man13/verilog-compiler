@@ -71,7 +71,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * Land.h</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * LAnd.h</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *  Created on: Jun 14, 2021</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *      Author: jacob</span></div>
@@ -83,16 +83,19 @@ $(function() {
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;ast/expression/binary_operation/Binary.h&quot;</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;common/NumWrap.h&quot;</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> num_type&gt;</div>
-<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="../../de/da9/classLAnd.html">   15</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../de/da9/classLAnd.html">LAnd</a>: <span class="keyword">public</span> <a class="code" href="../../d2/d0a/classBinary.html">Binary</a>&lt;Number&gt; {</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    Number interpret();</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">void</span> code_gen();</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;};</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="../../de/da9/classLAnd.html">   14</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../de/da9/classLAnd.html">LAnd</a>: <span class="keyword">public</span> <a class="code" href="../../d2/d0a/classBinary.html">Binary</a>{</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="../../d6/d54/classNumWrap.html">Number</a> <a class="code" href="../../de/da9/classLAnd.html#a90abaf6e69f3cb519ef1fc558318fc72">evaluate</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../de/da9/classLAnd.html#abf6edb5c308b32f63c3f7aef9e6fdf69">code_gen</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;};</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aclassBinary_html"><div class="ttname"><a href="../../d2/d0a/classBinary.html">Binary</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d9/db1/Binary_8h_source.html#l00014">Binary.h:14</a></div></div>
-<div class="ttc" id="aclassLAnd_html"><div class="ttname"><a href="../../de/da9/classLAnd.html">LAnd</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/df2/LAnd_8h_source.html#l00015">LAnd.h:15</a></div></div>
+<div class="ttc" id="aclassLAnd_html"><div class="ttname"><a href="../../de/da9/classLAnd.html">LAnd</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/df2/LAnd_8h_source.html#l00014">LAnd.h:14</a></div></div>
+<div class="ttc" id="aclassLAnd_html_a90abaf6e69f3cb519ef1fc558318fc72"><div class="ttname"><a href="../../de/da9/classLAnd.html#a90abaf6e69f3cb519ef1fc558318fc72">LAnd::evaluate</a></div><div class="ttdeci">Number evaluate() const</div><div class="ttdoc">The evaluate method is used to interpret the Logical and Expression.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d47/LAnd_8cpp_source.html#l00024">LAnd.cpp:24</a></div></div>
+<div class="ttc" id="aclassLAnd_html_abf6edb5c308b32f63c3f7aef9e6fdf69"><div class="ttname"><a href="../../de/da9/classLAnd.html#abf6edb5c308b32f63c3f7aef9e6fdf69">LAnd::code_gen</a></div><div class="ttdeci">void code_gen() const</div><div class="ttdoc">The code generation function that is used to emit LLVM IR.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d47/LAnd_8cpp_source.html#l00016">LAnd.cpp:16</a></div></div>
+<div class="ttc" id="aclassNumWrap_html"><div class="ttname"><a href="../../d6/d54/classNumWrap.html">NumWrap</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d88/NumWrap_8h_source.html#l00014">NumWrap.h:15</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -14,6 +14,16 @@
  */
 virtual Expression::Expression(const Position& position) : position(position){}
 
+/**
+ * The virtual copy constructor is used to copy Expression objects regardless of implementation
+ * @param expression The expression you want to copy from
+ */
+virtual Expression::Expression(const Expression& expression) : position(expression.get_position()){}
+
+/**
+ * The get position method is designed so the user can retrieve the position of the expression
+ * @return a position object representing the expression
+ */
 const Position Expression::get_position() const {
 	return position;
 }

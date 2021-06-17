@@ -9,12 +9,10 @@ Inheritance diagram for Add\+:\begin{figure}[H]
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classAdd_aa924f0968302b5945b298e7c56a36da1}\label{classAdd_aa924f0968302b5945b298e7c56a36da1}} 
-auto {\bfseries interpret} ()
-\item 
-\mbox{\Hypertarget{classAdd_ab4f04b6f0e0cf7ab2dd463afeb053bed}\label{classAdd_ab4f04b6f0e0cf7ab2dd463afeb053bed}} 
-void {\bfseries code\+\_\+gen} ()
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{classNumWrap}{Number}} \mbox{\hyperlink{classAdd_a7615d65b6f9dd2f1df20fefcf822e98d}{evaluate}} () const
+\begin{DoxyCompactList}\small\item\em The \mbox{\hyperlink{classAdd}{Add}} class performs an addition operation and returns the result. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classAdd_a9b5cbb7b578ad44cebc72296389d9a06}{code\+\_\+gen}} () const
+\begin{DoxyCompactList}\small\item\em The code\+\_\+gen function is used to generate LLVM IR for an Addition operation. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
 
 
@@ -25,6 +23,54 @@ Definition at line 13 of file Add.\+h.
 
 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classAdd_a9b5cbb7b578ad44cebc72296389d9a06}\label{classAdd_a9b5cbb7b578ad44cebc72296389d9a06}} 
+\index{Add@{Add}!code\_gen@{code\_gen}}
+\index{code\_gen@{code\_gen}!Add@{Add}}
+\doxysubsubsection{\texorpdfstring{code\_gen()}{code\_gen()}}
+{\footnotesize\ttfamily void Add\+::code\+\_\+gen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+The code\+\_\+gen function is used to generate LLVM IR for an Addition operation. 
+
+Emits LLVM IR for an addition expression. 
+
+Implements \mbox{\hyperlink{classBinary_a7b5e81b3115e86f6c326e2272cbc1d82}{Binary}}.
+
+
+
+Definition at line 16 of file Add.\+cpp.
+
+\mbox{\Hypertarget{classAdd_a7615d65b6f9dd2f1df20fefcf822e98d}\label{classAdd_a7615d65b6f9dd2f1df20fefcf822e98d}} 
+\index{Add@{Add}!evaluate@{evaluate}}
+\index{evaluate@{evaluate}!Add@{Add}}
+\doxysubsubsection{\texorpdfstring{evaluate()}{evaluate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classNumWrap}{Number}} Add\+::evaluate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+The \mbox{\hyperlink{classAdd}{Add}} class performs an addition operation and returns the result. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em num\+\_\+type} & the generic type of the number \\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+the result of the logical and \mbox{\hyperlink{classExpression}{Expression}} 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classBinary_a459cc39b5490c26fc8dee919012cd060}{Binary}}.
+
+
+
+Definition at line 20 of file Add.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-include/ast/expression/binary\+\_\+operation/Add.\+h\end{DoxyCompactItemize}
+include/ast/expression/binary\+\_\+operation/Add.\+h\item 
+src/ast/expression/binary\+\_\+operation/Add.\+cpp\end{DoxyCompactItemize}

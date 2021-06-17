@@ -21,7 +21,8 @@ class Expression {
 private:
 	const Position position; //Position to store of the node
 protected:
-	virtual Expression(const Position& position);
+	Expression(const Position& position);
+	Expression(const Expression& expression);
 public:
 	/**
 	 * The get position method is a getter method that retrieves the position of the expression
@@ -32,14 +33,15 @@ public:
 	/**
 	 * The code_gen method generates the LLVM IR of the Expression
 	 */
-	virtual void code_gen() = 0;
+	virtual void code_gen() const = 0;
 
 	/**
 	 * The interpret method interprets the Expression directly and returns the result
 	 * @return the result of the computed expression
 	 */
-	template<typename num_type>
-	virtual NumWrap<num_type> evaluate() = 0;
+	virtual Number evaluate() const = 0;
+
+	virtual ~Expression();
 };
 
 #endif /* SRC_AST_EXPRESSION_EXPRESSION_H_ */

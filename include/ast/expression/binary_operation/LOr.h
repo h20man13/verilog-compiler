@@ -18,12 +18,12 @@ public:
 	 * @tparam num_type
 	 * @return a boolean from the result of the && expression
 	 */
-	Boolean evaluate();
+	Number evaluate() const;
 
 	/**
 	 * The code generation function that is used to emit LLVM IR
 	 */
-	void code_gen();
+	void code_gen() const;
 };
 
 #endif

@@ -1,5 +1,14 @@
 \hypertarget{classBOr}{}\doxysection{BOr Class Reference}
 \label{classBOr}\index{BOr@{BOr}}
+
+
+The Bitwise or operation is used to perform a bitwise or operation.  
+
+
+
+
+{\ttfamily \#include $<$BOr.\+h$>$}
+
 Inheritance diagram for BOr\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -9,22 +18,51 @@ Inheritance diagram for BOr\+:\begin{figure}[H]
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classBOr_a038e751a4171492ffd366f4a8ea691a4}\label{classBOr_a038e751a4171492ffd366f4a8ea691a4}} 
-\mbox{\hyperlink{classNumWrap}{Integer}} {\bfseries interpret} ()
-\item 
-\mbox{\Hypertarget{classBOr_a0474cb484f786b9a8e6eccf532d8f896}\label{classBOr_a0474cb484f786b9a8e6eccf532d8f896}} 
-void {\bfseries code\+\_\+gen} ()
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{classNumWrap}{Number}} \mbox{\hyperlink{classBOr_a9c299d19e4a14b071096cbea9702da84}{evaluate}} () const
+\begin{DoxyCompactList}\small\item\em The interpret function returns a number representing the. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classBOr_aea51d445a2bc6aa304646decdca1f20c}\label{classBOr_aea51d445a2bc6aa304646decdca1f20c}} 
+void \mbox{\hyperlink{classBOr_aea51d445a2bc6aa304646decdca1f20c}{code\+\_\+gen}} () const
+\begin{DoxyCompactList}\small\item\em The code\+\_\+gen operation generates LLVM IR to represent a bitwise or operation. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
 
 
 \doxysubsection{Detailed Description}
+The Bitwise or operation is used to perform a bitwise or operation. 
+
+\begin{DoxyAuthor}{Author}
+Jacob Bauer 
+\end{DoxyAuthor}
 
 
-Definition at line 14 of file BOr.\+h.
+Definition at line 19 of file BOr.\+h.
 
 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classBOr_a9c299d19e4a14b071096cbea9702da84}\label{classBOr_a9c299d19e4a14b071096cbea9702da84}} 
+\index{BOr@{BOr}!evaluate@{evaluate}}
+\index{evaluate@{evaluate}!BOr@{BOr}}
+\doxysubsubsection{\texorpdfstring{evaluate()}{evaluate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classNumWrap}{Number}} BOr\+::evaluate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+The interpret function returns a number representing the. 
+
+\begin{DoxyReturn}{Returns}
+Integer as a result of the operation 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classBinary_a459cc39b5490c26fc8dee919012cd060}{Binary}}.
+
+
+
+Definition at line 17 of file BOr.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-include/ast/expression/binary\+\_\+operation/BOr.\+h\end{DoxyCompactItemize}
+include/ast/expression/binary\+\_\+operation/BOr.\+h\item 
+src/ast/expression/binary\+\_\+operation/BOr.\+cpp\end{DoxyCompactItemize}

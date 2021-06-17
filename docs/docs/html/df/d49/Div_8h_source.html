@@ -83,16 +83,19 @@ $(function() {
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;ast/expression/binary_operation/Binary.h&quot;</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;common/NumWrap.h&quot;</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> num_type&gt;</div>
-<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="../../d5/d94/classDiv.html">   15</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d5/d94/classDiv.html">Div</a>: <span class="keyword">public</span> <a class="code" href="../../d2/d0a/classBinary.html">Binary</a>&lt;Number&gt;{</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    Number interpret();</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">void</span> code_gen();</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;};</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="../../d5/d94/classDiv.html">   19</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d5/d94/classDiv.html">Div</a>: <span class="keyword">public</span> <a class="code" href="../../d2/d0a/classBinary.html">Binary</a>{</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="../../d6/d54/classNumWrap.html">Number</a> <a class="code" href="../../d5/d94/classDiv.html#a62c842940d3660b97fb512bf4bd1d825">evaluate</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d5/d94/classDiv.html#a94f24b341fd573ce1c378b0f10ef0712">code_gen</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;};</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aclassBinary_html"><div class="ttname"><a href="../../d2/d0a/classBinary.html">Binary</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d9/db1/Binary_8h_source.html#l00014">Binary.h:14</a></div></div>
-<div class="ttc" id="aclassDiv_html"><div class="ttname"><a href="../../d5/d94/classDiv.html">Div</a></div><div class="ttdef"><b>Definition:</b> <a href="../../df/d49/Div_8h_source.html#l00015">Div.h:15</a></div></div>
+<div class="ttc" id="aclassDiv_html"><div class="ttname"><a href="../../d5/d94/classDiv.html">Div</a></div><div class="ttdoc">The Div class can be used to divide two numbers.</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d49/Div_8h_source.html#l00019">Div.h:19</a></div></div>
+<div class="ttc" id="aclassDiv_html_a62c842940d3660b97fb512bf4bd1d825"><div class="ttname"><a href="../../d5/d94/classDiv.html#a62c842940d3660b97fb512bf4bd1d825">Div::evaluate</a></div><div class="ttdeci">Number evaluate() const</div><div class="ttdoc">The evaluate method returns an.</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d1d/Div_8cpp_source.html#l00017">Div.cpp:17</a></div></div>
+<div class="ttc" id="aclassDiv_html_a94f24b341fd573ce1c378b0f10ef0712"><div class="ttname"><a href="../../d5/d94/classDiv.html#a94f24b341fd573ce1c378b0f10ef0712">Div::code_gen</a></div><div class="ttdeci">void code_gen() const</div><div class="ttdoc">The code_gen method is used to generate LLVM IR for a Div expression.</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d1d/Div_8cpp_source.html#l00013">Div.cpp:13</a></div></div>
+<div class="ttc" id="aclassNumWrap_html"><div class="ttname"><a href="../../d6/d54/classNumWrap.html">NumWrap</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d88/NumWrap_8h_source.html#l00014">NumWrap.h:15</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

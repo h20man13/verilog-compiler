@@ -1,5 +1,5 @@
-\hypertarget{classSub}{}\doxysection{Sub$<$ num\+\_\+type $>$ Class Template Reference}
-\label{classSub}\index{Sub$<$ num\_type $>$@{Sub$<$ num\_type $>$}}
+\hypertarget{classSub}{}\doxysection{Sub Class Reference}
+\label{classSub}\index{Sub@{Sub}}
 
 
 The subtract class is used for subtract operations.  
@@ -9,7 +9,7 @@ The subtract class is used for subtract operations.
 
 {\ttfamily \#include $<$Sub.\+h$>$}
 
-Inheritance diagram for Sub$<$ num\+\_\+type $>$\+:\begin{figure}[H]
+Inheritance diagram for Sub\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[height=3.000000cm]{dd/dbf/classSub}
@@ -18,16 +18,14 @@ Inheritance diagram for Sub$<$ num\+\_\+type $>$\+:\begin{figure}[H]
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-Number \mbox{\hyperlink{classSub_a7fa8b4b7cb601935e7ff07943c8b0d15}{interpret}} ()
+\mbox{\hyperlink{classNumWrap}{Number}} \mbox{\hyperlink{classSub_ab4625ea9ff68e362eb493aff868197f8}{evaluate}} () const
 \begin{DoxyCompactList}\small\item\em A function to perform interpretation on the subtraction operation. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classSub_a5b8218a3aa5858817ed0e1501e3931c1}{code\+\_\+gen}} ()
-\begin{DoxyCompactList}\small\item\em The code gen function is used to generate the code for the subtraction expression via syntax directed translation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+void \mbox{\hyperlink{classSub_aed64eec26c44436ddf2102a624fcb2bf}{code\+\_\+gen}} () const
+\begin{DoxyCompactList}\small\item\em The code\+\_\+gen function is used to generate the code for the subtraction expression via syntax directed translation. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
 
 
 \doxysubsection{Detailed Description}
-\subsubsection*{template$<$typename num\+\_\+type$>$\newline
-class Sub$<$ num\+\_\+type $>$}
 The subtract class is used for subtract operations. 
 
 (Ex\+: a -\/ b where a and b are Num\+Wraps) \begin{DoxyAuthor}{Author}
@@ -35,35 +33,37 @@ Jacob Bauer
 \end{DoxyAuthor}
 
 
-Definition at line 20 of file Sub.\+h.
+Definition at line 19 of file Sub.\+h.
 
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{classSub_a5b8218a3aa5858817ed0e1501e3931c1}\label{classSub_a5b8218a3aa5858817ed0e1501e3931c1}} 
-\index{Sub$<$ num\_type $>$@{Sub$<$ num\_type $>$}!code\_gen@{code\_gen}}
-\index{code\_gen@{code\_gen}!Sub$<$ num\_type $>$@{Sub$<$ num\_type $>$}}
+\mbox{\Hypertarget{classSub_aed64eec26c44436ddf2102a624fcb2bf}\label{classSub_aed64eec26c44436ddf2102a624fcb2bf}} 
+\index{Sub@{Sub}!code\_gen@{code\_gen}}
+\index{code\_gen@{code\_gen}!Sub@{Sub}}
 \doxysubsubsection{\texorpdfstring{code\_gen()}{code\_gen()}}
-{\footnotesize\ttfamily template$<$typename num\+\_\+type $>$ \\
-void \mbox{\hyperlink{classSub}{Sub}}$<$ num\+\_\+type $>$\+::code\+\_\+gen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+{\footnotesize\ttfamily void Sub\+::code\+\_\+gen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
-The code gen function is used to generate the code for the subtraction expression via syntax directed translation. 
+The code\+\_\+gen function is used to generate the code for the subtraction expression via syntax directed translation. 
 
 \begin{DoxyReturn}{Returns}
 None 
 \end{DoxyReturn}
 
 
-Reimplemented from \mbox{\hyperlink{classBinary}{Binary$<$ Number $>$}}.
+Implements \mbox{\hyperlink{classBinary_a7b5e81b3115e86f6c326e2272cbc1d82}{Binary}}.
 
-\mbox{\Hypertarget{classSub_a7fa8b4b7cb601935e7ff07943c8b0d15}\label{classSub_a7fa8b4b7cb601935e7ff07943c8b0d15}} 
-\index{Sub$<$ num\_type $>$@{Sub$<$ num\_type $>$}!interpret@{interpret}}
-\index{interpret@{interpret}!Sub$<$ num\_type $>$@{Sub$<$ num\_type $>$}}
-\doxysubsubsection{\texorpdfstring{interpret()}{interpret()}}
-{\footnotesize\ttfamily template$<$typename num\+\_\+type $>$ \\
-Number \mbox{\hyperlink{classSub}{Sub}}$<$ num\+\_\+type $>$\+::interpret (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+Definition at line 13 of file Sub.\+cpp.
+
+\mbox{\Hypertarget{classSub_ab4625ea9ff68e362eb493aff868197f8}\label{classSub_ab4625ea9ff68e362eb493aff868197f8}} 
+\index{Sub@{Sub}!evaluate@{evaluate}}
+\index{evaluate@{evaluate}!Sub@{Sub}}
+\doxysubsubsection{\texorpdfstring{evaluate()}{evaluate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classNumWrap}{Number}} Sub\+::evaluate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
@@ -74,10 +74,15 @@ an integer that is the result of the binary operation
 \end{DoxyReturn}
 
 
-Implements \mbox{\hyperlink{classBinary}{Binary$<$ Number $>$}}.
+Implements \mbox{\hyperlink{classBinary_a459cc39b5490c26fc8dee919012cd060}{Binary}}.
 
 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+Definition at line 17 of file Sub.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-include/ast/expression/binary\+\_\+operation/Sub.\+h\end{DoxyCompactItemize}
+include/ast/expression/binary\+\_\+operation/Sub.\+h\item 
+src/ast/expression/binary\+\_\+operation/Sub.\+cpp\end{DoxyCompactItemize}

@@ -1,5 +1,14 @@
 \hypertarget{classBAnd}{}\doxysection{BAnd Class Reference}
 \label{classBAnd}\index{BAnd@{BAnd}}
+
+
+The bitwise and class is used to perform bitwise and operation.  
+
+
+
+
+{\ttfamily \#include $<$BAnd.\+h$>$}
+
 Inheritance diagram for BAnd\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -9,22 +18,56 @@ Inheritance diagram for BAnd\+:\begin{figure}[H]
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classBAnd_afddeab7a2cad6a47a8f40a87cd31c836}\label{classBAnd_afddeab7a2cad6a47a8f40a87cd31c836}} 
-\mbox{\hyperlink{classNumWrap}{Integer}} {\bfseries interpret} ()
-\item 
-\mbox{\Hypertarget{classBAnd_ae1be1838f2b5a753bcce09e0d57cc9ce}\label{classBAnd_ae1be1838f2b5a753bcce09e0d57cc9ce}} 
-void {\bfseries code\+\_\+gen} ()
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{classNumWrap}{Number}} \mbox{\hyperlink{classBAnd_a37e2dd51b43f1ff7ba364ce97f291ad4}{evaluate}} () const
+\begin{DoxyCompactList}\small\item\em The interpret method computes the bitwise operation of two numbers. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classBAnd_a108e0a711132bedcc4b095dabcdc62ad}\label{classBAnd_a108e0a711132bedcc4b095dabcdc62ad}} 
+void \mbox{\hyperlink{classBAnd_a108e0a711132bedcc4b095dabcdc62ad}{code\+\_\+gen}} () const
+\begin{DoxyCompactList}\small\item\em The code gen method emits the LLVM code to be used to generate a bitwise and expression. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
 
 
 \doxysubsection{Detailed Description}
+The bitwise and class is used to perform bitwise and operation. 
+
+\begin{DoxyAuthor}{Author}
+Jacob Bauer 
+\end{DoxyAuthor}
 
 
-Definition at line 14 of file BAnd.\+h.
+Definition at line 18 of file BAnd.\+h.
 
 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classBAnd_a37e2dd51b43f1ff7ba364ce97f291ad4}\label{classBAnd_a37e2dd51b43f1ff7ba364ce97f291ad4}} 
+\index{BAnd@{BAnd}!evaluate@{evaluate}}
+\index{evaluate@{evaluate}!BAnd@{BAnd}}
+\doxysubsubsection{\texorpdfstring{evaluate()}{evaluate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classNumWrap}{Number}} BAnd\+::evaluate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+The interpret method computes the bitwise operation of two numbers. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+an Integer object 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classBinary_a459cc39b5490c26fc8dee919012cd060}{Binary}}.
+
+
+
+Definition at line 17 of file BAnd.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-include/ast/expression/binary\+\_\+operation/BAnd.\+h\end{DoxyCompactItemize}
+include/ast/expression/binary\+\_\+operation/BAnd.\+h\item 
+src/ast/expression/binary\+\_\+operation/BAnd.\+cpp\end{DoxyCompactItemize}

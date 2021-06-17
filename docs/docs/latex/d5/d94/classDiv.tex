@@ -1,6 +1,15 @@
-\hypertarget{classDiv}{}\doxysection{Div$<$ num\+\_\+type $>$ Class Template Reference}
-\label{classDiv}\index{Div$<$ num\_type $>$@{Div$<$ num\_type $>$}}
-Inheritance diagram for Div$<$ num\+\_\+type $>$\+:\begin{figure}[H]
+\hypertarget{classDiv}{}\doxysection{Div Class Reference}
+\label{classDiv}\index{Div@{Div}}
+
+
+The \mbox{\hyperlink{classDiv}{Div}} class can be used to divide two numbers.  
+
+
+
+
+{\ttfamily \#include $<$Div.\+h$>$}
+
+Inheritance diagram for Div\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[height=3.000000cm]{d5/d94/classDiv}
@@ -9,24 +18,58 @@ Inheritance diagram for Div$<$ num\+\_\+type $>$\+:\begin{figure}[H]
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classDiv_afb0ebbef75b52d88f7c42f0b97505526}\label{classDiv_afb0ebbef75b52d88f7c42f0b97505526}} 
-Number {\bfseries interpret} ()
-\item 
-\mbox{\Hypertarget{classDiv_a49aa116be7daa4ecf7097bb0418d31c8}\label{classDiv_a49aa116be7daa4ecf7097bb0418d31c8}} 
-void {\bfseries code\+\_\+gen} ()
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{classNumWrap}{Number}} \mbox{\hyperlink{classDiv_a62c842940d3660b97fb512bf4bd1d825}{evaluate}} () const
+\begin{DoxyCompactList}\small\item\em The evaluate method returns an. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classDiv_a94f24b341fd573ce1c378b0f10ef0712}\label{classDiv_a94f24b341fd573ce1c378b0f10ef0712}} 
+void \mbox{\hyperlink{classDiv_a94f24b341fd573ce1c378b0f10ef0712}{code\+\_\+gen}} () const
+\begin{DoxyCompactList}\small\item\em The code\+\_\+gen method is used to generate LLVM IR for a \mbox{\hyperlink{classDiv}{Div}} expression. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
 
 
 \doxysubsection{Detailed Description}
-\subsubsection*{template$<$class num\+\_\+type$>$\newline
-class Div$<$ num\+\_\+type $>$}
+The \mbox{\hyperlink{classDiv}{Div}} class can be used to divide two numbers. 
 
 
-Definition at line 15 of file Div.\+h.
+\begin{DoxyParams}{Parameters}
+{\em num\+\_\+type} & returns a Number type which can be an Integer or a Float \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 19 of file Div.\+h.
 
 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classDiv_a62c842940d3660b97fb512bf4bd1d825}\label{classDiv_a62c842940d3660b97fb512bf4bd1d825}} 
+\index{Div@{Div}!evaluate@{evaluate}}
+\index{evaluate@{evaluate}!Div@{Div}}
+\doxysubsubsection{\texorpdfstring{evaluate()}{evaluate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classNumWrap}{Number}} Div\+::evaluate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+The evaluate method returns an. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em num\+\_\+type} & a generic type from the Num\+Wrapper class \\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+a \mbox{\hyperlink{classNumWrap}{Num\+Wrap}} object 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classBinary_a459cc39b5490c26fc8dee919012cd060}{Binary}}.
+
+
+
+Definition at line 17 of file Div.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-include/ast/expression/binary\+\_\+operation/Div.\+h\end{DoxyCompactItemize}
+include/ast/expression/binary\+\_\+operation/Div.\+h\item 
+src/ast/expression/binary\+\_\+operation/Div.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,68 @@
+\hypertarget{classBXor}{}\doxysection{BXor Class Reference}
+\label{classBXor}\index{BXor@{BXor}}
+
+
+The binary Xnor operation performs a bitwise or with a bitwise negation at the end.  
+
+
+
+
+{\ttfamily \#include $<$BXor.\+h$>$}
+
+Inheritance diagram for BXor\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{d1/d98/classBXor}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classNumWrap}{Number}} \mbox{\hyperlink{classBXor_a89e861a41d89b3dff51c82889ec83563}{evaluate}} () const
+\begin{DoxyCompactList}\small\item\em The interpret function interprets the node and it returns an integer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classBXor_a7933f32f55930ef17ba4740a3cdec8f5}\label{classBXor_a7933f32f55930ef17ba4740a3cdec8f5}} 
+void \mbox{\hyperlink{classBXor_a7933f32f55930ef17ba4740a3cdec8f5}{code\+\_\+gen}} () const
+\begin{DoxyCompactList}\small\item\em The code gen function generates the LLVM code to be used for the \mbox{\hyperlink{classBinary}{Binary}} Xnor operation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+The binary Xnor operation performs a bitwise or with a bitwise negation at the end. 
+
+\begin{DoxyAuthor}{Author}
+Jacob Bauer 
+\end{DoxyAuthor}
+
+
+Definition at line 19 of file BXor.\+h.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classBXor_a89e861a41d89b3dff51c82889ec83563}\label{classBXor_a89e861a41d89b3dff51c82889ec83563}} 
+\index{BXor@{BXor}!evaluate@{evaluate}}
+\index{evaluate@{evaluate}!BXor@{BXor}}
+\doxysubsubsection{\texorpdfstring{evaluate()}{evaluate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classNumWrap}{Number}} BXor\+::evaluate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+The interpret function interprets the node and it returns an integer. 
+
+\begin{DoxyReturn}{Returns}
+an Integer or an int object representing the function 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classBinary_a459cc39b5490c26fc8dee919012cd060}{Binary}}.
+
+
+
+Definition at line 17 of file BXor.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/ast/expression/binary\+\_\+operation/BXor.\+h\item 
+src/ast/expression/binary\+\_\+operation/BXor.\+cpp\end{DoxyCompactItemize}

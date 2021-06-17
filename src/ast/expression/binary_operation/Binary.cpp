@@ -12,3 +12,5 @@
 Binary::Binary(const Position& position, const Expression& left, const Expression& right) : Expression(position), left(left), right(right){}
 
 Binary::Binary(const Binary& binop): Expression(binop.get_position()), left(binop.left), right(binop.right){}
+
+

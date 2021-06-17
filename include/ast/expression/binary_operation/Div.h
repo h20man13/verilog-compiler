@@ -24,12 +24,12 @@ public:
 	 * @return a NumWrap object
 	 */
 
-	Double evaluate();
+	Number evaluate() const;
 
 	/**
 	 * The code_gen method is used to generate LLVM IR for a Div expression
 	 */
-	void code_gen();
+	void code_gen() const;
 };
 
 #endif

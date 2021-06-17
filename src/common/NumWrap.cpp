@@ -4,6 +4,7 @@
 
 template<typename num_type>
 NumWrap<num_type>::NumWrap(const num_type value) : value(value){}
+
 template<typename num_type>
 NumWrap<num_type>::operator num_type(){
 	return value;
@@ -37,6 +38,21 @@ NumWrap NumWrap<num_type>::operator /(const num_type value) const {
 template<typename num_type>
 NumWrap NumWrap<num_type>::operator %(const num_type value) const {
 	return NumWrap(this-> value % value);
+}
+
+template<typename num_type>
+NumWrap NumWrap<num_type>::operator &(const num_type value) const {
+	return NumWrap(this-> value & value);
+}
+
+template<typename num_type>
+NumWrap NumWrap<num_type>::operator |(const num_type value) const {
+	return NumWrap(this-> value | value);
+}
+
+template<typename num_type>
+NumWrap NumWrap<num_type>::operator ^(const num_type value) const {
+	return NumWrap(this-> value ^ value);
 }
 
 template<typename num_type>
@@ -75,12 +91,12 @@ num_type NumWrap<num_type>::operator -- (){
 }
 
 template<typename num_type>
-num_type NumWrap<num_type>::operator ++ (int value){
+num_type NumWrap<num_type>::operator ++ (int){
 	return value++;
 }
 
 template<typename num_type>
-num_type NumWrap<num_type>::operator -- (int value){
+num_type NumWrap<num_type>::operator -- (int){
 	return value--;
 }
 
@@ -112,6 +128,31 @@ bool NumWrap<num_type>::operator >= (const num_type value) const {
 template <typename num_type>
 bool NumWrap<num_type>::operator <= (const num_type value) const {
 	return this -> value <= value;
+}
+
+template <typename num_type>
+bool NumWrap<num_type>::operator&&(const num_type value) const {
+	return this -> value && value;
+}
+
+template <typename num_type>
+bool NumWrap<num_type>::operator ||(const num_type value) const {
+	return this -> value && value;
+}
+
+template <typename num_type>
+bool NumWrap<num_type>::operator !() const {
+	return !value;
+}
+
+template <typename num_type>
+NumWrap NumWrap<num_type>::operator~() const {
+	return NumWrap(~value);
+}
+
+template <typename num_type>
+NumWrap NumWrap<num_type>::operator-() const {
+	return NumWrap(-value);
 }
 
 template <typename num_type>

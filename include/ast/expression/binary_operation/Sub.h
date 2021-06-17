@@ -16,7 +16,6 @@
  * (Ex: a - b where a and b are NumWraps)
  * @author Jacob Bauer
  */
-template<typename num_type>
 class Sub: public Binary{
 public:
 
@@ -24,14 +23,13 @@ public:
 	 * A function to perform interpretation on the subtraction operation
 	 * @return an integer that is the result of the binary operation
 	 */
-	template <typename num_wrap>
-	NumWrap<num_wrap> evaluate();
+	Number evaluate() const;
 
 	/**
 	 * The code_gen function is used to generate the code for the subtraction expression via syntax directed translation
 	 * @return None
 	 */
-	void code_gen();
+	void code_gen() const;
 };
 
 #endif

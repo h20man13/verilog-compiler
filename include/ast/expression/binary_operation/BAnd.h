@@ -15,19 +15,19 @@
  * The bitwise and class is used to perform bitwise and operation
  * @author Jacob Bauer
  */
-class BAnd: public Binary<Integer>{
+class BAnd: public Binary{
 public:
 	/**
 	 * The interpret method computes the bitwise operation of two numbers
 	 * @param None
 	 * @return an Integer object
 	 */
-	Integer interpret();
+	Number evaluate() const;
 
 	/**
 	 * The code gen method emits the LLVM code to be used to generate a bitwise and expression
 	 */
-	void code_gen();
+	void code_gen() const;
 };
 
 #endif

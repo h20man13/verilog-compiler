@@ -24,13 +24,12 @@ public:
 	 * @tparam num_type the return type of the expression
 	 * @return
 	 */
-	template<typename num_type>
-	virtual NumWrap<num_type> evaluate() = 0;
+	virtual Number evaluate() const = 0;
 
 	/**
-	 * The code gen method is used to generate the LLVM ir of an expression object
+	 * The code_gen method is used to generate the LLVM IR of an expression object
 	 */
-	virtual void code_gen() = 0;
+	virtual void code_gen() const = 0;
 };
 
 

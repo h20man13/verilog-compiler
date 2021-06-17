@@ -17,13 +17,12 @@ public:
 	 * @tparam num_type the generic type of the number
 	 * @return the result of the logical and Expression
 	 */
-	template<typename num_type>
-	num_type evaluate();
+	Number evaluate() const;
 
 	/**
 	 * The code_gen function is used to generate LLVM IR for an Addition operation
 	 */
-	void code_gen();
+	void code_gen() const;
 };
 
 #endif

@@ -18,10 +18,10 @@ Inheritance diagram for Mod\+:\begin{figure}[H]
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classNumWrap}{Integer}} \mbox{\hyperlink{classMod_ab7cde874913d1a2eb41c538f0378c920}{interpret}} ()
+\mbox{\hyperlink{classNumWrap}{Number}} \mbox{\hyperlink{classMod_a53fd11d3afa0b59da20fe0932d2b83eb}{evaluate}} () const
 \begin{DoxyCompactList}\small\item\em A function to perform interpretation on the modulo expression. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classMod_a8e16b91ed88f16af8f7c1693d3d04418}{code\+\_\+gen}} ()
-\begin{DoxyCompactList}\small\item\em The code gen function is used to generate the code for the modulo expression via syntax directed translation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+void \mbox{\hyperlink{classMod_ac50929b40f8b4404596ecaa3c7b8e009}{code\+\_\+gen}} () const
+\begin{DoxyCompactList}\small\item\em The code\+\_\+gen function is used to generate the code for the modulo expression via syntax directed translation. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
 
 
@@ -38,28 +38,28 @@ Definition at line 19 of file Mod.\+h.
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{classMod_a8e16b91ed88f16af8f7c1693d3d04418}\label{classMod_a8e16b91ed88f16af8f7c1693d3d04418}} 
+\mbox{\Hypertarget{classMod_ac50929b40f8b4404596ecaa3c7b8e009}\label{classMod_ac50929b40f8b4404596ecaa3c7b8e009}} 
 \index{Mod@{Mod}!code\_gen@{code\_gen}}
 \index{code\_gen@{code\_gen}!Mod@{Mod}}
 \doxysubsubsection{\texorpdfstring{code\_gen()}{code\_gen()}}
-{\footnotesize\ttfamily void Mod\+::code\+\_\+gen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+{\footnotesize\ttfamily void Mod\+::code\+\_\+gen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
-The code gen function is used to generate the code for the modulo expression via syntax directed translation. 
+The code\+\_\+gen function is used to generate the code for the modulo expression via syntax directed translation. 
 
 \begin{DoxyReturn}{Returns}
 None 
 \end{DoxyReturn}
 
 
-Reimplemented from \mbox{\hyperlink{classBinary}{Binary$<$ Integer $>$}}.
+Implements \mbox{\hyperlink{classBinary_a7b5e81b3115e86f6c326e2272cbc1d82}{Binary}}.
 
-\mbox{\Hypertarget{classMod_ab7cde874913d1a2eb41c538f0378c920}\label{classMod_ab7cde874913d1a2eb41c538f0378c920}} 
-\index{Mod@{Mod}!interpret@{interpret}}
-\index{interpret@{interpret}!Mod@{Mod}}
-\doxysubsubsection{\texorpdfstring{interpret()}{interpret()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classNumWrap}{Integer}} Mod\+::interpret (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+\mbox{\Hypertarget{classMod_a53fd11d3afa0b59da20fe0932d2b83eb}\label{classMod_a53fd11d3afa0b59da20fe0932d2b83eb}} 
+\index{Mod@{Mod}!evaluate@{evaluate}}
+\index{evaluate@{evaluate}!Mod@{Mod}}
+\doxysubsubsection{\texorpdfstring{evaluate()}{evaluate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classNumWrap}{Number}} Mod\+::evaluate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
@@ -70,7 +70,7 @@ an integer that is the result of the binary operation
 \end{DoxyReturn}
 
 
-Implements \mbox{\hyperlink{classBinary}{Binary$<$ Integer $>$}}.
+Implements \mbox{\hyperlink{classBinary_a459cc39b5490c26fc8dee919012cd060}{Binary}}.
 
 
 

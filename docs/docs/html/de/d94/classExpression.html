@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Verilog-Compiler: Expression&lt; ret_type &gt; Class Template Reference</title>
+<title>Verilog-Compiler: Expression Class Reference</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -65,8 +65,9 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="../../d8/d8c/classExpression-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">Expression&lt; ret_type &gt; Class Template Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div></div>
+  <div class="headertitle"><div class="title">Expression Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div></div>
 </div><!--header-->
 <div class="contents">
 
@@ -75,48 +76,183 @@ $(function() {
 
 <p><code>#include &lt;<a class="el" href="../../d6/d6e/Expression_8h_source.html">Expression.h</a>&gt;</code></p>
 <div class="dynheader">
-Inheritance diagram for Expression&lt; ret_type &gt;:</div>
+Inheritance diagram for Expression:</div>
 <div class="dyncontent">
  <div class="center">
-  <img src="../../de/d94/classExpression.png" usemap="#Expression_3C_20ret_5Ftype_20_3E_map" alt=""/>
-  <map id="Expression_3C_20ret_5Ftype_20_3E_map" name="Expression_3C_20ret_5Ftype_20_3E_map">
-<area href="../../d2/d0a/classBinary.html" alt="Binary&lt; Integer &gt;" shape="rect" coords="0,56,144,80"/>
-<area href="../../d2/d0a/classBinary.html" alt="Binary&lt; Number &gt;" shape="rect" coords="308,56,452,80"/>
-<area href="../../d2/d0a/classBinary.html" alt="Binary&lt; ret_type &gt;" shape="rect" coords="616,56,760,80"/>
-<area href="../../d4/d53/classBAnd.html" alt="BAnd" shape="rect" coords="154,112,298,136"/>
-<area href="../../d2/dc6/classBOr.html" alt="BOr" shape="rect" coords="154,168,298,192"/>
-<area href="../../d4/d4b/classBXNor.html" alt="BXNor" shape="rect" coords="154,224,298,248"/>
-<area href="../../d2/d0b/classMod.html" title="The subtract class is used for modulo operations." alt="Mod" shape="rect" coords="154,280,298,304"/>
-<area href="../../d5/d94/classDiv.html" alt="Div&lt; num_type &gt;" shape="rect" coords="462,112,606,136"/>
-<area href="../../de/da9/classLAnd.html" alt="LAnd&lt; num_type &gt;" shape="rect" coords="462,168,606,192"/>
-<area href="../../dd/dbf/classSub.html" title="The subtract class is used for subtract operations." alt="Sub&lt; num_type &gt;" shape="rect" coords="462,224,606,248"/>
-<area href="../../d4/d8e/classAdd.html" alt="Add" shape="rect" coords="770,112,914,136"/>
-<area href="../../de/d9e/classBNor.html" alt="BNor" shape="rect" coords="770,168,914,192"/>
+  <img src="../../de/d94/classExpression.png" usemap="#Expression_map" alt=""/>
+  <map id="Expression_map" name="Expression_map">
+<area href="../../d2/d0a/classBinary.html" alt="Binary" shape="rect" coords="0,56,74,80"/>
+<area href="../../d4/d8e/classAdd.html" alt="Add" shape="rect" coords="84,112,158,136"/>
+<area href="../../d4/d53/classBAnd.html" title="The bitwise and class is used to perform bitwise and operation." alt="BAnd" shape="rect" coords="84,168,158,192"/>
+<area href="../../d2/dc6/classBOr.html" title="The Bitwise or operation is used to perform a bitwise or operation." alt="BOr" shape="rect" coords="84,224,158,248"/>
+<area href="../../d4/d4b/classBXNor.html" title="The binary Xnor operation performs a bitwise or with a bitwise negation at the end." alt="BXNor" shape="rect" coords="84,280,158,304"/>
+<area href="../../d1/d98/classBXor.html" title="The binary Xnor operation performs a bitwise or with a bitwise negation at the end." alt="BXor" shape="rect" coords="84,336,158,360"/>
+<area href="../../d5/d94/classDiv.html" title="The Div class can be used to divide two numbers." alt="Div" shape="rect" coords="84,392,158,416"/>
+<area href="../../de/da9/classLAnd.html" alt="LAnd" shape="rect" coords="84,448,158,472"/>
+<area href="../../d3/d43/classLOr.html" alt="LOr" shape="rect" coords="84,504,158,528"/>
+<area href="../../d2/d0b/classMod.html" title="The subtract class is used for modulo operations." alt="Mod" shape="rect" coords="84,560,158,584"/>
+<area href="../../dc/d13/classMult.html" alt="Mult" shape="rect" coords="84,616,158,640"/>
+<area href="../../dd/dbf/classSub.html" title="The subtract class is used for subtract operations." alt="Sub" shape="rect" coords="84,672,158,696"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a89ace949434aa0f561c638c6f1b2b679"><td class="memItemLeft" align="right" valign="top"><a id="a89ace949434aa0f561c638c6f1b2b679"></a>
-<a class="el" href="../../da/d8b/classPosition.html">Position</a>&#160;</td><td class="memItemRight" valign="bottom"><b>get_position</b> ()</td></tr>
-<tr class="separator:a89ace949434aa0f561c638c6f1b2b679"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7b2716f02396c608ceda99004f63ae89"><td class="memItemLeft" align="right" valign="top"><a id="a7b2716f02396c608ceda99004f63ae89"></a>
-virtual&#160;</td><td class="memItemRight" valign="bottom"><b>Expression</b> (const <a class="el" href="../../da/d8b/classPosition.html">Position</a> &amp;position) virtual ~<a class="el" href="../../de/d94/classExpression.html">Expression</a>()=0</td></tr>
-<tr class="separator:a7b2716f02396c608ceda99004f63ae89"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a349b6fc1649ba9f9eafb2217a940ac74"><td class="memItemLeft" align="right" valign="top"><a id="a349b6fc1649ba9f9eafb2217a940ac74"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>code_gen</b> ()=0</td></tr>
-<tr class="separator:a349b6fc1649ba9f9eafb2217a940ac74"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adef9b2b34ec94bbb2fcd8cf0585ffee0"><td class="memItemLeft" align="right" valign="top"><a id="adef9b2b34ec94bbb2fcd8cf0585ffee0"></a>
-virtual ret_type&#160;</td><td class="memItemRight" valign="bottom"><b>interpret</b> ()=0</td></tr>
-<tr class="separator:adef9b2b34ec94bbb2fcd8cf0585ffee0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c4bb4178307ec28af5fad960b2b49ae"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../da/d8b/classPosition.html">Position</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d94/classExpression.html#a2c4bb4178307ec28af5fad960b2b49ae">get_position</a> () const</td></tr>
+<tr class="memdesc:a2c4bb4178307ec28af5fad960b2b49ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">The get position method is a getter method that retrieves the position of the expression.  <a href="../../de/d94/classExpression.html#a2c4bb4178307ec28af5fad960b2b49ae">More...</a><br /></td></tr>
+<tr class="separator:a2c4bb4178307ec28af5fad960b2b49ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5b603748ad09017b5077fa0e2e04c67"><td class="memItemLeft" align="right" valign="top"><a id="ab5b603748ad09017b5077fa0e2e04c67"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d94/classExpression.html#ab5b603748ad09017b5077fa0e2e04c67">code_gen</a> () const =0</td></tr>
+<tr class="memdesc:ab5b603748ad09017b5077fa0e2e04c67"><td class="mdescLeft">&#160;</td><td class="mdescRight">The code_gen method generates the LLVM IR of the <a class="el" href="../../de/d94/classExpression.html" title="The Expression is an Interface that can be used to represent Expressions.">Expression</a>. <br /></td></tr>
+<tr class="separator:ab5b603748ad09017b5077fa0e2e04c67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89e9d2099b67b891dfa6ab72895ae0de"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d6/d54/classNumWrap.html">Number</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d94/classExpression.html#a89e9d2099b67b891dfa6ab72895ae0de">evaluate</a> () const =0</td></tr>
+<tr class="memdesc:a89e9d2099b67b891dfa6ab72895ae0de"><td class="mdescLeft">&#160;</td><td class="mdescRight">The interpret method interprets the <a class="el" href="../../de/d94/classExpression.html" title="The Expression is an Interface that can be used to represent Expressions.">Expression</a> directly and returns the result.  <a href="../../de/d94/classExpression.html#a89e9d2099b67b891dfa6ab72895ae0de">More...</a><br /></td></tr>
+<tr class="separator:a89e9d2099b67b891dfa6ab72895ae0de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:af9cba112a43628e30f2e4c18680678b8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d94/classExpression.html#af9cba112a43628e30f2e4c18680678b8">Expression</a> (const <a class="el" href="../../da/d8b/classPosition.html">Position</a> &amp;position)</td></tr>
+<tr class="memdesc:af9cba112a43628e30f2e4c18680678b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="../../de/d94/classExpression.html" title="The Expression is an Interface that can be used to represent Expressions.">Expression</a> constructor is only used to set the position of <a class="el" href="../../de/d94/classExpression.html" title="The Expression is an Interface that can be used to represent Expressions.">Expression</a> sub objects.  <a href="../../de/d94/classExpression.html#af9cba112a43628e30f2e4c18680678b8">More...</a><br /></td></tr>
+<tr class="separator:af9cba112a43628e30f2e4c18680678b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a094ab2f38636bb8dba2f415e2d943cb1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d94/classExpression.html#a094ab2f38636bb8dba2f415e2d943cb1">Expression</a> (const <a class="el" href="../../de/d94/classExpression.html">Expression</a> &amp;expression)</td></tr>
+<tr class="memdesc:a094ab2f38636bb8dba2f415e2d943cb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">The virtual copy constructor is used to copy <a class="el" href="../../de/d94/classExpression.html" title="The Expression is an Interface that can be used to represent Expressions.">Expression</a> objects regardless of implementation.  <a href="../../de/d94/classExpression.html#a094ab2f38636bb8dba2f415e2d943cb1">More...</a><br /></td></tr>
+<tr class="separator:a094ab2f38636bb8dba2f415e2d943cb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><div class="compoundTemplParams">template&lt;class ret_type&gt;<br />
-class Expression&lt; ret_type &gt;</div><p >The <a class="el" href="../../de/d94/classExpression.html" title="The Expression is an Interface that can be used to represent Expressions.">Expression</a> is an Interface that can be used to represent Expressions. </p>
-<dl class="section author"><dt>Author</dt><dd>Jacob Bauer </dd></dl>
+<div class="textblock"><p >The <a class="el" href="../../de/d94/classExpression.html" title="The Expression is an Interface that can be used to represent Expressions.">Expression</a> is an Interface that can be used to represent Expressions. </p>
+<p >The <a class="el" href="../../de/d94/classExpression.html" title="The Expression is an Interface that can be used to represent Expressions.">Expression</a> class is a template class that changes the return type of the Interpret method </p><dl class="section author"><dt>Author</dt><dd>Jacob Bauer </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d6/d6e/Expression_8h_source.html#l00019">19</a> of file <a class="el" href="../../d6/d6e/Expression_8h_source.html">Expression.h</a>.</p>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
+<p class="definition">Definition at line <a class="el" href="../../d6/d6e/Expression_8h_source.html#l00020">20</a> of file <a class="el" href="../../d6/d6e/Expression_8h_source.html">Expression.h</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="af9cba112a43628e30f2e4c18680678b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9cba112a43628e30f2e4c18680678b8">&#9670;&nbsp;</a></span>Expression() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Expression::Expression </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../da/d8b/classPosition.html">Position</a> &amp;&#160;</td>
+          <td class="paramname"><em>position</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The <a class="el" href="../../de/d94/classExpression.html" title="The Expression is an Interface that can be used to represent Expressions.">Expression</a> constructor is only used to set the position of <a class="el" href="../../de/d94/classExpression.html" title="The Expression is an Interface that can be used to represent Expressions.">Expression</a> sub objects. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td>the position of the expression within the ast </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d1/ddc/Expression_8cpp_source.html#l00015">15</a> of file <a class="el" href="../../d1/ddc/Expression_8cpp_source.html">Expression.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a094ab2f38636bb8dba2f415e2d943cb1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a094ab2f38636bb8dba2f415e2d943cb1">&#9670;&nbsp;</a></span>Expression() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Expression::Expression </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../de/d94/classExpression.html">Expression</a> &amp;&#160;</td>
+          <td class="paramname"><em>expression</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The virtual copy constructor is used to copy <a class="el" href="../../de/d94/classExpression.html" title="The Expression is an Interface that can be used to represent Expressions.">Expression</a> objects regardless of implementation. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">expression</td><td>The expression you want to copy from </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d1/ddc/Expression_8cpp_source.html#l00021">21</a> of file <a class="el" href="../../d1/ddc/Expression_8cpp_source.html">Expression.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a89e9d2099b67b891dfa6ab72895ae0de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89e9d2099b67b891dfa6ab72895ae0de">&#9670;&nbsp;</a></span>evaluate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="../../d6/d54/classNumWrap.html">Number</a> Expression::evaluate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The interpret method interprets the <a class="el" href="../../de/d94/classExpression.html" title="The Expression is an Interface that can be used to represent Expressions.">Expression</a> directly and returns the result. </p>
+<dl class="section return"><dt>Returns</dt><dd>the result of the computed expression </dd></dl>
+
+<p>Implemented in <a class="el" href="../../d4/d8e/classAdd.html#a7615d65b6f9dd2f1df20fefcf822e98d">Add</a>, <a class="el" href="../../d4/d53/classBAnd.html#a37e2dd51b43f1ff7ba364ce97f291ad4">BAnd</a>, <a class="el" href="../../d2/dc6/classBOr.html#a9c299d19e4a14b071096cbea9702da84">BOr</a>, <a class="el" href="../../d4/d4b/classBXNor.html#a1daab46b6f74b4a40ffdd1aa767dea71">BXNor</a>, <a class="el" href="../../d1/d98/classBXor.html#a89e861a41d89b3dff51c82889ec83563">BXor</a>, <a class="el" href="../../d5/d94/classDiv.html#a62c842940d3660b97fb512bf4bd1d825">Div</a>, <a class="el" href="../../de/da9/classLAnd.html#a90abaf6e69f3cb519ef1fc558318fc72">LAnd</a>, <a class="el" href="../../d3/d43/classLOr.html#a99f9c641656adb86ccdbcdc68d93aa49">LOr</a>, <a class="el" href="../../d2/d0b/classMod.html#a53fd11d3afa0b59da20fe0932d2b83eb">Mod</a>, <a class="el" href="../../dc/d13/classMult.html#aa06e8bc4fe5d2066c7d8e891337e8296">Mult</a>, <a class="el" href="../../dd/dbf/classSub.html#ab4625ea9ff68e362eb493aff868197f8">Sub</a>, and <a class="el" href="../../d2/d0a/classBinary.html#a459cc39b5490c26fc8dee919012cd060">Binary</a>.</p>
+
+</div>
+</div>
+<a id="a2c4bb4178307ec28af5fad960b2b49ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c4bb4178307ec28af5fad960b2b49ae">&#9670;&nbsp;</a></span>get_position()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="../../da/d8b/classPosition.html">Position</a> Expression::get_position </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The get position method is a getter method that retrieves the position of the expression. </p>
+<p >The get position method is designed so the user can retrieve the position of the expression.</p>
+<dl class="section return"><dt>Returns</dt><dd>a position object that can be used to track the position of the class</dd>
+<dd>
+a position object representing the expression </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d1/ddc/Expression_8cpp_source.html#l00027">27</a> of file <a class="el" href="../../d1/ddc/Expression_8cpp_source.html">Expression.cpp</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>include/ast/expression/<a class="el" href="../../d6/d6e/Expression_8h_source.html">Expression.h</a></li>
 <li>src/ast/expression/<a class="el" href="../../d1/ddc/Expression_8cpp_source.html">Expression.cpp</a></li>
 </ul>

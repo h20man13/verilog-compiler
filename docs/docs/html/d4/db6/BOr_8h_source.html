@@ -83,16 +83,19 @@ $(function() {
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;ast/expression/binary_operation/Binary.h&quot;</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;common/NumWrap.h&quot;</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="../../d2/dc6/classBOr.html">   14</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d2/dc6/classBOr.html">BOr</a>: <span class="keyword">public</span> <a class="code" href="../../d2/d0a/classBinary.html">Binary</a>&lt;Integer&gt;{</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="../../d6/d54/classNumWrap.html">Integer</a> interpret();</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordtype">void</span> code_gen();</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;};</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="aclassBOr_html"><div class="ttname"><a href="../../d2/dc6/classBOr.html">BOr</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db6/BOr_8h_source.html#l00014">BOr.h:14</a></div></div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="../../d2/dc6/classBOr.html">   19</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d2/dc6/classBOr.html">BOr</a>: <span class="keyword">public</span> <a class="code" href="../../d2/d0a/classBinary.html">Binary</a>{</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="../../d6/d54/classNumWrap.html">Number</a> <a class="code" href="../../d2/dc6/classBOr.html#a9c299d19e4a14b071096cbea9702da84">evaluate</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d2/dc6/classBOr.html#aea51d445a2bc6aa304646decdca1f20c">code_gen</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;};</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclassBOr_html"><div class="ttname"><a href="../../d2/dc6/classBOr.html">BOr</a></div><div class="ttdoc">The Bitwise or operation is used to perform a bitwise or operation.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db6/BOr_8h_source.html#l00019">BOr.h:19</a></div></div>
+<div class="ttc" id="aclassBOr_html_a9c299d19e4a14b071096cbea9702da84"><div class="ttname"><a href="../../d2/dc6/classBOr.html#a9c299d19e4a14b071096cbea9702da84">BOr::evaluate</a></div><div class="ttdeci">Number evaluate() const</div><div class="ttdoc">The interpret function returns a number representing the.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d75/BOr_8cpp_source.html#l00017">BOr.cpp:17</a></div></div>
+<div class="ttc" id="aclassBOr_html_aea51d445a2bc6aa304646decdca1f20c"><div class="ttname"><a href="../../d2/dc6/classBOr.html#aea51d445a2bc6aa304646decdca1f20c">BOr::code_gen</a></div><div class="ttdeci">void code_gen() const</div><div class="ttdoc">The code_gen operation generates LLVM IR to represent a bitwise or operation.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d75/BOr_8cpp_source.html#l00013">BOr.cpp:13</a></div></div>
 <div class="ttc" id="aclassBinary_html"><div class="ttname"><a href="../../d2/d0a/classBinary.html">Binary</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d9/db1/Binary_8h_source.html#l00014">Binary.h:14</a></div></div>
-<div class="ttc" id="aclassNumWrap_html"><div class="ttname"><a href="../../d6/d54/classNumWrap.html">NumWrap</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d88/NumWrap_8h_source.html#l00016">NumWrap.h:17</a></div></div>
+<div class="ttc" id="aclassNumWrap_html"><div class="ttname"><a href="../../d6/d54/classNumWrap.html">NumWrap</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d88/NumWrap_8h_source.html#l00014">NumWrap.h:15</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -16,18 +16,18 @@
  * @author Jacob Bauer
  */
 
-class BXNor: public Binary<Integer>{
+class BXNor: public Binary{
 public:
 	/**
 	 * The interpret function interprets the node and it returns an integer
 	 * @return an Integer or an int object representing the function
 	 */
-	Integer interpret();
+	 Number evaluate() const;
 
 	/**
 	 * The code gen function generates the LLVM code to be used for the Binary Xnor operation
 	 */
-	void code_gen();
+	void code_gen() const;
 };
 
 #endif

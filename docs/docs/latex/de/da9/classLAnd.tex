@@ -1,6 +1,6 @@
-\hypertarget{classLAnd}{}\doxysection{LAnd$<$ num\+\_\+type $>$ Class Template Reference}
-\label{classLAnd}\index{LAnd$<$ num\_type $>$@{LAnd$<$ num\_type $>$}}
-Inheritance diagram for LAnd$<$ num\+\_\+type $>$\+:\begin{figure}[H]
+\hypertarget{classLAnd}{}\doxysection{LAnd Class Reference}
+\label{classLAnd}\index{LAnd@{LAnd}}
+Inheritance diagram for LAnd\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[height=3.000000cm]{de/da9/classLAnd}
@@ -9,24 +9,67 @@ Inheritance diagram for LAnd$<$ num\+\_\+type $>$\+:\begin{figure}[H]
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classLAnd_aaf42749c3bc2a52dadc44b7073f0b7c7}\label{classLAnd_aaf42749c3bc2a52dadc44b7073f0b7c7}} 
-Number {\bfseries interpret} ()
-\item 
-\mbox{\Hypertarget{classLAnd_a2886b20598765b83f03fe340e9776bc8}\label{classLAnd_a2886b20598765b83f03fe340e9776bc8}} 
-void {\bfseries code\+\_\+gen} ()
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{classNumWrap}{Number}} \mbox{\hyperlink{classLAnd_a90abaf6e69f3cb519ef1fc558318fc72}{evaluate}} () const
+\begin{DoxyCompactList}\small\item\em The evaluate method is used to interpret the Logical and \mbox{\hyperlink{classExpression}{Expression}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classLAnd_abf6edb5c308b32f63c3f7aef9e6fdf69}{code\+\_\+gen}} () const
+\begin{DoxyCompactList}\small\item\em The code generation function that is used to emit LLVM IR. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
 
 
 \doxysubsection{Detailed Description}
-\subsubsection*{template$<$typename num\+\_\+type$>$\newline
-class LAnd$<$ num\+\_\+type $>$}
 
 
-Definition at line 15 of file LAnd.\+h.
+Definition at line 14 of file LAnd.\+h.
 
 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classLAnd_abf6edb5c308b32f63c3f7aef9e6fdf69}\label{classLAnd_abf6edb5c308b32f63c3f7aef9e6fdf69}} 
+\index{LAnd@{LAnd}!code\_gen@{code\_gen}}
+\index{code\_gen@{code\_gen}!LAnd@{LAnd}}
+\doxysubsubsection{\texorpdfstring{code\_gen()}{code\_gen()}}
+{\footnotesize\ttfamily void LAnd\+::code\+\_\+gen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+The code generation function that is used to emit LLVM IR. 
+
+The gode\+\_\+gen method is used to emit LLVM code. 
+
+Implements \mbox{\hyperlink{classBinary_a7b5e81b3115e86f6c326e2272cbc1d82}{Binary}}.
+
+
+
+Definition at line 16 of file LAnd.\+cpp.
+
+\mbox{\Hypertarget{classLAnd_a90abaf6e69f3cb519ef1fc558318fc72}\label{classLAnd_a90abaf6e69f3cb519ef1fc558318fc72}} 
+\index{LAnd@{LAnd}!evaluate@{evaluate}}
+\index{evaluate@{evaluate}!LAnd@{LAnd}}
+\doxysubsubsection{\texorpdfstring{evaluate()}{evaluate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classNumWrap}{Number}} LAnd\+::evaluate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+The evaluate method is used to interpret the Logical and \mbox{\hyperlink{classExpression}{Expression}}. 
+
+The evaluate method is used to evaluate.
+
+\begin{DoxyReturn}{Returns}
+a boolean from the result of the \&\& expression
+
+
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classBinary_a459cc39b5490c26fc8dee919012cd060}{Binary}}.
+
+
+
+Definition at line 24 of file LAnd.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-include/ast/expression/binary\+\_\+operation/LAnd.\+h\end{DoxyCompactItemize}
+include/ast/expression/binary\+\_\+operation/LAnd.\+h\item 
+src/ast/expression/binary\+\_\+operation/LAnd.\+cpp\end{DoxyCompactItemize}

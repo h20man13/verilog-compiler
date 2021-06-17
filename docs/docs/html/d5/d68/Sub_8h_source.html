@@ -71,7 +71,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * Modulo.h</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * Sub.h</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *  Created on: Jun 14, 2021</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *      Author: jacob</span></div>
@@ -83,19 +83,20 @@ $(function() {
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;ast/expression/binary_operation/Binary.h&quot;</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;common/NumWrap.h&quot;</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> num_type&gt;</div>
-<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="../../dd/dbf/classSub.html">   20</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../dd/dbf/classSub.html">Sub</a>: <span class="keyword">public</span> <a class="code" href="../../d2/d0a/classBinary.html">Binary</a>&lt;Number&gt;{</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="../../dd/dbf/classSub.html#a7fa8b4b7cb601935e7ff07943c8b0d15">   26</a></span>&#160;    Number <a class="code" href="../../dd/dbf/classSub.html#a7fa8b4b7cb601935e7ff07943c8b0d15">interpret</a>();</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="../../dd/dbf/classSub.html">   19</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../dd/dbf/classSub.html">Sub</a>: <span class="keyword">public</span> <a class="code" href="../../d2/d0a/classBinary.html">Binary</a>{</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="../../d6/d54/classNumWrap.html">Number</a> <a class="code" href="../../dd/dbf/classSub.html#ab4625ea9ff68e362eb493aff868197f8">evaluate</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="../../dd/dbf/classSub.html#a5b8218a3aa5858817ed0e1501e3931c1">   32</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../dd/dbf/classSub.html#a5b8218a3aa5858817ed0e1501e3931c1">code_gen</a>();</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../dd/dbf/classSub.html#aed64eec26c44436ddf2102a624fcb2bf">code_gen</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;};</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aclassBinary_html"><div class="ttname"><a href="../../d2/d0a/classBinary.html">Binary</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d9/db1/Binary_8h_source.html#l00014">Binary.h:14</a></div></div>
-<div class="ttc" id="aclassSub_html"><div class="ttname"><a href="../../dd/dbf/classSub.html">Sub</a></div><div class="ttdoc">The subtract class is used for subtract operations.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d68/Sub_8h_source.html#l00020">Sub.h:20</a></div></div>
-<div class="ttc" id="aclassSub_html_a5b8218a3aa5858817ed0e1501e3931c1"><div class="ttname"><a href="../../dd/dbf/classSub.html#a5b8218a3aa5858817ed0e1501e3931c1">Sub::code_gen</a></div><div class="ttdeci">void code_gen()</div><div class="ttdoc">The code gen function is used to generate the code for the subtraction expression via syntax directed...</div></div>
-<div class="ttc" id="aclassSub_html_a7fa8b4b7cb601935e7ff07943c8b0d15"><div class="ttname"><a href="../../dd/dbf/classSub.html#a7fa8b4b7cb601935e7ff07943c8b0d15">Sub::interpret</a></div><div class="ttdeci">Number interpret()</div><div class="ttdoc">A function to perform interpretation on the subtraction operation.</div></div>
+<div class="ttc" id="aclassNumWrap_html"><div class="ttname"><a href="../../d6/d54/classNumWrap.html">NumWrap</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d88/NumWrap_8h_source.html#l00014">NumWrap.h:15</a></div></div>
+<div class="ttc" id="aclassSub_html"><div class="ttname"><a href="../../dd/dbf/classSub.html">Sub</a></div><div class="ttdoc">The subtract class is used for subtract operations.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d68/Sub_8h_source.html#l00019">Sub.h:19</a></div></div>
+<div class="ttc" id="aclassSub_html_ab4625ea9ff68e362eb493aff868197f8"><div class="ttname"><a href="../../dd/dbf/classSub.html#ab4625ea9ff68e362eb493aff868197f8">Sub::evaluate</a></div><div class="ttdeci">Number evaluate() const</div><div class="ttdoc">A function to perform interpretation on the subtraction operation.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d1f/Sub_8cpp_source.html#l00017">Sub.cpp:17</a></div></div>
+<div class="ttc" id="aclassSub_html_aed64eec26c44436ddf2102a624fcb2bf"><div class="ttname"><a href="../../dd/dbf/classSub.html#aed64eec26c44436ddf2102a624fcb2bf">Sub::code_gen</a></div><div class="ttdeci">void code_gen() const</div><div class="ttdoc">The code_gen function is used to generate the code for the subtraction expression via syntax directed...</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d1f/Sub_8cpp_source.html#l00013">Sub.cpp:13</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

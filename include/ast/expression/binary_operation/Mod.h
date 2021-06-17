@@ -22,13 +22,13 @@ public:
 	 * A function to perform interpretation on the modulo expression
 	 * @return an integer that is the result of the binary operation
 	 */
-	Boolean evaluate();
+	Number evaluate() const;
 
 	/**
 	 * The code_gen function is used to generate the code for the modulo expression via syntax directed translation
 	 * @return None
 	 */
-	void code_gen();
+	void code_gen() const;
 };
 
 #endif /* INCLUDE_AST_EXPRESSION_BINARY_OPERATION_MODULO_H_ */

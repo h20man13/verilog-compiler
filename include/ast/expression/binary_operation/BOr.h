@@ -16,18 +16,18 @@
  * @author Jacob Bauer
  */
 
-class BOr: public Binary<Integer>{
+class BOr: public Binary{
 public:
 	/**
 	 * The interpret function returns a number representing the
 	 * @return Integer as a result of the operation
 	 */
-	Integer interpret();
+	Number evaluate() const;
 
 	/**
 	 * The code_gen operation generates LLVM IR to represent a bitwise or operation
 	 */
-	void code_gen();
+	void code_gen() const;
 };
 
 #endif
