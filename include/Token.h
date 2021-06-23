@@ -34,7 +34,7 @@ enum tok{
   LE,     // <=
   GE,     // >=
   DELAY,  // #
-  SEMI,   // ;
+  SEMI,   //= 0;
   AT,     // @
   DOLLAR, // $
   EQ1,    // =

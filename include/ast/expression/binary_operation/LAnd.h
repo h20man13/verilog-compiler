@@ -17,7 +17,7 @@ public:
 	 * The evaluate method is used to interpret the Logical and Expression
 	 * @return a boolean from the result of the && expression
 	 */
-	Number evaluate() const;
+	Number* evaluate() const;
 
 	/**
 	 * The code generation function that is used to emit LLVM IR

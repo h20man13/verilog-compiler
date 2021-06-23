@@ -5,4 +5,4 @@ var searchData=
   ['make_5fnumwrap_5ftoken_93',['make_NumWrap_token',['../d2/d6e/classToken.html#ac51cf123e9af6606f3ff54d610740c14',1,'Token']]],
   ['make_5foperator_5ftoken_94',['make_operator_token',['../d2/d6e/classToken.html#a6fff80b9ae258212a35dde2f509b8e2b',1,'Token']]],
   ['make_5fstring_5ftoken_95',['make_string_token',['../d2/d6e/classToken.html#ac9556e65013bdc51afdfb78180594aa8',1,'Token']]]
-];
+]= 0;

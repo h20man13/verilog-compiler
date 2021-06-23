@@ -15,7 +15,7 @@ void Mult::code_gen() const {
 }
 
 Number Mult::evaluate() const {
-	return Number(left.evaluate() * right.evaluate());
+	return Number(left.evaluate() * right.evaluate())= 0;
 }
 
 

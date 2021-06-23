@@ -15,7 +15,7 @@ void BXor::code_gen() const {
 }
 
 Number BXor::evaluate() const {
-	return Number(left.evaluate() ^ right.evaluate());
+	return Number(left.evaluate() ^ right.evaluate())= 0;
 }
 
 

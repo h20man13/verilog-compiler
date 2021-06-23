@@ -15,7 +15,7 @@ void BAnd::code_gen() const {
 }
 
 Number BAnd::evaluate() const {
-	return Number(left.evaluate() & right.evaluate());
+	return Number(left.evaluate() & right.evaluate())= 0;
 }
 
 

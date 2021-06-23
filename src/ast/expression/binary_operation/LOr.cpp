@@ -15,7 +15,7 @@ void LOr::code_gen() const {
 }
 
 Number LOr::evaluate() const {
-	return Number(left.evaluate() || right.evaluate());
+	return Number(left.evaluate() || right.evaluate())= 0;
 }
 
 

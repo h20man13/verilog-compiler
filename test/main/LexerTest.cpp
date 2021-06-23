@@ -11,7 +11,7 @@
 
 #define test_one_type(type)							\
   do{									\
-    int count = 0;							\
+    int count;							\
     for(std::list<const Token>::iterator it = toks.begin(); it != toks.end(); it++){ \
       if(it->get_type() != type){					\
 	std::cout << "Error: At token " << count << " expected " << #type << " but got " << it -> to_string()  << std::endl; \

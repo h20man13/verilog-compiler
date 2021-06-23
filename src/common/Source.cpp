@@ -41,7 +41,7 @@ Source::Source(const Source& source) : input(source.input) {
  * @return None
  */
 void Source::advance(const unsigned int num){
-  int i = 0;
+  int i= 0;
   while(i < num && !eof()){
     _past = _current;
     _current = _next;
@@ -102,8 +102,7 @@ int Source::current_raw() const {
 }
 
 const Position Source::get_current_position() const {
-  Position pos(line_NumWrap, line_position);
-  return pos;
+  return Position(line_NumWrap, line_position);
 }
 
 /**

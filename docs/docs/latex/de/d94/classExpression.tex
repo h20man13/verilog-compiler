@@ -21,9 +21,9 @@ Inheritance diagram for Expression\+:\begin{figure}[H]
 const \mbox{\hyperlink{classPosition}{Position}} \mbox{\hyperlink{classExpression_a2c4bb4178307ec28af5fad960b2b49ae}{get\+\_\+position}} () const
 \begin{DoxyCompactList}\small\item\em The get position method is a getter method that retrieves the position of the expression. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classExpression_ab5b603748ad09017b5077fa0e2e04c67}\label{classExpression_ab5b603748ad09017b5077fa0e2e04c67}} 
-virtual void \mbox{\hyperlink{classExpression_ab5b603748ad09017b5077fa0e2e04c67}{code\+\_\+gen}} () const =0
+ void \mbox{\hyperlink{classExpression_ab5b603748ad09017b5077fa0e2e04c67}{code\+\_\+gen}} () const =0
 \begin{DoxyCompactList}\small\item\em The code\+\_\+gen method generates the LLVM IR of the \mbox{\hyperlink{classExpression}{Expression}}. \end{DoxyCompactList}\item 
-virtual \mbox{\hyperlink{classNumWrap}{Number}} \mbox{\hyperlink{classExpression_a89e9d2099b67b891dfa6ab72895ae0de}{evaluate}} () const =0
+ \mbox{\hyperlink{classNumWrap}{Number}} \mbox{\hyperlink{classExpression_a89e9d2099b67b891dfa6ab72895ae0de}{evaluate}} () const =0
 \begin{DoxyCompactList}\small\item\em The interpret method interprets the \mbox{\hyperlink{classExpression}{Expression}} directly and returns the result. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
@@ -31,7 +31,7 @@ virtual \mbox{\hyperlink{classNumWrap}{Number}} \mbox{\hyperlink{classExpression
 \mbox{\hyperlink{classExpression_af9cba112a43628e30f2e4c18680678b8}{Expression}} (const \mbox{\hyperlink{classPosition}{Position}} \&position)
 \begin{DoxyCompactList}\small\item\em The \mbox{\hyperlink{classExpression}{Expression}} constructor is only used to set the position of \mbox{\hyperlink{classExpression}{Expression}} sub objects. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classExpression_a094ab2f38636bb8dba2f415e2d943cb1}{Expression}} (const \mbox{\hyperlink{classExpression}{Expression}} \&expression)
-\begin{DoxyCompactList}\small\item\em The virtual copy constructor is used to copy \mbox{\hyperlink{classExpression}{Expression}} objects regardless of implementation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The  copy constructor is used to copy \mbox{\hyperlink{classExpression}{Expression}} objects regardless of implementation. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -74,7 +74,7 @@ Definition at line 15 of file Expression.\+cpp.
 
 
 
-The virtual copy constructor is used to copy \mbox{\hyperlink{classExpression}{Expression}} objects regardless of implementation. 
+The  copy constructor is used to copy \mbox{\hyperlink{classExpression}{Expression}} objects regardless of implementation. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -92,7 +92,7 @@ Definition at line 21 of file Expression.\+cpp.
 \index{Expression@{Expression}!evaluate@{evaluate}}
 \index{evaluate@{evaluate}!Expression@{Expression}}
 \doxysubsubsection{\texorpdfstring{evaluate()}{evaluate()}}
-{\footnotesize\ttfamily virtual \mbox{\hyperlink{classNumWrap}{Number}} Expression\+::evaluate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily  \mbox{\hyperlink{classNumWrap}{Number}} Expression\+::evaluate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure ]}}
 
 
 

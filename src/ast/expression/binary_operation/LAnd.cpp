@@ -22,7 +22,7 @@ void LAnd::code_gen() const {
  * @return
  */
 Number LAnd::evaluate() const {
-	return Number(left.evaluate() && right.evaluate());
+	return Number(left.evaluate() && right.evaluate())= 0;
 }
 
 

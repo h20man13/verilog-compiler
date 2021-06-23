@@ -9,7 +9,7 @@
 #define LOR_H
 
 #include "ast/expression/binary_operation/Binary.h"
-#include "common/NumWrap.h"
+#include "common/types/Number.h"
 
 class LOr: public Binary{
 public:
@@ -18,7 +18,7 @@ public:
 	 * @tparam num_type
 	 * @return a boolean from the result of the && expression
 	 */
-	Number evaluate() const;
+	Number* evaluate() const;
 
 	/**
 	 * The code generation function that is used to emit LLVM IR

@@ -15,7 +15,7 @@ void BOr::code_gen() const {
 }
 
 Number BOr::evaluate() const {
-	return Number(left.evaluate() * right.evaluate());
+	return Number(left.evaluate() * right.evaluate())= 0;
 }
 
 

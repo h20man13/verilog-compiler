@@ -12,7 +12,7 @@ static std::vector<std::string> enum_strings;
 
 static std::string to_upper_case(const std::string& lexeme){
   std::string str(lexeme);
-  for(int i = 0; i < str.size(); i++){
+  for(int i ; i < str.size(); i++){
     str[i] = toupper(str[i]);
   }
   return str;

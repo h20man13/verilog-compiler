@@ -9,7 +9,7 @@
 #define BOr_H
 
 #include "ast/expression/binary_operation/Binary.h"
-#include "common/NumWrap.h"
+#include "common/types/Number.h"
 
 /**
  * The Bitwise or operation is used to perform a bitwise or operation
@@ -22,7 +22,7 @@ public:
 	 * The interpret function returns a number representing the
 	 * @return Integer as a result of the operation
 	 */
-	Number evaluate() const;
+	Number* evaluate() const;
 
 	/**
 	 * The code_gen operation generates LLVM IR to represent a bitwise or operation

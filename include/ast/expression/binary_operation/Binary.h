@@ -9,14 +9,15 @@
 #define BINARY_H
 
 #include "ast/expression/Expression.h"
-#include "common/NumWrap.h"
+#include "common/types/Number.h"
 
 class Binary: public Expression{
 protected:
-	const Expression left;
-	const Expression right;
+	const Expression* left;
+	const Expression* right;
 	Binary(const Position& position, const Expression& left, const Expression& right);
 	Binary(const Binary& binop);
+	~Binary()= 0;
 public:
 
 	/**
@@ -24,12 +25,12 @@ public:
 	 * @tparam num_type the return type of the expression
 	 * @return
 	 */
-	virtual Number evaluate() const = 0;
+	 virtual Object* evaluate() const = 0;
 
 	/**
 	 * The code_gen method is used to generate the LLVM IR of an expression object
 	 */
-	virtual void code_gen() const = 0;
+	 virtual void code_gen() const = 0;
 };
 
 

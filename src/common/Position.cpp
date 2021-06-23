@@ -7,7 +7,7 @@
  * @param linePosition the position in the line of the 1st letter in the token
  */
 
-Position::Position(const unsigned int lineNumWrap, const unsigned int linePosition) : linePosition(linePosition), lineNumWrap(lineNumWrap){};
+Position::Position(const unsigned int lineNumWrap, const unsigned int linePosition) : linePosition(linePosition), lineNumWrap(lineNumWrap){}
 
 /**
  * Copy constructor for the position object
@@ -21,5 +21,5 @@ Position::Position(const Position& position): linePosition(position.linePosition
  * [linePosition -> 0, lineNumWrap -> 0]
  */
 std::string Position::to_string() const {
-  return "[Line NumWrap -> " + std::to_string(lineNumWrap) + " | Line position -> " + std::to_string(linePosition) + ']'; 
+  return "[Line NumWrap -> " + std::to_string(lineNumWrap) + " | Line position -> " + std::to_string(linePosition) + ']';
 }

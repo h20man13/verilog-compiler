@@ -15,7 +15,7 @@ static bool source_init_test(){
 }
 
 static bool source_total_test(){
-  int count = 0;
+  int count;
   std::string str = is.str();
   while(!src.eof()){
     if(str[count] != src.current()){

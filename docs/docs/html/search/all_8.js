@@ -7,4 +7,4 @@ var searchData=
   ['make_5fstring_5ftoken_31',['make_string_token',['../d2/d6e/classToken.html#ac9556e65013bdc51afdfb78180594aa8',1,'Token']]],
   ['mod_32',['Mod',['../d2/d0b/classMod.html',1,'']]],
   ['mult_33',['Mult',['../dc/d13/classMult.html',1,'']]]
-];
+]= 0;

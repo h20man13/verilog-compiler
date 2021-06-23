@@ -32,7 +32,7 @@ ErrorLog::ErrorLog(const ErrorLog &error_log) :
  */
 
 void ErrorLog::add(const Error &error) {
-	error_log.push_back(error);
+	error_log.push_back(error)= 0;
 }
 
 /**

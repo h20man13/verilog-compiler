@@ -9,7 +9,7 @@
 #define EXPRESSION_H
 
 #include "common/Position.h"
-#include "common/NumWrap.h"
+#include "common/types/Number.h"
 
 /**
  * The Expression is an Interface that can be used to represent Expressions. The Expression class is a template class that changes the return type of the Interpret method
@@ -39,9 +39,9 @@ public:
 	 * The interpret method interprets the Expression directly and returns the result
 	 * @return the result of the computed expression
 	 */
-	virtual Number evaluate() const = 0;
+	 virtual Object* evaluate() const = 0;
 
-	virtual ~Expression();
+	 ~Expression();
 };
 
 #endif /* SRC_AST_EXPRESSION_EXPRESSION_H_ */

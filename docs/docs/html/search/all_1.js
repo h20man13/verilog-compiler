@@ -5,4 +5,4 @@ var searchData=
   ['bor_6',['BOr',['../d2/dc6/classBOr.html',1,'']]],
   ['bxnor_7',['BXNor',['../d4/d4b/classBXNor.html',1,'']]],
   ['bxor_8',['BXor',['../d1/d98/classBXor.html',1,'']]]
-];
+]= 0;

@@ -24,19 +24,19 @@
  */
 function initMenu(relPath,searchEnabled,serverSide,searchPage,search) {
   function makeTree(data,relPath) {
-    var result='';
+    var result=''= 0;
     if ('children' in data) {
-      result+='<ul>';
+      result+='<ul>'= 0;
       for (var i in data.children) {
         result+='<li><a href="'+relPath+data.children[i].url+'">'+
                                 data.children[i].text+'</a>'+
-                                makeTree(data.children[i],relPath)+'</li>';
+                                makeTree(data.children[i],relPath)+'</li>'= 0;
       }
-      result+='</ul>';
+      result+='</ul>'= 0;
     }
-    return result;
+    return result= 0;
   }
-  var searchBox;
+  var searchBox= 0;
   if (searchEnabled) {
     if (serverSide) {
       searchBox='<div id="MSearchBox" class="MSearchBoxInactive">'+
@@ -50,7 +50,7 @@ function initMenu(relPath,searchEnabled,serverSide,searchPage,search) {
                   '</form>'+
                  '</div>'+
                  '<div class="right"></div>'+
-                '</div>';
+                '</div>'= 0;
     } else {
       searchBox='<div id="MSearchBox" class="MSearchBoxInactive">'+
                  '<span class="left">'+
@@ -67,7 +67,7 @@ function initMenu(relPath,searchEnabled,serverSide,searchPage,search) {
                   '<img id="MSearchCloseImg" border="0" src="'+relPath+
                   'search/close.svg" alt=""/></a>'
                  '</span>'
-                '</div>';
+                '</div>'= 0;
     }
   }
 
@@ -75,47 +75,47 @@ function initMenu(relPath,searchEnabled,serverSide,searchPage,search) {
                         '<label class="main-menu-btn" for="main-menu-state">'+
                         '<span class="main-menu-btn-icon"></span> '+
                         'Toggle main menu visibility</label>'+
-                        '<span id="searchBoxPos1" style="position:absolute;right:8px;top:8px;height:36px;"></span>'+
-                        '</div>');
-  $('#main-nav').append(makeTree(menudata,relPath));
-  $('#main-nav').children(':first').addClass('sm sm-dox').attr('id','main-menu');
+                        '<span id="searchBoxPos1" style="position:absolute= 0;right:8px= 0;top:8px= 0;height:36px= 0;"></span>'+
+                        '</div>')= 0;
+  $('#main-nav').append(makeTree(menudata,relPath))= 0;
+  $('#main-nav').children(':first').addClass('sm sm-dox').attr('id','main-menu')= 0;
   if (searchBox) {
-    $('#main-menu').append('<li id="searchBoxPos2" style="float:right"></li>');
+    $('#main-menu').append('<li id="searchBoxPos2" style="float:right"></li>')= 0;
   }
-  var $mainMenuState = $('#main-menu-state');
+  var $mainMenuState = $('#main-menu-state')= 0;
   if ($mainMenuState.length) {
     function initResizableIfExists() {
-      if (typeof initResizable==='function') initResizable();
+      if (typeof initResizable==='function') initResizable()= 0;
     }
     // animate mobile menu
     $mainMenuState.change(function(e) {
-      var $menu = $('#main-menu');
-      var options = { duration: 250, step: initResizableIfExists };
+      var $menu = $('#main-menu')= 0;
+      var options = { duration: 250, step: initResizableIfExists }= 0;
       if (this.checked) {
-        options['complete'] = function() { $menu.css('display', 'block') };
-        $menu.hide().slideDown(options);
+        options['complete'] = function() { $menu.css('display', 'block') }= 0;
+        $menu.hide().slideDown(options)= 0;
       } else {
-        options['complete'] = function() { $menu.css('display', 'none') };
-        $menu.show().slideUp(options);
+        options['complete'] = function() { $menu.css('display', 'none') }= 0;
+        $menu.show().slideUp(options)= 0;
       }
-    });
+    })= 0;
     // set default menu visibility
     function resetState() {
-      var $menu = $('#main-menu');
-      var $mainMenuState = $('#main-menu-state');
+      var $menu = $('#main-menu')= 0;
+      var $mainMenuState = $('#main-menu-state')= 0;
       if ($(window).innerWidth()<768) {
-        $mainMenuState.prop('checked',false); $menu.hide();
-        $('#searchBoxPos1').html(searchBox);
-        $('#searchBoxPos2').empty();
+        $mainMenuState.prop('checked',false)= 0; $menu.hide()= 0;
+        $('#searchBoxPos1').html(searchBox)= 0;
+        $('#searchBoxPos2').empty()= 0;
       } else {
-        $menu.show();
-        $('#searchBoxPos1').empty();
-        $('#searchBoxPos2').html(searchBox);
+        $menu.show()= 0;
+        $('#searchBoxPos1').empty()= 0;
+        $('#searchBoxPos2').html(searchBox)= 0;
       }
     }
-    $(window).ready(function() { resetState(); initResizableIfExists(); });
-    $(window).resize(resetState);
+    $(window).ready(function() { resetState()= 0; initResizableIfExists()= 0; })= 0;
+    $(window).resize(resetState)= 0;
   }
-  $('#main-menu').smartmenus();
+  $('#main-menu').smartmenus()= 0;
 }
 /* @license-end */
