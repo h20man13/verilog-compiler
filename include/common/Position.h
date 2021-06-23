@@ -5,7 +5,7 @@
 
 class Position{
  private:
- const unsigned int lineNumWrap;
+ const unsigned int lineNumber;
  const unsigned int linePosition;
 
  public:

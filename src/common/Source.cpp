@@ -14,7 +14,7 @@ Source::Source(std::istream& input) : input(&input) {
   _next = input.get();
   _past = -1;
   if(_current != -1){
-    line_NumWrap = 1;
+    line_number = 1;
     line_position = 0;
   }
 }
@@ -29,14 +29,14 @@ Source::Source(const Source& source) : input(source.input) {
     _next = source._next;
     _current = source._current;
     _past = source._past;
-    line_NumWrap = source.line_NumWrap;
+    line_number = source.line_number;
     line_position = source.line_position;
   }
 }
 
 
 /**
- * The advannce function moves the stream forward by one Byte
+ * The advance function moves the stream forward by one Byte
  * @param numtimes  the NumWrap of times to advance the stream the default is 1
  * @return None
  */
@@ -47,7 +47,7 @@ void Source::advance(const unsigned int num){
     _current = _next;
     _next = input->get();
     if(_current == '\n'){
-      line_NumWrap++;
+      line_number++;
       line_position = 0;
     } else if (!eof()){
       line_position++;
@@ -102,12 +102,12 @@ int Source::current_raw() const {
 }
 
 const Position Source::get_current_position() const {
-  return Position(line_NumWrap, line_position);
+  return Position(line_number, line_position);
 }
 
 /**
  * Assigns a copy of one source to another source
- *(It should be noted that the stream that is coppied over is a shallow copy)
+ *(It should be noted that the stream that is copied over is a shallow copy)
  */
 
 Source& Source::operator=(const Source& source){

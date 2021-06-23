@@ -16,7 +16,7 @@ class Source{
   int _next;
 
   unsigned int line_position;
-  unsigned int line_NumWrap;
+  unsigned int line_number;
 
   int current_raw() const;
   int next_raw() const;
@@ -75,7 +75,7 @@ class Source{
 
   /**
    * Assigns a copy of one source to another source
-   *(It should be noted that the stream that is coppied over is a shallow copy)
+   *(It should be noted that the stream that is copied over is a shallow copy)
    */
   Source& operator=(const Source& source);
   

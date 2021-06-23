@@ -35,8 +35,8 @@ public:
 
 	 bool operator==(const Object *obj) const;
 	 bool operator!=(const Object *obj) const;
-	 bool operator&&(const Object *num) const;
-	 bool operator||(const Object *num) const;
+	 bool operator&&(const Object *obj) const;
+	 bool operator||(const Object *obj) const;
 
 	 Number* operator+(const Object *obj) const;
 	 Number* operator-(const Number *num) const;

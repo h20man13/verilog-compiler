@@ -18,7 +18,7 @@ auto UnsignedInteger::get_value() const {
 }
 
 void UnsignedInteger::operator=(const Number* num){
-	this->value = num.get_value();
+	this->value = num->get_value();
 }
 
 void UnsignedInteger::operator++(int){
@@ -42,11 +42,11 @@ void UnsignedInteger::operator--(){
 }
 
 void UnsignedInteger::operator-=(const Number* num){
-	value -= num.get_value();
+	value -= num->get_value();
 }
 
 void UnsignedInteger::operator+=(const Number* num){
-	value += num.get_value();
+	value += num->get_value();
 }
 
 const std::string UnsignedInteger::get_class() const {
@@ -54,15 +54,15 @@ const std::string UnsignedInteger::get_class() const {
 }
 
 Number* UnsignedInteger::operator+(const Object* obj) const {
-	return new UnsignedInteger(value + obj.get_value());
+	return new UnsignedInteger(value + obj->get_value());
 }
 
 Number* UnsignedInteger::operator-(const Number* num) const {
-	return new UnsignedInteger(value - num.get_value());
+	return new UnsignedInteger(value - num->get_value());
 }
 
 Number* UnsignedInteger::operator*(const Number* num) const {
-	return new UnsignedInteger(value * num.get_value());
+	return new UnsignedInteger(value * num->get_value());
 }
 
 Number* UnsignedInteger::operator/(const Number* num) const {
