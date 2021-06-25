@@ -9,7 +9,7 @@ Inheritance diagram for LAnd\+:\begin{figure}[H]
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classNumWrap}{Number}} \mbox{\hyperlink{classLAnd_a90abaf6e69f3cb519ef1fc558318fc72}{evaluate}} () const
+\mbox{\hyperlink{classNumber}{Number}} $\ast$ \mbox{\hyperlink{classLAnd_a90abaf6e69f3cb519ef1fc558318fc72}{evaluate}} () const
 \begin{DoxyCompactList}\small\item\em The evaluate method is used to interpret the Logical and \mbox{\hyperlink{classExpression}{Expression}}. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classLAnd_abf6edb5c308b32f63c3f7aef9e6fdf69}{code\+\_\+gen}} () const
 \begin{DoxyCompactList}\small\item\em The code generation function that is used to emit LLVM IR. \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -28,7 +28,7 @@ Definition at line 14 of file LAnd.\+h.
 \index{LAnd@{LAnd}!code\_gen@{code\_gen}}
 \index{code\_gen@{code\_gen}!LAnd@{LAnd}}
 \doxysubsubsection{\texorpdfstring{code\_gen()}{code\_gen()}}
-{\footnotesize\ttfamily void LAnd\+::code\+\_\+gen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily []}}
+{\footnotesize\ttfamily void LAnd\+::code\+\_\+gen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
@@ -46,7 +46,7 @@ Definition at line 16 of file LAnd.\+cpp.
 \index{LAnd@{LAnd}!evaluate@{evaluate}}
 \index{evaluate@{evaluate}!LAnd@{LAnd}}
 \doxysubsubsection{\texorpdfstring{evaluate()}{evaluate()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classNumWrap}{Number}} LAnd\+::evaluate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily []}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classNumber}{Number}} LAnd\+::evaluate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
@@ -61,7 +61,7 @@ a boolean from the result of the \&\& expression
 \end{DoxyReturn}
 
 
-Implements \mbox{\hyperlink{classBinary_a459cc39b5490c26fc8dee919012cd060}{Binary}}.
+Implements \mbox{\hyperlink{classBinary_ac9c446ed424fed77e06fa1b1d3d29b7c}{Binary}}.
 
 
 

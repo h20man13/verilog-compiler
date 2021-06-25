@@ -1,6 +1,8 @@
 var searchData=
 [
-  ['operator_2b_37',['operator+',['../d6/d54/classNumWrap.html#ae3e8bc9be5578b9dad6db23fbe966f85',1,'NumWrap']]],
-  ['operator_2d_38',['operator-',['../d6/d54/classNumWrap.html#a7d9a54d999ad3a1b29257c6ae0fdad76',1,'NumWrap']]],
-  ['operator_3d_39',['operator=',['../d6/d54/classNumWrap.html#a9ac7530ed593ac6a51edd7147cff2063',1,'NumWrap::operator=()'],['../d6/d2e/classSource.html#a31b05a066135a445a5117ff33c4627a8',1,'Source::operator=()']]]
-]= 0;
+  ['next_46',['next',['../d6/d2e/classSource.html#adbcf339671f347071bc019f4440bf4fd',1,'Source']]],
+  ['no_5fflush_47',['no_flush',['../dc/df4/classDestination.html#a3281804a34a79e6f6624cde84213bdea',1,'Destination']]],
+  ['number_48',['Number',['../d5/d41/classNumber.html',1,'']]],
+  ['number_3c_20double_20_3e_49',['Number&lt; double &gt;',['../d5/d41/classNumber.html',1,'']]],
+  ['number_3c_20int_5ftype_20_3e_50',['Number&lt; int_type &gt;',['../d5/d41/classNumber.html',1,'']]]
+];

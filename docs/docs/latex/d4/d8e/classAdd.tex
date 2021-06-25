@@ -9,9 +9,9 @@ Inheritance diagram for Add\+:\begin{figure}[H]
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classNumWrap}{Number}} \mbox{\hyperlink{classAdd_a7615d65b6f9dd2f1df20fefcf822e98d}{evaluate}} () const
+\mbox{\hyperlink{classObject}{Object}} $\ast$ \mbox{\hyperlink{classAdd_a262f6f2ed488fb8f9cb68fe68107e8c0}{evaluate}} () const =0
 \begin{DoxyCompactList}\small\item\em The \mbox{\hyperlink{classAdd}{Add}} class performs an addition operation and returns the result. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classAdd_a9b5cbb7b578ad44cebc72296389d9a06}{code\+\_\+gen}} () const
+void \mbox{\hyperlink{classAdd_a3dc540b802ecb6d75927856c28ef2c4b}{code\+\_\+gen}} () const =0
 \begin{DoxyCompactList}\small\item\em The code\+\_\+gen function is used to generate LLVM IR for an Addition operation. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
 
@@ -24,11 +24,11 @@ Definition at line 13 of file Add.\+h.
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{classAdd_a9b5cbb7b578ad44cebc72296389d9a06}\label{classAdd_a9b5cbb7b578ad44cebc72296389d9a06}} 
+\mbox{\Hypertarget{classAdd_a3dc540b802ecb6d75927856c28ef2c4b}\label{classAdd_a3dc540b802ecb6d75927856c28ef2c4b}} 
 \index{Add@{Add}!code\_gen@{code\_gen}}
 \index{code\_gen@{code\_gen}!Add@{Add}}
 \doxysubsubsection{\texorpdfstring{code\_gen()}{code\_gen()}}
-{\footnotesize\ttfamily void Add\+::code\+\_\+gen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily []}}
+{\footnotesize\ttfamily void Add\+::code\+\_\+gen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
@@ -42,11 +42,11 @@ Implements \mbox{\hyperlink{classBinary_a7b5e81b3115e86f6c326e2272cbc1d82}{Binar
 
 Definition at line 16 of file Add.\+cpp.
 
-\mbox{\Hypertarget{classAdd_a7615d65b6f9dd2f1df20fefcf822e98d}\label{classAdd_a7615d65b6f9dd2f1df20fefcf822e98d}} 
+\mbox{\Hypertarget{classAdd_a262f6f2ed488fb8f9cb68fe68107e8c0}\label{classAdd_a262f6f2ed488fb8f9cb68fe68107e8c0}} 
 \index{Add@{Add}!evaluate@{evaluate}}
 \index{evaluate@{evaluate}!Add@{Add}}
 \doxysubsubsection{\texorpdfstring{evaluate()}{evaluate()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classNumWrap}{Number}} Add\+::evaluate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily []}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classNumber}{Number}} Add\+::evaluate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
@@ -62,7 +62,7 @@ the result of the logical and \mbox{\hyperlink{classExpression}{Expression}}
 \end{DoxyReturn}
 
 
-Implements \mbox{\hyperlink{classBinary_a459cc39b5490c26fc8dee919012cd060}{Binary}}.
+Implements \mbox{\hyperlink{classBinary_ac9c446ed424fed77e06fa1b1d3d29b7c}{Binary}}.
 
 
 

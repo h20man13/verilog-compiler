@@ -480,13 +480,13 @@
     \fi
     {%
         \let\tabu@ \relax
-        \def\:{\obeyspaces \tabu@oXIII \tabu@commaXIII \edef\:}% (space active \: happy= 0;-))
+        \def\:{\obeyspaces \tabu@oXIII \tabu@commaXIII \edef\:}% (space active \: happy ;-))
         \scantokens{\:{\tabu@temp #1#2 \tabu@\tabu@}}%
                         \expandafter}\expandafter
-                                \def\expandafter\:\expandafter{\:}% line spec rewritten now= 0;-)
-    \def\= 0;{\def\:}%
-    \scantokens\expandafter{\expandafter\= 0;\expandafter{\:}}% space is now inactive (catcode 10)
-    \let\tabu@ \tabu@getcolor    \:%    all arguments are ready now= 0;-)
+                                \def\expandafter\:\expandafter{\:}% line spec rewritten now ;-)
+    \def\;{\def\:}%
+    \scantokens\expandafter{\expandafter\;\expandafter{\:}}% space is now inactive (catcode 10)
+    \let\tabu@ \tabu@getcolor    \:%    all arguments are ready now ;-)
     \ifdefined\tabu@c@lon \else \let\tabu@c@lon\@empty \fi
     \ifx \tabu@c@lon\@empty \def\tabu@c@lon{\CT@arc@}\fi
     \ifdefined\tabu@c@loff \else \let\tabu@c@loff \@empty        \fi

@@ -17,7 +17,7 @@ The source class is used to collect input from various input streams.
 \mbox{\hyperlink{classSource_acc2331fc6c1936f91c307a0f3bfb8201}{Source}} (const \mbox{\hyperlink{classSource}{Source}} \&source)
 \begin{DoxyCompactList}\small\item\em The copy constructor for all source objects. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classSource_a7cad1788901baf26878a3a88571512d0}{advance}} (const unsigned int numtimes=1)
-\begin{DoxyCompactList}\small\item\em The advannce function moves the stream forward by one Byte. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em The advannce function moves the stream forward by one \mbox{\hyperlink{classByte}{Byte}}. \end{DoxyCompactList}\item 
 char \mbox{\hyperlink{classSource_ac6d9e50703514285f9a543f95c3efa00}{past}} () const
 \item 
 char \mbox{\hyperlink{classSource_a0c215af75297e5e72912c0602b3ca354}{current}} () const
@@ -32,7 +32,7 @@ const \mbox{\hyperlink{classPosition}{Position}} \mbox{\hyperlink{classSource_a5
 \item 
 \mbox{\Hypertarget{classSource_a31b05a066135a445a5117ff33c4627a8}\label{classSource_a31b05a066135a445a5117ff33c4627a8}} 
 \mbox{\hyperlink{classSource}{Source}} \& \mbox{\hyperlink{classSource_a31b05a066135a445a5117ff33c4627a8}{operator=}} (const \mbox{\hyperlink{classSource}{Source}} \&source)
-\begin{DoxyCompactList}\small\item\em Assigns a copy of one source to another source (It should be noted that the stream that is coppied over is a shallow copy) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Assigns a copy of one source to another source (It should be noted that the stream that is copied over is a shallow copy) \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -97,11 +97,13 @@ Definition at line 27 of file Source.\+cpp.
 
 
 
-The advannce function moves the stream forward by one Byte. 
+The advannce function moves the stream forward by one \mbox{\hyperlink{classByte}{Byte}}. 
+
+The advance function moves the stream forward by one \mbox{\hyperlink{classByte}{Byte}}.
 
 
 \begin{DoxyParams}{Parameters}
-{\em numtimes} & the \mbox{\hyperlink{classNumWrap}{Num\+Wrap}} of times to advance the stream the default is 1 \\
+{\em numtimes} & the Num\+Wrap of times to advance the stream the default is 1 \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}

@@ -9,10 +9,10 @@ Inheritance diagram for Binary\+:\begin{figure}[H]
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
- \mbox{\hyperlink{classNumWrap}{Number}} \mbox{\hyperlink{classBinary_a459cc39b5490c26fc8dee919012cd060}{evaluate}} () const =0
+virtual \mbox{\hyperlink{classObject}{Object}} $\ast$ \mbox{\hyperlink{classBinary_ac9c446ed424fed77e06fa1b1d3d29b7c}{evaluate}} () const =0
 \begin{DoxyCompactList}\small\item\em The evaluate function computes the result of a \mbox{\hyperlink{classBinary}{Binary}} \mbox{\hyperlink{classExpression}{Expression}}. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classBinary_a7b5e81b3115e86f6c326e2272cbc1d82}\label{classBinary_a7b5e81b3115e86f6c326e2272cbc1d82}} 
- void \mbox{\hyperlink{classBinary_a7b5e81b3115e86f6c326e2272cbc1d82}{code\+\_\+gen}} () const =0
+virtual void \mbox{\hyperlink{classBinary_a7b5e81b3115e86f6c326e2272cbc1d82}{code\+\_\+gen}} () const =0
 \begin{DoxyCompactList}\small\item\em The code\+\_\+gen method is used to generate the LLVM IR of an expression object. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
@@ -26,11 +26,11 @@ Inheritance diagram for Binary\+:\begin{figure}[H]
 \doxysubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classBinary_aa38bad92abb4ca3f5ae1abefad1b6ad3}\label{classBinary_aa38bad92abb4ca3f5ae1abefad1b6ad3}} 
-const \mbox{\hyperlink{classExpression}{Expression}} {\bfseries left}
+\mbox{\Hypertarget{classBinary_ada4d09f5efeece204e9fc1c8dfbdc475}\label{classBinary_ada4d09f5efeece204e9fc1c8dfbdc475}} 
+const \mbox{\hyperlink{classExpression}{Expression}} $\ast$ {\bfseries left}
 \item 
-\mbox{\Hypertarget{classBinary_adbab08de582a8de8e55ebac21ee025de}\label{classBinary_adbab08de582a8de8e55ebac21ee025de}} 
-const \mbox{\hyperlink{classExpression}{Expression}} {\bfseries right}
+\mbox{\Hypertarget{classBinary_aa6850ef15347ab02b9a8d2253012c40e}\label{classBinary_aa6850ef15347ab02b9a8d2253012c40e}} 
+const \mbox{\hyperlink{classExpression}{Expression}} $\ast$ {\bfseries right}
 \end{DoxyCompactItemize}
 
 
@@ -42,11 +42,11 @@ Definition at line 14 of file Binary.\+h.
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{classBinary_a459cc39b5490c26fc8dee919012cd060}\label{classBinary_a459cc39b5490c26fc8dee919012cd060}} 
+\mbox{\Hypertarget{classBinary_ac9c446ed424fed77e06fa1b1d3d29b7c}\label{classBinary_ac9c446ed424fed77e06fa1b1d3d29b7c}} 
 \index{Binary@{Binary}!evaluate@{evaluate}}
 \index{evaluate@{evaluate}!Binary@{Binary}}
 \doxysubsubsection{\texorpdfstring{evaluate()}{evaluate()}}
-{\footnotesize\ttfamily  \mbox{\hyperlink{classNumWrap}{Number}} Binary\+::evaluate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure ]}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classObject}{Object}}$\ast$ Binary\+::evaluate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
@@ -62,11 +62,7 @@ The evaluate function computes the result of a \mbox{\hyperlink{classBinary}{Bin
 \end{DoxyReturn}
 
 
-Implements \mbox{\hyperlink{classExpression_a89e9d2099b67b891dfa6ab72895ae0de}{Expression}}.
-
-
-
-Implemented in \mbox{\hyperlink{classAdd_a7615d65b6f9dd2f1df20fefcf822e98d}{Add}}, \mbox{\hyperlink{classBAnd_a37e2dd51b43f1ff7ba364ce97f291ad4}{BAnd}}, \mbox{\hyperlink{classBOr_a9c299d19e4a14b071096cbea9702da84}{BOr}}, \mbox{\hyperlink{classBXNor_a1daab46b6f74b4a40ffdd1aa767dea71}{BXNor}}, \mbox{\hyperlink{classBXor_a89e861a41d89b3dff51c82889ec83563}{BXor}}, \mbox{\hyperlink{classDiv_a62c842940d3660b97fb512bf4bd1d825}{Div}}, \mbox{\hyperlink{classLAnd_a90abaf6e69f3cb519ef1fc558318fc72}{LAnd}}, \mbox{\hyperlink{classLOr_a99f9c641656adb86ccdbcdc68d93aa49}{LOr}}, \mbox{\hyperlink{classMod_a53fd11d3afa0b59da20fe0932d2b83eb}{Mod}}, \mbox{\hyperlink{classMult_aa06e8bc4fe5d2066c7d8e891337e8296}{Mult}}, and \mbox{\hyperlink{classSub_ab4625ea9ff68e362eb493aff868197f8}{Sub}}.
+Implemented in \mbox{\hyperlink{classBAnd_a37e2dd51b43f1ff7ba364ce97f291ad4}{BAnd}}, \mbox{\hyperlink{classBOr_a9c299d19e4a14b071096cbea9702da84}{BOr}}, \mbox{\hyperlink{classBXNor_a1daab46b6f74b4a40ffdd1aa767dea71}{BXNor}}, \mbox{\hyperlink{classBXor_a89e861a41d89b3dff51c82889ec83563}{BXor}}, \mbox{\hyperlink{classDiv_a62c842940d3660b97fb512bf4bd1d825}{Div}}, \mbox{\hyperlink{classLAnd_a90abaf6e69f3cb519ef1fc558318fc72}{LAnd}}, \mbox{\hyperlink{classLOr_a99f9c641656adb86ccdbcdc68d93aa49}{LOr}}, \mbox{\hyperlink{classMod_a95d106f5533471dc0383c46943766f4c}{Mod}}, \mbox{\hyperlink{classMult_aa06e8bc4fe5d2066c7d8e891337e8296}{Mult}}, \mbox{\hyperlink{classSub_ab4625ea9ff68e362eb493aff868197f8}{Sub}}, and \mbox{\hyperlink{classAdd_a262f6f2ed488fb8f9cb68fe68107e8c0}{Add}}.
 
 
 
