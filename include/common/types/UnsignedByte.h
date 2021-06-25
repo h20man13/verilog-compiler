@@ -5,14 +5,15 @@
  *      Author: jacob
  */
 
-#ifndef REAL_H
-#define REAL_H
+#ifndef UNSIGNEDBYTE_H
+#define UNSIGNEDBYTE_H
 
-#include "common/types/Number.h"
 
-class Real: public Number<double>{
+#include "common/types/IntVal.h"
+
+class UnsignedByte: public IntVal<unsigned char>{
 public:
-	Real(const double value);
+	UnsignedByte(const unsigned char value);
 	const std::string get_class() const;
 };
 

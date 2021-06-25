@@ -5,14 +5,15 @@
  *      Author: jacob
  */
 
-#ifndef REAL_H
-#define REAL_H
+#ifndef BYTE_H
+#define BYTE_H
 
-#include "common/types/Number.h"
 
-class Real: public Number<double>{
+#include "common/types/IntVal.h"
+
+class Byte: public IntVal<char>{
 public:
-	Real(const double value);
+	Byte(const char value);
 	const std::string get_class() const;
 };
 

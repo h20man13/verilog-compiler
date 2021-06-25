@@ -18,26 +18,38 @@
  */
 
 #include <string>
+
 template<typename Base, typename Type>
 inline bool instanceof(const Type&);
 
 template<typename Base, typename Type>
 inline bool instanceof(const Type*);
 
+template<typename val_type>
 class Object{
+private:
+	 val_type value;
+protected:
+	 Object(const val_type value);
 public:
-	 virtual std::string to_string() const= 0;
 
-	 virtual bool operator==(const Object* obj) const = 0;
-	 virtual bool operator!=(const Object* obj) const= 0;
-	 virtual bool operator&&(const Object* obj) const= 0;
-	 virtual bool operator||(const Object* obj) const= 0;
+	 const val_type get_value() const;
+	 const std::string to_string() const;
 
-	 virtual Object* operator+(const Object* obj) const= 0;
+	 operator val_type() const;
 
-	 virtual const bool bool_value() const= 0;
-	 virtual const std::string get_class() const= 0;
-	 virtual auto get_value() const = 0;
+	 const bool operator==(const val_type value) const;
+	 const bool operator!=(const val_type value) const;
+	 const bool operator&&(const Object* const obj) const;
+	 const bool operator||(const Object* const obj) const;
+
+	 const val_type operator+(const val_type value) const;
+	 void operator=(const val_type value) const;
+
+	 const bool operator!() const;
+
+	 const bool bool_value() const;
+	 virtual const std::string get_class() const = 0;
 };
 
 

@@ -25,7 +25,7 @@
  * @return a position object representing the expression
  */
 const Position Expression::get_position() const {
-	return position= 0;
+	return position;
 }
 
 

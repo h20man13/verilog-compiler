@@ -5,15 +5,15 @@
  *      Author: jacob
  */
 
-#ifndef INTEGER_H
-#define INTEGER_H
+#ifndef UNSIGNEDSHORT_H
+#define UNSIGNEDSHORT_H
 
 
 #include "common/types/IntVal.h"
 
-class Integer: public IntVal<int>{
+class UnsignedShort: public IntVal<unsigned short int>{
 public:
-	Integer(const int value);
+	UnsignedShort(const unsigned short int value);
 	const std::string get_class() const;
 };
 

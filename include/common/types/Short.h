@@ -5,14 +5,15 @@
  *      Author: jacob
  */
 
-#ifndef REAL_H
-#define REAL_H
+#ifndef SHORT_H
+#define SHORT_H
 
-#include "common/types/Number.h"
 
-class Real: public Number<double>{
+#include "common/types/IntVal.h"
+
+class Short: public IntVal<short int>{
 public:
-	Real(const double value);
+	Short(const short int value);
 	const std::string get_class() const;
 };
 

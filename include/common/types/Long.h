@@ -5,16 +5,16 @@
  *      Author: jacob
  */
 
-#ifndef UNSIGNEDINTEGER_H
-#define UNSIGNEDINTEGER_H
+#ifndef LONG_H
+#define LONG_H
 
 
 #include "common/types/Number.h"
 #include "common/types/IntVal.h"
 
-class UnsignedInteger: public IntVal<unsigned int>{
+class Long: public IntVal<long int>{
 public:
-	 UnsignedInteger(const unsigned int value);
+	 Long(const long int value);
 	 const std::string get_class() const;
 };
 
