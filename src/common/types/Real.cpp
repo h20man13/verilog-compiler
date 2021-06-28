@@ -6,11 +6,10 @@
  */
 
 #include "common/types/Real.h"
-#include "common/types/Number.h"
 
 #include <string>
 
-Real::Real(const double value) : Number<double>(value){};
+Real::Real(const double value) : Number(value){};
 
 const std::string Real::get_class() const {
 	return "Real";

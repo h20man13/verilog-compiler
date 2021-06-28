@@ -9,12 +9,14 @@
 #define LONG_H
 
 
-#include "common/types/Number.h"
-#include "common/types/IntVal.h"
+#include "common/types/Long.h"
 
-class Long: public IntVal<long int>{
+class Long: public IntVal<long>{
 public:
-	 Long(const long int value);
+	 Long(const long value);
+
+	 operator long();
+
 	 const std::string get_class() const;
 };
 

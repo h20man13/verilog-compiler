@@ -14,6 +14,9 @@
 class Short: public IntVal<short int>{
 public:
 	Short(const short int value);
+
+	operator short int();
+
 	const std::string get_class() const;
 };
 

@@ -14,6 +14,9 @@
 class Byte: public IntVal<char>{
 public:
 	Byte(const char value);
+
+	operator char();
+
 	const std::string get_class() const;
 };
 

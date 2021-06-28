@@ -10,7 +10,17 @@
 
 #include <string>
 
-UnsignedLong::UnsignedLong(const unsigned long int value) : IntVal<unsigned long int>(value) {};
+/**
+ * The unsigned long creates an unsigned long object
+ * @param value the initial value it should be set to
+ */
+
+UnsignedLong::UnsignedLong(const unsigned long value) : IntVal(value) {};
+
+/**
+ * The get class method returns the name of the class as a string
+ * @return  a string representing the type name or more specifically unsigned long
+ */
 
 const std::string UnsignedLong::get_class() const {
 	return "Unsigned Long";

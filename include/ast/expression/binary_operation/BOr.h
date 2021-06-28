@@ -22,7 +22,7 @@ public:
 	 * The interpret function returns a number representing the
 	 * @return Integer as a result of the operation
 	 */
-	Number* evaluate() const;
+	Base* const evaluate() const;
 
 	/**
 	 * The code_gen operation generates LLVM IR to represent a bitwise or operation

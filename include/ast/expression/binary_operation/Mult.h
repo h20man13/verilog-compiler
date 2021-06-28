@@ -9,7 +9,6 @@
 #define MULT_H
 
 #include "ast/expression/binary_operation/Binary.h"
-#include "common/types/Number.h"
 
 class Mult: public Binary{
 public:
@@ -18,7 +17,7 @@ public:
 	 * @tparam num_type the generic type of a Number
 	 * @return a Number
 	 */
-	Number* evaluate() const;
+	Base* const evaluate() const;
 
 	/**
 	 * Generates LLVM IR to represent a binary addition operation

@@ -9,12 +9,15 @@
 #define UNSIGNEDLONG_H
 
 
-#include "common/types/Number.h"
+#include "common/types/UnsignedLong.h"
 #include "common/types/IntVal.h"
 
-class UnsignedLong: public IntVal<unsigned long int>{
+class UnsignedLong: public IntVal<unsigned long>{
 public:
-	 UnsignedLong(const unsigned long int value);
+	 UnsignedLong(const unsigned long value);
+
+	 operator unsigned long();
+
 	 const std::string get_class() const;
 };
 

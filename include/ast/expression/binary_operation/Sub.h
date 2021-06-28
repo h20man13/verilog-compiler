@@ -23,7 +23,7 @@ public:
 	 * A function to perform interpretation on the subtraction operation
 	 * @return an integer that is the result of the binary operation
 	 */
-	Number* evaluate() const;
+	Base* const evaluate() const;
 
 	/**
 	 * The code_gen function is used to generate the code for the subtraction expression via syntax directed translation

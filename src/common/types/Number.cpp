@@ -47,17 +47,137 @@ void Number<num_type>::operator--(){
 }
 
 template<typename num_type>
-const num_type Number<num_type>::operator-(const num_type value) const {
+const num_type Number<num_type>::operator-(const double value) const {
 	return get_value() - value;
 }
 
 template<typename num_type>
-const num_type Number<num_type>::operator*(const num_type value) const {
+const num_type Number<num_type>::operator-(const int value) const {
+	return get_value() - value;
+}
+
+template<typename num_type>
+const num_type Number<num_type>::operator-(const unsigned int value) const {
+	return get_value() - value;
+}
+
+template<typename num_type>
+const num_type Number<num_type>::operator-(const long value) const {
+	return get_value() - value;
+}
+
+template<typename num_type>
+const num_type Number<num_type>::operator-(const unsigned long value) const {
+	return get_value() - value;
+}
+
+template<typename num_type>
+const num_type Number<num_type>::operator-(const short value) const {
+	return get_value() - value;
+}
+
+template<typename num_type>
+const num_type Number<num_type>::operator-(const unsigned short value) const {
+	return get_value() - value;
+}
+
+template<typename num_type>
+const num_type Number<num_type>::operator-(const char value) const {
+	return get_value() - value;
+}
+
+template<typename num_type>
+const num_type Number<num_type>::operator-(const unsigned char value) const {
+	return get_value() - value;
+}
+
+template<typename num_type>
+const num_type Number<num_type>::operator*(const double value) const {
 	return get_value() * value;
 }
 
 template<typename num_type>
-const double Number<num_type>::operator/(const num_type value) const {
+const num_type Number<num_type>::operator*(const int value) const {
+	return get_value() * value;
+}
+
+template<typename num_type>
+const num_type Number<num_type>::operator*(const unsigned int value) const {
+	return get_value() * value;
+}
+
+template<typename num_type>
+const num_type Number<num_type>::operator*(const long value) const {
+	return get_value() * value;
+}
+
+template<typename num_type>
+const num_type Number<num_type>::operator*(const unsigned long value) const {
+	return get_value() * value;
+}
+
+template<typename num_type>
+const num_type Number<num_type>::operator*(const short value) const {
+	return get_value() * value;
+}
+
+template<typename num_type>
+const num_type Number<num_type>::operator*(const unsigned short value) const {
+	return get_value() * value;
+}
+
+template<typename num_type>
+const num_type Number<num_type>::operator*(const char value) const {
+	return get_value() * value;
+}
+
+template<typename num_type>
+const num_type Number<num_type>::operator*(const unsigned char value) const {
+	return get_value() * value;
+}
+
+template<typename num_type>
+const double Number<num_type>::operator/(const double value) const {
+	return get_value() / value;
+}
+
+template<typename num_type>
+const double Number<num_type>::operator/(const int value) const {
+	return get_value() / value;
+}
+
+template<typename num_type>
+const double Number<num_type>::operator/(const unsigned int value) const {
+	return get_value() / value;
+}
+
+template<typename num_type>
+const double Number<num_type>::operator/(const long value) const {
+	return get_value() / value;
+}
+
+template<typename num_type>
+const double Number<num_type>::operator/(const unsigned long value) const {
+	return get_value() / value;
+}
+
+template<typename num_type>
+const double Number<num_type>::operator/(const short value) const {
+	return get_value() / value;
+}
+
+template<typename num_type>
+const double Number<num_type>::operator/(const unsigned short value) const {
+	return get_value() / value;
+}
+
+template<typename num_type>
+const double Number<num_type>::operator/(const char value) const {
+	return get_value() / value;
+}
+
+template<typename num_type>
+const double Number<num_type>::operator/(const unsigned char value) const {
 	return get_value() / value;
 }
 

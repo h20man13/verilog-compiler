@@ -11,6 +11,8 @@
 
 Byte::Byte(const char value) : IntVal(value) {}
 
+operator char();
+
 const std::string Byte::get_class() const {
 	return "Byte";
 }

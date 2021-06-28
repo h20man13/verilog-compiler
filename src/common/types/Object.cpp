@@ -7,20 +7,7 @@
 
 #include <iostream>
 #include "common/types/Object.h"
-#include "common/types/Real.h"
 #include "common/types/String.h"
-#include "common/types/Integer.h"
-#include "common/types/UnsignedInteger.h"
-
-template<typename Base, typename Type>
-inline bool instanceof(const Type&) {
-   return std::is_base_of<Base, Type>::value;
-}
-
-template<typename Base, typename Type>
-inline bool instanceof(const Type*) {
-   return std::is_base_of<Base, Type>::value;
-}
 
 template<typename val_type>
 Object<val_type>::Object(const val_type value){
@@ -43,17 +30,107 @@ const std::string Object<val_type>::to_string() const {
 }
 
 template<typename val_type>
-const bool Object<val_type>::operator==(const val_type value) const{
+const bool Object<val_type>::operator==(const Object* const obj) const{
+	return get_value() == obj->get_value();
+}
+
+template<typename val_type>
+const bool Object<val_type>::operator==(const double value) const{
 	return get_value() == value;
 }
 
 template<typename val_type>
-const bool Object<val_type>::operator!=(const val_type value) const {
+const bool Object<val_type>::operator==(const int value) const{
+	return get_value() == value;
+}
+
+template<typename val_type>
+const bool Object<val_type>::operator==(const unsigned int value) const{
+	return get_value() == value;
+}
+
+template<typename val_type>
+const bool Object<val_type>::operator==(const long value) const{
+	return get_value() == value;
+}
+
+template<typename val_type>
+const bool Object<val_type>::operator==(const unsigned long value) const{
+	return get_value() == value;
+}
+
+template<typename val_type>
+const bool Object<val_type>::operator==(const short value) const{
+	return get_value() == value;
+}
+
+template<typename val_type>
+const bool Object<val_type>::operator==(const unsigned short value) const{
+	return get_value() == value;
+}
+
+template<typename val_type>
+const bool Object<val_type>::operator==(const bool value) const{
+	return get_value() == value;
+}
+
+template<typename val_type>
+const bool Object<val_type>::operator==(const std::string value) const{
+	return get_value() == value;
+}
+
+template<typename val_type>
+const bool Object<val_type>::operator!=(const Object* const obj) const {
+	return get_value() != obj->get_value();
+}
+
+template<typename val_type>
+const bool Object<val_type>::operator!=(const double value) const {
 	return get_value() != value;
 }
 
 template<typename val_type>
-const bool Object<val_type>::operator&&(const Object* const obj) const{
+const bool Object<val_type>::operator!=(const int value) const {
+	return get_value() != value;
+}
+
+template<typename val_type>
+const bool Object<val_type>::operator!=(const unsigned int value) const {
+	return get_value() != value;
+}
+
+template<typename val_type>
+const bool Object<val_type>::operator!=(const long value) const {
+	return get_value() != value;
+}
+
+template<typename val_type>
+const bool Object<val_type>::operator!=(const unsigned long value) const {
+	return get_value() != value;
+}
+
+template<typename val_type>
+const bool Object<val_type>::operator!=(const short value) const {
+	return get_value() != value;
+}
+
+template<typename val_type>
+const bool Object<val_type>::operator!=(const unsigned short value) const {
+	return get_value() != value;
+}
+
+template<typename val_type>
+const bool Object<val_type>::operator!=(const bool value) const {
+	return get_value() != value;
+}
+
+template<typename val_type>
+const bool Object<val_type>::operator!=(const std::string value) const {
+	return get_value() != value;
+}
+
+template<typename val_type>
+const bool Object<val_type>::operator&&(const Base* obj) const{
 	return bool_value() && obj->bool_value();
 }
 
@@ -77,7 +154,62 @@ const bool Object<val_type>::bool_value() const {
 }
 
 template<typename val_type>
-const val_type Object<val_type>::operator+(const val_type value) const{
+const val_type Object<val_type>::operator+(const Object* const obj) const{
+	return get_value() + obj->get_value();
+}
+
+template<typename val_type>
+const val_type Object<val_type>::operator+(const double value) const{
+	return get_value() + value;
+}
+
+template<typename val_type>
+const val_type Object<val_type>::operator+(const int value) const{
+	return get_value() + value;
+}
+
+template<typename val_type>
+const val_type Object<val_type>::operator+(const unsigned int value) const{
+	return get_value() + value;
+}
+
+template<typename val_type>
+const val_type Object<val_type>::operator+(const long value) const{
+	return get_value() + value;
+}
+
+template<typename val_type>
+const val_type Object<val_type>::operator+(const unsigned long value) const{
+	return get_value() + value;
+}
+
+template<typename val_type>
+const val_type Object<val_type>::operator+(const short value) const{
+	return get_value() + value;
+}
+
+template<typename val_type>
+const val_type Object<val_type>::operator+(const unsigned short value) const{
+	return get_value() + value;
+}
+
+template<typename val_type>
+const val_type Object<val_type>::operator+(const char value) const{
+	return get_value() + value;
+}
+
+template<typename val_type>
+const val_type Object<val_type>::operator+(const unsigned char value) const{
+	return get_value() + value;
+}
+
+template<typename val_type>
+const val_type Object<val_type>::operator+(const bool value) const{
+	return get_value() + value;
+}
+
+template<typename val_type>
+const val_type Object<val_type>::operator+(const std::string value) const{
 	return get_value() + value;
 }
 

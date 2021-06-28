@@ -14,6 +14,9 @@
 class Integer: public IntVal<int>{
 public:
 	Integer(const int value);
+
+	operator int();
+
 	const std::string get_class() const;
 };
 

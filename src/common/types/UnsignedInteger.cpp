@@ -10,7 +10,7 @@
 
 #include <string>
 
-UnsignedInteger::UnsignedInteger(const unsigned int value) : IntVal<unsigned int>(value) {};
+UnsignedInteger::UnsignedInteger(const unsigned int value) : IntVal(value) {};
 
 const std::string UnsignedInteger::get_class() const {
 	return "Unsigned Integer";

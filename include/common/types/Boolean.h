@@ -5,18 +5,18 @@
  *      Author: jacob
  */
 
-#ifndef STRING_H
-#define STRING_H
+#ifndef BOOLEAN_H
+#define BOOLEAN_H
 
 #include <string>
 
 #include "common/types/Object.h"
 
-class String : public Object<std::string>{
+class Boolean : public Object<bool>{
 public:
-	 String(const std::string value);
+	 Boolean(const bool value);
 
-	 operator std::string();
+	 operator bool();
 
 	 const std::string get_class() const;
 };

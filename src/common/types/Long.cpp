@@ -10,7 +10,7 @@
 
 #include <string>
 
-Long::Long(const long int value) : IntVal<long int>(value) {};
+Long::Long(const long value) : IntVal(value) {};
 
 const std::string Long::get_class() const {
 	return "Unsigned Long";

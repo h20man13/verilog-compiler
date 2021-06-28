@@ -24,7 +24,7 @@ public:
 	 * @return a NumWrap object
 	 */
 
-	Number* evaluate() const;
+	Base* const evaluate() const;
 
 	/**
 	 * The code_gen method is used to generate LLVM IR for a Div expression

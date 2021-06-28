@@ -22,7 +22,7 @@ public:
 	 * A function to perform interpretation on the modulo expression
 	 * @return an integer that is the result of the binary operation
 	 */
-	Number* evaluate() const;
+	Base* const evaluate() const;
 
 	/**
 	 * The code_gen function is used to generate the code for the modulo expression via syntax directed translation

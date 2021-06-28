@@ -14,6 +14,9 @@
 class UnsignedShort: public IntVal<unsigned short int>{
 public:
 	UnsignedShort(const unsigned short int value);
+
+	operator unsigned short();
+
 	const std::string get_class() const;
 };
 

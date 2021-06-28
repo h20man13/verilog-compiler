@@ -13,6 +13,9 @@
 class Real: public Number<double>{
 public:
 	Real(const double value);
+
+	operator double();
+
 	const std::string get_class() const;
 };
 
