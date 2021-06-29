@@ -15,11 +15,6 @@ Object<val_type>::Object(const val_type value){
 }
 
 template<typename val_type>
-Object<val_type>::operator val_type() const {
-	return value;
-}
-
-template<typename val_type>
 const val_type Object<val_type>::get_value() const {
 	return value;
 }
@@ -27,11 +22,6 @@ const val_type Object<val_type>::get_value() const {
 template<typename val_type>
 const std::string Object<val_type>::to_string() const {
 	return "" + value;
-}
-
-template<typename val_type>
-const bool Object<val_type>::operator==(const Object* const obj) const{
-	return get_value() == obj->get_value();
 }
 
 template<typename val_type>
@@ -80,11 +70,6 @@ const bool Object<val_type>::operator==(const std::string value) const{
 }
 
 template<typename val_type>
-const bool Object<val_type>::operator!=(const Object* const obj) const {
-	return get_value() != obj->get_value();
-}
-
-template<typename val_type>
 const bool Object<val_type>::operator!=(const double value) const {
 	return get_value() != value;
 }
@@ -130,13 +115,13 @@ const bool Object<val_type>::operator!=(const std::string value) const {
 }
 
 template<typename val_type>
-const bool Object<val_type>::operator&&(const Base* obj) const{
-	return bool_value() && obj->bool_value();
+const bool Object<val_type>::operator&&(const bool value) const{
+	return bool_value() && value;
 }
 
 template<typename val_type>
-const bool Object<val_type>::operator||(const Object* const obj) const{
-	return bool_value() || obj->bool_value();
+const bool Object<val_type>::operator||(const bool value) const{
+	return bool_value() || value;
 }
 
 template<typename val_type>
@@ -149,13 +134,8 @@ const bool Object<val_type>::bool_value() const {
 	if(instanceof<String>(this)){
 		return get_value() != "";
 	} else {
-		return (bool)get_value();
+		return get_value() != 0 ? true : false;
 	}
-}
-
-template<typename val_type>
-const val_type Object<val_type>::operator+(const Object* const obj) const{
-	return get_value() + obj->get_value();
 }
 
 template<typename val_type>

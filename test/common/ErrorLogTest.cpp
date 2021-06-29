@@ -23,7 +23,7 @@ static bool error_log_test(){
 
   error_log.print();
 
-  return ss.str() == bold_red("Error") + bold_white(": ") + "My error 1 at [Line NumWrap -> 0 | Line position -> 0]\n" + bold_red("Error") + bold_white(": ") + "My error 2 at [Line NumWrap -> 0 | Line position -> 0]\n" + bold_red("Error") + bold_white(": ") + "My error 3 at [Line NumWrap -> 0 | Line position -> 0]\n";
+  return ss.str() == bold_red("Error") + bold_white(": ") + "My error 1 at [Line Number -> 0 | Line position -> 0]\n" + bold_red("Error") + bold_white(": ") + "My error 2 at [Line Number -> 0 | Line position -> 0]\n" + bold_red("Error") + bold_white(": ") + "My error 3 at [Line Number -> 0 | Line position -> 0]\n";
 }
 
 

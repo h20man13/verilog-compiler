@@ -81,21 +81,20 @@ $(function() {
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#define BXNor_H</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;ast/expression/binary_operation/Binary.h&quot;</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;common/NumWrap.h&quot;</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="../../d4/d4b/classBXNor.html">   19</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d4/d4b/classBXNor.html">BXNor</a>: <span class="keyword">public</span> <a class="code" href="../../d2/d0a/classBinary.html">Binary</a>{</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;     <a class="code" href="../../d5/d41/classNumber.html">Number</a>* <a class="code" href="../../d4/d4b/classBXNor.html#a1daab46b6f74b4a40ffdd1aa767dea71">evaluate</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d4/d4b/classBXNor.html#ac4ce267b368b0710d805ab8d27292d0a">code_gen</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;};</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="aclassBXNor_html"><div class="ttname"><a href="../../d4/d4b/classBXNor.html">BXNor</a></div><div class="ttdoc">The binary Xnor operation performs a bitwise or with a bitwise negation at the end.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dd8/BXNor_8h_source.html#l00019">BXNor.h:19</a></div></div>
-<div class="ttc" id="aclassBXNor_html_a1daab46b6f74b4a40ffdd1aa767dea71"><div class="ttname"><a href="../../d4/d4b/classBXNor.html#a1daab46b6f74b4a40ffdd1aa767dea71">BXNor::evaluate</a></div><div class="ttdeci">Number * evaluate() const</div><div class="ttdoc">The interpret function interprets the node and it returns an integer.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df1/BXNor_8cpp_source.html#l00017">BXNor.cpp:17</a></div></div>
-<div class="ttc" id="aclassBXNor_html_ac4ce267b368b0710d805ab8d27292d0a"><div class="ttname"><a href="../../d4/d4b/classBXNor.html#ac4ce267b368b0710d805ab8d27292d0a">BXNor::code_gen</a></div><div class="ttdeci">void code_gen() const</div><div class="ttdoc">The code gen function generates the LLVM code to be used for the Binary Xnor operation.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df1/BXNor_8cpp_source.html#l00013">BXNor.cpp:13</a></div></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="../../d4/d4b/classBXNor.html">   18</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d4/d4b/classBXNor.html">BXNor</a>: <span class="keyword">public</span> <a class="code" href="../../d2/d0a/classBinary.html">Binary</a>{</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;     <a class="code" href="../../dc/d22/classObjBase.html">ObjBase</a>* <span class="keyword">const</span> <a class="code" href="../../d4/d4b/classBXNor.html#a2917dc803ff02ef5ddf053701807bcb5">evaluate</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d4/d4b/classBXNor.html#ac4ce267b368b0710d805ab8d27292d0a">code_gen</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;};</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclassBXNor_html"><div class="ttname"><a href="../../d4/d4b/classBXNor.html">BXNor</a></div><div class="ttdoc">The binary Xnor operation performs a bitwise or with a bitwise negation at the end.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dd8/BXNor_8h_source.html#l00018">BXNor.h:18</a></div></div>
+<div class="ttc" id="aclassBXNor_html_a2917dc803ff02ef5ddf053701807bcb5"><div class="ttname"><a href="../../d4/d4b/classBXNor.html#a2917dc803ff02ef5ddf053701807bcb5">BXNor::evaluate</a></div><div class="ttdeci">ObjBase *const evaluate() const</div><div class="ttdoc">The interpret function interprets the node and it returns an integer.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df1/BXNor_8cpp_source.html#l00027">BXNor.cpp:27</a></div></div>
+<div class="ttc" id="aclassBXNor_html_ac4ce267b368b0710d805ab8d27292d0a"><div class="ttname"><a href="../../d4/d4b/classBXNor.html#ac4ce267b368b0710d805ab8d27292d0a">BXNor::code_gen</a></div><div class="ttdeci">void code_gen() const</div><div class="ttdoc">The code gen function generates the LLVM code to be used for the Binary Xnor operation.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df1/BXNor_8cpp_source.html#l00023">BXNor.cpp:23</a></div></div>
 <div class="ttc" id="aclassBinary_html"><div class="ttname"><a href="../../d2/d0a/classBinary.html">Binary</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d9/db1/Binary_8h_source.html#l00014">Binary.h:14</a></div></div>
-<div class="ttc" id="aclassNumber_html"><div class="ttname"><a href="../../d5/d41/classNumber.html">Number</a></div><div class="ttdef"><b>Definition:</b> <a href="../../db/dc9/Number_8h_source.html#l00014">Number.h:14</a></div></div>
+<div class="ttc" id="aclassObjBase_html"><div class="ttname"><a href="../../dc/d22/classObjBase.html">ObjBase</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dd2/ObjBase_8h_source.html#l00019">ObjBase.h:19</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

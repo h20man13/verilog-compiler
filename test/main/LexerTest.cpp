@@ -10,26 +10,26 @@
 #include <list>
 
 #define test_one_type(type)							\
-  do{									\
-    int count;							\
+  do{												\
+    int count;										\
     for(std::list<const Token>::iterator it = toks.begin(); it != toks.end(); it++){ \
-      if(it->get_type() != type){					\
-	std::cout << "Error: At token " << count << " expected " << #type << " but got " << it -> to_string()  << std::endl; \
-	return false;							\
-      }									\
-      count++;								\
-    }									\
+      if(it->get_type() != type){													 \
+    	  std::cout << "Error: At token " << count << " expected " << #type << " but got " << it -> to_string()  << std::endl; \
+    	  return false;								\
+      }												\
+      count++;										\
+    }												\
   } while(false)
 
 #define test_type_once(type)						\
-  do{									\
+  do{												\
     if(it->get_type() != type){						\
       std::cout << "Error: expected " << #type << " but got " << it->to_string()  << std::endl; \
-return false;								\
-    } else {								\
-      std::cout << it->to_string() << std::endl;			\
-    }									\
-    it++;								\
+      return false;									\
+    } else {										\
+      std::cout << it->to_string() << std::endl;	\
+    }												\
+    it++;											\
   } while(false)
 
 static bool test_identifier(){
@@ -67,7 +67,7 @@ static bool test_macro_identifier(){
 
 static bool test_keywords(){
 
-  std::stringstream ss("initial \n allways \n begin \n end \n module \n endmodule \n task \n endtask \n function \n endfunction \n assign \n posege \n negege \n or \n and \n nand \n nor \n xor \n xnor \n not \n if \n else \n while \n wait \n forever \n repeat \n for \n integer \n real \n reg \n wire \n output \n input");
+  std::stringstream ss("initial \n always \n begin \n end \n module \n endmodule \n task \n endtask \n function \n endfunction \n assign \n posege \n negege \n or \n and \n nand \n nor \n xor \n xnor \n not \n if \n else \n while \n wait \n forever \n repeat \n for \n integer \n real \n reg \n wire \n output \n input");
   Source source(ss);
   Destination dest(std::cout);
   ErrorLog error_log(dest);
@@ -79,7 +79,7 @@ static bool test_keywords(){
   std::list<const Token>::iterator it = toks.begin();
   
   test_type_once(INITIAL);
-  test_type_once(ALLWAYS);
+  test_type_once(ALWAYS);
   test_type_once(BEGIN);
   test_type_once(END);
   test_type_once(MODULE);
@@ -127,7 +127,7 @@ static bool test_decimal(){
 
   std::list<const Token> toks = lex.gen_tokens();
 
-  test_one_type(tok::NumWrap);
+  test_one_type(tok::NUMBER);
   
   return true;
 }
@@ -144,7 +144,7 @@ static bool test_hexidecimal(){
 
   std::list<const Token> toks = lex.gen_tokens();
 
-  test_one_type(tok::NumWrap);
+  test_one_type(tok::NUMBER);
   
   return true;
 }
@@ -161,7 +161,7 @@ static bool test_octal(){
 
   std::list<const Token> toks = lex.gen_tokens();
 
-  test_one_type(tok::NumWrap);
+  test_one_type(tok::NUMBER);
   
   return true;
 }
@@ -178,7 +178,7 @@ static bool test_binary(){
 
   std::list<const Token> toks = lex.gen_tokens();
 
-  test_one_type(tok::NumWrap);
+  test_one_type(tok::NUMBER);
   
   return true;
 }

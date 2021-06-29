@@ -5,7 +5,7 @@
 
 static bool basic_position_test(){
   Position pos(40, 20);
-  return pos.to_string() == "[Line NumWrap -> 40 | Line position -> 20]";
+  return pos.to_string() == "[Line Number -> 40 | Line position -> 20]";
 }
 
 int main(){

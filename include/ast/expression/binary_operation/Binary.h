@@ -25,7 +25,7 @@ public:
 	 * @tparam num_type the return type of the expression
 	 * @return
 	 */
-	 virtual Base* const evaluate() const = 0;
+	 virtual ObjBase* const evaluate() const = 0;
 
 	/**
 	 * The code_gen method is used to generate the LLVM IR of an expression object

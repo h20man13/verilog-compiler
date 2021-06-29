@@ -18,8 +18,6 @@ public:
 
 	IntVal(const int_type value);
 
-	operator int_type() const;
-
 	virtual const std::string get_class() const = 0;
 
 	const int_type operator%(const int value) const;

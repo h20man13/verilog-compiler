@@ -23,7 +23,7 @@ public:
 	 * @param None
 	 * @return an Integer object
 	 */
-	Base* const evaluate() const;
+	ObjBase* const evaluate() const;
 
 	/**
 	 * The code gen method emits the LLVM code to be used to generate a bitwise and expression

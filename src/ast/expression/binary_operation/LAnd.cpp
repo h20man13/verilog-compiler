@@ -8,7 +8,17 @@
 #include "ast/expression/binary_operation/LAnd.h"
 #include "ast/expression/binary_operation/Binary.h"
 #include "ast/expression/Expression.h"
-#include "common/NumWrap.h"
+#include "common/types/String.h"
+#include "common/types/Real.h"
+#include "common/types/Integer.h"
+#include "common/types/UnsignedInteger.h"
+#include "common/types/Long.h"
+#include "common/types/UnsignedLong.h"
+#include "common/types/Short.h"
+#include "common/types/UnsignedShort.h"
+#include "common/types/Byte.h"
+#include "common/types/UnsignedByte.h"
+#include "common/types/Boolean.h"
 
 /**
  * The gode_gen method is used to emit LLVM code
@@ -21,8 +31,8 @@ void LAnd::code_gen() const {
  * The evaluate method is used to evaluate
  * @return
  */
-Number LAnd::evaluate() const {
-	return Number(left.evaluate() && right.evaluate())= 0;
+ObjBase* const LAnd::evaluate() const {
+	return new Boolean(this->left->evaluate()->bool_value() && this->right->evaluate()->bool_value());
 }
 
 

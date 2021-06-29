@@ -9,7 +9,7 @@
  */
 enum tok{
   IDENTIFIER, //identifiers
-  NumWrap, //NumWraps
+  NUMBER, //NumWraps
   STRING, //String constants
   MACRODEFINITION,
   MACROIDENTIFIER,
@@ -58,7 +58,7 @@ enum tok{
 	    
   //keywords
   INITIAL,
-  ALLWAYS,
+  ALWAYS,
   BEGIN,
   END,
   MODULE,

@@ -28,7 +28,7 @@
  * @return a string that is the color white
  */
 
-inline std::string white(const std::string& text){
+std::string white(const std::string& text){
   return WHITE + text + RESET;
 }
 
@@ -37,7 +37,7 @@ inline std::string white(const std::string& text){
  * @return a string that is the color black
  */
 
-inline std::string black(const std::string& text){
+std::string black(const std::string& text){
   return BLACK + text + RESET;
 }
 
@@ -46,7 +46,7 @@ inline std::string black(const std::string& text){
  * @return a string that is the color red
  */
 
-inline std::string red(const std::string& text){
+std::string red(const std::string& text){
   return RED + text + RESET;
 }
 
@@ -55,7 +55,7 @@ inline std::string red(const std::string& text){
  * @return a string that is the color green
  */
 
-inline std::string green(const std::string& text){
+std::string green(const std::string& text){
   return GREEN + text + RESET;
 }
 
@@ -64,7 +64,7 @@ inline std::string green(const std::string& text){
  * @return a string that is the color yellow
  */
 
-inline std::string yellow(const std::string& text){
+std::string yellow(const std::string& text){
   return YELLOW + text + RESET;
 }
 
@@ -74,7 +74,7 @@ inline std::string yellow(const std::string& text){
  * @return a string that is the color blue
  */
 
-inline std::string blue(const std::string& text){
+std::string blue(const std::string& text){
  return BLUE + text + RESET;
 }
 
@@ -83,7 +83,7 @@ inline std::string blue(const std::string& text){
  * @return a string that is the color magenta(purple)
  */
 
-inline std::string magenta(const std::string& text){
+std::string magenta(const std::string& text){
  return MAGENTA + text + RESET;
 }
 
@@ -92,7 +92,7 @@ inline std::string magenta(const std::string& text){
  * @return a string that is the color cyan
  */
 
-inline std::string cyan(const std::string& text){
+std::string cyan(const std::string& text){
  return CYAN + text + RESET;
 }
 
@@ -101,7 +101,7 @@ inline std::string cyan(const std::string& text){
  * @return a bold string that is the color white
  */
 
-inline std::string bold_white(const std::string& text){
+std::string bold_white(const std::string& text){
   return BOLDWHITE + text + RESET;
 }
 
@@ -110,7 +110,7 @@ inline std::string bold_white(const std::string& text){
  * @return a bold string that is the color black
  */
 
-inline std::string bold_black(const std::string& text){
+std::string bold_black(const std::string& text){
   return BOLDBLACK + text + RESET;
 }
 
@@ -119,7 +119,7 @@ inline std::string bold_black(const std::string& text){
  * @return a bold string that is the color red
  */
 
-inline std::string bold_red(const std::string& text){
+std::string bold_red(const std::string& text){
   return BOLDRED + text + RESET;
 }
 
@@ -128,7 +128,7 @@ inline std::string bold_red(const std::string& text){
  * @return a bold string that is the color green
  */
 
-inline std::string bold_green(const std::string& text){
+std::string bold_green(const std::string& text){
   return BOLDGREEN + text + RESET;
 }
 
@@ -137,7 +137,7 @@ inline std::string bold_green(const std::string& text){
  * @return a bold string that is the color yellow
  */
 
-inline std::string bold_yellow(const std::string& text){
+std::string bold_yellow(const std::string& text){
   return BOLDYELLOW + text + RESET;
 }
 
@@ -146,7 +146,7 @@ inline std::string bold_yellow(const std::string& text){
  * @return a bold string that is the color blue
  */
 
-inline std::string bold_blue(const std::string& text){
+std::string bold_blue(const std::string& text){
  return BOLDBLUE + text + RESET;
 }
 
@@ -155,7 +155,7 @@ inline std::string bold_blue(const std::string& text){
  * @return a bold string that is the color magenta(purple)
  */
 
-inline std::string bold_magenta(const std::string& text){
+std::string bold_magenta(const std::string& text){
  return BOLDMAGENTA + text + RESET;
 }
 
@@ -164,7 +164,7 @@ inline std::string bold_magenta(const std::string& text){
  * @return a bold string that is the color cyan
  */
 
-inline std::string bold_cyan(const std::string& text){
+std::string bold_cyan(const std::string& text){
  return BOLDCYAN + text + RESET;
 }
 

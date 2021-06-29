@@ -17,7 +17,7 @@ public:
 	 * @tparam num_type the generic type of the number
 	 * @return the result of the logical and Expression
 	 */
-	Base* const evaluate() const = 0;
+	ObjBase* const evaluate() const = 0;
 
 	/**
 	 * The code_gen function is used to generate LLVM IR for an Addition operation

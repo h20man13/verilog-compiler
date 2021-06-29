@@ -6,9 +6,9 @@
  */
 
 #include "ast/expression/binary_operation/Add.h"
+#include "common/types/ObjBase.h"
 #include "ast/expression/binary_operation/Binary.h"
 #include "ast/expression/Expression.h"
-#include "common/types/Base.h"
 #include "common/types/String.h"
 #include "common/types/Real.h"
 #include "common/types/Integer.h"
@@ -28,9 +28,9 @@ void Add::code_gen() const {
 	// TODO -- finish this later
 }
 
-Base* const Add::evaluate() const {
-	Base *const left = this->left->evaluate();
-	Base *const right = this->right->evaluate();
+ObjBase* const Add::evaluate() const {
+	ObjBase *const left = this->left->evaluate();
+	ObjBase *const right = this->right->evaluate();
 
 	if (instanceof<String>(left)) {
 

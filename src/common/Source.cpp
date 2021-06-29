@@ -116,6 +116,8 @@ Source& Source::operator=(const Source& source){
     _current = source._current;
     _past = source._past;
     input = source.input;
+    line_number = source.line_number;
+    line_position = source.line_position;
   }
 
   return *this;

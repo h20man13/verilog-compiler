@@ -17,7 +17,7 @@ public:
 	 * @tparam num_type the generic type of a Number
 	 * @return a Number
 	 */
-	Base* const evaluate() const;
+	ObjBase* const evaluate() const;
 
 	/**
 	 * Generates LLVM IR to represent a binary addition operation

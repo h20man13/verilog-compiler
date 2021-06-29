@@ -8,27 +8,17 @@
 #ifndef OBJECT_H
 #define OBJECT_H
 
-/**
- * Creates an instanceof operator similar to Java that can be used like the example below:
- * instacneof<Child>(c) ...
- * @tparam Base The class that will be compared to
- * @tparam Type Object that will be compared against
- * @param  Type that will be compared to
- * @return
- */
-
 #include <string>
-#include "common/types/Base.h"
+
+#include "common/types/ObjBase.h"
 
 template<typename val_type>
-class Object : public Base{
+class Object : public ObjBase{
 private:
 	 val_type value;
 protected:
 	 Object(const val_type value);
 public:
-
-	 operator val_type();
 
 	 const val_type get_value() const;
 	 const std::string to_string() const;
@@ -57,9 +47,8 @@ public:
 	 const bool operator!=(const bool value) const;
 	 const bool operator!=(const std::string value) const;
 
-
-	 const bool operator&&(const Object* const obj) const;
-	 const bool operator||(const Object* const obj) const;
+	 const bool operator&&(const bool value) const;
+	 const bool operator||(const bool value) const;
 
 	 const val_type operator+(const double value) const;
 	 const val_type operator+(const int value) const;

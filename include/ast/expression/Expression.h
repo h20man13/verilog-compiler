@@ -8,8 +8,8 @@
 #ifndef EXPRESSION_H
 #define EXPRESSION_H
 
+#include "common/types/ObjBase.h"
 #include "common/Position.h"
-#include "common/types/Base.h"
 
 /**
  * The Expression is an Interface that can be used to represent Expressions. The Expression class is a template class that changes the return type of the Interpret method
@@ -39,9 +39,9 @@ public:
 	 * The interpret method interprets the Expression directly and returns the result
 	 * @return the result of the computed expression
 	 */
-	 virtual Base* const evaluate() const = 0;
+	 virtual ObjBase* const evaluate() const = 0;
 
-	 ~Expression();
+	 virtual ~Expression();
 };
 
 #endif /* SRC_AST_EXPRESSION_EXPRESSION_H_ */

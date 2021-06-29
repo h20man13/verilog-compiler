@@ -1,5 +1,5 @@
 /*
- * Number.h
+ * Long.h
  *
  *  Created on: Jun 18, 2021
  *      Author: jacob
@@ -10,6 +10,8 @@
 
 
 #include "common/types/Long.h"
+#include "common/types/IntVal.h"
+#include <string>
 
 class Long: public IntVal<long>{
 public:

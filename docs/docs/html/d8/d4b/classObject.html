@@ -76,10 +76,11 @@ Inheritance diagram for Object&lt; val_type &gt;:</div>
  <div class="center">
   <img src="../../d8/d4b/classObject.png" usemap="#Object_3C_20val_5Ftype_20_3E_map" alt=""/>
   <map id="Object_3C_20val_5Ftype_20_3E_map" name="Object_3C_20val_5Ftype_20_3E_map">
-<area href="../../d5/d41/classNumber.html" alt="Number&lt; int_type &gt;" shape="rect" coords="0,56,124,80"/>
-<area href="../../d5/d41/classNumber.html" alt="Number&lt; double &gt;" shape="rect" coords="134,56,258,80"/>
-<area href="../../d3/dc6/classIntVal.html" alt="IntVal&lt; int_type &gt;" shape="rect" coords="0,112,124,136"/>
-<area href="../../dd/d05/classReal.html" alt="Real" shape="rect" coords="134,112,258,136"/>
+<area href="../../dc/d22/classObjBase.html" alt="ObjBase" shape="rect" coords="67,0,191,24"/>
+<area href="../../d5/d41/classNumber.html" alt="Number&lt; int_type &gt;" shape="rect" coords="0,112,124,136"/>
+<area href="../../d5/d41/classNumber.html" alt="Number&lt; double &gt;" shape="rect" coords="134,112,258,136"/>
+<area href="../../d3/dc6/classIntVal.html" alt="IntVal&lt; int_type &gt;" shape="rect" coords="0,168,124,192"/>
+<area href="../../dd/d05/classReal.html" alt="Real" shape="rect" coords="134,168,258,192"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -91,24 +92,111 @@ const val_type&#160;</td><td class="memItemRight" valign="bottom"><b>get_value</
 <tr class="memitem:a9e46526206aabe06d7b5cebc2436f085"><td class="memItemLeft" align="right" valign="top"><a id="a9e46526206aabe06d7b5cebc2436f085"></a>
 const std::string&#160;</td><td class="memItemRight" valign="bottom"><b>to_string</b> () const</td></tr>
 <tr class="separator:a9e46526206aabe06d7b5cebc2436f085"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0cbcec438a0582d7feec09c31f178a8f"><td class="memItemLeft" align="right" valign="top"><a id="a0cbcec438a0582d7feec09c31f178a8f"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>operator val_type</b> () const</td></tr>
-<tr class="separator:a0cbcec438a0582d7feec09c31f178a8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab008655bc854d588114a401e4d68bc7a"><td class="memItemLeft" align="right" valign="top"><a id="ab008655bc854d588114a401e4d68bc7a"></a>
-const bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (const val_type value) const</td></tr>
-<tr class="separator:ab008655bc854d588114a401e4d68bc7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa94c05ce30b922a20ad1539d22c8475d"><td class="memItemLeft" align="right" valign="top"><a id="aa94c05ce30b922a20ad1539d22c8475d"></a>
-const bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator!=</b> (const val_type value) const</td></tr>
-<tr class="separator:aa94c05ce30b922a20ad1539d22c8475d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2a89f131d564fbc962c619236f47c3a7"><td class="memItemLeft" align="right" valign="top"><a id="a2a89f131d564fbc962c619236f47c3a7"></a>
-const bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator&amp;&amp;</b> (const <a class="el" href="../../d8/d4b/classObject.html">Object</a> *const obj) const</td></tr>
-<tr class="separator:a2a89f131d564fbc962c619236f47c3a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aecf067f33468e9e1963fd4babfc4c928"><td class="memItemLeft" align="right" valign="top"><a id="aecf067f33468e9e1963fd4babfc4c928"></a>
-const bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator||</b> (const <a class="el" href="../../d8/d4b/classObject.html">Object</a> *const obj) const</td></tr>
-<tr class="separator:aecf067f33468e9e1963fd4babfc4c928"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afe28331e79ea732f93bb244c704fbf90"><td class="memItemLeft" align="right" valign="top"><a id="afe28331e79ea732f93bb244c704fbf90"></a>
-const val_type&#160;</td><td class="memItemRight" valign="bottom"><b>operator+</b> (const val_type value) const</td></tr>
-<tr class="separator:afe28331e79ea732f93bb244c704fbf90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2211e0a974f9003081be79d4b9c8e70"><td class="memItemLeft" align="right" valign="top"><a id="af2211e0a974f9003081be79d4b9c8e70"></a>
+const bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (const double value) const</td></tr>
+<tr class="separator:af2211e0a974f9003081be79d4b9c8e70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ed68a1dd6799e0581eb5beb096fffff"><td class="memItemLeft" align="right" valign="top"><a id="a3ed68a1dd6799e0581eb5beb096fffff"></a>
+const bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (const int value) const</td></tr>
+<tr class="separator:a3ed68a1dd6799e0581eb5beb096fffff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6620cdfd8f63d77a9ea65ca2894776c1"><td class="memItemLeft" align="right" valign="top"><a id="a6620cdfd8f63d77a9ea65ca2894776c1"></a>
+const bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (const unsigned int value) const</td></tr>
+<tr class="separator:a6620cdfd8f63d77a9ea65ca2894776c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5dcb3b2e4a9afb3c2c7e34a63931cc14"><td class="memItemLeft" align="right" valign="top"><a id="a5dcb3b2e4a9afb3c2c7e34a63931cc14"></a>
+const bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (const long value) const</td></tr>
+<tr class="separator:a5dcb3b2e4a9afb3c2c7e34a63931cc14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adaae85628ebdfd2eb83f222e5d4d9627"><td class="memItemLeft" align="right" valign="top"><a id="adaae85628ebdfd2eb83f222e5d4d9627"></a>
+const bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (const unsigned long value) const</td></tr>
+<tr class="separator:adaae85628ebdfd2eb83f222e5d4d9627"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ef0de8e05ecc5ef2a044382ca6f5258"><td class="memItemLeft" align="right" valign="top"><a id="a3ef0de8e05ecc5ef2a044382ca6f5258"></a>
+const bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (const short value) const</td></tr>
+<tr class="separator:a3ef0de8e05ecc5ef2a044382ca6f5258"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e4012ca5652218e181d3270fe55b7e6"><td class="memItemLeft" align="right" valign="top"><a id="a5e4012ca5652218e181d3270fe55b7e6"></a>
+const bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (const unsigned short value) const</td></tr>
+<tr class="separator:a5e4012ca5652218e181d3270fe55b7e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab901f88fc8db09c684d537652e0015fe"><td class="memItemLeft" align="right" valign="top"><a id="ab901f88fc8db09c684d537652e0015fe"></a>
+const bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (const char value) const</td></tr>
+<tr class="separator:ab901f88fc8db09c684d537652e0015fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5685386fb1d9be1eedfeee446a1fba84"><td class="memItemLeft" align="right" valign="top"><a id="a5685386fb1d9be1eedfeee446a1fba84"></a>
+const bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (const unsigned char value) const</td></tr>
+<tr class="separator:a5685386fb1d9be1eedfeee446a1fba84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a407b6e74858f0980c1b1e566cc8cf3af"><td class="memItemLeft" align="right" valign="top"><a id="a407b6e74858f0980c1b1e566cc8cf3af"></a>
+const bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (const bool value) const</td></tr>
+<tr class="separator:a407b6e74858f0980c1b1e566cc8cf3af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:accf35efde3cfd8cbe21c526cb9361a92"><td class="memItemLeft" align="right" valign="top"><a id="accf35efde3cfd8cbe21c526cb9361a92"></a>
+const bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (const std::string value) const</td></tr>
+<tr class="separator:accf35efde3cfd8cbe21c526cb9361a92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a456cb82d22c9dec17d1d5e4e6220fa11"><td class="memItemLeft" align="right" valign="top"><a id="a456cb82d22c9dec17d1d5e4e6220fa11"></a>
+const bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator!=</b> (const double value) const</td></tr>
+<tr class="separator:a456cb82d22c9dec17d1d5e4e6220fa11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada3eaa5aad62bc7f56660c9ff32f3dff"><td class="memItemLeft" align="right" valign="top"><a id="ada3eaa5aad62bc7f56660c9ff32f3dff"></a>
+const bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator!=</b> (const int value) const</td></tr>
+<tr class="separator:ada3eaa5aad62bc7f56660c9ff32f3dff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea561ac23b03c9478e8d47a70892e53c"><td class="memItemLeft" align="right" valign="top"><a id="aea561ac23b03c9478e8d47a70892e53c"></a>
+const bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator!=</b> (const unsigned int value) const</td></tr>
+<tr class="separator:aea561ac23b03c9478e8d47a70892e53c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9a9423ba332cb70596c7aad38dbd835"><td class="memItemLeft" align="right" valign="top"><a id="ad9a9423ba332cb70596c7aad38dbd835"></a>
+const bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator!=</b> (const long value) const</td></tr>
+<tr class="separator:ad9a9423ba332cb70596c7aad38dbd835"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2629aeceb6fc5955ef37eeecf0306ee"><td class="memItemLeft" align="right" valign="top"><a id="ad2629aeceb6fc5955ef37eeecf0306ee"></a>
+const bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator!=</b> (const unsigned long value) const</td></tr>
+<tr class="separator:ad2629aeceb6fc5955ef37eeecf0306ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9dd2d739f2629e44429cd5c979e909aa"><td class="memItemLeft" align="right" valign="top"><a id="a9dd2d739f2629e44429cd5c979e909aa"></a>
+const bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator!=</b> (const short value) const</td></tr>
+<tr class="separator:a9dd2d739f2629e44429cd5c979e909aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89be02585cac8aad8f5fe67f0c18acbc"><td class="memItemLeft" align="right" valign="top"><a id="a89be02585cac8aad8f5fe67f0c18acbc"></a>
+const bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator!=</b> (const unsigned short value) const</td></tr>
+<tr class="separator:a89be02585cac8aad8f5fe67f0c18acbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a79ae0615fb769090e377f56522369f"><td class="memItemLeft" align="right" valign="top"><a id="a2a79ae0615fb769090e377f56522369f"></a>
+const bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator!=</b> (const char value) const</td></tr>
+<tr class="separator:a2a79ae0615fb769090e377f56522369f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af90133aba10b44b345a54554596f88c5"><td class="memItemLeft" align="right" valign="top"><a id="af90133aba10b44b345a54554596f88c5"></a>
+const bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator!=</b> (const unsigned char value) const</td></tr>
+<tr class="separator:af90133aba10b44b345a54554596f88c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc06d8a00295ddf2fe1e40205b108e6b"><td class="memItemLeft" align="right" valign="top"><a id="acc06d8a00295ddf2fe1e40205b108e6b"></a>
+const bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator!=</b> (const bool value) const</td></tr>
+<tr class="separator:acc06d8a00295ddf2fe1e40205b108e6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0a31be4e1853c92c106305618035e4b"><td class="memItemLeft" align="right" valign="top"><a id="ae0a31be4e1853c92c106305618035e4b"></a>
+const bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator!=</b> (const std::string value) const</td></tr>
+<tr class="separator:ae0a31be4e1853c92c106305618035e4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78773a7e40092105e73171939dceefdd"><td class="memItemLeft" align="right" valign="top"><a id="a78773a7e40092105e73171939dceefdd"></a>
+const bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator&amp;&amp;</b> (const bool value) const</td></tr>
+<tr class="separator:a78773a7e40092105e73171939dceefdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe1ecc7f26587d60c4da2f4320a2a758"><td class="memItemLeft" align="right" valign="top"><a id="afe1ecc7f26587d60c4da2f4320a2a758"></a>
+const bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator||</b> (const bool value) const</td></tr>
+<tr class="separator:afe1ecc7f26587d60c4da2f4320a2a758"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae04f2caf3853a3d1d44c3ce9d29d847f"><td class="memItemLeft" align="right" valign="top"><a id="ae04f2caf3853a3d1d44c3ce9d29d847f"></a>
+const val_type&#160;</td><td class="memItemRight" valign="bottom"><b>operator+</b> (const double value) const</td></tr>
+<tr class="separator:ae04f2caf3853a3d1d44c3ce9d29d847f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83a3178e72b88a8239272297fd0df4fd"><td class="memItemLeft" align="right" valign="top"><a id="a83a3178e72b88a8239272297fd0df4fd"></a>
+const val_type&#160;</td><td class="memItemRight" valign="bottom"><b>operator+</b> (const int value) const</td></tr>
+<tr class="separator:a83a3178e72b88a8239272297fd0df4fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33cb94329f269829d3162a912a5e6120"><td class="memItemLeft" align="right" valign="top"><a id="a33cb94329f269829d3162a912a5e6120"></a>
+const val_type&#160;</td><td class="memItemRight" valign="bottom"><b>operator+</b> (const unsigned int value) const</td></tr>
+<tr class="separator:a33cb94329f269829d3162a912a5e6120"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20c19f260e754f5f1c38cdf812d683ee"><td class="memItemLeft" align="right" valign="top"><a id="a20c19f260e754f5f1c38cdf812d683ee"></a>
+const val_type&#160;</td><td class="memItemRight" valign="bottom"><b>operator+</b> (const long value) const</td></tr>
+<tr class="separator:a20c19f260e754f5f1c38cdf812d683ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f5afb022781dea191547ff5094a95bb"><td class="memItemLeft" align="right" valign="top"><a id="a0f5afb022781dea191547ff5094a95bb"></a>
+const val_type&#160;</td><td class="memItemRight" valign="bottom"><b>operator+</b> (const unsigned long value) const</td></tr>
+<tr class="separator:a0f5afb022781dea191547ff5094a95bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9b4f19206a8015aaae9622df6a27140"><td class="memItemLeft" align="right" valign="top"><a id="ae9b4f19206a8015aaae9622df6a27140"></a>
+const val_type&#160;</td><td class="memItemRight" valign="bottom"><b>operator+</b> (const short value) const</td></tr>
+<tr class="separator:ae9b4f19206a8015aaae9622df6a27140"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a2463f857cef1f5aa41a109503d27cd"><td class="memItemLeft" align="right" valign="top"><a id="a7a2463f857cef1f5aa41a109503d27cd"></a>
+const val_type&#160;</td><td class="memItemRight" valign="bottom"><b>operator+</b> (const unsigned short value) const</td></tr>
+<tr class="separator:a7a2463f857cef1f5aa41a109503d27cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45a2a27ec23af684b64e76dd8128741a"><td class="memItemLeft" align="right" valign="top"><a id="a45a2a27ec23af684b64e76dd8128741a"></a>
+const val_type&#160;</td><td class="memItemRight" valign="bottom"><b>operator+</b> (const char value) const</td></tr>
+<tr class="separator:a45a2a27ec23af684b64e76dd8128741a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a216feba0607b2af3168c3eb528b7246e"><td class="memItemLeft" align="right" valign="top"><a id="a216feba0607b2af3168c3eb528b7246e"></a>
+const val_type&#160;</td><td class="memItemRight" valign="bottom"><b>operator+</b> (const unsigned char value) const</td></tr>
+<tr class="separator:a216feba0607b2af3168c3eb528b7246e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd6058dd1667d43fc82c6b0e34accf88"><td class="memItemLeft" align="right" valign="top"><a id="abd6058dd1667d43fc82c6b0e34accf88"></a>
+const val_type&#160;</td><td class="memItemRight" valign="bottom"><b>operator+</b> (const bool value) const</td></tr>
+<tr class="separator:abd6058dd1667d43fc82c6b0e34accf88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80ea9f8c2968ec9376f6ba1a3a661c56"><td class="memItemLeft" align="right" valign="top"><a id="a80ea9f8c2968ec9376f6ba1a3a661c56"></a>
+const val_type&#160;</td><td class="memItemRight" valign="bottom"><b>operator+</b> (const std::string value) const</td></tr>
+<tr class="separator:a80ea9f8c2968ec9376f6ba1a3a661c56"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab2b2df319bf59e1a5d200b1d0857f037"><td class="memItemLeft" align="right" valign="top"><a id="ab2b2df319bf59e1a5d200b1d0857f037"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const val_type value) const</td></tr>
 <tr class="separator:ab2b2df319bf59e1a5d200b1d0857f037"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -131,7 +219,7 @@ Protected Member Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename val_type&gt;<br />
 class Object&lt; val_type &gt;</div>
-<p class="definition">Definition at line <a class="el" href="../../db/dbf/Object_8h_source.html#l00029">29</a> of file <a class="el" href="../../db/dbf/Object_8h_source.html">Object.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../db/dbf/Object_8h_source.html#l00016">16</a> of file <a class="el" href="../../db/dbf/Object_8h_source.html">Object.h</a>.</p>
 </div><hr/>The documentation for this class was generated from the following files:<ul>
 <li>include/common/types/<a class="el" href="../../db/dbf/Object_8h_source.html">Object.h</a></li>
 <li>src/common/types/<a class="el" href="../../de/d4f/Object_8cpp_source.html">Object.cpp</a></li>

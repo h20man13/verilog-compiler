@@ -11,6 +11,10 @@
 
 UnsignedShort::UnsignedShort(const unsigned short int value) : IntVal(value) {}
 
+UnsignedShort::operator unsigned short(){
+	return get_value();
+}
+
 const std::string UnsignedShort::get_class() const {
 	return "Unsigned Short";
 }

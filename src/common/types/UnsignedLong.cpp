@@ -17,6 +17,10 @@
 
 UnsignedLong::UnsignedLong(const unsigned long value) : IntVal(value) {};
 
+UnsignedLong::operator unsigned long(){
+	return get_value();
+}
+
 /**
  * The get class method returns the name of the class as a string
  * @return  a string representing the type name or more specifically unsigned long

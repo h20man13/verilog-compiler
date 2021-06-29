@@ -23,7 +23,7 @@ const \mbox{\hyperlink{classPosition}{Position}} \mbox{\hyperlink{classExpressio
 \mbox{\Hypertarget{classExpression_ab5b603748ad09017b5077fa0e2e04c67}\label{classExpression_ab5b603748ad09017b5077fa0e2e04c67}} 
 virtual void \mbox{\hyperlink{classExpression_ab5b603748ad09017b5077fa0e2e04c67}{code\+\_\+gen}} () const =0
 \begin{DoxyCompactList}\small\item\em The code\+\_\+gen method generates the LLVM IR of the \mbox{\hyperlink{classExpression}{Expression}}. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classObject}{Object}} $\ast$ \mbox{\hyperlink{classExpression_a146141ca872a719e1e588e9a722b0639}{evaluate}} ()
+virtual \mbox{\hyperlink{classObjBase}{Obj\+Base}} $\ast$const \mbox{\hyperlink{classExpression_a99340df9bd2fdefb61d92723c5f44dd3}{evaluate}} () const =0
 \begin{DoxyCompactList}\small\item\em The interpret method interprets the \mbox{\hyperlink{classExpression}{Expression}} directly and returns the result. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
@@ -88,11 +88,11 @@ Definition at line 21 of file Expression.\+cpp.
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{classExpression_a146141ca872a719e1e588e9a722b0639}\label{classExpression_a146141ca872a719e1e588e9a722b0639}} 
+\mbox{\Hypertarget{classExpression_a99340df9bd2fdefb61d92723c5f44dd3}\label{classExpression_a99340df9bd2fdefb61d92723c5f44dd3}} 
 \index{Expression@{Expression}!evaluate@{evaluate}}
 \index{evaluate@{evaluate}!Expression@{Expression}}
 \doxysubsubsection{\texorpdfstring{evaluate()}{evaluate()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classObject}{Object}}$\ast$ Expression\+::evaluate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classObjBase}{Obj\+Base}}$\ast$ const Expression\+::evaluate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
@@ -101,6 +101,10 @@ The interpret method interprets the \mbox{\hyperlink{classExpression}{Expression
 \begin{DoxyReturn}{Returns}
 the result of the computed expression 
 \end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classBAnd_a1ae5157d6f8d3893370f6f3f021af49f}{BAnd}}, \mbox{\hyperlink{classBOr_a31def4aca8db1e7232e84ab7cdb7cdc4}{BOr}}, \mbox{\hyperlink{classBXNor_a2917dc803ff02ef5ddf053701807bcb5}{BXNor}}, \mbox{\hyperlink{classBXor_a1e5523c77e26ae1f2ec1897a1782af2c}{BXor}}, \mbox{\hyperlink{classDiv_ac2549e078e888d71f3906faa0ee315f8}{Div}}, \mbox{\hyperlink{classLAnd_a90abaf6e69f3cb519ef1fc558318fc72}{LAnd}}, \mbox{\hyperlink{classLOr_a99f9c641656adb86ccdbcdc68d93aa49}{LOr}}, \mbox{\hyperlink{classMod_ae4d3642d54cbc2e87aeec33787e45e8e}{Mod}}, \mbox{\hyperlink{classMult_aa06e8bc4fe5d2066c7d8e891337e8296}{Mult}}, \mbox{\hyperlink{classSub_ab4625ea9ff68e362eb493aff868197f8}{Sub}}, \mbox{\hyperlink{classAdd_a449a505a07b000edb0b3fb118727857f}{Add}}, and \mbox{\hyperlink{classBinary_aa80f13396ccee85a8a6515bb16e99f4a}{Binary}}.
+
 \mbox{\Hypertarget{classExpression_a2c4bb4178307ec28af5fad960b2b49ae}\label{classExpression_a2c4bb4178307ec28af5fad960b2b49ae}} 
 \index{Expression@{Expression}!get\_position@{get\_position}}
 \index{get\_position@{get\_position}!Expression@{Expression}}
