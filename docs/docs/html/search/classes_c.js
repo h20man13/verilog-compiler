@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['tokdecl_131',['TokDecl',['../d6/de2/structTokDecl.html',1,'']]],
-  ['token_132',['Token',['../d2/d6e/classToken.html',1,'']]]
+  ['real_142',['Real',['../dd/d05/classReal.html',1,'']]],
+  ['regularfunctioncall_143',['RegularFunctionCall',['../d5/d08/classRegularFunctionCall.html',1,'']]],
+  ['replication_144',['Replication',['../de/d82/classReplication.html',1,'']]],
+  ['rshift_145',['RShift',['../da/df5/classRShift.html',1,'']]]
 ];

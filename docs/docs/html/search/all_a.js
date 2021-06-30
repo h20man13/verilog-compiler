@@ -1,9 +1,10 @@
 var searchData=
 [
-  ['neg_51',['Neg',['../d3/da6/classNeg.html',1,'']]],
-  ['next_52',['next',['../d6/d2e/classSource.html#adbcf339671f347071bc019f4440bf4fd',1,'Source']]],
-  ['no_5fflush_53',['no_flush',['../dc/df4/classDestination.html#a3281804a34a79e6f6624cde84213bdea',1,'Destination']]],
-  ['number_54',['Number',['../d5/d41/classNumber.html',1,'']]],
-  ['number_3c_20double_20_3e_55',['Number&lt; double &gt;',['../d5/d41/classNumber.html',1,'']]],
-  ['number_3c_20int_5ftype_20_3e_56',['Number&lt; int_type &gt;',['../d5/d41/classNumber.html',1,'']]]
+  ['make_5fidentifier_5ftoken_50',['make_identifier_token',['../d2/d6e/classToken.html#a0d77acdb54e0c7231fd7fc3c3b0d338d',1,'Token']]],
+  ['make_5fmacro_5ftoken_51',['make_macro_token',['../d2/d6e/classToken.html#ad5f5f43b5feb24a382a8a6d77a0d448a',1,'Token']]],
+  ['make_5fnumber_5ftoken_52',['make_number_token',['../d2/d6e/classToken.html#adebc775df817072f8a7ebf0574ed686c',1,'Token']]],
+  ['make_5foperator_5ftoken_53',['make_operator_token',['../d2/d6e/classToken.html#a6fff80b9ae258212a35dde2f509b8e2b',1,'Token']]],
+  ['make_5fstring_5ftoken_54',['make_string_token',['../d2/d6e/classToken.html#ac9556e65013bdc51afdfb78180594aa8',1,'Token']]],
+  ['mod_55',['Mod',['../d2/d0b/classMod.html',1,'']]],
+  ['mult_56',['Mult',['../dc/d13/classMult.html',1,'']]]
 ];
