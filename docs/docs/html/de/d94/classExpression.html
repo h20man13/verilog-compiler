@@ -82,6 +82,7 @@ Inheritance diagram for Expression:</div>
   <img src="../../de/d94/classExpression.png" usemap="#Expression_map" alt=""/>
   <map id="Expression_map" name="Expression_map">
 <area href="../../d2/d0a/classBinary.html" alt="Binary" shape="rect" coords="0,56,74,80"/>
+<area href="../../d8/d3b/classUnary.html" alt="Unary" shape="rect" coords="168,56,242,80"/>
 <area href="../../d4/d8e/classAdd.html" alt="Add" shape="rect" coords="84,112,158,136"/>
 <area href="../../d4/d53/classBAnd.html" title="The bitwise and class is used to perform bitwise and operation." alt="BAnd" shape="rect" coords="84,168,158,192"/>
 <area href="../../d2/dc6/classBOr.html" title="The Bitwise or operation is used to perform a bitwise or operation." alt="BOr" shape="rect" coords="84,224,158,248"/>
@@ -95,6 +96,9 @@ Inheritance diagram for Expression:</div>
 <area href="../../dc/d13/classMult.html" alt="Mult" shape="rect" coords="84,672,158,696"/>
 <area href="../../da/df5/classRShift.html" title="The bitwise and class is used to perform bitwise and operation." alt="RShift" shape="rect" coords="84,728,158,752"/>
 <area href="../../dd/dbf/classSub.html" title="The subtract class is used for subtract operations." alt="Sub" shape="rect" coords="84,784,158,808"/>
+<area href="../../d8/d99/classBNeg.html" alt="BNeg" shape="rect" coords="252,112,326,136"/>
+<area href="../../d9/d36/classLNeg.html" alt="LNeg" shape="rect" coords="252,168,326,192"/>
+<area href="../../d3/da6/classNeg.html" alt="Neg" shape="rect" coords="252,224,326,248"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -225,7 +229,7 @@ Protected Member Functions</h2></td></tr>
 <p>The interpret method interprets the <a class="el" href="../../de/d94/classExpression.html" title="The Expression is an Interface that can be used to represent Expressions.">Expression</a> directly and returns the result. </p>
 <dl class="section return"><dt>Returns</dt><dd>the result of the computed expression </dd></dl>
 
-<p>Implemented in <a class="el" href="../../d4/d53/classBAnd.html#a154e148604da6e09d4e7228915239fdb">BAnd</a>, <a class="el" href="../../d2/dc6/classBOr.html#a92aedfbfacc3c13ca147b107164e763e">BOr</a>, <a class="el" href="../../d4/d4b/classBXNor.html#abc873ddb16753b04bf424a076b8b8c9b">BXNor</a>, <a class="el" href="../../d1/d98/classBXor.html#a08106c20d48b23645271d3190a5a8a2a">BXor</a>, <a class="el" href="../../d5/d94/classDiv.html#a685fed5d0e7e659d689a1f3d5f28bfa6">Div</a>, <a class="el" href="../../de/da9/classLAnd.html#acd6a992b539ee5b50419d98ee4eb548a">LAnd</a>, <a class="el" href="../../d3/d43/classLOr.html#a33fcd0248f024cf0afd75cfe11d2fbf4">LOr</a>, <a class="el" href="../../db/d1e/classLShift.html#a642861a37e71f6d1fdc18b71b9df7578">LShift</a>, <a class="el" href="../../d2/d0b/classMod.html#a8eb812f7143dda9ae6383706fdc4eb07">Mod</a>, <a class="el" href="../../dc/d13/classMult.html#a3f14174bd9f82673aa75473f94f1e506">Mult</a>, <a class="el" href="../../da/df5/classRShift.html#a1d68c8f4e7658cae4fc01ce44200ab85">RShift</a>, <a class="el" href="../../dd/dbf/classSub.html#a796a2568d44b7cc6c01bf7e069a1c14a">Sub</a>, <a class="el" href="../../d4/d8e/classAdd.html#a449a505a07b000edb0b3fb118727857f">Add</a>, and <a class="el" href="../../d2/d0a/classBinary.html#aa80f13396ccee85a8a6515bb16e99f4a">Binary</a>.</p>
+<p>Implemented in <a class="el" href="../../d4/d53/classBAnd.html#a154e148604da6e09d4e7228915239fdb">BAnd</a>, <a class="el" href="../../d2/dc6/classBOr.html#a92aedfbfacc3c13ca147b107164e763e">BOr</a>, <a class="el" href="../../d4/d4b/classBXNor.html#abc873ddb16753b04bf424a076b8b8c9b">BXNor</a>, <a class="el" href="../../d1/d98/classBXor.html#a08106c20d48b23645271d3190a5a8a2a">BXor</a>, <a class="el" href="../../d5/d94/classDiv.html#a685fed5d0e7e659d689a1f3d5f28bfa6">Div</a>, <a class="el" href="../../de/da9/classLAnd.html#acd6a992b539ee5b50419d98ee4eb548a">LAnd</a>, <a class="el" href="../../d3/d43/classLOr.html#a33fcd0248f024cf0afd75cfe11d2fbf4">LOr</a>, <a class="el" href="../../db/d1e/classLShift.html#a642861a37e71f6d1fdc18b71b9df7578">LShift</a>, <a class="el" href="../../d2/d0b/classMod.html#a8eb812f7143dda9ae6383706fdc4eb07">Mod</a>, <a class="el" href="../../dc/d13/classMult.html#a3f14174bd9f82673aa75473f94f1e506">Mult</a>, <a class="el" href="../../da/df5/classRShift.html#a1d68c8f4e7658cae4fc01ce44200ab85">RShift</a>, <a class="el" href="../../dd/dbf/classSub.html#a796a2568d44b7cc6c01bf7e069a1c14a">Sub</a>, <a class="el" href="../../d8/d99/classBNeg.html#aecd8560a724bd053cdc70f6e6e64b9fc">BNeg</a>, <a class="el" href="../../d9/d36/classLNeg.html#a642d89b16fdc9ced8729945fc2c71ea2">LNeg</a>, <a class="el" href="../../d3/da6/classNeg.html#adbd8529d839a58fd33d59ffbae9a1b08">Neg</a>, <a class="el" href="../../d4/d8e/classAdd.html#a449a505a07b000edb0b3fb118727857f">Add</a>, <a class="el" href="../../d2/d0a/classBinary.html#aa80f13396ccee85a8a6515bb16e99f4a">Binary</a>, and <a class="el" href="../../d8/d3b/classUnary.html#adfba7f913f3a81c2a6399b757bc74850">Unary</a>.</p>
 
 </div>
 </div>

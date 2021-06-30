@@ -115,6 +115,10 @@ ObjBase* const lshift(const ObjBase* const left, const ObjBase* const right);
  */
 ObjBase* const rshift(const ObjBase* const left, const ObjBase* const right);
 
+ObjBase* const bneg(const ObjBase* const value);
 
+ObjBase* const lneg(const ObjBase* const value);
+
+ObjBase* const neg(const ObjBase* const value);
 
 #endif /* INCLUDE_COMMON_TYPES_TYPEOPUTILS_H_ */

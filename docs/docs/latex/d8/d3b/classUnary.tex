@@ -1,0 +1,73 @@
+\hypertarget{classUnary}{}\doxysection{Unary Class Reference}
+\label{classUnary}\index{Unary@{Unary}}
+Inheritance diagram for Unary\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{d8/d3b/classUnary}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classObjBase}{Obj\+Base}} $\ast$const \mbox{\hyperlink{classUnary_adfba7f913f3a81c2a6399b757bc74850}{evaluate}} () const =0
+\begin{DoxyCompactList}\small\item\em The evaluate function computes the result of a \mbox{\hyperlink{classBinary}{Binary}} \mbox{\hyperlink{classExpression}{Expression}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classUnary_a4fbd06e0070889c67cfcc0a425b44947}\label{classUnary_a4fbd06e0070889c67cfcc0a425b44947}} 
+virtual void \mbox{\hyperlink{classUnary_a4fbd06e0070889c67cfcc0a425b44947}{code\+\_\+gen}} () const =0
+\begin{DoxyCompactList}\small\item\em The code\+\_\+gen method is used to generate the LLVM IR of an expression object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classUnary_a577ef4e82c5e07afd7bcf6cd7819b096}\label{classUnary_a577ef4e82c5e07afd7bcf6cd7819b096}} 
+{\bfseries Unary} (const \mbox{\hyperlink{classPosition}{Position}} \&position, const \mbox{\hyperlink{classExpression}{Expression}} \&exp)
+\item 
+\mbox{\Hypertarget{classUnary_a91e7dd32a272060a61fc68ca415d5120}\label{classUnary_a91e7dd32a272060a61fc68ca415d5120}} 
+{\bfseries Unary} (const \mbox{\hyperlink{classUnary}{Unary}} \&binop)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classUnary_a9a7c9e8bb24f112307fb4c66b36de013}\label{classUnary_a9a7c9e8bb24f112307fb4c66b36de013}} 
+const \mbox{\hyperlink{classExpression}{Expression}} $\ast$ {\bfseries exp}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 14 of file Unary.\+h.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classUnary_adfba7f913f3a81c2a6399b757bc74850}\label{classUnary_adfba7f913f3a81c2a6399b757bc74850}} 
+\index{Unary@{Unary}!evaluate@{evaluate}}
+\index{evaluate@{evaluate}!Unary@{Unary}}
+\doxysubsubsection{\texorpdfstring{evaluate()}{evaluate()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classObjBase}{Obj\+Base}}$\ast$ const Unary\+::evaluate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+The evaluate function computes the result of a \mbox{\hyperlink{classBinary}{Binary}} \mbox{\hyperlink{classExpression}{Expression}}. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em num\+\_\+type} & the return type of the expression \\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classExpression_a99340df9bd2fdefb61d92723c5f44dd3}{Expression}}.
+
+
+
+Implemented in \mbox{\hyperlink{classBNeg_aecd8560a724bd053cdc70f6e6e64b9fc}{BNeg}}, \mbox{\hyperlink{classLNeg_a642d89b16fdc9ced8729945fc2c71ea2}{LNeg}}, and \mbox{\hyperlink{classNeg_adbd8529d839a58fd33d59ffbae9a1b08}{Neg}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/ast/expression/unary\+\_\+operation/Unary.\+h\item 
+src/ast/expression/unary\+\_\+operation/Unary.\+cpp\end{DoxyCompactItemize}

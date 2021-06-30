@@ -9,7 +9,6 @@
 #define MOD_H
 
 #include "ast/expression/binary_operation/Binary.h"
-#include "common/NumWrap.h"
 
 /**
  * The subtract class is used for modulo operations.

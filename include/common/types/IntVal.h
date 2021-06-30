@@ -56,8 +56,23 @@ public:
 	const int_type operator^(const char value) const;
 	const int_type operator^(const unsigned char value) const;
 
-	const int_type operator<<(const int_type value) const;
-	const int_type operator>>(const int_type value) const;
+	const int_type operator<<(const int value) const;
+	const int_type operator<<(const unsigned int value) const;
+	const int_type operator<<(const long value) const;
+	const int_type operator<<(const unsigned long value) const;
+	const int_type operator<<(const short value) const;
+	const int_type operator<<(const unsigned short value) const;
+	const int_type operator<<(const char value) const;
+	const int_type operator<<(const unsigned char value) const;
+
+	const int_type operator>>(const int value) const;
+	const int_type operator>>(const unsigned int value) const;
+	const int_type operator>>(const long value) const;
+	const int_type operator>>(const unsigned long value) const;
+	const int_type operator>>(const short value) const;
+	const int_type operator>>(const unsigned short value) const;
+	const int_type operator>>(const char value) const;
+	const int_type operator>>(const unsigned char value) const;
 
 	void operator|=(const int_type value);
 	void operator^=(const int_type value);

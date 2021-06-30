@@ -3468,11 +3468,11 @@ ObjBase* const bxor(const ObjBase *const left,
 }
 
 ObjBase* const land(const ObjBase *const left, const ObjBase *const right) {
-	return left->bool_value() && right->bool_value();
+	return new Boolean(left->bool_value() && right->bool_value());
 }
 
 ObjBase* const lor(const ObjBase *const left, const ObjBase *const right) {
-	return left->bool_value() || right->bool_value();
+	return new Boolean(left->bool_value() || right->bool_value());
 }
 
 ObjBase* const bxnor(const ObjBase *const left, const ObjBase *const right) {
@@ -4714,6 +4714,73 @@ ObjBase* const rshift(const ObjBase *const left,
 		} else {
 			return NULL;
 		}
+	} else {
+		return NULL;
+	}
+}
+
+ObjBase* const lneg(const ObjBase* const value){
+	return new Boolean(!value->bool_value());
+}
+
+ObjBase* const bneg(const ObjBase* const value){
+	if(instanceof<Integer>(value)){
+		Integer* val = (Integer* const)value;
+		return new Integer(~*val);
+	} else if(instanceof<UnsignedInteger>(value)){
+		UnsignedInteger* const val = (UnsignedInteger* const)value;
+		return new Integer(~*val);
+	} else if(instanceof<Long>(value)){
+		Long* const val = (Long* const)value;
+		return new Long(~*val);
+	} else if(instanceof<UnsignedLong>(value)){
+		UnsignedLong* const val = (UnsignedLong* const)value;
+		return new Long(~*val);
+	} else if(instanceof<Short>(value)){
+		Short* const val = (Short* const)value;
+		return new Short(~*val);
+	} else if(instanceof<UnsignedShort>(value)){
+		UnsignedShort* const val = (UnsignedShort* const)value;
+		return new Byte(~*val);
+	} else if(instanceof<Byte>(value)){
+		Byte* const val = (Byte* const)value;
+		return new Byte(~*val);
+	} else if(instanceof<UnsignedByte>(value)){
+		UnsignedByte* const val = (UnsignedByte* const)value;
+		return new UnsignedByte(~*val);
+	} else {
+		return NULL;
+	}
+}
+
+ObjBase* const neg(const ObjBase* const value){
+	if(instanceof<Real>(value)){
+		Real* const val = (Real* const)value;
+		return new Real(-*val);
+	} else if(instanceof<Integer>(value)){
+		Integer* val = (Integer* const)value;
+		return new Integer(-*val);
+	} else if(instanceof<UnsignedInteger>(value)){
+		UnsignedInteger* const val = (UnsignedInteger* const)value;
+		return new Integer(-*val);
+	} else if(instanceof<Long>(value)){
+		Long* const val = (Long* const)value;
+		return new Long(-*val);
+	} else if(instanceof<UnsignedLong>(value)){
+		UnsignedLong* const val = (UnsignedLong* const)value;
+		return new Long(-*val);
+	} else if(instanceof<Short>(value)){
+		Short* const val = (Short* const)value;
+		return new Short(-*val);
+	} else if(instanceof<UnsignedShort>(value)){
+		UnsignedShort* const val = (UnsignedShort* const)value;
+		return new Byte(-*val);
+	} else if(instanceof<Byte>(value)){
+		Byte* const val = (Byte* const)value;
+		return new Byte(-*val);
+	} else if(instanceof<UnsignedByte>(value)){
+		UnsignedByte* const val = (UnsignedByte* const)value;
+		return new UnsignedByte(-*val);
 	} else {
 		return NULL;
 	}
