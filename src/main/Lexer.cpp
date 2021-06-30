@@ -284,13 +284,13 @@ const std::optional<const Token> Lexer::parse_NumWrap() {
 	}
 
 	if (c != '\'' && c != '.') {
-		return Token::make_NumWrap_token(lexeme, pos); //return default decimal value 1 20 1000 etc ...
+		return Token::make_number_token(lexeme, pos); //return default decimal value 1 20 1000 etc ...
 	} else if (c == '.') {
 		const std::optional<const std::string> str = Lexer::parse_real();
 		if (!str)
 			return std::nullopt;
 		else
-			return Token::make_NumWrap_token(lexeme + *str, pos);
+			return Token::make_number_token(lexeme + *str, pos);
 	} else {
 
 		lexeme += c;
@@ -302,28 +302,28 @@ const std::optional<const Token> Lexer::parse_NumWrap() {
 			if (!str) {
 				return std::nullopt;
 			} else {
-				return {Token::make_NumWrap_token(lexeme + *str, pos)};
+				return {Token::make_number_token(lexeme + *str, pos)};
 			}
 		} else if (toupper(c) == 'B') {
 			const std::optional<std::string> str = parse_binary();
 			if (!str) {
 				return std::nullopt;
 			} else {
-				return {Token::make_NumWrap_token(lexeme + *str, pos)};
+				return {Token::make_number_token(lexeme + *str, pos)};
 			}
 		} else if (toupper(c) == 'D') {
 			std::optional<std::string> str = parse_decimal();
 			if (!str) {
 				return std::nullopt;
 			} else {
-				return {Token::make_NumWrap_token(lexeme + *str, pos)};
+				return {Token::make_number_token(lexeme + *str, pos)};
 			}
 		} else if (toupper(c) == 'O') {
 			std::optional<std::string> str = parse_octal();
 			if (!str) {
 				return std::nullopt;
 			} else {
-				return {Token::make_NumWrap_token(lexeme + *str, pos)};
+				return {Token::make_number_token(lexeme + *str, pos)};
 			}
 		} else {
 			Error error(
@@ -369,8 +369,7 @@ const std::optional<const std::string> Lexer::parse_hexidecimal() {
 		c = source->current();
 	}
 	if (!isspace(c)) {
-		Error error("Unexpected hexidecimnal literal found ",
-				source->get_current_position());
+		Error error("Unexpected hexidecimnal literal found ", source->get_current_position());
 		error_log.add(error);
 		parse_error();
 		return std::nullopt;
@@ -387,8 +386,7 @@ const std::optional<const std::string> Lexer::parse_decimal() {
 		c = source->current();
 	}
 	if (!isspace(c)) {
-		Error error("Unexpected hexidecimnal literal found ",
-				source->get_current_position());
+		Error error("Unexpected hexidecimnal literal found ", source->get_current_position());
 		error_log.add(error);
 		parse_error();
 		return std::nullopt;
@@ -409,8 +407,7 @@ const std::optional<const std::string> Lexer::parse_binary() {
 		c = source->current();
 	}
 	if (!isspace(c)) {
-		Error error("Unexpected binary literal found ",
-				source->get_current_position());
+		Error error("Unexpected binary literal found ", source->get_current_position());
 		error_log.add(error);
 		parse_error();
 		return std::nullopt;

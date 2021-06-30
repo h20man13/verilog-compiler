@@ -141,7 +141,7 @@ class Token{
  * @param position the position of the current Token
  * @return Token of the type NumWrap
  */
-  static const Token make_NumWrap_token(const std::string& lexeme, const Position& position);
+  static const Token make_number_token(const std::string& lexeme, const Position& position);
 
 
   

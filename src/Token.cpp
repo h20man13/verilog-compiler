@@ -146,7 +146,7 @@ Token::Token(const tok type, const std::string &lexeme, const Position &position
  * @param position the position of the current Token
  * @return Token of the type NumWrap
  */
-const Token Token::make_NumWrap_token(const std::string &lexeme, const Position &position) {
+const Token Token::make_number_token(const std::string &lexeme, const Position &position) {
 	return Token(NUMBER, lexeme, position);
 }
 

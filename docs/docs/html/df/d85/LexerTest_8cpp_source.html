@@ -82,26 +82,26 @@ $(function() {
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;list&gt;</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#define test_one_type(type)                         \</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">  do{                                   \</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">    int count;                          \</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">  do{                                               \</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">    int count;                                      \</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">    for(std::list&lt;const Token&gt;::iterator it = toks.begin(); it != toks.end(); it++){ \</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">      if(it-&gt;get_type() != type){                   \</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">    std::cout &lt;&lt; &quot;Error: At token &quot;</span> &lt;&lt; count &lt;&lt; &quot; expected &quot; &lt;&lt; #type &lt;&lt; &quot; but got &quot; &lt;&lt; it -&gt; to_string()  &lt;&lt; std::endl; \</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    return false;                           \</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;      }                                 \</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;      count++;                              \</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    }                                   \</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">      if(it-&gt;get_type() != type){                                                    \</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">          std::cout &lt;&lt; &quot;Error: At token &quot;</span> &lt;&lt; count &lt;&lt; &quot; expected &quot; &lt;&lt; #type &lt;&lt; &quot; but got &quot; &lt;&lt; it -&gt; to_string()  &lt;&lt; std::endl; \</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;          return false;                             \</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;      }                                             \</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;      count++;                                      \</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    }                                               \</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  } while(false)</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#define test_type_once(type)                        \</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">  do{                                   \</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">  do{                                               \</span></div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">    if(it-&gt;get_type() != type){                     \</span></div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">      std::cout &lt;&lt; &quot;Error: expected &quot;</span> &lt;&lt; #type &lt;&lt; &quot; but got &quot; &lt;&lt; it-&gt;to_string()  &lt;&lt; std::endl; \</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;return false;                               \</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    } else {                                \</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;      std::cout &lt;&lt; it-&gt;to_string() &lt;&lt; std::endl;            \</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    }                                   \</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    it++;                               \</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;      return false;                                 \</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    } else {                                        \</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;      std::cout &lt;&lt; it-&gt;to_string() &lt;&lt; std::endl;    \</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    }                                               \</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    it++;                                           \</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  } while(false)</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">static</span> <span class="keywordtype">bool</span> test_identifier(){</div>
@@ -139,7 +139,7 @@ $(function() {
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="keyword">static</span> <span class="keywordtype">bool</span> test_keywords(){</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  std::stringstream ss(<span class="stringliteral">&quot;initial \n allways \n begin \n end \n module \n endmodule \n task \n endtask \n function \n endfunction \n assign \n posege \n negege \n or \n and \n nand \n nor \n xor \n xnor \n not \n if \n else \n while \n wait \n forever \n repeat \n for \n integer \n real \n reg \n wire \n output \n input&quot;</span>);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  std::stringstream ss(<span class="stringliteral">&quot;initial \n always \n begin \n end \n module \n endmodule \n task \n endtask \n function \n endfunction \n assign \n posege \n negege \n or \n and \n nand \n nor \n xor \n xnor \n not \n if \n else \n while \n wait \n forever \n repeat \n for \n integer \n real \n reg \n wire \n output \n input&quot;</span>);</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  <a class="code" href="../../d6/d2e/classSource.html">Source</a> source(ss);</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  <a class="code" href="../../dc/df4/classDestination.html">Destination</a> dest(std::cout);</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  <a class="code" href="../../df/d17/classErrorLog.html">ErrorLog</a> error_log(dest);</div>
@@ -151,7 +151,7 @@ $(function() {
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  std::list&lt;const Token&gt;::iterator it = toks.begin();</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  </div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  test_type_once(INITIAL);</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  test_type_once(ALLWAYS);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  test_type_once(ALWAYS);</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  test_type_once(BEGIN);</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  test_type_once(END);</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  test_type_once(MODULE);</div>
@@ -199,7 +199,7 @@ $(function() {
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160; </div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;  std::list&lt;const Token&gt; toks = lex.gen_tokens();</div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; </div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;  test_one_type(tok::NumWrap);</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;  test_one_type(tok::NUMBER);</div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;  </div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;}</div>
@@ -216,7 +216,7 @@ $(function() {
 <div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160; </div>
 <div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;  std::list&lt;const Token&gt; toks = lex.gen_tokens();</div>
 <div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160; </div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;  test_one_type(tok::NumWrap);</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;  test_one_type(tok::NUMBER);</div>
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;  </div>
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;}</div>
@@ -233,7 +233,7 @@ $(function() {
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160; </div>
 <div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;  std::list&lt;const Token&gt; toks = lex.gen_tokens();</div>
 <div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160; </div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;  test_one_type(tok::NumWrap);</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;  test_one_type(tok::NUMBER);</div>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;  </div>
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;}</div>
@@ -250,7 +250,7 @@ $(function() {
 <div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160; </div>
 <div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;  std::list&lt;const Token&gt; toks = lex.gen_tokens();</div>
 <div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160; </div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;  test_one_type(tok::NumWrap);</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;  test_one_type(tok::NUMBER);</div>
 <div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;  </div>
 <div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;}</div>
