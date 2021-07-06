@@ -28,4 +28,8 @@ const Position Expression::get_position() const {
 	return position;
 }
 
+Expression::~Expression(){
+	//TODO -- do nothing
+}
+
 

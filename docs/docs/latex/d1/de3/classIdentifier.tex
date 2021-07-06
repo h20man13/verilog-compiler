@@ -1,5 +1,14 @@
 \hypertarget{classIdentifier}{}\doxysection{Identifier Class Reference}
 \label{classIdentifier}\index{Identifier@{Identifier}}
+
+
+The identifier class is used to for \mbox{\hyperlink{classIdentifier}{Identifier}} AST nodes.  
+
+
+
+
+{\ttfamily \#include $<$Identifier.\+h$>$}
+
 Inheritance diagram for Identifier\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -9,24 +18,91 @@ Inheritance diagram for Identifier\+:\begin{figure}[H]
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classIdentifier_aa1572727d16aec37891545d5a12aeb13}\label{classIdentifier_aa1572727d16aec37891545d5a12aeb13}} 
-{\bfseries Identifier} (\mbox{\hyperlink{classToken}{Token}} \&tok)
-\item 
+\mbox{\hyperlink{classIdentifier_a54597ce65a34db3a73351e3a28e3c5b9}{Identifier}} (const \mbox{\hyperlink{classToken}{Token}} \&tok)
+\begin{DoxyCompactList}\small\item\em The identifier constructor takes in a ident token and converts it to an identifier ast node. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classIdentifier_ad9159143b0ffe5bc27e3a661fc2dda51}{Identifier}} (const \mbox{\hyperlink{classIdentifier}{Identifier}} \&ident)
+\begin{DoxyCompactList}\small\item\em The identifier copy constructor is used to copy an identifier expression. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classIdentifier_a411e2edf64d6ce22fdaffa0370e36452}\label{classIdentifier_a411e2edf64d6ce22fdaffa0370e36452}} 
 void \mbox{\hyperlink{classIdentifier_a411e2edf64d6ce22fdaffa0370e36452}{code\+\_\+gen}} () const
-\begin{DoxyCompactList}\small\item\em The code\+\_\+gen method generates the LLVM IR of the \mbox{\hyperlink{classExpression}{Expression}}. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classIdentifier_a7b42ce1564100552f0fb2e69b2da7c53}\label{classIdentifier_a7b42ce1564100552f0fb2e69b2da7c53}} 
-\mbox{\hyperlink{classObjBase}{Obj\+Base}} $\ast$const {\bfseries evaluate} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The code gen method is used to generate the LLVM IR for \mbox{\hyperlink{classIdentifier}{Identifier}} objects. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classObjBase}{Obj\+Base}} $\ast$const \mbox{\hyperlink{classIdentifier_a0e1e9fee200f2f7a202b94a83e67c866}{evaluate}} ()
+\begin{DoxyCompactList}\small\item\em The evaluate method is used to interpret identifiers. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
+The identifier class is used to for \mbox{\hyperlink{classIdentifier}{Identifier}} AST nodes. 
+
+\begin{DoxyAuthor}{Author}
+Jacob Bauer 
+\end{DoxyAuthor}
 
 
-Definition at line 14 of file Identifier.\+h.
+Definition at line 18 of file Identifier.\+h.
 
 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classIdentifier_a54597ce65a34db3a73351e3a28e3c5b9}\label{classIdentifier_a54597ce65a34db3a73351e3a28e3c5b9}} 
+\index{Identifier@{Identifier}!Identifier@{Identifier}}
+\index{Identifier@{Identifier}!Identifier@{Identifier}}
+\doxysubsubsection{\texorpdfstring{Identifier()}{Identifier()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Identifier\+::\+Identifier (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classToken}{Token}} \&}]{tok }\end{DoxyParamCaption})}
+
+
+
+The identifier constructor takes in a ident token and converts it to an identifier ast node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tok} & the token that represents the identifier \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 4 of file Identifier.\+cpp.
+
+\mbox{\Hypertarget{classIdentifier_ad9159143b0ffe5bc27e3a661fc2dda51}\label{classIdentifier_ad9159143b0ffe5bc27e3a661fc2dda51}} 
+\index{Identifier@{Identifier}!Identifier@{Identifier}}
+\index{Identifier@{Identifier}!Identifier@{Identifier}}
+\doxysubsubsection{\texorpdfstring{Identifier()}{Identifier()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Identifier\+::\+Identifier (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classIdentifier}{Identifier}} \&}]{ident }\end{DoxyParamCaption})}
+
+
+
+The identifier copy constructor is used to copy an identifier expression. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ident} & a reference to the identifier to be coppied \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 6 of file Identifier.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classIdentifier_a0e1e9fee200f2f7a202b94a83e67c866}\label{classIdentifier_a0e1e9fee200f2f7a202b94a83e67c866}} 
+\index{Identifier@{Identifier}!evaluate@{evaluate}}
+\index{evaluate@{evaluate}!Identifier@{Identifier}}
+\doxysubsubsection{\texorpdfstring{evaluate()}{evaluate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classObjBase}{Obj\+Base}} $\ast$const Identifier\+::evaluate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The evaluate method is used to interpret identifiers. 
+
+\begin{DoxyReturn}{Returns}
+an object representing the result from the evaluation 
+\end{DoxyReturn}
+
+
+Definition at line 12 of file Identifier.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-include/ast/expression/Identifier.\+h\end{DoxyCompactItemize}
+include/ast/expression/Identifier.\+h\item 
+src/ast/expression/Identifier.\+cpp\end{DoxyCompactItemize}

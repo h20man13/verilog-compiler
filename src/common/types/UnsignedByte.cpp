@@ -9,7 +9,14 @@
 
 #include <string>
 
-UnsignedByte::UnsignedByte(const unsigned char value) : IntVal(value) {}
+UnsignedByte::UnsignedByte(const unsigned char value): IntVal(value) {}
+
+UnsignedByte::UnsignedByte(UnsignedByte const* &byte): IntVal(byte->get_value()){
+	if(byte != NULL){
+		delete byte;
+		byte = this;
+	}
+}
 
 UnsignedByte::operator unsigned char(){
 	return get_value();

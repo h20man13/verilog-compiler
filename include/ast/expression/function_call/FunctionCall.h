@@ -11,18 +11,25 @@
 #include "ast/expression/Expression.h"
 #include <list>
 
-class FunctionCall: Expression{
+/**
+ * The function call interface is used to define the implementation for all function call ast nodes
+ * @author Jacob Bauer
+ */
+class FunctionCall: public Expression{
 private:
-	Position position;
-	std::string function_name;
-	const std::list<Expression* const> param_list;
+	const std::string function_name; //the function name being called
+	std::list<Expression* const> param_list; //the list of parameters for the function
 public:
 
-	FunctionCall(Position& position, std::list<Expression*> &concat_list);
+	FunctionCall(const Position& position, const std::string& function_name, const std::list<Expression* const> &concat_list);
+
+	FunctionCall(const FunctionCall& func_call);
 
 	virtual void code_gen() const = 0;
 
 	virtual ObjBase* const evaluate() = 0;
+
+	~FunctionCall();
 
 };
 

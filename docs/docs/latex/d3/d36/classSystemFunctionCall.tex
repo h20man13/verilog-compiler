@@ -1,32 +1,134 @@
 \hypertarget{classSystemFunctionCall}{}\doxysection{System\+Function\+Call Class Reference}
 \label{classSystemFunctionCall}\index{SystemFunctionCall@{SystemFunctionCall}}
+
+
+The system function call is used to create a system function or a function that starts with \$.  
+
+
+
+
+{\ttfamily \#include $<$System\+Function\+Call.\+h$>$}
+
 Inheritance diagram for System\+Function\+Call\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2.000000cm]{d3/d36/classSystemFunctionCall}
+\includegraphics[height=3.000000cm]{d3/d36/classSystemFunctionCall}
 \end{center}
 \end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classSystemFunctionCall_a36f3411be8ee2b0c934f73b6344468b5}\label{classSystemFunctionCall_a36f3411be8ee2b0c934f73b6344468b5}} 
-{\bfseries System\+Function\+Call} (\mbox{\hyperlink{classPosition}{Position}} \&position, std\+::string \&function\+\_\+name, std\+::list$<$ \mbox{\hyperlink{classExpression}{Expression}} $\ast$ $>$ \&concat\+\_\+list)
-\item 
-\mbox{\Hypertarget{classSystemFunctionCall_adf80a40610a860f1fda8370bbe8f4836}\label{classSystemFunctionCall_adf80a40610a860f1fda8370bbe8f4836}} 
+\mbox{\hyperlink{classSystemFunctionCall_a0e3c5322dd75e0ab7a71e50c9c66f0f2}{System\+Function\+Call}} (const \mbox{\hyperlink{classPosition}{Position}} \&position, const std\+::string \&function\+\_\+name, const std\+::list$<$ \mbox{\hyperlink{classExpression}{Expression}} $\ast$const $>$ \&param\+\_\+list)
+\begin{DoxyCompactList}\small\item\em The system function call is used with a position, a function name, and a parameter list. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classSystemFunctionCall_a76e451d8021a979bd1f9664472578252}{System\+Function\+Call}} (const \mbox{\hyperlink{classSystemFunctionCall}{System\+Function\+Call}} \&func)
+\begin{DoxyCompactList}\small\item\em The copy constructor is used to copy a System function call. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classSystemFunctionCall_adf80a40610a860f1fda8370bbe8f4836}{code\+\_\+gen}} () const
-\begin{DoxyCompactList}\small\item\em The code\+\_\+gen method generates the LLVM IR of the \mbox{\hyperlink{classExpression}{Expression}}. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classSystemFunctionCall_ac1ddc46b30e037eb3e827b0da36d4b20}\label{classSystemFunctionCall_ac1ddc46b30e037eb3e827b0da36d4b20}} 
-\mbox{\hyperlink{classObjBase}{Obj\+Base}} $\ast$const {\bfseries evaluate} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The code generation function is used to generate llvm IR for a system function call. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classObjBase}{Obj\+Base}} $\ast$const \mbox{\hyperlink{classSystemFunctionCall_ac2d5b813990626953b90deda6f3c70f5}{evaluate}} ()
+\begin{DoxyCompactList}\small\item\em The evaluate method evaluates a system function and it returns a value of type object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
 
 
 \doxysubsection{Detailed Description}
+The system function call is used to create a system function or a function that starts with \$. 
+
+\begin{DoxyAuthor}{Author}
+Jacob Bauer 
+\end{DoxyAuthor}
 
 
-Definition at line 15 of file System\+Function\+Call.\+h.
+Definition at line 19 of file System\+Function\+Call.\+h.
 
 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classSystemFunctionCall_a0e3c5322dd75e0ab7a71e50c9c66f0f2}\label{classSystemFunctionCall_a0e3c5322dd75e0ab7a71e50c9c66f0f2}} 
+\index{SystemFunctionCall@{SystemFunctionCall}!SystemFunctionCall@{SystemFunctionCall}}
+\index{SystemFunctionCall@{SystemFunctionCall}!SystemFunctionCall@{SystemFunctionCall}}
+\doxysubsubsection{\texorpdfstring{SystemFunctionCall()}{SystemFunctionCall()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily System\+Function\+Call\+::\+System\+Function\+Call (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classPosition}{Position}} \&}]{position,  }\item[{const std\+::string \&}]{function\+\_\+name,  }\item[{const std\+::list$<$ \mbox{\hyperlink{classExpression}{Expression}} $\ast$const $>$ \&}]{param\+\_\+list }\end{DoxyParamCaption})}
+
+
+
+The system function call is used with a position, a function name, and a parameter list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & the position object keeps track of the position of the ast node \\
+\hline
+{\em function\+\_\+name} & the function name is the name of the function \\
+\hline
+{\em param\+\_\+list} & the param list is the paramater list of the system function \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 5 of file System\+Function\+Call.\+cpp.
+
+\mbox{\Hypertarget{classSystemFunctionCall_a76e451d8021a979bd1f9664472578252}\label{classSystemFunctionCall_a76e451d8021a979bd1f9664472578252}} 
+\index{SystemFunctionCall@{SystemFunctionCall}!SystemFunctionCall@{SystemFunctionCall}}
+\index{SystemFunctionCall@{SystemFunctionCall}!SystemFunctionCall@{SystemFunctionCall}}
+\doxysubsubsection{\texorpdfstring{SystemFunctionCall()}{SystemFunctionCall()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily System\+Function\+Call\+::\+System\+Function\+Call (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classSystemFunctionCall}{System\+Function\+Call}} \&}]{func }\end{DoxyParamCaption})}
+
+
+
+The copy constructor is used to copy a System function call. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em func} & the function that will be coppied \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 7 of file System\+Function\+Call.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classSystemFunctionCall_adf80a40610a860f1fda8370bbe8f4836}\label{classSystemFunctionCall_adf80a40610a860f1fda8370bbe8f4836}} 
+\index{SystemFunctionCall@{SystemFunctionCall}!code\_gen@{code\_gen}}
+\index{code\_gen@{code\_gen}!SystemFunctionCall@{SystemFunctionCall}}
+\doxysubsubsection{\texorpdfstring{code\_gen()}{code\_gen()}}
+{\footnotesize\ttfamily void System\+Function\+Call\+::code\+\_\+gen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+The code generation function is used to generate llvm IR for a system function call. 
+
+These will translate to functions that are already available in c++ 
+
+Implements \mbox{\hyperlink{classFunctionCall_abed03670805aff090d102300a82be97c}{Function\+Call}}.
+
+
+
+Definition at line 9 of file System\+Function\+Call.\+cpp.
+
+\mbox{\Hypertarget{classSystemFunctionCall_ac2d5b813990626953b90deda6f3c70f5}\label{classSystemFunctionCall_ac2d5b813990626953b90deda6f3c70f5}} 
+\index{SystemFunctionCall@{SystemFunctionCall}!evaluate@{evaluate}}
+\index{evaluate@{evaluate}!SystemFunctionCall@{SystemFunctionCall}}
+\doxysubsubsection{\texorpdfstring{evaluate()}{evaluate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classObjBase}{Obj\+Base}} $\ast$const System\+Function\+Call\+::evaluate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+The evaluate method evaluates a system function and it returns a value of type object. 
+
+\begin{DoxyReturn}{Returns}
+an object 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classFunctionCall}{Function\+Call}}.
+
+
+
+Definition at line 13 of file System\+Function\+Call.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-include/ast/expression/function\+\_\+call/System\+Function\+Call.\+h\end{DoxyCompactItemize}
+include/ast/expression/function\+\_\+call/System\+Function\+Call.\+h\item 
+src/ast/expression/function\+\_\+call/System\+Function\+Call.\+cpp\end{DoxyCompactItemize}

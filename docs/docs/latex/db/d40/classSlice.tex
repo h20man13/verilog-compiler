@@ -9,15 +9,15 @@ Inheritance diagram for Slice\+:\begin{figure}[H]
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classSlice_a6669abda5b8953dfe781ef773831b955}\label{classSlice_a6669abda5b8953dfe781ef773831b955}} 
-{\bfseries Slice} (const \mbox{\hyperlink{classPosition}{Position}} \&position, const std\+::string \&lexeme, const \mbox{\hyperlink{classExpression}{Expression}} $\ast$const begin, const \mbox{\hyperlink{classExpression}{Expression}} $\ast$const end)
-\item 
+\mbox{\hyperlink{classSlice_a0abc51448b69e4ad1f33d706efd60288}{Slice}} (const \mbox{\hyperlink{classPosition}{Position}} \&position, const std\+::string \&lexeme, \mbox{\hyperlink{classExpression}{Expression}} $\ast$const begin, \mbox{\hyperlink{classExpression}{Expression}} $\ast$const end)
+\begin{DoxyCompactList}\small\item\em The slice ast node constructor is used to construct a slice ast nodes in Verilog given three parameters. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classSlice_aef2bdf557084ad68a79adffebfd2396f}{Slice}} (const \mbox{\hyperlink{classSlice}{Slice}} \&slice)
+\begin{DoxyCompactList}\small\item\em The slice copy constructor creates a slice copy from another slice expression ast node. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classSlice_a1d7bb8316245260e76863a91a0b73306}\label{classSlice_a1d7bb8316245260e76863a91a0b73306}} 
 void \mbox{\hyperlink{classSlice_a1d7bb8316245260e76863a91a0b73306}{code\+\_\+gen}} () const
-\begin{DoxyCompactList}\small\item\em The code\+\_\+gen method generates the LLVM IR of the \mbox{\hyperlink{classExpression}{Expression}}. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classSlice_a0dc544df18775bb4a09f4aa3c034d22f}\label{classSlice_a0dc544df18775bb4a09f4aa3c034d22f}} 
-\mbox{\hyperlink{classObjBase}{Obj\+Base}} $\ast$const {\bfseries evaluate} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The code gen method is used to generate code that can be used for generating code. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classObjBase}{Obj\+Base}} $\ast$const \mbox{\hyperlink{classSlice_a0d39cdd042a098fc592538d899cd969e}{evaluate}} ()
+\begin{DoxyCompactList}\small\item\em The evaluate method can be used for interpreting expressions. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -27,6 +27,74 @@ Definition at line 14 of file Slice.\+h.
 
 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classSlice_a0abc51448b69e4ad1f33d706efd60288}\label{classSlice_a0abc51448b69e4ad1f33d706efd60288}} 
+\index{Slice@{Slice}!Slice@{Slice}}
+\index{Slice@{Slice}!Slice@{Slice}}
+\doxysubsubsection{\texorpdfstring{Slice()}{Slice()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Slice\+::\+Slice (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classPosition}{Position}} \&}]{position,  }\item[{const std\+::string \&}]{lexeme,  }\item[{\mbox{\hyperlink{classExpression}{Expression}} $\ast$const}]{begin,  }\item[{\mbox{\hyperlink{classExpression}{Expression}} $\ast$const}]{end }\end{DoxyParamCaption})}
+
+
+
+The slice ast node constructor is used to construct a slice ast nodes in Verilog given three parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & the position in the stream of the slice (should be equal to the position of the \mbox{\hyperlink{classIdentifier}{Identifier}}) \\
+\hline
+{\em lexeme} & the identifier of the lexeme to be passed in \\
+\hline
+{\em begin} & the beginning of the slice \\
+\hline
+{\em end} & the end of the slice \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 6 of file Slice.\+cpp.
+
+\mbox{\Hypertarget{classSlice_aef2bdf557084ad68a79adffebfd2396f}\label{classSlice_aef2bdf557084ad68a79adffebfd2396f}} 
+\index{Slice@{Slice}!Slice@{Slice}}
+\index{Slice@{Slice}!Slice@{Slice}}
+\doxysubsubsection{\texorpdfstring{Slice()}{Slice()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Slice\+::\+Slice (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classSlice}{Slice}} \&}]{slice }\end{DoxyParamCaption})}
+
+
+
+The slice copy constructor creates a slice copy from another slice expression ast node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em slice} & the slice that will be copied \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 8 of file Slice.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classSlice_a0d39cdd042a098fc592538d899cd969e}\label{classSlice_a0d39cdd042a098fc592538d899cd969e}} 
+\index{Slice@{Slice}!evaluate@{evaluate}}
+\index{evaluate@{evaluate}!Slice@{Slice}}
+\doxysubsubsection{\texorpdfstring{evaluate()}{evaluate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classObjBase}{Obj\+Base}} $\ast$const Slice\+::evaluate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The evaluate method can be used for interpreting expressions. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 14 of file Slice.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-include/ast/expression/Slice.\+h\end{DoxyCompactItemize}
+include/ast/expression/Slice.\+h\item 
+src/ast/expression/Slice.\+cpp\end{DoxyCompactItemize}

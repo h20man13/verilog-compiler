@@ -16,6 +16,8 @@ class UnsignedLong: public IntVal<unsigned long>{
 public:
 	 UnsignedLong(const unsigned long value);
 
+	 UnsignedLong(UnsignedLong const* &l_value);
+
 	 operator unsigned long();
 
 	 const std::string get_class() const;

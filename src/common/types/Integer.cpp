@@ -11,6 +11,13 @@
 
 Integer::Integer(const int value) : IntVal(value) {}
 
+Integer::Integer(Integer const* &integer): IntVal(integer->get_value()){
+	if(integer != NULL){
+		delete integer;
+		integer = this;
+	}
+}
+
 Integer::operator int(){
 	return get_value();
 }

@@ -14,7 +14,7 @@ class Neg: public Unary{
 public:
 	/**
 	 * The evaluate method is used to interpret the Logical and Expression
-	 * @return a boolean from the result of the && expression
+	 * @return an value of type object or a NULL value
 	 */
 	ObjBase* const evaluate() const;
 

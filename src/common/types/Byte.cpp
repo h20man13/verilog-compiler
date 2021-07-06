@@ -9,7 +9,14 @@
 
 #include <string>
 
-Byte::Byte(const char value) : IntVal(value) {}
+Byte::Byte(const char value): IntVal(value) {}
+
+Byte::Byte(Byte const* &byte): IntVal(byte->get_value()){
+	if(byte != NULL){
+		delete byte;
+		byte = this;
+	}
+}
 
 Byte::operator char(){
 	return get_value();

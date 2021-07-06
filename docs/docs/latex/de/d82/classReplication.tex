@@ -1,5 +1,14 @@
 \hypertarget{classReplication}{}\doxysection{Replication Class Reference}
 \label{classReplication}\index{Replication@{Replication}}
+
+
+The \mbox{\hyperlink{classReplication}{Replication}} class is for ast nodes representing verilogs replication operator.  
+
+
+
+
+{\ttfamily \#include $<$Replication.\+h$>$}
+
 Inheritance diagram for Replication\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -9,24 +18,98 @@ Inheritance diagram for Replication\+:\begin{figure}[H]
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classReplication_a46bb11b5c8a0a343dbed25a4a4ad22d9}\label{classReplication_a46bb11b5c8a0a343dbed25a4a4ad22d9}} 
-{\bfseries Replication} (const \mbox{\hyperlink{classPosition}{Position}} \&position, const \mbox{\hyperlink{classExpression}{Expression}} $\ast$const times, const \mbox{\hyperlink{classExpression}{Expression}} $\ast$const exp)
-\item 
-\mbox{\Hypertarget{classReplication_a9629f748f9605ddb633af9aa9da9fdcb}\label{classReplication_a9629f748f9605ddb633af9aa9da9fdcb}} 
-void {\bfseries code\+\_\+gen} ()
-\item 
-\mbox{\Hypertarget{classReplication_af79651e238fcae7aff2342cf10b8fee2}\label{classReplication_af79651e238fcae7aff2342cf10b8fee2}} 
-\mbox{\hyperlink{classObjBase}{Obj\+Base}} $\ast$const {\bfseries evaluate} ()
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{classReplication_a36db37a1c47ea7731930f4a1a733a34b}{Replication}} (const \mbox{\hyperlink{classPosition}{Position}} \&position, \mbox{\hyperlink{classExpression}{Expression}} $\ast$const times, \mbox{\hyperlink{classExpression}{Expression}} $\ast$const exp)
+\begin{DoxyCompactList}\small\item\em The \mbox{\hyperlink{classReplication}{Replication}} constructor constructs a replication ast node from 3 parameters\+: \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classReplication_a60def343d7415d89fd5ec84999343442}{Replication}} (const \mbox{\hyperlink{classReplication}{Replication}} \&expression)
+\begin{DoxyCompactList}\small\item\em The copy constructor takes in a replication object and it copies it. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classReplication_a1358b42e6bc5d04bf2d074ba24e46955}\label{classReplication_a1358b42e6bc5d04bf2d074ba24e46955}} 
+void \mbox{\hyperlink{classReplication_a1358b42e6bc5d04bf2d074ba24e46955}{code\+\_\+gen}} () const
+\begin{DoxyCompactList}\small\item\em The code\+\_\+gen method emits the llvm IR required to generate the. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classObjBase}{Obj\+Base}} $\ast$const \mbox{\hyperlink{classReplication_a32c871c7a56c6767fdee11c66dc942c4}{evaluate}} ()
+\begin{DoxyCompactList}\small\item\em The evaluate functions interprets the replication. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classReplication_a6e8c8de5d99ed18c133425209e54afee}\label{classReplication_a6e8c8de5d99ed18c133425209e54afee}} 
+\mbox{\hyperlink{classReplication_a6e8c8de5d99ed18c133425209e54afee}{$\sim$\+Replication}} ()
+\begin{DoxyCompactList}\small\item\em The destructor for replications deletes all of the expressions associated with the replication. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classReplication}{Replication}} class is for ast nodes representing verilogs replication operator. 
+
+This operator is used to replicate an arrangement of wires or registers \begin{DoxyAuthor}{Author}
+Jacob Bauer 
+\end{DoxyAuthor}
 
 
-Definition at line 13 of file Replication.\+h.
+Definition at line 17 of file Replication.\+h.
 
 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classReplication_a36db37a1c47ea7731930f4a1a733a34b}\label{classReplication_a36db37a1c47ea7731930f4a1a733a34b}} 
+\index{Replication@{Replication}!Replication@{Replication}}
+\index{Replication@{Replication}!Replication@{Replication}}
+\doxysubsubsection{\texorpdfstring{Replication()}{Replication()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Replication\+::\+Replication (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classPosition}{Position}} \&}]{position,  }\item[{\mbox{\hyperlink{classExpression}{Expression}} $\ast$const}]{times,  }\item[{\mbox{\hyperlink{classExpression}{Expression}} $\ast$const}]{exp }\end{DoxyParamCaption})}
+
+
+
+The \mbox{\hyperlink{classReplication}{Replication}} constructor constructs a replication ast node from 3 parameters\+: 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & the position of the object inside the stream \\
+\hline
+{\em times} & the amount of times the expression should be replicated \\
+\hline
+{\em exp} & the expression that should be replicated \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 3 of file Replication.\+cpp.
+
+\mbox{\Hypertarget{classReplication_a60def343d7415d89fd5ec84999343442}\label{classReplication_a60def343d7415d89fd5ec84999343442}} 
+\index{Replication@{Replication}!Replication@{Replication}}
+\index{Replication@{Replication}!Replication@{Replication}}
+\doxysubsubsection{\texorpdfstring{Replication()}{Replication()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Replication\+::\+Replication (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classReplication}{Replication}} \&}]{expression }\end{DoxyParamCaption})}
+
+
+
+The copy constructor takes in a replication object and it copies it. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em expression} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 5 of file Replication.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classReplication_a32c871c7a56c6767fdee11c66dc942c4}\label{classReplication_a32c871c7a56c6767fdee11c66dc942c4}} 
+\index{Replication@{Replication}!evaluate@{evaluate}}
+\index{evaluate@{evaluate}!Replication@{Replication}}
+\doxysubsubsection{\texorpdfstring{evaluate()}{evaluate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classObjBase}{Obj\+Base}} $\ast$const Replication\+::evaluate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The evaluate functions interprets the replication. 
+
+\begin{DoxyReturn}{Returns}
+the replication to be evaluated 
+\end{DoxyReturn}
+
+
+Definition at line 11 of file Replication.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-include/ast/expression/Replication.\+h\end{DoxyCompactItemize}
+include/ast/expression/Replication.\+h\item 
+src/ast/expression/Replication.\+cpp\end{DoxyCompactItemize}

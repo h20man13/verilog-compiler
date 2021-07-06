@@ -83,26 +83,29 @@ $(function() {
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;ast/expression/Expression.h&quot;</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;list&gt;</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="../../d5/ded/classFunctionCall.html">   14</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d5/ded/classFunctionCall.html">FunctionCall</a>: <a class="code" href="../../de/d94/classExpression.html">Expression</a>{</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="../../da/d8b/classPosition.html">Position</a> position;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    std::string function_name;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keyword">const</span> std::list&lt;Expression* const&gt; param_list;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="../../d5/ded/classFunctionCall.html">FunctionCall</a>(<a class="code" href="../../da/d8b/classPosition.html">Position</a>&amp; position, std::list&lt;Expression*&gt; &amp;concat_list);</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="../../d5/ded/classFunctionCall.html#abed03670805aff090d102300a82be97c">   23</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d5/ded/classFunctionCall.html#abed03670805aff090d102300a82be97c">code_gen</a>() <span class="keyword">const</span> = 0;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="../../dc/d22/classObjBase.html">ObjBase</a>* <span class="keyword">const</span> evaluate() = 0;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;};</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="../../d5/ded/classFunctionCall.html">   18</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d5/ded/classFunctionCall.html">FunctionCall</a>: <span class="keyword">public</span> <a class="code" href="../../de/d94/classExpression.html">Expression</a>{</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keyword">const</span> std::string function_name; <span class="comment">//the function name being called</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    std::list&lt;Expression* const&gt; param_list; <span class="comment">//the list of parameters for the function</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="../../d5/ded/classFunctionCall.html">FunctionCall</a>(<span class="keyword">const</span> <a class="code" href="../../da/d8b/classPosition.html">Position</a>&amp; position, <span class="keyword">const</span> std::string&amp; function_name, <span class="keyword">const</span> std::list&lt;Expression* const&gt; &amp;concat_list);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="../../d5/ded/classFunctionCall.html">FunctionCall</a>(<span class="keyword">const</span> <a class="code" href="../../d5/ded/classFunctionCall.html">FunctionCall</a>&amp; func_call);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="../../d5/ded/classFunctionCall.html#abed03670805aff090d102300a82be97c">   28</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d5/ded/classFunctionCall.html#abed03670805aff090d102300a82be97c">code_gen</a>() <span class="keyword">const</span> = 0;</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="../../dc/d22/classObjBase.html">ObjBase</a>* <span class="keyword">const</span> evaluate() = 0;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    ~<a class="code" href="../../d5/ded/classFunctionCall.html">~FunctionCall</a>();</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;};</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aclassExpression_html"><div class="ttname"><a href="../../de/d94/classExpression.html">Expression</a></div><div class="ttdoc">The Expression is an Interface that can be used to represent Expressions.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d6e/Expression_8h_source.html#l00020">Expression.h:20</a></div></div>
-<div class="ttc" id="aclassFunctionCall_html"><div class="ttname"><a href="../../d5/ded/classFunctionCall.html">FunctionCall</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d4/da5/FunctionCall_8h_source.html#l00014">FunctionCall.h:14</a></div></div>
+<div class="ttc" id="aclassFunctionCall_html"><div class="ttname"><a href="../../d5/ded/classFunctionCall.html">FunctionCall</a></div><div class="ttdoc">The function call interface is used to define the implementation for all function call ast nodes.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/da5/FunctionCall_8h_source.html#l00018">FunctionCall.h:18</a></div></div>
 <div class="ttc" id="aclassFunctionCall_html_abed03670805aff090d102300a82be97c"><div class="ttname"><a href="../../d5/ded/classFunctionCall.html#abed03670805aff090d102300a82be97c">FunctionCall::code_gen</a></div><div class="ttdeci">virtual void code_gen() const =0</div><div class="ttdoc">The code_gen method generates the LLVM IR of the Expression.</div></div>
 <div class="ttc" id="aclassObjBase_html"><div class="ttname"><a href="../../dc/d22/classObjBase.html">ObjBase</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dd2/ObjBase_8h_source.html#l00019">ObjBase.h:19</a></div></div>
 <div class="ttc" id="aclassPosition_html"><div class="ttname"><a href="../../da/d8b/classPosition.html">Position</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/dff/Position_8h_source.html#l00006">Position.h:6</a></div></div>

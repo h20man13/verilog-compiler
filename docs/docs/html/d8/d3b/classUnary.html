@@ -71,6 +71,11 @@ $(function() {
   <div class="headertitle"><div class="title">Unary Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>The unary super class defines unary operations.  
+ <a href="../../d8/d3b/classUnary.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="../../d6/de8/Unary_8h_source.html">Unary.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Unary:</div>
 <div class="dyncontent">
@@ -78,8 +83,8 @@ Inheritance diagram for Unary:</div>
   <img src="../../d8/d3b/classUnary.png" usemap="#Unary_map" alt=""/>
   <map id="Unary_map" name="Unary_map">
 <area href="../../de/d94/classExpression.html" title="The Expression is an Interface that can be used to represent Expressions." alt="Expression" shape="rect" coords="84,0,158,24"/>
-<area href="../../d8/d99/classBNeg.html" alt="BNeg" shape="rect" coords="0,112,74,136"/>
-<area href="../../d9/d36/classLNeg.html" alt="LNeg" shape="rect" coords="84,112,158,136"/>
+<area href="../../d8/d99/classBNeg.html" title="The BNeg performs a bitwise negation in verilog or a ~." alt="BNeg" shape="rect" coords="0,112,74,136"/>
+<area href="../../d9/d36/classLNeg.html" title="The LNeg performs a logical negation on the node or !" alt="LNeg" shape="rect" coords="84,112,158,136"/>
 <area href="../../d3/da6/classNeg.html" alt="Neg" shape="rect" coords="168,112,242,136"/>
   </map>
 </div></div>
@@ -97,6 +102,10 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="memitem:a2c4bb4178307ec28af5fad960b2b49ae inherit pub_methods_classExpression"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../da/d8b/classPosition.html">Position</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d94/classExpression.html#a2c4bb4178307ec28af5fad960b2b49ae">get_position</a> () const</td></tr>
 <tr class="memdesc:a2c4bb4178307ec28af5fad960b2b49ae inherit pub_methods_classExpression"><td class="mdescLeft">&#160;</td><td class="mdescRight">The get position method is a getter method that retrieves the position of the expression.  <a href="../../de/d94/classExpression.html#a2c4bb4178307ec28af5fad960b2b49ae">More...</a><br /></td></tr>
 <tr class="separator:a2c4bb4178307ec28af5fad960b2b49ae inherit pub_methods_classExpression"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3be82df7de50849bb2f6bc54273bce27 inherit pub_methods_classExpression"><td class="memItemLeft" align="right" valign="top"><a id="a3be82df7de50849bb2f6bc54273bce27"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d94/classExpression.html#a3be82df7de50849bb2f6bc54273bce27">~Expression</a> ()=0</td></tr>
+<tr class="memdesc:a3be82df7de50849bb2f6bc54273bce27 inherit pub_methods_classExpression"><td class="mdescLeft">&#160;</td><td class="mdescRight">The default destructor for expression objects. <br /></td></tr>
+<tr class="separator:a3be82df7de50849bb2f6bc54273bce27 inherit pub_methods_classExpression"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -121,8 +130,9 @@ const <a class="el" href="../../de/d94/classExpression.html">Expression</a> *&#1
 <tr class="separator:a9a7c9e8bb24f112307fb4c66b36de013"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="../../d6/de8/Unary_8h_source.html#l00014">14</a> of file <a class="el" href="../../d6/de8/Unary_8h_source.html">Unary.h</a>.</p>
+<div class="textblock"><p >The unary super class defines unary operations. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d6/de8/Unary_8h_source.html#l00017">17</a> of file <a class="el" href="../../d6/de8/Unary_8h_source.html">Unary.h</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="adfba7f913f3a81c2a6399b757bc74850"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adfba7f913f3a81c2a6399b757bc74850">&#9670;&nbsp;</a></span>evaluate()</h2>
@@ -154,7 +164,7 @@ const <a class="el" href="../../de/d94/classExpression.html">Expression</a> *&#1
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>a type </dd></dl>
 
 <p>Implements <a class="el" href="../../de/d94/classExpression.html#a99340df9bd2fdefb61d92723c5f44dd3">Expression</a>.</p>
 

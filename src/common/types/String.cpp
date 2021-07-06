@@ -10,6 +10,13 @@
 
 String::String(const std::string value) : Object(value) {}
 
+String::String(String const* &string): Object(string->get_value()){
+	if(string != NULL){
+		delete string;
+		string = this;
+	}
+}
+
 String::operator std::string(){
 	return get_value();
 }

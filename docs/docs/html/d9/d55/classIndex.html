@@ -69,6 +69,11 @@ $(function() {
   <div class="headertitle"><div class="title">Index Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>The index class is used so simulate something similar to indexing an array.  
+ <a href="../../d9/d55/classIndex.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="../../d4/d3d/Index_8h_source.html">Index.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Index:</div>
 <div class="dyncontent">
@@ -81,22 +86,128 @@ Inheritance diagram for Index:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a19a652a3a042c8ef128a6549ac81ca80"><td class="memItemLeft" align="right" valign="top"><a id="a19a652a3a042c8ef128a6549ac81ca80"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Index</b> (const <a class="el" href="../../da/d8b/classPosition.html">Position</a> &amp;position, const std::string &amp;lexeme, const <a class="el" href="../../de/d94/classExpression.html">Expression</a> *const index)</td></tr>
-<tr class="separator:a19a652a3a042c8ef128a6549ac81ca80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a091cd0d2b6a4b1523532325645f55e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d55/classIndex.html#a1a091cd0d2b6a4b1523532325645f55e">Index</a> (const <a class="el" href="../../da/d8b/classPosition.html">Position</a> &amp;position, const std::string &amp;lexeme, <a class="el" href="../../de/d94/classExpression.html">Expression</a> *const index)</td></tr>
+<tr class="memdesc:a1a091cd0d2b6a4b1523532325645f55e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The index constructor generates an index given three parameters.  <a href="../../d9/d55/classIndex.html#a1a091cd0d2b6a4b1523532325645f55e">More...</a><br /></td></tr>
+<tr class="separator:a1a091cd0d2b6a4b1523532325645f55e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a446a25e643985529e92e5082eeb260a6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d55/classIndex.html#a446a25e643985529e92e5082eeb260a6">Index</a> (const <a class="el" href="../../d9/d55/classIndex.html">Index</a> &amp;index)</td></tr>
+<tr class="memdesc:a446a25e643985529e92e5082eeb260a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="../../d9/d55/classIndex.html" title="The index class is used so simulate something similar to indexing an array.">Index</a> copy constructor copies an <a class="el" href="../../d9/d55/classIndex.html" title="The index class is used so simulate something similar to indexing an array.">Index</a> ast node into the owning object.  <a href="../../d9/d55/classIndex.html#a446a25e643985529e92e5082eeb260a6">More...</a><br /></td></tr>
+<tr class="separator:a446a25e643985529e92e5082eeb260a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5658129bd37b1ee17998bc447ca49e19"><td class="memItemLeft" align="right" valign="top"><a id="a5658129bd37b1ee17998bc447ca49e19"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d55/classIndex.html#a5658129bd37b1ee17998bc447ca49e19">code_gen</a> () const</td></tr>
-<tr class="memdesc:a5658129bd37b1ee17998bc447ca49e19"><td class="mdescLeft">&#160;</td><td class="mdescRight">The code_gen method generates the LLVM IR of the <a class="el" href="../../de/d94/classExpression.html" title="The Expression is an Interface that can be used to represent Expressions.">Expression</a>. <br /></td></tr>
+<tr class="memdesc:a5658129bd37b1ee17998bc447ca49e19"><td class="mdescLeft">&#160;</td><td class="mdescRight">The code generation function generates emits the LLVM IR function for indexing. <br /></td></tr>
 <tr class="separator:a5658129bd37b1ee17998bc447ca49e19"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af22340e44f6e6920467b2e5d08656fa3"><td class="memItemLeft" align="right" valign="top"><a id="af22340e44f6e6920467b2e5d08656fa3"></a>
-<a class="el" href="../../dc/d22/classObjBase.html">ObjBase</a> *const&#160;</td><td class="memItemRight" valign="bottom"><b>evaluate</b> ()</td></tr>
-<tr class="separator:af22340e44f6e6920467b2e5d08656fa3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebbe15bdbea9806477f7d42b4c32af0b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d22/classObjBase.html">ObjBase</a> *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d55/classIndex.html#aebbe15bdbea9806477f7d42b4c32af0b">evaluate</a> ()</td></tr>
+<tr class="memdesc:aebbe15bdbea9806477f7d42b4c32af0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The evaluate function evaluates the indexing expression.  <a href="../../d9/d55/classIndex.html#aebbe15bdbea9806477f7d42b4c32af0b">More...</a><br /></td></tr>
+<tr class="separator:aebbe15bdbea9806477f7d42b4c32af0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76b7ed4e9cb0b1540264567f84896032"><td class="memItemLeft" align="right" valign="top"><a id="a76b7ed4e9cb0b1540264567f84896032"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d55/classIndex.html#a76b7ed4e9cb0b1540264567f84896032">~Index</a> ()</td></tr>
+<tr class="memdesc:a76b7ed4e9cb0b1540264567f84896032"><td class="mdescLeft">&#160;</td><td class="mdescRight">The destructor is used to destroy index expressions. <br /></td></tr>
+<tr class="separator:a76b7ed4e9cb0b1540264567f84896032"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="../../d4/d3d/Index_8h_source.html#l00014">14</a> of file <a class="el" href="../../d4/d3d/Index_8h_source.html">Index.h</a>.</p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+<div class="textblock"><p >The index class is used so simulate something similar to indexing an array. </p>
+<p >it contains an identifier that is followed by an expression (Ex: i[4] &ndash; fetches the 4th element in data structure i) </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d4/d3d/Index_8h_source.html#l00018">18</a> of file <a class="el" href="../../d4/d3d/Index_8h_source.html">Index.h</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a1a091cd0d2b6a4b1523532325645f55e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a091cd0d2b6a4b1523532325645f55e">&#9670;&nbsp;</a></span>Index() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Index::Index </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../da/d8b/classPosition.html">Position</a> &amp;&#160;</td>
+          <td class="paramname"><em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>lexeme</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../de/d94/classExpression.html">Expression</a> *const&#160;</td>
+          <td class="paramname"><em>index</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The index constructor generates an index given three parameters. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td>the position in the stream of the object </td></tr>
+    <tr><td class="paramname">lexeme</td><td>the identifier that needs to be resolved in a symbol table </td></tr>
+    <tr><td class="paramname">index</td><td>the index of the element that comes in the form of an expression </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="../../dc/d5f/Index_8cpp_source.html#l00003">3</a> of file <a class="el" href="../../dc/d5f/Index_8cpp_source.html">Index.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a446a25e643985529e92e5082eeb260a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a446a25e643985529e92e5082eeb260a6">&#9670;&nbsp;</a></span>Index() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Index::Index </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d9/d55/classIndex.html">Index</a> &amp;&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The <a class="el" href="../../d9/d55/classIndex.html" title="The index class is used so simulate something similar to indexing an array.">Index</a> copy constructor copies an <a class="el" href="../../d9/d55/classIndex.html" title="The index class is used so simulate something similar to indexing an array.">Index</a> ast node into the owning object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>the index ast node to be coppied </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="aebbe15bdbea9806477f7d42b4c32af0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aebbe15bdbea9806477f7d42b4c32af0b">&#9670;&nbsp;</a></span>evaluate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/d22/classObjBase.html">ObjBase</a> *const Index::evaluate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The evaluate function evaluates the indexing expression. </p>
+<dl class="section return"><dt>Returns</dt><dd>an object value from the index </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../dc/d5f/Index_8cpp_source.html#l00009">9</a> of file <a class="el" href="../../dc/d5f/Index_8cpp_source.html">Index.cpp</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>include/ast/expression/<a class="el" href="../../d4/d3d/Index_8h_source.html">Index.h</a></li>
+<li>src/ast/expression/<a class="el" href="../../dc/d5f/Index_8cpp_source.html">Index.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

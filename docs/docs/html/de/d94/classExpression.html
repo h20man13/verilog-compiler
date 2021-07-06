@@ -84,18 +84,18 @@ Inheritance diagram for Expression:</div>
 <area href="../../d5/d41/classNumber.html" alt="Number&lt; int_type &gt;" shape="rect" coords="144,56,278,80"/>
 <area href="../../d5/d41/classNumber.html" alt="Number&lt; double &gt;" shape="rect" coords="144,112,278,136"/>
 <area href="../../d2/d0a/classBinary.html" alt="Binary" shape="rect" coords="144,168,278,192"/>
-<area href="../../de/dc8/classConcatenation.html" alt="Concatenation" shape="rect" coords="144,224,278,248"/>
-<area href="../../dd/df3/classConstantExpression.html" alt="ConstantExpression" shape="rect" coords="144,280,278,304"/>
-<area href="../../d6/ddb/classEmptyExpression.html" alt="EmptyExpression" shape="rect" coords="144,336,278,360"/>
-<area href="../../d5/ded/classFunctionCall.html" alt="FunctionCall" shape="rect" coords="144,392,278,416"/>
-<area href="../../d1/de3/classIdentifier.html" alt="Identifier" shape="rect" coords="144,448,278,472"/>
-<area href="../../d9/d55/classIndex.html" alt="Index" shape="rect" coords="144,504,278,528"/>
+<area href="../../de/dc8/classConcatenation.html" title="The concatenation ast node class is used to simulate concatenation nodes in verilog (Ex: {x,..." alt="Concatenation" shape="rect" coords="144,224,278,248"/>
+<area href="../../dd/df3/classConstantExpression.html" title="The constant expression Ast node class is used to check constant expressions." alt="ConstantExpression" shape="rect" coords="144,280,278,304"/>
+<area href="../../d6/ddb/classEmptyExpression.html" title="The empty expression class is just used as a place holder this makes it easier for visitor objects si..." alt="EmptyExpression" shape="rect" coords="144,336,278,360"/>
+<area href="../../d5/ded/classFunctionCall.html" title="The function call interface is used to define the implementation for all function call ast nodes." alt="FunctionCall" shape="rect" coords="144,392,278,416"/>
+<area href="../../d1/de3/classIdentifier.html" title="The identifier class is used to for Identifier AST nodes." alt="Identifier" shape="rect" coords="144,448,278,472"/>
+<area href="../../d9/d55/classIndex.html" title="The index class is used so simulate something similar to indexing an array." alt="Index" shape="rect" coords="144,504,278,528"/>
 <area href="../../d5/d41/classNumber.html" alt="Number&lt; num_type &gt;" shape="rect" coords="144,560,278,584"/>
-<area href="../../de/d82/classReplication.html" alt="Replication" shape="rect" coords="144,616,278,640"/>
+<area href="../../de/d82/classReplication.html" title="The Replication class is for ast nodes representing verilogs replication operator." alt="Replication" shape="rect" coords="144,616,278,640"/>
 <area href="../../db/d40/classSlice.html" alt="Slice" shape="rect" coords="144,672,278,696"/>
-<area href="../../d3/dee/classString.html" alt="String" shape="rect" coords="144,728,278,752"/>
+<area href="../../d3/dee/classString.html" title="The string ast node class is used to store string objects." alt="String" shape="rect" coords="144,728,278,752"/>
 <area href="../../d3/de2/classTernaryOperation.html" alt="TernaryOperation" shape="rect" coords="144,784,278,808"/>
-<area href="../../d8/d3b/classUnary.html" alt="Unary" shape="rect" coords="144,840,278,864"/>
+<area href="../../d8/d3b/classUnary.html" title="The unary super class defines unary operations." alt="Unary" shape="rect" coords="144,840,278,864"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -111,6 +111,10 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="memitem:a99340df9bd2fdefb61d92723c5f44dd3"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../dc/d22/classObjBase.html">ObjBase</a> *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d94/classExpression.html#a99340df9bd2fdefb61d92723c5f44dd3">evaluate</a> () const =0</td></tr>
 <tr class="memdesc:a99340df9bd2fdefb61d92723c5f44dd3"><td class="mdescLeft">&#160;</td><td class="mdescRight">The interpret method interprets the <a class="el" href="../../de/d94/classExpression.html" title="The Expression is an Interface that can be used to represent Expressions.">Expression</a> directly and returns the result.  <a href="../../de/d94/classExpression.html#a99340df9bd2fdefb61d92723c5f44dd3">More...</a><br /></td></tr>
 <tr class="separator:a99340df9bd2fdefb61d92723c5f44dd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3be82df7de50849bb2f6bc54273bce27"><td class="memItemLeft" align="right" valign="top"><a id="a3be82df7de50849bb2f6bc54273bce27"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d94/classExpression.html#a3be82df7de50849bb2f6bc54273bce27">~Expression</a> ()=0</td></tr>
+<tr class="memdesc:a3be82df7de50849bb2f6bc54273bce27"><td class="mdescLeft">&#160;</td><td class="mdescRight">The default destructor for expression objects. <br /></td></tr>
+<tr class="separator:a3be82df7de50849bb2f6bc54273bce27"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>

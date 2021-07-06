@@ -9,7 +9,14 @@
 
 #include <string>
 
-Real::Real(const double value) : Number(value){};
+Real::Real(const double value): Number(value){}
+
+Real::Real(Real const* &real): Number(real->get_value()){
+	if(real != NULL){
+		delete real;
+		real = this;
+	}
+}
 
 Real::operator double(){
 	return get_value();

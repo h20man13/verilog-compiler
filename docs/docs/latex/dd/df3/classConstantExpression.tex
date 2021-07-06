@@ -1,5 +1,14 @@
 \hypertarget{classConstantExpression}{}\doxysection{Constant\+Expression Class Reference}
 \label{classConstantExpression}\index{ConstantExpression@{ConstantExpression}}
+
+
+The constant expression Ast node class is used to check constant expressions.  
+
+
+
+
+{\ttfamily \#include $<$Constant\+Expression.\+h$>$}
+
 Inheritance diagram for Constant\+Expression\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -9,21 +18,96 @@ Inheritance diagram for Constant\+Expression\+:\begin{figure}[H]
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+\mbox{\hyperlink{classConstantExpression_a685a378e0217aabf2c6a63dab52d9097}{Constant\+Expression}} (const \mbox{\hyperlink{classPosition}{Position}} \&position, \mbox{\hyperlink{classExpression}{Expression}} $\ast$const expression)
+\begin{DoxyCompactList}\small\item\em The Constant \mbox{\hyperlink{classExpression}{Expression}} constructor creates a constant expression given two parameters. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classConstantExpression_ade9246df9e0c9bbc6c58b9e73e9d26a8}{Constant\+Expression}} (const \mbox{\hyperlink{classConstantExpression}{Constant\+Expression}} \&expression)
+\begin{DoxyCompactList}\small\item\em The constant expression copy constructor is use dto make a copy of the constant expression. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classConstantExpression_ab45679c7a7f071591bfe2ddba509be0d}\label{classConstantExpression_ab45679c7a7f071591bfe2ddba509be0d}} 
 void \mbox{\hyperlink{classConstantExpression_ab45679c7a7f071591bfe2ddba509be0d}{code\+\_\+gen}} () const
-\begin{DoxyCompactList}\small\item\em The code\+\_\+gen method generates the LLVM IR of the \mbox{\hyperlink{classExpression}{Expression}}. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classConstantExpression_abfbbe13613d21ba00c16178205ec8a13}\label{classConstantExpression_abfbbe13613d21ba00c16178205ec8a13}} 
-\mbox{\hyperlink{classObjBase}{Obj\+Base}} $\ast$const {\bfseries evaluate} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The code generation function is used to generate the corresponding llvm IR. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classObjBase}{Obj\+Base}} $\ast$const \mbox{\hyperlink{classConstantExpression_a823c5e2b928a7ec9bfd0c36de283bb9a}{evaluate}} ()
+\begin{DoxyCompactList}\small\item\em The evaluate function is used to evaluate expressions and determine their result. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classConstantExpression_aa44c88ef8368d6fb6ae07920281c0f86}\label{classConstantExpression_aa44c88ef8368d6fb6ae07920281c0f86}} 
+\mbox{\hyperlink{classConstantExpression_aa44c88ef8368d6fb6ae07920281c0f86}{$\sim$\+Constant\+Expression}} ()
+\begin{DoxyCompactList}\small\item\em The constant expression desturctor This just calls the expression objects destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
+The constant expression Ast node class is used to check constant expressions. 
+
+\begin{DoxyAuthor}{Author}
+Jacob Bauer 
+\end{DoxyAuthor}
 
 
-Definition at line 13 of file Constant\+Expression.\+h.
+Definition at line 17 of file Constant\+Expression.\+h.
 
 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classConstantExpression_a685a378e0217aabf2c6a63dab52d9097}\label{classConstantExpression_a685a378e0217aabf2c6a63dab52d9097}} 
+\index{ConstantExpression@{ConstantExpression}!ConstantExpression@{ConstantExpression}}
+\index{ConstantExpression@{ConstantExpression}!ConstantExpression@{ConstantExpression}}
+\doxysubsubsection{\texorpdfstring{ConstantExpression()}{ConstantExpression()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Constant\+Expression\+::\+Constant\+Expression (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classPosition}{Position}} \&}]{position,  }\item[{\mbox{\hyperlink{classExpression}{Expression}} $\ast$const}]{expression }\end{DoxyParamCaption})}
+
+
+
+The Constant \mbox{\hyperlink{classExpression}{Expression}} constructor creates a constant expression given two parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & the position of the ast node object \\
+\hline
+{\em expression} & the expression that was deemed to be const \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 3 of file Constant\+Expression.\+cpp.
+
+\mbox{\Hypertarget{classConstantExpression_ade9246df9e0c9bbc6c58b9e73e9d26a8}\label{classConstantExpression_ade9246df9e0c9bbc6c58b9e73e9d26a8}} 
+\index{ConstantExpression@{ConstantExpression}!ConstantExpression@{ConstantExpression}}
+\index{ConstantExpression@{ConstantExpression}!ConstantExpression@{ConstantExpression}}
+\doxysubsubsection{\texorpdfstring{ConstantExpression()}{ConstantExpression()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Constant\+Expression\+::\+Constant\+Expression (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classConstantExpression}{Constant\+Expression}} \&}]{expression }\end{DoxyParamCaption})}
+
+
+
+The constant expression copy constructor is use dto make a copy of the constant expression. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em expression} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 5 of file Constant\+Expression.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classConstantExpression_a823c5e2b928a7ec9bfd0c36de283bb9a}\label{classConstantExpression_a823c5e2b928a7ec9bfd0c36de283bb9a}} 
+\index{ConstantExpression@{ConstantExpression}!evaluate@{evaluate}}
+\index{evaluate@{evaluate}!ConstantExpression@{ConstantExpression}}
+\doxysubsubsection{\texorpdfstring{evaluate()}{evaluate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classObjBase}{Obj\+Base}} $\ast$const Constant\+Expression\+::evaluate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The evaluate function is used to evaluate expressions and determine their result. 
+
+\begin{DoxyReturn}{Returns}
+an object representing the result of the function 
+\end{DoxyReturn}
+
+
+Definition at line 11 of file Constant\+Expression.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-include/ast/expression/Constant\+Expression.\+h\end{DoxyCompactItemize}
+include/ast/expression/Constant\+Expression.\+h\item 
+src/ast/expression/Constant\+Expression.\+cpp\end{DoxyCompactItemize}

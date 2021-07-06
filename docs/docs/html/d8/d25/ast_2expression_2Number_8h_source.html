@@ -85,11 +85,11 @@ $(function() {
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
 <div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="../../d5/d41/classNumber.html">   14</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d5/d41/classNumber.html">Number</a>: <a class="code" href="../../de/d94/classExpression.html">Expression</a>{</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="../../d2/d6e/classToken.html">Token</a> tok;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    std::string lexeme;</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="../../d5/d41/classNumber.html">Number</a>(<a class="code" href="../../d2/d6e/classToken.html">Token</a>&amp; tok);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="../../d5/d41/classNumber.html">Number</a>(<span class="keyword">const</span> <a class="code" href="../../d2/d6e/classToken.html">Token</a>&amp; tok);</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="../../d5/d41/classNumber.html#a3c0d59270626e799b3b67da3efbf141d">   20</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d5/d41/classNumber.html#a3c0d59270626e799b3b67da3efbf141d">code_gen</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d5/d41/classNumber.html#a3c0d59270626e799b3b67da3efbf141d">code_gen</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="../../dc/d22/classObjBase.html">ObjBase</a>* <span class="keyword">const</span> evaluate();</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;};</div>
@@ -99,7 +99,7 @@ $(function() {
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* INCLUDE_AST_EXPRESSION_NUMBER_H_ */</span><span class="preprocessor"></span></div>
 <div class="ttc" id="aclassExpression_html"><div class="ttname"><a href="../../de/d94/classExpression.html">Expression</a></div><div class="ttdoc">The Expression is an Interface that can be used to represent Expressions.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d6e/Expression_8h_source.html#l00020">Expression.h:20</a></div></div>
 <div class="ttc" id="aclassNumber_html"><div class="ttname"><a href="../../d5/d41/classNumber.html">Number</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d25/ast_2expression_2Number_8h_source.html#l00014">Number.h:14</a></div></div>
-<div class="ttc" id="aclassNumber_html_a3c0d59270626e799b3b67da3efbf141d"><div class="ttname"><a href="../../d5/d41/classNumber.html#a3c0d59270626e799b3b67da3efbf141d">Number::code_gen</a></div><div class="ttdeci">void code_gen() const</div><div class="ttdoc">The code_gen method generates the LLVM IR of the Expression.</div></div>
+<div class="ttc" id="aclassNumber_html_a3c0d59270626e799b3b67da3efbf141d"><div class="ttname"><a href="../../d5/d41/classNumber.html#a3c0d59270626e799b3b67da3efbf141d">Number::code_gen</a></div><div class="ttdeci">void code_gen() const</div><div class="ttdoc">The code_gen method generates the LLVM IR of the Expression.</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dc0/ast_2expression_2Number_8cpp_source.html#l00010">Number.cpp:10</a></div></div>
 <div class="ttc" id="aclassObjBase_html"><div class="ttname"><a href="../../dc/d22/classObjBase.html">ObjBase</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dd2/ObjBase_8h_source.html#l00019">ObjBase.h:19</a></div></div>
 <div class="ttc" id="aclassToken_html"><div class="ttname"><a href="../../d2/d6e/classToken.html">Token</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d33/Token_8h_source.html#l00101">Token.h:101</a></div></div>
 </div><!-- fragment --></div><!-- contents -->

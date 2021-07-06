@@ -17,6 +17,8 @@ class Long: public IntVal<long>{
 public:
 	 Long(const long value);
 
+	 Long(Long const* &lvalue);
+
 	 operator long();
 
 	 const std::string get_class() const;

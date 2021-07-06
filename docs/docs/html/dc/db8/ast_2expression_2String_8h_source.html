@@ -83,24 +83,28 @@ $(function() {
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;ast/expression/Expression.h&quot;</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;Token.h&quot;</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="../../d3/dee/classString.html">   14</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d3/dee/classString.html">String</a>: <a class="code" href="../../de/d94/classExpression.html">Expression</a>{</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="../../d2/d6e/classToken.html">Token</a> tok;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="../../d3/dee/classString.html">String</a>(<a class="code" href="../../d2/d6e/classToken.html">Token</a>&amp; tok);</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="../../d3/dee/classString.html#ad2e2b5a4a148dc107c4eebbbab814fb7">   20</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d3/dee/classString.html#ad2e2b5a4a148dc107c4eebbbab814fb7">code_gen</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="../../dc/d22/classObjBase.html">ObjBase</a>* <span class="keyword">const</span> evaluate();</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;};</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* INCLUDE_AST_EXPRESSION_NUMBER_H_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="../../d3/dee/classString.html">   18</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d3/dee/classString.html">String</a>: <a class="code" href="../../de/d94/classExpression.html">Expression</a>{</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keyword">const</span> std::string lexeme; <span class="comment">//the lexeme of the required string to store</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="../../d3/dee/classString.html#a673c4fc8a3ebcad1c61d7fd619a610a4">String</a>(<span class="keyword">const</span> <a class="code" href="../../d2/d6e/classToken.html">Token</a>&amp; tok);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="code" href="../../d3/dee/classString.html#a673c4fc8a3ebcad1c61d7fd619a610a4">String</a>(<span class="keyword">const</span> <a class="code" href="../../d3/dee/classString.html">String</a>&amp; str);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d3/dee/classString.html#ad2e2b5a4a148dc107c4eebbbab814fb7">code_gen</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <a class="code" href="../../dc/d22/classObjBase.html">ObjBase</a>* <span class="keyword">const</span> <a class="code" href="../../d3/dee/classString.html#a3768deba69849ed81435fe58fd119480">evaluate</a>();</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;};</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* INCLUDE_AST_EXPRESSION_NUMBER_H_ */</span><span class="preprocessor"></span></div>
 <div class="ttc" id="aclassExpression_html"><div class="ttname"><a href="../../de/d94/classExpression.html">Expression</a></div><div class="ttdoc">The Expression is an Interface that can be used to represent Expressions.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d6e/Expression_8h_source.html#l00020">Expression.h:20</a></div></div>
 <div class="ttc" id="aclassObjBase_html"><div class="ttname"><a href="../../dc/d22/classObjBase.html">ObjBase</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dd2/ObjBase_8h_source.html#l00019">ObjBase.h:19</a></div></div>
-<div class="ttc" id="aclassString_html"><div class="ttname"><a href="../../d3/dee/classString.html">String</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dc/db8/ast_2expression_2String_8h_source.html#l00014">String.h:14</a></div></div>
-<div class="ttc" id="aclassString_html_ad2e2b5a4a148dc107c4eebbbab814fb7"><div class="ttname"><a href="../../d3/dee/classString.html#ad2e2b5a4a148dc107c4eebbbab814fb7">String::code_gen</a></div><div class="ttdeci">void code_gen() const</div><div class="ttdoc">The code_gen method generates the LLVM IR of the Expression.</div></div>
+<div class="ttc" id="aclassString_html"><div class="ttname"><a href="../../d3/dee/classString.html">String</a></div><div class="ttdoc">The string ast node class is used to store string objects.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/db8/ast_2expression_2String_8h_source.html#l00018">String.h:18</a></div></div>
+<div class="ttc" id="aclassString_html_a3768deba69849ed81435fe58fd119480"><div class="ttname"><a href="../../d3/dee/classString.html#a3768deba69849ed81435fe58fd119480">String::evaluate</a></div><div class="ttdeci">ObjBase *const evaluate()</div><div class="ttdoc">The evaluate method is used to interpret a string ast node object.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d90/ast_2expression_2String_8cpp_source.html#l00012">String.cpp:12</a></div></div>
+<div class="ttc" id="aclassString_html_a673c4fc8a3ebcad1c61d7fd619a610a4"><div class="ttname"><a href="../../d3/dee/classString.html#a673c4fc8a3ebcad1c61d7fd619a610a4">String::String</a></div><div class="ttdeci">String(const Token &amp;tok)</div><div class="ttdoc">The String class is used to store a string object.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d90/ast_2expression_2String_8cpp_source.html#l00004">String.cpp:4</a></div></div>
+<div class="ttc" id="aclassString_html_ad2e2b5a4a148dc107c4eebbbab814fb7"><div class="ttname"><a href="../../d3/dee/classString.html#ad2e2b5a4a148dc107c4eebbbab814fb7">String::code_gen</a></div><div class="ttdeci">void code_gen() const</div><div class="ttdoc">The code gen method is used to emit a string in llvm IR.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d90/ast_2expression_2String_8cpp_source.html#l00008">String.cpp:8</a></div></div>
 <div class="ttc" id="aclassToken_html"><div class="ttname"><a href="../../d2/d6e/classToken.html">Token</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d33/Token_8h_source.html#l00101">Token.h:101</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

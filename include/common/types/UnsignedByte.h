@@ -15,6 +15,8 @@ class UnsignedByte: public IntVal<unsigned char>{
 public:
 	UnsignedByte(const unsigned char value);
 
+	UnsignedByte(UnsignedByte const* &byte);
+
 	operator unsigned char();
 
 	const std::string get_class() const;

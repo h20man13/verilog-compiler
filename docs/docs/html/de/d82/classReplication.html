@@ -69,6 +69,11 @@ $(function() {
   <div class="headertitle"><div class="title">Replication Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>The <a class="el" href="../../de/d82/classReplication.html" title="The Replication class is for ast nodes representing verilogs replication operator.">Replication</a> class is for ast nodes representing verilogs replication operator.  
+ <a href="../../de/d82/classReplication.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="../../d3/d37/Replication_8h_source.html">Replication.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Replication:</div>
 <div class="dyncontent">
@@ -81,21 +86,130 @@ Inheritance diagram for Replication:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a46bb11b5c8a0a343dbed25a4a4ad22d9"><td class="memItemLeft" align="right" valign="top"><a id="a46bb11b5c8a0a343dbed25a4a4ad22d9"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Replication</b> (const <a class="el" href="../../da/d8b/classPosition.html">Position</a> &amp;position, const <a class="el" href="../../de/d94/classExpression.html">Expression</a> *const times, const <a class="el" href="../../de/d94/classExpression.html">Expression</a> *const exp)</td></tr>
-<tr class="separator:a46bb11b5c8a0a343dbed25a4a4ad22d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9629f748f9605ddb633af9aa9da9fdcb"><td class="memItemLeft" align="right" valign="top"><a id="a9629f748f9605ddb633af9aa9da9fdcb"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>code_gen</b> ()</td></tr>
-<tr class="separator:a9629f748f9605ddb633af9aa9da9fdcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af79651e238fcae7aff2342cf10b8fee2"><td class="memItemLeft" align="right" valign="top"><a id="af79651e238fcae7aff2342cf10b8fee2"></a>
-<a class="el" href="../../dc/d22/classObjBase.html">ObjBase</a> *const&#160;</td><td class="memItemRight" valign="bottom"><b>evaluate</b> ()</td></tr>
-<tr class="separator:af79651e238fcae7aff2342cf10b8fee2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36db37a1c47ea7731930f4a1a733a34b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d82/classReplication.html#a36db37a1c47ea7731930f4a1a733a34b">Replication</a> (const <a class="el" href="../../da/d8b/classPosition.html">Position</a> &amp;position, <a class="el" href="../../de/d94/classExpression.html">Expression</a> *const times, <a class="el" href="../../de/d94/classExpression.html">Expression</a> *const exp)</td></tr>
+<tr class="memdesc:a36db37a1c47ea7731930f4a1a733a34b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="../../de/d82/classReplication.html" title="The Replication class is for ast nodes representing verilogs replication operator.">Replication</a> constructor constructs a replication ast node from 3 parameters:  <a href="../../de/d82/classReplication.html#a36db37a1c47ea7731930f4a1a733a34b">More...</a><br /></td></tr>
+<tr class="separator:a36db37a1c47ea7731930f4a1a733a34b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60def343d7415d89fd5ec84999343442"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d82/classReplication.html#a60def343d7415d89fd5ec84999343442">Replication</a> (const <a class="el" href="../../de/d82/classReplication.html">Replication</a> &amp;expression)</td></tr>
+<tr class="memdesc:a60def343d7415d89fd5ec84999343442"><td class="mdescLeft">&#160;</td><td class="mdescRight">The copy constructor takes in a replication object and it copies it.  <a href="../../de/d82/classReplication.html#a60def343d7415d89fd5ec84999343442">More...</a><br /></td></tr>
+<tr class="separator:a60def343d7415d89fd5ec84999343442"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1358b42e6bc5d04bf2d074ba24e46955"><td class="memItemLeft" align="right" valign="top"><a id="a1358b42e6bc5d04bf2d074ba24e46955"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d82/classReplication.html#a1358b42e6bc5d04bf2d074ba24e46955">code_gen</a> () const</td></tr>
+<tr class="memdesc:a1358b42e6bc5d04bf2d074ba24e46955"><td class="mdescLeft">&#160;</td><td class="mdescRight">The code_gen method emits the llvm IR required to generate the. <br /></td></tr>
+<tr class="separator:a1358b42e6bc5d04bf2d074ba24e46955"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32c871c7a56c6767fdee11c66dc942c4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d22/classObjBase.html">ObjBase</a> *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d82/classReplication.html#a32c871c7a56c6767fdee11c66dc942c4">evaluate</a> ()</td></tr>
+<tr class="memdesc:a32c871c7a56c6767fdee11c66dc942c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">The evaluate functions interprets the replication.  <a href="../../de/d82/classReplication.html#a32c871c7a56c6767fdee11c66dc942c4">More...</a><br /></td></tr>
+<tr class="separator:a32c871c7a56c6767fdee11c66dc942c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e8c8de5d99ed18c133425209e54afee"><td class="memItemLeft" align="right" valign="top"><a id="a6e8c8de5d99ed18c133425209e54afee"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d82/classReplication.html#a6e8c8de5d99ed18c133425209e54afee">~Replication</a> ()</td></tr>
+<tr class="memdesc:a6e8c8de5d99ed18c133425209e54afee"><td class="mdescLeft">&#160;</td><td class="mdescRight">The destructor for replications deletes all of the expressions associated with the replication. <br /></td></tr>
+<tr class="separator:a6e8c8de5d99ed18c133425209e54afee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="../../d3/d37/Replication_8h_source.html#l00013">13</a> of file <a class="el" href="../../d3/d37/Replication_8h_source.html">Replication.h</a>.</p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+<div class="textblock"><p >The <a class="el" href="../../de/d82/classReplication.html" title="The Replication class is for ast nodes representing verilogs replication operator.">Replication</a> class is for ast nodes representing verilogs replication operator. </p>
+<p >This operator is used to replicate an arrangement of wires or registers </p><dl class="section author"><dt>Author</dt><dd>Jacob Bauer </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d3/d37/Replication_8h_source.html#l00017">17</a> of file <a class="el" href="../../d3/d37/Replication_8h_source.html">Replication.h</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a36db37a1c47ea7731930f4a1a733a34b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36db37a1c47ea7731930f4a1a733a34b">&#9670;&nbsp;</a></span>Replication() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Replication::Replication </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../da/d8b/classPosition.html">Position</a> &amp;&#160;</td>
+          <td class="paramname"><em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../de/d94/classExpression.html">Expression</a> *const&#160;</td>
+          <td class="paramname"><em>times</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../de/d94/classExpression.html">Expression</a> *const&#160;</td>
+          <td class="paramname"><em>exp</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The <a class="el" href="../../de/d82/classReplication.html" title="The Replication class is for ast nodes representing verilogs replication operator.">Replication</a> constructor constructs a replication ast node from 3 parameters: </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td>the position of the object inside the stream </td></tr>
+    <tr><td class="paramname">times</td><td>the amount of times the expression should be replicated </td></tr>
+    <tr><td class="paramname">exp</td><td>the expression that should be replicated </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="../../da/dbf/Replication_8cpp_source.html#l00003">3</a> of file <a class="el" href="../../da/dbf/Replication_8cpp_source.html">Replication.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a60def343d7415d89fd5ec84999343442"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60def343d7415d89fd5ec84999343442">&#9670;&nbsp;</a></span>Replication() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Replication::Replication </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../de/d82/classReplication.html">Replication</a> &amp;&#160;</td>
+          <td class="paramname"><em>expression</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The copy constructor takes in a replication object and it copies it. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">expression</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="../../da/dbf/Replication_8cpp_source.html#l00005">5</a> of file <a class="el" href="../../da/dbf/Replication_8cpp_source.html">Replication.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a32c871c7a56c6767fdee11c66dc942c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32c871c7a56c6767fdee11c66dc942c4">&#9670;&nbsp;</a></span>evaluate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/d22/classObjBase.html">ObjBase</a> *const Replication::evaluate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The evaluate functions interprets the replication. </p>
+<dl class="section return"><dt>Returns</dt><dd>the replication to be evaluated </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../da/dbf/Replication_8cpp_source.html#l00011">11</a> of file <a class="el" href="../../da/dbf/Replication_8cpp_source.html">Replication.cpp</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>include/ast/expression/<a class="el" href="../../d3/d37/Replication_8h_source.html">Replication.h</a></li>
+<li>src/ast/expression/<a class="el" href="../../da/dbf/Replication_8cpp_source.html">Replication.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

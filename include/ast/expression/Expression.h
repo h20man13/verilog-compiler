@@ -41,7 +41,10 @@ public:
 	 */
 	 virtual ObjBase* const evaluate() const = 0;
 
-	 virtual ~Expression();
+	 /**
+	  * The default destructor for expression objects
+	  */
+	 virtual ~Expression() = 0;
 };
 
 #endif /* SRC_AST_EXPRESSION_EXPRESSION_H_ */

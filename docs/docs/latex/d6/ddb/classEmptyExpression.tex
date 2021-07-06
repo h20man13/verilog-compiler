@@ -1,5 +1,14 @@
 \hypertarget{classEmptyExpression}{}\doxysection{Empty\+Expression Class Reference}
 \label{classEmptyExpression}\index{EmptyExpression@{EmptyExpression}}
+
+
+The empty expression class is just used as a place holder this makes it easier for visitor objects since they will not have to check for null.  
+
+
+
+
+{\ttfamily \#include $<$Empty\+Expression.\+h$>$}
+
 Inheritance diagram for Empty\+Expression\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -9,21 +18,30 @@ Inheritance diagram for Empty\+Expression\+:\begin{figure}[H]
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+\mbox{\Hypertarget{classEmptyExpression_aa5293cb42e521d2b75fa8af5e54b70f6}\label{classEmptyExpression_aa5293cb42e521d2b75fa8af5e54b70f6}} 
+{\bfseries Empty\+Expression} (const \mbox{\hyperlink{classPosition}{Position}} \&position)
+\item 
 \mbox{\Hypertarget{classEmptyExpression_ada4551a80d485d898d955a69f2bb3a65}\label{classEmptyExpression_ada4551a80d485d898d955a69f2bb3a65}} 
 void \mbox{\hyperlink{classEmptyExpression_ada4551a80d485d898d955a69f2bb3a65}{code\+\_\+gen}} () const
 \begin{DoxyCompactList}\small\item\em The code\+\_\+gen method generates the LLVM IR of the \mbox{\hyperlink{classExpression}{Expression}}. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classEmptyExpression_a67590689d05808cc3013b7f525573b74}\label{classEmptyExpression_a67590689d05808cc3013b7f525573b74}} 
+\mbox{\Hypertarget{classEmptyExpression_ad3794b7188c81617e9d0ae57fe0d51ab}\label{classEmptyExpression_ad3794b7188c81617e9d0ae57fe0d51ab}} 
 \mbox{\hyperlink{classObjBase}{Obj\+Base}} $\ast$const {\bfseries evaluate} ()
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
+The empty expression class is just used as a place holder this makes it easier for visitor objects since they will not have to check for null. 
+
+\begin{DoxyAuthor}{Author}
+Jacob Bauer 
+\end{DoxyAuthor}
 
 
-Definition at line 13 of file Empty\+Expression.\+h.
+Definition at line 17 of file Empty\+Expression.\+h.
 
 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-include/ast/expression/Empty\+Expression.\+h\end{DoxyCompactItemize}
+include/ast/expression/Empty\+Expression.\+h\item 
+src/ast/expression/Empty\+Expression.\+cpp\end{DoxyCompactItemize}

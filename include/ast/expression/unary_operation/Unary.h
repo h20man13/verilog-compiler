@@ -11,18 +11,21 @@
 #include "ast/expression/Expression.h"
 #include "common/types/Number.h"
 
+/**
+ * The unary super class defines unary operations
+ */
 class Unary: public Expression{
 protected:
-	const Expression* exp;
-	Unary(const Position& position, const Expression& exp);
-	Unary(const Unary& binop);
-	virtual ~Unary();
+	const Expression* exp; //the expression to be performed on
+	Unary(const Position& position, const Expression& exp); //default constructor
+	Unary(const Unary& binop); //copy constructor
+	virtual ~Unary(); //virtual destructor
 public:
 
 	/**
 	 * The evaluate function computes the result of a Binary Expression
 	 * @tparam num_type the return type of the expression
-	 * @return
+	 * @return a type
 	 */
 	 virtual ObjBase* const evaluate() const = 0;
 

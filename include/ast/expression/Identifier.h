@@ -11,13 +11,35 @@
 #include "ast/expression/Expression.h"
 #include "Token.h"
 
+/**
+ * The identifier class is used to for Identifier AST nodes
+ * @author Jacob Bauer
+ */
 class Identifier: Expression{
 private:
-	Token tok;
+	const std::string lexeme; //stores variable name
 public:
-	Identifier(Token& tok);
+	/**
+	 * The identifier constructor takes in a ident token and converts it to an identifier ast node
+	 * @param tok  the token that represents the identifier
+	 */
+	Identifier(const Token& tok);
 
+	/**
+	 * The identifier copy constructor is used to copy an identifier expression
+	 * @param ident  a reference to the identifier to be coppied
+	 */
+	Identifier(const Identifier& ident);
+
+	/**
+	 * The code gen method is used to generate the LLVM IR for Identifier objects
+	 */
 	void code_gen() const;
+
+	/**
+	 * The evaluate method is used to interpret identifiers
+	 * @return  an object representing the result from the evaluation
+	 */
 
 	ObjBase* const evaluate();
 };

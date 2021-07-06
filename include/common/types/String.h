@@ -16,6 +16,8 @@ class String : public Object<std::string>{
 public:
 	 String(const std::string value);
 
+	 String(String const* &string);
+
 	 operator std::string();
 
 	 const std::string get_class() const;

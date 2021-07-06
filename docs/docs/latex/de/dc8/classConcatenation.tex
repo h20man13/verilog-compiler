@@ -1,5 +1,14 @@
 \hypertarget{classConcatenation}{}\doxysection{Concatenation Class Reference}
 \label{classConcatenation}\index{Concatenation@{Concatenation}}
+
+
+The concatenation ast node class is used to simulate concatenation nodes in verilog (Ex\+: \{x, y, z\} where z y and z are wires or registers.  
+
+
+
+
+{\ttfamily \#include $<$Concatenation.\+h$>$}
+
 Inheritance diagram for Concatenation\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -9,24 +18,96 @@ Inheritance diagram for Concatenation\+:\begin{figure}[H]
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classConcatenation_a0bddf155610e428972c130992e59ef81}\label{classConcatenation_a0bddf155610e428972c130992e59ef81}} 
-{\bfseries Concatenation} (\mbox{\hyperlink{classPosition}{Position}} \&position, std\+::list$<$ \mbox{\hyperlink{classExpression}{Expression}} $\ast$ $>$ \&concat\+\_\+list)
-\item 
+\mbox{\hyperlink{classConcatenation_a54b531f6cf614a70d64f3da83ace5e7f}{Concatenation}} (const \mbox{\hyperlink{classPosition}{Position}} \&position, const std\+::list$<$ \mbox{\hyperlink{classExpression}{Expression}} $\ast$const $>$ concat\+\_\+list)
+\begin{DoxyCompactList}\small\item\em The default concatenation constructor it takes a position as well as a list of expressions that will be concatenated. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classConcatenation_a6bba03be4704619961e8d8978817de8e}{Concatenation}} (const \mbox{\hyperlink{classConcatenation}{Concatenation}} \&concatenation)
+\begin{DoxyCompactList}\small\item\em The concatenation copy constructor. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classConcatenation_a6753bedfe5b5953f96f167eea7b1708c}\label{classConcatenation_a6753bedfe5b5953f96f167eea7b1708c}} 
 void \mbox{\hyperlink{classConcatenation_a6753bedfe5b5953f96f167eea7b1708c}{code\+\_\+gen}} () const
-\begin{DoxyCompactList}\small\item\em The code\+\_\+gen method generates the LLVM IR of the \mbox{\hyperlink{classExpression}{Expression}}. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classConcatenation_aa90995068a4a88e437cc4e10088645f0}\label{classConcatenation_aa90995068a4a88e437cc4e10088645f0}} 
-\mbox{\hyperlink{classObjBase}{Obj\+Base}} $\ast$const {\bfseries evaluate} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The code generation function that will be used to emit the llvm IR. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classObjBase}{Obj\+Base}} $\ast$const \mbox{\hyperlink{classConcatenation_aea7fe9567438bb29bf156d930f96d6ea}{evaluate}} ()
+\begin{DoxyCompactList}\small\item\em The evaluate function will interpret the concatenation and will output the corresponding vector. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classConcatenation_abdfa03175c875a267d0e374162748345}\label{classConcatenation_abdfa03175c875a267d0e374162748345}} 
+\mbox{\hyperlink{classConcatenation_abdfa03175c875a267d0e374162748345}{$\sim$\+Concatenation}} ()
+\begin{DoxyCompactList}\small\item\em The destructor of the \mbox{\hyperlink{classConcatenation}{Concatenation}} class it will delete all of the corresponding expressions in the list. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
+The concatenation ast node class is used to simulate concatenation nodes in verilog (Ex\+: \{x, y, z\} where z y and z are wires or registers. 
+
+\begin{DoxyAuthor}{Author}
+Jacob Bauer 
+\end{DoxyAuthor}
 
 
-Definition at line 14 of file Concatenation.\+h.
+Definition at line 20 of file Concatenation.\+h.
 
 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classConcatenation_a54b531f6cf614a70d64f3da83ace5e7f}\label{classConcatenation_a54b531f6cf614a70d64f3da83ace5e7f}} 
+\index{Concatenation@{Concatenation}!Concatenation@{Concatenation}}
+\index{Concatenation@{Concatenation}!Concatenation@{Concatenation}}
+\doxysubsubsection{\texorpdfstring{Concatenation()}{Concatenation()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Concatenation\+::\+Concatenation (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classPosition}{Position}} \&}]{position,  }\item[{const std\+::list$<$ \mbox{\hyperlink{classExpression}{Expression}} $\ast$const $>$}]{concat\+\_\+list }\end{DoxyParamCaption})}
+
+
+
+The default concatenation constructor it takes a position as well as a list of expressions that will be concatenated. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & the position of the start of the concatenation expression or the \{ \\
+\hline
+{\em concat\+\_\+list} & the list of expressions that reside inside the concatenation \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 4 of file Concatenation.\+cpp.
+
+\mbox{\Hypertarget{classConcatenation_a6bba03be4704619961e8d8978817de8e}\label{classConcatenation_a6bba03be4704619961e8d8978817de8e}} 
+\index{Concatenation@{Concatenation}!Concatenation@{Concatenation}}
+\index{Concatenation@{Concatenation}!Concatenation@{Concatenation}}
+\doxysubsubsection{\texorpdfstring{Concatenation()}{Concatenation()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Concatenation\+::\+Concatenation (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classConcatenation}{Concatenation}} \&}]{concatenation }\end{DoxyParamCaption})}
+
+
+
+The concatenation copy constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em concatenation} & the concatenation to be copied \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 10 of file Concatenation.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classConcatenation_aea7fe9567438bb29bf156d930f96d6ea}\label{classConcatenation_aea7fe9567438bb29bf156d930f96d6ea}} 
+\index{Concatenation@{Concatenation}!evaluate@{evaluate}}
+\index{evaluate@{evaluate}!Concatenation@{Concatenation}}
+\doxysubsubsection{\texorpdfstring{evaluate()}{evaluate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classObjBase}{Obj\+Base}} $\ast$const Concatenation\+::evaluate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The evaluate function will interpret the concatenation and will output the corresponding vector. 
+
+\begin{DoxyReturn}{Returns}
+an \mbox{\hyperlink{classObject}{Object}} value 
+\end{DoxyReturn}
+
+
+Definition at line 28 of file Concatenation.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-include/ast/expression/Concatenation.\+h\end{DoxyCompactItemize}
+include/ast/expression/Concatenation.\+h\item 
+src/ast/expression/Concatenation.\+cpp\end{DoxyCompactItemize}

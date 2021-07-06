@@ -15,7 +15,14 @@
  * @param value the initial value it should be set to
  */
 
-UnsignedLong::UnsignedLong(const unsigned long value) : IntVal(value) {};
+UnsignedLong::UnsignedLong(const unsigned long value): IntVal(value) {}
+
+UnsignedLong::UnsignedLong(UnsignedLong const* &l_value): IntVal(l_value->get_value()){
+	if(l_value != NULL){
+		delete l_value;
+		l_value = this;
+	}
+}
 
 UnsignedLong::operator unsigned long(){
 	return get_value();

@@ -13,9 +13,9 @@
 
 class Number: Expression{
 private:
-	Token tok;
+	std::string lexeme;
 public:
-	Number(Token& tok);
+	Number(const Token& tok);
 
 	void code_gen() const;
 

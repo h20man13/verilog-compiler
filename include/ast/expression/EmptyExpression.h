@@ -10,9 +10,13 @@
 
 #include "ast/expression/Expression.h"
 
+/**
+ * The empty expression class is just used as a place holder this makes it easier for visitor objects since they will not have to check for null
+ * @author Jacob Bauer
+ */
 class EmptyExpression: Expression{
 public:
-	EmptyExpression();
+	EmptyExpression(const Position& position);
 
 	void code_gen() const;
 
@@ -21,4 +25,4 @@ public:
 
 
 
-#endif /* EMPTYEXPRESSION_H_ */
+#endif

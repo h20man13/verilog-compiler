@@ -12,12 +12,13 @@
 
 class TernaryOperation: Expression{
 private:
-	Position position;
 	Expression* const check;
 	Expression* const left;
 	Expression* const right;
 public:
-	TernaryOperation(const Position& position, const Expression* const check, const Expression* const left, const Expression* const right);
+	TernaryOperation(const Position& position, Expression* const check, Expression* const left, Expression* const right);
+
+	TernaryOperation(const TernaryOperation& expression);
 
 	void code_gen() const;
 

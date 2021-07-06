@@ -69,6 +69,11 @@ $(function() {
   <div class="headertitle"><div class="title">Concatenation Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>The concatenation ast node class is used to simulate concatenation nodes in verilog (Ex: {x, y, z} where z y and z are wires or registers.  
+ <a href="../../de/dc8/classConcatenation.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="../../d5/d20/Concatenation_8h_source.html">Concatenation.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Concatenation:</div>
 <div class="dyncontent">
@@ -81,22 +86,123 @@ Inheritance diagram for Concatenation:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a0bddf155610e428972c130992e59ef81"><td class="memItemLeft" align="right" valign="top"><a id="a0bddf155610e428972c130992e59ef81"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Concatenation</b> (<a class="el" href="../../da/d8b/classPosition.html">Position</a> &amp;position, std::list&lt; <a class="el" href="../../de/d94/classExpression.html">Expression</a> * &gt; &amp;concat_list)</td></tr>
-<tr class="separator:a0bddf155610e428972c130992e59ef81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54b531f6cf614a70d64f3da83ace5e7f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dc8/classConcatenation.html#a54b531f6cf614a70d64f3da83ace5e7f">Concatenation</a> (const <a class="el" href="../../da/d8b/classPosition.html">Position</a> &amp;position, const std::list&lt; <a class="el" href="../../de/d94/classExpression.html">Expression</a> *const &gt; concat_list)</td></tr>
+<tr class="memdesc:a54b531f6cf614a70d64f3da83ace5e7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The default concatenation constructor it takes a position as well as a list of expressions that will be concatenated.  <a href="../../de/dc8/classConcatenation.html#a54b531f6cf614a70d64f3da83ace5e7f">More...</a><br /></td></tr>
+<tr class="separator:a54b531f6cf614a70d64f3da83ace5e7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6bba03be4704619961e8d8978817de8e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dc8/classConcatenation.html#a6bba03be4704619961e8d8978817de8e">Concatenation</a> (const <a class="el" href="../../de/dc8/classConcatenation.html">Concatenation</a> &amp;concatenation)</td></tr>
+<tr class="memdesc:a6bba03be4704619961e8d8978817de8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The concatenation copy constructor.  <a href="../../de/dc8/classConcatenation.html#a6bba03be4704619961e8d8978817de8e">More...</a><br /></td></tr>
+<tr class="separator:a6bba03be4704619961e8d8978817de8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6753bedfe5b5953f96f167eea7b1708c"><td class="memItemLeft" align="right" valign="top"><a id="a6753bedfe5b5953f96f167eea7b1708c"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dc8/classConcatenation.html#a6753bedfe5b5953f96f167eea7b1708c">code_gen</a> () const</td></tr>
-<tr class="memdesc:a6753bedfe5b5953f96f167eea7b1708c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The code_gen method generates the LLVM IR of the <a class="el" href="../../de/d94/classExpression.html" title="The Expression is an Interface that can be used to represent Expressions.">Expression</a>. <br /></td></tr>
+<tr class="memdesc:a6753bedfe5b5953f96f167eea7b1708c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The code generation function that will be used to emit the llvm IR. <br /></td></tr>
 <tr class="separator:a6753bedfe5b5953f96f167eea7b1708c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa90995068a4a88e437cc4e10088645f0"><td class="memItemLeft" align="right" valign="top"><a id="aa90995068a4a88e437cc4e10088645f0"></a>
-<a class="el" href="../../dc/d22/classObjBase.html">ObjBase</a> *const&#160;</td><td class="memItemRight" valign="bottom"><b>evaluate</b> ()</td></tr>
-<tr class="separator:aa90995068a4a88e437cc4e10088645f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea7fe9567438bb29bf156d930f96d6ea"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d22/classObjBase.html">ObjBase</a> *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dc8/classConcatenation.html#aea7fe9567438bb29bf156d930f96d6ea">evaluate</a> ()</td></tr>
+<tr class="memdesc:aea7fe9567438bb29bf156d930f96d6ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">The evaluate function will interpret the concatenation and will output the corresponding vector.  <a href="../../de/dc8/classConcatenation.html#aea7fe9567438bb29bf156d930f96d6ea">More...</a><br /></td></tr>
+<tr class="separator:aea7fe9567438bb29bf156d930f96d6ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abdfa03175c875a267d0e374162748345"><td class="memItemLeft" align="right" valign="top"><a id="abdfa03175c875a267d0e374162748345"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dc8/classConcatenation.html#abdfa03175c875a267d0e374162748345">~Concatenation</a> ()</td></tr>
+<tr class="memdesc:abdfa03175c875a267d0e374162748345"><td class="mdescLeft">&#160;</td><td class="mdescRight">The destructor of the <a class="el" href="../../de/dc8/classConcatenation.html" title="The concatenation ast node class is used to simulate concatenation nodes in verilog (Ex: {x,...">Concatenation</a> class it will delete all of the corresponding expressions in the list. <br /></td></tr>
+<tr class="separator:abdfa03175c875a267d0e374162748345"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="../../d5/d20/Concatenation_8h_source.html#l00014">14</a> of file <a class="el" href="../../d5/d20/Concatenation_8h_source.html">Concatenation.h</a>.</p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+<div class="textblock"><p >The concatenation ast node class is used to simulate concatenation nodes in verilog (Ex: {x, y, z} where z y and z are wires or registers. </p>
+<dl class="section author"><dt>Author</dt><dd>Jacob Bauer </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d5/d20/Concatenation_8h_source.html#l00020">20</a> of file <a class="el" href="../../d5/d20/Concatenation_8h_source.html">Concatenation.h</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a54b531f6cf614a70d64f3da83ace5e7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54b531f6cf614a70d64f3da83ace5e7f">&#9670;&nbsp;</a></span>Concatenation() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Concatenation::Concatenation </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../da/d8b/classPosition.html">Position</a> &amp;&#160;</td>
+          <td class="paramname"><em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::list&lt; <a class="el" href="../../de/d94/classExpression.html">Expression</a> *const &gt;&#160;</td>
+          <td class="paramname"><em>concat_list</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The default concatenation constructor it takes a position as well as a list of expressions that will be concatenated. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td>the position of the start of the concatenation expression or the { </td></tr>
+    <tr><td class="paramname">concat_list</td><td>the list of expressions that reside inside the concatenation </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="../../df/d7b/Concatenation_8cpp_source.html#l00004">4</a> of file <a class="el" href="../../df/d7b/Concatenation_8cpp_source.html">Concatenation.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a6bba03be4704619961e8d8978817de8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6bba03be4704619961e8d8978817de8e">&#9670;&nbsp;</a></span>Concatenation() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Concatenation::Concatenation </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../de/dc8/classConcatenation.html">Concatenation</a> &amp;&#160;</td>
+          <td class="paramname"><em>concatenation</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The concatenation copy constructor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">concatenation</td><td>the concatenation to be copied </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="../../df/d7b/Concatenation_8cpp_source.html#l00010">10</a> of file <a class="el" href="../../df/d7b/Concatenation_8cpp_source.html">Concatenation.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="aea7fe9567438bb29bf156d930f96d6ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea7fe9567438bb29bf156d930f96d6ea">&#9670;&nbsp;</a></span>evaluate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/d22/classObjBase.html">ObjBase</a> *const Concatenation::evaluate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The evaluate function will interpret the concatenation and will output the corresponding vector. </p>
+<dl class="section return"><dt>Returns</dt><dd>an <a class="el" href="../../d8/d4b/classObject.html">Object</a> value </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../df/d7b/Concatenation_8cpp_source.html#l00028">28</a> of file <a class="el" href="../../df/d7b/Concatenation_8cpp_source.html">Concatenation.cpp</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>include/ast/expression/<a class="el" href="../../d5/d20/Concatenation_8h_source.html">Concatenation.h</a></li>
+<li>src/ast/expression/<a class="el" href="../../df/d7b/Concatenation_8cpp_source.html">Concatenation.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

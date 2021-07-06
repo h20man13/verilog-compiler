@@ -24,7 +24,10 @@ const \mbox{\hyperlink{classPosition}{Position}} \mbox{\hyperlink{classExpressio
 virtual void \mbox{\hyperlink{classExpression_ab5b603748ad09017b5077fa0e2e04c67}{code\+\_\+gen}} () const =0
 \begin{DoxyCompactList}\small\item\em The code\+\_\+gen method generates the LLVM IR of the \mbox{\hyperlink{classExpression}{Expression}}. \end{DoxyCompactList}\item 
 virtual \mbox{\hyperlink{classObjBase}{Obj\+Base}} $\ast$const \mbox{\hyperlink{classExpression_a99340df9bd2fdefb61d92723c5f44dd3}{evaluate}} () const =0
-\begin{DoxyCompactList}\small\item\em The interpret method interprets the \mbox{\hyperlink{classExpression}{Expression}} directly and returns the result. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The interpret method interprets the \mbox{\hyperlink{classExpression}{Expression}} directly and returns the result. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classExpression_a3be82df7de50849bb2f6bc54273bce27}\label{classExpression_a3be82df7de50849bb2f6bc54273bce27}} 
+virtual \mbox{\hyperlink{classExpression_a3be82df7de50849bb2f6bc54273bce27}{$\sim$\+Expression}} ()=0
+\begin{DoxyCompactList}\small\item\em The default destructor for expression objects. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 

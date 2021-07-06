@@ -10,10 +10,13 @@
 
 #include "ast/expression/unary_operation/Unary.h"
 
+/**
+ * The BNeg performs a bitwise negation in verilog or a ~
+ */
 class BNeg: public Unary{
 public:
 	/**
-	 * The evaluate method is used to interpret the Logical and Expression
+	 * The evaluate method is used to interpret the ~ Expression
 	 * @return a boolean from the result of the && expression
 	 */
 	ObjBase* const evaluate() const;

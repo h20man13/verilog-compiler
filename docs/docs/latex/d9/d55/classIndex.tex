@@ -1,5 +1,14 @@
 \hypertarget{classIndex}{}\doxysection{Index Class Reference}
 \label{classIndex}\index{Index@{Index}}
+
+
+The index class is used so simulate something similar to indexing an array.  
+
+
+
+
+{\ttfamily \#include $<$Index.\+h$>$}
+
 Inheritance diagram for Index\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -9,24 +18,91 @@ Inheritance diagram for Index\+:\begin{figure}[H]
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classIndex_a19a652a3a042c8ef128a6549ac81ca80}\label{classIndex_a19a652a3a042c8ef128a6549ac81ca80}} 
-{\bfseries Index} (const \mbox{\hyperlink{classPosition}{Position}} \&position, const std\+::string \&lexeme, const \mbox{\hyperlink{classExpression}{Expression}} $\ast$const index)
-\item 
+\mbox{\hyperlink{classIndex_a1a091cd0d2b6a4b1523532325645f55e}{Index}} (const \mbox{\hyperlink{classPosition}{Position}} \&position, const std\+::string \&lexeme, \mbox{\hyperlink{classExpression}{Expression}} $\ast$const index)
+\begin{DoxyCompactList}\small\item\em The index constructor generates an index given three parameters. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classIndex_a446a25e643985529e92e5082eeb260a6}{Index}} (const \mbox{\hyperlink{classIndex}{Index}} \&index)
+\begin{DoxyCompactList}\small\item\em The \mbox{\hyperlink{classIndex}{Index}} copy constructor copies an \mbox{\hyperlink{classIndex}{Index}} ast node into the owning object. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classIndex_a5658129bd37b1ee17998bc447ca49e19}\label{classIndex_a5658129bd37b1ee17998bc447ca49e19}} 
 void \mbox{\hyperlink{classIndex_a5658129bd37b1ee17998bc447ca49e19}{code\+\_\+gen}} () const
-\begin{DoxyCompactList}\small\item\em The code\+\_\+gen method generates the LLVM IR of the \mbox{\hyperlink{classExpression}{Expression}}. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classIndex_af22340e44f6e6920467b2e5d08656fa3}\label{classIndex_af22340e44f6e6920467b2e5d08656fa3}} 
-\mbox{\hyperlink{classObjBase}{Obj\+Base}} $\ast$const {\bfseries evaluate} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The code generation function generates emits the LLVM IR function for indexing. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classObjBase}{Obj\+Base}} $\ast$const \mbox{\hyperlink{classIndex_aebbe15bdbea9806477f7d42b4c32af0b}{evaluate}} ()
+\begin{DoxyCompactList}\small\item\em The evaluate function evaluates the indexing expression. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classIndex_a76b7ed4e9cb0b1540264567f84896032}\label{classIndex_a76b7ed4e9cb0b1540264567f84896032}} 
+\mbox{\hyperlink{classIndex_a76b7ed4e9cb0b1540264567f84896032}{$\sim$\+Index}} ()
+\begin{DoxyCompactList}\small\item\em The destructor is used to destroy index expressions. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
+The index class is used so simulate something similar to indexing an array. 
+
+it contains an identifier that is followed by an expression (Ex\+: i\mbox{[}4\mbox{]} -- fetches the 4th element in data structure i) 
+
+Definition at line 18 of file Index.\+h.
 
 
-Definition at line 14 of file Index.\+h.
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classIndex_a1a091cd0d2b6a4b1523532325645f55e}\label{classIndex_a1a091cd0d2b6a4b1523532325645f55e}} 
+\index{Index@{Index}!Index@{Index}}
+\index{Index@{Index}!Index@{Index}}
+\doxysubsubsection{\texorpdfstring{Index()}{Index()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Index\+::\+Index (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classPosition}{Position}} \&}]{position,  }\item[{const std\+::string \&}]{lexeme,  }\item[{\mbox{\hyperlink{classExpression}{Expression}} $\ast$const}]{index }\end{DoxyParamCaption})}
 
 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+The index constructor generates an index given three parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & the position in the stream of the object \\
+\hline
+{\em lexeme} & the identifier that needs to be resolved in a symbol table \\
+\hline
+{\em index} & the index of the element that comes in the form of an expression \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 3 of file Index.\+cpp.
+
+\mbox{\Hypertarget{classIndex_a446a25e643985529e92e5082eeb260a6}\label{classIndex_a446a25e643985529e92e5082eeb260a6}} 
+\index{Index@{Index}!Index@{Index}}
+\index{Index@{Index}!Index@{Index}}
+\doxysubsubsection{\texorpdfstring{Index()}{Index()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Index\+::\+Index (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classIndex}{Index}} \&}]{index }\end{DoxyParamCaption})}
+
+
+
+The \mbox{\hyperlink{classIndex}{Index}} copy constructor copies an \mbox{\hyperlink{classIndex}{Index}} ast node into the owning object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & the index ast node to be coppied \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classIndex_aebbe15bdbea9806477f7d42b4c32af0b}\label{classIndex_aebbe15bdbea9806477f7d42b4c32af0b}} 
+\index{Index@{Index}!evaluate@{evaluate}}
+\index{evaluate@{evaluate}!Index@{Index}}
+\doxysubsubsection{\texorpdfstring{evaluate()}{evaluate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classObjBase}{Obj\+Base}} $\ast$const Index\+::evaluate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The evaluate function evaluates the indexing expression. 
+
+\begin{DoxyReturn}{Returns}
+an object value from the index 
+\end{DoxyReturn}
+
+
+Definition at line 9 of file Index.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-include/ast/expression/Index.\+h\end{DoxyCompactItemize}
+include/ast/expression/Index.\+h\item 
+src/ast/expression/Index.\+cpp\end{DoxyCompactItemize}

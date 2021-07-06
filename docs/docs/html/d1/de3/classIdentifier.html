@@ -69,6 +69,11 @@ $(function() {
   <div class="headertitle"><div class="title">Identifier Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>The identifier class is used to for <a class="el" href="../../d1/de3/classIdentifier.html" title="The identifier class is used to for Identifier AST nodes.">Identifier</a> AST nodes.  
+ <a href="../../d1/de3/classIdentifier.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="../../d6/d5a/Identifier_8h_source.html">Identifier.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Identifier:</div>
 <div class="dyncontent">
@@ -81,22 +86,108 @@ Inheritance diagram for Identifier:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aa1572727d16aec37891545d5a12aeb13"><td class="memItemLeft" align="right" valign="top"><a id="aa1572727d16aec37891545d5a12aeb13"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Identifier</b> (<a class="el" href="../../d2/d6e/classToken.html">Token</a> &amp;tok)</td></tr>
-<tr class="separator:aa1572727d16aec37891545d5a12aeb13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54597ce65a34db3a73351e3a28e3c5b9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/de3/classIdentifier.html#a54597ce65a34db3a73351e3a28e3c5b9">Identifier</a> (const <a class="el" href="../../d2/d6e/classToken.html">Token</a> &amp;tok)</td></tr>
+<tr class="memdesc:a54597ce65a34db3a73351e3a28e3c5b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">The identifier constructor takes in a ident token and converts it to an identifier ast node.  <a href="../../d1/de3/classIdentifier.html#a54597ce65a34db3a73351e3a28e3c5b9">More...</a><br /></td></tr>
+<tr class="separator:a54597ce65a34db3a73351e3a28e3c5b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9159143b0ffe5bc27e3a661fc2dda51"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/de3/classIdentifier.html#ad9159143b0ffe5bc27e3a661fc2dda51">Identifier</a> (const <a class="el" href="../../d1/de3/classIdentifier.html">Identifier</a> &amp;ident)</td></tr>
+<tr class="memdesc:ad9159143b0ffe5bc27e3a661fc2dda51"><td class="mdescLeft">&#160;</td><td class="mdescRight">The identifier copy constructor is used to copy an identifier expression.  <a href="../../d1/de3/classIdentifier.html#ad9159143b0ffe5bc27e3a661fc2dda51">More...</a><br /></td></tr>
+<tr class="separator:ad9159143b0ffe5bc27e3a661fc2dda51"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a411e2edf64d6ce22fdaffa0370e36452"><td class="memItemLeft" align="right" valign="top"><a id="a411e2edf64d6ce22fdaffa0370e36452"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/de3/classIdentifier.html#a411e2edf64d6ce22fdaffa0370e36452">code_gen</a> () const</td></tr>
-<tr class="memdesc:a411e2edf64d6ce22fdaffa0370e36452"><td class="mdescLeft">&#160;</td><td class="mdescRight">The code_gen method generates the LLVM IR of the <a class="el" href="../../de/d94/classExpression.html" title="The Expression is an Interface that can be used to represent Expressions.">Expression</a>. <br /></td></tr>
+<tr class="memdesc:a411e2edf64d6ce22fdaffa0370e36452"><td class="mdescLeft">&#160;</td><td class="mdescRight">The code gen method is used to generate the LLVM IR for <a class="el" href="../../d1/de3/classIdentifier.html" title="The identifier class is used to for Identifier AST nodes.">Identifier</a> objects. <br /></td></tr>
 <tr class="separator:a411e2edf64d6ce22fdaffa0370e36452"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7b42ce1564100552f0fb2e69b2da7c53"><td class="memItemLeft" align="right" valign="top"><a id="a7b42ce1564100552f0fb2e69b2da7c53"></a>
-<a class="el" href="../../dc/d22/classObjBase.html">ObjBase</a> *const&#160;</td><td class="memItemRight" valign="bottom"><b>evaluate</b> ()</td></tr>
-<tr class="separator:a7b42ce1564100552f0fb2e69b2da7c53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e1e9fee200f2f7a202b94a83e67c866"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d22/classObjBase.html">ObjBase</a> *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/de3/classIdentifier.html#a0e1e9fee200f2f7a202b94a83e67c866">evaluate</a> ()</td></tr>
+<tr class="memdesc:a0e1e9fee200f2f7a202b94a83e67c866"><td class="mdescLeft">&#160;</td><td class="mdescRight">The evaluate method is used to interpret identifiers.  <a href="../../d1/de3/classIdentifier.html#a0e1e9fee200f2f7a202b94a83e67c866">More...</a><br /></td></tr>
+<tr class="separator:a0e1e9fee200f2f7a202b94a83e67c866"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="../../d6/d5a/Identifier_8h_source.html#l00014">14</a> of file <a class="el" href="../../d6/d5a/Identifier_8h_source.html">Identifier.h</a>.</p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+<div class="textblock"><p >The identifier class is used to for <a class="el" href="../../d1/de3/classIdentifier.html" title="The identifier class is used to for Identifier AST nodes.">Identifier</a> AST nodes. </p>
+<dl class="section author"><dt>Author</dt><dd>Jacob Bauer </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d6/d5a/Identifier_8h_source.html#l00018">18</a> of file <a class="el" href="../../d6/d5a/Identifier_8h_source.html">Identifier.h</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a54597ce65a34db3a73351e3a28e3c5b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54597ce65a34db3a73351e3a28e3c5b9">&#9670;&nbsp;</a></span>Identifier() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Identifier::Identifier </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d2/d6e/classToken.html">Token</a> &amp;&#160;</td>
+          <td class="paramname"><em>tok</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The identifier constructor takes in a ident token and converts it to an identifier ast node. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tok</td><td>the token that represents the identifier </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="../../da/df1/Identifier_8cpp_source.html#l00004">4</a> of file <a class="el" href="../../da/df1/Identifier_8cpp_source.html">Identifier.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ad9159143b0ffe5bc27e3a661fc2dda51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9159143b0ffe5bc27e3a661fc2dda51">&#9670;&nbsp;</a></span>Identifier() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Identifier::Identifier </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d1/de3/classIdentifier.html">Identifier</a> &amp;&#160;</td>
+          <td class="paramname"><em>ident</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The identifier copy constructor is used to copy an identifier expression. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ident</td><td>a reference to the identifier to be coppied </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="../../da/df1/Identifier_8cpp_source.html#l00006">6</a> of file <a class="el" href="../../da/df1/Identifier_8cpp_source.html">Identifier.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a0e1e9fee200f2f7a202b94a83e67c866"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e1e9fee200f2f7a202b94a83e67c866">&#9670;&nbsp;</a></span>evaluate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/d22/classObjBase.html">ObjBase</a> *const Identifier::evaluate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The evaluate method is used to interpret identifiers. </p>
+<dl class="section return"><dt>Returns</dt><dd>an object representing the result from the evaluation </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../da/df1/Identifier_8cpp_source.html#l00012">12</a> of file <a class="el" href="../../da/df1/Identifier_8cpp_source.html">Identifier.cpp</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>include/ast/expression/<a class="el" href="../../d6/d5a/Identifier_8h_source.html">Identifier.h</a></li>
+<li>src/ast/expression/<a class="el" href="../../da/df1/Identifier_8cpp_source.html">Identifier.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

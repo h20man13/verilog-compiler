@@ -10,6 +10,10 @@
 
 #include "ast/expression/unary_operation/Unary.h"
 
+/**
+ * The LNeg performs a logical negation on the node or !
+ * @author Jacob Bauer
+ */
 class LNeg: public Unary{
 public:
 	/**

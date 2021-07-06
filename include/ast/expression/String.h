@@ -11,14 +11,35 @@
 #include "ast/expression/Expression.h"
 #include "Token.h"
 
+/**
+ * The string ast node class is used to store string objects
+ * @author Jacob Bauer
+ */
 class String: Expression{
 private:
-	Token tok;
+	const std::string lexeme; //the lexeme of the required string to store
 public:
-	String(Token& tok);
+	/**
+	 * The String class is used to store a string object
+	 * @param tok  the token that represents the string
+	 */
+	String(const Token& tok);
 
+	/**
+	 * the copy constructor to create string ast nodes
+	 * @param str  the string object that will be coppied
+	 */
+	String(const String& str);
+
+	/**
+	 * The code gen method is used to emit a string in llvm IR
+	 */
 	void code_gen() const;
 
+	/**
+	 * The evaluate method is used to interpret a string ast node object
+	 * @return
+	 */
 	ObjBase* const evaluate();
 };
 

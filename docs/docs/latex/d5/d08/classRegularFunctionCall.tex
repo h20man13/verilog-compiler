@@ -1,32 +1,117 @@
 \hypertarget{classRegularFunctionCall}{}\doxysection{Regular\+Function\+Call Class Reference}
 \label{classRegularFunctionCall}\index{RegularFunctionCall@{RegularFunctionCall}}
+
+
+The regular function call ast node is for functions that are called without a \$ and are created by the programmer.  
+
+
+
+
+{\ttfamily \#include $<$Regular\+Function\+Call.\+h$>$}
+
 Inheritance diagram for Regular\+Function\+Call\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2.000000cm]{d5/d08/classRegularFunctionCall}
+\includegraphics[height=3.000000cm]{d5/d08/classRegularFunctionCall}
 \end{center}
 \end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classRegularFunctionCall_a17e903d91cd0c603ec781372c8b8746a}\label{classRegularFunctionCall_a17e903d91cd0c603ec781372c8b8746a}} 
-{\bfseries Regular\+Function\+Call} (\mbox{\hyperlink{classPosition}{Position}} \&position, std\+::string \&function\+\_\+name, std\+::list$<$ \mbox{\hyperlink{classExpression}{Expression}} $\ast$ $>$ \&concat\+\_\+list)
-\item 
+\mbox{\hyperlink{classRegularFunctionCall_a44a2100aacfa3d71a8288762e470a81e}{Regular\+Function\+Call}} (const \mbox{\hyperlink{classPosition}{Position}} \&position, const std\+::string \&function\+\_\+name, const std\+::list$<$ \mbox{\hyperlink{classExpression}{Expression}} $\ast$const $>$ \&param\+\_\+list)
+\begin{DoxyCompactList}\small\item\em Creates a function call object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRegularFunctionCall_ac09706388e0198fb20dee7c6d25a8c25}{Regular\+Function\+Call}} (const \mbox{\hyperlink{classRegularFunctionCall}{Regular\+Function\+Call}} \&call)
+\begin{DoxyCompactList}\small\item\em The copy constructor for function creates a copy of the regular function call. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classRegularFunctionCall_a91d7b2abd35b1c3641e1cd2f706c362a}\label{classRegularFunctionCall_a91d7b2abd35b1c3641e1cd2f706c362a}} 
 void \mbox{\hyperlink{classRegularFunctionCall_a91d7b2abd35b1c3641e1cd2f706c362a}{code\+\_\+gen}} () const
-\begin{DoxyCompactList}\small\item\em The code\+\_\+gen method generates the LLVM IR of the \mbox{\hyperlink{classExpression}{Expression}}. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classRegularFunctionCall_a6687555786c7749b4d8c065c637e0971}\label{classRegularFunctionCall_a6687555786c7749b4d8c065c637e0971}} 
-\mbox{\hyperlink{classObjBase}{Obj\+Base}} $\ast$const {\bfseries evaluate} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Used to emit the llvm ir that will be used for function calls. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classObjBase}{Obj\+Base}} $\ast$const \mbox{\hyperlink{classRegularFunctionCall_adf08be314d1203fb5e80cc7a58b86031}{evaluate}} ()
+\begin{DoxyCompactList}\small\item\em Used to interpret the function call. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
 
 
 \doxysubsection{Detailed Description}
+The regular function call ast node is for functions that are called without a \$ and are created by the programmer. 
+
+\begin{DoxyAuthor}{Author}
+Jacob Bauer 
+\end{DoxyAuthor}
 
 
-Definition at line 15 of file Regular\+Function\+Call.\+h.
+Definition at line 19 of file Regular\+Function\+Call.\+h.
 
 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classRegularFunctionCall_a44a2100aacfa3d71a8288762e470a81e}\label{classRegularFunctionCall_a44a2100aacfa3d71a8288762e470a81e}} 
+\index{RegularFunctionCall@{RegularFunctionCall}!RegularFunctionCall@{RegularFunctionCall}}
+\index{RegularFunctionCall@{RegularFunctionCall}!RegularFunctionCall@{RegularFunctionCall}}
+\doxysubsubsection{\texorpdfstring{RegularFunctionCall()}{RegularFunctionCall()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Regular\+Function\+Call\+::\+Regular\+Function\+Call (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classPosition}{Position}} \&}]{position,  }\item[{const std\+::string \&}]{function\+\_\+name,  }\item[{const std\+::list$<$ \mbox{\hyperlink{classExpression}{Expression}} $\ast$const $>$ \&}]{param\+\_\+list }\end{DoxyParamCaption})}
+
+
+
+Creates a function call object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & the position of the function \\
+\hline
+{\em function\+\_\+name} & the name of the function \\
+\hline
+{\em param\+\_\+list} & the list of parameters that are in the function call \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 4 of file Regular\+Function\+Call.\+cpp.
+
+\mbox{\Hypertarget{classRegularFunctionCall_ac09706388e0198fb20dee7c6d25a8c25}\label{classRegularFunctionCall_ac09706388e0198fb20dee7c6d25a8c25}} 
+\index{RegularFunctionCall@{RegularFunctionCall}!RegularFunctionCall@{RegularFunctionCall}}
+\index{RegularFunctionCall@{RegularFunctionCall}!RegularFunctionCall@{RegularFunctionCall}}
+\doxysubsubsection{\texorpdfstring{RegularFunctionCall()}{RegularFunctionCall()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Regular\+Function\+Call\+::\+Regular\+Function\+Call (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classRegularFunctionCall}{Regular\+Function\+Call}} \&}]{call }\end{DoxyParamCaption})}
+
+
+
+The copy constructor for function creates a copy of the regular function call. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em call} & the function call that will be coppied \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 6 of file Regular\+Function\+Call.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRegularFunctionCall_adf08be314d1203fb5e80cc7a58b86031}\label{classRegularFunctionCall_adf08be314d1203fb5e80cc7a58b86031}} 
+\index{RegularFunctionCall@{RegularFunctionCall}!evaluate@{evaluate}}
+\index{evaluate@{evaluate}!RegularFunctionCall@{RegularFunctionCall}}
+\doxysubsubsection{\texorpdfstring{evaluate()}{evaluate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classObjBase}{Obj\+Base}} $\ast$const Regular\+Function\+Call\+::evaluate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Used to interpret the function call. 
+
+\begin{DoxyReturn}{Returns}
+an object 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classFunctionCall}{Function\+Call}}.
+
+
+
+Definition at line 12 of file Regular\+Function\+Call.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-include/ast/expression/function\+\_\+call/Regular\+Function\+Call.\+h\end{DoxyCompactItemize}
+include/ast/expression/function\+\_\+call/Regular\+Function\+Call.\+h\item 
+src/ast/expression/function\+\_\+call/Regular\+Function\+Call.\+cpp\end{DoxyCompactItemize}

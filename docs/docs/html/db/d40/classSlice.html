@@ -81,22 +81,131 @@ Inheritance diagram for Slice:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a6669abda5b8953dfe781ef773831b955"><td class="memItemLeft" align="right" valign="top"><a id="a6669abda5b8953dfe781ef773831b955"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Slice</b> (const <a class="el" href="../../da/d8b/classPosition.html">Position</a> &amp;position, const std::string &amp;lexeme, const <a class="el" href="../../de/d94/classExpression.html">Expression</a> *const begin, const <a class="el" href="../../de/d94/classExpression.html">Expression</a> *const end)</td></tr>
-<tr class="separator:a6669abda5b8953dfe781ef773831b955"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0abc51448b69e4ad1f33d706efd60288"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d40/classSlice.html#a0abc51448b69e4ad1f33d706efd60288">Slice</a> (const <a class="el" href="../../da/d8b/classPosition.html">Position</a> &amp;position, const std::string &amp;lexeme, <a class="el" href="../../de/d94/classExpression.html">Expression</a> *const begin, <a class="el" href="../../de/d94/classExpression.html">Expression</a> *const end)</td></tr>
+<tr class="memdesc:a0abc51448b69e4ad1f33d706efd60288"><td class="mdescLeft">&#160;</td><td class="mdescRight">The slice ast node constructor is used to construct a slice ast nodes in Verilog given three parameters.  <a href="../../db/d40/classSlice.html#a0abc51448b69e4ad1f33d706efd60288">More...</a><br /></td></tr>
+<tr class="separator:a0abc51448b69e4ad1f33d706efd60288"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef2bdf557084ad68a79adffebfd2396f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d40/classSlice.html#aef2bdf557084ad68a79adffebfd2396f">Slice</a> (const <a class="el" href="../../db/d40/classSlice.html">Slice</a> &amp;slice)</td></tr>
+<tr class="memdesc:aef2bdf557084ad68a79adffebfd2396f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The slice copy constructor creates a slice copy from another slice expression ast node.  <a href="../../db/d40/classSlice.html#aef2bdf557084ad68a79adffebfd2396f">More...</a><br /></td></tr>
+<tr class="separator:aef2bdf557084ad68a79adffebfd2396f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1d7bb8316245260e76863a91a0b73306"><td class="memItemLeft" align="right" valign="top"><a id="a1d7bb8316245260e76863a91a0b73306"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d40/classSlice.html#a1d7bb8316245260e76863a91a0b73306">code_gen</a> () const</td></tr>
-<tr class="memdesc:a1d7bb8316245260e76863a91a0b73306"><td class="mdescLeft">&#160;</td><td class="mdescRight">The code_gen method generates the LLVM IR of the <a class="el" href="../../de/d94/classExpression.html" title="The Expression is an Interface that can be used to represent Expressions.">Expression</a>. <br /></td></tr>
+<tr class="memdesc:a1d7bb8316245260e76863a91a0b73306"><td class="mdescLeft">&#160;</td><td class="mdescRight">The code gen method is used to generate code that can be used for generating code. <br /></td></tr>
 <tr class="separator:a1d7bb8316245260e76863a91a0b73306"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0dc544df18775bb4a09f4aa3c034d22f"><td class="memItemLeft" align="right" valign="top"><a id="a0dc544df18775bb4a09f4aa3c034d22f"></a>
-<a class="el" href="../../dc/d22/classObjBase.html">ObjBase</a> *const&#160;</td><td class="memItemRight" valign="bottom"><b>evaluate</b> ()</td></tr>
-<tr class="separator:a0dc544df18775bb4a09f4aa3c034d22f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d39cdd042a098fc592538d899cd969e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d22/classObjBase.html">ObjBase</a> *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d40/classSlice.html#a0d39cdd042a098fc592538d899cd969e">evaluate</a> ()</td></tr>
+<tr class="memdesc:a0d39cdd042a098fc592538d899cd969e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The evaluate method can be used for interpreting expressions.  <a href="../../db/d40/classSlice.html#a0d39cdd042a098fc592538d899cd969e">More...</a><br /></td></tr>
+<tr class="separator:a0d39cdd042a098fc592538d899cd969e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
 <p class="definition">Definition at line <a class="el" href="../../de/d0f/Slice_8h_source.html#l00014">14</a> of file <a class="el" href="../../de/d0f/Slice_8h_source.html">Slice.h</a>.</p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a0abc51448b69e4ad1f33d706efd60288"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0abc51448b69e4ad1f33d706efd60288">&#9670;&nbsp;</a></span>Slice() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Slice::Slice </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../da/d8b/classPosition.html">Position</a> &amp;&#160;</td>
+          <td class="paramname"><em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>lexeme</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../de/d94/classExpression.html">Expression</a> *const&#160;</td>
+          <td class="paramname"><em>begin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../de/d94/classExpression.html">Expression</a> *const&#160;</td>
+          <td class="paramname"><em>end</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The slice ast node constructor is used to construct a slice ast nodes in Verilog given three parameters. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td>the position in the stream of the slice (should be equal to the position of the <a class="el" href="../../d1/de3/classIdentifier.html" title="The identifier class is used to for Identifier AST nodes.">Identifier</a>) </td></tr>
+    <tr><td class="paramname">lexeme</td><td>the identifier of the lexeme to be passed in </td></tr>
+    <tr><td class="paramname">begin</td><td>the beginning of the slice </td></tr>
+    <tr><td class="paramname">end</td><td>the end of the slice </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d8/d76/Slice_8cpp_source.html#l00006">6</a> of file <a class="el" href="../../d8/d76/Slice_8cpp_source.html">Slice.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aef2bdf557084ad68a79adffebfd2396f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef2bdf557084ad68a79adffebfd2396f">&#9670;&nbsp;</a></span>Slice() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Slice::Slice </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../db/d40/classSlice.html">Slice</a> &amp;&#160;</td>
+          <td class="paramname"><em>slice</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The slice copy constructor creates a slice copy from another slice expression ast node. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">slice</td><td>the slice that will be copied </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d8/d76/Slice_8cpp_source.html#l00008">8</a> of file <a class="el" href="../../d8/d76/Slice_8cpp_source.html">Slice.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a0d39cdd042a098fc592538d899cd969e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d39cdd042a098fc592538d899cd969e">&#9670;&nbsp;</a></span>evaluate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/d22/classObjBase.html">ObjBase</a> *const Slice::evaluate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The evaluate method can be used for interpreting expressions. </p>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d8/d76/Slice_8cpp_source.html#l00014">14</a> of file <a class="el" href="../../d8/d76/Slice_8cpp_source.html">Slice.cpp</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>include/ast/expression/<a class="el" href="../../de/d0f/Slice_8h_source.html">Slice.h</a></li>
+<li>src/ast/expression/<a class="el" href="../../d8/d76/Slice_8cpp_source.html">Slice.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

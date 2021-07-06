@@ -16,6 +16,8 @@ class UnsignedInteger: public IntVal<unsigned int>{
 public:
 	 UnsignedInteger(const unsigned int value);
 
+	 UnsignedInteger(UnsignedInteger const* &integer);
+
 	 operator unsigned int();
 
 	 const std::string get_class() const;
