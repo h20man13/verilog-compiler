@@ -1,217 +1,217 @@
 # EDE Verilog Subset Grammar
 
-<source_text> ::= <module>
+&lt;source_text&gt; ::= &lt;module&gt;
 
-<module> ::= <name_of_module> <list_of_ports> <module_item> <endmodule>
+&lt;module&gt; ::= &lt;name_of_module&gt; &lt;list_of_ports&gt; &lt;module_item&gt; &lt;endmodule&gt;
 
-<list_of_ports> ::= <port> <list_of_ports_expand>
-
-
-<list_of_ports_expand> ::= : NULL 
-								  | , <port> <list_of_ports_expand>
-
-<module_item> ::= <module_item_expanded>
+&lt;list_of_ports&gt; ::= &lt;port&gt; &lt;list_of_ports_expand&gt;
 
 
-<module_item_expanded> ::= : NULL 
-								 | , <mod_item> <module_item_expanded>
+&lt;list_of_ports_expand&gt; ::= : NULL 
+								  | , &lt;port&gt; &lt;list_of_ports_expand&gt;
+
+&lt;module_item&gt; ::= &lt;module_item_expanded&gt;
 
 
-<name_of_module> ::= IDENTIFIER
+&lt;module_item_expanded&gt; ::= : NULL 
+								 | , &lt;mod_item&gt; &lt;module_item_expanded&gt;
 
 
-<port> ::= : <port_expression> 
-           | . <name_of_port> ( <port_expression> )
+&lt;name_of_module&gt; ::= IDENTIFIER
+
+
+&lt;port&gt; ::= : &lt;port_expression&gt; 
+           | . &lt;name_of_port&gt; ( &lt;port_expression&gt; )
 
            
-<port_expression> ::= : <port_reference> 
-						   | { <port_reference> <port_reference_expanded> }
+&lt;port_expression&gt; ::= : &lt;port_reference&gt; 
+						   | { &lt;port_reference&gt; &lt;port_reference_expanded&gt; }
 						   
 						   
-<port_reference_expanded> ::= , <port_reference> <port_reference_expanded>
+&lt;port_reference_expanded&gt; ::= , &lt;port_reference&gt; &lt;port_reference_expanded&gt;
 
-<port_reference> ::= : <name_of_variable> 
-                     | <name_of_variable> [ <constant_expression> ] 
-                     | <name_of_variable> [ <constant_expression> : <constant_expression>]
+&lt;port_reference&gt; ::= : &lt;name_of_variable&gt; 
+                     | &lt;name_of_variable&gt; [ &lt;constant_expression&gt; ] 
+                     | &lt;name_of_variable&gt; [ &lt;constant_expression&gt; : &lt;constant_expression&gt;]
                      
  
-<name_of_port> ::= IDENTIFIER
+&lt;name_of_port&gt; ::= IDENTIFIER
 
-<mod_item> ::= : <input_declaration> 
-				  | <output_declaration> 
-				  | <net_declaration>
-				  | <reg_declaration>
-				  | <integer_declaration> 
-				  | <real_declaration>
-				  | <gate_declaration>
-				  | <module_instantiation> 
-				  | <continuous_assign>
-				  | <initial_statement> 
-				  | <always_statement>
-				  | <task>
-				  | <function>
+&lt;mod_item&gt; ::= : &lt;input_declaration&gt; 
+				  | &lt;output_declaration&gt; 
+				  | &lt;net_declaration&gt;
+				  | &lt;reg_declaration&gt;
+				  | &lt;integer_declaration&gt; 
+				  | &lt;real_declaration&gt;
+				  | &lt;gate_declaration&gt;
+				  | &lt;module_instantiation&gt; 
+				  | &lt;continuous_assign&gt;
+				  | &lt;initial_statement&gt; 
+				  | &lt;always_statement&gt;
+				  | &lt;task&gt;
+				  | &lt;function&gt;
 
 # Declarations
 
-<input_declaration> ::= INPUT <range> <list_of_variables> ;
+&lt;input_declaration&gt; ::= INPUT &lt;range&gt; &lt;list_of_variables&gt; ;
 
-<p>output_declaration ::= OUTPUT <range> <list_of_variables> ;
-<p>net_declaration ::= WIRE <range> <delay> <list_of_variables> ;
-<p>reg_declaration ::= REG <range> <list_of_register_variables> ;
-<p>real_declaration ::= REAL <list_of_variables> ;
-<p>integer_declaration ::= INTEGER <list_of_variables> ;
-<p>continious_assign ::= ASSIGN <delay> <list_of_assignments> ;
+&lt;p&gt;output_declaration ::= OUTPUT &lt;range&gt; &lt;list_of_variables&gt; ;
+&lt;p&gt;net_declaration ::= WIRE &lt;range&gt; &lt;delay&gt; &lt;list_of_variables&gt; ;
+&lt;p&gt;reg_declaration ::= REG &lt;range&gt; &lt;list_of_register_variables&gt; ;
+&lt;p&gt;real_declaration ::= REAL &lt;list_of_variables&gt; ;
+&lt;p&gt;integer_declaration ::= INTEGER &lt;list_of_variables&gt; ;
+&lt;p&gt;continious_assign ::= ASSIGN &lt;delay&gt; &lt;list_of_assignments&gt; ;
 
-<list_of_variables> ::= : <name_of_variable> <name_of_variable_expaned> 
-							  | WIRE <range> <delay> <list_of_assignments> ;
+&lt;list_of_variables&gt; ::= : &lt;name_of_variable&gt; &lt;name_of_variable_expaned&gt; 
+							  | WIRE &lt;range&gt; &lt;delay&gt; &lt;list_of_assignments&gt; ;
 							  
-<name_of_variable_expanded> ::= : NULL 
-										| , <name_of_variable> <name_of_variable_expanded>
+&lt;name_of_variable_expanded&gt; ::= : NULL 
+										| , &lt;name_of_variable&gt; &lt;name_of_variable_expanded&gt;
 										 
-<name_of_variable> ::= IDENTIFIER
+&lt;name_of_variable&gt; ::= IDENTIFIER
 
-<list_of_register_variables> ::= <register_variable> <register_variable_expanded>
+&lt;list_of_register_variables&gt; ::= &lt;register_variable&gt; &lt;register_variable_expanded&gt;
 
-<register_variable_expanded> ::= , <register_variable> <register_variable_expanded>
+&lt;register_variable_expanded&gt; ::= , &lt;register_variable&gt; &lt;register_variable_expanded&gt;
 
-<register_variable> ::= : <name_of_register> 
-                        | <name_of_memory> [ <constant_expression> : <constant_expression> ]
+&lt;register_variable&gt; ::= : &lt;name_of_register&gt; 
+                        | &lt;name_of_memory&gt; [ &lt;constant_expression&gt; : &lt;constant_expression&gt; ]
                         
-<name_of_register> ::= IDENTIFIER
-<name_of_memory> ::= IDENTIFIER
+&lt;name_of_register&gt; ::= IDENTIFIER
+&lt;name_of_memory&gt; ::= IDENTIFIER
 
-<range> ::= [ <constant_expression> : <constant_expression> ]
+&lt;range&gt; ::= [ &lt;constant_expression&gt; : &lt;constant_expression&gt; ]
 
-<list_of_assignments> ::= <assignment> <assignment_expanded>
+&lt;list_of_assignments&gt; ::= &lt;assignment&gt; &lt;assignment_expanded&gt;
 
-<assignment_expanded> ::= : NULL 
-								| , <assignment> <assignment_expanded>
+&lt;assignment_expanded&gt; ::= : NULL 
+								| , &lt;assignment&gt; &lt;assignment_expanded&gt;
 
 # Primative Instances
 
-<gate_declaration> ::= GATETYPE <delay> <gate_instance> <gate_instance_expanded> ;</p>
+&lt;gate_declaration&gt; ::= GATETYPE &lt;delay&gt; &lt;gate_instance&gt; &lt;gate_instance_expanded&gt; ;&lt;/p&gt;
 
-<gate_instance_expanded> ::= : NULL 
-									| , <gate_instance> <gate_instance_expanded>
+&lt;gate_instance_expanded&gt; ::= : NULL 
+									| , &lt;gate_instance&gt; &lt;gate_instance_expanded&gt;
 
-<gate_instance> ::= <name_of_gate_instance> ( <terminal> <terminal_expanded> )
+&lt;gate_instance&gt; ::= &lt;name_of_gate_instance&gt; ( &lt;terminal&gt; &lt;terminal_expanded&gt; )
 
-<name_of_gate_instance> ::= IDENTIFIER <range>
+&lt;name_of_gate_instance&gt; ::= IDENTIFIER &lt;range&gt;
 
-<terminal_expanded> ::= : NULL 
-							 | , <terminal> <terminal_expanded>
+&lt;terminal_expanded&gt; ::= : NULL 
+							 | , &lt;terminal&gt; &lt;terminal_expanded&gt;
 							 
-<terminal> ::= : <expression> 
+&lt;terminal&gt; ::= : &lt;expression&gt; 
 				  | IDENTIFIER
 
 # Module Instantiations
 
-<module_instantiation> ::= <name_of_module>  <module_instance> <module_instance_expanded> ;
+&lt;module_instantiation&gt; ::= &lt;name_of_module&gt;  &lt;module_instance&gt; &lt;module_instance_expanded&gt; ;
 
-<module_instance_expanded> ::= : NULL 
-									  | , <module_instance> <module_instance_expanded>
+&lt;module_instance_expanded&gt; ::= : NULL 
+									  | , &lt;module_instance&gt; &lt;module_instance_expanded&gt;
 
-<name_of_module> ::= IDENTIFIER
+&lt;name_of_module&gt; ::= IDENTIFIER
 
-<module_instance> ::= <name_of_instance> ( <list_of_module_connections> )
+&lt;module_instance&gt; ::= &lt;name_of_instance&gt; ( &lt;list_of_module_connections&gt; )
 
-<list_of_module_connections> ::= : <module_port_connection> <module_port_connections_expanded> 
-										 | <named_port_connection> <named_port_connection_expanded>
+&lt;list_of_module_connections&gt; ::= : &lt;module_port_connection&gt; &lt;module_port_connections_expanded&gt; 
+										 | &lt;named_port_connection&gt; &lt;named_port_connection_expanded&gt;
 
 
-<module_port_connections_expanded> ::= , <module_port_connection> <module_port_connections_expanded>
+&lt;module_port_connections_expanded&gt; ::= , &lt;module_port_connection&gt; &lt;module_port_connections_expanded&gt;
 
-<named_port_connection> ::= : <expression> 
+&lt;named_port_connection&gt; ::= : &lt;expression&gt; 
 								  | NULL
 
 NULL ::= /* nothing ex (a, b, , d) */
 
-<named_port_connection> ::= . IDENTIFIER ( <expression> )
+&lt;named_port_connection&gt; ::= . IDENTIFIER ( &lt;expression&gt; )
 
 
 # Behavorial Statements
 
-<initial_statement> ::= INITIAL statement
-<always_statement> ::= ALWAYS statement
+&lt;initial_statement&gt; ::= INITIAL statement
+&lt;always_statement&gt; ::= ALWAYS statement
 
-<statement_or_null> ::= statement | NULL ;
+&lt;statement_or_null&gt; ::= statement | NULL ;
 
-<statement> ::= : <blocking_assignment> ; 
-				   	| <non_blocking_assignment> ; 
-					| IF ( <expression> ) <statement_or_null> 
-				  	| IF ( <expression> ) <statement_or_null> ELSE <statement_or_null> 
-				  	| CASE ( <expression> ) <case_item> <case_item_expanded> ENDCASE 
-				  	| CASEX ( <expression> ) <case_item> <case_item_expanded> ENDCASE 
-				  	| CASEZ ( <expression> ) <case_item> <case_item_expanded> ENDCASE 
-				  	| FOREVER <statement> 
-				  	| repeat ( <expression> ) <statement> 
-				  	| while ( <expression> ) <statement> 
-				  	| for ( <assignment> ; <expression> ; <assignment> ) <statement> 
-				  	| wait ( <expression> ) <statement_or_null> 
-				  	| <seq_block> 
-				  	| <task_enable> 
-				  	| <system_task_enable> 
-				  	| ASSIGN <assignment>
+&lt;statement&gt; ::= : &lt;blocking_assignment&gt; ; 
+				   	| &lt;non_blocking_assignment&gt; ; 
+					| IF ( &lt;expression&gt; ) &lt;statement_or_null&gt; 
+				  	| IF ( &lt;expression&gt; ) &lt;statement_or_null&gt; ELSE &lt;statement_or_null&gt; 
+				  	| CASE ( &lt;expression&gt; ) &lt;case_item&gt; &lt;case_item_expanded&gt; ENDCASE 
+				  	| CASEX ( &lt;expression&gt; ) &lt;case_item&gt; &lt;case_item_expanded&gt; ENDCASE 
+				  	| CASEZ ( &lt;expression&gt; ) &lt;case_item&gt; &lt;case_item_expanded&gt; ENDCASE 
+				  	| FOREVER &lt;statement&gt; 
+				  	| repeat ( &lt;expression&gt; ) &lt;statement&gt; 
+				  	| while ( &lt;expression&gt; ) &lt;statement&gt; 
+				  	| for ( &lt;assignment&gt; ; &lt;expression&gt; ; &lt;assignment&gt; ) &lt;statement&gt; 
+				  	| wait ( &lt;expression&gt; ) &lt;statement_or_null&gt; 
+				  	| &lt;seq_block&gt; 
+				  	| &lt;task_enable&gt; 
+				  	| &lt;system_task_enable&gt; 
+				  	| ASSIGN &lt;assignment&gt;
 				  	
 				  	
 
-<assignment> ::= <lvalue> = <expression>
+&lt;assignment&gt; ::= &lt;lvalue&gt; = &lt;expression&gt;
 
-<blocking_assignment> ::= <lvalue> = <expression>
+&lt;blocking_assignment&gt; ::= &lt;lvalue&gt; = &lt;expression&gt;
 
-<nonblocking_assignment> ::= <lvalue> <= <expression>
+&lt;nonblocking_assignment&gt; ::= &lt;lvalue&gt; &lt;= &lt;expression&gt;
 
-<case_item> ::= <expression> <expression_expanded> : <statement_or_null> | default : <statement_or_null> | <default statement_or_null>
+&lt;case_item&gt; ::= &lt;expression&gt; &lt;expression_expanded&gt; : &lt;statement_or_null&gt; | default : &lt;statement_or_null&gt; | &lt;default statement_or_null&gt;
 
-<seq_block> ::= : BEGIN <statement_list> END  
-					| BEGIN : <name_of_block> <block_declaration_list> <statement_list> END
+&lt;seq_block&gt; ::= : BEGIN &lt;statement_list&gt; END  
+					| BEGIN : &lt;name_of_block&gt; &lt;block_declaration_list&gt; &lt;statement_list&gt; END
 					
-<statement_list> ::= : <NULL> 
-						  | <statement> <statement_list>
+&lt;statement_list&gt; ::= : &lt;NULL&gt; 
+						  | &lt;statement&gt; &lt;statement_list&gt;
 						  
-<name_of_block> ::= IDENTIFIER
+&lt;name_of_block&gt; ::= IDENTIFIER
 
-<block_declaration_list> ::= : <block_declaration> <block_declaration_list> 
+&lt;block_declaration_list&gt; ::= : &lt;block_declaration&gt; &lt;block_declaration_list&gt; 
 									| NULL
 									
-<block_declaration> ::= : <reg_declaration> 
-							 | <integer_declaration> 
-							 | <real_declaration>
+&lt;block_declaration&gt; ::= : &lt;reg_declaration&gt; 
+							 | &lt;integer_declaration&gt; 
+							 | &lt;real_declaration&gt;
 							 
 
 
-<task_enable> ::= : <name_of_task> 
-					  | <name_of_task> ( <expression> <expression_expanded> ) ;
+&lt;task_enable&gt; ::= : &lt;name_of_task&gt; 
+					  | &lt;name_of_task&gt; ( &lt;expression&gt; &lt;expression_expanded&gt; ) ;
 
-<expression_expanded> ::= , <expression> <expression_expanded> || NULL
+&lt;expression_expanded&gt; ::= , &lt;expression&gt; &lt;expression_expanded&gt; || NULL
 
 
-<system_task_enable> ::= : <name_of_system_task> ; 
-                         | <name_of_system_task> ( <expression> <expression_expanded> ) ;
+&lt;system_task_enable&gt; ::= : &lt;name_of_system_task&gt; ; 
+                         | &lt;name_of_system_task&gt; ( &lt;expression&gt; &lt;expression_expanded&gt; ) ;
 							   
 
-<name_of_system_task> ::= $ <system_identifier>
+&lt;name_of_system_task&gt; ::= $ &lt;system_identifier&gt;
 
-<system_identifier> ::= IDENTIFIER
+&lt;system_identifier&gt; ::= IDENTIFIER
 
 # Expressions
 
-<lvalue> -> : IDENTIFIER 
-            | IDENTIFIER [ <expression> ] 
-            | IDENTIFIER [ <expression> : <expression> ] 
-            | <concatenation>
+&lt;lvalue&gt; -&gt; : IDENTIFIER 
+            | IDENTIFIER [ &lt;expression&gt; ] 
+            | IDENTIFIER [ &lt;expression&gt; : &lt;expression&gt; ] 
+            | &lt;concatenation&gt;
             
 
-<constant_expression> ::= <expression>
+&lt;constant_expression&gt; ::= &lt;expression&gt;
 
-<expression> ::= : <primary> 
-                 | <UNARY_OPERATOR> <primary> 
-                 | <expression> <BINARY_OPERATOR> <expression> 
-                 | <expression> ? <expression> : <expression> 
+&lt;expression&gt; ::= : &lt;primary&gt; 
+                 | &lt;UNARY_OPERATOR&gt; &lt;primary&gt; 
+                 | &lt;expression&gt; &lt;BINARY_OPERATOR&gt; &lt;expression&gt; 
+                 | &lt;expression&gt; ? &lt;expression&gt; : &lt;expression&gt; 
                  | STRING
                  
 
-<UNARY_OPERATOR> ::=  : PLUS 
+&lt;UNARY_OPERATOR&gt; ::=  : PLUS 
                       | MINUS 
                       | NOT 
                       | BAND 
@@ -222,7 +222,7 @@ NULL ::= /* nothing ex (a, b, , d) */
                       
                       
                       
-<BINARY_OPERATOR> ::= : PLUS 
+&lt;BINARY_OPERATOR&gt; ::= : PLUS 
                       | MINUS 
                       | TIMES 
                       | DIV 
@@ -246,33 +246,33 @@ NULL ::= /* nothing ex (a, b, , d) */
                       
                       
                       
-<STRING> ::= "data in here"
+&lt;STRING&gt; ::= "data in here"
 
 
-<primary> ::= : NUMBER
+&lt;primary&gt; ::= : NUMBER
               | IDENTIFIER 
-              | IDENTIFIER [ <expression> ] 
-              | IDENTIFIER [ <constant_expression> : <constant_expression> ] 
-              | <concatenation> 
-              | <multiple_concatenation> 
-              | <function_call> 
-              | ( <expression> )
+              | IDENTIFIER [ &lt;expression&gt; ] 
+              | IDENTIFIER [ &lt;constant_expression&gt; : &lt;constant_expression&gt; ] 
+              | &lt;concatenation&gt; 
+              | &lt;multiple_concatenation&gt; 
+              | &lt;function_call&gt; 
+              | ( &lt;expression&gt; )
 
-<concatenation> ::= { <expression> <expression_expanded> }
+&lt;concatenation&gt; ::= { &lt;expression&gt; &lt;expression_expanded&gt; }
 
-<multiple_concatenation> ::= { <expression> { <expression> <expression_expanded> } }
+&lt;multiple_concatenation&gt; ::= { &lt;expression&gt; { &lt;expression&gt; &lt;expression_expanded&gt; } }
 
-<function_call> ::= : <name_of_function> ( <expression> <expression_expanded> ) 
-                    | <name_of_system_function> ( <expression> <expression_expanded> ) 
+&lt;function_call&gt; ::= : &lt;name_of_function&gt; ( &lt;expression&gt; &lt;expression_expanded&gt; ) 
+                    | &lt;name_of_system_function&gt; ( &lt;expression&gt; &lt;expression_expanded&gt; ) 
                     | name_of_system_function
                     
-<name_of_function> ::= IDENTIFIER
+&lt;name_of_function&gt; ::= IDENTIFIER
 
-<name_of_system_function> ::= $ IDENTIFIER
+&lt;name_of_system_function&gt; ::= $ IDENTIFIER
 
 # General
 
-<delay> ::= : # NUMBER 
+&lt;delay&gt; ::= : # NUMBER 
             | # IDENTIFIER
 
 
