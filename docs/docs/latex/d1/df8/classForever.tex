@@ -1,0 +1,65 @@
+\hypertarget{classForever}{}\doxysection{Forever Class Reference}
+\label{classForever}\index{Forever@{Forever}}
+
+
+The statement abstract class is used to store statement objects on the ast tree.  
+
+
+
+
+{\ttfamily \#include $<$Forever.\+h$>$}
+
+Inheritance diagram for Forever\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{d1/df8/classForever}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classForever_a84352d753b74320c62eda8dfcede1432}\label{classForever_a84352d753b74320c62eda8dfcede1432}} 
+{\bfseries Forever} (const \mbox{\hyperlink{classPosition}{Position}} \&position, \mbox{\hyperlink{classExpression}{Expression}} $\ast$const check, \mbox{\hyperlink{classStatement}{Statement}} $\ast$const statement)
+\item 
+\mbox{\Hypertarget{classForever_a188f67541baf6a4064fdf310fd819227}\label{classForever_a188f67541baf6a4064fdf310fd819227}} 
+void \mbox{\hyperlink{classForever_a188f67541baf6a4064fdf310fd819227}{code\+\_\+gen}} () const
+\begin{DoxyCompactList}\small\item\em The code gen method generates the LLVM ir for the statement. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classForever_a5d7877fddf097151534e1cab886bc55c}{execute}} () const
+\begin{DoxyCompactList}\small\item\em The execute method is used to interpret statements. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The statement abstract class is used to store statement objects on the ast tree. 
+
+\begin{DoxyAuthor}{Author}
+Jacob Bauer 
+\end{DoxyAuthor}
+
+
+Definition at line 21 of file Forever.\+h.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classForever_a5d7877fddf097151534e1cab886bc55c}\label{classForever_a5d7877fddf097151534e1cab886bc55c}} 
+\index{Forever@{Forever}!execute@{execute}}
+\index{execute@{execute}!Forever@{Forever}}
+\doxysubsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily void Forever\+::execute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+The execute method is used to interpret statements. 
+
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classStatement_a03e3229a95c2803cdd19a5595b68cd51}{Statement}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/ast/statement/Forever.\+h\end{DoxyCompactItemize}

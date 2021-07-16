@@ -9,13 +9,14 @@
 #define IDENTIFIER_H
 
 #include "ast/expression/Expression.h"
+#include "ast/expression/LValue.h"
 #include "Token.h"
 
 /**
  * The identifier class is used to for Identifier AST nodes
  * @author Jacob Bauer
  */
-class Identifier: Expression{
+class Identifier: Expression, LValue{
 private:
 	const std::string lexeme; //stores variable name
 public:
@@ -42,6 +43,12 @@ public:
 	 */
 
 	ObjBase* const evaluate();
+
+	/**
+	 * The access operator is used to access the element that will need to be assigned to
+	 */
+
+	ObjBase* const acess() const;
 };
 
 

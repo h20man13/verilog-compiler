@@ -85,15 +85,25 @@ $(function() {
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    }</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;}</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;FunctionCall::~FunctionCall(){</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordflow">while</span>(!param_list.empty()){</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <a class="code" href="../../de/d94/classExpression.html">Expression</a>* <span class="keyword">const</span> exp = param_list.front();</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        param_list.pop_front();</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keyword">delete</span> exp;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    }</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="../../d5/ded/classFunctionCall.html#ad097987bf70fe377e375e2fbf63ff114">   16</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d5/ded/classFunctionCall.html#ad097987bf70fe377e375e2fbf63ff114">FunctionCall::code_gen</a>()<span class="keyword"> const</span>{</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="comment">//LLVM ir goes here</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;}</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<a class="code" href="../../dc/d22/classObjBase.html">ObjBase</a>* <span class="keyword">const</span> FunctionCall::evaluate(){</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordflow">return</span> NULL;</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;}</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;FunctionCall::~FunctionCall(){</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordflow">while</span>(!param_list.empty()){</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <a class="code" href="../../de/d94/classExpression.html">Expression</a>* <span class="keyword">const</span> exp = param_list.front();</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        param_list.pop_front();</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keyword">delete</span> exp;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    }</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;}</div>
 <div class="ttc" id="aclassExpression_html"><div class="ttname"><a href="../../de/d94/classExpression.html">Expression</a></div><div class="ttdoc">The Expression is an Interface that can be used to represent Expressions.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d6e/Expression_8h_source.html#l00020">Expression.h:20</a></div></div>
 <div class="ttc" id="aclassFunctionCall_html"><div class="ttname"><a href="../../d5/ded/classFunctionCall.html">FunctionCall</a></div><div class="ttdoc">The function call interface is used to define the implementation for all function call ast nodes.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/da5/FunctionCall_8h_source.html#l00018">FunctionCall.h:18</a></div></div>
+<div class="ttc" id="aclassFunctionCall_html_ad097987bf70fe377e375e2fbf63ff114"><div class="ttname"><a href="../../d5/ded/classFunctionCall.html#ad097987bf70fe377e375e2fbf63ff114">FunctionCall::code_gen</a></div><div class="ttdeci">virtual void code_gen() const</div><div class="ttdoc">The code_gen method generates the LLVM IR of the Expression.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d2d/FunctionCall_8cpp_source.html#l00016">FunctionCall.cpp:16</a></div></div>
+<div class="ttc" id="aclassObjBase_html"><div class="ttname"><a href="../../dc/d22/classObjBase.html">ObjBase</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dd2/ObjBase_8h_source.html#l00019">ObjBase.h:19</a></div></div>
 <div class="ttc" id="aclassPosition_html"><div class="ttname"><a href="../../da/d8b/classPosition.html">Position</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/dff/Position_8h_source.html#l00006">Position.h:6</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

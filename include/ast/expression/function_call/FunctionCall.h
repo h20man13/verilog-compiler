@@ -25,9 +25,9 @@ public:
 
 	FunctionCall(const FunctionCall& func_call);
 
-	virtual void code_gen() const = 0;
+	virtual void code_gen() const;
 
-	virtual ObjBase* const evaluate() = 0;
+	virtual ObjBase* const evaluate();
 
 	~FunctionCall();
 

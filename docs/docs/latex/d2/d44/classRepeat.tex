@@ -1,0 +1,65 @@
+\hypertarget{classRepeat}{}\doxysection{Repeat Class Reference}
+\label{classRepeat}\index{Repeat@{Repeat}}
+
+
+The statement abstract class is used to store statement objects on the ast tree.  
+
+
+
+
+{\ttfamily \#include $<$Repeat.\+h$>$}
+
+Inheritance diagram for Repeat\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{d2/d44/classRepeat}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRepeat_a6c71f1a0b529b42d0a78aab9fe27bd38}\label{classRepeat_a6c71f1a0b529b42d0a78aab9fe27bd38}} 
+{\bfseries Repeat} (const \mbox{\hyperlink{classPosition}{Position}} \&position, \mbox{\hyperlink{classExpression}{Expression}} $\ast$const check, \mbox{\hyperlink{classStatement}{Statement}} $\ast$const statement)
+\item 
+\mbox{\Hypertarget{classRepeat_a109961b9661ecd604ab0983ebbec6569}\label{classRepeat_a109961b9661ecd604ab0983ebbec6569}} 
+void \mbox{\hyperlink{classRepeat_a109961b9661ecd604ab0983ebbec6569}{code\+\_\+gen}} () const
+\begin{DoxyCompactList}\small\item\em The code gen method generates the LLVM ir for the statement. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRepeat_a6f2acdb10a5b4fec34e0b4b80fd107e6}{execute}} () const
+\begin{DoxyCompactList}\small\item\em The execute method is used to interpret statements. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The statement abstract class is used to store statement objects on the ast tree. 
+
+\begin{DoxyAuthor}{Author}
+Jacob Bauer 
+\end{DoxyAuthor}
+
+
+Definition at line 21 of file Repeat.\+h.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRepeat_a6f2acdb10a5b4fec34e0b4b80fd107e6}\label{classRepeat_a6f2acdb10a5b4fec34e0b4b80fd107e6}} 
+\index{Repeat@{Repeat}!execute@{execute}}
+\index{execute@{execute}!Repeat@{Repeat}}
+\doxysubsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily void Repeat\+::execute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+The execute method is used to interpret statements. 
+
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classStatement_a03e3229a95c2803cdd19a5595b68cd51}{Statement}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/ast/statement/Repeat.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,65 @@
+\hypertarget{classWait}{}\doxysection{Wait Class Reference}
+\label{classWait}\index{Wait@{Wait}}
+
+
+The statement abstract class is used to store statement objects on the ast tree.  
+
+
+
+
+{\ttfamily \#include $<$Wait.\+h$>$}
+
+Inheritance diagram for Wait\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{d7/dee/classWait}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWait_a60d5b8c9f2c4e00b2c76f99d1327378f}\label{classWait_a60d5b8c9f2c4e00b2c76f99d1327378f}} 
+{\bfseries Wait} (const \mbox{\hyperlink{classPosition}{Position}} \&position, \mbox{\hyperlink{classExpression}{Expression}} $\ast$const check, \mbox{\hyperlink{classStatement}{Statement}} $\ast$const statement)
+\item 
+\mbox{\Hypertarget{classWait_ab05e9d96c35ca1e733a42a3d0b5c6d64}\label{classWait_ab05e9d96c35ca1e733a42a3d0b5c6d64}} 
+void \mbox{\hyperlink{classWait_ab05e9d96c35ca1e733a42a3d0b5c6d64}{code\+\_\+gen}} () const
+\begin{DoxyCompactList}\small\item\em The code gen method generates the LLVM ir for the statement. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWait_a58b12153a227c5ae2c20294b0005da74}{execute}} () const
+\begin{DoxyCompactList}\small\item\em The execute method is used to interpret statements. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The statement abstract class is used to store statement objects on the ast tree. 
+
+\begin{DoxyAuthor}{Author}
+Jacob Bauer 
+\end{DoxyAuthor}
+
+
+Definition at line 21 of file Wait.\+h.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWait_a58b12153a227c5ae2c20294b0005da74}\label{classWait_a58b12153a227c5ae2c20294b0005da74}} 
+\index{Wait@{Wait}!execute@{execute}}
+\index{execute@{execute}!Wait@{Wait}}
+\doxysubsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily void Wait\+::execute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+The execute method is used to interpret statements. 
+
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classStatement_a03e3229a95c2803cdd19a5595b68cd51}{Statement}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/ast/statement/Wait.\+h\end{DoxyCompactItemize}

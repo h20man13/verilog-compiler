@@ -1,0 +1,65 @@
+\hypertarget{classIfElse}{}\doxysection{If\+Else Class Reference}
+\label{classIfElse}\index{IfElse@{IfElse}}
+
+
+The statement abstract class is used to store statement objects on the ast tree.  
+
+
+
+
+{\ttfamily \#include $<$If\+Else.\+h$>$}
+
+Inheritance diagram for If\+Else\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{d6/ddc/classIfElse}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classIfElse_a1a3f458c186b10aea047d13ef4cf2016}\label{classIfElse_a1a3f458c186b10aea047d13ef4cf2016}} 
+{\bfseries If\+Else} (const \mbox{\hyperlink{classPosition}{Position}} \&position, \mbox{\hyperlink{classExpression}{Expression}} $\ast$const check, \mbox{\hyperlink{classStatement}{Statement}} $\ast$const cond\+\_\+statement, \mbox{\hyperlink{classStatement}{Statement}} $\ast$const def\+\_\+statement)
+\item 
+\mbox{\Hypertarget{classIfElse_a6f30bf22aea11a2522dcd8e5b6d11a13}\label{classIfElse_a6f30bf22aea11a2522dcd8e5b6d11a13}} 
+void \mbox{\hyperlink{classIfElse_a6f30bf22aea11a2522dcd8e5b6d11a13}{code\+\_\+gen}} () const
+\begin{DoxyCompactList}\small\item\em The code gen method generates the LLVM ir for the statement. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classIfElse_a1db29e916469d96683c23459c2e9725d}{execute}} () const
+\begin{DoxyCompactList}\small\item\em The execute method is used to interpret statements. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The statement abstract class is used to store statement objects on the ast tree. 
+
+\begin{DoxyAuthor}{Author}
+Jacob Bauer 
+\end{DoxyAuthor}
+
+
+Definition at line 21 of file If\+Else.\+h.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classIfElse_a1db29e916469d96683c23459c2e9725d}\label{classIfElse_a1db29e916469d96683c23459c2e9725d}} 
+\index{IfElse@{IfElse}!execute@{execute}}
+\index{execute@{execute}!IfElse@{IfElse}}
+\doxysubsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily void If\+Else\+::execute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+The execute method is used to interpret statements. 
+
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classStatement_a03e3229a95c2803cdd19a5595b68cd51}{Statement}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/ast/statement/If\+Else.\+h\end{DoxyCompactItemize}

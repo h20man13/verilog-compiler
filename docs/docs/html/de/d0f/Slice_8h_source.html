@@ -81,37 +81,41 @@ $(function() {
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#define SLICE_H</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;ast/expression/Expression.h&quot;</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;list&gt;</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="../../db/d40/classSlice.html">   14</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../db/d40/classSlice.html">Slice</a>: <a class="code" href="../../de/d94/classExpression.html">Expression</a>{</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    std::string lexeme;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="../../de/d94/classExpression.html">Expression</a>* <span class="keyword">const</span> begin;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="../../de/d94/classExpression.html">Expression</a>* <span class="keyword">const</span> end;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="../../db/d40/classSlice.html#a0abc51448b69e4ad1f33d706efd60288">Slice</a>(<span class="keyword">const</span> <a class="code" href="../../da/d8b/classPosition.html">Position</a>&amp; position, <span class="keyword">const</span> std::string&amp; lexeme, <a class="code" href="../../de/d94/classExpression.html">Expression</a>* <span class="keyword">const</span> begin, <a class="code" href="../../de/d94/classExpression.html">Expression</a>* <span class="keyword">const</span> end);</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="../../db/d40/classSlice.html#a0abc51448b69e4ad1f33d706efd60288">Slice</a>(<span class="keyword">const</span> <a class="code" href="../../db/d40/classSlice.html">Slice</a>&amp; slice);</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../db/d40/classSlice.html#a1d7bb8316245260e76863a91a0b73306">code_gen</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <a class="code" href="../../dc/d22/classObjBase.html">ObjBase</a>* <span class="keyword">const</span> <a class="code" href="../../db/d40/classSlice.html#a0d39cdd042a098fc592538d899cd969e">evaluate</a>();</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    ~<a class="code" href="../../db/d40/classSlice.html">~Slice</a>();</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;};</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;ast/expression/LValue.h&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;list&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="../../db/d40/classSlice.html">   15</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../db/d40/classSlice.html">Slice</a>: <a class="code" href="../../de/d94/classExpression.html">Expression</a>{</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    std::string lexeme;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="../../de/d94/classExpression.html">Expression</a>* <span class="keyword">const</span> begin;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="../../de/d94/classExpression.html">Expression</a>* <span class="keyword">const</span> end;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="../../db/d40/classSlice.html#a0abc51448b69e4ad1f33d706efd60288">Slice</a>(<span class="keyword">const</span> <a class="code" href="../../da/d8b/classPosition.html">Position</a>&amp; position, <span class="keyword">const</span> std::string&amp; lexeme, <a class="code" href="../../de/d94/classExpression.html">Expression</a>* <span class="keyword">const</span> begin, <a class="code" href="../../de/d94/classExpression.html">Expression</a>* <span class="keyword">const</span> end);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="../../db/d40/classSlice.html#a0abc51448b69e4ad1f33d706efd60288">Slice</a>(<span class="keyword">const</span> <a class="code" href="../../db/d40/classSlice.html">Slice</a>&amp; slice);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../db/d40/classSlice.html#a1d7bb8316245260e76863a91a0b73306">code_gen</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <a class="code" href="../../dc/d22/classObjBase.html">ObjBase</a>* <span class="keyword">const</span> <a class="code" href="../../db/d40/classSlice.html#a0d39cdd042a098fc592538d899cd969e">evaluate</a>();</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    ~<a class="code" href="../../db/d40/classSlice.html">~Slice</a>();</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="../../db/d40/classSlice.html#a81c5cba9ddbb66e5f307a80956d5b723">   54</a></span>&#160;    <a class="code" href="../../dc/d22/classObjBase.html">ObjBase</a>* <span class="keyword">const</span> <a class="code" href="../../db/d40/classSlice.html#a81c5cba9ddbb66e5f307a80956d5b723">access</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;};</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aclassExpression_html"><div class="ttname"><a href="../../de/d94/classExpression.html">Expression</a></div><div class="ttdoc">The Expression is an Interface that can be used to represent Expressions.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d6e/Expression_8h_source.html#l00020">Expression.h:20</a></div></div>
 <div class="ttc" id="aclassObjBase_html"><div class="ttname"><a href="../../dc/d22/classObjBase.html">ObjBase</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dd2/ObjBase_8h_source.html#l00019">ObjBase.h:19</a></div></div>
 <div class="ttc" id="aclassPosition_html"><div class="ttname"><a href="../../da/d8b/classPosition.html">Position</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/dff/Position_8h_source.html#l00006">Position.h:6</a></div></div>
-<div class="ttc" id="aclassSlice_html"><div class="ttname"><a href="../../db/d40/classSlice.html">Slice</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d0f/Slice_8h_source.html#l00014">Slice.h:14</a></div></div>
+<div class="ttc" id="aclassSlice_html"><div class="ttname"><a href="../../db/d40/classSlice.html">Slice</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d0f/Slice_8h_source.html#l00015">Slice.h:15</a></div></div>
 <div class="ttc" id="aclassSlice_html_a0abc51448b69e4ad1f33d706efd60288"><div class="ttname"><a href="../../db/d40/classSlice.html#a0abc51448b69e4ad1f33d706efd60288">Slice::Slice</a></div><div class="ttdeci">Slice(const Position &amp;position, const std::string &amp;lexeme, Expression *const begin, Expression *const end)</div><div class="ttdoc">The slice ast node constructor is used to construct a slice ast nodes in Verilog given three paramete...</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d76/Slice_8cpp_source.html#l00006">Slice.cpp:6</a></div></div>
 <div class="ttc" id="aclassSlice_html_a0d39cdd042a098fc592538d899cd969e"><div class="ttname"><a href="../../db/d40/classSlice.html#a0d39cdd042a098fc592538d899cd969e">Slice::evaluate</a></div><div class="ttdeci">ObjBase *const evaluate()</div><div class="ttdoc">The evaluate method can be used for interpreting expressions.</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d76/Slice_8cpp_source.html#l00014">Slice.cpp:14</a></div></div>
 <div class="ttc" id="aclassSlice_html_a1d7bb8316245260e76863a91a0b73306"><div class="ttname"><a href="../../db/d40/classSlice.html#a1d7bb8316245260e76863a91a0b73306">Slice::code_gen</a></div><div class="ttdeci">void code_gen() const</div><div class="ttdoc">The code gen method is used to generate code that can be used for generating code.</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d76/Slice_8cpp_source.html#l00010">Slice.cpp:10</a></div></div>
+<div class="ttc" id="aclassSlice_html_a81c5cba9ddbb66e5f307a80956d5b723"><div class="ttname"><a href="../../db/d40/classSlice.html#a81c5cba9ddbb66e5f307a80956d5b723">Slice::access</a></div><div class="ttdeci">ObjBase *const access() const</div><div class="ttdoc">The evaluate method is used access a range of elements.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

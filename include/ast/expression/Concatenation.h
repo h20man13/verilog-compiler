@@ -9,6 +9,7 @@
 #define CONCATENATION_H
 
 #include "ast/expression/Expression.h"
+#include "ast/expression/LValue.h"
 #include <list>
 #include <memory>
 
@@ -17,7 +18,7 @@
  * (Ex: {x, y, z} where z y and z are wires or registers
  * @author Jacob Bauer
  */
-class Concatenation: Expression{
+class Concatenation: Expression, LValue{
 private:
 	std::list<Expression* const> concat_list; //list of expressions to be concatenated
 public:
@@ -52,6 +53,12 @@ public:
 	 * The destructor of the Concatenation class it will delete all of the corresponding expressions in the list
 	 */
 	~Concatenation();
+
+	/**
+	 * The access operator is used to assign elements
+	 */
+
+	ObjBase* const access() const;
 
 };
 

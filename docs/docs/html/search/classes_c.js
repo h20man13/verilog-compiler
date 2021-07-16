@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['real_147',['Real',['../dd/d05/classReal.html',1,'']]],
-  ['regularfunctioncall_148',['RegularFunctionCall',['../d5/d08/classRegularFunctionCall.html',1,'']]],
-  ['replication_149',['Replication',['../de/d82/classReplication.html',1,'']]],
-  ['rshift_150',['RShift',['../da/df5/classRShift.html',1,'']]]
+  ['real_188',['Real',['../dd/d05/classReal.html',1,'']]],
+  ['repeat_189',['Repeat',['../d2/d44/classRepeat.html',1,'']]],
+  ['replication_190',['Replication',['../de/d82/classReplication.html',1,'']]],
+  ['rshift_191',['RShift',['../da/df5/classRShift.html',1,'']]]
 ];

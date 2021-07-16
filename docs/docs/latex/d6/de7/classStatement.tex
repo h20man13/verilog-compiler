@@ -1,0 +1,83 @@
+\hypertarget{classStatement}{}\doxysection{Statement Class Reference}
+\label{classStatement}\index{Statement@{Statement}}
+
+
+The statement abstract class is used to store statement objects on the ast tree.  
+
+
+
+
+{\ttfamily \#include $<$Statement.\+h$>$}
+
+Inheritance diagram for Statement\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=12.000000cm]{d6/de7/classStatement}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classStatement_a87c564a89b8a4764a2d49fca22eeac1a}\label{classStatement_a87c564a89b8a4764a2d49fca22eeac1a}} 
+virtual void \mbox{\hyperlink{classStatement_a87c564a89b8a4764a2d49fca22eeac1a}{code\+\_\+gen}} () const =0
+\begin{DoxyCompactList}\small\item\em The code gen method generates the LLVM ir for the statement. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classStatement_a03e3229a95c2803cdd19a5595b68cd51}{execute}} () const =0
+\begin{DoxyCompactList}\small\item\em The execute method is used to interpret statements. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classPosition}{Position}} \mbox{\hyperlink{classStatement_a357cc2962dfa7bafaa5731755d4550ac}{get\+\_\+position}} () const
+\begin{DoxyCompactList}\small\item\em Gets the position of the current statement ast node. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classStatement_a767f9b062b7aca5f7fa2ce94fefe71d0}\label{classStatement_a767f9b062b7aca5f7fa2ce94fefe71d0}} 
+{\bfseries Statement} (const \mbox{\hyperlink{classPosition}{Position}} \&position)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The statement abstract class is used to store statement objects on the ast tree. 
+
+\begin{DoxyAuthor}{Author}
+Jacob Bauer 
+\end{DoxyAuthor}
+
+
+Definition at line 19 of file Statement.\+h.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classStatement_a03e3229a95c2803cdd19a5595b68cd51}\label{classStatement_a03e3229a95c2803cdd19a5595b68cd51}} 
+\index{Statement@{Statement}!execute@{execute}}
+\index{execute@{execute}!Statement@{Statement}}
+\doxysubsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily virtual void Statement\+::execute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+The execute method is used to interpret statements. 
+
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classCase_a572d1774de2cb162ad995fc0e61ed43d}{Case}}, \mbox{\hyperlink{classCaseX_a0bee0f925d7757f28c1d5871aa511f65}{CaseX}}, \mbox{\hyperlink{classCaseZ_a5b6860f3e3dead9972d5805c7e47c21b}{CaseZ}}, \mbox{\hyperlink{classEmptyStatement_afbdbba4b5799029e4c49d8b3dbfa08b2}{Empty\+Statement}}, \mbox{\hyperlink{classFor_a4163b09b67bde3894fa563293b0a3ecb}{For}}, \mbox{\hyperlink{classForever_a5d7877fddf097151534e1cab886bc55c}{Forever}}, \mbox{\hyperlink{classIf_a4d3642fa3a52b6bce9edab3c36155374}{If}}, \mbox{\hyperlink{classIfElse_a1db29e916469d96683c23459c2e9725d}{If\+Else}}, \mbox{\hyperlink{classRepeat_a6f2acdb10a5b4fec34e0b4b80fd107e6}{Repeat}}, \mbox{\hyperlink{classSequentialBlock_af443e5ba52d51a95a9384f50f9f2c8fb}{Sequential\+Block}}, \mbox{\hyperlink{classSystemTaskCall_a49043b5c03019209675de1d5c5ad7575}{System\+Task\+Call}}, \mbox{\hyperlink{classWait_a58b12153a227c5ae2c20294b0005da74}{Wait}}, and \mbox{\hyperlink{classWhile_ac7e6ae26ab95e35e882c4cfdf89289cd}{While}}.
+
+\mbox{\Hypertarget{classStatement_a357cc2962dfa7bafaa5731755d4550ac}\label{classStatement_a357cc2962dfa7bafaa5731755d4550ac}} 
+\index{Statement@{Statement}!get\_position@{get\_position}}
+\index{get\_position@{get\_position}!Statement@{Statement}}
+\doxysubsubsection{\texorpdfstring{get\_position()}{get\_position()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classPosition}{Position}} Statement\+::get\+\_\+position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the position of the current statement ast node. 
+
+\begin{DoxyReturn}{Returns}
+the position of the ast node 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/ast/statement/Statement.\+h\end{DoxyCompactItemize}

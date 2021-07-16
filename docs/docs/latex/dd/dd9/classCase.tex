@@ -1,0 +1,64 @@
+\hypertarget{classCase}{}\doxysection{Case Class Reference}
+\label{classCase}\index{Case@{Case}}
+Inheritance diagram for Case\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{dd/dd9/classCase}
+\end{center}
+\end{figure}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classCase_a050d00deb96a7db820b9fffcc0174aa6}\label{classCase_a050d00deb96a7db820b9fffcc0174aa6}} 
+{\bfseries Case} (const \mbox{\hyperlink{classPosition}{Position}} \&position, std\+::list$<$ const \mbox{\hyperlink{classCaseItem}{Case\+Item}} $\ast$ $>$ item\+\_\+list, \mbox{\hyperlink{classExpression}{Expression}} $\ast$const expression)
+\item 
+virtual void const \mbox{\hyperlink{classCase_a572d1774de2cb162ad995fc0e61ed43d}{execute}} () const
+\begin{DoxyCompactList}\small\item\em The execute method is used to interpret statements. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCase_a9a8366ad1a245f5e394ccfad298e73f1}\label{classCase_a9a8366ad1a245f5e394ccfad298e73f1}} 
+virtual void \mbox{\hyperlink{classCase_a9a8366ad1a245f5e394ccfad298e73f1}{code\+\_\+gen}} () const
+\begin{DoxyCompactList}\small\item\em The code gen method generates the LLVM ir for the statement. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classCase_a4df3df8baf4bc71f74dd361b4dde97f5}\label{classCase_a4df3df8baf4bc71f74dd361b4dde97f5}} 
+std\+::list$<$ const \mbox{\hyperlink{classCaseItem}{Case\+Item}} $\ast$ $>$ {\bfseries item\+\_\+list}
+\item 
+\mbox{\Hypertarget{classCase_ad297ad2802bdfa6226c784043ac2a239}\label{classCase_ad297ad2802bdfa6226c784043ac2a239}} 
+\mbox{\hyperlink{classExpression}{Expression}} $\ast$const {\bfseries expression}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 16 of file Case.\+h.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classCase_a572d1774de2cb162ad995fc0e61ed43d}\label{classCase_a572d1774de2cb162ad995fc0e61ed43d}} 
+\index{Case@{Case}!execute@{execute}}
+\index{execute@{execute}!Case@{Case}}
+\doxysubsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily virtual void const Case\+::execute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+The execute method is used to interpret statements. 
+
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classStatement_a03e3229a95c2803cdd19a5595b68cd51}{Statement}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classCaseX_a0bee0f925d7757f28c1d5871aa511f65}{CaseX}}, and \mbox{\hyperlink{classCaseZ_a5b6860f3e3dead9972d5805c7e47c21b}{CaseZ}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/ast/statement/case/Case.\+h\end{DoxyCompactItemize}

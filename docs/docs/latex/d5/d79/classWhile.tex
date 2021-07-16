@@ -1,0 +1,65 @@
+\hypertarget{classWhile}{}\doxysection{While Class Reference}
+\label{classWhile}\index{While@{While}}
+
+
+The statement abstract class is used to store statement objects on the ast tree.  
+
+
+
+
+{\ttfamily \#include $<$While.\+h$>$}
+
+Inheritance diagram for While\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{d5/d79/classWhile}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWhile_a6b8c2db5dd73365701ce4c59834dc42a}\label{classWhile_a6b8c2db5dd73365701ce4c59834dc42a}} 
+{\bfseries While} (const \mbox{\hyperlink{classPosition}{Position}} \&position, \mbox{\hyperlink{classExpression}{Expression}} $\ast$const check, \mbox{\hyperlink{classStatement}{Statement}} $\ast$const statement)
+\item 
+\mbox{\Hypertarget{classWhile_a08a91c68842cefb38871d8bc7c8d0d26}\label{classWhile_a08a91c68842cefb38871d8bc7c8d0d26}} 
+void \mbox{\hyperlink{classWhile_a08a91c68842cefb38871d8bc7c8d0d26}{code\+\_\+gen}} () const
+\begin{DoxyCompactList}\small\item\em The code gen method generates the LLVM ir for the statement. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWhile_ac7e6ae26ab95e35e882c4cfdf89289cd}{execute}} () const
+\begin{DoxyCompactList}\small\item\em The execute method is used to interpret statements. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The statement abstract class is used to store statement objects on the ast tree. 
+
+\begin{DoxyAuthor}{Author}
+Jacob Bauer 
+\end{DoxyAuthor}
+
+
+Definition at line 21 of file While.\+h.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWhile_ac7e6ae26ab95e35e882c4cfdf89289cd}\label{classWhile_ac7e6ae26ab95e35e882c4cfdf89289cd}} 
+\index{While@{While}!execute@{execute}}
+\index{execute@{execute}!While@{While}}
+\doxysubsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily void While\+::execute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+The execute method is used to interpret statements. 
+
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classStatement_a03e3229a95c2803cdd19a5595b68cd51}{Statement}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/ast/statement/While.\+h\end{DoxyCompactItemize}

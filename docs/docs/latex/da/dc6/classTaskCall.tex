@@ -1,0 +1,50 @@
+\hypertarget{classTaskCall}{}\doxysection{Task\+Call Class Reference}
+\label{classTaskCall}\index{TaskCall@{TaskCall}}
+
+
+The function call interface is used to define the implementation for all function call ast nodes.  
+
+
+
+
+{\ttfamily \#include $<$Task\+Call.\+h$>$}
+
+Inheritance diagram for Task\+Call\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{da/dc6/classTaskCall}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTaskCall_aa7580340a6134c41b8496262e3eebfb3}\label{classTaskCall_aa7580340a6134c41b8496262e3eebfb3}} 
+{\bfseries Task\+Call} (const \mbox{\hyperlink{classPosition}{Position}} \&position, const std\+::string \&function\+\_\+name, const std\+::list$<$ \mbox{\hyperlink{classExpression}{Expression}} $\ast$const $>$ \&concat\+\_\+list)
+\item 
+\mbox{\Hypertarget{classTaskCall_a89c666d1ad20d068de233c853045232e}\label{classTaskCall_a89c666d1ad20d068de233c853045232e}} 
+{\bfseries Task\+Call} (const \mbox{\hyperlink{classTaskCall}{Task\+Call}} \&func\+\_\+call)
+\item 
+\mbox{\Hypertarget{classTaskCall_a9698955ddc41e69e229176e62a029b50}\label{classTaskCall_a9698955ddc41e69e229176e62a029b50}} 
+virtual void \mbox{\hyperlink{classTaskCall_a9698955ddc41e69e229176e62a029b50}{code\+\_\+gen}} () const
+\begin{DoxyCompactList}\small\item\em The code gen method generates the LLVM ir for the statement. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTaskCall_a52bd99cd6e402d37f734faefa64d2f97}\label{classTaskCall_a52bd99cd6e402d37f734faefa64d2f97}} 
+virtual void const {\bfseries execute} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+The function call interface is used to define the implementation for all function call ast nodes. 
+
+\begin{DoxyAuthor}{Author}
+Jacob Bauer 
+\end{DoxyAuthor}
+
+
+Definition at line 19 of file Task\+Call.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/ast/statement/task\+\_\+call/Task\+Call.\+h\end{DoxyCompactItemize}

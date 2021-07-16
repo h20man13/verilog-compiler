@@ -9,13 +9,14 @@
 #define INDEX_H
 
 #include "ast/expression/Expression.h"
+#include "ast/expression/LValue.h"
 #include <list>
 
 /**
  * The index class is used so simulate something similar to indexing an array. it contains an identifier that is followed by an expression
  * (Ex: i[4] -- fetches the 4th element in data structure i)
  */
-class Index: Expression{
+class Index: Expression, LValue{
 private:
 	const std::string lexeme; //the identifier belonging to the index
 	Expression* const index; //the index of the expression
@@ -55,6 +56,8 @@ public:
 	 */
 
 	~Index();
+
+	ObjBase* const access() const;
 
 };
 

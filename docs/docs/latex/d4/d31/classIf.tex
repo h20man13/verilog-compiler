@@ -1,0 +1,65 @@
+\hypertarget{classIf}{}\doxysection{If Class Reference}
+\label{classIf}\index{If@{If}}
+
+
+The statement abstract class is used to store statement objects on the ast tree.  
+
+
+
+
+{\ttfamily \#include $<$If.\+h$>$}
+
+Inheritance diagram for If\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{d4/d31/classIf}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classIf_a0bed9bb94f9681ac0533e2b0f7457a01}\label{classIf_a0bed9bb94f9681ac0533e2b0f7457a01}} 
+{\bfseries If} (const \mbox{\hyperlink{classPosition}{Position}} \&position, \mbox{\hyperlink{classExpression}{Expression}} $\ast$const check, \mbox{\hyperlink{classStatement}{Statement}} $\ast$const statement)
+\item 
+\mbox{\Hypertarget{classIf_afb097a0451af9b7f4bd27e557406333f}\label{classIf_afb097a0451af9b7f4bd27e557406333f}} 
+void \mbox{\hyperlink{classIf_afb097a0451af9b7f4bd27e557406333f}{code\+\_\+gen}} () const
+\begin{DoxyCompactList}\small\item\em The code gen method generates the LLVM ir for the statement. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classIf_a4d3642fa3a52b6bce9edab3c36155374}{execute}} () const
+\begin{DoxyCompactList}\small\item\em The execute method is used to interpret statements. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The statement abstract class is used to store statement objects on the ast tree. 
+
+\begin{DoxyAuthor}{Author}
+Jacob Bauer 
+\end{DoxyAuthor}
+
+
+Definition at line 21 of file If.\+h.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classIf_a4d3642fa3a52b6bce9edab3c36155374}\label{classIf_a4d3642fa3a52b6bce9edab3c36155374}} 
+\index{If@{If}!execute@{execute}}
+\index{execute@{execute}!If@{If}}
+\doxysubsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily void If\+::execute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+The execute method is used to interpret statements. 
+
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classStatement_a03e3229a95c2803cdd19a5595b68cd51}{Statement}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/ast/statement/If.\+h\end{DoxyCompactItemize}

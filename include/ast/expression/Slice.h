@@ -9,6 +9,7 @@
 #define SLICE_H
 
 #include "ast/expression/Expression.h"
+#include "ast/expression/LValue.h"
 #include <list>
 
 class Slice: Expression{
@@ -46,6 +47,11 @@ public:
 	ObjBase* const evaluate();
 
 	~Slice();
+
+	/**
+	 * The evaluate method is used access a range of elements
+	 */
+	ObjBase* const access() const;
 
 };
 

@@ -13,6 +13,14 @@ FunctionCall::FunctionCall(const FunctionCall& func_call): Expression(func_call.
 	}
 }
 
+void FunctionCall::code_gen() const{
+	//LLVM ir goes here
+}
+
+ObjBase* const FunctionCall::evaluate(){
+	return NULL;
+}
+
 FunctionCall::~FunctionCall(){
 	while(!param_list.empty()){
 		Expression* const exp = param_list.front();
