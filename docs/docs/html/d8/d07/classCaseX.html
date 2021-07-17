@@ -81,12 +81,12 @@ Inheritance diagram for CaseX:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a95b7517b13204864877cf86b36c4c388"><td class="memItemLeft" align="right" valign="top"><a id="a95b7517b13204864877cf86b36c4c388"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>CaseX</b> (const <a class="el" href="../../da/d8b/classPosition.html">Position</a> &amp;position, std::list&lt; const <a class="el" href="../../d9/de9/classCaseItem.html">CaseItem</a> * &gt; item_list)</td></tr>
-<tr class="separator:a95b7517b13204864877cf86b36c4c388"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0bee0f925d7757f28c1d5871aa511f65"><td class="memItemLeft" align="right" valign="top">void const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d07/classCaseX.html#a0bee0f925d7757f28c1d5871aa511f65">execute</a> () const</td></tr>
-<tr class="memdesc:a0bee0f925d7757f28c1d5871aa511f65"><td class="mdescLeft">&#160;</td><td class="mdescRight">The execute method is used to interpret statements.  <a href="../../d8/d07/classCaseX.html#a0bee0f925d7757f28c1d5871aa511f65">More...</a><br /></td></tr>
-<tr class="separator:a0bee0f925d7757f28c1d5871aa511f65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d7a8fd688a6115ad9178b76bef32198"><td class="memItemLeft" align="right" valign="top"><a id="a0d7a8fd688a6115ad9178b76bef32198"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>CaseX</b> (const <a class="el" href="../../da/d8b/classPosition.html">Position</a> &amp;position, <a class="el" href="../../de/d94/classExpression.html">Expression</a> *const expression, std::list&lt; <a class="el" href="../../d9/de9/classCaseItem.html">CaseItem</a> *const &gt; &amp;item_list)</td></tr>
+<tr class="separator:a0d7a8fd688a6115ad9178b76bef32198"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b8b9f914c255992b3dbdc1d035135e8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d07/classCaseX.html#a2b8b9f914c255992b3dbdc1d035135e8">execute</a> () const</td></tr>
+<tr class="memdesc:a2b8b9f914c255992b3dbdc1d035135e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">The execute method is used to interpret statements.  <a href="../../d8/d07/classCaseX.html#a2b8b9f914c255992b3dbdc1d035135e8">More...</a><br /></td></tr>
+<tr class="separator:a2b8b9f914c255992b3dbdc1d035135e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e19ffc4a5d9454c0f9cb36a742d5f2b"><td class="memItemLeft" align="right" valign="top"><a id="a5e19ffc4a5d9454c0f9cb36a742d5f2b"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d07/classCaseX.html#a5e19ffc4a5d9454c0f9cb36a742d5f2b">code_gen</a> () const</td></tr>
 <tr class="memdesc:a5e19ffc4a5d9454c0f9cb36a742d5f2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The code gen method generates the LLVM ir for the statement. <br /></td></tr>
@@ -96,8 +96,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
 <div class="textblock">
 <p class="definition">Definition at line <a class="el" href="../../d5/de5/CaseX_8h_source.html#l00015">15</a> of file <a class="el" href="../../d5/de5/CaseX_8h_source.html">CaseX.h</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a0bee0f925d7757f28c1d5871aa511f65"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0bee0f925d7757f28c1d5871aa511f65">&#9670;&nbsp;</a></span>execute()</h2>
+<a id="a2b8b9f914c255992b3dbdc1d035135e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b8b9f914c255992b3dbdc1d035135e8">&#9670;&nbsp;</a></span>execute()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -106,7 +106,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void const CaseX::execute </td>
+          <td class="memname">void CaseX::execute </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -122,12 +122,15 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
 <p>The execute method is used to interpret statements. </p>
 <dl class="section return"><dt>Returns</dt><dd>None </dd></dl>
 
-<p>Reimplemented from <a class="el" href="../../dd/dd9/classCase.html#a572d1774de2cb162ad995fc0e61ed43d">Case</a>.</p>
+<p>Reimplemented from <a class="el" href="../../dd/dd9/classCase.html#ac722f1d7eccdb0e8e37cb73498feeef0">Case</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="../../d2/dba/CaseX_8cpp_source.html#l00005">5</a> of file <a class="el" href="../../d2/dba/CaseX_8cpp_source.html">CaseX.cpp</a>.</p>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>include/ast/statement/case/<a class="el" href="../../d5/de5/CaseX_8h_source.html">CaseX.h</a></li>
+<li>src/ast/statement/case/<a class="el" href="../../d2/dba/CaseX_8cpp_source.html">CaseX.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

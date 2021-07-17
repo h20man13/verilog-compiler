@@ -15,13 +15,13 @@
 class CaseX: Case{
 protected:
 
-	CaseX(const Position& position, std::list<const CaseItem*> item_list);
+	CaseX(const Position& position, Expression* const expression, std::list<CaseItem* const> &item_list);
 
-	void const execute() const;
+	void execute() const;
 
 	void code_gen() const;
 };
 
 
 
-#endif /* INCLUDE_AST_STATEMENT_CASE_CASE_H_ */
+#endif

@@ -15,13 +15,14 @@
 
 class Case: Statement{
 protected:
-	std::list<const CaseItem*> item_list;
+	std::list<CaseItem* const> item_list;
 	Expression* const expression;
 
-	Case(const Position& position, std::list<const CaseItem*> item_list, Expression* const expression);
+	Case(const Position& position, Expression* const expression, std::list<CaseItem* const> &item_list);
+
 	~Case();
 
-	virtual void const execute() const;
+	virtual void execute() const;
 
 	virtual void code_gen() const;
 };

@@ -21,9 +21,7 @@ protected:
 	Assignment(const Position& position, LValue* const left, Expression* const right);
 	LValue* const left;
 	Expression* const right;
-private:
-
-	~Assignment();
+public:
 
 	/**
 	 *
@@ -37,6 +35,9 @@ private:
 	 * The code gen method generates the LLVM ir for the statement
 	 */
 	virtual void code_gen() const = 0;
+
+
+	~Assignment();
 };
 
 

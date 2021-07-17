@@ -5,7 +5,7 @@
 %%For: 
 %Magnification: 1.00
 %%Orientation: Portrait
-%%BoundingBox: 0 0 500 1192.660522
+%%BoundingBox: 0 0 500 1100.917480
 %%Pages: 0
 %%BeginSetup
 %%EndSetup
@@ -19,12 +19,12 @@
 /marginwidth 10 def
 /distx 20 def
 /disty 40 def
-/boundaspect 0.419231 def  % aspect ratio of the BoundingBox (width/height)
+/boundaspect 0.454167 def  % aspect ratio of the BoundingBox (width/height)
 /boundx 500 def
 /boundy boundx boundaspect div def
 /xspacing 0 def
 /yspacing 0 def
-/rows 13 def
+/rows 12 def
 /cols 2 def
 /scalefactor 0 def
 /boxfont /Times-Roman findfont fontheight scalefont def
@@ -180,7 +180,6 @@ boxfont setfont
 (For) cw
 (Forever) cw
 (If) cw
-(IfElse) cw
 (Repeat) cw
 (SequentialBlock) cw
 (TaskCall) cw
@@ -197,16 +196,16 @@ boundx scalefactor div boundy scalefactor div scale
 
 % ----- classes -----
 
- (Statement) 0.000000 12.000000 box
- (Assignment) 1.000000 11.000000 box
-1.000000 11.000000 mark
- (Case) 1.000000 10.000000 box
+ (Statement) 0.000000 11.000000 box
+ (Assignment) 1.000000 10.000000 box
 1.000000 10.000000 mark
- (EmptyStatement) 1.000000 9.000000 box
- (For) 1.000000 8.000000 box
- (Forever) 1.000000 7.000000 box
- (If) 1.000000 6.000000 box
- (IfElse) 1.000000 5.000000 box
+ (Case) 1.000000 9.000000 box
+1.000000 9.000000 mark
+ (EmptyStatement) 1.000000 8.000000 box
+ (For) 1.000000 7.000000 box
+ (Forever) 1.000000 6.000000 box
+ (If) 1.000000 5.000000 box
+1.000000 5.000000 mark
  (Repeat) 1.000000 4.000000 box
  (SequentialBlock) 1.000000 3.000000 box
  (TaskCall) 1.000000 2.000000 box
@@ -217,9 +216,7 @@ boundx scalefactor div boundy scalefactor div scale
 % ----- relations -----
 
 solid
-1 0.000000 11.250000 out
-dotted
-0 0.000000 11.500000 hedge
+1 0.000000 10.250000 out
 dotted
 0 0.000000 10.500000 hedge
 dotted
@@ -230,7 +227,7 @@ dotted
 0 0.000000 7.500000 hedge
 dotted
 0 0.000000 6.500000 hedge
-dotted
+solid
 0 0.000000 5.500000 hedge
 dotted
 0 0.000000 4.500000 hedge
@@ -243,4 +240,4 @@ dotted
 dotted
 0 0.000000 0.500000 hedge
 solid
-0.000000 12.000000 0.500000 vedge
+0.000000 11.000000 0.500000 vedge

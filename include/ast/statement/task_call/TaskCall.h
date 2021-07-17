@@ -28,7 +28,7 @@ public:
 
 	virtual void code_gen() const;
 
-	virtual void const execute();
+	virtual void execute() const;
 
 	~TaskCall();
 

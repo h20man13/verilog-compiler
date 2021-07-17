@@ -5,8 +5,8 @@
  *      Author: jacob
  */
 
-#ifndef IFELSE_H
-#define IFELSE_H
+#ifndef IF_H
+#define IF_H
 
 #include "common/Position.h"
 #include "common/types/ObjBase.h"
@@ -18,23 +18,21 @@
  * @author Jacob Bauer
  */
 
-class IfElse: Statement{
+class If: public Statement{
 
-	private:
-	Expression* const check;
-	Statement* const cond_statement;
-	Statement* const def_statement;
 
-	~IfElse();
+protected:
+Expression *const check;
+Statement *const if_statement;
 
-	public:
+public:
 
-	IfElse(const Position& position, Expression* const check, Statement* const cond_statement, Statement* const def_statement);
+	If(const Position &position, Expression *const check, Statement *const if_statement);
 
 	/**
 	 * The code gen method generates the LLVM ir for the statement
 	 */
-	void code_gen() const;
+	virtual void code_gen() const;
 
 	/**
 	 *
@@ -42,7 +40,9 @@ class IfElse: Statement{
 	 * @return None
 	 */
 
-	void execute() const;
+	virtual void execute() const;
+
+	virtual ~If();
 };
 
 

@@ -25,11 +25,13 @@ class For: Statement{
 	Expression* const check;
 	Statement* const incriment;
 
+	Statement* const body;
+
 	~For();
 
 	public:
 
-	For(const Position& position, Statement* const init, Expression* const check, Statement* const incriment);
+	For(const Position& position, Statement* const init, Expression* const check, Statement* const incriment, Statement* const body);
 
 	/**
 	 * The code gen method generates the LLVM ir for the statement

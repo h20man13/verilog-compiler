@@ -22,7 +22,6 @@ class Statement{
 	const Position position; //position to store the position of the statement object
 
 	protected:
-	virtual ~Statement();
 	Statement(const Position& position);
 
 	public:
@@ -39,6 +38,8 @@ class Statement{
 	 */
 
 	virtual void execute() const = 0;
+
+	virtual ~Statement() = 0;
 
 	/**
 	 * Gets the position of the current statement ast node

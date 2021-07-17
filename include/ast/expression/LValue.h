@@ -8,13 +8,14 @@
 #ifndef LVALUE_H
 #define LVALUE_H
 
+#include "common/types/ObjBase.h"
+
 class LValue{
 
 protected:
 	virtual ObjBase* const access() const = 0;
-
-	virtual ~LValue();
-
+public:
+   virtual ~LValue() = 0;
 };
 
 

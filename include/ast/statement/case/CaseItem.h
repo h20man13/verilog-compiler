@@ -14,7 +14,6 @@
 class CaseItem{
 private:
 	Statement* const statement;
-	virtual ~CaseItem();
 protected:
 	CaseItem(Statement* const statement);
 public:
@@ -23,7 +22,7 @@ public:
 	virtual const bool match() = 0;
 
 	Statement* const get_statement() const;
-
+	virtual ~CaseItem();
 };
 
 

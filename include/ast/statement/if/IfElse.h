@@ -5,11 +5,12 @@
  *      Author: jacob
  */
 
-#ifndef IF_H
-#define IF_H
+#ifndef IFELSE_H
+#define IFELSE_H
 
 #include "common/Position.h"
 #include "common/types/ObjBase.h"
+#include "ast/statement/if/If.h"
 #include "ast/statement/Statement.h"
 #include "ast/expression/Expression.h"
 
@@ -18,17 +19,16 @@
  * @author Jacob Bauer
  */
 
-class If: Statement{
+class IfElse: public If{
 
 	private:
-	Expression* const check;
-	Statement* const statement;
+	Statement* const else_statement;
 
-	~If();
+	~IfElse();
 
 	public:
 
-	If(const Position& position, Expression* const check, Statement* const statement);
+	IfElse(const Position& position, Expression* const check, Statement* const if_statement, Statement* const else_statement);
 
 	/**
 	 * The code gen method generates the LLVM ir for the statement

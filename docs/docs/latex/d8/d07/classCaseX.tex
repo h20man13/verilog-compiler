@@ -9,10 +9,10 @@ Inheritance diagram for CaseX\+:\begin{figure}[H]
 \doxysubsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classCaseX_a95b7517b13204864877cf86b36c4c388}\label{classCaseX_a95b7517b13204864877cf86b36c4c388}} 
-{\bfseries CaseX} (const \mbox{\hyperlink{classPosition}{Position}} \&position, std\+::list$<$ const \mbox{\hyperlink{classCaseItem}{Case\+Item}} $\ast$ $>$ item\+\_\+list)
+\mbox{\Hypertarget{classCaseX_a0d7a8fd688a6115ad9178b76bef32198}\label{classCaseX_a0d7a8fd688a6115ad9178b76bef32198}} 
+{\bfseries CaseX} (const \mbox{\hyperlink{classPosition}{Position}} \&position, \mbox{\hyperlink{classExpression}{Expression}} $\ast$const expression, std\+::list$<$ \mbox{\hyperlink{classCaseItem}{Case\+Item}} $\ast$const $>$ \&item\+\_\+list)
 \item 
-void const \mbox{\hyperlink{classCaseX_a0bee0f925d7757f28c1d5871aa511f65}{execute}} () const
+void \mbox{\hyperlink{classCaseX_a2b8b9f914c255992b3dbdc1d035135e8}{execute}} () const
 \begin{DoxyCompactList}\small\item\em The execute method is used to interpret statements. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classCaseX_a5e19ffc4a5d9454c0f9cb36a742d5f2b}\label{classCaseX_a5e19ffc4a5d9454c0f9cb36a742d5f2b}} 
 void \mbox{\hyperlink{classCaseX_a5e19ffc4a5d9454c0f9cb36a742d5f2b}{code\+\_\+gen}} () const
@@ -27,11 +27,11 @@ Definition at line 15 of file Case\+X.\+h.
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{classCaseX_a0bee0f925d7757f28c1d5871aa511f65}\label{classCaseX_a0bee0f925d7757f28c1d5871aa511f65}} 
+\mbox{\Hypertarget{classCaseX_a2b8b9f914c255992b3dbdc1d035135e8}\label{classCaseX_a2b8b9f914c255992b3dbdc1d035135e8}} 
 \index{CaseX@{CaseX}!execute@{execute}}
 \index{execute@{execute}!CaseX@{CaseX}}
 \doxysubsubsection{\texorpdfstring{execute()}{execute()}}
-{\footnotesize\ttfamily void const Case\+X\+::execute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily void Case\+X\+::execute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
 
 
 
@@ -42,10 +42,15 @@ None
 \end{DoxyReturn}
 
 
-Reimplemented from \mbox{\hyperlink{classCase_a572d1774de2cb162ad995fc0e61ed43d}{Case}}.
+Reimplemented from \mbox{\hyperlink{classCase_ac722f1d7eccdb0e8e37cb73498feeef0}{Case}}.
 
 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+Definition at line 5 of file Case\+X.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-include/ast/statement/case/Case\+X.\+h\end{DoxyCompactItemize}
+include/ast/statement/case/Case\+X.\+h\item 
+src/ast/statement/case/Case\+X.\+cpp\end{DoxyCompactItemize}

@@ -24,12 +24,11 @@ Inheritance diagram for Task\+Call\+:\begin{figure}[H]
 \mbox{\Hypertarget{classTaskCall_a89c666d1ad20d068de233c853045232e}\label{classTaskCall_a89c666d1ad20d068de233c853045232e}} 
 {\bfseries Task\+Call} (const \mbox{\hyperlink{classTaskCall}{Task\+Call}} \&func\+\_\+call)
 \item 
-\mbox{\Hypertarget{classTaskCall_a9698955ddc41e69e229176e62a029b50}\label{classTaskCall_a9698955ddc41e69e229176e62a029b50}} 
-virtual void \mbox{\hyperlink{classTaskCall_a9698955ddc41e69e229176e62a029b50}{code\+\_\+gen}} () const
+\mbox{\Hypertarget{classTaskCall_acc0496ddfcd39a461236ce21419a03c5}\label{classTaskCall_acc0496ddfcd39a461236ce21419a03c5}} 
+virtual void \mbox{\hyperlink{classTaskCall_acc0496ddfcd39a461236ce21419a03c5}{code\+\_\+gen}} () const
 \begin{DoxyCompactList}\small\item\em The code gen method generates the LLVM ir for the statement. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classTaskCall_a52bd99cd6e402d37f734faefa64d2f97}\label{classTaskCall_a52bd99cd6e402d37f734faefa64d2f97}} 
-virtual void const {\bfseries execute} ()
-\end{DoxyCompactItemize}
+virtual void \mbox{\hyperlink{classTaskCall_a987cf5e14213867b41f9de803fc79adc}{execute}} () const
+\begin{DoxyCompactList}\small\item\em The execute method is used to interpret statements. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
 
 
@@ -45,6 +44,35 @@ Definition at line 19 of file Task\+Call.\+h.
 
 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classTaskCall_a987cf5e14213867b41f9de803fc79adc}\label{classTaskCall_a987cf5e14213867b41f9de803fc79adc}} 
+\index{TaskCall@{TaskCall}!execute@{execute}}
+\index{execute@{execute}!TaskCall@{TaskCall}}
+\doxysubsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily void Task\+Call\+::execute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+The execute method is used to interpret statements. 
+
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classStatement_a03e3229a95c2803cdd19a5595b68cd51}{Statement}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classSystemTaskCall_a49043b5c03019209675de1d5c5ad7575}{System\+Task\+Call}}.
+
+
+
+Definition at line 20 of file Task\+Call.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-include/ast/statement/task\+\_\+call/Task\+Call.\+h\end{DoxyCompactItemize}
+include/ast/statement/task\+\_\+call/Task\+Call.\+h\item 
+src/ast/statement/task\+\_\+call/Task\+Call.\+cpp\end{DoxyCompactItemize}

@@ -39,13 +39,6 @@ class SequentialBlock: Statement{
 	 */
 
 	void execute() const;
-
-	/**
-	 * Gets the position of the current statement ast node
-	 * @return the position of the ast node
-	 */
-
-	const Position get_position() const;
 };
 
 
