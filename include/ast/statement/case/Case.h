@@ -19,6 +19,7 @@ protected:
 	Expression* const expression;
 
 	Case(const Position& position, Expression* const expression, std::list<CaseItem* const> &item_list);
+	Case(const Case& case_stat);
 
 	~Case();
 

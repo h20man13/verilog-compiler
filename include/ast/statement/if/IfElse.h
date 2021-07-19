@@ -30,6 +30,8 @@ class IfElse: public If{
 
 	IfElse(const Position& position, Expression* const check, Statement* const if_statement, Statement* const else_statement);
 
+	IfElse(const IfElse& if_else);
+
 	/**
 	 * The code gen method generates the LLVM ir for the statement
 	 */

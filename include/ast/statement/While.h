@@ -30,6 +30,8 @@ class While: Statement{
 
 	While(const Position& position, Expression* const check, Statement* const statement);
 
+	While(const While& while_stat);
+
 	/**
 	 * The code gen method generates the LLVM ir for the statement
 	 */

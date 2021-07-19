@@ -27,6 +27,8 @@ class SequentialBlock: Statement{
 
 	SequentialBlock(const Position& position, std::list<Statement* const> statement_list);
 
+	SequentialBlock(const SequentialBlock& seq_block);
+
 	/**
 	 * The code gen method generates the LLVM ir for the statement
 	 */

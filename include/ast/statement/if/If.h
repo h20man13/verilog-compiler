@@ -29,6 +29,8 @@ public:
 
 	If(const Position &position, Expression *const check, Statement *const if_statement);
 
+	If(const If& if_stat);
+
 	/**
 	 * The code gen method generates the LLVM ir for the statement
 	 */

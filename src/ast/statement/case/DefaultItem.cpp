@@ -2,6 +2,8 @@
 
 DefaultItem::DefaultItem(Statement* const statement): CaseItem(statement){}
 
+DefaultItem::DefaultItem(const DefaultItem& item): CaseItem(item){}
+
 const bool DefaultItem::matchX(){
 	return true;
 }

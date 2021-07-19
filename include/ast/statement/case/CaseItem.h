@@ -16,6 +16,7 @@ private:
 	Statement* const statement;
 protected:
 	CaseItem(Statement* const statement);
+	CaseItem(const CaseItem& item);
 public:
 	virtual const bool matchX() = 0;
 	virtual const bool matchZ() = 0;

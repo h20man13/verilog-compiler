@@ -19,6 +19,7 @@
 class Continuous: Assignment{
 protected:
 	Continuous(const Position& position, LValue* const left, Expression* const right);
+	Continuous(const Continuous& assignment);
 private:
 
 	/**

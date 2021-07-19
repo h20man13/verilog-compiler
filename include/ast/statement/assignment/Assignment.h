@@ -19,6 +19,7 @@
 class Assignment: Statement{
 protected:
 	Assignment(const Position& position, LValue* const left, Expression* const right);
+	Assignment(const Assignment& assignment);
 	LValue* const left;
 	Expression* const right;
 public:

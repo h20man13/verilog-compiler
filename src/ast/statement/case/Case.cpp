@@ -10,6 +10,12 @@ Case::Case(const Position& position, Expression* const expression, std::list<Cas
 	}
 }
 
+Case::Case(const Case& case_stat): Statement(case_stat.get_position()), expression(case_stat.expression){
+	for(std::list<CaseItem* const>::const_iterator it = case_stat.item_list.begin(); it != case_stat.item_list.end(); it++){
+		this->item_list.push_back(*it);
+	}
+}
+
 Case::~Case(){
 	delete expression;
 	while(!item_list.empty()){

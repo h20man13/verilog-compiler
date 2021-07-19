@@ -16,9 +16,9 @@
 class ExprItem: CaseItem{
 private:
 	Expression* const expression;
-protected:
-	ExprItem(Expression* const expression, Statement* const statement);
 public:
+	ExprItem(Expression* const expression, Statement* const statement);
+	ExprItem(const ExprItem& item);
 	const bool matchX();
 	const bool matchZ();
 	const bool match();

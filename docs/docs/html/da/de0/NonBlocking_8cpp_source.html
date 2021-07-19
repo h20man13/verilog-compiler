@@ -76,17 +76,20 @@ $(function() {
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;NonBlocking::NonBlocking(<span class="keyword">const</span> <a class="code" href="../../da/d8b/classPosition.html">Position</a>&amp; position, <a class="code" href="../../d3/d29/classLValue.html">LValue</a>* <span class="keyword">const</span> left, <a class="code" href="../../de/d94/classExpression.html">Expression</a>* <span class="keyword">const</span> right): <a class="code" href="../../d1/da2/classAssignment.html">Assignment</a>(position, left, right){}</div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keywordtype">void</span> NonBlocking::execute()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;NonBlocking::NonBlocking(<span class="keyword">const</span> <a class="code" href="../../da/dab/classNonBlocking.html">NonBlocking</a>&amp; assignment): <a class="code" href="../../d1/da2/classAssignment.html">Assignment</a>(assignment){}</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;}</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keywordtype">void</span> NonBlocking::execute()<span class="keyword"> const </span>{</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keywordtype">void</span> NonBlocking::code_gen()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;}</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;}</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keywordtype">void</span> NonBlocking::code_gen()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;}</div>
 <div class="ttc" id="aclassAssignment_html"><div class="ttname"><a href="../../d1/da2/classAssignment.html">Assignment</a></div><div class="ttdoc">The assignment template is used to create assignments in verilog.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d65/Assignment_8h_source.html#l00019">Assignment.h:19</a></div></div>
 <div class="ttc" id="aclassExpression_html"><div class="ttname"><a href="../../de/d94/classExpression.html">Expression</a></div><div class="ttdoc">The Expression is an Interface that can be used to represent Expressions.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d6e/Expression_8h_source.html#l00020">Expression.h:20</a></div></div>
 <div class="ttc" id="aclassLValue_html"><div class="ttname"><a href="../../d3/d29/classLValue.html">LValue</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dfa/LValue_8h_source.html#l00013">LValue.h:13</a></div></div>
+<div class="ttc" id="aclassNonBlocking_html"><div class="ttname"><a href="../../da/dab/classNonBlocking.html">NonBlocking</a></div><div class="ttdoc">The assignment template is used to create assignments in verilog.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d16/NonBlocking_8h_source.html#l00019">NonBlocking.h:19</a></div></div>
 <div class="ttc" id="aclassPosition_html"><div class="ttname"><a href="../../da/d8b/classPosition.html">Position</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/dff/Position_8h_source.html#l00006">Position.h:6</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

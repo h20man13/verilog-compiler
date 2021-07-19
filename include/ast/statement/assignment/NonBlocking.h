@@ -19,6 +19,7 @@
 class NonBlocking: Assignment{
 protected:
 	NonBlocking(const Position& position, LValue* const left, Expression* const right);
+	NonBlocking(const NonBlocking& assignment);
 private:
 
 	/**

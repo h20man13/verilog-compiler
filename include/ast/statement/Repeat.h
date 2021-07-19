@@ -30,6 +30,8 @@ class Repeat: Statement{
 
 	Repeat(const Position& position, Expression* const check, Statement* const statement);
 
+	Repeat(const Repeat& repeat);
+
 	/**
 	 * The code gen method generates the LLVM ir for the statement
 	 */

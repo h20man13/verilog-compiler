@@ -21,11 +21,12 @@ class Statement{
     private:
 	const Position position; //position to store the position of the statement object
 
-	protected:
-	Statement(const Position& position);
 
 	public:
 
+	Statement(const Position& position);
+
+	Statement(const Statement& stat);
 	/**
 	 * The code gen method generates the LLVM ir for the statement
 	 */

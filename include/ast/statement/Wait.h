@@ -30,6 +30,8 @@ class Wait: Statement{
 
 	Wait(const Position& position, Expression* const check, Statement* const statement);
 
+	Wait(const Wait& wait);
+
 	/**
 	 * The code gen method generates the LLVM ir for the statement
 	 */

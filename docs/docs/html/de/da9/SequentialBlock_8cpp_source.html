@@ -73,31 +73,38 @@ $(function() {
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;ast/statement/SequentialBlock.h&quot;</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;SequentialBlock::~SequentialBlock(){</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    <span class="keywordflow">while</span>(!statement_list.empty()){</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;        <a class="code" href="../../d6/de7/classStatement.html">Statement</a>* <span class="keyword">const</span> statement = *(statement_list.begin());</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;        statement_list.pop_front();</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;        <span class="keyword">delete</span> statement;</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    }</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;}</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;SequentialBlock::SequentialBlock(<span class="keyword">const</span> <a class="code" href="../../da/d8b/classPosition.html">Position</a>&amp; position, std::list&lt;Statement* const&gt; statement_list): <a class="code" href="../../d6/de7/classStatement.html">Statement</a>(position){</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keywordflow">for</span>(std::list&lt;Statement* const&gt;::const_iterator it = statement_list.begin(); it != statement_list.end(); it++){</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        this-&gt;statement_list.push_back(*it);</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    }</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;}</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="../../d6/d04/classSequentialBlock.html#a8f6894a421bc1fc3aaeb6e90cd9cf2c3">   19</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d6/d04/classSequentialBlock.html#a8f6894a421bc1fc3aaeb6e90cd9cf2c3">SequentialBlock::code_gen</a>()<span class="keyword"> const</span>{</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;}</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="../../d6/d04/classSequentialBlock.html#af443e5ba52d51a95a9384f50f9f2c8fb">   23</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d6/d04/classSequentialBlock.html#af443e5ba52d51a95a9384f50f9f2c8fb">SequentialBlock::execute</a>()<span class="keyword"> const</span>{</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;SequentialBlock::SequentialBlock(<span class="keyword">const</span> <a class="code" href="../../da/d8b/classPosition.html">Position</a>&amp; position, std::list&lt;Statement* const&gt; statement_list): <a class="code" href="../../d6/de7/classStatement.html">Statement</a>(position){</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    <span class="keywordflow">for</span>(std::list&lt;Statement* const&gt;::const_iterator it = statement_list.begin(); it != statement_list.end(); it++){</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;        this-&gt;statement_list.push_back(*it);</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    }</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;}</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;SequentialBlock::SequentialBlock(<span class="keyword">const</span> <a class="code" href="../../d6/d04/classSequentialBlock.html">SequentialBlock</a>&amp; block): <a class="code" href="../../d6/de7/classStatement.html">Statement</a>(block.get_position()){</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keywordflow">for</span>(std::list&lt;Statement* const&gt;::const_iterator it = block.statement_list.begin(); it != block.statement_list.end(); it++){</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        this-&gt;statement_list.push_back(*it);</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    }</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;}</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;SequentialBlock::~SequentialBlock(){</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordflow">while</span>(!statement_list.empty()){</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <a class="code" href="../../d6/de7/classStatement.html">Statement</a>* <span class="keyword">const</span> statement = *(statement_list.begin());</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        statement_list.pop_front();</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keyword">delete</span> statement;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    }</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;}</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;}</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="../../d6/d04/classSequentialBlock.html#a8f6894a421bc1fc3aaeb6e90cd9cf2c3">   25</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d6/d04/classSequentialBlock.html#a8f6894a421bc1fc3aaeb6e90cd9cf2c3">SequentialBlock::code_gen</a>()<span class="keyword"> const</span>{</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;}</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="../../d6/d04/classSequentialBlock.html#af443e5ba52d51a95a9384f50f9f2c8fb">   29</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d6/d04/classSequentialBlock.html#af443e5ba52d51a95a9384f50f9f2c8fb">SequentialBlock::execute</a>()<span class="keyword"> const</span>{</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}</div>
 <div class="ttc" id="aclassPosition_html"><div class="ttname"><a href="../../da/d8b/classPosition.html">Position</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/dff/Position_8h_source.html#l00006">Position.h:6</a></div></div>
-<div class="ttc" id="aclassSequentialBlock_html_a8f6894a421bc1fc3aaeb6e90cd9cf2c3"><div class="ttname"><a href="../../d6/d04/classSequentialBlock.html#a8f6894a421bc1fc3aaeb6e90cd9cf2c3">SequentialBlock::code_gen</a></div><div class="ttdeci">void code_gen() const</div><div class="ttdoc">The code gen method generates the LLVM ir for the statement.</div><div class="ttdef"><b>Definition:</b> <a href="../../de/da9/SequentialBlock_8cpp_source.html#l00019">SequentialBlock.cpp:19</a></div></div>
-<div class="ttc" id="aclassSequentialBlock_html_af443e5ba52d51a95a9384f50f9f2c8fb"><div class="ttname"><a href="../../d6/d04/classSequentialBlock.html#af443e5ba52d51a95a9384f50f9f2c8fb">SequentialBlock::execute</a></div><div class="ttdeci">void execute() const</div><div class="ttdoc">The execute method is used to interpret statements.</div><div class="ttdef"><b>Definition:</b> <a href="../../de/da9/SequentialBlock_8cpp_source.html#l00023">SequentialBlock.cpp:23</a></div></div>
+<div class="ttc" id="aclassSequentialBlock_html"><div class="ttname"><a href="../../d6/d04/classSequentialBlock.html">SequentialBlock</a></div><div class="ttdoc">The statement abstract class is used to store statement objects on the ast tree.</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d30/SequentialBlock_8h_source.html#l00021">SequentialBlock.h:21</a></div></div>
+<div class="ttc" id="aclassSequentialBlock_html_a8f6894a421bc1fc3aaeb6e90cd9cf2c3"><div class="ttname"><a href="../../d6/d04/classSequentialBlock.html#a8f6894a421bc1fc3aaeb6e90cd9cf2c3">SequentialBlock::code_gen</a></div><div class="ttdeci">void code_gen() const</div><div class="ttdoc">The code gen method generates the LLVM ir for the statement.</div><div class="ttdef"><b>Definition:</b> <a href="../../de/da9/SequentialBlock_8cpp_source.html#l00025">SequentialBlock.cpp:25</a></div></div>
+<div class="ttc" id="aclassSequentialBlock_html_af443e5ba52d51a95a9384f50f9f2c8fb"><div class="ttname"><a href="../../d6/d04/classSequentialBlock.html#af443e5ba52d51a95a9384f50f9f2c8fb">SequentialBlock::execute</a></div><div class="ttdeci">void execute() const</div><div class="ttdoc">The execute method is used to interpret statements.</div><div class="ttdef"><b>Definition:</b> <a href="../../de/da9/SequentialBlock_8cpp_source.html#l00029">SequentialBlock.cpp:29</a></div></div>
 <div class="ttc" id="aclassStatement_html"><div class="ttname"><a href="../../d6/de7/classStatement.html">Statement</a></div><div class="ttdoc">The statement abstract class is used to store statement objects on the ast tree.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dfe/Statement_8h_source.html#l00019">Statement.h:19</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

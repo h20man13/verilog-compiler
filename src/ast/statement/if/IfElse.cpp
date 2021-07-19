@@ -6,8 +6,9 @@ IfElse::~IfElse() {
 	delete else_statement;
 }
 
-IfElse::IfElse(const Position &position, Expression *const check, Statement *const if_statement, Statement *const else_statement) : If(position, check, if_statement), else_statement(else_statement) {
-}
+IfElse::IfElse(const Position &position, Expression *const check, Statement *const if_statement, Statement *const else_statement) : If(position, check, if_statement), else_statement(else_statement) {}
+
+IfElse::IfElse(const IfElse& if_stat): If(if_stat), else_statement(if_stat.else_statement){}
 
 void IfElse::code_gen() const {
 

@@ -82,27 +82,34 @@ $(function() {
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    }</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;}</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;Case::~Case(){</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keyword">delete</span> expression;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordflow">while</span>(!item_list.empty()){</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <a class="code" href="../../d9/de9/classCaseItem.html">CaseItem</a>* <span class="keyword">const</span> item = *(item_list.begin());</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        this-&gt;item_list.pop_front();</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="keyword">delete</span> item;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    }</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;}</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="../../dd/dd9/classCase.html#ac722f1d7eccdb0e8e37cb73498feeef0">   22</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../dd/dd9/classCase.html#ac722f1d7eccdb0e8e37cb73498feeef0">Case::execute</a>()<span class="keyword"> const</span>{</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;}</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="../../dd/dd9/classCase.html#a1df17eccff8189b9d4e5ca013bdd3f00">   26</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../dd/dd9/classCase.html#a1df17eccff8189b9d4e5ca013bdd3f00">Case::code_gen</a>()<span class="keyword"> const</span>{</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;Case::Case(<span class="keyword">const</span> <a class="code" href="../../dd/dd9/classCase.html">Case</a>&amp; case_stat): <a class="code" href="../../d6/de7/classStatement.html">Statement</a>(case_stat.get_position()), expression(case_stat.expression){</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordflow">for</span>(std::list&lt;CaseItem* const&gt;::const_iterator it = case_stat.item_list.begin(); it != case_stat.item_list.end(); it++){</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        this-&gt;item_list.push_back(*it);</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    }</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;}</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;Case::~Case(){</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keyword">delete</span> expression;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordflow">while</span>(!item_list.empty()){</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <a class="code" href="../../d9/de9/classCaseItem.html">CaseItem</a>* <span class="keyword">const</span> item = *(item_list.begin());</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        this-&gt;item_list.pop_front();</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keyword">delete</span> item;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    }</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;}</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;}</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="../../dd/dd9/classCase.html#ac722f1d7eccdb0e8e37cb73498feeef0">   28</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../dd/dd9/classCase.html#ac722f1d7eccdb0e8e37cb73498feeef0">Case::execute</a>()<span class="keyword"> const</span>{</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;}</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="../../dd/dd9/classCase.html#a1df17eccff8189b9d4e5ca013bdd3f00">   32</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../dd/dd9/classCase.html#a1df17eccff8189b9d4e5ca013bdd3f00">Case::code_gen</a>()<span class="keyword"> const</span>{</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;}</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
 <div class="ttc" id="aclassCaseItem_html"><div class="ttname"><a href="../../d9/de9/classCaseItem.html">CaseItem</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d33/CaseItem_8h_source.html#l00014">CaseItem.h:14</a></div></div>
-<div class="ttc" id="aclassCase_html_a1df17eccff8189b9d4e5ca013bdd3f00"><div class="ttname"><a href="../../dd/dd9/classCase.html#a1df17eccff8189b9d4e5ca013bdd3f00">Case::code_gen</a></div><div class="ttdeci">virtual void code_gen() const</div><div class="ttdoc">The code gen method generates the LLVM ir for the statement.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/da6/Case_8cpp_source.html#l00026">Case.cpp:26</a></div></div>
-<div class="ttc" id="aclassCase_html_ac722f1d7eccdb0e8e37cb73498feeef0"><div class="ttname"><a href="../../dd/dd9/classCase.html#ac722f1d7eccdb0e8e37cb73498feeef0">Case::execute</a></div><div class="ttdeci">virtual void execute() const</div><div class="ttdoc">The execute method is used to interpret statements.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/da6/Case_8cpp_source.html#l00022">Case.cpp:22</a></div></div>
+<div class="ttc" id="aclassCase_html"><div class="ttname"><a href="../../dd/dd9/classCase.html">Case</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d1b/Case_8h_source.html#l00016">Case.h:16</a></div></div>
+<div class="ttc" id="aclassCase_html_a1df17eccff8189b9d4e5ca013bdd3f00"><div class="ttname"><a href="../../dd/dd9/classCase.html#a1df17eccff8189b9d4e5ca013bdd3f00">Case::code_gen</a></div><div class="ttdeci">virtual void code_gen() const</div><div class="ttdoc">The code gen method generates the LLVM ir for the statement.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/da6/Case_8cpp_source.html#l00032">Case.cpp:32</a></div></div>
+<div class="ttc" id="aclassCase_html_ac722f1d7eccdb0e8e37cb73498feeef0"><div class="ttname"><a href="../../dd/dd9/classCase.html#ac722f1d7eccdb0e8e37cb73498feeef0">Case::execute</a></div><div class="ttdeci">virtual void execute() const</div><div class="ttdoc">The execute method is used to interpret statements.</div><div class="ttdef"><b>Definition:</b> <a href="../../d2/da6/Case_8cpp_source.html#l00028">Case.cpp:28</a></div></div>
 <div class="ttc" id="aclassExpression_html"><div class="ttname"><a href="../../de/d94/classExpression.html">Expression</a></div><div class="ttdoc">The Expression is an Interface that can be used to represent Expressions.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d6e/Expression_8h_source.html#l00020">Expression.h:20</a></div></div>
 <div class="ttc" id="aclassPosition_html"><div class="ttname"><a href="../../da/d8b/classPosition.html">Position</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/dff/Position_8h_source.html#l00006">Position.h:6</a></div></div>
 <div class="ttc" id="aclassStatement_html"><div class="ttname"><a href="../../d6/de7/classStatement.html">Statement</a></div><div class="ttdoc">The statement abstract class is used to store statement objects on the ast tree.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dfe/Statement_8h_source.html#l00019">Statement.h:19</a></div></div>

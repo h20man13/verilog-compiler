@@ -19,6 +19,7 @@
 class Blocking: Assignment{
 protected:
 	Blocking(const Position& position, LValue* const left, Expression* const right);
+	Blocking(const Blocking& assignment);
 private:
 
 	/**

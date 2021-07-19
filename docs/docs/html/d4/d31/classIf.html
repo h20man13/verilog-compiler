@@ -91,6 +91,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a1d71ed46f34510c86d411897cb66ab9f"><td class="memItemLeft" align="right" valign="top"><a id="a1d71ed46f34510c86d411897cb66ab9f"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>If</b> (const <a class="el" href="../../da/d8b/classPosition.html">Position</a> &amp;position, <a class="el" href="../../de/d94/classExpression.html">Expression</a> *const check, <a class="el" href="../../d6/de7/classStatement.html">Statement</a> *const if_statement)</td></tr>
 <tr class="separator:a1d71ed46f34510c86d411897cb66ab9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aead264b008dd2dcb42fed2ca036447fb"><td class="memItemLeft" align="right" valign="top"><a id="aead264b008dd2dcb42fed2ca036447fb"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>If</b> (const <a class="el" href="../../d4/d31/classIf.html">If</a> &amp;if_stat)</td></tr>
+<tr class="separator:aead264b008dd2dcb42fed2ca036447fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afb097a0451af9b7f4bd27e557406333f"><td class="memItemLeft" align="right" valign="top"><a id="afb097a0451af9b7f4bd27e557406333f"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d31/classIf.html#afb097a0451af9b7f4bd27e557406333f">code_gen</a> () const</td></tr>
 <tr class="memdesc:afb097a0451af9b7f4bd27e557406333f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The code gen method generates the LLVM ir for the statement. <br /></td></tr>
@@ -99,6 +102,12 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="memdesc:a4d3642fa3a52b6bce9edab3c36155374"><td class="mdescLeft">&#160;</td><td class="mdescRight">The execute method is used to interpret statements.  <a href="../../d4/d31/classIf.html#a4d3642fa3a52b6bce9edab3c36155374">More...</a><br /></td></tr>
 <tr class="separator:a4d3642fa3a52b6bce9edab3c36155374"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classStatement"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classStatement')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../d6/de7/classStatement.html">Statement</a></td></tr>
+<tr class="memitem:a767f9b062b7aca5f7fa2ce94fefe71d0 inherit pub_methods_classStatement"><td class="memItemLeft" align="right" valign="top"><a id="a767f9b062b7aca5f7fa2ce94fefe71d0"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Statement</b> (const <a class="el" href="../../da/d8b/classPosition.html">Position</a> &amp;position)</td></tr>
+<tr class="separator:a767f9b062b7aca5f7fa2ce94fefe71d0 inherit pub_methods_classStatement"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab73ba276548bfcab3d06f5bcd8fa20e9 inherit pub_methods_classStatement"><td class="memItemLeft" align="right" valign="top"><a id="ab73ba276548bfcab3d06f5bcd8fa20e9"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Statement</b> (const <a class="el" href="../../d6/de7/classStatement.html">Statement</a> &amp;stat)</td></tr>
+<tr class="separator:ab73ba276548bfcab3d06f5bcd8fa20e9 inherit pub_methods_classStatement"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a357cc2962dfa7bafaa5731755d4550ac inherit pub_methods_classStatement"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../da/d8b/classPosition.html">Position</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/de7/classStatement.html#a357cc2962dfa7bafaa5731755d4550ac">get_position</a> () const</td></tr>
 <tr class="memdesc:a357cc2962dfa7bafaa5731755d4550ac inherit pub_methods_classStatement"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the position of the current statement ast node.  <a href="../../d6/de7/classStatement.html#a357cc2962dfa7bafaa5731755d4550ac">More...</a><br /></td></tr>
 <tr class="separator:a357cc2962dfa7bafaa5731755d4550ac inherit pub_methods_classStatement"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -111,13 +120,6 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:a80e9b7fa99b47e582ca979e3b1809d5c"><td class="memItemLeft" align="right" valign="top"><a id="a80e9b7fa99b47e582ca979e3b1809d5c"></a>
 <a class="el" href="../../d6/de7/classStatement.html">Statement</a> *const&#160;</td><td class="memItemRight" valign="bottom"><b>if_statement</b></td></tr>
 <tr class="separator:a80e9b7fa99b47e582ca979e3b1809d5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
-Additional Inherited Members</h2></td></tr>
-<tr class="inherit_header pro_methods_classStatement"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classStatement')"><img src="../../closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="../../d6/de7/classStatement.html">Statement</a></td></tr>
-<tr class="memitem:a767f9b062b7aca5f7fa2ce94fefe71d0 inherit pro_methods_classStatement"><td class="memItemLeft" align="right" valign="top"><a id="a767f9b062b7aca5f7fa2ce94fefe71d0"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Statement</b> (const <a class="el" href="../../da/d8b/classPosition.html">Position</a> &amp;position)</td></tr>
-<tr class="separator:a767f9b062b7aca5f7fa2ce94fefe71d0 inherit pro_methods_classStatement"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >The statement abstract class is used to store statement objects on the ast tree. </p>
@@ -155,7 +157,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="../../d6/ddc/classIfElse.html#a1db29e916469d96683c23459c2e9725d">IfElse</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="../../d6/d0b/If_8cpp_source.html#l00019">19</a> of file <a class="el" href="../../d6/d0b/If_8cpp_source.html">If.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d6/d0b/If_8cpp_source.html#l00021">21</a> of file <a class="el" href="../../d6/d0b/If_8cpp_source.html">If.cpp</a>.</p>
 
 </div>
 </div>

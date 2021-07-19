@@ -13,9 +13,9 @@
 #include <list>
 
 class DefaultItem: CaseItem{
-protected:
-	DefaultItem(Statement* const statement);
 public:
+	DefaultItem(Statement* const statement);
+	DefaultItem(const DefaultItem& item);
 	const bool matchX();
 	const bool matchZ();
 	const bool match();

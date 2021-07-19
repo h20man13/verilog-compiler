@@ -33,6 +33,8 @@ class For: Statement{
 
 	For(const Position& position, Statement* const init, Expression* const check, Statement* const incriment, Statement* const body);
 
+	For(const For& for_stat);
+
 	/**
 	 * The code gen method generates the LLVM ir for the statement
 	 */

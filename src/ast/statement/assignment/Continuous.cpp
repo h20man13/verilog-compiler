@@ -5,6 +5,8 @@
 
 Continuous::Continuous(const Position& position, LValue* const left, Expression* const right): Assignment(position, left, right){}
 
+Continuous::Continuous(const Continuous& assignment): Assignment(assignment){}
+
 void Continuous::execute() const{
 
 }

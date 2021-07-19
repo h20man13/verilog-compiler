@@ -4,6 +4,8 @@
 
 Blocking::Blocking(const Position& position, LValue* const left, Expression* const right): Assignment(position, left, right){}
 
+Blocking::Blocking(const Blocking& assignment): Assignment(assignment){}
+
 void Blocking::execute() const {
 
 }

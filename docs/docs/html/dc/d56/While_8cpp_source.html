@@ -72,25 +72,28 @@ $(function() {
 <div class="contents">
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;ast/statement/While.h&quot;</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;While::~While() {</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;    <span class="keyword">delete</span> check;</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    <span class="keyword">delete</span> statement;</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;}</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;While::While(<span class="keyword">const</span> <a class="code" href="../../da/d8b/classPosition.html">Position</a> &amp;position, <a class="code" href="../../de/d94/classExpression.html">Expression</a> *<span class="keyword">const</span> check, <a class="code" href="../../d6/de7/classStatement.html">Statement</a> *<span class="keyword">const</span> statement): <a class="code" href="../../d6/de7/classStatement.html">Statement</a>(position), check(check), statement(statement) {}</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
-<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="../../d5/d79/classWhile.html#a08a91c68842cefb38871d8bc7c8d0d26">   10</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d5/d79/classWhile.html#a08a91c68842cefb38871d8bc7c8d0d26">While::code_gen</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;While::While(<span class="keyword">const</span> <a class="code" href="../../da/d8b/classPosition.html">Position</a> &amp;position, <a class="code" href="../../de/d94/classExpression.html">Expression</a> *<span class="keyword">const</span> check, <a class="code" href="../../d6/de7/classStatement.html">Statement</a> *<span class="keyword">const</span> statement): <a class="code" href="../../d6/de7/classStatement.html">Statement</a>(position), check(check), statement(statement) {}</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;While::While(<span class="keyword">const</span> <a class="code" href="../../d5/d79/classWhile.html">While</a>&amp; stat): <a class="code" href="../../d6/de7/classStatement.html">Statement</a>(stat.get_position()), check(stat.check), statement(stat.statement){}</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;While::~While() {</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="keyword">delete</span> check;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="keyword">delete</span> statement;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;}</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;}</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="../../d5/d79/classWhile.html#a08a91c68842cefb38871d8bc7c8d0d26">   12</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d5/d79/classWhile.html#a08a91c68842cefb38871d8bc7c8d0d26">While::code_gen</a>()<span class="keyword"> const </span>{</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="../../d5/d79/classWhile.html#ac7e6ae26ab95e35e882c4cfdf89289cd">   14</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d5/d79/classWhile.html#ac7e6ae26ab95e35e882c4cfdf89289cd">While::execute</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;}</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;}</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="../../d5/d79/classWhile.html#ac7e6ae26ab95e35e882c4cfdf89289cd">   16</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d5/d79/classWhile.html#ac7e6ae26ab95e35e882c4cfdf89289cd">While::execute</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;}</div>
 <div class="ttc" id="aclassExpression_html"><div class="ttname"><a href="../../de/d94/classExpression.html">Expression</a></div><div class="ttdoc">The Expression is an Interface that can be used to represent Expressions.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d6e/Expression_8h_source.html#l00020">Expression.h:20</a></div></div>
 <div class="ttc" id="aclassPosition_html"><div class="ttname"><a href="../../da/d8b/classPosition.html">Position</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/dff/Position_8h_source.html#l00006">Position.h:6</a></div></div>
 <div class="ttc" id="aclassStatement_html"><div class="ttname"><a href="../../d6/de7/classStatement.html">Statement</a></div><div class="ttdoc">The statement abstract class is used to store statement objects on the ast tree.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dfe/Statement_8h_source.html#l00019">Statement.h:19</a></div></div>
-<div class="ttc" id="aclassWhile_html_a08a91c68842cefb38871d8bc7c8d0d26"><div class="ttname"><a href="../../d5/d79/classWhile.html#a08a91c68842cefb38871d8bc7c8d0d26">While::code_gen</a></div><div class="ttdeci">void code_gen() const</div><div class="ttdoc">The code gen method generates the LLVM ir for the statement.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d56/While_8cpp_source.html#l00010">While.cpp:10</a></div></div>
-<div class="ttc" id="aclassWhile_html_ac7e6ae26ab95e35e882c4cfdf89289cd"><div class="ttname"><a href="../../d5/d79/classWhile.html#ac7e6ae26ab95e35e882c4cfdf89289cd">While::execute</a></div><div class="ttdeci">void execute() const</div><div class="ttdoc">The execute method is used to interpret statements.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d56/While_8cpp_source.html#l00014">While.cpp:14</a></div></div>
+<div class="ttc" id="aclassWhile_html"><div class="ttname"><a href="../../d5/d79/classWhile.html">While</a></div><div class="ttdoc">The statement abstract class is used to store statement objects on the ast tree.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d2c/While_8h_source.html#l00021">While.h:21</a></div></div>
+<div class="ttc" id="aclassWhile_html_a08a91c68842cefb38871d8bc7c8d0d26"><div class="ttname"><a href="../../d5/d79/classWhile.html#a08a91c68842cefb38871d8bc7c8d0d26">While::code_gen</a></div><div class="ttdeci">void code_gen() const</div><div class="ttdoc">The code gen method generates the LLVM ir for the statement.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d56/While_8cpp_source.html#l00012">While.cpp:12</a></div></div>
+<div class="ttc" id="aclassWhile_html_ac7e6ae26ab95e35e882c4cfdf89289cd"><div class="ttname"><a href="../../d5/d79/classWhile.html#ac7e6ae26ab95e35e882c4cfdf89289cd">While::execute</a></div><div class="ttdeci">void execute() const</div><div class="ttdoc">The execute method is used to interpret statements.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d56/While_8cpp_source.html#l00016">While.cpp:16</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

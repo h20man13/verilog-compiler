@@ -15,6 +15,8 @@ For::~For() {
 
 For::For(const Position &position, Statement *const init, Expression *const check, Statement *const incriment, Statement *const body) : Statement(position), init(init), check(check), incriment(incriment), body(body) {}
 
+For::For(const For& stat): Statement(stat.get_position()), init(stat.init), check(stat.check), incriment(stat.incriment), body(stat.body){}
+
 void For::code_gen() const {
 
 }

@@ -30,6 +30,8 @@ class Forever: Statement{
 
 	Forever(const Position& position, Expression* const check, Statement* const statement);
 
+	Forever(const Forever& forever);
+
 	/**
 	 * The code gen method generates the LLVM ir for the statement
 	 */

@@ -18,6 +18,12 @@ Inheritance diagram for Statement\+:\begin{figure}[H]
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+\mbox{\Hypertarget{classStatement_a767f9b062b7aca5f7fa2ce94fefe71d0}\label{classStatement_a767f9b062b7aca5f7fa2ce94fefe71d0}} 
+{\bfseries Statement} (const \mbox{\hyperlink{classPosition}{Position}} \&position)
+\item 
+\mbox{\Hypertarget{classStatement_ab73ba276548bfcab3d06f5bcd8fa20e9}\label{classStatement_ab73ba276548bfcab3d06f5bcd8fa20e9}} 
+{\bfseries Statement} (const \mbox{\hyperlink{classStatement}{Statement}} \&stat)
+\item 
 \mbox{\Hypertarget{classStatement_a87c564a89b8a4764a2d49fca22eeac1a}\label{classStatement_a87c564a89b8a4764a2d49fca22eeac1a}} 
 virtual void \mbox{\hyperlink{classStatement_a87c564a89b8a4764a2d49fca22eeac1a}{code\+\_\+gen}} () const =0
 \begin{DoxyCompactList}\small\item\em The code gen method generates the LLVM ir for the statement. \end{DoxyCompactList}\item 
@@ -25,12 +31,6 @@ virtual void \mbox{\hyperlink{classStatement_a03e3229a95c2803cdd19a5595b68cd51}{
 \begin{DoxyCompactList}\small\item\em The execute method is used to interpret statements. \end{DoxyCompactList}\item 
 const \mbox{\hyperlink{classPosition}{Position}} \mbox{\hyperlink{classStatement_a357cc2962dfa7bafaa5731755d4550ac}{get\+\_\+position}} () const
 \begin{DoxyCompactList}\small\item\em Gets the position of the current statement ast node. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Protected Member Functions}
-\begin{DoxyCompactItemize}
-\item 
-\mbox{\Hypertarget{classStatement_a767f9b062b7aca5f7fa2ce94fefe71d0}\label{classStatement_a767f9b062b7aca5f7fa2ce94fefe71d0}} 
-{\bfseries Statement} (const \mbox{\hyperlink{classPosition}{Position}} \&position)
-\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -78,7 +78,7 @@ the position of the ast node
 \end{DoxyReturn}
 
 
-Definition at line 4 of file Statement.\+cpp.
+Definition at line 8 of file Statement.\+cpp.
 
 
 

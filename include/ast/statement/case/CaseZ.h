@@ -13,9 +13,11 @@
 #include <list>
 
 class CaseZ: Case{
-protected:
+public:
 
 	CaseZ(const Position& position, Expression* const expression, std::list<CaseItem* const> &item_list);
+
+	CaseZ(const CaseZ& case_z);
 
 	void execute() const;
 
