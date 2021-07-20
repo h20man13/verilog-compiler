@@ -15,7 +15,7 @@
 
 class OutputWireVectorDeclaration: WireVectorDeclaration{
 public:
-	OutputWireVectorDeclaration(const Position& position, std::list<RegValue* const> &reg_list);
+	OutputWireVectorDeclaration(const Position& position, Expression* const start, Expression* const end, std::list<Identifier* const> &ident_list);
 	OutputWireVectorDeclaration(const OutputWireVectorDeclaration& declaration);
 
 	void code_gen() const;

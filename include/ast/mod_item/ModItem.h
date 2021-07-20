@@ -5,7 +5,7 @@
 
 class ModItem{
 private:
-	Position position;
+	const Position position;
 protected:
 	virtual ~ModItem() = 0;
 	ModItem(const Position& position);

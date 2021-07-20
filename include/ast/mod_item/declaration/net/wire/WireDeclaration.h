@@ -19,6 +19,8 @@ protected:
 	WireDeclaration(const Position& position, std::list<Identifier* const> &ident_list);
 	WireDeclaration(const WireDeclaration& declaration);
 
+	virtual ~WireDeclaration();
+
 	virtual void code_gen() const = 0;
 	virtual void perform() const = 0;
 };

@@ -11,10 +11,9 @@
 class RegValue{
 public:
 	virtual void declare() const = 0;
-public:
 	virtual ~RegValue() = 0;
 };
 
 
 
-#endif /* INCLUDE_AST_MOD_ITEM_DECLARATION_REG_REGVALUE_H_ */
+#endif

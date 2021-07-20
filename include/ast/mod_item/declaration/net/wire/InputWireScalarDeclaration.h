@@ -16,7 +16,7 @@
 
 class InputWireScalarDeclaration: WireScalarDeclaration{
 public:
-	InputWireScalarDeclaration(const Position& position, std::list<RegValue* const> &reg_list);
+	InputWireScalarDeclaration(const Position& position, std::list<Identifier* const> &reg_list);
 	InputWireScalarDeclaration(const InputWireScalarDeclaration& declaration);
 
 	void code_gen() const;

@@ -10,7 +10,7 @@
 
 #include "ast/mod_item/ModItem.h"
 
-class Declaration: ModItem{
+class Declaration: public ModItem{
 
 protected:
 	Declaration(const Position& position);

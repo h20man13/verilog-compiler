@@ -15,7 +15,7 @@
 
 class OutputWireScalarDeclaration: WireScalarDeclaration{
 public:
-	OutputWireScalarDeclaration(const Position& position, std::list<RegValue* const> &reg_list);
+	OutputWireScalarDeclaration(const Position& position, std::list<Identifier* const> &reg_list);
 	OutputWireScalarDeclaration(const OutputWireScalarDeclaration& declaration);
 
 	void code_gen() const;

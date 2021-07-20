@@ -15,7 +15,7 @@
 
 class InputRegVectorDeclaration: RegVectorDeclaration{
 public:
-	InputRegVectorDeclaration(const Position& position, std::list<RegValue* const> &reg_list);
+	InputRegVectorDeclaration(const Position& position, Expression* const start, Expression* const end, std::list<RegValue* const> &reg_list);
 	InputRegVectorDeclaration(const InputRegVectorDeclaration& declaration);
 
 	void code_gen() const;

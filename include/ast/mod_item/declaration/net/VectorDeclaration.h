@@ -16,9 +16,11 @@ protected:
 	const Expression* start;
 	const Expression* end;
 
-	VectorDeclaration(const Position* position, const Expression* start, const Expression* end);
-	virtual ~VectorDeclaration();
+	VectorDeclaration(const Position& position, const Expression* start, const Expression* end);
+	VectorDeclaration(const VectorDeclaration& declaration);
 
+	virtual ~VectorDeclaration();
+public:
 	virtual void code_gen() const = 0;
 
 	virtual void perform() const = 0;

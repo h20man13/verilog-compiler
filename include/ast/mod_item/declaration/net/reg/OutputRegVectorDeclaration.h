@@ -15,7 +15,7 @@
 
 class OutputRegVectorDeclaration: RegVectorDeclaration{
 public:
-	OutputRegVectorDeclaration(const Position& position, std::list<RegValue* const> &reg_list);
+	OutputRegVectorDeclaration(const Position& position, Expression* const start, Expression* const end, std::list<RegValue* const> &reg_list);
 	OutputRegVectorDeclaration(const OutputRegVectorDeclaration& declaration);
 
 	void code_gen() const;

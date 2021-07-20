@@ -19,6 +19,8 @@ protected:
 	RegDeclaration(const Position& position, std::list<RegValue* const> &reg_list);
 	RegDeclaration(const RegDeclaration& declaration);
 
+	virtual ~RegDeclaration();
+
 	virtual void code_gen() const = 0;
 	virtual void perform() const = 0;
 };

@@ -15,7 +15,7 @@
 
 class InputWireVectorDeclaration: WireVectorDeclaration{
 public:
-	InputWireVectorDeclaration(const Position& position, std::list<RegValue* const> &reg_list);
+	InputWireVectorDeclaration(const Position& position, Expression* const start, Expression* const end, std::list<Identifier* const> &ident_list);
 	InputWireVectorDeclaration(const InputWireVectorDeclaration& declaration);
 
 	void code_gen() const;

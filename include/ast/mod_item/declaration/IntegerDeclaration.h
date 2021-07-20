@@ -6,7 +6,7 @@
  */
 
 #ifndef INTEGER_DECLARATION_H
-#define INTEEGR_DECLARATION_H
+#define INTEGER_DECLARATION_H
 
 #include "ast/mod_item/declaration/Declaration.h"
 #include "ast/mod_item/declaration/RegValue.h"

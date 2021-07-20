@@ -17,7 +17,7 @@
 class OutputRegScalarDeclaration: RegScalarDeclaration{
 public:
 	OutputRegScalarDeclaration(const Position& position, std::list<RegValue* const> &reg_list);
-	OutputRegScalarDeclaration(const RegScalarDeclaration& declaration);
+	OutputRegScalarDeclaration(const OutputRegScalarDeclaration& declaration);
 
 	void code_gen() const;
 	void perform() const;

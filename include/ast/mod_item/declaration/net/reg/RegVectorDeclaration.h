@@ -16,7 +16,7 @@
 
 class RegVectorDeclaration: RegDeclaration, VectorDeclaration{
 public:
-	RegVectorDeclaration(const Position& position, std::list<RegValue* const> &reg_list);
+	RegVectorDeclaration(const Position& position, Expression* const start, Expression* const end, std::list<RegValue* const> &reg_list);
 	RegVectorDeclaration(const RegVectorDeclaration& declaration);
 
 	virtual void code_gen() const;

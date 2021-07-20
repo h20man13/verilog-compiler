@@ -16,7 +16,7 @@
 
 class WireVectorDeclaration: WireDeclaration, VectorDeclaration{
 public:
-	WireVectorDeclaration(const Position& position, std::list<RegValue* const> &reg_list);
+	WireVectorDeclaration(const Position& position, Expression* const start, Expression* const end, std::list<Identifier* const> &reg_list);
 	WireVectorDeclaration(const WireVectorDeclaration& declaration);
 
 	virtual void code_gen() const;

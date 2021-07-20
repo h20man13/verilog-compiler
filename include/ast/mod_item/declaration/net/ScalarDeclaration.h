@@ -12,8 +12,9 @@
 
 class ScalarDeclaration: Declaration{
 protected:
-	virtual ~ScalarDeclaration();
+	virtual ~ScalarDeclaration() = 0;
 	ScalarDeclaration(const Position& position);
+	ScalarDeclaration(const ScalarDeclaration& declaration);
 
 public:
 	virtual void code_gen() const = 0;

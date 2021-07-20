@@ -16,7 +16,7 @@
 
 class WireScalarDeclaration: WireDeclaration, ScalarDeclaration{
 public:
-	WireScalarDeclaration(const Position& position, std::list<RegValue* const> &reg_list);
+	WireScalarDeclaration(const Position& position, std::list<Identifier* const> &reg_list);
 	WireScalarDeclaration(const WireScalarDeclaration& declaration);
 
 	virtual void code_gen() const;
