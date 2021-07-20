@@ -10,9 +10,10 @@
 
 #include "ast/expression/Expression.h"
 #include "ast/expression/LValue.h"
+#include "ast/mod_item/declaration/RegValue.h"
 #include <list>
 
-class Slice: Expression{
+class Slice: Expression, LValue, RegValue{
 private:
 	std::string lexeme;
 	Expression* const begin;
@@ -52,6 +53,8 @@ public:
 	 * The evaluate method is used access a range of elements
 	 */
 	ObjBase* const access() const;
+
+	void declare() const;
 
 };
 

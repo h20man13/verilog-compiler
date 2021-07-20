@@ -10,13 +10,14 @@
 
 #include "ast/expression/Expression.h"
 #include "ast/expression/LValue.h"
+#include "ast/mod_item/declaration/RegValue.h"
 #include "Token.h"
 
 /**
  * The identifier class is used to for Identifier AST nodes
  * @author Jacob Bauer
  */
-class Identifier: Expression, LValue{
+class Identifier: Expression, LValue, RegValue{
 private:
 	const std::string lexeme; //stores variable name
 public:
@@ -49,6 +50,8 @@ public:
 	 */
 
 	ObjBase* const acess() const;
+
+	void declare() const;
 };
 
 
