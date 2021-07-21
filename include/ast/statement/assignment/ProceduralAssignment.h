@@ -16,10 +16,10 @@
  * The assignment template is used to create assignments in verilog. In verilog their are 3 types of assignments, Blocking, NonBlocking, and continuous assignments
  * @author Jacob Bauer
  */
-class Assignment: Statement{
+class ProceduralAssignment: Statement{
 protected:
-	Assignment(const Position& position, LValue* const left, Expression* const right);
-	Assignment(const Assignment& assignment);
+	ProceduralAssignment(const Position& position, LValue* const left, Expression* const right);
+	ProceduralAssignment(const ProceduralAssignment& assignment);
 	LValue* const left;
 	Expression* const right;
 public:
@@ -38,7 +38,7 @@ public:
 	virtual void code_gen() const = 0;
 
 
-	~Assignment();
+	~ProceduralAssignment();
 };
 
 
