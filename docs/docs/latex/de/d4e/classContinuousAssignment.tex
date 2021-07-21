@@ -1,0 +1,76 @@
+\hypertarget{classContinuousAssignment}{}\doxysection{Continuous\+Assignment Class Reference}
+\label{classContinuousAssignment}\index{ContinuousAssignment@{ContinuousAssignment}}
+
+
+The assignment template is used to create assignments in verilog.  
+
+
+
+
+{\ttfamily \#include $<$Continuous\+Assignment.\+h$>$}
+
+Inheritance diagram for Continuous\+Assignment\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{de/d4e/classContinuousAssignment}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classContinuousAssignment_a504fd1d2d76e0e61f8d17d2cb605f9be}{perform}} () const
+\begin{DoxyCompactList}\small\item\em The execute method is used to interpret statements. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classContinuousAssignment_a4b2f8b83f1113693da23c7645ea78b48}\label{classContinuousAssignment_a4b2f8b83f1113693da23c7645ea78b48}} 
+void \mbox{\hyperlink{classContinuousAssignment_a4b2f8b83f1113693da23c7645ea78b48}{code\+\_\+gen}} () const
+\begin{DoxyCompactList}\small\item\em The code gen method generates the LLVM ir for the statement. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classContinuousAssignment_ab8d687b0f30ad1f834c82ce1d5ef6d09}\label{classContinuousAssignment_ab8d687b0f30ad1f834c82ce1d5ef6d09}} 
+{\bfseries Continuous\+Assignment} (const \mbox{\hyperlink{classPosition}{Position}} \&position, std\+::list$<$ \mbox{\hyperlink{classContAssignInstance}{Cont\+Assign\+Instance}} $\ast$const $>$ \&cont\+\_\+list)
+\item 
+\mbox{\Hypertarget{classContinuousAssignment_a3f96b5354148494db3e7ae6bbaa422e4}\label{classContinuousAssignment_a3f96b5354148494db3e7ae6bbaa422e4}} 
+{\bfseries Continuous\+Assignment} (const \mbox{\hyperlink{classContinuousAssignment}{Continuous\+Assignment}} \&assignment)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The assignment template is used to create assignments in verilog. 
+
+In verilog their are 3 types of assignments, \mbox{\hyperlink{classBlocking}{Blocking}}, \mbox{\hyperlink{classNonBlocking}{Non\+Blocking}}, and continuous assignments \begin{DoxyAuthor}{Author}
+Jacob Bauer 
+\end{DoxyAuthor}
+
+
+Definition at line 21 of file Continuous\+Assignment.\+h.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classContinuousAssignment_a504fd1d2d76e0e61f8d17d2cb605f9be}\label{classContinuousAssignment_a504fd1d2d76e0e61f8d17d2cb605f9be}} 
+\index{ContinuousAssignment@{ContinuousAssignment}!perform@{perform}}
+\index{perform@{perform}!ContinuousAssignment@{ContinuousAssignment}}
+\doxysubsubsection{\texorpdfstring{perform()}{perform()}}
+{\footnotesize\ttfamily void Continuous\+Assignment\+::perform (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+The execute method is used to interpret statements. 
+
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classModItem}{Mod\+Item}}.
+
+
+
+Definition at line 16 of file Continuous\+Assignment.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/ast/mod\+\_\+item/Continuous\+Assignment.\+h\item 
+src/ast/mod\+\_\+item/Continuous\+Assignment.\+cpp\end{DoxyCompactItemize}

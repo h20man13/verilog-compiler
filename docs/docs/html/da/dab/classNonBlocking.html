@@ -64,6 +64,7 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="../../da/d7b/classNonBlocking-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">NonBlocking Class Reference</div></div>
@@ -80,15 +81,25 @@ Inheritance diagram for NonBlocking:</div>
  <div class="center">
   <img src="../../da/dab/classNonBlocking.png" usemap="#NonBlocking_map" alt=""/>
   <map id="NonBlocking_map" name="NonBlocking_map">
-<area href="../../d1/da2/classAssignment.html" title="The assignment template is used to create assignments in verilog." alt="Assignment" shape="rect" coords="0,0,83,24"/>
+<area href="../../de/d6b/classProceduralAssignment.html" title="The assignment template is used to create assignments in verilog." alt="ProceduralAssignment" shape="rect" coords="0,0,139,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:ad1b6846f9b6184f4cd0609d5a16e9d8a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dab/classNonBlocking.html#ad1b6846f9b6184f4cd0609d5a16e9d8a">execute</a> () const</td></tr>
+<tr class="memdesc:ad1b6846f9b6184f4cd0609d5a16e9d8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The execute method is used to interpret statements.  <a href="../../da/dab/classNonBlocking.html#ad1b6846f9b6184f4cd0609d5a16e9d8a">More...</a><br /></td></tr>
+<tr class="separator:ad1b6846f9b6184f4cd0609d5a16e9d8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe9fce713711391ea0f35f25dc1fe076"><td class="memItemLeft" align="right" valign="top"><a id="abe9fce713711391ea0f35f25dc1fe076"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dab/classNonBlocking.html#abe9fce713711391ea0f35f25dc1fe076">code_gen</a> () const</td></tr>
+<tr class="memdesc:abe9fce713711391ea0f35f25dc1fe076"><td class="mdescLeft">&#160;</td><td class="mdescRight">The code gen method generates the LLVM ir for the statement. <br /></td></tr>
+<tr class="separator:abe9fce713711391ea0f35f25dc1fe076"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a480d6c3e0c2f92a85f07e8cd5bd4b1de"><td class="memItemLeft" align="right" valign="top"><a id="a480d6c3e0c2f92a85f07e8cd5bd4b1de"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>NonBlocking</b> (const <a class="el" href="../../da/d8b/classPosition.html">Position</a> &amp;position, <a class="el" href="../../d3/d29/classLValue.html">LValue</a> *const left, <a class="el" href="../../de/d94/classExpression.html">Expression</a> *const right)</td></tr>
-<tr class="separator:a480d6c3e0c2f92a85f07e8cd5bd4b1de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae01c08f8cbefebe3809ba7ae109c01d2"><td class="memItemLeft" align="right" valign="top"><a id="ae01c08f8cbefebe3809ba7ae109c01d2"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>NonBlocking</b> (const <a class="el" href="../../da/d8b/classPosition.html">Position</a> &amp;position, <a class="el" href="../../d3/d29/classLValue.html">LValue</a> *const left, <a class="el" href="../../de/d94/classExpression.html">Expression</a> *const right, <a class="el" href="../../da/dab/classNonBlocking.html">NonBlocking</a> *const next)</td></tr>
+<tr class="separator:ae01c08f8cbefebe3809ba7ae109c01d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adcb4af6bd9cd258fbf407011d7211ba7"><td class="memItemLeft" align="right" valign="top"><a id="adcb4af6bd9cd258fbf407011d7211ba7"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>NonBlocking</b> (const <a class="el" href="../../da/dab/classNonBlocking.html">NonBlocking</a> &amp;assignment)</td></tr>
 <tr class="separator:adcb4af6bd9cd258fbf407011d7211ba7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -97,8 +108,41 @@ Protected Member Functions</h2></td></tr>
 <div class="textblock"><p >The assignment template is used to create assignments in verilog. </p>
 <p >In verilog their are 3 types of assignments, <a class="el" href="../../d0/d43/classBlocking.html" title="The assignment template is used to create assignments in verilog.">Blocking</a>, <a class="el" href="../../da/dab/classNonBlocking.html" title="The assignment template is used to create assignments in verilog.">NonBlocking</a>, and continuous assignments </p><dl class="section author"><dt>Author</dt><dd>Jacob Bauer </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d4/d16/NonBlocking_8h_source.html#l00019">19</a> of file <a class="el" href="../../d4/d16/NonBlocking_8h_source.html">NonBlocking.h</a>.</p>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
+<p class="definition">Definition at line <a class="el" href="../../d4/d16/NonBlocking_8h_source.html#l00020">20</a> of file <a class="el" href="../../d4/d16/NonBlocking_8h_source.html">NonBlocking.h</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="ad1b6846f9b6184f4cd0609d5a16e9d8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1b6846f9b6184f4cd0609d5a16e9d8a">&#9670;&nbsp;</a></span>execute()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NonBlocking::execute </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The execute method is used to interpret statements. </p>
+<dl class="section return"><dt>Returns</dt><dd>None </dd></dl>
+
+<p>Implements <a class="el" href="../../de/d6b/classProceduralAssignment.html#a16458d9ec79a54ead21310d214c37423">ProceduralAssignment</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="../../da/de0/NonBlocking_8cpp_source.html#l00010">10</a> of file <a class="el" href="../../da/de0/NonBlocking_8cpp_source.html">NonBlocking.cpp</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>include/ast/statement/assignment/<a class="el" href="../../d4/d16/NonBlocking_8h_source.html">NonBlocking.h</a></li>
 <li>src/ast/statement/assignment/<a class="el" href="../../da/de0/NonBlocking_8cpp_source.html">NonBlocking.cpp</a></li>
 </ul>

@@ -1,0 +1,59 @@
+\hypertarget{classReturnStatement}{}\doxysection{Return\+Statement Class Reference}
+\label{classReturnStatement}\index{ReturnStatement@{ReturnStatement}}
+Inheritance diagram for Return\+Statement\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{d5/d9a/classReturnStatement}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classReturnStatement_a0319ac8377d8b9630971449ac8ea1985}\label{classReturnStatement_a0319ac8377d8b9630971449ac8ea1985}} 
+{\bfseries Return\+Statement} (const \mbox{\hyperlink{classPosition}{Position}} \&position, \mbox{\hyperlink{classLValue}{LValue}} $\ast$const ident, \mbox{\hyperlink{classExpression}{Expression}} $\ast$const expression)
+\item 
+\mbox{\Hypertarget{classReturnStatement_a7893c6a2e2a5e6e9f67752ba083fc5c7}\label{classReturnStatement_a7893c6a2e2a5e6e9f67752ba083fc5c7}} 
+{\bfseries Return\+Statement} (const \mbox{\hyperlink{classReturnStatement}{Return\+Statement}} \&statement)
+\item 
+\mbox{\Hypertarget{classReturnStatement_abd055e58f868df7cd408be57182df10e}\label{classReturnStatement_abd055e58f868df7cd408be57182df10e}} 
+void \mbox{\hyperlink{classReturnStatement_abd055e58f868df7cd408be57182df10e}{code\+\_\+gen}} () const
+\begin{DoxyCompactList}\small\item\em The code gen method generates the LLVM ir for the statement. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classReturnStatement_aeaa2f98bad84a45a3aa8808780df9b76}{execute}} () const
+\begin{DoxyCompactList}\small\item\em The execute method is used to interpret statements. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 15 of file Return\+Statement.\+h.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classReturnStatement_aeaa2f98bad84a45a3aa8808780df9b76}\label{classReturnStatement_aeaa2f98bad84a45a3aa8808780df9b76}} 
+\index{ReturnStatement@{ReturnStatement}!execute@{execute}}
+\index{execute@{execute}!ReturnStatement@{ReturnStatement}}
+\doxysubsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily void Return\+Statement\+::execute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+The execute method is used to interpret statements. 
+
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classStatement_a03e3229a95c2803cdd19a5595b68cd51}{Statement}}.
+
+
+
+Definition at line 11 of file Return\+Statement.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/ast/statement/Return\+Statement.\+h\item 
+src/ast/statement/Return\+Statement.\+cpp\end{DoxyCompactItemize}

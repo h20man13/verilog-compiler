@@ -1,0 +1,85 @@
+\hypertarget{classProceduralAssignment}{}\doxysection{Procedural\+Assignment Class Reference}
+\label{classProceduralAssignment}\index{ProceduralAssignment@{ProceduralAssignment}}
+
+
+The assignment template is used to create assignments in verilog.  
+
+
+
+
+{\ttfamily \#include $<$Procedural\+Assignment.\+h$>$}
+
+Inheritance diagram for Procedural\+Assignment\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{de/d6b/classProceduralAssignment}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classProceduralAssignment_a16458d9ec79a54ead21310d214c37423}{execute}} () const =0
+\begin{DoxyCompactList}\small\item\em The execute method is used to interpret statements. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classProceduralAssignment_ae398dcc2c22b20ff7978a59f510268ef}\label{classProceduralAssignment_ae398dcc2c22b20ff7978a59f510268ef}} 
+virtual void \mbox{\hyperlink{classProceduralAssignment_ae398dcc2c22b20ff7978a59f510268ef}{code\+\_\+gen}} () const =0
+\begin{DoxyCompactList}\small\item\em The code gen method generates the LLVM ir for the statement. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classProceduralAssignment_a0c9f852327ec255843df8761c19c54b4}\label{classProceduralAssignment_a0c9f852327ec255843df8761c19c54b4}} 
+{\bfseries Procedural\+Assignment} (const \mbox{\hyperlink{classPosition}{Position}} \&position, \mbox{\hyperlink{classLValue}{LValue}} $\ast$const left, \mbox{\hyperlink{classExpression}{Expression}} $\ast$const right)
+\item 
+\mbox{\Hypertarget{classProceduralAssignment_a86cdc89d03e9cad2296df1d9d831856f}\label{classProceduralAssignment_a86cdc89d03e9cad2296df1d9d831856f}} 
+{\bfseries Procedural\+Assignment} (const \mbox{\hyperlink{classProceduralAssignment}{Procedural\+Assignment}} \&assignment)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classProceduralAssignment_abbd9614a64da83cdfdca53f2b30a73c3}\label{classProceduralAssignment_abbd9614a64da83cdfdca53f2b30a73c3}} 
+\mbox{\hyperlink{classLValue}{LValue}} $\ast$const {\bfseries left}
+\item 
+\mbox{\Hypertarget{classProceduralAssignment_ad62d2d109007ebe77db369acf0804e2b}\label{classProceduralAssignment_ad62d2d109007ebe77db369acf0804e2b}} 
+\mbox{\hyperlink{classExpression}{Expression}} $\ast$const {\bfseries right}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The assignment template is used to create assignments in verilog. 
+
+In verilog their are 3 types of assignments, \mbox{\hyperlink{classBlocking}{Blocking}}, \mbox{\hyperlink{classNonBlocking}{Non\+Blocking}}, and continuous assignments \begin{DoxyAuthor}{Author}
+Jacob Bauer 
+\end{DoxyAuthor}
+
+
+Definition at line 19 of file Procedural\+Assignment.\+h.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classProceduralAssignment_a16458d9ec79a54ead21310d214c37423}\label{classProceduralAssignment_a16458d9ec79a54ead21310d214c37423}} 
+\index{ProceduralAssignment@{ProceduralAssignment}!execute@{execute}}
+\index{execute@{execute}!ProceduralAssignment@{ProceduralAssignment}}
+\doxysubsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily virtual void Procedural\+Assignment\+::execute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+The execute method is used to interpret statements. 
+
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classStatement_a03e3229a95c2803cdd19a5595b68cd51}{Statement}}.
+
+
+
+Implemented in \mbox{\hyperlink{classNonBlocking_ad1b6846f9b6184f4cd0609d5a16e9d8a}{Non\+Blocking}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/ast/statement/assignment/Procedural\+Assignment.\+h\item 
+src/ast/statement/assignment/Procedural\+Assignment.\+cpp\end{DoxyCompactItemize}
