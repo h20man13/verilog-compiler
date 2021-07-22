@@ -1,8 +1,5 @@
 #include "ast/mod_item/ModItem.h"
 
 
-ModItem::ModItem(const Position& position): position(position){}
+ModItem::ModItem(const Position& position): AstNode(position){}
 
-const Position ModItem::get_position() const {
-	return position;
-}

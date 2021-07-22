@@ -9,7 +9,7 @@
 #define EXPRESSION_H
 
 #include "common/types/ObjBase.h"
-#include "common/Position.h"
+#include "ast/AstNode.h"
 
 /**
  * The Expression is an Interface that can be used to represent Expressions. The Expression class is a template class that changes the return type of the Interpret method
@@ -17,18 +17,11 @@
  */
 
 
-class Expression {
-private:
-	const Position position; //Position to store of the node
+class Expression: public AstNode{
 protected:
 	Expression(const Position& position);
 	Expression(const Expression& expression);
 public:
-	/**
-	 * The get position method is a getter method that retrieves the position of the expression
-	 * @return a position object that can be used to track the position of the class
-	 */
-	const Position get_position() const;
 
 	/**
 	 * The code_gen method generates the LLVM IR of the Expression

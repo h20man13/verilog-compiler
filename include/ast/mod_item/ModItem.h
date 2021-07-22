@@ -2,16 +2,13 @@
 #define MODITEM_H
 
 #include "common/Position.h"
+#include "ast/AstNode.h"
 
-class ModItem{
-private:
-	const Position position;
+class ModItem: public AstNode{
 protected:
-	virtual ~ModItem() = 0;
 	ModItem(const Position& position);
 public:
-	const Position get_position() const;
-
+	virtual ~ModItem() = 0;
 	virtual void perform() const = 0;
 	virtual void code_gen() const = 0;
 };

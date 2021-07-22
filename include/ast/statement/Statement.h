@@ -10,23 +10,20 @@
 
 #include "common/Position.h"
 #include "common/types/ObjBase.h"
+#include "ast/AstNode.h"
 
 /**
  * The statement abstract class is used to store statement objects on the ast tree
  * @author Jacob Bauer
  */
 
-class Statement{
-
-    private:
-	const Position position; //position to store the position of the statement object
-
-
-	public:
+class Statement: public AstNode{
+	protected:
 
 	Statement(const Position& position);
 
 	Statement(const Statement& stat);
+	public:
 	/**
 	 * The code gen method generates the LLVM ir for the statement
 	 */
@@ -41,15 +38,8 @@ class Statement{
 	virtual void execute() const = 0;
 
 	virtual ~Statement() = 0;
-
-	/**
-	 * Gets the position of the current statement ast node
-	 * @return the position of the ast node
-	 */
-
-	const Position get_position() const;
 };
 
 
 
-#endif /* INCLUDE_AST_STATEMENT_STATEMENT_H_ */
+#endif
