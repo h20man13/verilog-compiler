@@ -73,17 +73,13 @@ $(function() {
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;common/Position.h&quot;</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;ast/statement/Statement.h&quot;</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;Statement::Statement(<span class="keyword">const</span> <a class="code" href="../../da/d8b/classPosition.html">Position</a>&amp; position): position(position){}</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;Statement::Statement(<span class="keyword">const</span> <a class="code" href="../../da/d8b/classPosition.html">Position</a>&amp; position): <a class="code" href="../../dc/da9/classAstNode.html">AstNode</a>(position){}</div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;Statement::Statement(<span class="keyword">const</span> <a class="code" href="../../d6/de7/classStatement.html">Statement</a>&amp; stat): position(stat.get_position()){}</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;Statement::Statement(<span class="keyword">const</span> <a class="code" href="../../d6/de7/classStatement.html">Statement</a>&amp; stat): <a class="code" href="../../dc/da9/classAstNode.html">AstNode</a>(stat.get_position()){}</div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="../../d6/de7/classStatement.html#a357cc2962dfa7bafaa5731755d4550ac">    8</a></span>&#160;<span class="keyword">const</span> <a class="code" href="../../da/d8b/classPosition.html">Position</a> <a class="code" href="../../d6/de7/classStatement.html#a357cc2962dfa7bafaa5731755d4550ac">Statement::get_position</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="keywordflow">return</span> position;</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;}</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="ttc" id="aclassAstNode_html"><div class="ttname"><a href="../../dc/da9/classAstNode.html">AstNode</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df6/AstNode_8h_source.html#l00006">AstNode.h:6</a></div></div>
 <div class="ttc" id="aclassPosition_html"><div class="ttname"><a href="../../da/d8b/classPosition.html">Position</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/dff/Position_8h_source.html#l00006">Position.h:6</a></div></div>
-<div class="ttc" id="aclassStatement_html"><div class="ttname"><a href="../../d6/de7/classStatement.html">Statement</a></div><div class="ttdoc">The statement abstract class is used to store statement objects on the ast tree.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dfe/Statement_8h_source.html#l00019">Statement.h:19</a></div></div>
-<div class="ttc" id="aclassStatement_html_a357cc2962dfa7bafaa5731755d4550ac"><div class="ttname"><a href="../../d6/de7/classStatement.html#a357cc2962dfa7bafaa5731755d4550ac">Statement::get_position</a></div><div class="ttdeci">const Position get_position() const</div><div class="ttdoc">Gets the position of the current statement ast node.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d79/Statement_8cpp_source.html#l00008">Statement.cpp:8</a></div></div>
+<div class="ttc" id="aclassStatement_html"><div class="ttname"><a href="../../d6/de7/classStatement.html">Statement</a></div><div class="ttdoc">The statement abstract class is used to store statement objects on the ast tree.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dfe/Statement_8h_source.html#l00020">Statement.h:20</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

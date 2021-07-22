@@ -18,19 +18,20 @@ Inheritance diagram for Statement\+:\begin{figure}[H]
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+\mbox{\Hypertarget{classStatement_a87c564a89b8a4764a2d49fca22eeac1a}\label{classStatement_a87c564a89b8a4764a2d49fca22eeac1a}} 
+virtual void \mbox{\hyperlink{classStatement_a87c564a89b8a4764a2d49fca22eeac1a}{code\+\_\+gen}} () const =0
+\begin{DoxyCompactList}\small\item\em The code gen method generates the LLVM ir for the statement. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classStatement_a03e3229a95c2803cdd19a5595b68cd51}{execute}} () const =0
+\begin{DoxyCompactList}\small\item\em The execute method is used to interpret statements. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
 \mbox{\Hypertarget{classStatement_a767f9b062b7aca5f7fa2ce94fefe71d0}\label{classStatement_a767f9b062b7aca5f7fa2ce94fefe71d0}} 
 {\bfseries Statement} (const \mbox{\hyperlink{classPosition}{Position}} \&position)
 \item 
 \mbox{\Hypertarget{classStatement_ab73ba276548bfcab3d06f5bcd8fa20e9}\label{classStatement_ab73ba276548bfcab3d06f5bcd8fa20e9}} 
 {\bfseries Statement} (const \mbox{\hyperlink{classStatement}{Statement}} \&stat)
-\item 
-\mbox{\Hypertarget{classStatement_a87c564a89b8a4764a2d49fca22eeac1a}\label{classStatement_a87c564a89b8a4764a2d49fca22eeac1a}} 
-virtual void \mbox{\hyperlink{classStatement_a87c564a89b8a4764a2d49fca22eeac1a}{code\+\_\+gen}} () const =0
-\begin{DoxyCompactList}\small\item\em The code gen method generates the LLVM ir for the statement. \end{DoxyCompactList}\item 
-virtual void \mbox{\hyperlink{classStatement_a03e3229a95c2803cdd19a5595b68cd51}{execute}} () const =0
-\begin{DoxyCompactList}\small\item\em The execute method is used to interpret statements. \end{DoxyCompactList}\item 
-const \mbox{\hyperlink{classPosition}{Position}} \mbox{\hyperlink{classStatement_a357cc2962dfa7bafaa5731755d4550ac}{get\+\_\+position}} () const
-\begin{DoxyCompactList}\small\item\em Gets the position of the current statement ast node. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -41,7 +42,7 @@ Jacob Bauer
 \end{DoxyAuthor}
 
 
-Definition at line 19 of file Statement.\+h.
+Definition at line 20 of file Statement.\+h.
 
 
 
@@ -62,23 +63,6 @@ None
 
 
 Implemented in \mbox{\hyperlink{classNonBlocking_ad1b6846f9b6184f4cd0609d5a16e9d8a}{Non\+Blocking}}, \mbox{\hyperlink{classCase_ac722f1d7eccdb0e8e37cb73498feeef0}{Case}}, \mbox{\hyperlink{classCaseX_a2b8b9f914c255992b3dbdc1d035135e8}{CaseX}}, \mbox{\hyperlink{classCaseZ_ae4d822f52601fc63c36abd631f68aa1e}{CaseZ}}, \mbox{\hyperlink{classEmptyStatement_afbdbba4b5799029e4c49d8b3dbfa08b2}{Empty\+Statement}}, \mbox{\hyperlink{classFor_a4163b09b67bde3894fa563293b0a3ecb}{For}}, \mbox{\hyperlink{classForever_a5d7877fddf097151534e1cab886bc55c}{Forever}}, \mbox{\hyperlink{classIf_a4d3642fa3a52b6bce9edab3c36155374}{If}}, \mbox{\hyperlink{classIfElse_a1db29e916469d96683c23459c2e9725d}{If\+Else}}, \mbox{\hyperlink{classRepeat_a6f2acdb10a5b4fec34e0b4b80fd107e6}{Repeat}}, \mbox{\hyperlink{classReturnStatement_aeaa2f98bad84a45a3aa8808780df9b76}{Return\+Statement}}, \mbox{\hyperlink{classSequentialBlock_af443e5ba52d51a95a9384f50f9f2c8fb}{Sequential\+Block}}, \mbox{\hyperlink{classSystemTaskCall_a49043b5c03019209675de1d5c5ad7575}{System\+Task\+Call}}, \mbox{\hyperlink{classTaskCall_a987cf5e14213867b41f9de803fc79adc}{Task\+Call}}, \mbox{\hyperlink{classWait_a58b12153a227c5ae2c20294b0005da74}{Wait}}, \mbox{\hyperlink{classWhile_ac7e6ae26ab95e35e882c4cfdf89289cd}{While}}, and \mbox{\hyperlink{classProceduralAssignment_a16458d9ec79a54ead21310d214c37423}{Procedural\+Assignment}}.
-
-\mbox{\Hypertarget{classStatement_a357cc2962dfa7bafaa5731755d4550ac}\label{classStatement_a357cc2962dfa7bafaa5731755d4550ac}} 
-\index{Statement@{Statement}!get\_position@{get\_position}}
-\index{get\_position@{get\_position}!Statement@{Statement}}
-\doxysubsubsection{\texorpdfstring{get\_position()}{get\_position()}}
-{\footnotesize\ttfamily const \mbox{\hyperlink{classPosition}{Position}} Statement\+::get\+\_\+position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
-
-
-
-Gets the position of the current statement ast node. 
-
-\begin{DoxyReturn}{Returns}
-the position of the ast node 
-\end{DoxyReturn}
-
-
-Definition at line 8 of file Statement.\+cpp.
 
 
 

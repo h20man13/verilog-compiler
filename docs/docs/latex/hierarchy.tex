@@ -1,14 +1,7 @@
 \doxysection{Class Hierarchy}
 This inheritance list is sorted roughly, but not completely, alphabetically\+:\begin{DoxyCompactList}
-\item \contentsline{section}{Case\+Item}{\pageref{classCaseItem}}{}
+\item \contentsline{section}{Ast\+Node}{\pageref{classAstNode}}{}
 \begin{DoxyCompactList}
-\item \contentsline{section}{Default\+Item}{\pageref{classDefaultItem}}{}
-\item \contentsline{section}{Expr\+Item}{\pageref{classExprItem}}{}
-\end{DoxyCompactList}
-\item \contentsline{section}{Cont\+Assign\+Instance}{\pageref{classContAssignInstance}}{}
-\item \contentsline{section}{Destination}{\pageref{classDestination}}{}
-\item \contentsline{section}{Error}{\pageref{classError}}{}
-\item \contentsline{section}{Error\+Log}{\pageref{classErrorLog}}{}
 \item \contentsline{section}{Expression}{\pageref{classExpression}}{}
 \begin{DoxyCompactList}
 \item \contentsline{section}{Number$<$ int\+\_\+type $>$}{\pageref{classNumber}}{}
@@ -90,15 +83,7 @@ This inheritance list is sorted roughly, but not completely, alphabetically\+:\b
 \item \contentsline{section}{Neg}{\pageref{classNeg}}{}
 \end{DoxyCompactList}
 \end{DoxyCompactList}
-\item \contentsline{section}{Lexer}{\pageref{classLexer}}{}
-\item \contentsline{section}{LValue}{\pageref{classLValue}}{}
-\begin{DoxyCompactList}
-\item \contentsline{section}{Concatenation}{\pageref{classConcatenation}}{}
-\item \contentsline{section}{Identifier}{\pageref{classIdentifier}}{}
-\item \contentsline{section}{Index}{\pageref{classIndex}}{}
-\item \contentsline{section}{Slice}{\pageref{classSlice}}{}
-\end{DoxyCompactList}
-\item \contentsline{section}{Mod\+Instance}{\pageref{classModInstance}}{}
+\item \contentsline{section}{File}{\pageref{classFile}}{}
 \item \contentsline{section}{Mod\+Item}{\pageref{classModItem}}{}
 \begin{DoxyCompactList}
 \item \contentsline{section}{Always\+Statement}{\pageref{classAlwaysStatement}}{}
@@ -146,38 +131,21 @@ This inheritance list is sorted roughly, but not completely, alphabetically\+:\b
 \end{DoxyCompactList}
 \item \contentsline{section}{Empty\+Mod\+Item}{\pageref{classEmptyModItem}}{}
 \item \contentsline{section}{Function\+Declaration}{\pageref{classFunctionDeclaration}}{}
+\item \contentsline{section}{Gate\+Declaration}{\pageref{classGateDeclaration}}{}
+\begin{DoxyCompactList}
+\item \contentsline{section}{And\+Gate\+Declaration}{\pageref{classAndGateDeclaration}}{}
+\item \contentsline{section}{Nand\+Gate\+Declaration}{\pageref{classNandGateDeclaration}}{}
+\item \contentsline{section}{Nor\+Gate\+Declaration}{\pageref{classNorGateDeclaration}}{}
+\item \contentsline{section}{Not\+Gate\+Declaration}{\pageref{classNotGateDeclaration}}{}
+\item \contentsline{section}{Or\+Gate\+Declaration}{\pageref{classOrGateDeclaration}}{}
+\item \contentsline{section}{Xnor\+Gate\+Declaration}{\pageref{classXnorGateDeclaration}}{}
+\item \contentsline{section}{Xor\+Gate\+Declaration}{\pageref{classXorGateDeclaration}}{}
+\end{DoxyCompactList}
 \item \contentsline{section}{Initial\+Statement}{\pageref{classInitialStatement}}{}
 \item \contentsline{section}{Mod\+Instantiation}{\pageref{classModInstantiation}}{}
 \item \contentsline{section}{Task\+Declaration}{\pageref{classTaskDeclaration}}{}
 \end{DoxyCompactList}
-\item \contentsline{section}{Obj\+Base}{\pageref{classObjBase}}{}
-\begin{DoxyCompactList}
-\item \contentsline{section}{Object$<$ bool $>$}{\pageref{classObject}}{}
-\begin{DoxyCompactList}
-\item \contentsline{section}{Boolean}{\pageref{classBoolean}}{}
-\end{DoxyCompactList}
-\item \contentsline{section}{Object$<$ num\+\_\+type $>$}{\pageref{classObject}}{}
-\begin{DoxyCompactList}
-\item \contentsline{section}{Number$<$ num\+\_\+type $>$}{\pageref{classNumber}}{}
-\end{DoxyCompactList}
-\item \contentsline{section}{Object$<$ std\+::string $>$}{\pageref{classObject}}{}
-\begin{DoxyCompactList}
-\item \contentsline{section}{String}{\pageref{classString}}{}
-\end{DoxyCompactList}
-\item \contentsline{section}{Object$<$ val\+\_\+type $>$}{\pageref{classObject}}{}
-\begin{DoxyCompactList}
-\item \contentsline{section}{Number$<$ int\+\_\+type $>$}{\pageref{classNumber}}{}
-\item \contentsline{section}{Number$<$ double $>$}{\pageref{classNumber}}{}
-\end{DoxyCompactList}
-\end{DoxyCompactList}
-\item \contentsline{section}{Position}{\pageref{classPosition}}{}
-\item \contentsline{section}{Reg\+Value}{\pageref{classRegValue}}{}
-\begin{DoxyCompactList}
-\item \contentsline{section}{Identifier}{\pageref{classIdentifier}}{}
-\item \contentsline{section}{Index}{\pageref{classIndex}}{}
-\item \contentsline{section}{Slice}{\pageref{classSlice}}{}
-\end{DoxyCompactList}
-\item \contentsline{section}{Source}{\pageref{classSource}}{}
+\item \contentsline{section}{Module}{\pageref{classModule}}{}
 \item \contentsline{section}{Statement}{\pageref{classStatement}}{}
 \begin{DoxyCompactList}
 \item \contentsline{section}{Case}{\pageref{classCase}}{}
@@ -207,6 +175,54 @@ This inheritance list is sorted roughly, but not completely, alphabetically\+:\b
 \item \contentsline{section}{Wait}{\pageref{classWait}}{}
 \item \contentsline{section}{While}{\pageref{classWhile}}{}
 \end{DoxyCompactList}
+\end{DoxyCompactList}
+\item \contentsline{section}{Case\+Item}{\pageref{classCaseItem}}{}
+\begin{DoxyCompactList}
+\item \contentsline{section}{Default\+Item}{\pageref{classDefaultItem}}{}
+\item \contentsline{section}{Expr\+Item}{\pageref{classExprItem}}{}
+\end{DoxyCompactList}
+\item \contentsline{section}{Cont\+Assign\+Instance}{\pageref{classContAssignInstance}}{}
+\item \contentsline{section}{Destination}{\pageref{classDestination}}{}
+\item \contentsline{section}{Error}{\pageref{classError}}{}
+\item \contentsline{section}{Error\+Log}{\pageref{classErrorLog}}{}
+\item \contentsline{section}{Lexer}{\pageref{classLexer}}{}
+\item \contentsline{section}{LValue}{\pageref{classLValue}}{}
+\begin{DoxyCompactList}
+\item \contentsline{section}{Concatenation}{\pageref{classConcatenation}}{}
+\item \contentsline{section}{Identifier}{\pageref{classIdentifier}}{}
+\item \contentsline{section}{Index}{\pageref{classIndex}}{}
+\item \contentsline{section}{Slice}{\pageref{classSlice}}{}
+\end{DoxyCompactList}
+\item \contentsline{section}{Mod\+Instance}{\pageref{classModInstance}}{}
+\item \contentsline{section}{Obj\+Base}{\pageref{classObjBase}}{}
+\begin{DoxyCompactList}
+\item \contentsline{section}{Object$<$ bool $>$}{\pageref{classObject}}{}
+\begin{DoxyCompactList}
+\item \contentsline{section}{Boolean}{\pageref{classBoolean}}{}
+\end{DoxyCompactList}
+\item \contentsline{section}{Object$<$ num\+\_\+type $>$}{\pageref{classObject}}{}
+\begin{DoxyCompactList}
+\item \contentsline{section}{Number$<$ num\+\_\+type $>$}{\pageref{classNumber}}{}
+\end{DoxyCompactList}
+\item \contentsline{section}{Object$<$ std\+::string $>$}{\pageref{classObject}}{}
+\begin{DoxyCompactList}
+\item \contentsline{section}{String}{\pageref{classString}}{}
+\end{DoxyCompactList}
+\item \contentsline{section}{Object$<$ val\+\_\+type $>$}{\pageref{classObject}}{}
+\begin{DoxyCompactList}
+\item \contentsline{section}{Number$<$ int\+\_\+type $>$}{\pageref{classNumber}}{}
+\item \contentsline{section}{Number$<$ double $>$}{\pageref{classNumber}}{}
+\end{DoxyCompactList}
+\end{DoxyCompactList}
+\item \contentsline{section}{Parser}{\pageref{classParser}}{}
+\item \contentsline{section}{Position}{\pageref{classPosition}}{}
+\item \contentsline{section}{Reg\+Value}{\pageref{classRegValue}}{}
+\begin{DoxyCompactList}
+\item \contentsline{section}{Identifier}{\pageref{classIdentifier}}{}
+\item \contentsline{section}{Index}{\pageref{classIndex}}{}
+\item \contentsline{section}{Slice}{\pageref{classSlice}}{}
+\end{DoxyCompactList}
+\item \contentsline{section}{Source}{\pageref{classSource}}{}
 \item \contentsline{section}{Tok\+Decl}{\pageref{structTokDecl}}{}
 \item \contentsline{section}{Token}{\pageref{classToken}}{}
 \end{DoxyCompactList}

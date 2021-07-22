@@ -5,7 +5,7 @@
 %%For: 
 %Magnification: 1.00
 %%Orientation: Portrait
-%%BoundingBox: 0 0 500 884.353760
+%%BoundingBox: 0 0 500 952.380981
 %%Pages: 0
 %%BeginSetup
 %%EndSetup
@@ -19,12 +19,12 @@
 /marginwidth 10 def
 /distx 20 def
 /disty 40 def
-/boundaspect 0.565385 def  % aspect ratio of the BoundingBox (width/height)
+/boundaspect 0.525000 def  % aspect ratio of the BoundingBox (width/height)
 /boundx 500 def
 /boundy boundx boundaspect div def
 /xspacing 0 def
 /yspacing 0 def
-/rows 13 def
+/rows 14 def
 /cols 2 def
 /scalefactor 0 def
 /boxfont /Times-Roman findfont fontheight scalefont def
@@ -174,6 +174,7 @@
 boxfont setfont
 1 boundaspect scale
 (Statement) cw
+(AstNode) cw
 (Case) cw
 (EmptyStatement) cw
 (For) cw
@@ -198,6 +199,7 @@ boundx scalefactor div boundy scalefactor div scale
 % ----- classes -----
 
  (Statement) 0.000000 12.000000 box
+ (AstNode) 0.000000 13.000000 box
  (Case) 1.000000 11.000000 box
 1.000000 11.000000 mark
  (EmptyStatement) 1.000000 10.000000 box
@@ -217,6 +219,10 @@ boundx scalefactor div boundy scalefactor div scale
 
 % ----- relations -----
 
+solid
+0 0.000000 12.000000 out
+solid
+1 0.000000 13.000000 in
 solid
 1 0.000000 11.250000 out
 dotted

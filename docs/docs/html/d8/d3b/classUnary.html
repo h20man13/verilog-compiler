@@ -82,10 +82,11 @@ Inheritance diagram for Unary:</div>
  <div class="center">
   <img src="../../d8/d3b/classUnary.png" usemap="#Unary_map" alt=""/>
   <map id="Unary_map" name="Unary_map">
-<area href="../../de/d94/classExpression.html" title="The Expression is an Interface that can be used to represent Expressions." alt="Expression" shape="rect" coords="84,0,158,24"/>
-<area href="../../d8/d99/classBNeg.html" title="The BNeg performs a bitwise negation in verilog or a ~." alt="BNeg" shape="rect" coords="0,112,74,136"/>
-<area href="../../d9/d36/classLNeg.html" title="The LNeg performs a logical negation on the node or !" alt="LNeg" shape="rect" coords="84,112,158,136"/>
-<area href="../../d3/da6/classNeg.html" alt="Neg" shape="rect" coords="168,112,242,136"/>
+<area href="../../de/d94/classExpression.html" title="The Expression is an Interface that can be used to represent Expressions." alt="Expression" shape="rect" coords="84,56,158,80"/>
+<area href="../../dc/da9/classAstNode.html" alt="AstNode" shape="rect" coords="84,0,158,24"/>
+<area href="../../d8/d99/classBNeg.html" title="The BNeg performs a bitwise negation in verilog or a ~." alt="BNeg" shape="rect" coords="0,168,74,192"/>
+<area href="../../d9/d36/classLNeg.html" title="The LNeg performs a logical negation on the node or !" alt="LNeg" shape="rect" coords="84,168,158,192"/>
+<area href="../../d3/da6/classNeg.html" alt="Neg" shape="rect" coords="168,168,242,192"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -99,13 +100,14 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="memdesc:a4fbd06e0070889c67cfcc0a425b44947"><td class="mdescLeft">&#160;</td><td class="mdescRight">The code_gen method is used to generate the LLVM IR of an expression object. <br /></td></tr>
 <tr class="separator:a4fbd06e0070889c67cfcc0a425b44947"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classExpression"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classExpression')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../de/d94/classExpression.html">Expression</a></td></tr>
-<tr class="memitem:a2c4bb4178307ec28af5fad960b2b49ae inherit pub_methods_classExpression"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../da/d8b/classPosition.html">Position</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d94/classExpression.html#a2c4bb4178307ec28af5fad960b2b49ae">get_position</a> () const</td></tr>
-<tr class="memdesc:a2c4bb4178307ec28af5fad960b2b49ae inherit pub_methods_classExpression"><td class="mdescLeft">&#160;</td><td class="mdescRight">The get position method is a getter method that retrieves the position of the expression.  <a href="../../de/d94/classExpression.html#a2c4bb4178307ec28af5fad960b2b49ae">More...</a><br /></td></tr>
-<tr class="separator:a2c4bb4178307ec28af5fad960b2b49ae inherit pub_methods_classExpression"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3be82df7de50849bb2f6bc54273bce27 inherit pub_methods_classExpression"><td class="memItemLeft" align="right" valign="top"><a id="a3be82df7de50849bb2f6bc54273bce27"></a>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d94/classExpression.html#a3be82df7de50849bb2f6bc54273bce27">~Expression</a> ()=0</td></tr>
 <tr class="memdesc:a3be82df7de50849bb2f6bc54273bce27 inherit pub_methods_classExpression"><td class="mdescLeft">&#160;</td><td class="mdescRight">The default destructor for expression objects. <br /></td></tr>
 <tr class="separator:a3be82df7de50849bb2f6bc54273bce27 inherit pub_methods_classExpression"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classAstNode"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classAstNode')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../dc/da9/classAstNode.html">AstNode</a></td></tr>
+<tr class="memitem:ab1cff05f1258d2529dc8aabc6b727991 inherit pub_methods_classAstNode"><td class="memItemLeft" align="right" valign="top"><a id="ab1cff05f1258d2529dc8aabc6b727991"></a>
+const <a class="el" href="../../da/d8b/classPosition.html">Position</a>&#160;</td><td class="memItemRight" valign="bottom"><b>get_position</b> () const</td></tr>
+<tr class="separator:ab1cff05f1258d2529dc8aabc6b727991 inherit pub_methods_classAstNode"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -122,6 +124,13 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a094ab2f38636bb8dba2f415e2d943cb1 inherit pro_methods_classExpression"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d94/classExpression.html#a094ab2f38636bb8dba2f415e2d943cb1">Expression</a> (const <a class="el" href="../../de/d94/classExpression.html">Expression</a> &amp;expression)</td></tr>
 <tr class="memdesc:a094ab2f38636bb8dba2f415e2d943cb1 inherit pro_methods_classExpression"><td class="mdescLeft">&#160;</td><td class="mdescRight">The copy constructor is used to copy <a class="el" href="../../de/d94/classExpression.html" title="The Expression is an Interface that can be used to represent Expressions.">Expression</a> objects regardless of implementation.  <a href="../../de/d94/classExpression.html#a094ab2f38636bb8dba2f415e2d943cb1">More...</a><br /></td></tr>
 <tr class="separator:a094ab2f38636bb8dba2f415e2d943cb1 inherit pro_methods_classExpression"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_classAstNode"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classAstNode')"><img src="../../closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="../../dc/da9/classAstNode.html">AstNode</a></td></tr>
+<tr class="memitem:ae2434eab6c919bb416e3389d311cade7 inherit pro_methods_classAstNode"><td class="memItemLeft" align="right" valign="top"><a id="ae2434eab6c919bb416e3389d311cade7"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>AstNode</b> (const <a class="el" href="../../da/d8b/classPosition.html">Position</a> &amp;position)</td></tr>
+<tr class="separator:ae2434eab6c919bb416e3389d311cade7 inherit pro_methods_classAstNode"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a654f49c626e442f49c0e47fc3d41ccd9 inherit pro_methods_classAstNode"><td class="memItemLeft" align="right" valign="top"><a id="a654f49c626e442f49c0e47fc3d41ccd9"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>AstNode</b> (const <a class="el" href="../../dc/da9/classAstNode.html">AstNode</a> &amp;node)</td></tr>
+<tr class="separator:a654f49c626e442f49c0e47fc3d41ccd9 inherit pro_methods_classAstNode"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
