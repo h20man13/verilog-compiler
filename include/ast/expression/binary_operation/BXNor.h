@@ -17,11 +17,13 @@
 
 class BXNor: public Binary{
 public:
+	BXNor(const Position& position, Expression* const left, Expression* const right);
+	BXNor(const BXNor& binary);
 	/**
 	 * The interpret function interprets the node and it returns an integer
 	 * @return an Integer or an int object representing the function
 	 */
-	 ObjBase* const evaluate() const;
+	 ObjBase* const evaluate();
 
 	/**
 	 * The code gen function generates the LLVM code to be used for the Binary Xnor operation

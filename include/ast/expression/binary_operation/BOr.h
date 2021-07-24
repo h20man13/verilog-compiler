@@ -18,11 +18,13 @@
 
 class BOr: public Binary{
 public:
+	BOr(const Position& position, Expression* const left, Expression* const right);
+	BOr(const BOr& binary);
 	/**
 	 * The interpret function returns a number representing the
 	 * @return Integer as a result of the operation
 	 */
-	ObjBase* const evaluate() const;
+	ObjBase* const evaluate();
 
 	/**
 	 * The code_gen operation generates LLVM IR to represent a bitwise or operation

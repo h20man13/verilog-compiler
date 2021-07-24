@@ -12,3 +12,7 @@ void Identifier::code_gen() const{
 ObjBase* const Identifier::evaluate(){
 	return NULL;
 }
+
+ObjBase* const Identifier::access() const{
+	return NULL;
+}

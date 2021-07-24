@@ -18,13 +18,15 @@
 
 class Div: public Binary{
 public:
+	Div(const Position& position, Expression* const left, Expression* const right);
+	Div(const Div& binary);
 	/**
 	 * The evaluate method returns an
 	 * @tparam num_type  a generic type from the NumWrapper class
 	 * @return a NumWrap object
 	 */
 
-	ObjBase* const evaluate() const;
+	ObjBase* const evaluate();
 
 	/**
 	 * The code_gen method is used to generate LLVM IR for a Div expression

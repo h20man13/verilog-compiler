@@ -12,12 +12,14 @@
 
 class Mult: public Binary{
 public:
+	Mult(const Position& position, Expression* const left, Expression* const right);
+	Mult(const Mult& binary);
 	/**
 	 * The evaluate class is used to interpret Binary operations
 	 * @tparam num_type the generic type of a Number
 	 * @return a Number
 	 */
-	ObjBase* const evaluate() const;
+	ObjBase* const evaluate();
 
 	/**
 	 * Generates LLVM IR to represent a binary addition operation

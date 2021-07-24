@@ -16,11 +16,12 @@
  */
 class LNeg: public Unary{
 public:
+	LNeg(const Position& position, Expression* const exp);
 	/**
 	 * The evaluate method is used to interpret the Logical and Expression
 	 * @return a boolean from the result of the && expression
 	 */
-	ObjBase* const evaluate() const;
+	ObjBase* const evaluate();
 
 	/**
 	 * The code generation function that is used to emit LLVM IR

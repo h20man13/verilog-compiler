@@ -28,7 +28,7 @@ class Forever: Statement{
 
 	public:
 
-	Forever(const Position& position, Expression* const check, Statement* const statement);
+	Forever(const Position& position, Statement* const statement);
 
 	Forever(const Forever& forever);
 

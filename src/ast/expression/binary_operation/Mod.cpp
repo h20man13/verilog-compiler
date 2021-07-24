@@ -11,11 +11,15 @@
 #include "ast/expression/Expression.h"
 #include "common/types/TypeOpUtils.h"
 
+Mod::Mod(const Position& position, Expression* const left, Expression* const right): Binary(position, left, right){}
+
+Mod::Mod(const Mod& binary): Binary(binary){}
+
 void Mod::code_gen() const {
 	// TODO -- finish this later
 }
 
-ObjBase* const Mod::evaluate() const {
+ObjBase* const Mod::evaluate() {
 
 	ObjBase *const left = this->left->evaluate();
 	ObjBase *const right = this->right->evaluate();

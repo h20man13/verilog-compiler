@@ -4,13 +4,12 @@
  *  Created on: Jun 14, 2021
  *      Author: jacob
  */
-
-#include "ast/expression/unary_operation/Unary.h"
 #include "ast/expression/unary_operation/Neg.h"
-#include "common/types/TypeOpUtils.h"
 
-ObjBase* const Neg::evaluate() const {
-	return neg(this->exp->evaluate());
+Neg::Neg(const Position& start, Expression* const exp): Unary(start, exp){};
+
+ObjBase* const Neg::evaluate(){
+	return NULL;
 }
 
 /**

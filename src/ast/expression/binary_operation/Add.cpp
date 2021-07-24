@@ -11,6 +11,9 @@
 #include "ast/expression/Expression.h"
 #include "common/types/TypeOpUtils.h"
 
+Add::Add(const Position& position, Expression* const left, Expression* const right): Binary(position, left, right){}
+
+Add::Add(const Add& binary): Binary(binary){}
 /**
  * Emits LLVM IR for an addition expression
  */
@@ -18,10 +21,15 @@ void Add::code_gen() const {
 	// TODO -- finish this later
 }
 
-ObjBase* const Add::evaluate() const {
+ObjBase* const Add::evaluate(){
 	ObjBase *const left = this->left->evaluate();
 	ObjBase *const right = this->right->evaluate();
 
-	return add(left, right);
+	ObjBase* const result = add(left, right);
+
+	delete left;
+	delete right;
+
+	return result;
 }
 

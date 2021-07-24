@@ -18,6 +18,7 @@ bool instanceof(const Type*);
 
 class ObjBase{
 public:
+	virtual ~ObjBase();
 	virtual const std::string to_string() const = 0;
 	virtual const std::string get_class() const = 0;
 	virtual const bool bool_value() const = 0;

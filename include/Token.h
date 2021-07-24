@@ -103,9 +103,10 @@ class Token{
   const std::string lexeme;
   const tok type;
   const Position position;
-  Token(const tok type, const std::string& lexeme, const Position& position);
 
  public:
+
+  Token(const tok type, const std::string& lexeme, const Position& position);
 
   /**
    *@param None

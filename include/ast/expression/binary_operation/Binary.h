@@ -13,9 +13,9 @@
 
 class Binary: public Expression{
 protected:
-	const Expression* left;
-	const Expression* right;
-	Binary(const Position& position, const Expression& left, const Expression& right);
+	Expression* const left;
+	Expression* const right;
+	Binary(const Position& position, Expression* const left, Expression* const right);
 	Binary(const Binary& binop);
 	virtual ~Binary();
 public:
@@ -25,7 +25,7 @@ public:
 	 * @tparam num_type the return type of the expression
 	 * @return
 	 */
-	 virtual ObjBase* const evaluate() const = 0;
+	 virtual ObjBase* const evaluate() = 0;
 
 	/**
 	 * The code_gen method is used to generate the LLVM IR of an expression object

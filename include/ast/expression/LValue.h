@@ -10,12 +10,16 @@
 
 #include "common/types/ObjBase.h"
 
-class LValue{
+class LValue: Expression{
 
 protected:
 	virtual ObjBase* const access() const = 0;
 public:
    virtual ~LValue() = 0;
+
+   virtual ObjBase* const evaluate() = 0;
+
+   virtual void code_gen() const = 0;
 };
 
 

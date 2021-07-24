@@ -10,7 +10,7 @@
 
 #include "common/Position.h"
 #include "common/types/ObjBase.h"
-#include "ast/statement/Statement.h"
+#include "ast/statement/assignment/Blocking.h"
 #include "ast/expression/Expression.h"
 
 /**
@@ -21,9 +21,9 @@
 class For: Statement{
 
 	private:
-	Statement* const init;
+	Blocking* const init;
 	Expression* const check;
-	Statement* const incriment;
+	Blocking* const incriment;
 
 	Statement* const body;
 
@@ -31,7 +31,7 @@ class For: Statement{
 
 	public:
 
-	For(const Position& position, Statement* const init, Expression* const check, Statement* const incriment, Statement* const body);
+	For(const Position& position, Blocking* const init, Expression* const check, Blocking* const incriment, Statement* const body);
 
 	For(const For& for_stat);
 

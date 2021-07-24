@@ -18,12 +18,14 @@
  */
 class RShift: public Binary{
 public:
+	RShift(const Position& position, Expression* const left, Expression* const right);
+	RShift(const RShift& binary);
 	/**
 	 * The interpret method computes the bitwise operation of two numbers
 	 * @param None
 	 * @return an Integer object
 	 */
-	ObjBase* const evaluate() const;
+	ObjBase* const evaluate();
 
 	/**
 	 * The code gen method emits the LLVM code to be used to generate a bitwise and expression

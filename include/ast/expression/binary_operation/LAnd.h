@@ -12,11 +12,13 @@
 
 class LAnd: public Binary{
 public:
+	LAnd(const Position& position, Expression* const left, Expression* const right);
+	LAnd(const LAnd& binary);
 	/**
 	 * The evaluate method is used to interpret the Logical and Expression
 	 * @return a boolean from the result of the && expression
 	 */
-	ObjBase* const evaluate() const;
+	ObjBase* const evaluate();
 
 	/**
 	 * The code generation function that is used to emit LLVM IR

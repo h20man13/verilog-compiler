@@ -10,11 +10,15 @@
 #include "ast/expression/Expression.h"
 #include "common/types/TypeOpUtils.h"
 
+Div::Div(const Position& position, Expression* const left, Expression* const right): Binary(position, left, right){}
+
+Div::Div(const Div& binary): Binary(binary){}
+
 void Div::code_gen() const {
 	// TODO -- finish this later
 }
 
-ObjBase* const Div::evaluate() const {
+ObjBase* const Div::evaluate() {
 	ObjBase *const left = this->left->evaluate();
 	ObjBase *const right = this->right->evaluate();
 

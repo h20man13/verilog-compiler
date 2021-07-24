@@ -18,12 +18,13 @@
  */
 class Sub: public Binary{
 public:
-
+	Sub(const Position& position, Expression* const left, Expression* const right);
+	Sub(const Sub& binary);
 	/**
 	 * A function to perform interpretation on the subtraction operation
 	 * @return an integer that is the result of the binary operation
 	 */
-	ObjBase* const evaluate() const;
+	ObjBase* const evaluate();
 
 	/**
 	 * The code_gen function is used to generate the code for the subtraction expression via syntax directed translation

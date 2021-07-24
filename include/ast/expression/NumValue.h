@@ -11,11 +11,11 @@
 #include "ast/expression/Expression.h"
 #include "Token.h"
 
-class Number: Expression{
+class NumValue: Expression{
 private:
 	std::string lexeme;
 public:
-	Number(const Token& tok);
+	NumValue(const Token& tok);
 
 	void code_gen() const;
 

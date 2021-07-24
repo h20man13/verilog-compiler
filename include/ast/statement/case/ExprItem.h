@@ -5,8 +5,8 @@
  *      Author: jacob
  */
 
-#ifndef DEFAULTITEM_H
-#define DEFAULTITEM_H
+#ifndef EXPR_ITEM_H
+#define EXPR_ITEM_H
 
 #include "ast/expression/Expression.h"
 #include "ast/statement/Statement.h"
@@ -15,10 +15,11 @@
 
 class ExprItem: CaseItem{
 private:
-	Expression* const expression;
+	std::list<Expression* const> exp_list;
 public:
-	ExprItem(Expression* const expression, Statement* const statement);
+	ExprItem(std::list<Expression* const> exp_list, Statement* const statement);
 	ExprItem(const ExprItem& item);
+	~ExprItem();
 	const bool matchX();
 	const bool matchZ();
 	const bool match();

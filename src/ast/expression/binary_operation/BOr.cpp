@@ -10,11 +10,15 @@
 #include "ast/expression/Expression.h"
 #include "common/types/TypeOpUtils.h"
 
+BOr::BOr(const Position& position, Expression* const left, Expression* const right): Binary(position, left, right){}
+
+BOr::BOr(const BOr& binary): Binary(binary){}
+
 void BOr::code_gen() const {
 	// TODO -- finish this later
 }
 
-ObjBase* const BOr::evaluate() const {
+ObjBase* const BOr::evaluate() {
 	ObjBase *const left = this->left->evaluate();
 	ObjBase *const right = this->right->evaluate();
 

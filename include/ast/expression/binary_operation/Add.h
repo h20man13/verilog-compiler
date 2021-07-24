@@ -12,17 +12,19 @@
 
 class Add: public Binary{
 public:
+	Add(const Position& position, Expression* const left, Expression* const right);
+	Add(const Add& binary);
 	/**
 	 * The Add class performs an addition operation and returns the result
 	 * @tparam num_type the generic type of the number
 	 * @return the result of the logical and Expression
 	 */
-	ObjBase* const evaluate() const = 0;
+	ObjBase* const evaluate();
 
 	/**
 	 * The code_gen function is used to generate LLVM IR for an Addition operation
 	 */
-	void code_gen() const = 0;
+	void code_gen() const;
 };
 
 #endif

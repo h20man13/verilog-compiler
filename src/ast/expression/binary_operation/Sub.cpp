@@ -10,11 +10,15 @@
 #include "ast/expression/Expression.h"
 #include "common/types/TypeOpUtils.h"
 
+Sub::Sub(const Position& position, Expression* const left, Expression* const right): Binary(position, left, right){}
+
+Sub::Sub(const Sub& binary): Binary(binary){}
+
 void Sub::code_gen() const {
 	// TODO -- finish this later
 }
 
-ObjBase* const Sub::evaluate() const {
+ObjBase* const Sub::evaluate(){
 	ObjBase *const left = this->left->evaluate();
 	ObjBase *const right = this->right->evaluate();
 

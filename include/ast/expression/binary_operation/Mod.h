@@ -17,11 +17,13 @@
  */
 class Mod: public Binary{
 public:
+	Mod(const Position& position, Expression* const left, Expression* const right);
+	Mod(const Mod& binary);
 	/**
 	 * A function to perform interpretation on the modulo expression
 	 * @return an integer that is the result of the binary operation
 	 */
-	ObjBase* const evaluate() const;
+	ObjBase* const evaluate();
 
 	/**
 	 * The code_gen function is used to generate the code for the modulo expression via syntax directed translation

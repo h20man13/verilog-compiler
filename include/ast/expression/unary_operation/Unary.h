@@ -16,8 +16,8 @@
  */
 class Unary: public Expression{
 protected:
-	const Expression* exp; //the expression to be performed on
-	Unary(const Position& position, const Expression& exp); //default constructor
+	Expression* const exp; //the expression to be performed on
+	Unary(const Position& position, Expression* const exp); //default constructor
 	Unary(const Unary& binop); //copy constructor
 	virtual ~Unary(); //virtual destructor
 public:
@@ -27,7 +27,7 @@ public:
 	 * @tparam num_type the return type of the expression
 	 * @return a type
 	 */
-	 virtual ObjBase* const evaluate() const = 0;
+	 virtual ObjBase* const evaluate() = 0;
 
 	/**
 	 * The code_gen method is used to generate the LLVM IR of an expression object

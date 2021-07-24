@@ -10,11 +10,15 @@
 #include "ast/expression/Expression.h"
 #include "common/types/TypeOpUtils.h"
 
+BXNor::BXNor(const Position& position, Expression* const left, Expression* const right): Binary(position, left, right){}
+
+BXNor::BXNor(const BXNor& binary): Binary(binary){}
+
 void BXNor::code_gen() const {
 	// TODO -- finish this later
 }
 
-ObjBase* const BXNor::evaluate() const {
+ObjBase* const BXNor::evaluate() {
 	ObjBase *const left = this->left->evaluate();
 	ObjBase *const right = this->right->evaluate();
 

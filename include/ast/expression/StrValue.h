@@ -15,7 +15,7 @@
  * The string ast node class is used to store string objects
  * @author Jacob Bauer
  */
-class String: Expression{
+class StrValue: Expression{
 private:
 	const std::string lexeme; //the lexeme of the required string to store
 public:
@@ -23,13 +23,13 @@ public:
 	 * The String class is used to store a string object
 	 * @param tok  the token that represents the string
 	 */
-	String(const Token& tok);
+	StrValue(const Token& tok);
 
 	/**
 	 * the copy constructor to create string ast nodes
 	 * @param str  the string object that will be coppied
 	 */
-	String(const String& str);
+	StrValue(const StrValue& str);
 
 	/**
 	 * The code gen method is used to emit a string in llvm IR

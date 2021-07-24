@@ -10,6 +10,10 @@
 #include "ast/expression/Expression.h"
 #include "common/types/TypeOpUtils.h"
 
+LAnd::LAnd(const Position& position, Expression* const left, Expression* const right): Binary(position, left, right){}
+
+LAnd::LAnd(const LAnd& binary): Binary(binary){}
+
 /**
  * The gode_gen method is used to emit LLVM code
  */
@@ -21,7 +25,7 @@ void LAnd::code_gen() const {
  * The evaluate method is used to evaluate
  * @return
  */
-ObjBase* const LAnd::evaluate() const {
+ObjBase* const LAnd::evaluate() {
 	return land(this->left->evaluate(), this->right->evaluate());
 }
 

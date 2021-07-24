@@ -49,7 +49,7 @@ public:
 	 * The access operator is used to access the element that will need to be assigned to
 	 */
 
-	ObjBase* const acess() const;
+	ObjBase* const access() const;
 
 	void declare() const;
 };
