@@ -1,9 +1,9 @@
 #include "ast/statement/EmptyStatement.h"
 
 
-EmptyStatement::~EmptyStatement() {}
+EmptyStatement::EmptyStatement(const Position& position): Statement(position) {}
 
-EmptyStatement::EmptyStatement(): Statement(*(const Position*)NULL) {}
+EmptyStatement::~EmptyStatement(){}
 
 
 void EmptyStatement::code_gen() const{}

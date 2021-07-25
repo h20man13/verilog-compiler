@@ -13,7 +13,7 @@
 #include "ast/statement/case/CaseItem.h"
 #include <list>
 
-class ExprItem: CaseItem{
+class ExprItem: public CaseItem{
 private:
 	std::list<Expression* const> exp_list;
 public:

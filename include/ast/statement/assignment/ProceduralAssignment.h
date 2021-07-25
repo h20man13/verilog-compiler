@@ -5,8 +5,8 @@
  *      Author: jacob
  */
 
-#ifndef ASSIGNMENT_H_
-#define ASSIGNMENT_H_
+#ifndef PROCEDURAL_ASSIGNMENT_H
+#define PROCEDURAL_ASSIGNMENT_H
 
 #include "ast/statement/Statement.h"
 #include "ast/expression/LValue.h"
@@ -16,12 +16,10 @@
  * The assignment template is used to create assignments in verilog. In verilog their are 3 types of assignments, Blocking, NonBlocking, and continuous assignments
  * @author Jacob Bauer
  */
-class ProceduralAssignment: Statement{
+class ProceduralAssignment: public Statement{
 protected:
-	ProceduralAssignment(const Position& position, LValue* const left, Expression* const right);
+	ProceduralAssignment(const Position& position);
 	ProceduralAssignment(const ProceduralAssignment& assignment);
-	LValue* const left;
-	Expression* const right;
 public:
 
 	/**
@@ -38,7 +36,7 @@ public:
 	virtual void code_gen() const = 0;
 
 
-	~ProceduralAssignment();
+	virtual ~ProceduralAssignment() = 0;
 };
 
 

@@ -4,13 +4,14 @@
 #include "common/Position.h"
 
 class AstNode{
+public:
+	const Position get_position() const;
+	virtual ~AstNode();
 private:
 	const Position position;
 protected:
 	AstNode(const Position& position);
 	AstNode(const AstNode& node);
-public:
-	const Position get_position() const;
 };
 
 

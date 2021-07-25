@@ -112,6 +112,10 @@ Declaration* const const RecursiveDescent::parse_module_par_declaration(){
 
 }
 
+//moditems
+
+
+
 ModItem* const RecursiveDescent::parse_mod_item(){
 
 }
@@ -120,27 +124,17 @@ ModItem* const RecursiveDescent::parse_mod_item(){
 
 Statement* const RecursiveDescent::parse_statement(){
 	Position start = get_start();
-	if (will_match(tok::IF)) {
-		return parse_if_statement();
-	} else if (will_match(tok::CASE)) {
-		return parse_case_statement();
-	} else if (will_match(tok::CASEZ)) {
-		return parse_casez_statement();
-	} else if (will_match(tok::CASEX)) {
-		return parse_casex_statement();
-	} else if (will_match(tok::FOREVER)) {
-		return parse_forever_statement();
-	} else if (will_match(tok::REPEAT)) {
-		return parse_repeat_statement();
-	} else if (will_match(tok::WHILE)) {
-		return parse_while_statement();
-	} else if (will_match(tok::FOR)) {
-		return parse_for_statement();
-	} else if (will_match(tok::WAIT)) {
-		return parse_wait_statement();
-	} else if (will_match(tok::BEGIN)) {
-		return parse_sequential_block();
-	} else if (will_match(tok::DOLLAR)) { //system tasks
+	if (will_match(tok::IF)) return parse_if_statement();
+	else if (will_match(tok::CASE)) return parse_case_statement();
+	else if (will_match(tok::CASEZ)) return parse_casez_statement();
+	else if (will_match(tok::CASEX)) return parse_casex_statement();
+	else if (will_match(tok::FOREVER)) return parse_forever_statement();
+	else if (will_match(tok::REPEAT)) return parse_repeat_statement();
+	else if (will_match(tok::WHILE)) return parse_while_statement();
+	else if (will_match(tok::FOR)) return parse_for_statement();
+	else if (will_match(tok::WAIT)) return parse_wait_statement();
+	else if (will_match(tok::BEGIN)) return parse_sequential_block();
+	else if (will_match(tok::DOLLAR)) { //system tasks
 		skip();
 		Token ident = match(tok::IDENTIFIER);
 		std::list<Expression* const> exp_list;
@@ -211,23 +205,82 @@ Statement* const RecursiveDescent::parse_statement(){
 	}
 }
 
+Statement* const RecursiveDescent::parse_statement_or_null(){
+	const Position start = get_start();
+	if(will_match(tok::SEMI)){
+		return new EmptyStatement(start);
+	} else {
+		return parse_statement();
+	}
+}
+
+int RecursiveDescent::is_lvalue(){
+	if(will_match(LCURL)){
+		int element = 1;
+		while(!will_match(tok::RCURL, element)){
+			element++;
+		}
+		return element + 1;
+	} else if(will_match(tok::IDENTIFIER)){
+		if(will_match(tok::RBRACK, 1)){
+			int element = 2;
+			while(!will_match(tok::RCURL, element)){
+				element++;
+			}
+			return element + 1;
+		} else if(will_match(tok::EQ1, 1) || will_match(tok::LE, 1)){
+			return 0;
+		} else {
+			return -1;
+		}
+	} else {
+		return -1; //isnt lvalue
+	}
+}
+
+bool RecursiveDescent::is_unblocking_assignment(){
+	int lval = is_lvalue();
+	if(lval == -1){
+		return false;
+	} else {
+		return will_match(tok::LE,lval+1);
+	}
+}
+
 ProceduralAssignment* const RecursiveDescent::parse_procedural_assignment(LValue* const lvalue){
 	if(will_match(tok::LE)){
 		std::list<LValue* const> lvalue_list;
 		std::list<Expression* const> expression_list;
-		skip();
+		eat();
 		Expression* const exp = parse_expression();
 		match(tok::SEMI, REPAIR);
 		lvalue_list.push_back(lvalue);
 		expression_list.push_back(exp);
-		while(will_match(tok::IDENTIFIER)){
-
+		while(is_unblocking_assignment()){
+			LValue* const lv = parse_l_value();
+			match(tok::LE, REPAIR);
+			exp = parse_expression();
+			lvalue_list.push_back(lv);
+			expression_list.push_back(exp);
+			match(tok::SEMI, REPAIR);
 		}
+
+		return new NonBlocking(lvalue->get_position(), lvalue_list, expression_list);
+
 	} else {
 		match(tok::EQ1, REPAIR);
 		Expression* const exp = parse_expression();
 		return new Blocking(lvalue->get_position(), lvalue, exp);
 	}
+}
+
+Blocking* const RecursiveDescent::parse_blocking_assignment_statement(){
+	const Position& start = get_start();
+	LValue* const lvalue = parse_l_value();
+	match(tok::EQ1, REPAIR);
+	Expression* const exp = parse_expression();
+	match(tok::SEMI, REPAIR);
+	return new Blocking(start, lvalue, exp);
 }
 
 If* const RecursiveDescent::parse_if_statement(){
@@ -236,7 +289,7 @@ If* const RecursiveDescent::parse_if_statement(){
 	match(tok::LPAR, REPAIR);
 	Expression* const expr = parse_expression();
 	match(tok::RPAR, REPAIR);
-	Statement* const stat = parse_statement(); //TODO -- change to or null statement
+	Statement* const stat = parse_statement_or_null();
 	if(will_match(tok::ELSE)){
 		eat();
 		Statement* const stat2 = parse_statement();
@@ -268,7 +321,7 @@ CaseItem* const RecursiveDescent::parse_case_item(){
 		}
 
 		match(tok::COLON, REPAIR);
-		Statement* const stat = parse_statement(); //TODO -- change to an empty statement
+		Statement* const stat = parse_statement_or_null();
 		return new ExprItem(exp_list, stat);
 	}
 }
@@ -340,11 +393,11 @@ For* const RecursiveDescent::parse_for_statement(){
 	const Position start = get_start();
 	match(tok::FOR);
 	match(tok::LPAR, REPAIR);
-	Blocking* const init = parse_blocking_assignment();
+	Blocking* const init = parse_blocking_assignment_statement();
 	match(tok::SEMI, REPAIR);
 	Expression* const expr = parse_expression();
 	match(tok::SEMI, REPAIR);
-	Blocking* const change = parse_blocking_assignment();
+	Blocking* const change = parse_blocking_assignment_statement();
 	match(tok::RPAR, REPAIR);
 	Statement* const stat = parse_statement();
 	return new For(start, init, expr, change, stat);
@@ -469,6 +522,28 @@ Expression* const RecursiveDescent::parse_expression(){
 	}
 
 	return check;
+}
+
+//<ExpressionOrNull> := <Expression> | NULL
+Expression* const RecursiveDescent::parse_expression_or_null(){
+	const Position start = get_start();
+	if(will_match(tok::COMMA)){
+		return new EmptyExpression(start);
+	} else {
+		return parse_expression();
+	}
+}
+
+//<PortConnection> := . IDENT ( IDENT )
+
+PortConnection* const RecursiveDescent::parse_port_connection(){
+	const Position start = get_start();
+	match(tok::PERIOD);
+	Token assign = match(tok::IDENTIFIER);
+	match(tok::LPAR, REPAIR);
+	Token value = match(tok::IDENTIFIER);
+	match(tok::RPAR, REPAIR);
+	return new PortConnection(start, assign.get_lexeme(), value.get_lexeme());
 }
 
 //<ConstantExpression> := <Expression>
@@ -741,7 +816,7 @@ Expression* const RecursiveDescent::parse_primary(){
 			return new Identifier(ident);
 		}
 	} else if (will_match(tok::LCURL)) {
-		return parse_concatenation();
+		return parse_concatenation_or_replication();
 	} else if (will_match(tok::LPAR)) {
 		skip();
 		Expression* const exp = parse_expression();
@@ -789,7 +864,7 @@ SystemFunctionCall* const RecursiveDescent::parse_system_function_call(){
 Concatenation* const RecursiveDescent::parse_concatenation(){
 	Position start = get_start();
 
-	match(tok::LBRACK);
+	match(tok::LCURL);
 
 	std::list<Expression* const> expressions;
 
@@ -802,11 +877,39 @@ Concatenation* const RecursiveDescent::parse_concatenation(){
 		expressions.push_back(exp);
 	}
 
-	match(tok::RBRACK);
+	match(tok::RCURL);
 
 	return new Concatenation(start, expressions);
 
 }
+
+//<Replication> := { <ConstantExpression> [ <Concatenation> | <Replication> ] }
+Expression* const RecursiveDescent::parse_concatenation_or_replication(){
+	Position start = get_start();
+
+	match(tok::LCURL);
+
+	std::list<Expression* const> expressions;
+
+	Expression* const exp = parse_expression();
+	expressions.push_back(exp);
+
+	if(will_match(tok::LCURL)){
+		ConstantExpression* const times = new ConstantExpression(exp->get_position(), exp);
+		Expression* const data = parse_concatenation_or_replication();
+		match(tok::RCURL, REPAIR);
+		return new Replication(start, times, data);
+	} else {
+		while(will_match(tok::COMMA)){
+			eat();
+			exp = parse_expression();
+			expressions.push_back(exp);
+		}
+		match(tok::RCURL, REPAIR);
+		return new Concatenation(start, expressions);
+	}
+}
+
 
 Expression* const RecursiveDescent::parse_macro_identifier(){
 	Token macro_ident = match(tok::MACROIDENTIFIER);

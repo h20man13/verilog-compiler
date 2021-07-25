@@ -1,6 +1,6 @@
 #include "ast/expression/Replication.h"
 
-Replication::Replication(const Position& position, Expression* const times, Expression* const exp): Expression(position), times(times), exp(exp){}
+Replication::Replication(const Position& position, ConstantExpression* const times, Expression* const exp): Expression(position), times(times), exp(exp){}
 
 Replication::Replication(const Replication& expression): Expression(expression.get_position()), times(expression.times), exp(expression.exp){};
 

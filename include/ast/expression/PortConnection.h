@@ -5,8 +5,8 @@
  *      Author: jacob
  */
 
-#ifndef REPLICATION_H
-#define REPLICATION_H
+#ifndef PORT_CONNECTION_H
+#define PORT_CONNECTION_H
 
 #include "ast/expression/Expression.h"
 #include "ast/expression/ConstantExpression.h"
@@ -15,10 +15,10 @@
  * The Replication class is for ast nodes representing verilogs replication operator. This operator is used to replicate an arrangement of wires or registers
  * @author Jacob Bauer
  */
-class Replication : Expression{
+class PortConnection : Expression{
 private:
-	ConstantExpression* const times; //the number of times the expression should be replicated
-	Expression* const exp; //the expression to be replicated
+	const std::string assign; //the number of times the expression should be replicated
+	const std::string value //the expression to be replicated
 
 public:
 
@@ -28,13 +28,13 @@ public:
 	 * @param times  the amount of times the expression should be replicated
 	 * @param exp  the expression that should be replicated
 	 */
-	Replication(const Position& position, ConstantExpression* const times, Expression* const exp);
+	PortConnection(const Position& position, const std::string& assign, const std::string& value);
 
 	/**
 	 * The copy constructor takes in a replication object and it copies it
 	 * @param expression
 	 */
-	Replication(const Replication& expression);
+	PortConnection(const PortConnection& connection);
 
 	/**
 	 * The code_gen method emits the llvm IR required to generate the
@@ -51,7 +51,7 @@ public:
 	/**
 	 * The destructor for replications deletes all of the expressions associated with the replication
 	 */
-	~Replication();
+	~PortConnection();
 
 
 };

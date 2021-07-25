@@ -12,7 +12,7 @@
 #include "ast/statement/case/CaseItem.h"
 #include <list>
 
-class DefaultItem: CaseItem{
+class DefaultItem: public CaseItem{
 public:
 	DefaultItem(Statement* const statement);
 	DefaultItem(const DefaultItem& item);

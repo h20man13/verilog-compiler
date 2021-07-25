@@ -24,7 +24,7 @@ class EmptyStatement: Statement{
 
 	public:
 
-	EmptyStatement();
+	EmptyStatement(const Position& position);
 
 	/**
 	 * The code gen method generates the LLVM ir for the statement

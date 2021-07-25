@@ -40,6 +40,7 @@
 #include "ast/statement/case/ExprItem.h"
 #include "ast/statement/task_call/TaskCall.h"
 #include "ast/statement/task_call/SystemTaskCall.h"
+#include "ast/statement/EmptyStatement.h"
 
 //expression classes
 #include "ast/expression/binary_operation/Mult.h"
@@ -64,12 +65,14 @@
 #include "ast/expression/binary_operation/LAnd.h"
 #include "ast/expression/binary_operation/LOr.h"
 #include "ast/expression/Identifier.h"
+#include "ast/expression/Replication.h"
 #include "ast/expression/TernaryOperation.h"
 #include "ast/expression/NumValue.h"
 #include "ast/expression/LValue.h"
 #include "ast/mod_item/declaration/RegValue.h"
 #include "ast/expression/StrValue.h"
 #include "ast/expression/Concatenation.h"
+#include "ast/expression/PortConnection.h"
 #include "ast/expression/function_call/SystemFunctionCall.h"
 #include "ast/expression/ConstantExpression.h"
 #include "ast/expression/Slice.h"
@@ -101,9 +104,13 @@ private:
 	Token peek(int ahead = 0);
 	bool will_match(const tok type, int ahead = 0);
 
+	int is_lvalue();
+	bool is_unblocking_assignment();
+
 	//ast node parsing methods
 	//module
 	Declaration* const parse_module_par_declaration();
+
 	//statements
 
 	For* const parse_for_statement();
@@ -115,15 +122,16 @@ private:
 	CaseX* const parse_casex_statement();
 	CaseZ* const parse_casez_statement();
 	Case* const parse_case_statement();
-
 	CaseItem* const parse_case_item();
-
 	If* const parse_if_statement();
 	ProceduralAssignment* const parse_procedural_assignment(LValue* const lvalue);
-
+	Statement* const parse_statement_or_null();
+	Blocking* const parse_blocking_assignment_statement();
 
 	//expressions
 	LValue* const parse_l_value();
+	PortConnection* const parse_port_connection();
+	Expression* const parse_expression_or_null();
 	RegValue* const parse_reg_value();
 	Expression* const parse_logical_or_expression();
 	Expression* const parse_logical_and_expression();
@@ -139,6 +147,7 @@ private:
 	ConstantExpression* const parse_constant_expression();
 	Expression* const parse_primary();
 	SystemFunctionCall* const parse_system_function_call()
+	Expression* const parse_concatenation_or_replication();
 	Concatenation* const parse_concatenation();
 	Expression* const parse_macro_identifier();
 	Identifier* const parse_identifier();

@@ -12,7 +12,7 @@
 #include "ast/statement/case/CaseItem.h"
 #include <list>
 
-class CaseZ: Case{
+class CaseZ: public Case{
 public:
 
 	CaseZ(const Position& position, Expression* const expression, std::list<CaseItem* const> &item_list);

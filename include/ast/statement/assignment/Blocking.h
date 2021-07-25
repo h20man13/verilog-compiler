@@ -21,7 +21,11 @@ protected:
 	Blocking(const Position& position, LValue* const left, Expression* const right);
 	Blocking(const Blocking& assignment);
 private:
+	LValue* const left;
+	Expression* const right;
+public:
 
+	~Blocking();
 	/**
 	 *
 	 * The execute method is used to interpret statements

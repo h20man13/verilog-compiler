@@ -1,13 +1,13 @@
 #include "ast/expression/Concatenation.h"
 #include <list>
 
-Concatenation::Concatenation(const Position &position, const std::list<Expression* const> concat_list) : Expression(position){
+Concatenation::Concatenation(const Position &position, const std::list<Expression* const> concat_list) : Expression(position), LValue(position){
 	for(std::list<Expression* const>::const_iterator it = concat_list.begin(); it != concat_list.end(); it++){
 		this->concat_list.push_back(*it);
 	}
 }
 
-Concatenation::Concatenation(const Concatenation& concatenation): Expression(concatenation.get_position()){
+Concatenation::Concatenation(const Concatenation& concatenation): Expression(concatenation), LValue(concatenation){
 	for(std::list<Expression* const>::const_iterator it = concatenation.concat_list.begin(); it != concatenation.concat_list.end(); it++){
 		this->concat_list.push_back(*it);
 	}

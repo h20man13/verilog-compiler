@@ -9,17 +9,17 @@
 #define LVALUE_H
 
 #include "common/types/ObjBase.h"
+#include "ast/AstNode.h"
 
-class LValue: Expression{
+class LValue: AstNode{
 
 protected:
 	virtual ObjBase* const access() const = 0;
 public:
+	LValue(const Position& position);
+	LValue(const LValue& lvalue);
    virtual ~LValue() = 0;
 
-   virtual ObjBase* const evaluate() = 0;
-
-   virtual void code_gen() const = 0;
 };
 
 

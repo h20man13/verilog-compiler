@@ -19,10 +19,11 @@
  */
 class NonBlocking: ProceduralAssignment{
 protected:
-	NonBlocking(const Position& position, LValue* const left, Expression* const right, NonBlocking* const next);
+	NonBlocking(const Position& position, std::list<LValue* const> &lvalue_list, std::list<Expression* const> &exp_list);
 	NonBlocking(const NonBlocking& assignment);
 private:
-	NonBlocking* const next;
+	std::list<LValue* const> lvalue_list;
+	std::list<Expression* const> exp_list;
 public:
 	/**
 	 *
@@ -36,6 +37,8 @@ public:
 	 * The code gen method generates the LLVM ir for the statement
 	 */
 	void code_gen() const;
+
+	~NonBlocking();
 };
 
 

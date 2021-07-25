@@ -13,7 +13,7 @@
 #include "ast/statement/case/CaseItem.h"
 #include <list>
 
-class Case: Statement{
+class Case: public Statement{
 protected:
 	std::list<CaseItem* const> item_list;
 	Expression* const expression;
