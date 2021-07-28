@@ -15,8 +15,8 @@ public:
 	AndGateDeclaration(const Position& position, std::list<Expression* const> &gate_param);
 	AndGateDeclaration(const AndGateDeclaration& declaration);
 	~AndGateDeclaration();
-	void perform() const = 0;
-	void code_gen() const = 0;
+	void perform() const;
+	void code_gen() const;
 };
 
 

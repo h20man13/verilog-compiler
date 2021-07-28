@@ -15,8 +15,8 @@ public:
 	NorGateDeclaration(const Position& position, std::list<Expression* const> &gate_param);
 	NorGateDeclaration(const NorGateDeclaration& declaration);
 	~NorGateDeclaration();
-	void perform() const = 0;
-	void code_gen() const = 0;
+	void perform() const;
+	void code_gen() const;
 };
 
 

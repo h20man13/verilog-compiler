@@ -10,6 +10,24 @@
 
 #include "main/parser/Parser.h"
 
+#include "ast/mod_item/ModInstance.h"
+#include "ast/mod_item/ModInstantiation.h"
+#include "ast/mod_item/TaskDeclaration.h"
+#include "ast/mod_item/ContAssignInstance.h"
+#include "ast/mod_item/ContinuousAssignment.h"
+#include "ast/mod_item/declaration/IntegerDeclaration.h"
+#include "ast/mod_item/declaration/RealDeclaration.h"
+#include "ast/mod_item/declaration/UnidentifiedDeclaration.h"
+#include "ast/mod_item/FunctionDeclaration.h"
+#include "ast/mod_item/InitialStatement.h"
+#include "ast/mod_item/AlwaysStatement.h"
+#include "ast/mod_item/gate_declaration/AndGateDeclaration.h"
+#include "ast/mod_item/gate_declaration/NandGateDeclaration.h"
+#include "ast/mod_item/gate_declaration/NorGateDeclaration.h"
+#include "ast/mod_item/gate_declaration/NotGateDeclaration.h"
+#include "ast/mod_item/gate_declaration/OrGateDeclaration.h"
+#include "ast/mod_item/gate_declaration/XnorGateDeclaration.h"
+#include "ast/mod_item/gate_declaration/XorGateDeclaration.h"
 #include "ast/mod_item/declaration/net/wire/InputWireScalarDeclaration.h"
 #include "ast/mod_item/declaration/net/wire/InputWireVectorDeclaration.h"
 #include "ast/mod_item/declaration/net/reg/InputRegScalarDeclaration.h"
@@ -22,6 +40,7 @@
 #include "ast/mod_item/declaration/net/wire/WireVectorDeclaration.h"
 #include "ast/mod_item/declaration/net/reg/RegScalarDeclaration.h"
 #include "ast/mod_item/declaration/net/reg/RegVectorDeclaration.h"
+
 //statement classes
 #include "ast/statement/For.h"
 #include "ast/statement/Forever.h"
@@ -109,7 +128,38 @@ private:
 
 	//ast node parsing methods
 	//module
+
 	Declaration* const parse_module_par_declaration();
+	//mod_items
+	ModInstance* const parse_mod_instance();
+	ModInstantiation* const parse_mod_instantiation();
+	AndGateDeclaration* const parse_and_gate_declaration();
+	NandGateDeclaration* const parse_nand_gate_declaration();
+	NorGateDeclaration* const parse_nor_gate_declaration();
+	NotGateDeclaration* const parse_not_gate_declaration();
+	OrGateDeclaration* const parse_or_gate_declaration();
+	XnorGateDeclaration* const parse_xnor_gate_declaration();
+	XorGateDeclaration* const parse_xor_gate_declaration();
+	IntegerDeclaration* const parse_integer_declaration();
+	RealDeclaration* const parse_real_declaration();
+	Declaration* const parse_output_declaration();
+	Declaration* const parse_input_declaration();
+	Declaration* const parse_input_reg_declaration();
+	Declaration* const parse_output_reg_declaration();
+	Declaration* const parse_input_wire_declaration();
+	Declaration* const parse_output_wire_declaration();
+	Declaration* const parse_wire_declaration();
+	Declaration* const parse_reg_declaration();
+	ContinuousAssignment* const parse_continuous_assignment();
+	ContAssignInstance* const parse_cont_assign_instance();
+	AlwaysStatement* const parse_always_statement();
+	InitialStatement* const parse_initial_statement();
+	Declaration* const parse_declaration();
+	TaskDeclaration* const parse_task_declaration();
+	Declaration* const parse_function_name();
+	FunctionDeclaration* const parse_function_declaration();
+	ModItem* const parse_mod_item();
+
 
 	//statements
 
@@ -130,6 +180,7 @@ private:
 
 	//expressions
 	LValue* const parse_l_value();
+	RegValue* const parse_reg_value();
 	PortConnection* const parse_port_connection();
 	Expression* const parse_expression_or_null();
 	RegValue* const parse_reg_value();

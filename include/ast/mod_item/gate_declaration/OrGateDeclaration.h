@@ -15,8 +15,8 @@ public:
 	OrGateDeclaration(const Position& position, std::list<Expression* const> &gate_param);
 	OrGateDeclaration(const OrGateDeclaration& declaration);
 	~OrGateDeclaration();
-	void perform() const = 0;
-	void code_gen() const = 0;
+	void perform() const;
+	void code_gen() const;
 };
 
 

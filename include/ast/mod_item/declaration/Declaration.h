@@ -15,8 +15,8 @@ class Declaration: public ModItem{
 protected:
 	Declaration(const Position& position);
 
-	virtual void code_gen() = 0;
-	virtual void perform() = 0;
+	virtual void code_gen() const = 0;
+	virtual void perform() const = 0;
 };
 
 

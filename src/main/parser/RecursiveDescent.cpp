@@ -53,25 +53,7 @@ bool RecursiveDescent::will_match(const tok type, int ahead){
 }
 
 File* const RecursiveDescent::parse_file(){
-	const Position pos = get_start();
-	std::list<Module* const> mod_list;
-	while(!token_list.empty()){
-		if(will_match(tok::MACRODEFINITION)){
-			Token def = skip();
-			if(def.get_lexeme() == "`DEFINE"){
-
-			} else { //it must be an include
-				Token str = match(tok::STRING); //get file path
-
-				//TODO -- Add code here to parse other file for modules
-			}
-		} else { //other wise parse the next module
-			Module* const mod = parse_module();
-			mod_list.push_back(mod);
-		}
-	}
-
-	return new File(pos, mod_list);
+	return NULL; //TODO -- add file code for parser
 }
 
 Module* const RecursiveDescent::parse_module(){
@@ -108,8 +90,744 @@ Module* const RecursiveDescent::parse_module(){
 	return new Module(start, ident, decl_list, mod_item_list);
 }
 
-Declaration* const const RecursiveDescent::parse_module_par_declaration(){
+Declaration* const RecursiveDescent::parse_module_par_declaration(){
+	const Position start = get_start();
+	if (will_match(tok::INPUT)) {
+		eat();
+		if (will_match(tok::WIRE)) {
+			eat();
+		}
+		if (will_match(tok::LBRACK)) {
+			eat();
+			ConstantExpression* const exp1 = parse_constant_expression();
+			match(tok::COLON);
+			ConstantExpression* const exp2 = parse_constant_expression();
+			match(tok::RBRACK);
+			Identifier* const ident = parse_identifier();
+			std::list<Identifier* const> ident_list;
+			ident_list.push_back(ident);
+			return new InputWireVectorDeclaration(start, exp1, exp2, ident_list);
+		} else {
+			Identifier* const ident = parse_identifier();
+			std::list<Identifier* const> ident_list;
+			ident_list.push_back(ident);
+			return new InputWireScalarDeclaration(start, ident_list);
+		}
+	} else if (will_match(tok::OUTPUT)) {
+		eat();
+		if (will_match(tok::REG)) {
+			eat();
+			if (will_match(tok::LBRACK)) {
+				eat();
+				ConstantExpression* const exp1 = parse_constant_expression();
+				match(tok::COLON);
+				ConstantExpression* const exp2 = parse_constant_expression();
+				match(tok::RBRACK);
+				Identifier* const ident = parse_identifier();
+				std::list<RegValue* const> reg_val_list;
+				reg_val_list.push_back(ident);
+				return new OutputRegVectorDeclaration(start, exp1, exp2, reg_val_list);
+			} else {
+				Identifier* const ident = parse_identifier();
+				std::list<RegValue* const> reg_list;
+				reg_list.push_back(ident);
+				return new OutputRegScalarDeclaration(start, reg_list);
+			}
+		} else if (will_match(tok::WIRE)) {
+			eat();
+			if (will_match(tok::LBRACK)) {
+				eat();
+				ConstantExpression* const exp1 = parse_constant_expression();
+				match(tok::COLON);
+				ConstantExpression* const exp2 = parse_constant_expression();
+				match(tok::RBRACK);
+				Identifier* const ident = parse_identifier();
+				std::list<Identifier* const> ident_list;
+				ident_list.push_back(ident);
+				return new OutputWireVectorDeclaration(start, exp1, exp2, ident_list);
+			} else {
+				Identifier* const ident = parse_identifier();
+				std::list<Identifier* const> ident_list;
+				ident_list.push_back(ident);
+				return new OutputWireScalarDeclaration(start, ident_list);
+			}
+		} else {
+			if (will_match(tok::LBRACK)) {
+				eat();
+				ConstantExpression* const exp1 = parse_constant_expression();
+				match(tok::COLON);
+				ConstantExpression* const exp2 = parse_constant_expression();
+				match(tok::RBRACK);
+				Identifier* const ident = parse_identifier();
+				std::list<Identifier* const> ident_list;
+				ident_list.push_back(ident);
+				return new OutputWireVectorDeclaration(start, exp1, exp2, ident_list);
+			} else {
+				Identifier* const ident = parse_identifier();
+				std::list<Identifier* const> ident_list;
+				ident_list.push_back(ident);
+				return new OutputWireScalarDeclaration(start, ident_list);
+			}
+		}
+	} else {
+		Identifier* const ident = parse_identifier();
+		return new UnidentifiedDeclaration(start, ident);
+	}
+}
 
+ModItem* const RecursiveDescent::parse_mod_item(){
+	if(will_match(tok::FUNCTION)) parse_function_declaration();
+	else if(will_match(tok::TASK)) parse_task_declaration();
+	else if(will_match(tok::INTEGER)) parse_integer_declaration();
+	else if(will_match(tok::REAL)) parse_real_declaration();
+	else if(will_match(tok::OUTPUT)){
+		if(will_match(tok::WIRE, 1)) parse_output_wire_declaration();
+		else if(will_match(tok::REG, 1)) parse_output_reg_declaration();
+		else parse_output_declaration();
+	} else if(will_match(tok::INPUT)){
+		if (will_match(tok::WIRE, 1)) parse_input_wire_declaration();
+		else parse_input_declaration();
+	} else if(will_match(tok::INITIAL)) parse_initial_statement();
+	else if(will_match(tok::ALWAYS)) parse_always_statement();
+	else if(will_match(tok::REG)) parse_reg_declaration();
+	else if(will_match(tok::WIRE)) parse_wire_declaration();
+	else if(will_match(tok::ASSIGN)) parse_continuous_assignment();
+	else if(will_match(tok::IDENTIFIER)) parse_mod_instantiation();
+	else if(will_match(tok::AND)) parse_and_gate_declaration();
+	else if(will_match(tok::NAND)) parse_nand_gate_declaration();
+	else if(will_match(tok::NOR)) parse_nor_gate_declaration();
+	else if(will_match(tok::OR)) parse_or_gate_declaration();
+	else if(will_match(tok::XNOR)) parse_xnor_gate_declaration();
+	else if(will_match(tok::XOR)) parse_xor_gate_declaration();
+	else {
+		Token matched = peek();
+		error_log.add(Error("Unexpected ModItem token of type " + matched.get_type() + " and lexeme " + matched.get_lexeme() + " found", matched.get_position()));
+		error_log.print();
+		exit(1);
+		return NULL;
+	}
+}
+
+
+FunctionDeclaration* const RecursiveDescent::parse_function_declaration(){
+	const Position start = get_start();
+	match(tok::FUNCTION);
+	Declaration* const func_name = parse_function_name();
+	match(tok::SEMI, REPAIR);
+
+	std::list<Declaration* const> param_list;
+	std::list<Declaration* const> local_list;
+
+	do{
+		if (will_match(tok::INPUT)) {
+			Declaration *const decl = parse_declaration();
+			param_list.push_back(decl);
+		} else {
+			Declaration *const decl = parse_declaration();
+			local_list.push_back(decl);
+		}
+	} while(will_match(tok::INTEGER) || will_match(tok::REAL) || will_match(tok::WIRE) || will_match(tok::REG) || will_match(tok::INPUT) || will_match(tok::OUTPUT));
+
+	Statement* const stat = parse_statement();
+
+	match(tok::ENDFUNCTION, REPAIR);
+
+	return new FunctionDeclaration(start, func_name, param_list, local_list, stat);
+}
+
+Declaration* const RecursiveDescent::parse_function_name(){
+	const Position start = get_start();
+	if (will_match(tok::REG)) {
+		eat();
+		if (will_match(tok::LBRACK)) {
+			eat();
+			ConstantExpression* const exp1 = parse_constant_expression();
+			match(tok::COLON);
+			ConstantExpression* const exp2 = parse_constant_expression();
+			match(tok::RBRACK);
+			Identifier* const ident = parse_identifier();
+			std::list<RegValue* const> expr_list;
+			expr_list.push_back(ident);
+			return new RegVectorDeclaration(start, exp1, exp2, expr_list);
+		} else {
+			Identifier* const ident = parse_identifier();
+			std::list<RegValue* const> exp_list;
+			exp_list.push_back(ident);
+			return new RegScalarDeclaration(start, exp_list);
+		}
+	} else if (will_match(tok::INTEGER)) {
+		eat();
+		Identifier* const ident = parse_identifier();
+		std::list<RegValue* const> exp_list;
+		exp_list.push_back(ident);
+		return new IntegerDeclaration(start, exp_list);
+	} else if (will_match(tok::REAL)) {
+		eat();
+		Identifier* const ident = parse_identifier();
+		std::list<Identifier* const> ident_list;
+		ident_list.push_back(ident);
+		return new RealDeclaration(start, ident_list);
+	} else if (will_match(tok::LBRACK)) {
+		eat();
+		ConstantExpression* const exp1 = parse_constant_expression();
+		match(tok::COLON);
+		ConstantExpression* const exp2 = parse_constant_expression();
+		match(tok::RBRACK);
+		Identifier* const ident = parse_identifier();
+		std::list<RegValue* const> exp_list;
+		exp_list.push_back(ident);
+		return new RegVectorDeclaration(start, exp1, exp2, exp_list);
+	} else {
+		Identifier* const ident = parse_identifier();
+		std::list<RegValue* const> exp_list;
+		exp_list.push_back(ident);
+		return new RegScalarDeclaration(start,exp_list);
+	}
+}
+
+TaskDeclaration* const RecursiveDescent::parse_task_declaration() {
+	const Position start = get_start();
+	match(tok::TASK);
+	Identifier* const task_name = parse_identifier();
+	match(tok::SEMI, REPAIR);
+
+	std::list<Declaration* const> param_list;
+	std::list<Declaration* const> local_list;
+
+	while(will_match(tok::INTEGER) || will_match(tok::REAL) || will_match(tok::WIRE) || will_match(tok::REG) || will_match(tok::INPUT) || will_match(tok::OUTPUT)){
+		if(will_match(tok::INPUT)){
+			Declaration* const decl = parse_declaration();
+			param_list.push_back(decl);
+		} else {
+			Declaration* const decl = parse_declaration();
+			local_list.push_back(decl);
+		}
+	}
+
+	Statement* const stat = parse_statement_or_null();
+	match(tok::ENDTASK, REPAIR);
+
+	return new TaskDeclaration(start, task_name, param_list, local_list, stat);
+}
+
+Declaration* const RecursiveDescent::parse_declaration() {
+	if (will_match(tok::INTEGER)) {
+		return parse_integer_declaration();
+	} else if (will_match(tok::REAL)) {
+		return parse_real_declaration();
+	} else if (will_match(tok::WIRE)) {
+		return parse_wire_declaration();
+	} else if (will_match(tok::REG)) {
+		return parse_reg_declaration();
+	} else if (will_match(tok::INPUT)) {
+		if (will_match(tok::WIRE, 1)) {
+			return parse_input_wire_declaration();
+		} else if (will_match(tok::REG, 1)) {
+			return parse_input_reg_declaration();
+		} else {
+			return parse_input_declaration();
+		}
+	} else if (will_match(tok::OUTPUT)) {
+		if (will_match(tok::REG, 1)) {
+			return parse_output_reg_declaration();
+		} else if (will_match(tok::WIRE, 1)) {
+			return parse_output_wire_declaration();
+		} else {
+			return parse_output_declaration();
+		}
+	} else {
+		Token matched = peek();
+		error_log.add(Error("Unexpected Declaration token of type " + matched.get_type() + " and lexeme " + matched.get_lexeme() + " found", matched.get_position()));
+		error_log.print();
+		exit(1);
+		return NULL;
+	}
+}
+
+InitialStatement* const RecursiveDescent::parse_initial_statement(){
+	const Position start = get_start();
+	match(tok::INITIAL);
+	Statement* const stat = parse_statement();
+	return new InitialStatement(start, stat);
+}
+
+AlwaysStatement* const RecursiveDescent::parse_always_statement(){
+	const Position start = get_start();
+	match(tok::ALWAYS);
+	Statement* const stat = parse_statement();
+	return new InitialStatement(start, stat);
+}
+
+ContinuousAssignment* const RecursiveDescent::parse_continuous_assignment(){
+	const Position start = get_start();
+	match(tok::ASSIGN);
+	std::list<ContAssignInstance* const> instance_list;
+
+	do{
+		ContAssignInstance* const instance = parse_cont_assign_instance();
+		instance_list.push_back(instance);
+	} while(eat_if_yummy(tok::COMMA));
+
+	match(tok::SEMI, REPAIR);
+
+	return new ContinuousAssignment(start, instance_list);
+}
+
+ContAssignInstance* const RecursiveDescent::parse_cont_assign_instance(){
+	LValue* const lvalue = parse_l_value();
+	match(tok::EQ1, REPAIR);
+	Expression* const exp = parse_expression();
+}
+
+Declaration* const RecursiveDescent::parse_reg_declaration(){
+	const Position start = get_start();
+	match(tok::REG);
+	if (will_match(tok::LBRACK)) {
+		eat();
+		ConstantExpression *const exp1 = parse_constant_expression();
+		match(tok::COLON, REPAIR);
+		ConstantExpression *const exp2 = parse_constant_expression();
+		match(tok::RBRACK, REPAIR);
+
+		std::list<RegValue* const > reg_value_list;
+
+		do {
+			RegValue *const rvalue = parse_reg_value();
+			reg_value_list.push_back(rvalue);
+		} while (eat_if_yummy(tok::COMMA));
+
+		match(tok::SEMI, REPAIR);
+
+		return new RegVectorDeclaration(start, exp1, exp2, reg_value_list);
+	} else {
+		std::list<RegValue* const > reg_value_list;
+
+		do {
+			RegValue *const rvalue = parse_reg_value();
+			reg_value_list.push_back(rvalue);
+		} while (eat_if_yummy(tok::COMMA));
+
+		match(tok::SEMI, REPAIR);
+
+		return new RegScalarDeclaration(start, reg_value_list);
+	}
+}
+
+Declaration* const RecursiveDescent::parse_wire_declaration(){
+	const Position start = get_start();
+	match(tok::WIRE);
+	if (will_match(tok::LBRACK)) {
+		eat();
+		ConstantExpression *const exp1 = parse_constant_expression();
+		match(tok::COLON, REPAIR);
+		ConstantExpression *const exp2 = parse_constant_expression();
+		match(tok::RBRACK, REPAIR);
+
+		std::list<Identifier* const > ident_list;
+
+		do {
+			Identifier *const ident = parse_identifier();
+			ident_list.push_back(ident);
+		} while (eat_if_yummy(tok::COMMA));
+
+		match(tok::SEMI, REPAIR);
+
+		return new WireVectorDeclaration(start, exp1, exp2, ident_list);
+	} else {
+		std::list<Identifier* const > ident_list;
+
+		do {
+			Identifier *const ident = parse_identifier();
+			ident_list.push_back(ident);
+		} while (eat_if_yummy(tok::COMMA));
+
+		match(tok::SEMI, REPAIR);
+
+		return new WireScalarDeclaration(start, ident_list);
+	}
+}
+
+Declaration* const RecursiveDescent::parse_output_wire_declaration(){
+	const Position start = get_start();
+	match(tok::OUTPUT);
+	match(tok::WIRE);
+	if(will_match(tok::LBRACK)){
+		eat();
+		ConstantExpression* const exp1 = parse_constant_expression();
+		match(tok::COLON, REPAIR);
+		ConstantExpression* const exp2 = parse_constant_expression();
+		match(tok::RBRACK, REPAIR);
+
+		std::list<Identifier* const> ident_list;
+
+		do{
+			Identifier* const ident = parse_identifier();
+			ident_list.push_back(ident);
+		} while(eat_if_yummy(tok::COMMA));
+
+		match(tok::SEMI, REPAIR);
+
+		return new OutputWireVectorDeclaration(start, exp1, exp2, ident_list);
+	} else {
+		std::list<Identifier* const> ident_list;
+
+		do{
+			Identifier* const ident = parse_identifier();
+			ident_list.push_back(ident);
+		} while(eat_if_yummy(tok::COMMA));
+
+		match(tok::SEMI, REPAIR);
+
+		return new OutputWireScalarDeclaration(start, ident_list);
+	}
+}
+
+
+
+Declaration* const RecursiveDescent::parse_input_wire_declaration(){
+	const Position start = get_start();
+	match(tok::INPUT);
+	match(tok::WIRE);
+	if (will_match(tok::LBRACK)) {
+		eat();
+		ConstantExpression *const exp1 = parse_constant_expression();
+		match(tok::COLON, REPAIR);
+		ConstantExpression *const exp2 = parse_constant_expression();
+		match(tok::RBRACK, REPAIR);
+
+		std::list<Identifier* const > ident_list;
+
+		do {
+			Identifier *const ident = parse_identifier();
+			ident_list.push_back(ident);
+		} while (eat_if_yummy(tok::COMMA));
+
+		match(tok::SEMI, REPAIR);
+
+		return new InputWireVectorDeclaration(start, exp1, exp2, ident_list);
+	} else {
+		std::list<Identifier* const > ident_list;
+
+		do {
+			Identifier *const ident = parse_identifier();
+			ident_list.push_back(ident);
+		} while (eat_if_yummy(tok::COMMA));
+
+		match(tok::SEMI, REPAIR);
+
+		return new InputWireScalarDeclaration(start, ident_list);
+	}
+}
+
+Declaration* const RecursiveDescent::parse_output_reg_declaration(){
+	const Position start = get_start();
+	match(tok::OUTPUT);
+	match(tok::REG);
+	if (will_match(tok::LBRACK)) {
+		eat();
+		ConstantExpression *const exp1 = parse_constant_expression();
+		match(tok::COLON, REPAIR);
+		ConstantExpression *const exp2 = parse_constant_expression();
+		match(tok::RBRACK, REPAIR);
+
+		std::list<RegValue* const> reg_value_list;
+
+		do {
+			RegValue *const rvalue = parse_reg_value();
+			reg_value_list.push_back(rvalue);
+		} while (eat_if_yummy(tok::COMMA));
+
+		match(tok::SEMI, REPAIR);
+
+		return new OutputRegVectorDeclaration(start, exp1, exp2, reg_value_list);
+	} else {
+		std::list<RegValue* const > reg_value_list;
+
+		do {
+			RegValue *const rvalue = parse_reg_value();
+			reg_value_list.push_back(rvalue);
+		} while (eat_if_yummy(tok::COMMA));
+
+		match(tok::SEMI, REPAIR);
+
+		return new OutputRegScalarDeclaration(start, reg_value_list);
+	}
+}
+
+Declaration* const RecursiveDescent::parse_input_reg_declaration(){
+	const Position start = get_start();
+	match(tok::INPUT);
+	match(tok::REG);
+	if (will_match(tok::LBRACK)) {
+		eat();
+		ConstantExpression *const exp1 = parse_constant_expression();
+		match(tok::COLON, REPAIR);
+		ConstantExpression *const exp2 = parse_constant_expression();
+		match(tok::RBRACK, REPAIR);
+
+		std::list<RegValue* const> reg_value_list;
+
+		do {
+			RegValue *const rvalue = parse_identifier();
+			reg_value_list.push_back(rvalue);
+		} while (eat_if_yummy(tok::COMMA));
+
+		match(tok::SEMI, REPAIR);
+
+		return new InputRegVectorDeclaration(start, exp1, exp2, reg_value_list);
+	} else {
+		std::list<RegValue* const > reg_value_list;
+
+		do {
+			RegValue *const rvalue = parse_identifier();
+			reg_value_list.push_back(rvalue);
+		} while (eat_if_yummy(tok::COMMA));
+
+		match(tok::SEMI, REPAIR);
+
+		return new InputRegScalarDeclaration(start, reg_value_list);
+	}
+}
+
+Declaration* const RecursiveDescent::parse_input_declaration(){
+	const Position start = get_start();
+	match(tok::INPUT);
+	if (will_match(tok::LBRACK)) {
+		eat();
+		ConstantExpression *const exp1 = parse_constant_expression();
+		match(tok::COLON, REPAIR);
+		ConstantExpression *const exp2 = parse_constant_expression();
+		match(tok::RBRACK, REPAIR);
+
+		std::list<Identifier* const > ident_list;
+
+		do {
+			Identifier *const ident = parse_identifier();
+			ident_list.push_back(ident);
+		} while (eat_if_yummy(tok::COMMA));
+
+		match(tok::SEMI, REPAIR);
+
+		return new InputWireVectorDeclaration(start, exp1, exp2, ident_list);
+	} else {
+		std::list<Identifier* const > ident_list;
+
+		do {
+			Identifier *const ident = parse_identifier();
+			ident_list.push_back(ident);
+		} while (eat_if_yummy(tok::COMMA));
+
+		match(tok::SEMI, REPAIR);
+
+		return new InputWireScalarDeclaration(start, ident_list);
+	}
+}
+
+Declaration* const RecursiveDescent::parse_output_declaration(){
+	const Position start = get_start();
+	match(tok::OUTPUT);
+	if(will_match(tok::LBRACK)){
+		eat();
+		ConstantExpression* const exp1 = parse_constant_expression();
+		match(tok::COLON, REPAIR);
+		ConstantExpression* const exp2 = parse_constant_expression();
+		match(tok::RBRACK, REPAIR);
+
+		std::list<Identifier* const> ident_list;
+
+		do{
+			Identifier* const ident = parse_identifier();
+			ident_list.push_back(ident);
+		} while(eat_if_yummy(tok::COMMA));
+
+		match(tok::SEMI, REPAIR);
+
+		return new OutputWireVectorDeclaration(start, exp1, exp2, ident_list);
+	} else {
+		std::list<Identifier* const> ident_list;
+
+		do{
+			Identifier* const ident = parse_identifier();
+			ident_list.push_back(ident);
+		} while(eat_if_yummy(tok::COMMA));
+
+		match(tok::SEMI, REPAIR);
+
+		return new OutputWireScalarDeclaration(start, ident_list);
+	}
+}
+
+RealDeclaration* const RecursiveDescent::parse_real_declaration(){
+	const Position start = get_start();
+	match(tok::REAL);
+	std::list<Identifier* const> ident_list;
+	do{
+		Identifier* const ident = parse_identifier();
+		ident_list.push_back(ident);
+	}while(eat_if_yummy(tok::COMMA));
+
+	match(tok::SEMI, REPAIR);
+	return new RealDeclaration(start, ident_list);
+}
+
+IntegerDeclaration* const RecursiveDescent::parse_integer_declaration(){
+	const Position start = get_start();
+	match(tok::INTEGER);
+	std::list<RegValue* const> reg_value_list;
+	do{
+		RegValue* const reg_value = parse_reg_value();
+		reg_value_list.push_back(reg_value);
+	}while(eat_if_yummy(tok::COMMA));
+
+	match(tok::SEMI, REPAIR);
+
+	return new IntegerDeclaration(start, reg_value_list);
+}
+
+AndGateDeclaration* const RecursiveDescent::parse_and_gate_declaration(){
+	 const Position start = get_start();
+	 match(tok::AND);
+	 match(tok::LPAR, REPAIR);
+
+	 std::list<Expression* const> exp_list;
+
+	 do{
+		 Expression* const exp = parse_expression();
+		 exp_list.push_back(exp);
+	 } while(eat_if_yummy(tok::COMMA));
+
+	match(tok::RPAR, REPAIR);
+	match(tok::SEMI, REPAIR);
+
+	return new AndGateDeclaration(start, exp_list);
+}
+
+NandGateDeclaration* const RecursiveDescent::parse_nand_gate_declaration(){
+	const Position start = get_start();
+	match(tok::NAND);
+	match(tok::LPAR, REPAIR);
+
+	std::list<Expression* const > exp_list;
+
+	do {
+		Expression *const exp = parse_expression();
+		exp_list.push_back(exp);
+	} while (eat_if_yummy(tok::COMMA));
+
+	match(tok::RPAR, REPAIR);
+	match(tok::SEMI, REPAIR);
+
+	return new NandGateDeclaration(start, exp_list);
+}
+
+NotGateDeclaration* const RecursiveDescent::parse_not_gate_declaration(){
+	const Position start = get_start();
+	match(tok::NOT);
+	match(tok::LPAR, REPAIR);
+
+	std::list<Expression* const> exp_list;
+
+	do{
+		Expression* const exp = parse_expression();
+		exp_list.push_back(exp);
+	} while(eat_if_yummy(tok::COMMA));
+
+	match(tok::RPAR, REPAIR);
+	match(tok::SEMI, REPAIR);
+
+	return new NotGateDeclaration(start, exp_list);
+}
+
+OrGateDeclaration* const RecursiveDescent::parse_or_gate_declaration(){
+	const Position start = get_start();
+	match(tok::OR);
+	match(tok::LPAR, REPAIR);
+
+	std::list<Expression* const> exp_list;
+
+	do{
+		Expression* const exp = parse_expression();
+		exp_list.push_back(exp);
+	} while(eat_if_yummy(tok::COMMA));
+
+	match(tok::RPAR, REPAIR);
+	match(tok::SEMI, REPAIR);
+
+	return new OrGateDeclaration(start, exp_list);
+}
+
+
+XnorGateDeclaration* const RecursiveDescent::parse_xnor_gate_declaration(){
+	const Position start = get_start();
+	match(tok::XNOR);
+	match(tok::LPAR, REPAIR);
+
+	std::list<Expression* const > exp_list;
+
+	do {
+		Expression *const exp = parse_expression();
+		exp_list.push_back(exp);
+	} while (eat_if_yummy(tok::COMMA));
+
+	match(tok::RPAR, REPAIR);
+	match(tok::SEMI, REPAIR);
+
+	return new XnorGateDeclaration(start, exp_list);
+}
+
+XorGateDeclaration* const RecursiveDescent::parse_xor_gate_declaration(){
+	const Position start = get_start();
+	match(tok::XOR);
+	match(tok::LPAR, REPAIR);
+
+	std::list<Expression* const> exp_list;
+
+	do {
+		Expression *const exp = parse_expression();
+		exp_list.push_back(exp);
+	} while (eat_if_yummy(tok::COMMA));
+
+	match(tok::RPAR, REPAIR);
+	match(tok::SEMI, REPAIR);
+
+	return new XorGateDeclaration(start, exp_list);
+}
+
+
+
+ModInstantiation* const RecursiveDescent::parse_mod_instantiation(){
+	Position start = get_start();
+	Identifier* const type = parse_identifier();
+
+	std::list<ModInstance* const> mod_instance_list;
+
+	do{
+		ModInstance* const mod_instance = parse_mod_instance();
+		mod_instance_list.push_back(mod_instance);
+	} while(eat_if_yummy(tok::COMMA));
+
+	match(tok::SEMI, REPAIR);
+
+	return new ModInstantiation(start, type, mod_instance_list);
+
+}
+
+ModInstance* const RecursiveDescent::parse_mod_instance(){
+	Identifier* const ident = parse_identifier();
+	match(tok::LPAR, REPAIR);
+
+	std::list<Expression* const> exp_list;
+
+	Expression* const (*exp_func) = will_match(tok::PERIOD) ? parse_port_connection : parse_expression_or_null;
+
+	do{
+		Expression* const exp = exp_func();
+		exp_list.push_back(exp);
+	} while(eat_if_yummy(tok::COMMA));
+
+	match(tok::RPAR, REPAIR);
+
+	return new ModInstance(ident, exp_list);
 }
 
 //moditems
@@ -505,6 +1223,27 @@ LValue* const RecursiveDescent::parse_l_value(){
 		} else {
 			return Identifier(ident);
 		}
+	}
+}
+
+RegValue* const RecursiveDescent::parse_reg_value(){
+	const Position start = get_start();
+	Token ident = match(tok::IDENTIFIER);
+	if (will_match(tok::LBRACK)) {
+		eat();
+		Expression *const exp1 = parse_expression();
+		if (will_match(tok::COLON)) {
+			eat();
+			ConstantExpression *const cexp1 = new ConstantExpression(
+					exp1->get_position(), exp1);
+			ConstantExpression *const cexp2 = parse_constant_expression();
+			return new Slice(start, ident.get_lexeme(), cexp1, cexp2);
+		} else {
+			match(tok::RBRACK, REPAIR, tok::RBRACK);
+			return new Index(start, ident.get_lexeme(), exp1);
+		}
+	} else {
+		return Identifier(ident);
 	}
 }
 
