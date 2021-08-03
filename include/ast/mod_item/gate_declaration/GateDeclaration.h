@@ -12,7 +12,7 @@
 #include "ast/expression/Expression.h"
 #include <list>
 
-class GateDeclaration: ModItem{
+class GateDeclaration: public ModItem{
 protected:
 	std::list<Expression* const> gate_param;
 public:

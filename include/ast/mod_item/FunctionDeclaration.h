@@ -14,15 +14,16 @@
 #include "ast/statement/Statement.h"
 #include <list>
 
-class FunctionDeclaration: ModItem{
+class FunctionDeclaration: public ModItem{
 private:
 	Declaration* const func_name;
 	std::list<Declaration* const> paramaters;
 	std::list<Declaration* const> local;
 	Statement* const statement;
+	SymbolTable* const table;
 public:
 
-	FunctionDeclaration(const Position& position, Declaration* const func_name, std::list<Declaration* const> paramaters, std::list<Declaration* const> local, Statement* const statement);
+	FunctionDeclaration(const Position& position, Declaration* const func_name, std::list<Declaration* const> paramaters, std::list<Declaration* const> local, Statement* const statement, SymbolTable* const table);
 	FunctionDeclaration(const FunctionDeclaration& declaration);
 
 	~FunctionDeclaration();

@@ -14,9 +14,9 @@
 #include "ast/mod_item/declaration/RegValue.h"
 #include <list>
 
-class WireVectorDeclaration: WireDeclaration, VectorDeclaration{
+class WireVectorDeclaration: public WireDeclaration, public VectorDeclaration{
 public:
-	WireVectorDeclaration(const Position& position, Expression* const start, Expression* const end, std::list<Identifier* const> &reg_list);
+	WireVectorDeclaration(const Position& position, ConstantExpression* const start, ConstantExpression* const end, std::list<Identifier* const> &reg_list, SymbolTable* const table);
 	WireVectorDeclaration(const WireVectorDeclaration& declaration);
 
 	virtual void code_gen() const;

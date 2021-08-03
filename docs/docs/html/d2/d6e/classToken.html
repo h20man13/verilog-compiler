@@ -73,6 +73,9 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:aa52ce69a4e9fa22aa1bec8d019bdde65"><td class="memItemLeft" align="right" valign="top"><a id="aa52ce69a4e9fa22aa1bec8d019bdde65"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Token</b> (const tok type, const std::string &amp;lexeme, const <a class="el" href="../../da/d8b/classPosition.html">Position</a> &amp;position)</td></tr>
+<tr class="separator:aa52ce69a4e9fa22aa1bec8d019bdde65"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:add2e46eda0cc728e3ac8149fc0145cff"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../da/d8b/classPosition.html">Position</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d6e/classToken.html#add2e46eda0cc728e3ac8149fc0145cff">get_position</a> () const</td></tr>
 <tr class="memdesc:add2e46eda0cc728e3ac8149fc0145cff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the position of the token.  <a href="../../d2/d6e/classToken.html#add2e46eda0cc728e3ac8149fc0145cff">More...</a><br /></td></tr>
 <tr class="separator:add2e46eda0cc728e3ac8149fc0145cff"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -87,7 +90,7 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:adebc775df817072f8a7ebf0574ed686c"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="../../d2/d6e/classToken.html">Token</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d6e/classToken.html#adebc775df817072f8a7ebf0574ed686c">make_number_token</a> (const std::string &amp;lexeme, const <a class="el" href="../../da/d8b/classPosition.html">Position</a> &amp;position)</td></tr>
-<tr class="memdesc:adebc775df817072f8a7ebf0574ed686c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a token representing a NumWrap in the verilog language.  <a href="../../d2/d6e/classToken.html#adebc775df817072f8a7ebf0574ed686c">More...</a><br /></td></tr>
+<tr class="memdesc:adebc775df817072f8a7ebf0574ed686c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a token representing a number in the verilog language.  <a href="../../d2/d6e/classToken.html#adebc775df817072f8a7ebf0574ed686c">More...</a><br /></td></tr>
 <tr class="separator:adebc775df817072f8a7ebf0574ed686c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0d77acdb54e0c7231fd7fc3c3b0d338d"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="../../d2/d6e/classToken.html">Token</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d6e/classToken.html#a0d77acdb54e0c7231fd7fc3c3b0d338d">make_identifier_token</a> (const std::string &amp;lexeme, const <a class="el" href="../../da/d8b/classPosition.html">Position</a> &amp;position)</td></tr>
 <tr class="memdesc:a0d77acdb54e0c7231fd7fc3c3b0d338d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a token representing a identifier or a keyword in the verilog language.  <a href="../../d2/d6e/classToken.html#a0d77acdb54e0c7231fd7fc3c3b0d338d">More...</a><br /></td></tr>
@@ -104,7 +107,7 @@ Static Public Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="../../dc/d33/Token_8h_source.html#l00101">101</a> of file <a class="el" href="../../dc/d33/Token_8h_source.html">Token.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dc/d33/Token_8h_source.html#l00102">102</a> of file <a class="el" href="../../dc/d33/Token_8h_source.html">Token.h</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a23b86ce0c12ce2830c359746936e0dec"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a23b86ce0c12ce2830c359746936e0dec">&#9670;&nbsp;</a></span>get_lexeme()</h2>
@@ -128,11 +131,11 @@ Static Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The lexeme or the literal text of the token (Ex: the text for a token of type LT is "&lt;")</dd>
+<dl class="section return"><dt>Returns</dt><dd>The lexeme or the literal text of the token (Ex: the text for a token of type <a class="el" href="../../df/d34/classLT.html">LT</a> is "&lt;")</dd>
 <dd>
 the lexeme representing the token (ex: "while") </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dd0/Token_8cpp_source.html#l00223">223</a> of file <a class="el" href="../../d1/dd0/Token_8cpp_source.html">Token.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/dd0/Token_8cpp_source.html#l00224">224</a> of file <a class="el" href="../../d1/dd0/Token_8cpp_source.html">Token.cpp</a>.</p>
 
 </div>
 </div>
@@ -163,7 +166,7 @@ the lexeme representing the token (ex: "while") </dd></dl>
 the position of the token object </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="../../de/dff/Position_8h_source.html">include/common/Position.h</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dd0/Token_8cpp_source.html#l00214">214</a> of file <a class="el" href="../../d1/dd0/Token_8cpp_source.html">Token.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/dd0/Token_8cpp_source.html#l00215">215</a> of file <a class="el" href="../../d1/dd0/Token_8cpp_source.html">Token.cpp</a>.</p>
 
 </div>
 </div>
@@ -191,7 +194,7 @@ the position of the token object </dd></dl>
 <dd>
 an enum representation of the token </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dd0/Token_8cpp_source.html#l00231">231</a> of file <a class="el" href="../../d1/dd0/Token_8cpp_source.html">Token.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/dd0/Token_8cpp_source.html#l00232">232</a> of file <a class="el" href="../../d1/dd0/Token_8cpp_source.html">Token.cpp</a>.</p>
 
 </div>
 </div>
@@ -239,7 +242,7 @@ an enum representation of the token </dd></dl>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="../../d2/d6e/classToken.html">Token</a> of the type IDENTIFIER or WHILE, IF, (other keywords) ... </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dd0/Token_8cpp_source.html#l00171">171</a> of file <a class="el" href="../../d1/dd0/Token_8cpp_source.html">Token.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/dd0/Token_8cpp_source.html#l00172">172</a> of file <a class="el" href="../../d1/dd0/Token_8cpp_source.html">Token.cpp</a>.</p>
 
 </div>
 </div>
@@ -295,7 +298,7 @@ an enum representation of the token </dd></dl>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="../../d2/d6e/classToken.html">Token</a> of the type MACROIDENTIFIER or MACRODEF, (other keywords) ... </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dd0/Token_8cpp_source.html#l00186">186</a> of file <a class="el" href="../../d1/dd0/Token_8cpp_source.html">Token.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/dd0/Token_8cpp_source.html#l00187">187</a> of file <a class="el" href="../../d1/dd0/Token_8cpp_source.html">Token.cpp</a>.</p>
 
 </div>
 </div>
@@ -333,7 +336,16 @@ an enum representation of the token </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p>Creates a token representing a NumWrap in the verilog language. </p>
+<p>Creates a token representing a number in the verilog language. </p>
+<p >Creates a token representing a NumWrap in the verilog language.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lexeme</td><td>string you want representing the number 1, 4, 'b1101010 etc... </td></tr>
+    <tr><td class="paramname">position</td><td>the position of the current <a class="el" href="../../d2/d6e/classToken.html">Token</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="../../d2/d6e/classToken.html">Token</a> of the type number</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">lexeme</td><td>string you want representing the NumWrap 1, 4, 'b1101010 etc... </td></tr>
@@ -343,7 +355,7 @@ an enum representation of the token </dd></dl>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="../../d2/d6e/classToken.html">Token</a> of the type NumWrap </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dd0/Token_8cpp_source.html#l00149">149</a> of file <a class="el" href="../../d1/dd0/Token_8cpp_source.html">Token.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/dd0/Token_8cpp_source.html#l00150">150</a> of file <a class="el" href="../../d1/dd0/Token_8cpp_source.html">Token.cpp</a>.</p>
 
 </div>
 </div>
@@ -391,7 +403,7 @@ an enum representation of the token </dd></dl>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="../../d2/d6e/classToken.html">Token</a> of the type OPERATOR </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dd0/Token_8cpp_source.html#l00204">204</a> of file <a class="el" href="../../d1/dd0/Token_8cpp_source.html">Token.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/dd0/Token_8cpp_source.html#l00205">205</a> of file <a class="el" href="../../d1/dd0/Token_8cpp_source.html">Token.cpp</a>.</p>
 
 </div>
 </div>
@@ -439,7 +451,7 @@ an enum representation of the token </dd></dl>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="../../d2/d6e/classToken.html">Token</a> of the type STRING </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dd0/Token_8cpp_source.html#l00160">160</a> of file <a class="el" href="../../d1/dd0/Token_8cpp_source.html">Token.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/dd0/Token_8cpp_source.html#l00161">161</a> of file <a class="el" href="../../d1/dd0/Token_8cpp_source.html">Token.cpp</a>.</p>
 
 </div>
 </div>
@@ -463,7 +475,7 @@ an enum representation of the token </dd></dl>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A text that displays all of the characteristics of a <a class="el" href="../../d2/d6e/classToken.html">Token</a> (Ex: the text for a token of type LT is "&lt;")</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A text that displays all of the characteristics of a <a class="el" href="../../d2/d6e/classToken.html">Token</a> (Ex: the text for a token of type <a class="el" href="../../df/d34/classLT.html">LT</a> is "&lt;")</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">None</td><td></td></tr>
@@ -472,7 +484,7 @@ an enum representation of the token </dd></dl>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>a string representing the entire <a class="el" href="../../d2/d6e/classToken.html">Token</a> containing the position the string variant of the enum and the position </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dd0/Token_8cpp_source.html#l00240">240</a> of file <a class="el" href="../../d1/dd0/Token_8cpp_source.html">Token.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d1/dd0/Token_8cpp_source.html#l00241">241</a> of file <a class="el" href="../../d1/dd0/Token_8cpp_source.html">Token.cpp</a>.</p>
 
 </div>
 </div>

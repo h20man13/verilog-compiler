@@ -12,7 +12,7 @@
 #include "ast/expression/LValue.h"
 #include "ast/expression/Expression.h"
 
-class ReturnStatement: Statement{
+class ReturnStatement: public Statement{
 private:
 	LValue* const ident;
 	Expression* const expression;

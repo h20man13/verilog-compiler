@@ -1,0 +1,120 @@
+\hypertarget{classPortConnection}{}\doxysection{Port\+Connection Class Reference}
+\label{classPortConnection}\index{PortConnection@{PortConnection}}
+
+
+The \mbox{\hyperlink{classReplication}{Replication}} class is for ast nodes representing verilogs replication operator.  
+
+
+
+
+{\ttfamily \#include $<$Port\+Connection.\+h$>$}
+
+Inheritance diagram for Port\+Connection\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{d3/d5f/classPortConnection}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classPortConnection_a3b62e310367c03d8109bb4782b91ee91}{Port\+Connection}} (const \mbox{\hyperlink{classPosition}{Position}} \&position, const std\+::string \&assign, const std\+::string \&value, \mbox{\hyperlink{classSymbolTable}{Symbol\+Table}} $\ast$const table)
+\begin{DoxyCompactList}\small\item\em The \mbox{\hyperlink{classReplication}{Replication}} constructor constructs a replication ast node from 3 parameters\+: \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classPortConnection_ae7a28db159341099afb2e50bab1d9532}{Port\+Connection}} (const \mbox{\hyperlink{classPortConnection}{Port\+Connection}} \&connection)
+\begin{DoxyCompactList}\small\item\em The copy constructor takes in a replication object and it copies it. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPortConnection_a7005a3c4167a2df268ae5a258bd62362}\label{classPortConnection_a7005a3c4167a2df268ae5a258bd62362}} 
+void \mbox{\hyperlink{classPortConnection_a7005a3c4167a2df268ae5a258bd62362}{code\+\_\+gen}} () const
+\begin{DoxyCompactList}\small\item\em The code\+\_\+gen method emits the llvm IR required to generate the. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classObjBase}{Obj\+Base}} $\ast$const \mbox{\hyperlink{classPortConnection_a03d0f7d910103d5b87abbbb569eeeae9}{evaluate}} ()
+\begin{DoxyCompactList}\small\item\em The evaluate functions interprets the replication. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPortConnection_a98675de516e1743518242ee504264336}\label{classPortConnection_a98675de516e1743518242ee504264336}} 
+\mbox{\hyperlink{classPortConnection_a98675de516e1743518242ee504264336}{$\sim$\+Port\+Connection}} ()
+\begin{DoxyCompactList}\small\item\em The destructor for replications deletes all of the expressions associated with the replication. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classReplication}{Replication}} class is for ast nodes representing verilogs replication operator. 
+
+This operator is used to replicate an arrangement of wires or registers \begin{DoxyAuthor}{Author}
+Jacob Bauer 
+\end{DoxyAuthor}
+
+
+Definition at line 19 of file Port\+Connection.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classPortConnection_a3b62e310367c03d8109bb4782b91ee91}\label{classPortConnection_a3b62e310367c03d8109bb4782b91ee91}} 
+\index{PortConnection@{PortConnection}!PortConnection@{PortConnection}}
+\index{PortConnection@{PortConnection}!PortConnection@{PortConnection}}
+\doxysubsubsection{\texorpdfstring{PortConnection()}{PortConnection()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Port\+Connection\+::\+Port\+Connection (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classPosition}{Position}} \&}]{position,  }\item[{const std\+::string \&}]{assign,  }\item[{const std\+::string \&}]{value,  }\item[{\mbox{\hyperlink{classSymbolTable}{Symbol\+Table}} $\ast$const}]{table }\end{DoxyParamCaption})}
+
+
+
+The \mbox{\hyperlink{classReplication}{Replication}} constructor constructs a replication ast node from 3 parameters\+: 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & the position of the object inside the stream \\
+\hline
+{\em times} & the amount of times the expression should be replicated \\
+\hline
+{\em exp} & the expression that should be replicated \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 3 of file Port\+Connection.\+cpp.
+
+\mbox{\Hypertarget{classPortConnection_ae7a28db159341099afb2e50bab1d9532}\label{classPortConnection_ae7a28db159341099afb2e50bab1d9532}} 
+\index{PortConnection@{PortConnection}!PortConnection@{PortConnection}}
+\index{PortConnection@{PortConnection}!PortConnection@{PortConnection}}
+\doxysubsubsection{\texorpdfstring{PortConnection()}{PortConnection()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Port\+Connection\+::\+Port\+Connection (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classPortConnection}{Port\+Connection}} \&}]{connection }\end{DoxyParamCaption})}
+
+
+
+The copy constructor takes in a replication object and it copies it. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em expression} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 5 of file Port\+Connection.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classPortConnection_a03d0f7d910103d5b87abbbb569eeeae9}\label{classPortConnection_a03d0f7d910103d5b87abbbb569eeeae9}} 
+\index{PortConnection@{PortConnection}!evaluate@{evaluate}}
+\index{evaluate@{evaluate}!PortConnection@{PortConnection}}
+\doxysubsubsection{\texorpdfstring{evaluate()}{evaluate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classObjBase}{Obj\+Base}} $\ast$const Port\+Connection\+::evaluate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+The evaluate functions interprets the replication. 
+
+\begin{DoxyReturn}{Returns}
+the replication to be evaluated 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classExpression_aded287b288eee88a418e595a63335eaa}{Expression}}.
+
+
+
+Definition at line 11 of file Port\+Connection.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/ast/expression/Port\+Connection.\+h\item 
+src/ast/expression/Port\+Connection.\+cpp\end{DoxyCompactItemize}

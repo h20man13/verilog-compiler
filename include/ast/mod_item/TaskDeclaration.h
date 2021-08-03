@@ -14,15 +14,16 @@
 #include "ast/statement/Statement.h"
 #include <list>
 
-class TaskDeclaration: ModItem{
+class TaskDeclaration: public ModItem{
 private:
 	Identifier* const task_name;
 	std::list<Declaration* const> param;
 	std::list<Declaration* const> local;
 	Statement* const statement;
+	SymbolTable* const table;
 public:
 
-	TaskDeclaration(const Position& position, Identifier* const task_name, std::list<Declaration* const> param, std::list<Declaration* const> local, Statement* const statement);
+	TaskDeclaration(const Position& position, Identifier* const task_name, std::list<Declaration* const> param, std::list<Declaration* const> local, Statement* const statement, SymbolTable* const table);
 	TaskDeclaration(const TaskDeclaration& declaration);
 	~TaskDeclaration();
 

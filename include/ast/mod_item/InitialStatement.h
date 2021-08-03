@@ -11,7 +11,7 @@
 #include "ast/mod_item/ModItem.h"
 #include "ast/statement/Statement.h"
 
-class InitialStatement: ModItem{
+class InitialStatement: public ModItem{
 private:
 	Statement* const statement;
 public:

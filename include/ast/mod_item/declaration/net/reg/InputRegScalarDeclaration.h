@@ -14,9 +14,9 @@
 #include "ast/mod_item/declaration/RegValue.h"
 #include <list>
 
-class InputRegScalarDeclaration: RegScalarDeclaration{
+class InputRegScalarDeclaration: public RegScalarDeclaration{
 public:
-	InputRegScalarDeclaration(const Position& position, std::list<RegValue* const> &reg_list);
+	InputRegScalarDeclaration(const Position& position, std::list<RegValue* const> &reg_list, SymbolTable* const table);
 	InputRegScalarDeclaration(const InputRegScalarDeclaration& declaration);
 
 	void code_gen() const;

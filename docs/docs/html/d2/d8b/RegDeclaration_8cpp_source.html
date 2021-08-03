@@ -73,13 +73,13 @@ $(function() {
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;ast/mod_item/declaration/net/reg/RegDeclaration.h&quot;</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;RegDeclaration::RegDeclaration(<span class="keyword">const</span> <a class="code" href="../../da/d8b/classPosition.html">Position</a>&amp; position, std::list&lt;RegValue* const&gt; &amp;reg_list): <a class="code" href="../../d1/dc3/classDeclaration.html">Declaration</a>(position){</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;RegDeclaration::RegDeclaration(std::list&lt;RegValue* const&gt; &amp;reg_list){</div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    <span class="keywordflow">for</span>(std::list&lt;RegValue* const&gt;::const_iterator it = reg_list.begin(); it != reg_list.end(); it++){</div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;        this-&gt;reg_list.push_back(*it);</div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    }</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;}</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;RegDeclaration::RegDeclaration(<span class="keyword">const</span> <a class="code" href="../../df/d0d/classRegDeclaration.html">RegDeclaration</a>&amp; declaration): <a class="code" href="../../d1/dc3/classDeclaration.html">Declaration</a>(declaration.get_position()){</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;RegDeclaration::RegDeclaration(<span class="keyword">const</span> <a class="code" href="../../df/d0d/classRegDeclaration.html">RegDeclaration</a>&amp; declaration){</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keywordflow">for</span>(std::list&lt;RegValue* const&gt;::const_iterator it = declaration.reg_list.begin(); it != declaration.reg_list.end(); it++){</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        this-&gt;reg_list.push_back(*it);</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    }</div>
@@ -92,8 +92,6 @@ $(function() {
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        reg_list.pop_front();</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    }</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;}</div>
-<div class="ttc" id="aclassDeclaration_html"><div class="ttname"><a href="../../d1/dc3/classDeclaration.html">Declaration</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/dd8/Declaration_8h_source.html#l00013">Declaration.h:13</a></div></div>
-<div class="ttc" id="aclassPosition_html"><div class="ttname"><a href="../../da/d8b/classPosition.html">Position</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/dff/Position_8h_source.html#l00006">Position.h:6</a></div></div>
 <div class="ttc" id="aclassRegDeclaration_html"><div class="ttname"><a href="../../df/d0d/classRegDeclaration.html">RegDeclaration</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d06/RegDeclaration_8h_source.html#l00015">RegDeclaration.h:15</a></div></div>
 <div class="ttc" id="aclassRegValue_html"><div class="ttname"><a href="../../dd/dcf/classRegValue.html">RegValue</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dd/de6/RegValue_8h_source.html#l00011">RegValue.h:11</a></div></div>
 </div><!-- fragment --></div><!-- contents -->

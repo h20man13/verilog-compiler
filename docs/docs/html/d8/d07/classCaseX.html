@@ -75,7 +75,9 @@ Inheritance diagram for CaseX:</div>
  <div class="center">
   <img src="../../d8/d07/classCaseX.png" usemap="#CaseX_map" alt=""/>
   <map id="CaseX_map" name="CaseX_map">
-<area href="../../dd/dd9/classCase.html" alt="Case" shape="rect" coords="0,0,50,24"/>
+<area href="../../dd/dd9/classCase.html" alt="Case" shape="rect" coords="0,112,66,136"/>
+<area href="../../d6/de7/classStatement.html" title="The statement abstract class is used to store statement objects on the ast tree." alt="Statement" shape="rect" coords="0,56,66,80"/>
+<area href="../../dc/da9/classAstNode.html" alt="AstNode" shape="rect" coords="0,0,66,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -94,6 +96,45 @@ Public Member Functions</h2></td></tr>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d07/classCaseX.html#a5e19ffc4a5d9454c0f9cb36a742d5f2b">code_gen</a> () const</td></tr>
 <tr class="memdesc:a5e19ffc4a5d9454c0f9cb36a742d5f2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The code gen method generates the LLVM ir for the statement. <br /></td></tr>
 <tr class="separator:a5e19ffc4a5d9454c0f9cb36a742d5f2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classCase"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classCase')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../dd/dd9/classCase.html">Case</a></td></tr>
+<tr class="memitem:a6b12fcf7d2d266a90df17169e6bde3cf inherit pub_methods_classCase"><td class="memItemLeft" align="right" valign="top"><a id="a6b12fcf7d2d266a90df17169e6bde3cf"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Case</b> (const <a class="el" href="../../da/d8b/classPosition.html">Position</a> &amp;position, <a class="el" href="../../de/d94/classExpression.html">Expression</a> *const expression, std::list&lt; <a class="el" href="../../d9/de9/classCaseItem.html">CaseItem</a> *const &gt; &amp;item_list)</td></tr>
+<tr class="separator:a6b12fcf7d2d266a90df17169e6bde3cf inherit pub_methods_classCase"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78a2d7341837a7d5b9d5dbcd31dcaae6 inherit pub_methods_classCase"><td class="memItemLeft" align="right" valign="top"><a id="a78a2d7341837a7d5b9d5dbcd31dcaae6"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Case</b> (const <a class="el" href="../../dd/dd9/classCase.html">Case</a> &amp;case_stat)</td></tr>
+<tr class="separator:a78a2d7341837a7d5b9d5dbcd31dcaae6 inherit pub_methods_classCase"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classAstNode"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classAstNode')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../dc/da9/classAstNode.html">AstNode</a></td></tr>
+<tr class="memitem:ab1cff05f1258d2529dc8aabc6b727991 inherit pub_methods_classAstNode"><td class="memItemLeft" align="right" valign="top"><a id="ab1cff05f1258d2529dc8aabc6b727991"></a>
+const <a class="el" href="../../da/d8b/classPosition.html">Position</a>&#160;</td><td class="memItemRight" valign="bottom"><b>get_position</b> () const</td></tr>
+<tr class="separator:ab1cff05f1258d2529dc8aabc6b727991 inherit pub_methods_classAstNode"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pro_methods_classStatement"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classStatement')"><img src="../../closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="../../d6/de7/classStatement.html">Statement</a></td></tr>
+<tr class="memitem:a767f9b062b7aca5f7fa2ce94fefe71d0 inherit pro_methods_classStatement"><td class="memItemLeft" align="right" valign="top"><a id="a767f9b062b7aca5f7fa2ce94fefe71d0"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Statement</b> (const <a class="el" href="../../da/d8b/classPosition.html">Position</a> &amp;position)</td></tr>
+<tr class="separator:a767f9b062b7aca5f7fa2ce94fefe71d0 inherit pro_methods_classStatement"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab73ba276548bfcab3d06f5bcd8fa20e9 inherit pro_methods_classStatement"><td class="memItemLeft" align="right" valign="top"><a id="ab73ba276548bfcab3d06f5bcd8fa20e9"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Statement</b> (const <a class="el" href="../../d6/de7/classStatement.html">Statement</a> &amp;stat)</td></tr>
+<tr class="separator:ab73ba276548bfcab3d06f5bcd8fa20e9 inherit pro_methods_classStatement"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_classAstNode"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classAstNode')"><img src="../../closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="../../dc/da9/classAstNode.html">AstNode</a></td></tr>
+<tr class="memitem:ae2434eab6c919bb416e3389d311cade7 inherit pro_methods_classAstNode"><td class="memItemLeft" align="right" valign="top"><a id="ae2434eab6c919bb416e3389d311cade7"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>AstNode</b> (const <a class="el" href="../../da/d8b/classPosition.html">Position</a> &amp;position)</td></tr>
+<tr class="separator:ae2434eab6c919bb416e3389d311cade7 inherit pro_methods_classAstNode"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a654f49c626e442f49c0e47fc3d41ccd9 inherit pro_methods_classAstNode"><td class="memItemLeft" align="right" valign="top"><a id="a654f49c626e442f49c0e47fc3d41ccd9"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>AstNode</b> (const <a class="el" href="../../dc/da9/classAstNode.html">AstNode</a> &amp;node)</td></tr>
+<tr class="separator:a654f49c626e442f49c0e47fc3d41ccd9 inherit pro_methods_classAstNode"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_classCase"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classCase')"><img src="../../closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="../../dd/dd9/classCase.html">Case</a></td></tr>
+<tr class="memitem:a721f6d67cadb37c99bbebaa4d44e4193 inherit pro_attribs_classCase"><td class="memItemLeft" align="right" valign="top"><a id="a721f6d67cadb37c99bbebaa4d44e4193"></a>
+std::list&lt; <a class="el" href="../../d9/de9/classCaseItem.html">CaseItem</a> *const  &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>item_list</b></td></tr>
+<tr class="separator:a721f6d67cadb37c99bbebaa4d44e4193 inherit pro_attribs_classCase"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad297ad2802bdfa6226c784043ac2a239 inherit pro_attribs_classCase"><td class="memItemLeft" align="right" valign="top"><a id="ad297ad2802bdfa6226c784043ac2a239"></a>
+<a class="el" href="../../de/d94/classExpression.html">Expression</a> *const&#160;</td><td class="memItemRight" valign="bottom"><b>expression</b></td></tr>
+<tr class="separator:ad297ad2802bdfa6226c784043ac2a239 inherit pro_attribs_classCase"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_classAstNode"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classAstNode')"><img src="../../closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="../../dc/da9/classAstNode.html">AstNode</a></td></tr>
+<tr class="memitem:a0e715ef216f101725e271cfbd7c9461c inherit pro_attribs_classAstNode"><td class="memItemLeft" align="right" valign="top"><a id="a0e715ef216f101725e271cfbd7c9461c"></a>
+const <a class="el" href="../../da/d8b/classPosition.html">Position</a>&#160;</td><td class="memItemRight" valign="bottom"><b>position</b></td></tr>
+<tr class="separator:a0e715ef216f101725e271cfbd7c9461c inherit pro_attribs_classAstNode"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">

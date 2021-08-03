@@ -18,7 +18,13 @@ Inheritance diagram for Mod\+:\begin{figure}[H]
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classObjBase}{Obj\+Base}} $\ast$const \mbox{\hyperlink{classMod_a8eb812f7143dda9ae6383706fdc4eb07}{evaluate}} () const
+\mbox{\Hypertarget{classMod_a470d629568c2e885971ec668f6311b8b}\label{classMod_a470d629568c2e885971ec668f6311b8b}} 
+{\bfseries Mod} (const \mbox{\hyperlink{classPosition}{Position}} \&position, \mbox{\hyperlink{classExpression}{Expression}} $\ast$const left, \mbox{\hyperlink{classExpression}{Expression}} $\ast$const right)
+\item 
+\mbox{\Hypertarget{classMod_ab389e64ba33f910d81067d015427d823}\label{classMod_ab389e64ba33f910d81067d015427d823}} 
+{\bfseries Mod} (const \mbox{\hyperlink{classMod}{Mod}} \&binary)
+\item 
+\mbox{\hyperlink{classObjBase}{Obj\+Base}} $\ast$const \mbox{\hyperlink{classMod_a19890205fe69fa05fa32773b82b5821e}{evaluate}} ()
 \begin{DoxyCompactList}\small\item\em A function to perform interpretation on the modulo expression. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classMod_ac50929b40f8b4404596ecaa3c7b8e009}{code\+\_\+gen}} () const
 \begin{DoxyCompactList}\small\item\em The code\+\_\+gen function is used to generate the code for the modulo expression via syntax directed translation. \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -57,13 +63,13 @@ Implements \mbox{\hyperlink{classBinary_a7b5e81b3115e86f6c326e2272cbc1d82}{Binar
 
 
 
-Definition at line 14 of file Mod.\+cpp.
+Definition at line 18 of file Mod.\+cpp.
 
-\mbox{\Hypertarget{classMod_a8eb812f7143dda9ae6383706fdc4eb07}\label{classMod_a8eb812f7143dda9ae6383706fdc4eb07}} 
+\mbox{\Hypertarget{classMod_a19890205fe69fa05fa32773b82b5821e}\label{classMod_a19890205fe69fa05fa32773b82b5821e}} 
 \index{Mod@{Mod}!evaluate@{evaluate}}
 \index{evaluate@{evaluate}!Mod@{Mod}}
 \doxysubsubsection{\texorpdfstring{evaluate()}{evaluate()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classObjBase}{Obj\+Base}} $\ast$const Mod\+::evaluate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classObjBase}{Obj\+Base}} $\ast$const Mod\+::evaluate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
@@ -74,11 +80,11 @@ an integer that is the result of the binary operation
 \end{DoxyReturn}
 
 
-Implements \mbox{\hyperlink{classBinary_aa80f13396ccee85a8a6515bb16e99f4a}{Binary}}.
+Implements \mbox{\hyperlink{classBinary_aa536f32774f268499ac08cb43e025583}{Binary}}.
 
 
 
-Definition at line 18 of file Mod.\+cpp.
+Definition at line 22 of file Mod.\+cpp.
 
 
 

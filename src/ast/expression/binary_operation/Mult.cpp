@@ -10,9 +10,9 @@
 #include "ast/expression/Expression.h"
 #include "common/types/TypeOpUtils.h"
 
-Mult::Mult(const Position& position, Expression* const left, Expression* const right): Binary(position, left, right){}
+Mult::Mult(const Position& position, Expression* const left, Expression* const right): AstNode(position), Binary(position, left, right){}
 
-Mult::Mult(const Mult& binary): Binary(binary){}
+Mult::Mult(const Mult& binary): AstNode(binary), Binary(binary){}
 
 void Mult::code_gen() const {
 	// TODO -- finish this later

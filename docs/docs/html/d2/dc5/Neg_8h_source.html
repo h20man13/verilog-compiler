@@ -77,23 +77,26 @@ $(function() {
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *      Author: jacob</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> */</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#ifndef BNEG_H</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#define BNEG_H</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#ifndef NEG_H</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#define NEG_H</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;ast/expression/unary_operation/Unary.h&quot;</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
 <div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="../../d3/da6/classNeg.html">   13</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d3/da6/classNeg.html">Neg</a>: <span class="keyword">public</span> <a class="code" href="../../d8/d3b/classUnary.html">Unary</a>{</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="../../dc/d22/classObjBase.html">ObjBase</a>* <span class="keyword">const</span> <a class="code" href="../../d3/da6/classNeg.html#adbd8529d839a58fd33d59ffbae9a1b08">evaluate</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d3/da6/classNeg.html#a5cb94905d4ec676a17a0a4dd4d215c27">code_gen</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;};</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="../../d3/da6/classNeg.html">Neg</a>(<span class="keyword">const</span> <a class="code" href="../../da/d8b/classPosition.html">Position</a>&amp; position, <a class="code" href="../../de/d94/classExpression.html">Expression</a>* <span class="keyword">const</span> exp);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="../../dc/d22/classObjBase.html">ObjBase</a>* <span class="keyword">const</span> <a class="code" href="../../d3/da6/classNeg.html#aa5975bc40a11e75cb3cd5a034337e8f5">evaluate</a>();</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d3/da6/classNeg.html#a5cb94905d4ec676a17a0a4dd4d215c27">code_gen</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;};</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclassExpression_html"><div class="ttname"><a href="../../de/d94/classExpression.html">Expression</a></div><div class="ttdoc">The Expression is an Interface that can be used to represent Expressions.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d6e/Expression_8h_source.html#l00020">Expression.h:20</a></div></div>
 <div class="ttc" id="aclassNeg_html"><div class="ttname"><a href="../../d3/da6/classNeg.html">Neg</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/dc5/Neg_8h_source.html#l00013">Neg.h:13</a></div></div>
-<div class="ttc" id="aclassNeg_html_a5cb94905d4ec676a17a0a4dd4d215c27"><div class="ttname"><a href="../../d3/da6/classNeg.html#a5cb94905d4ec676a17a0a4dd4d215c27">Neg::code_gen</a></div><div class="ttdeci">void code_gen() const</div><div class="ttdoc">The code generation function that is used to emit LLVM IR.</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d09/Neg_8cpp_source.html#l00019">Neg.cpp:19</a></div></div>
-<div class="ttc" id="aclassNeg_html_adbd8529d839a58fd33d59ffbae9a1b08"><div class="ttname"><a href="../../d3/da6/classNeg.html#adbd8529d839a58fd33d59ffbae9a1b08">Neg::evaluate</a></div><div class="ttdeci">ObjBase *const evaluate() const</div><div class="ttdoc">The evaluate method is used to interpret the Logical and Expression.</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d09/Neg_8cpp_source.html#l00012">Neg.cpp:12</a></div></div>
+<div class="ttc" id="aclassNeg_html_a5cb94905d4ec676a17a0a4dd4d215c27"><div class="ttname"><a href="../../d3/da6/classNeg.html#a5cb94905d4ec676a17a0a4dd4d215c27">Neg::code_gen</a></div><div class="ttdeci">void code_gen() const</div><div class="ttdoc">The code generation function that is used to emit LLVM IR.</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d09/Neg_8cpp_source.html#l00018">Neg.cpp:18</a></div></div>
+<div class="ttc" id="aclassNeg_html_aa5975bc40a11e75cb3cd5a034337e8f5"><div class="ttname"><a href="../../d3/da6/classNeg.html#aa5975bc40a11e75cb3cd5a034337e8f5">Neg::evaluate</a></div><div class="ttdeci">ObjBase *const evaluate()</div><div class="ttdoc">The evaluate method is used to interpret the Logical and Expression.</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d09/Neg_8cpp_source.html#l00011">Neg.cpp:11</a></div></div>
 <div class="ttc" id="aclassObjBase_html"><div class="ttname"><a href="../../dc/d22/classObjBase.html">ObjBase</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dd2/ObjBase_8h_source.html#l00019">ObjBase.h:19</a></div></div>
+<div class="ttc" id="aclassPosition_html"><div class="ttname"><a href="../../da/d8b/classPosition.html">Position</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/dff/Position_8h_source.html#l00006">Position.h:6</a></div></div>
 <div class="ttc" id="aclassUnary_html"><div class="ttname"><a href="../../d8/d3b/classUnary.html">Unary</a></div><div class="ttdoc">The unary super class defines unary operations.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/de8/Unary_8h_source.html#l00017">Unary.h:17</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

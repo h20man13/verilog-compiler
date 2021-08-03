@@ -13,9 +13,9 @@
 #include "ast/mod_item/declaration/RegValue.h"
 #include <list>
 
-class OutputWireScalarDeclaration: WireScalarDeclaration{
+class OutputWireScalarDeclaration: public WireScalarDeclaration{
 public:
-	OutputWireScalarDeclaration(const Position& position, std::list<Identifier* const> &reg_list);
+	OutputWireScalarDeclaration(const Position& position, std::list<Identifier* const> &reg_list, SymbolTable* const table);
 	OutputWireScalarDeclaration(const OutputWireScalarDeclaration& declaration);
 
 	void code_gen() const;

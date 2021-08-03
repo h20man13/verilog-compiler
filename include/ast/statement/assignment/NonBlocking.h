@@ -17,10 +17,7 @@
  * The assignment template is used to create assignments in verilog. In verilog their are 3 types of assignments, Blocking, NonBlocking, and continuous assignments
  * @author Jacob Bauer
  */
-class NonBlocking: ProceduralAssignment{
-protected:
-	NonBlocking(const Position& position, std::list<LValue* const> &lvalue_list, std::list<Expression* const> &exp_list);
-	NonBlocking(const NonBlocking& assignment);
+class NonBlocking: public ProceduralAssignment{
 private:
 	std::list<LValue* const> lvalue_list;
 	std::list<Expression* const> exp_list;
@@ -37,6 +34,9 @@ public:
 	 * The code gen method generates the LLVM ir for the statement
 	 */
 	void code_gen() const;
+
+	NonBlocking(const Position& position, std::list<LValue* const> &lvalue_list, std::list<Expression* const> &exp_list);
+	NonBlocking(const NonBlocking& assignment);
 
 	~NonBlocking();
 };

@@ -9,11 +9,16 @@
 #define DECLARATION_H
 
 #include "ast/mod_item/ModItem.h"
+#include "SymbolTable.h"
 
 class Declaration: public ModItem{
 
 protected:
-	Declaration(const Position& position);
+	SymbolTable* const table;
+	Declaration(const Position& position, SymbolTable* const table);
+	Declaration(const Declaration& declaration);
+
+public:
 
 	virtual void code_gen() const = 0;
 	virtual void perform() const = 0;

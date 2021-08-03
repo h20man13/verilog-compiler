@@ -11,11 +11,11 @@
 #include "ast/mod_item/declaration/Declaration.h"
 #include "ast/expression/Identifier.h"
 
-class UnidentifiedDeclaration: Declaration{
+class UnidentifiedDeclaration: public Declaration{
 private:
 	Identifier* const ident;
 public:
-	UnidentifiedDeclaration(const Position& position, Identifier* const ident);
+	UnidentifiedDeclaration(const Position& position, Identifier* const ident, SymbolTable* const table);
 	UnidentifiedDeclaration(const UnidentifiedDeclaration& declaration);
 	~UnidentifiedDeclaration();
 	void perform() const;

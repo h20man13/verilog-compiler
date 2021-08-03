@@ -12,13 +12,13 @@ The \mbox{\hyperlink{classReplication}{Replication}} class is for ast nodes repr
 Inheritance diagram for Replication\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2.000000cm]{de/d82/classReplication}
+\includegraphics[height=3.000000cm]{de/d82/classReplication}
 \end{center}
 \end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classReplication_a36db37a1c47ea7731930f4a1a733a34b}{Replication}} (const \mbox{\hyperlink{classPosition}{Position}} \&position, \mbox{\hyperlink{classExpression}{Expression}} $\ast$const times, \mbox{\hyperlink{classExpression}{Expression}} $\ast$const exp)
+\mbox{\hyperlink{classReplication_a5ad3828f03b95b14da41bdbe02daf154}{Replication}} (const \mbox{\hyperlink{classPosition}{Position}} \&position, \mbox{\hyperlink{classConstantExpression}{Constant\+Expression}} $\ast$const times, \mbox{\hyperlink{classExpression}{Expression}} $\ast$const exp)
 \begin{DoxyCompactList}\small\item\em The \mbox{\hyperlink{classReplication}{Replication}} constructor constructs a replication ast node from 3 parameters\+: \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classReplication_a60def343d7415d89fd5ec84999343442}{Replication}} (const \mbox{\hyperlink{classReplication}{Replication}} \&expression)
 \begin{DoxyCompactList}\small\item\em The copy constructor takes in a replication object and it copies it. \end{DoxyCompactList}\item 
@@ -30,6 +30,7 @@ void \mbox{\hyperlink{classReplication_a1358b42e6bc5d04bf2d074ba24e46955}{code\+
 \mbox{\Hypertarget{classReplication_a6e8c8de5d99ed18c133425209e54afee}\label{classReplication_a6e8c8de5d99ed18c133425209e54afee}} 
 \mbox{\hyperlink{classReplication_a6e8c8de5d99ed18c133425209e54afee}{$\sim$\+Replication}} ()
 \begin{DoxyCompactList}\small\item\em The destructor for replications deletes all of the expressions associated with the replication. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
 
 
 \doxysubsection{Detailed Description}
@@ -40,16 +41,16 @@ Jacob Bauer
 \end{DoxyAuthor}
 
 
-Definition at line 17 of file Replication.\+h.
+Definition at line 18 of file Replication.\+h.
 
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{classReplication_a36db37a1c47ea7731930f4a1a733a34b}\label{classReplication_a36db37a1c47ea7731930f4a1a733a34b}} 
+\mbox{\Hypertarget{classReplication_a5ad3828f03b95b14da41bdbe02daf154}\label{classReplication_a5ad3828f03b95b14da41bdbe02daf154}} 
 \index{Replication@{Replication}!Replication@{Replication}}
 \index{Replication@{Replication}!Replication@{Replication}}
 \doxysubsubsection{\texorpdfstring{Replication()}{Replication()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily Replication\+::\+Replication (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classPosition}{Position}} \&}]{position,  }\item[{\mbox{\hyperlink{classExpression}{Expression}} $\ast$const}]{times,  }\item[{\mbox{\hyperlink{classExpression}{Expression}} $\ast$const}]{exp }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily Replication\+::\+Replication (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classPosition}{Position}} \&}]{position,  }\item[{\mbox{\hyperlink{classConstantExpression}{Constant\+Expression}} $\ast$const}]{times,  }\item[{\mbox{\hyperlink{classExpression}{Expression}} $\ast$const}]{exp }\end{DoxyParamCaption})}
 
 
 
@@ -94,7 +95,7 @@ Definition at line 5 of file Replication.\+cpp.
 \index{Replication@{Replication}!evaluate@{evaluate}}
 \index{evaluate@{evaluate}!Replication@{Replication}}
 \doxysubsubsection{\texorpdfstring{evaluate()}{evaluate()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classObjBase}{Obj\+Base}} $\ast$const Replication\+::evaluate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{classObjBase}{Obj\+Base}} $\ast$const Replication\+::evaluate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
@@ -103,6 +104,10 @@ The evaluate functions interprets the replication.
 \begin{DoxyReturn}{Returns}
 the replication to be evaluated 
 \end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classExpression_aded287b288eee88a418e595a63335eaa}{Expression}}.
+
 
 
 Definition at line 11 of file Replication.\+cpp.

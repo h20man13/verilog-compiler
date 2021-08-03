@@ -17,6 +17,7 @@ class Case: public Statement{
 protected:
 	std::list<CaseItem* const> item_list;
 	Expression* const expression;
+public:
 
 	Case(const Position& position, Expression* const expression, std::list<CaseItem* const> &item_list);
 	Case(const Case& case_stat);

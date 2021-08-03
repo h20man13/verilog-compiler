@@ -12,11 +12,11 @@
 #include "ast/mod_item/declaration/RegValue.h"
 #include <list>
 
-class IntegerDeclaration: Declaration{
+class IntegerDeclaration: public Declaration{
 private:
 	std::list<RegValue* const> reg_list;
 public:
-	IntegerDeclaration(const Position& position, std::list<RegValue* const> &reg_list);
+	IntegerDeclaration(const Position& position, std::list<RegValue* const> &reg_list, SymbolTable* const table);
 	IntegerDeclaration(const IntegerDeclaration& real_declaration);
 
 	~IntegerDeclaration();

@@ -12,14 +12,14 @@ The statement abstract class is used to store statement objects on the ast tree.
 Inheritance diagram for Repeat\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2.000000cm]{d2/d44/classRepeat}
+\includegraphics[height=3.000000cm]{d2/d44/classRepeat}
 \end{center}
 \end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classRepeat_a6c71f1a0b529b42d0a78aab9fe27bd38}\label{classRepeat_a6c71f1a0b529b42d0a78aab9fe27bd38}} 
-{\bfseries Repeat} (const \mbox{\hyperlink{classPosition}{Position}} \&position, \mbox{\hyperlink{classExpression}{Expression}} $\ast$const check, \mbox{\hyperlink{classStatement}{Statement}} $\ast$const statement)
+\mbox{\Hypertarget{classRepeat_a1bfd86e49e2e6115e20d3b494e13d56e}\label{classRepeat_a1bfd86e49e2e6115e20d3b494e13d56e}} 
+{\bfseries Repeat} (const \mbox{\hyperlink{classPosition}{Position}} \&position, \mbox{\hyperlink{classConstantExpression}{Constant\+Expression}} $\ast$const times, \mbox{\hyperlink{classStatement}{Statement}} $\ast$const statement)
 \item 
 \mbox{\Hypertarget{classRepeat_ae9df56e99d25a1ce804661916db1e722}\label{classRepeat_ae9df56e99d25a1ce804661916db1e722}} 
 {\bfseries Repeat} (const \mbox{\hyperlink{classRepeat}{Repeat}} \&repeat)
@@ -29,6 +29,7 @@ void \mbox{\hyperlink{classRepeat_a109961b9661ecd604ab0983ebbec6569}{code\+\_\+g
 \begin{DoxyCompactList}\small\item\em The code gen method generates the LLVM ir for the statement. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classRepeat_a6f2acdb10a5b4fec34e0b4b80fd107e6}{execute}} () const
 \begin{DoxyCompactList}\small\item\em The execute method is used to interpret statements. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
 
 
 \doxysubsection{Detailed Description}

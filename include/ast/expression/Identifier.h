@@ -17,7 +17,7 @@
  * The identifier class is used to for Identifier AST nodes
  * @author Jacob Bauer
  */
-class Identifier: Expression, LValue, RegValue{
+class Identifier: public Expression, public LValue, public RegValue{
 private:
 	const std::string lexeme; //stores variable name
 public:
@@ -25,7 +25,7 @@ public:
 	 * The identifier constructor takes in a ident token and converts it to an identifier ast node
 	 * @param tok  the token that represents the identifier
 	 */
-	Identifier(const Token& tok);
+	Identifier(const Token& tok, SymbolTable* const table);
 
 	/**
 	 * The identifier copy constructor is used to copy an identifier expression
@@ -52,6 +52,10 @@ public:
 	ObjBase* const access() const;
 
 	void declare() const;
+
+	SymbolTable::attribute get_attribute_type() const;
+
+	const std::string get_symbol_name() const;
 };
 
 

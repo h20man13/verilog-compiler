@@ -10,7 +10,7 @@
 
 #include "ast/mod_item/gate_declaration/GateDeclaration.h"
 
-class NotGateDeclaration: GateDeclaration{
+class NotGateDeclaration: public GateDeclaration{
 public:
 	NotGateDeclaration(const Position& position, std::list<Expression* const> &gate_param);
 	NotGateDeclaration(const NotGateDeclaration& declaration);

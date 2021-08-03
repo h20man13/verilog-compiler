@@ -18,7 +18,7 @@
  * @author Jacob Bauer
  */
 
-class For: Statement{
+class For: public Statement{
 
 	private:
 	Blocking* const init;

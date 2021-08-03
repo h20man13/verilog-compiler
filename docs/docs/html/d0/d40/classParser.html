@@ -64,32 +64,68 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="../../d5/d77/classParser-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">Parser Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div></div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for Parser:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d0/d40/classParser.png" usemap="#Parser_map" alt=""/>
+  <map id="Parser_map" name="Parser_map">
+<area href="../../d2/df2/classRecursiveDescent.html" alt="RecursiveDescent" shape="rect" coords="0,56,115,80"/>
+  </map>
+</div></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
-Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a4e3efd2bdcf71c19d1ff4771cc54068c"><td class="memItemLeft" align="right" valign="top"><a id="a4e3efd2bdcf71c19d1ff4771cc54068c"></a>
-virtual static <a class="el" href="../../de/d94/classExpression.html">Expression</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>parse_expression</b> ()=0</td></tr>
-<tr class="separator:a4e3efd2bdcf71c19d1ff4771cc54068c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abace7bd5b3cc92fc079b101187e31c98"><td class="memItemLeft" align="right" valign="top"><a id="abace7bd5b3cc92fc079b101187e31c98"></a>
-virtual static <a class="el" href="../../d6/de7/classStatement.html">Statement</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>parse_statement</b> ()=0</td></tr>
-<tr class="separator:abace7bd5b3cc92fc079b101187e31c98"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6a38a169890861b0afac16b7ed34c302"><td class="memItemLeft" align="right" valign="top"><a id="a6a38a169890861b0afac16b7ed34c302"></a>
-virtual static <a class="el" href="../../d9/d21/classModItem.html">ModItem</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>parse_mod_item</b> ()=0</td></tr>
-<tr class="separator:a6a38a169890861b0afac16b7ed34c302"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae94bee12d31e480a2e4a9aac35f6b1ce"><td class="memItemLeft" align="right" valign="top"><a id="ae94bee12d31e480a2e4a9aac35f6b1ce"></a>
-virtual static <a class="el" href="../../d3/d9c/classModule.html">Module</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>parse_module</b> ()=0</td></tr>
-<tr class="separator:ae94bee12d31e480a2e4a9aac35f6b1ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a502145f80a783e3da3bc92f99ce18284"><td class="memItemLeft" align="right" valign="top"><a id="a502145f80a783e3da3bc92f99ce18284"></a>
+virtual <a class="el" href="../../de/d94/classExpression.html">Expression</a> *const&#160;</td><td class="memItemRight" valign="bottom"><b>parse_expression</b> ()=0</td></tr>
+<tr class="separator:a502145f80a783e3da3bc92f99ce18284"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70e6ff73d9648bce828df2685a8fb5bc"><td class="memItemLeft" align="right" valign="top"><a id="a70e6ff73d9648bce828df2685a8fb5bc"></a>
+virtual <a class="el" href="../../d6/de7/classStatement.html">Statement</a> *const&#160;</td><td class="memItemRight" valign="bottom"><b>parse_statement</b> ()=0</td></tr>
+<tr class="separator:a70e6ff73d9648bce828df2685a8fb5bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab294c9a3acfbd4d68551b6c0fabeca36"><td class="memItemLeft" align="right" valign="top"><a id="ab294c9a3acfbd4d68551b6c0fabeca36"></a>
+virtual <a class="el" href="../../d9/d21/classModItem.html">ModItem</a> *const&#160;</td><td class="memItemRight" valign="bottom"><b>parse_mod_item</b> ()=0</td></tr>
+<tr class="separator:ab294c9a3acfbd4d68551b6c0fabeca36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa680663fff64b81076be27a2f72fa5a3"><td class="memItemLeft" align="right" valign="top"><a id="aa680663fff64b81076be27a2f72fa5a3"></a>
+virtual <a class="el" href="../../d3/d9c/classModule.html">Module</a> *const&#160;</td><td class="memItemRight" valign="bottom"><b>parse_module</b> ()=0</td></tr>
+<tr class="separator:aa680663fff64b81076be27a2f72fa5a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3894726bbd2587496edcc8c265ca88dd"><td class="memItemLeft" align="right" valign="top"><a id="a3894726bbd2587496edcc8c265ca88dd"></a>
+virtual <a class="el" href="../../db/d30/classFile.html">File</a> *const&#160;</td><td class="memItemRight" valign="bottom"><b>parse_file</b> ()=0</td></tr>
+<tr class="separator:a3894726bbd2587496edcc8c265ca88dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:a7ce025b7df2ec1647569612716fc4d79"><td class="memItemLeft" align="right" valign="top"><a id="a7ce025b7df2ec1647569612716fc4d79"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Parser</b> (const <a class="el" href="../../df/d17/classErrorLog.html">ErrorLog</a> &amp;error_log, std::list&lt; const <a class="el" href="../../d2/d6e/classToken.html">Token</a> &gt; &amp;token_list)</td></tr>
+<tr class="separator:a7ce025b7df2ec1647569612716fc4d79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2b44cccd6fe8447033d222db0426275"><td class="memItemLeft" align="right" valign="top"><a id="aa2b44cccd6fe8447033d222db0426275"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Parser</b> (const <a class="el" href="../../d0/d40/classParser.html">Parser</a> &amp;parser)</td></tr>
+<tr class="separator:aa2b44cccd6fe8447033d222db0426275"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e6828ff00796ccb9848c3f0613a3177"><td class="memItemLeft" align="right" valign="top"><a id="a2e6828ff00796ccb9848c3f0613a3177"></a>
+const <a class="el" href="../../da/d8b/classPosition.html">Position</a>&#160;</td><td class="memItemRight" valign="bottom"><b>get_start</b> () const</td></tr>
+<tr class="separator:a2e6828ff00796ccb9848c3f0613a3177"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:a6db8e5a22a1e25322fea4a55a7b04639"><td class="memItemLeft" align="right" valign="top"><a id="a6db8e5a22a1e25322fea4a55a7b04639"></a>
+<a class="el" href="../../df/d17/classErrorLog.html">ErrorLog</a>&#160;</td><td class="memItemRight" valign="bottom"><b>error_log</b></td></tr>
+<tr class="separator:a6db8e5a22a1e25322fea4a55a7b04639"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16fb5bd87d2740c2f6614a72b22c3c63"><td class="memItemLeft" align="right" valign="top"><a id="a16fb5bd87d2740c2f6614a72b22c3c63"></a>
+std::list&lt; const <a class="el" href="../../d2/d6e/classToken.html">Token</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>token_list</b></td></tr>
+<tr class="separator:a16fb5bd87d2740c2f6614a72b22c3c63"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="../../d6/d0c/Parser_8h_source.html#l00017">17</a> of file <a class="el" href="../../d6/d0c/Parser_8h_source.html">Parser.h</a>.</p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
-<li>include/main/Parser/<a class="el" href="../../d6/d0c/Parser_8h_source.html">Parser.h</a></li>
+<p class="definition">Definition at line <a class="el" href="../../d6/d0c/Parser_8h_source.html#l00110">110</a> of file <a class="el" href="../../d6/d0c/Parser_8h_source.html">Parser.h</a>.</p>
+</div><hr/>The documentation for this class was generated from the following files:<ul>
+<li>include/main/parser/<a class="el" href="../../d6/d0c/Parser_8h_source.html">Parser.h</a></li>
+<li>src/main/parser/<a class="el" href="../../dc/df5/Parser_8cpp_source.html">Parser.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

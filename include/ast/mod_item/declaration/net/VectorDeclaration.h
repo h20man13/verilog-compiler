@@ -9,14 +9,14 @@
 #define VECTORDECLARATION_H
 
 #include "ast/mod_item/declaration/Declaration.h"
-#include "ast/expression/Expression.h"
+#include "ast/expression/ConstantExpression.h"
 
-class VectorDeclaration: Declaration{
+class VectorDeclaration: virtual public Declaration{
 protected:
-	const Expression* start;
-	const Expression* end;
+	ConstantExpression* const start;
+	ConstantExpression* const end;
 
-	VectorDeclaration(const Position& position, const Expression* start, const Expression* end);
+	VectorDeclaration(ConstantExpression* const start, ConstantExpression* const end);
 	VectorDeclaration(const VectorDeclaration& declaration);
 
 	virtual ~VectorDeclaration();

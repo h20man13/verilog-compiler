@@ -18,7 +18,7 @@
  * (Ex: {x, y, z} where z y and z are wires or registers
  * @author Jacob Bauer
  */
-class Concatenation: Expression, LValue{
+class Concatenation: public Expression, public LValue{
 private:
 	std::list<Expression* const> concat_list; //list of expressions to be concatenated
 public:
@@ -29,7 +29,7 @@ public:
 	 * @param concat_list  the list of expressions that reside inside the concatenation
 	 */
 
-	Concatenation(const Position& position, const std::list<Expression* const> concat_list);
+	Concatenation(const Position& position, const std::list<Expression* const> concat_list, SymbolTable* const table);
 
 	/**
 	 * The concatenation copy constructor

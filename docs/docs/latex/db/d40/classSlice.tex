@@ -3,13 +3,13 @@
 Inheritance diagram for Slice\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2.000000cm]{db/d40/classSlice}
+\includegraphics[height=3.000000cm]{db/d40/classSlice}
 \end{center}
 \end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classSlice_a0abc51448b69e4ad1f33d706efd60288}{Slice}} (const \mbox{\hyperlink{classPosition}{Position}} \&position, const std\+::string \&lexeme, \mbox{\hyperlink{classExpression}{Expression}} $\ast$const begin, \mbox{\hyperlink{classExpression}{Expression}} $\ast$const end)
+\mbox{\hyperlink{classSlice_aad2ed1888a3017aefe0a267bf238a876}{Slice}} (const \mbox{\hyperlink{classPosition}{Position}} \&position, const std\+::string \&lexeme, \mbox{\hyperlink{classExpression}{Expression}} $\ast$const begin, \mbox{\hyperlink{classExpression}{Expression}} $\ast$const end, \mbox{\hyperlink{classSymbolTable}{Symbol\+Table}} $\ast$const table)
 \begin{DoxyCompactList}\small\item\em The slice ast node constructor is used to construct a slice ast nodes in Verilog given three parameters. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classSlice_aef2bdf557084ad68a79adffebfd2396f}{Slice}} (const \mbox{\hyperlink{classSlice}{Slice}} \&slice)
 \begin{DoxyCompactList}\small\item\em The slice copy constructor creates a slice copy from another slice expression ast node. \end{DoxyCompactList}\item 
@@ -23,7 +23,14 @@ void \mbox{\hyperlink{classSlice_a1d7bb8316245260e76863a91a0b73306}{code\+\_\+ge
 \begin{DoxyCompactList}\small\item\em The evaluate method is used access a range of elements. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classSlice_a16559765aa23b0f2115beb4d2e17e197}\label{classSlice_a16559765aa23b0f2115beb4d2e17e197}} 
 void {\bfseries declare} () const
+\item 
+\mbox{\Hypertarget{classSlice_a766afd601bd2f88a3929e911b6cb568d}\label{classSlice_a766afd601bd2f88a3929e911b6cb568d}} 
+Symbol\+Table\+::attribute {\bfseries get\+\_\+attribute\+\_\+type} () const
+\item 
+\mbox{\Hypertarget{classSlice_a09f6f72a711553a260ba6f73ff3af37a}\label{classSlice_a09f6f72a711553a260ba6f73ff3af37a}} 
+const std\+::string {\bfseries get\+\_\+symbol\+\_\+name} () const
 \end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
 
 
 \doxysubsection{Detailed Description}
@@ -34,11 +41,11 @@ Definition at line 16 of file Slice.\+h.
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{classSlice_a0abc51448b69e4ad1f33d706efd60288}\label{classSlice_a0abc51448b69e4ad1f33d706efd60288}} 
+\mbox{\Hypertarget{classSlice_aad2ed1888a3017aefe0a267bf238a876}\label{classSlice_aad2ed1888a3017aefe0a267bf238a876}} 
 \index{Slice@{Slice}!Slice@{Slice}}
 \index{Slice@{Slice}!Slice@{Slice}}
 \doxysubsubsection{\texorpdfstring{Slice()}{Slice()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily Slice\+::\+Slice (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classPosition}{Position}} \&}]{position,  }\item[{const std\+::string \&}]{lexeme,  }\item[{\mbox{\hyperlink{classExpression}{Expression}} $\ast$const}]{begin,  }\item[{\mbox{\hyperlink{classExpression}{Expression}} $\ast$const}]{end }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily Slice\+::\+Slice (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classPosition}{Position}} \&}]{position,  }\item[{const std\+::string \&}]{lexeme,  }\item[{\mbox{\hyperlink{classExpression}{Expression}} $\ast$const}]{begin,  }\item[{\mbox{\hyperlink{classExpression}{Expression}} $\ast$const}]{end,  }\item[{\mbox{\hyperlink{classSymbolTable}{Symbol\+Table}} $\ast$const}]{table }\end{DoxyParamCaption})}
 
 
 
@@ -85,7 +92,7 @@ Definition at line 8 of file Slice.\+cpp.
 \index{Slice@{Slice}!evaluate@{evaluate}}
 \index{evaluate@{evaluate}!Slice@{Slice}}
 \doxysubsubsection{\texorpdfstring{evaluate()}{evaluate()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classObjBase}{Obj\+Base}} $\ast$const Slice\+::evaluate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{classObjBase}{Obj\+Base}} $\ast$const Slice\+::evaluate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
@@ -94,6 +101,10 @@ The evaluate method can be used for interpreting expressions.
 \begin{DoxyReturn}{Returns}
 
 \end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classExpression_aded287b288eee88a418e595a63335eaa}{Expression}}.
+
 
 
 Definition at line 14 of file Slice.\+cpp.

@@ -10,9 +10,9 @@
 #include "ast/expression/Expression.h"
 #include "common/types/TypeOpUtils.h"
 
-BXNor::BXNor(const Position& position, Expression* const left, Expression* const right): Binary(position, left, right){}
+BXNor::BXNor(const Position& position, Expression* const left, Expression* const right): AstNode(position), Binary(position, left, right){}
 
-BXNor::BXNor(const BXNor& binary): Binary(binary){}
+BXNor::BXNor(const BXNor& binary): AstNode(binary), Binary(binary){}
 
 void BXNor::code_gen() const {
 	// TODO -- finish this later

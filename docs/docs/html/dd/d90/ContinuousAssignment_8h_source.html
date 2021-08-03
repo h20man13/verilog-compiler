@@ -86,21 +86,23 @@ $(function() {
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;ast/mod_item/ContAssignInstance.h&quot;</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;list&gt;</span></div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="../../de/d4e/classContinuousAssignment.html">   21</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../de/d4e/classContinuousAssignment.html">ContinuousAssignment</a>: <a class="code" href="../../d9/d21/classModItem.html">ModItem</a>{</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="../../de/d4e/classContinuousAssignment.html">ContinuousAssignment</a>(<span class="keyword">const</span> <a class="code" href="../../da/d8b/classPosition.html">Position</a>&amp; position, std::list&lt;ContAssignInstance* const&gt; &amp;cont_list);</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="../../de/d4e/classContinuousAssignment.html">ContinuousAssignment</a>(<span class="keyword">const</span> <a class="code" href="../../de/d4e/classContinuousAssignment.html">ContinuousAssignment</a>&amp; assignment);</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    std::list&lt;ContAssignInstance* const&gt; cont_list;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../de/d4e/classContinuousAssignment.html#a504fd1d2d76e0e61f8d17d2cb605f9be">perform</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../de/d4e/classContinuousAssignment.html#a4b2f8b83f1113693da23c7645ea78b48">code_gen</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;};</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="../../de/d4e/classContinuousAssignment.html">   21</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../de/d4e/classContinuousAssignment.html">ContinuousAssignment</a>: <span class="keyword">public</span> <a class="code" href="../../d9/d21/classModItem.html">ModItem</a>{</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    std::list&lt;ContAssignInstance* const&gt; cont_list;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="../../de/d4e/classContinuousAssignment.html">ContinuousAssignment</a>(<span class="keyword">const</span> <a class="code" href="../../da/d8b/classPosition.html">Position</a>&amp; position, std::list&lt;ContAssignInstance* const&gt; &amp;cont_list);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="../../de/d4e/classContinuousAssignment.html">ContinuousAssignment</a>(<span class="keyword">const</span> <a class="code" href="../../de/d4e/classContinuousAssignment.html">ContinuousAssignment</a>&amp; assignment);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    ~<a class="code" href="../../de/d4e/classContinuousAssignment.html">~ContinuousAssignment</a>();</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../de/d4e/classContinuousAssignment.html#a504fd1d2d76e0e61f8d17d2cb605f9be">perform</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../de/d4e/classContinuousAssignment.html#a4b2f8b83f1113693da23c7645ea78b48">code_gen</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;};</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aclassContinuousAssignment_html"><div class="ttname"><a href="../../de/d4e/classContinuousAssignment.html">ContinuousAssignment</a></div><div class="ttdoc">The assignment template is used to create assignments in verilog.</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d90/ContinuousAssignment_8h_source.html#l00021">ContinuousAssignment.h:21</a></div></div>
 <div class="ttc" id="aclassContinuousAssignment_html_a4b2f8b83f1113693da23c7645ea78b48"><div class="ttname"><a href="../../de/d4e/classContinuousAssignment.html#a4b2f8b83f1113693da23c7645ea78b48">ContinuousAssignment::code_gen</a></div><div class="ttdeci">void code_gen() const</div><div class="ttdoc">The code gen method generates the LLVM ir for the statement.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d3e/ContinuousAssignment_8cpp_source.html#l00023">ContinuousAssignment.cpp:23</a></div></div>
 <div class="ttc" id="aclassContinuousAssignment_html_a504fd1d2d76e0e61f8d17d2cb605f9be"><div class="ttname"><a href="../../de/d4e/classContinuousAssignment.html#a504fd1d2d76e0e61f8d17d2cb605f9be">ContinuousAssignment::perform</a></div><div class="ttdeci">void perform() const</div><div class="ttdoc">The execute method is used to interpret statements.</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d3e/ContinuousAssignment_8cpp_source.html#l00016">ContinuousAssignment.cpp:16</a></div></div>

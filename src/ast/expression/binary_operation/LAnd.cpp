@@ -10,9 +10,9 @@
 #include "ast/expression/Expression.h"
 #include "common/types/TypeOpUtils.h"
 
-LAnd::LAnd(const Position& position, Expression* const left, Expression* const right): Binary(position, left, right){}
+LAnd::LAnd(const Position& position, Expression* const left, Expression* const right): AstNode(position), Binary(position, left, right){}
 
-LAnd::LAnd(const LAnd& binary): Binary(binary){}
+LAnd::LAnd(const LAnd& binary): AstNode(binary), Binary(binary){}
 
 /**
  * The gode_gen method is used to emit LLVM code

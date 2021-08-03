@@ -17,7 +17,7 @@
  * @author Jacob Bauer
  */
 
-class EmptyStatement: Statement{
+class EmptyStatement: public Statement{
 
 	private:
 	~EmptyStatement();

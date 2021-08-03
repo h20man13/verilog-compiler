@@ -8,10 +8,11 @@
 #ifndef REGVALUE_H
 #define REGVALUE_H
 
-class RegValue{
+class RegValue: public virtual AstNode{
 public:
 	virtual void declare() const = 0;
-public:
+	virtual SymbolTable::attribute get_attribute_type() const = 0;
+	virtual const std::string get_symbol_name() const = 0;
 	virtual ~RegValue() = 0;
 };
 

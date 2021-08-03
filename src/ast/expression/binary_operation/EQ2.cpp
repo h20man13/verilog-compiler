@@ -10,9 +10,9 @@
 #include "ast/expression/Expression.h"
 #include "common/types/TypeOpUtils.h"
 
-EQ2::EQ2(const Position& position, Expression* const left, Expression* const right): Binary(position, left, right){}
+EQ2::EQ2(const Position& position, Expression* const left, Expression* const right): AstNode(position), Binary(position, left, right){}
 
-EQ2::EQ2(const EQ2& binary): Binary(binary){}
+EQ2::EQ2(const EQ2& binary): AstNode(binary), Binary(binary){}
 
 void EQ2::code_gen() const {
 	// TODO -- finish this later

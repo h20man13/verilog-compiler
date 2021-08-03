@@ -12,7 +12,7 @@ The empty expression class is just used as a place holder this makes it easier f
 Inheritance diagram for Empty\+Expression\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2.000000cm]{d6/ddb/classEmptyExpression}
+\includegraphics[height=3.000000cm]{d6/ddb/classEmptyExpression}
 \end{center}
 \end{figure}
 \doxysubsection*{Public Member Functions}
@@ -21,12 +21,15 @@ Inheritance diagram for Empty\+Expression\+:\begin{figure}[H]
 \mbox{\Hypertarget{classEmptyExpression_aa5293cb42e521d2b75fa8af5e54b70f6}\label{classEmptyExpression_aa5293cb42e521d2b75fa8af5e54b70f6}} 
 {\bfseries Empty\+Expression} (const \mbox{\hyperlink{classPosition}{Position}} \&position)
 \item 
+\mbox{\Hypertarget{classEmptyExpression_a4b6e48f26f90f7ce1a13a053959467c8}\label{classEmptyExpression_a4b6e48f26f90f7ce1a13a053959467c8}} 
+{\bfseries Empty\+Expression} (const \mbox{\hyperlink{classEmptyExpression}{Empty\+Expression}} \&exp)
+\item 
 \mbox{\Hypertarget{classEmptyExpression_ada4551a80d485d898d955a69f2bb3a65}\label{classEmptyExpression_ada4551a80d485d898d955a69f2bb3a65}} 
 void \mbox{\hyperlink{classEmptyExpression_ada4551a80d485d898d955a69f2bb3a65}{code\+\_\+gen}} () const
 \begin{DoxyCompactList}\small\item\em The code\+\_\+gen method generates the LLVM IR of the \mbox{\hyperlink{classExpression}{Expression}}. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classEmptyExpression_ad3794b7188c81617e9d0ae57fe0d51ab}\label{classEmptyExpression_ad3794b7188c81617e9d0ae57fe0d51ab}} 
-\mbox{\hyperlink{classObjBase}{Obj\+Base}} $\ast$const {\bfseries evaluate} ()
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{classObjBase}{Obj\+Base}} $\ast$const \mbox{\hyperlink{classEmptyExpression_ad3794b7188c81617e9d0ae57fe0d51ab}{evaluate}} ()
+\begin{DoxyCompactList}\small\item\em The interpret method interprets the \mbox{\hyperlink{classExpression}{Expression}} directly and returns the result. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
 
 
 \doxysubsection{Detailed Description}
@@ -38,6 +41,30 @@ Jacob Bauer
 
 
 Definition at line 17 of file Empty\+Expression.\+h.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classEmptyExpression_ad3794b7188c81617e9d0ae57fe0d51ab}\label{classEmptyExpression_ad3794b7188c81617e9d0ae57fe0d51ab}} 
+\index{EmptyExpression@{EmptyExpression}!evaluate@{evaluate}}
+\index{evaluate@{evaluate}!EmptyExpression@{EmptyExpression}}
+\doxysubsubsection{\texorpdfstring{evaluate()}{evaluate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classObjBase}{Obj\+Base}} $\ast$const Empty\+Expression\+::evaluate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+The interpret method interprets the \mbox{\hyperlink{classExpression}{Expression}} directly and returns the result. 
+
+\begin{DoxyReturn}{Returns}
+the result of the computed expression 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classExpression_aded287b288eee88a418e595a63335eaa}{Expression}}.
+
+
+
+Definition at line 10 of file Empty\+Expression.\+cpp.
 
 
 

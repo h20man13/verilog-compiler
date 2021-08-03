@@ -5,7 +5,7 @@
 %%For: 
 %Magnification: 1.00
 %%Orientation: Portrait
-%%BoundingBox: 0 0 500 385.487518
+%%BoundingBox: 0 0 500 217.687073
 %%Pages: 0
 %%BeginSetup
 %%EndSetup
@@ -19,13 +19,13 @@
 /marginwidth 10 def
 /distx 20 def
 /disty 40 def
-/boundaspect 1.297059 def  % aspect ratio of the BoundingBox (width/height)
+/boundaspect 2.296875 def  % aspect ratio of the BoundingBox (width/height)
 /boundx 500 def
 /boundy boundx boundaspect div def
 /xspacing 0 def
 /yspacing 0 def
-/rows 17 def
-/cols 6 def
+/rows 16 def
+/cols 10 def
 /scalefactor 0 def
 /boxfont /Times-Roman findfont fontheight scalefont def
 
@@ -176,11 +176,11 @@ boxfont setfont
 (AstNode) cw
 (Expression) cw
 (File) cw
+(LValue) cw
 (ModItem) cw
 (Module) cw
+(RegValue) cw
 (Statement) cw
-(Number< int_type >) cw
-(Number< double >) cw
 (Binary) cw
 (Concatenation) cw
 (ConstantExpression) cw
@@ -188,12 +188,17 @@ boxfont setfont
 (FunctionCall) cw
 (Identifier) cw
 (Index) cw
-(Number< num_type >) cw
+(NumValue) cw
+(PortConnection) cw
 (Replication) cw
 (Slice) cw
-(String) cw
+(StrValue) cw
 (TernaryOperation) cw
 (Unary) cw
+(Concatenation) cw
+(Identifier) cw
+(Index) cw
+(Slice) cw
 (AlwaysStatement) cw
 (ContinuousAssignment) cw
 (Declaration) cw
@@ -203,6 +208,9 @@ boxfont setfont
 (InitialStatement) cw
 (ModInstantiation) cw
 (TaskDeclaration) cw
+(Identifier) cw
+(Index) cw
+(Slice) cw
 (Case) cw
 (EmptyStatement) cw
 (For) cw
@@ -226,158 +234,187 @@ boundx scalefactor div boundy scalefactor div scale
 
 % ----- classes -----
 
- (AstNode) 2.000000 16.000000 box
- (Expression) 0.000000 15.000000 box
- (File) 1.000000 15.000000 box
- (ModItem) 2.000000 15.000000 box
- (Module) 3.000000 15.000000 box
- (Statement) 4.000000 15.000000 box
- (Number< int_type >) 1.000000 14.000000 box
-1.000000 14.000000 mark
- (Number< double >) 1.000000 13.000000 box
+ (AstNode) 4.000000 15.000000 box
+ (Expression) 0.000000 14.000000 box
+ (File) 1.000000 14.000000 box
+ (LValue) 2.000000 14.000000 box
+ (ModItem) 4.000000 14.000000 box
+ (Module) 5.000000 14.000000 box
+ (RegValue) 6.000000 14.000000 box
+ (Statement) 8.000000 14.000000 box
+ (Binary) 1.000000 13.000000 box
 1.000000 13.000000 mark
- (Binary) 1.000000 12.000000 box
-1.000000 12.000000 mark
- (Concatenation) 1.000000 11.000000 box
- (ConstantExpression) 1.000000 10.000000 box
- (EmptyExpression) 1.000000 9.000000 box
- (FunctionCall) 1.000000 8.000000 box
-1.000000 8.000000 mark
- (Identifier) 1.000000 7.000000 box
- (Index) 1.000000 6.000000 box
- (Number< num_type >) 1.000000 5.000000 box
-1.000000 5.000000 mark
+ (Concatenation) 1.000000 12.000000 box
+ (ConstantExpression) 1.000000 11.000000 box
+ (EmptyExpression) 1.000000 10.000000 box
+ (FunctionCall) 1.000000 9.000000 box
+1.000000 9.000000 mark
+ (Identifier) 1.000000 8.000000 box
+ (Index) 1.000000 7.000000 box
+ (NumValue) 1.000000 6.000000 box
+ (PortConnection) 1.000000 5.000000 box
  (Replication) 1.000000 4.000000 box
  (Slice) 1.000000 3.000000 box
- (String) 1.000000 2.000000 box
+ (StrValue) 1.000000 2.000000 box
  (TernaryOperation) 1.000000 1.000000 box
  (Unary) 1.000000 0.000000 box
 1.000000 0.000000 mark
- (AlwaysStatement) 3.000000 14.000000 box
- (ContinuousAssignment) 3.000000 13.000000 box
- (Declaration) 3.000000 12.000000 box
-3.000000 12.000000 mark
- (EmptyModItem) 3.000000 11.000000 box
- (FunctionDeclaration) 3.000000 10.000000 box
- (GateDeclaration) 3.000000 9.000000 box
-3.000000 9.000000 mark
- (InitialStatement) 3.000000 8.000000 box
- (ModInstantiation) 3.000000 7.000000 box
- (TaskDeclaration) 3.000000 6.000000 box
- (Case) 5.000000 14.000000 box
-5.000000 14.000000 mark
- (EmptyStatement) 5.000000 13.000000 box
- (For) 5.000000 12.000000 box
- (Forever) 5.000000 11.000000 box
- (If) 5.000000 10.000000 box
-5.000000 10.000000 mark
- (ProceduralAssignment) 5.000000 9.000000 box
-5.000000 9.000000 mark
- (Repeat) 5.000000 8.000000 box
- (ReturnStatement) 5.000000 7.000000 box
- (SequentialBlock) 5.000000 6.000000 box
- (TaskCall) 5.000000 5.000000 box
-5.000000 5.000000 mark
- (Wait) 5.000000 4.000000 box
- (While) 5.000000 3.000000 box
+ (Concatenation) 3.000000 13.000000 box
+ (Identifier) 3.000000 12.000000 box
+ (Index) 3.000000 11.000000 box
+ (Slice) 3.000000 10.000000 box
+ (AlwaysStatement) 5.000000 13.000000 box
+ (ContinuousAssignment) 5.000000 12.000000 box
+ (Declaration) 5.000000 11.000000 box
+5.000000 11.000000 mark
+ (EmptyModItem) 5.000000 10.000000 box
+ (FunctionDeclaration) 5.000000 9.000000 box
+ (GateDeclaration) 5.000000 8.000000 box
+5.000000 8.000000 mark
+ (InitialStatement) 5.000000 7.000000 box
+ (ModInstantiation) 5.000000 6.000000 box
+ (TaskDeclaration) 5.000000 5.000000 box
+ (Identifier) 7.000000 13.000000 box
+ (Index) 7.000000 12.000000 box
+ (Slice) 7.000000 11.000000 box
+ (Case) 9.000000 13.000000 box
+9.000000 13.000000 mark
+ (EmptyStatement) 9.000000 12.000000 box
+ (For) 9.000000 11.000000 box
+ (Forever) 9.000000 10.000000 box
+ (If) 9.000000 9.000000 box
+9.000000 9.000000 mark
+ (ProceduralAssignment) 9.000000 8.000000 box
+9.000000 8.000000 mark
+ (Repeat) 9.000000 7.000000 box
+ (ReturnStatement) 9.000000 6.000000 box
+ (SequentialBlock) 9.000000 5.000000 box
+ (TaskCall) 9.000000 4.000000 box
+9.000000 4.000000 mark
+ (Wait) 9.000000 3.000000 box
+ (While) 9.000000 2.000000 box
 
 % ----- relations -----
 
 solid
-1 2.000000 15.250000 out
-solid
-0.000000 4.000000 16.000000 conn
-solid
-0 0.000000 15.750000 in
-solid
-1 0.000000 14.250000 out
-dotted
-0 1.000000 15.750000 in
-solid
-0 2.000000 15.750000 in
-solid
-1 2.000000 14.250000 out
-dotted
-0 3.000000 15.750000 in
-solid
-0 4.000000 15.750000 in
-solid
 1 4.000000 14.250000 out
+solid
+0.000000 8.000000 15.000000 conn
+solid
+0 0.000000 14.750000 in
+solid
+1 0.000000 13.250000 out
 dotted
-0 0.000000 14.500000 hedge
+0 1.000000 14.750000 in
+solid
+0 2.000000 14.750000 in
+solid
+1 2.000000 13.250000 out
+solid
+0 4.000000 14.750000 in
+solid
+1 4.000000 13.250000 out
 dotted
+0 5.000000 14.750000 in
+solid
+0 6.000000 14.750000 in
+solid
+1 6.000000 13.250000 out
+solid
+0 8.000000 14.750000 in
+solid
+1 8.000000 13.250000 out
+solid
 0 0.000000 13.500000 hedge
 solid
 0 0.000000 12.500000 hedge
-dotted
+solid
 0 0.000000 11.500000 hedge
-dotted
+solid
 0 0.000000 10.500000 hedge
-dotted
+solid
 0 0.000000 9.500000 hedge
 solid
 0 0.000000 8.500000 hedge
-dotted
+solid
 0 0.000000 7.500000 hedge
-dotted
+solid
 0 0.000000 6.500000 hedge
-dotted
+solid
 0 0.000000 5.500000 hedge
-dotted
+solid
 0 0.000000 4.500000 hedge
-dotted
+solid
 0 0.000000 3.500000 hedge
-dotted
+solid
 0 0.000000 2.500000 hedge
-dotted
+solid
 0 0.000000 1.500000 hedge
 solid
 0 0.000000 0.500000 hedge
 solid
-0.000000 15.000000 0.500000 vedge
-dotted
-0 2.000000 14.500000 hedge
-dotted
+0.000000 14.000000 0.500000 vedge
+solid
 0 2.000000 13.500000 hedge
 solid
 0 2.000000 12.500000 hedge
-dotted
-0 2.000000 11.500000 hedge
-dotted
-0 2.000000 10.500000 hedge
-dotted
-0 2.000000 9.500000 hedge
-dotted
-0 2.000000 8.500000 hedge
-dotted
-0 2.000000 7.500000 hedge
-dotted
-0 2.000000 6.500000 hedge
 solid
-2.000000 15.000000 6.500000 vedge
-dotted
-0 4.000000 14.500000 hedge
-dotted
+0 2.000000 11.500000 hedge
+solid
+0 2.000000 10.500000 hedge
+solid
+2.000000 14.000000 10.500000 vedge
+solid
 0 4.000000 13.500000 hedge
-dotted
+solid
 0 4.000000 12.500000 hedge
-dotted
+solid
 0 4.000000 11.500000 hedge
 solid
 0 4.000000 10.500000 hedge
-dotted
+solid
 0 4.000000 9.500000 hedge
-dotted
+solid
 0 4.000000 8.500000 hedge
-dotted
+solid
 0 4.000000 7.500000 hedge
-dotted
+solid
 0 4.000000 6.500000 hedge
 solid
 0 4.000000 5.500000 hedge
-dotted
-0 4.000000 4.500000 hedge
-dotted
-0 4.000000 3.500000 hedge
 solid
-4.000000 15.000000 3.500000 vedge
+4.000000 14.000000 5.500000 vedge
+solid
+0 6.000000 13.500000 hedge
+solid
+0 6.000000 12.500000 hedge
+solid
+0 6.000000 11.500000 hedge
+solid
+6.000000 14.000000 11.500000 vedge
+solid
+0 8.000000 13.500000 hedge
+solid
+0 8.000000 12.500000 hedge
+solid
+0 8.000000 11.500000 hedge
+solid
+0 8.000000 10.500000 hedge
+solid
+0 8.000000 9.500000 hedge
+solid
+0 8.000000 8.500000 hedge
+solid
+0 8.000000 7.500000 hedge
+solid
+0 8.000000 6.500000 hedge
+solid
+0 8.000000 5.500000 hedge
+solid
+0 8.000000 4.500000 hedge
+solid
+0 8.000000 3.500000 hedge
+solid
+0 8.000000 2.500000 hedge
+solid
+8.000000 14.000000 2.500000 vedge

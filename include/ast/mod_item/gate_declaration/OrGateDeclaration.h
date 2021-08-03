@@ -10,7 +10,7 @@
 
 #include "ast/mod_item/gate_declaration/GateDeclaration.h"
 
-class OrGateDeclaration: GateDeclaration{
+class OrGateDeclaration: public GateDeclaration{
 public:
 	OrGateDeclaration(const Position& position, std::list<Expression* const> &gate_param);
 	OrGateDeclaration(const OrGateDeclaration& declaration);

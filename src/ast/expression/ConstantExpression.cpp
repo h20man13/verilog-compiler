@@ -1,8 +1,8 @@
 #include "ast/expression/ConstantExpression.h"
 
-ConstantExpression::ConstantExpression(const Position& position, Expression* const expression): Expression(position), expression(expression){}
+ConstantExpression::ConstantExpression(const Position& position, Expression* const expression): AstNode(position), expression(expression){}
 
-ConstantExpression::ConstantExpression(const ConstantExpression& expression): Expression(expression.get_position()), expression(expression.expression){}
+ConstantExpression::ConstantExpression(const ConstantExpression& expression): AstNode(expression), expression(expression.expression){}
 
 void ConstantExpression::code_gen() const {
 	//LLVM generate llvm

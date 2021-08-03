@@ -75,18 +75,24 @@ Inheritance diagram for RegScalarDeclaration:</div>
  <div class="center">
   <img src="../../d3/d41/classRegScalarDeclaration.png" usemap="#RegScalarDeclaration_map" alt=""/>
   <map id="RegScalarDeclaration_map" name="RegScalarDeclaration_map">
-<area href="../../df/d0d/classRegDeclaration.html" alt="RegDeclaration" shape="rect" coords="0,0,173,24"/>
-<area href="../../d1/d8f/classScalarDeclaration.html" alt="ScalarDeclaration" shape="rect" coords="183,0,356,24"/>
-<area href="../../db/d86/classInputRegScalarDeclaration.html" alt="InputRegScalarDeclaration" shape="rect" coords="0,112,173,136"/>
-<area href="../../d5/db4/classOutputRegScalarDeclaration.html" alt="OutputRegScalarDeclaration" shape="rect" coords="183,112,356,136"/>
+<area href="../../df/d0d/classRegDeclaration.html" alt="RegDeclaration" shape="rect" coords="0,168,173,192"/>
+<area href="../../d1/d8f/classScalarDeclaration.html" alt="ScalarDeclaration" shape="rect" coords="183,168,356,192"/>
+<area href="../../d1/dc3/classDeclaration.html" alt="Declaration" shape="rect" coords="0,112,173,136"/>
+<area href="../../d1/dc3/classDeclaration.html" alt="Declaration" shape="rect" coords="183,112,356,136"/>
+<area href="../../d9/d21/classModItem.html" alt="ModItem" shape="rect" coords="0,56,173,80"/>
+<area href="../../d9/d21/classModItem.html" alt="ModItem" shape="rect" coords="183,56,356,80"/>
+<area href="../../dc/da9/classAstNode.html" alt="AstNode" shape="rect" coords="0,0,173,24"/>
+<area href="../../dc/da9/classAstNode.html" alt="AstNode" shape="rect" coords="183,0,356,24"/>
+<area href="../../db/d86/classInputRegScalarDeclaration.html" alt="InputRegScalarDeclaration" shape="rect" coords="0,280,173,304"/>
+<area href="../../d5/db4/classOutputRegScalarDeclaration.html" alt="OutputRegScalarDeclaration" shape="rect" coords="183,280,356,304"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:add777261f84aa0924d0faa8efd88ea1b"><td class="memItemLeft" align="right" valign="top"><a id="add777261f84aa0924d0faa8efd88ea1b"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>RegScalarDeclaration</b> (const <a class="el" href="../../da/d8b/classPosition.html">Position</a> &amp;position, std::list&lt; <a class="el" href="../../dd/dcf/classRegValue.html">RegValue</a> *const &gt; &amp;reg_list)</td></tr>
-<tr class="separator:add777261f84aa0924d0faa8efd88ea1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c40af42d899bf37fc386607a951f66e"><td class="memItemLeft" align="right" valign="top"><a id="a0c40af42d899bf37fc386607a951f66e"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>RegScalarDeclaration</b> (const <a class="el" href="../../da/d8b/classPosition.html">Position</a> &amp;position, std::list&lt; <a class="el" href="../../dd/dcf/classRegValue.html">RegValue</a> *const &gt; &amp;reg_list, <a class="el" href="../../df/dd1/classSymbolTable.html">SymbolTable</a> *const table)</td></tr>
+<tr class="separator:a0c40af42d899bf37fc386607a951f66e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aed764167b127b9f758db284555dc5b7a"><td class="memItemLeft" align="right" valign="top"><a id="aed764167b127b9f758db284555dc5b7a"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>RegScalarDeclaration</b> (const <a class="el" href="../../d3/d41/classRegScalarDeclaration.html">RegScalarDeclaration</a> &amp;declaration)</td></tr>
 <tr class="separator:aed764167b127b9f758db284555dc5b7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -96,6 +102,46 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>code_gen</b> 
 <tr class="memitem:a0215f612ff11575da082a59a0d99bbfb"><td class="memItemLeft" align="right" valign="top"><a id="a0215f612ff11575da082a59a0d99bbfb"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>perform</b> () const</td></tr>
 <tr class="separator:a0215f612ff11575da082a59a0d99bbfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classAstNode"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classAstNode')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../dc/da9/classAstNode.html">AstNode</a></td></tr>
+<tr class="memitem:ab1cff05f1258d2529dc8aabc6b727991 inherit pub_methods_classAstNode"><td class="memItemLeft" align="right" valign="top"><a id="ab1cff05f1258d2529dc8aabc6b727991"></a>
+const <a class="el" href="../../da/d8b/classPosition.html">Position</a>&#160;</td><td class="memItemRight" valign="bottom"><b>get_position</b> () const</td></tr>
+<tr class="separator:ab1cff05f1258d2529dc8aabc6b727991 inherit pub_methods_classAstNode"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pro_methods_classRegDeclaration"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classRegDeclaration')"><img src="../../closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="../../df/d0d/classRegDeclaration.html">RegDeclaration</a></td></tr>
+<tr class="memitem:ad2dbccada07f6263dab15f8e7c75877c inherit pro_methods_classRegDeclaration"><td class="memItemLeft" align="right" valign="top"><a id="ad2dbccada07f6263dab15f8e7c75877c"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>RegDeclaration</b> (std::list&lt; <a class="el" href="../../dd/dcf/classRegValue.html">RegValue</a> *const &gt; &amp;reg_list)</td></tr>
+<tr class="separator:ad2dbccada07f6263dab15f8e7c75877c inherit pro_methods_classRegDeclaration"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fb18d5f1fd92be6f62a361484f1a700 inherit pro_methods_classRegDeclaration"><td class="memItemLeft" align="right" valign="top"><a id="a1fb18d5f1fd92be6f62a361484f1a700"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>RegDeclaration</b> (const <a class="el" href="../../df/d0d/classRegDeclaration.html">RegDeclaration</a> &amp;declaration)</td></tr>
+<tr class="separator:a1fb18d5f1fd92be6f62a361484f1a700 inherit pro_methods_classRegDeclaration"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_classDeclaration"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classDeclaration')"><img src="../../closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="../../d1/dc3/classDeclaration.html">Declaration</a></td></tr>
+<tr class="memitem:a55879320c73b8a6f91bc9c15172a2f86 inherit pro_methods_classDeclaration"><td class="memItemLeft" align="right" valign="top"><a id="a55879320c73b8a6f91bc9c15172a2f86"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Declaration</b> (const <a class="el" href="../../da/d8b/classPosition.html">Position</a> &amp;position, <a class="el" href="../../df/dd1/classSymbolTable.html">SymbolTable</a> *const table)</td></tr>
+<tr class="separator:a55879320c73b8a6f91bc9c15172a2f86 inherit pro_methods_classDeclaration"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a798dbc29ad2f7346d44f4b73c05db582 inherit pro_methods_classDeclaration"><td class="memItemLeft" align="right" valign="top"><a id="a798dbc29ad2f7346d44f4b73c05db582"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Declaration</b> (const <a class="el" href="../../d1/dc3/classDeclaration.html">Declaration</a> &amp;declaration)</td></tr>
+<tr class="separator:a798dbc29ad2f7346d44f4b73c05db582 inherit pro_methods_classDeclaration"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_classModItem"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classModItem')"><img src="../../closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="../../d9/d21/classModItem.html">ModItem</a></td></tr>
+<tr class="memitem:ab95083715c01d727e133db8d62463f39 inherit pro_methods_classModItem"><td class="memItemLeft" align="right" valign="top"><a id="ab95083715c01d727e133db8d62463f39"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>ModItem</b> (const <a class="el" href="../../da/d8b/classPosition.html">Position</a> &amp;position)</td></tr>
+<tr class="separator:ab95083715c01d727e133db8d62463f39 inherit pro_methods_classModItem"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_classAstNode"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classAstNode')"><img src="../../closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="../../dc/da9/classAstNode.html">AstNode</a></td></tr>
+<tr class="memitem:ae2434eab6c919bb416e3389d311cade7 inherit pro_methods_classAstNode"><td class="memItemLeft" align="right" valign="top"><a id="ae2434eab6c919bb416e3389d311cade7"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>AstNode</b> (const <a class="el" href="../../da/d8b/classPosition.html">Position</a> &amp;position)</td></tr>
+<tr class="separator:ae2434eab6c919bb416e3389d311cade7 inherit pro_methods_classAstNode"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a654f49c626e442f49c0e47fc3d41ccd9 inherit pro_methods_classAstNode"><td class="memItemLeft" align="right" valign="top"><a id="a654f49c626e442f49c0e47fc3d41ccd9"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>AstNode</b> (const <a class="el" href="../../dc/da9/classAstNode.html">AstNode</a> &amp;node)</td></tr>
+<tr class="separator:a654f49c626e442f49c0e47fc3d41ccd9 inherit pro_methods_classAstNode"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_classDeclaration"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classDeclaration')"><img src="../../closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="../../d1/dc3/classDeclaration.html">Declaration</a></td></tr>
+<tr class="memitem:ad0bf8cbeab0e86364259754bea380c7d inherit pro_attribs_classDeclaration"><td class="memItemLeft" align="right" valign="top"><a id="ad0bf8cbeab0e86364259754bea380c7d"></a>
+<a class="el" href="../../df/dd1/classSymbolTable.html">SymbolTable</a> *const&#160;</td><td class="memItemRight" valign="bottom"><b>table</b></td></tr>
+<tr class="separator:ad0bf8cbeab0e86364259754bea380c7d inherit pro_attribs_classDeclaration"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_classAstNode"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classAstNode')"><img src="../../closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="../../dc/da9/classAstNode.html">AstNode</a></td></tr>
+<tr class="memitem:a0e715ef216f101725e271cfbd7c9461c inherit pro_attribs_classAstNode"><td class="memItemLeft" align="right" valign="top"><a id="a0e715ef216f101725e271cfbd7c9461c"></a>
+const <a class="el" href="../../da/d8b/classPosition.html">Position</a>&#160;</td><td class="memItemRight" valign="bottom"><b>position</b></td></tr>
+<tr class="separator:a0e715ef216f101725e271cfbd7c9461c inherit pro_attribs_classAstNode"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">

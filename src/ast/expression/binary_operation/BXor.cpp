@@ -11,9 +11,9 @@
 #include "common/types/TypeOpUtils.h"
 
 
-BXor::BXor(const Position& position, Expression* const left, Expression* const right): Binary(position, left, right){}
+BXor::BXor(const Position& position, Expression* const left, Expression* const right): AstNode(position), Binary(position, left, right){}
 
-BXor::BXor(const BXor& binary): Binary(binary){}
+BXor::BXor(const BXor& binary): AstNode(binary), Binary(binary){}
 
 void BXor::code_gen() const {
 	// TODO -- finish this later

@@ -12,13 +12,13 @@ The index class is used so simulate something similar to indexing an array.
 Inheritance diagram for Index\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2.000000cm]{d9/d55/classIndex}
+\includegraphics[height=3.000000cm]{d9/d55/classIndex}
 \end{center}
 \end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classIndex_a1a091cd0d2b6a4b1523532325645f55e}{Index}} (const \mbox{\hyperlink{classPosition}{Position}} \&position, const std\+::string \&lexeme, \mbox{\hyperlink{classExpression}{Expression}} $\ast$const index)
+\mbox{\hyperlink{classIndex_a1b263a81f83b9f49ad4c55cb9ccbd2bd}{Index}} (const \mbox{\hyperlink{classPosition}{Position}} \&position, const std\+::string \&lexeme, \mbox{\hyperlink{classExpression}{Expression}} $\ast$const index, \mbox{\hyperlink{classSymbolTable}{Symbol\+Table}} $\ast$const table)
 \begin{DoxyCompactList}\small\item\em The index constructor generates an index given three parameters. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classIndex_a446a25e643985529e92e5082eeb260a6}{Index}} (const \mbox{\hyperlink{classIndex}{Index}} \&index)
 \begin{DoxyCompactList}\small\item\em The \mbox{\hyperlink{classIndex}{Index}} copy constructor copies an \mbox{\hyperlink{classIndex}{Index}} ast node into the owning object. \end{DoxyCompactList}\item 
@@ -35,7 +35,14 @@ void \mbox{\hyperlink{classIndex_a5658129bd37b1ee17998bc447ca49e19}{code\+\_\+ge
 \item 
 \mbox{\Hypertarget{classIndex_a7217e6e5bf9e63889e3518a9bc5aae26}\label{classIndex_a7217e6e5bf9e63889e3518a9bc5aae26}} 
 void {\bfseries declare} () const
+\item 
+\mbox{\Hypertarget{classIndex_a68cbb2b4d3ac1187718710b2b6acfc0c}\label{classIndex_a68cbb2b4d3ac1187718710b2b6acfc0c}} 
+Symbol\+Table\+::attribute {\bfseries get\+\_\+attribute\+\_\+type} () const
+\item 
+\mbox{\Hypertarget{classIndex_a42492aab37938773dd1c6e7f1de52a2f}\label{classIndex_a42492aab37938773dd1c6e7f1de52a2f}} 
+const std\+::string {\bfseries get\+\_\+symbol\+\_\+name} () const
 \end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
 
 
 \doxysubsection{Detailed Description}
@@ -48,11 +55,11 @@ Definition at line 20 of file Index.\+h.
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{classIndex_a1a091cd0d2b6a4b1523532325645f55e}\label{classIndex_a1a091cd0d2b6a4b1523532325645f55e}} 
+\mbox{\Hypertarget{classIndex_a1b263a81f83b9f49ad4c55cb9ccbd2bd}\label{classIndex_a1b263a81f83b9f49ad4c55cb9ccbd2bd}} 
 \index{Index@{Index}!Index@{Index}}
 \index{Index@{Index}!Index@{Index}}
 \doxysubsubsection{\texorpdfstring{Index()}{Index()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily Index\+::\+Index (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classPosition}{Position}} \&}]{position,  }\item[{const std\+::string \&}]{lexeme,  }\item[{\mbox{\hyperlink{classExpression}{Expression}} $\ast$const}]{index }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily Index\+::\+Index (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classPosition}{Position}} \&}]{position,  }\item[{const std\+::string \&}]{lexeme,  }\item[{\mbox{\hyperlink{classExpression}{Expression}} $\ast$const}]{index,  }\item[{\mbox{\hyperlink{classSymbolTable}{Symbol\+Table}} $\ast$const}]{table }\end{DoxyParamCaption})}
 
 
 
@@ -93,7 +100,7 @@ The \mbox{\hyperlink{classIndex}{Index}} copy constructor copies an \mbox{\hyper
 \index{Index@{Index}!evaluate@{evaluate}}
 \index{evaluate@{evaluate}!Index@{Index}}
 \doxysubsubsection{\texorpdfstring{evaluate()}{evaluate()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classObjBase}{Obj\+Base}} $\ast$const Index\+::evaluate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{classObjBase}{Obj\+Base}} $\ast$const Index\+::evaluate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
@@ -102,6 +109,10 @@ The evaluate function evaluates the indexing expression.
 \begin{DoxyReturn}{Returns}
 an object value from the index 
 \end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classExpression_aded287b288eee88a418e595a63335eaa}{Expression}}.
+
 
 
 Definition at line 9 of file Index.\+cpp.

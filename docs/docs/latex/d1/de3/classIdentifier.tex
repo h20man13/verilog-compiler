@@ -12,13 +12,13 @@ The identifier class is used to for \mbox{\hyperlink{classIdentifier}{Identifier
 Inheritance diagram for Identifier\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2.000000cm]{d1/de3/classIdentifier}
+\includegraphics[height=3.000000cm]{d1/de3/classIdentifier}
 \end{center}
 \end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classIdentifier_a54597ce65a34db3a73351e3a28e3c5b9}{Identifier}} (const \mbox{\hyperlink{classToken}{Token}} \&tok)
+\mbox{\hyperlink{classIdentifier_a797e1eb9a185ed5c4dffce3cc841b33d}{Identifier}} (const \mbox{\hyperlink{classToken}{Token}} \&tok, \mbox{\hyperlink{classSymbolTable}{Symbol\+Table}} $\ast$const table)
 \begin{DoxyCompactList}\small\item\em The identifier constructor takes in a ident token and converts it to an identifier ast node. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classIdentifier_ad9159143b0ffe5bc27e3a661fc2dda51}{Identifier}} (const \mbox{\hyperlink{classIdentifier}{Identifier}} \&ident)
 \begin{DoxyCompactList}\small\item\em The identifier copy constructor is used to copy an identifier expression. \end{DoxyCompactList}\item 
@@ -27,12 +27,19 @@ void \mbox{\hyperlink{classIdentifier_a411e2edf64d6ce22fdaffa0370e36452}{code\+\
 \begin{DoxyCompactList}\small\item\em The code gen method is used to generate the LLVM IR for \mbox{\hyperlink{classIdentifier}{Identifier}} objects. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classObjBase}{Obj\+Base}} $\ast$const \mbox{\hyperlink{classIdentifier_a0e1e9fee200f2f7a202b94a83e67c866}{evaluate}} ()
 \begin{DoxyCompactList}\small\item\em The evaluate method is used to interpret identifiers. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classIdentifier_aa8d8a16ed2578f621f83f3baea230c6a}\label{classIdentifier_aa8d8a16ed2578f621f83f3baea230c6a}} 
-\mbox{\hyperlink{classObjBase}{Obj\+Base}} $\ast$const \mbox{\hyperlink{classIdentifier_aa8d8a16ed2578f621f83f3baea230c6a}{acess}} () const
+\mbox{\Hypertarget{classIdentifier_a1fbf87824c192a3fdbdb19d81f31c3de}\label{classIdentifier_a1fbf87824c192a3fdbdb19d81f31c3de}} 
+\mbox{\hyperlink{classObjBase}{Obj\+Base}} $\ast$const \mbox{\hyperlink{classIdentifier_a1fbf87824c192a3fdbdb19d81f31c3de}{access}} () const
 \begin{DoxyCompactList}\small\item\em The access operator is used to access the element that will need to be assigned to. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classIdentifier_a84cd1ddb343cdd2db8d33c6e4125d91f}\label{classIdentifier_a84cd1ddb343cdd2db8d33c6e4125d91f}} 
 void {\bfseries declare} () const
+\item 
+\mbox{\Hypertarget{classIdentifier_a95340d9a4d71bfbfec1436c34258f87c}\label{classIdentifier_a95340d9a4d71bfbfec1436c34258f87c}} 
+Symbol\+Table\+::attribute {\bfseries get\+\_\+attribute\+\_\+type} () const
+\item 
+\mbox{\Hypertarget{classIdentifier_aec4f1cd417e0d30bd3365af1385ea747}\label{classIdentifier_aec4f1cd417e0d30bd3365af1385ea747}} 
+const std\+::string {\bfseries get\+\_\+symbol\+\_\+name} () const
 \end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
 
 
 \doxysubsection{Detailed Description}
@@ -48,11 +55,11 @@ Definition at line 20 of file Identifier.\+h.
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{classIdentifier_a54597ce65a34db3a73351e3a28e3c5b9}\label{classIdentifier_a54597ce65a34db3a73351e3a28e3c5b9}} 
+\mbox{\Hypertarget{classIdentifier_a797e1eb9a185ed5c4dffce3cc841b33d}\label{classIdentifier_a797e1eb9a185ed5c4dffce3cc841b33d}} 
 \index{Identifier@{Identifier}!Identifier@{Identifier}}
 \index{Identifier@{Identifier}!Identifier@{Identifier}}
 \doxysubsubsection{\texorpdfstring{Identifier()}{Identifier()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily Identifier\+::\+Identifier (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classToken}{Token}} \&}]{tok }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily Identifier\+::\+Identifier (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classToken}{Token}} \&}]{tok,  }\item[{\mbox{\hyperlink{classSymbolTable}{Symbol\+Table}} $\ast$const}]{table }\end{DoxyParamCaption})}
 
 
 
@@ -93,7 +100,7 @@ Definition at line 6 of file Identifier.\+cpp.
 \index{Identifier@{Identifier}!evaluate@{evaluate}}
 \index{evaluate@{evaluate}!Identifier@{Identifier}}
 \doxysubsubsection{\texorpdfstring{evaluate()}{evaluate()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classObjBase}{Obj\+Base}} $\ast$const Identifier\+::evaluate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{classObjBase}{Obj\+Base}} $\ast$const Identifier\+::evaluate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
@@ -104,7 +111,11 @@ an object representing the result from the evaluation
 \end{DoxyReturn}
 
 
-Definition at line 12 of file Identifier.\+cpp.
+Implements \mbox{\hyperlink{classExpression_aded287b288eee88a418e595a63335eaa}{Expression}}.
+
+
+
+Definition at line 20 of file Identifier.\+cpp.
 
 
 

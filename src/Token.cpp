@@ -51,6 +51,7 @@ public:
 		ADD_MISC(NUMBER);
 		ADD_MISC(STRING);
 		ADD_MISC(MACRODEFINITION);
+		ADD_MISC(MACROINCLUSION);
 		ADD_MISC(MACROIDENTIFIER);
 
 		ADD_OPERATOR(LPAR, "(");
@@ -186,11 +187,11 @@ const Token Token::make_identifier_token(const std::string &lexeme, const Positi
 const Token Token::make_macro_token(const std::string &lexeme,
 		const Position &position) {
 	if (lexeme == "`define") {
-		Token tok(MACRODEFINITION, lexeme, position);
-		return tok;
-	} else {
-		Token tok(MACROIDENTIFIER, lexeme, position);
-		return tok;
+		return Token(MACRODEFINITION, lexeme, position);
+	} else if (lexeme == "`include") {
+		return Token(MACROINCLUSION, lexeme, position);
+	} else{
+		return Token(MACROIDENTIFIER, lexeme, position);
 	}
 }
 

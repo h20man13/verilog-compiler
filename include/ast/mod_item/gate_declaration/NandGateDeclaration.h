@@ -10,7 +10,7 @@
 
 #include "ast/mod_item/gate_declaration/GateDeclaration.h"
 
-class NandGateDeclaration: GateDeclaration{
+class NandGateDeclaration: public GateDeclaration{
 public:
 	NandGateDeclaration(const Position& position, std::list<Expression* const> &gate_param);
 	NandGateDeclaration(const NandGateDeclaration& declaration);

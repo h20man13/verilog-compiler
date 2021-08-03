@@ -9,7 +9,13 @@ Inheritance diagram for LAnd\+:\begin{figure}[H]
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classObjBase}{Obj\+Base}} $\ast$const \mbox{\hyperlink{classLAnd_acd6a992b539ee5b50419d98ee4eb548a}{evaluate}} () const
+\mbox{\Hypertarget{classLAnd_a8540888d1c1a77cdf8ad3358419caf9e}\label{classLAnd_a8540888d1c1a77cdf8ad3358419caf9e}} 
+{\bfseries LAnd} (const \mbox{\hyperlink{classPosition}{Position}} \&position, \mbox{\hyperlink{classExpression}{Expression}} $\ast$const left, \mbox{\hyperlink{classExpression}{Expression}} $\ast$const right)
+\item 
+\mbox{\Hypertarget{classLAnd_aed25dd339d67bdaa8b26f6f472c85c26}\label{classLAnd_aed25dd339d67bdaa8b26f6f472c85c26}} 
+{\bfseries LAnd} (const \mbox{\hyperlink{classLAnd}{LAnd}} \&binary)
+\item 
+\mbox{\hyperlink{classObjBase}{Obj\+Base}} $\ast$const \mbox{\hyperlink{classLAnd_ab03c821063b221a70ec530d4d147411c}{evaluate}} ()
 \begin{DoxyCompactList}\small\item\em The evaluate method is used to interpret the Logical and \mbox{\hyperlink{classExpression}{Expression}}. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classLAnd_abf6edb5c308b32f63c3f7aef9e6fdf69}{code\+\_\+gen}} () const
 \begin{DoxyCompactList}\small\item\em The code generation function that is used to emit LLVM IR. \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -40,13 +46,13 @@ Implements \mbox{\hyperlink{classBinary_a7b5e81b3115e86f6c326e2272cbc1d82}{Binar
 
 
 
-Definition at line 16 of file LAnd.\+cpp.
+Definition at line 20 of file LAnd.\+cpp.
 
-\mbox{\Hypertarget{classLAnd_acd6a992b539ee5b50419d98ee4eb548a}\label{classLAnd_acd6a992b539ee5b50419d98ee4eb548a}} 
+\mbox{\Hypertarget{classLAnd_ab03c821063b221a70ec530d4d147411c}\label{classLAnd_ab03c821063b221a70ec530d4d147411c}} 
 \index{LAnd@{LAnd}!evaluate@{evaluate}}
 \index{evaluate@{evaluate}!LAnd@{LAnd}}
 \doxysubsubsection{\texorpdfstring{evaluate()}{evaluate()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classObjBase}{Obj\+Base}} $\ast$const LAnd\+::evaluate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classObjBase}{Obj\+Base}} $\ast$const LAnd\+::evaluate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
@@ -61,11 +67,11 @@ a boolean from the result of the \&\& expression
 \end{DoxyReturn}
 
 
-Implements \mbox{\hyperlink{classBinary_aa80f13396ccee85a8a6515bb16e99f4a}{Binary}}.
+Implements \mbox{\hyperlink{classBinary_aa536f32774f268499ac08cb43e025583}{Binary}}.
 
 
 
-Definition at line 24 of file LAnd.\+cpp.
+Definition at line 28 of file LAnd.\+cpp.
 
 
 

@@ -18,10 +18,9 @@
  * @author Jacob Bauer
  */
 
-class Forever: Statement{
+class Forever: public Statement{
 
 	private:
-	Expression* const check;
 	Statement* const statement;
 
 	~Forever();

@@ -1,6 +1,6 @@
 #include "ast/mod_item/EmptyModItem.h"
 
-EmptyModItem::EmptyModItem(): ModItem(*(const Position*)NULL){}
+EmptyModItem::EmptyModItem(const Position& position): ModItem(position){}
 
 EmptyModItem::~EmptyModItem(){}
 

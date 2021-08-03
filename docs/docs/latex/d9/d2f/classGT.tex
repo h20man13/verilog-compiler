@@ -1,0 +1,60 @@
+\hypertarget{classGT}{}\doxysection{GT Class Reference}
+\label{classGT}\index{GT@{GT}}
+Inheritance diagram for GT\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{d9/d2f/classGT}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGT_aaaf2d533efce13bb21c30e53062f52f8}\label{classGT_aaaf2d533efce13bb21c30e53062f52f8}} 
+{\bfseries GT} (const \mbox{\hyperlink{classPosition}{Position}} \&position, \mbox{\hyperlink{classExpression}{Expression}} $\ast$const left, \mbox{\hyperlink{classExpression}{Expression}} $\ast$const right)
+\item 
+\mbox{\Hypertarget{classGT_a88c80ce3c43c4df56243cb561cac4f9d}\label{classGT_a88c80ce3c43c4df56243cb561cac4f9d}} 
+{\bfseries GT} (const \mbox{\hyperlink{classGT}{GT}} \&binary)
+\item 
+\mbox{\hyperlink{classObjBase}{Obj\+Base}} $\ast$const \mbox{\hyperlink{classGT_ad9a143f4bacd3e59eb6f43c692c030c3}{evaluate}} ()
+\begin{DoxyCompactList}\small\item\em The evaluate method is used to interpret the Logical and \mbox{\hyperlink{classExpression}{Expression}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGT_ad2e9ba84e76a0fb63b18cc748818b06b}\label{classGT_ad2e9ba84e76a0fb63b18cc748818b06b}} 
+void \mbox{\hyperlink{classGT_ad2e9ba84e76a0fb63b18cc748818b06b}{code\+\_\+gen}} () const
+\begin{DoxyCompactList}\small\item\em The code generation function that is used to emit LLVM IR. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 13 of file GT.\+h.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classGT_ad9a143f4bacd3e59eb6f43c692c030c3}\label{classGT_ad9a143f4bacd3e59eb6f43c692c030c3}} 
+\index{GT@{GT}!evaluate@{evaluate}}
+\index{evaluate@{evaluate}!GT@{GT}}
+\doxysubsubsection{\texorpdfstring{evaluate()}{evaluate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classObjBase}{Obj\+Base}} $\ast$const GT\+::evaluate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+The evaluate method is used to interpret the Logical and \mbox{\hyperlink{classExpression}{Expression}}. 
+
+\begin{DoxyReturn}{Returns}
+a boolean from the result of the \&\& expression 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classBinary_aa536f32774f268499ac08cb43e025583}{Binary}}.
+
+
+
+Definition at line 21 of file GT.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/ast/expression/binary\+\_\+operation/GT.\+h\item 
+src/ast/expression/binary\+\_\+operation/GT.\+cpp\end{DoxyCompactItemize}

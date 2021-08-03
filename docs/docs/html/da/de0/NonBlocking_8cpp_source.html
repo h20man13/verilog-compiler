@@ -74,23 +74,53 @@ $(function() {
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;ast/expression/Expression.h&quot;</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;ast/statement/assignment/NonBlocking.h&quot;</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;NonBlocking::NonBlocking(<span class="keyword">const</span> <a class="code" href="../../da/d8b/classPosition.html">Position</a>&amp; position, <a class="code" href="../../d3/d29/classLValue.html">LValue</a>* <span class="keyword">const</span> left, <a class="code" href="../../de/d94/classExpression.html">Expression</a>* <span class="keyword">const</span> right, <a class="code" href="../../da/dab/classNonBlocking.html">NonBlocking</a>* <span class="keyword">const</span> next): <a class="code" href="../../de/d6b/classProceduralAssignment.html">ProceduralAssignment</a>(position, left, right), next(next){}</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;NonBlocking::NonBlocking(<span class="keyword">const</span> <a class="code" href="../../da/dab/classNonBlocking.html">NonBlocking</a>&amp; assignment): <a class="code" href="../../de/d6b/classProceduralAssignment.html">ProceduralAssignment</a>(assignment), next(assignment.next){}</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;NonBlocking::NonBlocking(<span class="keyword">const</span> <a class="code" href="../../da/d8b/classPosition.html">Position</a>&amp; position, std::list&lt;LValue* const&gt; &amp;lvalue_list, std::list&lt;Expression* const&gt; &amp;exp_list): <a class="code" href="../../de/d6b/classProceduralAssignment.html">ProceduralAssignment</a>(position){</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    <span class="keywordflow">for</span>(std::list&lt;LValue* const&gt;::const_iterator it = lvalue_list.begin(); it != lvalue_list.end(); it++){</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;        this-&gt;lvalue_list.push_back(*it);</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    }</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
-<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="../../da/dab/classNonBlocking.html#ad1b6846f9b6184f4cd0609d5a16e9d8a">   10</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../da/dab/classNonBlocking.html#ad1b6846f9b6184f4cd0609d5a16e9d8a">NonBlocking::execute</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;}</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="../../da/dab/classNonBlocking.html#abe9fce713711391ea0f35f25dc1fe076">   14</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../da/dab/classNonBlocking.html#abe9fce713711391ea0f35f25dc1fe076">NonBlocking::code_gen</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;}</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keywordflow">for</span>(std::list&lt;Expression* const&gt;::const_iterator it = exp_list.begin(); it != exp_list.end(); it++){</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        this-&gt;exp_list.push_back(*it);</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    }</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;}</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;NonBlocking::NonBlocking(<span class="keyword">const</span> <a class="code" href="../../da/dab/classNonBlocking.html">NonBlocking</a>&amp; assignment): <a class="code" href="../../de/d6b/classProceduralAssignment.html">ProceduralAssignment</a>(assignment){</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordflow">for</span>(std::list&lt;LValue* const&gt;::const_iterator it = assignment.lvalue_list.begin(); it != assignment.lvalue_list.end(); it++){</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        this-&gt;lvalue_list.push_back(*it);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    }</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordflow">for</span>(std::list&lt;Expression* const&gt;::const_iterator it = assignment.exp_list.begin(); it != assignment.exp_list.end(); it++){</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        this-&gt;exp_list.push_back(*it);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    }</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;}</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;NonBlocking::~NonBlocking(){</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordflow">while</span>(!lvalue_list.empty()){</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <a class="code" href="../../d3/d29/classLValue.html">LValue</a>* <span class="keyword">const</span> lvalue = *lvalue_list.begin();</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keyword">delete</span> lvalue;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        lvalue_list.pop_front();</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    }</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordflow">while</span>(!exp_list.empty()){</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <a class="code" href="../../de/d94/classExpression.html">Expression</a>* <span class="keyword">const</span> exp = *exp_list.begin();</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keyword">delete</span> exp;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        exp_list.pop_front();</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    }</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="../../da/dab/classNonBlocking.html#ad1b6846f9b6184f4cd0609d5a16e9d8a">   40</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../da/dab/classNonBlocking.html#ad1b6846f9b6184f4cd0609d5a16e9d8a">NonBlocking::execute</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;}</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="../../da/dab/classNonBlocking.html#abe9fce713711391ea0f35f25dc1fe076">   44</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../da/dab/classNonBlocking.html#abe9fce713711391ea0f35f25dc1fe076">NonBlocking::code_gen</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;}</div>
 <div class="ttc" id="aclassExpression_html"><div class="ttname"><a href="../../de/d94/classExpression.html">Expression</a></div><div class="ttdoc">The Expression is an Interface that can be used to represent Expressions.</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d6e/Expression_8h_source.html#l00020">Expression.h:20</a></div></div>
-<div class="ttc" id="aclassLValue_html"><div class="ttname"><a href="../../d3/d29/classLValue.html">LValue</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dfa/LValue_8h_source.html#l00013">LValue.h:13</a></div></div>
+<div class="ttc" id="aclassLValue_html"><div class="ttname"><a href="../../d3/d29/classLValue.html">LValue</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dfa/LValue_8h_source.html#l00015">LValue.h:15</a></div></div>
 <div class="ttc" id="aclassNonBlocking_html"><div class="ttname"><a href="../../da/dab/classNonBlocking.html">NonBlocking</a></div><div class="ttdoc">The assignment template is used to create assignments in verilog.</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d16/NonBlocking_8h_source.html#l00020">NonBlocking.h:20</a></div></div>
-<div class="ttc" id="aclassNonBlocking_html_abe9fce713711391ea0f35f25dc1fe076"><div class="ttname"><a href="../../da/dab/classNonBlocking.html#abe9fce713711391ea0f35f25dc1fe076">NonBlocking::code_gen</a></div><div class="ttdeci">void code_gen() const</div><div class="ttdoc">The code gen method generates the LLVM ir for the statement.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/de0/NonBlocking_8cpp_source.html#l00014">NonBlocking.cpp:14</a></div></div>
-<div class="ttc" id="aclassNonBlocking_html_ad1b6846f9b6184f4cd0609d5a16e9d8a"><div class="ttname"><a href="../../da/dab/classNonBlocking.html#ad1b6846f9b6184f4cd0609d5a16e9d8a">NonBlocking::execute</a></div><div class="ttdeci">void execute() const</div><div class="ttdoc">The execute method is used to interpret statements.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/de0/NonBlocking_8cpp_source.html#l00010">NonBlocking.cpp:10</a></div></div>
+<div class="ttc" id="aclassNonBlocking_html_abe9fce713711391ea0f35f25dc1fe076"><div class="ttname"><a href="../../da/dab/classNonBlocking.html#abe9fce713711391ea0f35f25dc1fe076">NonBlocking::code_gen</a></div><div class="ttdeci">void code_gen() const</div><div class="ttdoc">The code gen method generates the LLVM ir for the statement.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/de0/NonBlocking_8cpp_source.html#l00044">NonBlocking.cpp:44</a></div></div>
+<div class="ttc" id="aclassNonBlocking_html_ad1b6846f9b6184f4cd0609d5a16e9d8a"><div class="ttname"><a href="../../da/dab/classNonBlocking.html#ad1b6846f9b6184f4cd0609d5a16e9d8a">NonBlocking::execute</a></div><div class="ttdeci">void execute() const</div><div class="ttdoc">The execute method is used to interpret statements.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/de0/NonBlocking_8cpp_source.html#l00040">NonBlocking.cpp:40</a></div></div>
 <div class="ttc" id="aclassPosition_html"><div class="ttname"><a href="../../da/d8b/classPosition.html">Position</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/dff/Position_8h_source.html#l00006">Position.h:6</a></div></div>
 <div class="ttc" id="aclassProceduralAssignment_html"><div class="ttname"><a href="../../de/d6b/classProceduralAssignment.html">ProceduralAssignment</a></div><div class="ttdoc">The assignment template is used to create assignments in verilog.</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/df2/ProceduralAssignment_8h_source.html#l00019">ProceduralAssignment.h:19</a></div></div>
 </div><!-- fragment --></div><!-- contents -->

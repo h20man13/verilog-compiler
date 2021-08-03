@@ -10,16 +10,16 @@
 
 #include "common/types/ObjBase.h"
 #include "ast/AstNode.h"
+#include "SymbolTable.h"
 
-class LValue: AstNode{
-
+class LValue: public virtual AstNode{
 protected:
-	virtual ObjBase* const access() const = 0;
+	SymbolTable* const table;
 public:
-	LValue(const Position& position);
-	LValue(const LValue& lvalue);
+   LValue(SymbolTable* const table);
+   LValue(const LValue& lvalue);
    virtual ~LValue() = 0;
-
+   virtual ObjBase* const access() const = 0;
 };
 
 

@@ -1,6 +1,6 @@
 #include "ast/mod_item/TaskDeclaration.h"
 
-TaskDeclaration::TaskDeclaration(const Position& position, Identifier* const task_name, std::list<Declaration* const> param, std::list<Declaration* const> local, Statement* const statement): ModItem(position), task_name(task_name), statement(statement){
+TaskDeclaration::TaskDeclaration(const Position& position, Identifier* const task_name, std::list<Declaration* const> param, std::list<Declaration* const> local, Statement* const statement, SymbolTable* const table): ModItem(position), table(table), task_name(task_name), statement(statement){
 	for(std::list<Declaration* const>::const_iterator it = param.begin(); it != param.end(); it++){
 		this->param.push_back(*it);
 	}
@@ -10,7 +10,7 @@ TaskDeclaration::TaskDeclaration(const Position& position, Identifier* const tas
 	}
 }
 
-TaskDeclaration::TaskDeclaration(const TaskDeclaration& declaration): ModItem(declaration.get_position()), task_name(declaration.task_name), statement(declaration.statement){
+TaskDeclaration::TaskDeclaration(const TaskDeclaration& declaration): ModItem(declaration.get_position()), table(declaration.table),task_name(declaration.task_name), statement(declaration.statement){
 	for(std::list<Declaration* const>::const_iterator it = declaration.param.begin(); it != declaration.param.end(); it++){
 		this->param.push_back(*it);
 	}

@@ -14,8 +14,9 @@
 class File: AstNode{
 private:
 	std::list<Module* const> module_list;
+	SymbolTable* const table;
 public:
-	File(const Position& position, std::list<Module* const> module_list);
+	File(const Position& position, std::list<Module* const> module_list, SymbolTable* const table);
 	File(const File& module);
 
 	~File();

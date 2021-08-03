@@ -1,0 +1,60 @@
+\hypertarget{classEQ3}{}\doxysection{EQ3 Class Reference}
+\label{classEQ3}\index{EQ3@{EQ3}}
+Inheritance diagram for EQ3\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{d3/d43/classEQ3}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classEQ3_abb5495b982e38b5102d91e43a9a110f8}\label{classEQ3_abb5495b982e38b5102d91e43a9a110f8}} 
+{\bfseries EQ3} (const \mbox{\hyperlink{classPosition}{Position}} \&position, \mbox{\hyperlink{classExpression}{Expression}} $\ast$const left, \mbox{\hyperlink{classExpression}{Expression}} $\ast$const right)
+\item 
+\mbox{\Hypertarget{classEQ3_a39c6d117b00580f74cba965d0709465f}\label{classEQ3_a39c6d117b00580f74cba965d0709465f}} 
+{\bfseries EQ3} (const \mbox{\hyperlink{classEQ3}{EQ3}} \&binary)
+\item 
+\mbox{\hyperlink{classObjBase}{Obj\+Base}} $\ast$const \mbox{\hyperlink{classEQ3_a96118c61b4a1576bfdc7f36353a79745}{evaluate}} ()
+\begin{DoxyCompactList}\small\item\em The evaluate method is used to interpret the Logical and \mbox{\hyperlink{classExpression}{Expression}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classEQ3_a2643dbabcf3f848e1be57cec67a6ab01}\label{classEQ3_a2643dbabcf3f848e1be57cec67a6ab01}} 
+void \mbox{\hyperlink{classEQ3_a2643dbabcf3f848e1be57cec67a6ab01}{code\+\_\+gen}} () const
+\begin{DoxyCompactList}\small\item\em The code generation function that is used to emit LLVM IR. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 13 of file EQ3.\+h.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classEQ3_a96118c61b4a1576bfdc7f36353a79745}\label{classEQ3_a96118c61b4a1576bfdc7f36353a79745}} 
+\index{EQ3@{EQ3}!evaluate@{evaluate}}
+\index{evaluate@{evaluate}!EQ3@{EQ3}}
+\doxysubsubsection{\texorpdfstring{evaluate()}{evaluate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classObjBase}{Obj\+Base}} $\ast$const EQ3\+::evaluate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+The evaluate method is used to interpret the Logical and \mbox{\hyperlink{classExpression}{Expression}}. 
+
+\begin{DoxyReturn}{Returns}
+a boolean from the result of the \&\& expression 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classBinary_aa536f32774f268499ac08cb43e025583}{Binary}}.
+
+
+
+Definition at line 21 of file EQ3.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/ast/expression/binary\+\_\+operation/EQ3.\+h\item 
+src/ast/expression/binary\+\_\+operation/EQ3.\+cpp\end{DoxyCompactItemize}

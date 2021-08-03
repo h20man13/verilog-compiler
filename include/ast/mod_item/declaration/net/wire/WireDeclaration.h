@@ -12,11 +12,11 @@
 #include "ast/expression/Identifier.h"
 #include <list>
 
-class WireDeclaration: Declaration{
+class WireDeclaration: virtual public Declaration{
 private:
 	std::list<Identifier* const> ident_list;
 protected:
-	WireDeclaration(const Position& position, std::list<Identifier* const> &ident_list);
+	WireDeclaration(std::list<Identifier* const> &ident_list);
 	WireDeclaration(const WireDeclaration& declaration);
 
 	virtual ~WireDeclaration();

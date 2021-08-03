@@ -10,9 +10,9 @@
 #include "ast/expression/Expression.h"
 #include "common/types/TypeOpUtils.h"
 
-Sub::Sub(const Position& position, Expression* const left, Expression* const right): Binary(position, left, right){}
+Sub::Sub(const Position& position, Expression* const left, Expression* const right): AstNode(position), Binary(position, left, right){}
 
-Sub::Sub(const Sub& binary): Binary(binary){}
+Sub::Sub(const Sub& binary): AstNode(binary), Binary(binary){}
 
 void Sub::code_gen() const {
 	// TODO -- finish this later

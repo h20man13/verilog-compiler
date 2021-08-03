@@ -10,9 +10,9 @@
 #include "ast/expression/Expression.h"
 #include "common/types/TypeOpUtils.h"
 
-LOr::LOr(const Position& position, Expression* const left, Expression* const right): Binary(position, left, right){}
+LOr::LOr(const Position& position, Expression* const left, Expression* const right): AstNode(position), Binary(position, left, right){}
 
-LOr::LOr(const LOr& binary): Binary(binary){}
+LOr::LOr(const LOr& binary): AstNode(binary), Binary(binary){}
 
 void LOr::code_gen() const {
 	// TODO -- finish this later

@@ -10,9 +10,9 @@
 #include "ast/expression/Expression.h"
 #include "common/types/TypeOpUtils.h"
 
-BOr::BOr(const Position& position, Expression* const left, Expression* const right): Binary(position, left, right){}
+BOr::BOr(const Position& position, Expression* const left, Expression* const right): AstNode(position), Binary(position, left, right){}
 
-BOr::BOr(const BOr& binary): Binary(binary){}
+BOr::BOr(const BOr& binary): AstNode(binary), Binary(binary){}
 
 void BOr::code_gen() const {
 	// TODO -- finish this later

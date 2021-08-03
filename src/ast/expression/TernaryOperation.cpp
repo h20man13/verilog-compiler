@@ -1,8 +1,8 @@
 #include "ast/expression/TernaryOperation.h"
 
-TernaryOperation::TernaryOperation(const Position& position, Expression* const check, Expression* const left, Expression* const right): Expression(position), check(check), left(left), right(right){}
+TernaryOperation::TernaryOperation(const Position& position, Expression* const check, Expression* const left, Expression* const right): AstNode(position), check(check), left(left), right(right){}
 
-TernaryOperation::TernaryOperation(const TernaryOperation& expression): Expression(expression.get_position()), check(expression.check), left(expression.left), right(expression.right) {}
+TernaryOperation::TernaryOperation(const TernaryOperation& expression): AstNode(expression.get_position()), check(expression.check), left(expression.left), right(expression.right) {}
 
 void TernaryOperation::code_gen() const {
 	//TODO -- generate llvm code

@@ -8,6 +8,7 @@
 #ifndef ADD_H
 #define ADD_H
 
+#include "ast/expression/Expression.h"
 #include "ast/expression/binary_operation/Binary.h"
 
 class Add: public Binary{

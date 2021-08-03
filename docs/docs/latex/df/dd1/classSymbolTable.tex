@@ -1,0 +1,66 @@
+\hypertarget{classSymbolTable}{}\doxysection{Symbol\+Table Class Reference}
+\label{classSymbolTable}\index{SymbolTable@{SymbolTable}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structSymbolTable_1_1Entry}{Entry}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSymbolTable_a985df3fa3c362160b30d1b4d408988c0}\label{classSymbolTable_a985df3fa3c362160b30d1b4d408988c0}} 
+enum {\bfseries attribute} \{ \newline
+{\bfseries EMPTY} = 0
+, {\bfseries PARAMATER} = 0b00000000000001
+, {\bfseries FUNCTION} = 0b00000000000010
+, {\bfseries GLOBAL} = 0b00000000000100
+, \newline
+{\bfseries LOCAL} = 0b00000000001000
+, {\bfseries INPUT} = 0b00000000010000
+, {\bfseries OUTPUT} = 0b00000000100000
+, {\bfseries REG} = 0b00000001000000
+, \newline
+{\bfseries WIRE} = 0b00000010000000
+, {\bfseries REAL} = 0b00000100000000
+, {\bfseries INTEGER} = 0b00001000000000
+, {\bfseries ARRAY} = 0b00010000000000
+, \newline
+{\bfseries VECTOR} = 0b00100000000000
+, {\bfseries PORT} = 0b01000000000000
+, {\bfseries MACRO} = 0b10000000000000
+, {\bfseries UNIDENTIFIED} = 0b100000000000000
+, \newline
+{\bfseries ANY} = 0b11111111111111
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSymbolTable_a31e0a0c5aea0e68b76b03dd3f78a0c30}\label{classSymbolTable_a31e0a0c5aea0e68b76b03dd3f78a0c30}} 
+{\bfseries Symbol\+Table} (\mbox{\hyperlink{classErrorLog}{Error\+Log}} \&error\+\_\+log, \mbox{\hyperlink{classSymbolTable}{Symbol\+Table}} const $\ast$const parent=NULL)
+\item 
+\mbox{\Hypertarget{classSymbolTable_a564b266f0ee380addaf0e13b30c7c1b7}\label{classSymbolTable_a564b266f0ee380addaf0e13b30c7c1b7}} 
+\mbox{\hyperlink{structSymbolTable_1_1Entry}{Entry}} const  $\ast$const {\bfseries lookup} (const std\+::string \&key, const unsigned int data\+\_\+type=ANY, const bool in\+\_\+scope=false) const
+\item 
+\mbox{\Hypertarget{classSymbolTable_a9fef7efbd6695a5f41c6e2e51f38d777}\label{classSymbolTable_a9fef7efbd6695a5f41c6e2e51f38d777}} 
+void {\bfseries insert} (const std\+::string \&key, const unsigned int data\+\_\+mask, const \mbox{\hyperlink{classPosition}{Position}} \&position, \mbox{\hyperlink{classAstNode}{Ast\+Node}} $\ast$const address=NULL)
+\item 
+\mbox{\Hypertarget{classSymbolTable_a125cf69fd36543dd4fe6e82ee8f9f1e9}\label{classSymbolTable_a125cf69fd36543dd4fe6e82ee8f9f1e9}} 
+void {\bfseries set\+\_\+attribute} (const std\+::string \&key, const unsigned int data)
+\item 
+\mbox{\Hypertarget{classSymbolTable_a83355220da95c99494999beb311d3a95}\label{classSymbolTable_a83355220da95c99494999beb311d3a95}} 
+bool {\bfseries get\+\_\+attribute} (const std\+::string \&key, const unsigned int data)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 19 of file Symbol\+Table.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/Symbol\+Table.\+h\item 
+src/Symbol\+Table.\+cpp\end{DoxyCompactItemize}

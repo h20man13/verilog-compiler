@@ -10,9 +10,9 @@
 #include "ast/expression/Expression.h"
 #include "common/types/TypeOpUtils.h"
 
-NE2::NE2(const Position& position, Expression* const left, Expression* const right): Binary(position, left, right){}
+NE2::NE2(const Position& position, Expression* const left, Expression* const right): AstNode(position), Binary(position, left, right){}
 
-NE2::NE2(const NE2& binary): Binary(binary){}
+NE2::NE2(const NE2& binary): AstNode(binary), Binary(binary){}
 
 void NE2::code_gen() const {
 	// TODO -- finish this later

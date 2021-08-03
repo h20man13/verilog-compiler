@@ -13,9 +13,9 @@
 #include "ast/mod_item/declaration/RegValue.h"
 #include <list>
 
-class OutputWireVectorDeclaration: WireVectorDeclaration{
+class OutputWireVectorDeclaration: public WireVectorDeclaration{
 public:
-	OutputWireVectorDeclaration(const Position& position, Expression* const start, Expression* const end, std::list<Identifier* const> &ident_list);
+	OutputWireVectorDeclaration(const Position& position, ConstantExpression* const start, ConstantExpression* const end, std::list<Identifier* const> &ident_list, SymbolTable* const table);
 	OutputWireVectorDeclaration(const OutputWireVectorDeclaration& declaration);
 
 	void code_gen() const;

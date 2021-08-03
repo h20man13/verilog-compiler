@@ -18,8 +18,8 @@ Inheritance diagram for Function\+Call\+:\begin{figure}[H]
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classFunctionCall_a382ff540a748f0284fd01f1a6d735c4f}\label{classFunctionCall_a382ff540a748f0284fd01f1a6d735c4f}} 
-{\bfseries Function\+Call} (const \mbox{\hyperlink{classPosition}{Position}} \&position, const std\+::string \&function\+\_\+name, const std\+::list$<$ \mbox{\hyperlink{classExpression}{Expression}} $\ast$const $>$ \&concat\+\_\+list)
+\mbox{\Hypertarget{classFunctionCall_add2066157de953ec19676e2cf28fd606}\label{classFunctionCall_add2066157de953ec19676e2cf28fd606}} 
+{\bfseries Function\+Call} (const \mbox{\hyperlink{classPosition}{Position}} \&position, const std\+::string \&function\+\_\+name, const std\+::list$<$ \mbox{\hyperlink{classExpression}{Expression}} $\ast$const $>$ \&concat\+\_\+list, \mbox{\hyperlink{classSymbolTable}{Symbol\+Table}} $\ast$const table)
 \item 
 \mbox{\Hypertarget{classFunctionCall_a5ef83092e15b798928b3b46116d6795a}\label{classFunctionCall_a5ef83092e15b798928b3b46116d6795a}} 
 {\bfseries Function\+Call} (const \mbox{\hyperlink{classFunctionCall}{Function\+Call}} \&func\+\_\+call)
@@ -27,9 +27,8 @@ Inheritance diagram for Function\+Call\+:\begin{figure}[H]
 \mbox{\Hypertarget{classFunctionCall_ad097987bf70fe377e375e2fbf63ff114}\label{classFunctionCall_ad097987bf70fe377e375e2fbf63ff114}} 
 virtual void \mbox{\hyperlink{classFunctionCall_ad097987bf70fe377e375e2fbf63ff114}{code\+\_\+gen}} () const
 \begin{DoxyCompactList}\small\item\em The code\+\_\+gen method generates the LLVM IR of the \mbox{\hyperlink{classExpression}{Expression}}. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classFunctionCall_ac9d40fcb932099614ab25d7cf6a388ce}\label{classFunctionCall_ac9d40fcb932099614ab25d7cf6a388ce}} 
-virtual \mbox{\hyperlink{classObjBase}{Obj\+Base}} $\ast$const {\bfseries evaluate} ()
-\end{DoxyCompactItemize}
+virtual \mbox{\hyperlink{classObjBase}{Obj\+Base}} $\ast$const \mbox{\hyperlink{classFunctionCall_ac9d40fcb932099614ab25d7cf6a388ce}{evaluate}} ()
+\begin{DoxyCompactList}\small\item\em The interpret method interprets the \mbox{\hyperlink{classExpression}{Expression}} directly and returns the result. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
 
 
@@ -41,7 +40,35 @@ Jacob Bauer
 \end{DoxyAuthor}
 
 
-Definition at line 18 of file Function\+Call.\+h.
+Definition at line 19 of file Function\+Call.\+h.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classFunctionCall_ac9d40fcb932099614ab25d7cf6a388ce}\label{classFunctionCall_ac9d40fcb932099614ab25d7cf6a388ce}} 
+\index{FunctionCall@{FunctionCall}!evaluate@{evaluate}}
+\index{evaluate@{evaluate}!FunctionCall@{FunctionCall}}
+\doxysubsubsection{\texorpdfstring{evaluate()}{evaluate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classObjBase}{Obj\+Base}} $\ast$const Function\+Call\+::evaluate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+The interpret method interprets the \mbox{\hyperlink{classExpression}{Expression}} directly and returns the result. 
+
+\begin{DoxyReturn}{Returns}
+the result of the computed expression 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classExpression_aded287b288eee88a418e595a63335eaa}{Expression}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classSystemFunctionCall_ac2d5b813990626953b90deda6f3c70f5}{System\+Function\+Call}}.
+
+
+
+Definition at line 20 of file Function\+Call.\+cpp.
 
 
 

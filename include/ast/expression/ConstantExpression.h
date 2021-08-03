@@ -14,7 +14,7 @@
  * The constant expression Ast node class is used to check constant expressions
  * @author Jacob Bauer
  */
-class ConstantExpression: Expression{
+class ConstantExpression: public Expression{
 private:
 	Expression* const expression; //the expression that was deemed constant
 public:

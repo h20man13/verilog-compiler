@@ -11,9 +11,9 @@
 #include "ast/expression/Expression.h"
 #include "common/types/TypeOpUtils.h"
 
-BAnd::BAnd(const Position& position, Expression* const left, Expression* const right): Binary(position, left, right){}
+BAnd::BAnd(const Position& position, Expression* const left, Expression* const right): AstNode(position), Binary(position, left, right){}
 
-BAnd::BAnd(const BAnd& binary): Binary(binary){}
+BAnd::BAnd(const BAnd& binary): AstNode(binary), Binary(binary){}
 
 void BAnd::code_gen() const {
 	// TODO -- finish this later

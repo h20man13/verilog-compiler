@@ -80,12 +80,16 @@ Inheritance diagram for EmptyStatement:</div>
  <div class="center">
   <img src="../../d1/d77/classEmptyStatement.png" usemap="#EmptyStatement_map" alt=""/>
   <map id="EmptyStatement_map" name="EmptyStatement_map">
-<area href="../../d6/de7/classStatement.html" title="The statement abstract class is used to store statement objects on the ast tree." alt="Statement" shape="rect" coords="0,0,100,24"/>
+<area href="../../d6/de7/classStatement.html" title="The statement abstract class is used to store statement objects on the ast tree." alt="Statement" shape="rect" coords="0,56,100,80"/>
+<area href="../../dc/da9/classAstNode.html" alt="AstNode" shape="rect" coords="0,0,100,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a45aab37043ce3b0dd94a517e2c98ada7"><td class="memItemLeft" align="right" valign="top"><a id="a45aab37043ce3b0dd94a517e2c98ada7"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>EmptyStatement</b> (const <a class="el" href="../../da/d8b/classPosition.html">Position</a> &amp;position)</td></tr>
+<tr class="separator:a45aab37043ce3b0dd94a517e2c98ada7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a22563b2d2b37e856195a47304fcb7e68"><td class="memItemLeft" align="right" valign="top"><a id="a22563b2d2b37e856195a47304fcb7e68"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d77/classEmptyStatement.html#a22563b2d2b37e856195a47304fcb7e68">code_gen</a> () const</td></tr>
 <tr class="memdesc:a22563b2d2b37e856195a47304fcb7e68"><td class="mdescLeft">&#160;</td><td class="mdescRight">The code gen method generates the LLVM ir for the statement. <br /></td></tr>
@@ -93,6 +97,31 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
 <tr class="memitem:afbdbba4b5799029e4c49d8b3dbfa08b2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d77/classEmptyStatement.html#afbdbba4b5799029e4c49d8b3dbfa08b2">execute</a> () const</td></tr>
 <tr class="memdesc:afbdbba4b5799029e4c49d8b3dbfa08b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">The execute method is used to interpret statements.  <a href="../../d1/d77/classEmptyStatement.html#afbdbba4b5799029e4c49d8b3dbfa08b2">More...</a><br /></td></tr>
 <tr class="separator:afbdbba4b5799029e4c49d8b3dbfa08b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classAstNode"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classAstNode')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../dc/da9/classAstNode.html">AstNode</a></td></tr>
+<tr class="memitem:ab1cff05f1258d2529dc8aabc6b727991 inherit pub_methods_classAstNode"><td class="memItemLeft" align="right" valign="top"><a id="ab1cff05f1258d2529dc8aabc6b727991"></a>
+const <a class="el" href="../../da/d8b/classPosition.html">Position</a>&#160;</td><td class="memItemRight" valign="bottom"><b>get_position</b> () const</td></tr>
+<tr class="separator:ab1cff05f1258d2529dc8aabc6b727991 inherit pub_methods_classAstNode"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pro_methods_classStatement"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classStatement')"><img src="../../closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="../../d6/de7/classStatement.html">Statement</a></td></tr>
+<tr class="memitem:a767f9b062b7aca5f7fa2ce94fefe71d0 inherit pro_methods_classStatement"><td class="memItemLeft" align="right" valign="top"><a id="a767f9b062b7aca5f7fa2ce94fefe71d0"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Statement</b> (const <a class="el" href="../../da/d8b/classPosition.html">Position</a> &amp;position)</td></tr>
+<tr class="separator:a767f9b062b7aca5f7fa2ce94fefe71d0 inherit pro_methods_classStatement"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab73ba276548bfcab3d06f5bcd8fa20e9 inherit pro_methods_classStatement"><td class="memItemLeft" align="right" valign="top"><a id="ab73ba276548bfcab3d06f5bcd8fa20e9"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Statement</b> (const <a class="el" href="../../d6/de7/classStatement.html">Statement</a> &amp;stat)</td></tr>
+<tr class="separator:ab73ba276548bfcab3d06f5bcd8fa20e9 inherit pro_methods_classStatement"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_classAstNode"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classAstNode')"><img src="../../closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="../../dc/da9/classAstNode.html">AstNode</a></td></tr>
+<tr class="memitem:ae2434eab6c919bb416e3389d311cade7 inherit pro_methods_classAstNode"><td class="memItemLeft" align="right" valign="top"><a id="ae2434eab6c919bb416e3389d311cade7"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>AstNode</b> (const <a class="el" href="../../da/d8b/classPosition.html">Position</a> &amp;position)</td></tr>
+<tr class="separator:ae2434eab6c919bb416e3389d311cade7 inherit pro_methods_classAstNode"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a654f49c626e442f49c0e47fc3d41ccd9 inherit pro_methods_classAstNode"><td class="memItemLeft" align="right" valign="top"><a id="a654f49c626e442f49c0e47fc3d41ccd9"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>AstNode</b> (const <a class="el" href="../../dc/da9/classAstNode.html">AstNode</a> &amp;node)</td></tr>
+<tr class="separator:a654f49c626e442f49c0e47fc3d41ccd9 inherit pro_methods_classAstNode"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_classAstNode"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classAstNode')"><img src="../../closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="../../dc/da9/classAstNode.html">AstNode</a></td></tr>
+<tr class="memitem:a0e715ef216f101725e271cfbd7c9461c inherit pro_attribs_classAstNode"><td class="memItemLeft" align="right" valign="top"><a id="a0e715ef216f101725e271cfbd7c9461c"></a>
+const <a class="el" href="../../da/d8b/classPosition.html">Position</a>&#160;</td><td class="memItemRight" valign="bottom"><b>position</b></td></tr>
+<tr class="separator:a0e715ef216f101725e271cfbd7c9461c inherit pro_attribs_classAstNode"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >The statement abstract class is used to store statement objects on the ast tree. </p>

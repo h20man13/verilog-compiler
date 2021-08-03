@@ -13,7 +13,7 @@
 #include "ast/mod_item/declaration/RegValue.h"
 #include <list>
 
-class Slice: Expression, LValue, RegValue{
+class Slice: public Expression, public LValue, public RegValue{
 private:
 	std::string lexeme;
 	Expression* const begin;
@@ -27,7 +27,7 @@ public:
 	 * @param begin  the beginning of the slice
 	 * @param end  the end of the slice
 	 */
-	Slice(const Position& position, const std::string& lexeme, Expression* const begin, Expression* const end);
+	Slice(const Position& position, const std::string& lexeme, Expression* const begin, Expression* const end, SymbolTable* const table);
 
 	/**
 	 * The slice copy constructor creates a slice copy from another slice expression ast node
@@ -55,6 +55,10 @@ public:
 	ObjBase* const access() const;
 
 	void declare() const;
+
+	SymbolTable::attribute get_attribute_type() const;
+
+	const std::string get_symbol_name() const;
 
 };
 

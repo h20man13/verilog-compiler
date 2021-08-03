@@ -12,6 +12,7 @@ enum tok{
   NUMBER, //NumWraps
   STRING, //String constants
   MACRODEFINITION,
+  MACROINCLUSION,
   MACROIDENTIFIER,
 	    
   //Operators
@@ -137,10 +138,10 @@ class Token{
 
   
 /**
- * Creates a token representing a NumWrap in the verilog language
- * @param lexeme string you want representing the NumWrap 1, 4, 'b1101010 etc...
+ * Creates a token representing a number in the verilog language
+ * @param lexeme string you want representing the number 1, 4, 'b1101010 etc...
  * @param position the position of the current Token
- * @return Token of the type NumWrap
+ * @return Token of the type number
  */
   static const Token make_number_token(const std::string& lexeme, const Position& position);
 

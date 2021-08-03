@@ -12,10 +12,10 @@ The assignment template is used to create assignments in verilog.
 Inheritance diagram for Blocking\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2.000000cm]{d0/d43/classBlocking}
+\includegraphics[height=4.000000cm]{d0/d43/classBlocking}
 \end{center}
 \end{figure}
-\doxysubsection*{Protected Member Functions}
+\doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{classBlocking_a9d9dbb5a82d0119cbfc7d5dcb5bd4dae}\label{classBlocking_a9d9dbb5a82d0119cbfc7d5dcb5bd4dae}} 
@@ -23,7 +23,13 @@ Inheritance diagram for Blocking\+:\begin{figure}[H]
 \item 
 \mbox{\Hypertarget{classBlocking_acfeace5aa5741e30861dadb0056b9e53}\label{classBlocking_acfeace5aa5741e30861dadb0056b9e53}} 
 {\bfseries Blocking} (const \mbox{\hyperlink{classBlocking}{Blocking}} \&assignment)
-\end{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classBlocking_af76e56bfaddaa43ef1ebe35d37f5242f}{execute}} () const
+\begin{DoxyCompactList}\small\item\em The execute method is used to interpret statements. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classBlocking_ad3154b6652be3eae9954f5646c306156}\label{classBlocking_ad3154b6652be3eae9954f5646c306156}} 
+void \mbox{\hyperlink{classBlocking_ad3154b6652be3eae9954f5646c306156}{code\+\_\+gen}} () const
+\begin{DoxyCompactList}\small\item\em The code gen method generates the LLVM ir for the statement. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
 
 
 \doxysubsection{Detailed Description}
@@ -35,6 +41,30 @@ Jacob Bauer
 
 
 Definition at line 19 of file Blocking.\+h.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classBlocking_af76e56bfaddaa43ef1ebe35d37f5242f}\label{classBlocking_af76e56bfaddaa43ef1ebe35d37f5242f}} 
+\index{Blocking@{Blocking}!execute@{execute}}
+\index{execute@{execute}!Blocking@{Blocking}}
+\doxysubsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily void Blocking\+::execute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+The execute method is used to interpret statements. 
+
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classProceduralAssignment_a16458d9ec79a54ead21310d214c37423}{Procedural\+Assignment}}.
+
+
+
+Definition at line 7 of file Blocking.\+cpp.
 
 
 

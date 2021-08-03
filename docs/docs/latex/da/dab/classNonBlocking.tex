@@ -12,7 +12,7 @@ The assignment template is used to create assignments in verilog.
 Inheritance diagram for Non\+Blocking\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2.000000cm]{da/dab/classNonBlocking}
+\includegraphics[height=4.000000cm]{da/dab/classNonBlocking}
 \end{center}
 \end{figure}
 \doxysubsection*{Public Member Functions}
@@ -22,16 +22,14 @@ void \mbox{\hyperlink{classNonBlocking_ad1b6846f9b6184f4cd0609d5a16e9d8a}{execut
 \begin{DoxyCompactList}\small\item\em The execute method is used to interpret statements. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classNonBlocking_abe9fce713711391ea0f35f25dc1fe076}\label{classNonBlocking_abe9fce713711391ea0f35f25dc1fe076}} 
 void \mbox{\hyperlink{classNonBlocking_abe9fce713711391ea0f35f25dc1fe076}{code\+\_\+gen}} () const
-\begin{DoxyCompactList}\small\item\em The code gen method generates the LLVM ir for the statement. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Protected Member Functions}
-\begin{DoxyCompactItemize}
-\item 
-\mbox{\Hypertarget{classNonBlocking_ae01c08f8cbefebe3809ba7ae109c01d2}\label{classNonBlocking_ae01c08f8cbefebe3809ba7ae109c01d2}} 
-{\bfseries Non\+Blocking} (const \mbox{\hyperlink{classPosition}{Position}} \&position, \mbox{\hyperlink{classLValue}{LValue}} $\ast$const left, \mbox{\hyperlink{classExpression}{Expression}} $\ast$const right, \mbox{\hyperlink{classNonBlocking}{Non\+Blocking}} $\ast$const next)
+\begin{DoxyCompactList}\small\item\em The code gen method generates the LLVM ir for the statement. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classNonBlocking_a4c83939e5e527d52c275457b0922d010}\label{classNonBlocking_a4c83939e5e527d52c275457b0922d010}} 
+{\bfseries Non\+Blocking} (const \mbox{\hyperlink{classPosition}{Position}} \&position, std\+::list$<$ \mbox{\hyperlink{classLValue}{LValue}} $\ast$const $>$ \&lvalue\+\_\+list, std\+::list$<$ \mbox{\hyperlink{classExpression}{Expression}} $\ast$const $>$ \&exp\+\_\+list)
 \item 
 \mbox{\Hypertarget{classNonBlocking_adcb4af6bd9cd258fbf407011d7211ba7}\label{classNonBlocking_adcb4af6bd9cd258fbf407011d7211ba7}} 
 {\bfseries Non\+Blocking} (const \mbox{\hyperlink{classNonBlocking}{Non\+Blocking}} \&assignment)
 \end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
 
 
 \doxysubsection{Detailed Description}
@@ -66,7 +64,7 @@ Implements \mbox{\hyperlink{classProceduralAssignment_a16458d9ec79a54ead21310d21
 
 
 
-Definition at line 10 of file Non\+Blocking.\+cpp.
+Definition at line 40 of file Non\+Blocking.\+cpp.
 
 
 

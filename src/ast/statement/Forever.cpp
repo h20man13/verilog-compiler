@@ -6,13 +6,12 @@
 
 
 Forever::~Forever() {
-	delete check;
 	delete statement;
 }
 
-Forever::Forever(const Position &position, Statement *const statement) : Statement(position), check(check), statement(statement){}
+Forever::Forever(const Position &position, Statement *const statement) : Statement(position), statement(statement){}
 
-Forever::Forever(const Forever& stat): Statement(stat.get_position()), check(stat.check), statement(stat.statement){}
+Forever::Forever(const Forever& stat): Statement(stat.get_position()), statement(stat.statement){}
 
 void Forever::code_gen() const {
 

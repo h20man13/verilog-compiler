@@ -84,23 +84,22 @@ $(function() {
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;list&gt;</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
 <div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="../../d9/de9/classCaseItem.html">   14</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d9/de9/classCaseItem.html">CaseItem</a>{</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="../../d6/de7/classStatement.html">Statement</a>* <span class="keyword">const</span> statement;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="../../d9/de9/classCaseItem.html">CaseItem</a>(<a class="code" href="../../d6/de7/classStatement.html">Statement</a>* <span class="keyword">const</span> statement);</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="../../d9/de9/classCaseItem.html">CaseItem</a>(<span class="keyword">const</span> <a class="code" href="../../d9/de9/classCaseItem.html">CaseItem</a>&amp; item);</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">bool</span> matchX() = 0;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">bool</span> matchZ() = 0;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">bool</span> match() = 0;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="../../d6/de7/classStatement.html">Statement</a>* <span class="keyword">const</span> get_statement() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="../../d9/de9/classCaseItem.html">~CaseItem</a>();</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;};</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="../../d9/de9/classCaseItem.html">CaseItem</a>(<a class="code" href="../../d6/de7/classStatement.html">Statement</a>* <span class="keyword">const</span> statement);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="../../d9/de9/classCaseItem.html">CaseItem</a>(<span class="keyword">const</span> <a class="code" href="../../d9/de9/classCaseItem.html">CaseItem</a>&amp; item);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="../../d6/de7/classStatement.html">Statement</a>* <span class="keyword">const</span> statement;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">bool</span> matchX() = 0;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">bool</span> matchZ() = 0;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">bool</span> match() = 0;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="../../d6/de7/classStatement.html">Statement</a>* <span class="keyword">const</span> get_statement() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="../../d9/de9/classCaseItem.html">~CaseItem</a>();</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;};</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* INCLUDE_AST_STATEMENT_CASE_CASEITEM_H_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* INCLUDE_AST_STATEMENT_CASE_CASEITEM_H_ */</span><span class="preprocessor"></span></div>
 <div class="ttc" id="aclassCaseItem_html"><div class="ttname"><a href="../../d9/de9/classCaseItem.html">CaseItem</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d33/CaseItem_8h_source.html#l00014">CaseItem.h:14</a></div></div>
 <div class="ttc" id="aclassStatement_html"><div class="ttname"><a href="../../d6/de7/classStatement.html">Statement</a></div><div class="ttdoc">The statement abstract class is used to store statement objects on the ast tree.</div><div class="ttdef"><b>Definition:</b> <a href="../../da/dfe/Statement_8h_source.html#l00020">Statement.h:20</a></div></div>
 </div><!-- fragment --></div><!-- contents -->

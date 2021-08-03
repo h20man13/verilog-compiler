@@ -18,13 +18,15 @@
  * The assignment template is used to create assignments in verilog. In verilog their are 3 types of assignments, Blocking, NonBlocking, and continuous assignments
  * @author Jacob Bauer
  */
-class ContinuousAssignment: ModItem{
-protected:
-	ContinuousAssignment(const Position& position, std::list<ContAssignInstance* const> &cont_list);
-	ContinuousAssignment(const ContinuousAssignment& assignment);
+class ContinuousAssignment: public ModItem{
 private:
 	std::list<ContAssignInstance* const> cont_list;
 public:
+
+	ContinuousAssignment(const Position& position, std::list<ContAssignInstance* const> &cont_list);
+	ContinuousAssignment(const ContinuousAssignment& assignment);
+
+	~ContinuousAssignment();
 	/**
 	 *
 	 * The execute method is used to interpret statements

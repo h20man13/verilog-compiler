@@ -5,7 +5,7 @@
 %%For: 
 %Magnification: 1.00
 %%Orientation: Portrait
-%%BoundingBox: 0 0 500 216.216217
+%%BoundingBox: 0 0 500 324.324310
 %%Pages: 0
 %%BeginSetup
 %%EndSetup
@@ -19,13 +19,13 @@
 /marginwidth 10 def
 /distx 20 def
 /disty 40 def
-/boundaspect 2.312500 def  % aspect ratio of the BoundingBox (width/height)
+/boundaspect 1.541667 def  % aspect ratio of the BoundingBox (width/height)
 /boundx 500 def
 /boundy boundx boundaspect div def
 /xspacing 0 def
 /yspacing 0 def
-/rows 2 def
-/cols 1 def
+/rows 6 def
+/cols 2 def
 /scalefactor 0 def
 /boxfont /Times-Roman findfont fontheight scalefont def
 
@@ -175,6 +175,14 @@ boxfont setfont
 1 boundaspect scale
 (OutputWireScalarDeclaration) cw
 (WireScalarDeclaration) cw
+(WireDeclaration) cw
+(ScalarDeclaration) cw
+(Declaration) cw
+(Declaration) cw
+(ModItem) cw
+(ModItem) cw
+(AstNode) cw
+(AstNode) cw
 /boxwidth boxwidth marginwidth 2 mul add def
 /xspacing boxwidth distx add def
 /yspacing boxheight disty add def
@@ -186,12 +194,56 @@ boundx scalefactor div boundy scalefactor div scale
 
 % ----- classes -----
 
- (OutputWireScalarDeclaration) 0.000000 0.000000 box
- (WireScalarDeclaration) 0.000000 1.000000 box
+ (OutputWireScalarDeclaration) 0.500000 0.000000 box
+ (WireScalarDeclaration) 0.500000 1.000000 box
+ (WireDeclaration) 0.000000 2.000000 box
+ (ScalarDeclaration) 1.000000 2.000000 box
+dashed
+ (Declaration) 0.000000 3.000000 box
+solid
+dashed
+ (Declaration) 1.000000 3.000000 box
+solid
+ (ModItem) 0.000000 4.000000 box
+ (ModItem) 1.000000 4.000000 box
+ (AstNode) 0.000000 5.000000 box
+ (AstNode) 1.000000 5.000000 box
 
 % ----- relations -----
 
-dotted
-0 0.000000 0.000000 out
-dotted
-1 0.000000 1.000000 in
+solid
+0 0.500000 0.000000 out
+solid
+1 0.500000 1.000000 in
+solid
+0 0.500000 1.000000 out
+solid
+0.000000 1.000000 2.000000 conn
+solid
+1 0.000000 2.000000 in
+solid
+0 0.000000 2.000000 out
+solid
+1 1.000000 2.000000 in
+solid
+0 1.000000 2.000000 out
+solid
+1 0.000000 3.000000 in
+solid
+0 0.000000 3.000000 out
+solid
+1 1.000000 3.000000 in
+solid
+0 1.000000 3.000000 out
+solid
+1 0.000000 4.000000 in
+solid
+0 0.000000 4.000000 out
+solid
+1 1.000000 4.000000 in
+solid
+0 1.000000 4.000000 out
+solid
+1 0.000000 5.000000 in
+solid
+1 1.000000 5.000000 in

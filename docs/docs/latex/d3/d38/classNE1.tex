@@ -1,0 +1,60 @@
+\hypertarget{classNE1}{}\doxysection{NE1 Class Reference}
+\label{classNE1}\index{NE1@{NE1}}
+Inheritance diagram for NE1\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{d3/d38/classNE1}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classNE1_afc78b81a5c793c690525e27e83b1c09e}\label{classNE1_afc78b81a5c793c690525e27e83b1c09e}} 
+{\bfseries NE1} (const \mbox{\hyperlink{classPosition}{Position}} \&position, \mbox{\hyperlink{classExpression}{Expression}} $\ast$const left, \mbox{\hyperlink{classExpression}{Expression}} $\ast$const right)
+\item 
+\mbox{\Hypertarget{classNE1_a411fa4efa4b0c517ccea8f768efb54a2}\label{classNE1_a411fa4efa4b0c517ccea8f768efb54a2}} 
+{\bfseries NE1} (const \mbox{\hyperlink{classNE1}{NE1}} \&binary)
+\item 
+\mbox{\hyperlink{classObjBase}{Obj\+Base}} $\ast$const \mbox{\hyperlink{classNE1_a047b34383a28603653dc3efe291b33a1}{evaluate}} ()
+\begin{DoxyCompactList}\small\item\em The evaluate method is used to interpret the Logical and \mbox{\hyperlink{classExpression}{Expression}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classNE1_ab5377cde9faa3d199c161d74a0834ba3}\label{classNE1_ab5377cde9faa3d199c161d74a0834ba3}} 
+void \mbox{\hyperlink{classNE1_ab5377cde9faa3d199c161d74a0834ba3}{code\+\_\+gen}} () const
+\begin{DoxyCompactList}\small\item\em The code generation function that is used to emit LLVM IR. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 13 of file NE1.\+h.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classNE1_a047b34383a28603653dc3efe291b33a1}\label{classNE1_a047b34383a28603653dc3efe291b33a1}} 
+\index{NE1@{NE1}!evaluate@{evaluate}}
+\index{evaluate@{evaluate}!NE1@{NE1}}
+\doxysubsubsection{\texorpdfstring{evaluate()}{evaluate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classObjBase}{Obj\+Base}} $\ast$const NE1\+::evaluate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+The evaluate method is used to interpret the Logical and \mbox{\hyperlink{classExpression}{Expression}}. 
+
+\begin{DoxyReturn}{Returns}
+a boolean from the result of the \&\& expression 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classBinary_aa536f32774f268499ac08cb43e025583}{Binary}}.
+
+
+
+Definition at line 21 of file NE1.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/ast/expression/binary\+\_\+operation/NE1.\+h\item 
+src/ast/expression/binary\+\_\+operation/NE1.\+cpp\end{DoxyCompactItemize}

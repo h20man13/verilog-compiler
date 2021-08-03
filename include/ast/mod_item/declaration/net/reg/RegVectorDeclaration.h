@@ -14,9 +14,9 @@
 #include "ast/mod_item/declaration/RegValue.h"
 #include <list>
 
-class RegVectorDeclaration: RegDeclaration, VectorDeclaration{
+class RegVectorDeclaration: public RegDeclaration, public VectorDeclaration{
 public:
-	RegVectorDeclaration(const Position& position, Expression* const start, Expression* const end, std::list<RegValue* const> &reg_list);
+	RegVectorDeclaration(const Position& position, ConstantExpression* const start, ConstantExpression* const end, std::list<RegValue* const> &reg_list, SymbolTable* const table);
 	RegVectorDeclaration(const RegVectorDeclaration& declaration);
 
 	virtual void code_gen() const;

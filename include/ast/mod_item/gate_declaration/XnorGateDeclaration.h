@@ -10,7 +10,7 @@
 
 #include "ast/mod_item/gate_declaration/GateDeclaration.h"
 
-class XnorGateDeclaration: GateDeclaration{
+class XnorGateDeclaration: public GateDeclaration{
 public:
 	XnorGateDeclaration(const Position& position, std::list<Expression* const> &gate_param);
 	XnorGateDeclaration(const XnorGateDeclaration& declaration);

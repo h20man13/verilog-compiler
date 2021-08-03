@@ -1,14 +1,5 @@
 \hypertarget{classString}{}\doxysection{String Class Reference}
 \label{classString}\index{String@{String}}
-
-
-The string ast node class is used to store string objects.  
-
-
-
-
-{\ttfamily \#include $<$String.\+h$>$}
-
 Inheritance diagram for String\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -18,15 +9,6 @@ Inheritance diagram for String\+:\begin{figure}[H]
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classString_a673c4fc8a3ebcad1c61d7fd619a610a4}{String}} (const \mbox{\hyperlink{classToken}{Token}} \&tok)
-\begin{DoxyCompactList}\small\item\em The \mbox{\hyperlink{classString}{String}} class is used to store a string object. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classString_a5774bcd4a4c232a8aec5a3ec6d01a157}{String}} (const \mbox{\hyperlink{classString}{String}} \&str)
-\begin{DoxyCompactList}\small\item\em the copy constructor to create string ast nodes \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classString_ad2e2b5a4a148dc107c4eebbbab814fb7}\label{classString_ad2e2b5a4a148dc107c4eebbbab814fb7}} 
-void \mbox{\hyperlink{classString_ad2e2b5a4a148dc107c4eebbbab814fb7}{code\+\_\+gen}} () const
-\begin{DoxyCompactList}\small\item\em The code gen method is used to emit a string in llvm IR. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classObjBase}{Obj\+Base}} $\ast$const \mbox{\hyperlink{classString_a3768deba69849ed81435fe58fd119480}{evaluate}} ()
-\begin{DoxyCompactList}\small\item\em The evaluate method is used to interpret a string ast node object. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classString_ac889669244f936556b0957807fe509c5}\label{classString_ac889669244f936556b0957807fe509c5}} 
 {\bfseries String} (const std\+::string value)
 \item 
@@ -43,81 +25,13 @@ const std\+::string {\bfseries get\+\_\+class} () const
 
 
 \doxysubsection{Detailed Description}
-The string ast node class is used to store string objects. 
-
-\begin{DoxyAuthor}{Author}
-Jacob Bauer 
-\end{DoxyAuthor}
 
 
-Definition at line 18 of file String.\+h.
-
-
-
-\doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{classString_a673c4fc8a3ebcad1c61d7fd619a610a4}\label{classString_a673c4fc8a3ebcad1c61d7fd619a610a4}} 
-\index{String@{String}!String@{String}}
-\index{String@{String}!String@{String}}
-\doxysubsubsection{\texorpdfstring{String()}{String()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily String\+::\+String (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classToken}{Token}} \&}]{tok }\end{DoxyParamCaption})}
-
-
-
-The \mbox{\hyperlink{classString}{String}} class is used to store a string object. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em tok} & the token that represents the string \\
-\hline
-\end{DoxyParams}
-
-
-Definition at line 4 of file String.\+cpp.
-
-\mbox{\Hypertarget{classString_a5774bcd4a4c232a8aec5a3ec6d01a157}\label{classString_a5774bcd4a4c232a8aec5a3ec6d01a157}} 
-\index{String@{String}!String@{String}}
-\index{String@{String}!String@{String}}
-\doxysubsubsection{\texorpdfstring{String()}{String()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily String\+::\+String (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classString}{String}} \&}]{str }\end{DoxyParamCaption})}
-
-
-
-the copy constructor to create string ast nodes 
-
-
-\begin{DoxyParams}{Parameters}
-{\em str} & the string object that will be coppied \\
-\hline
-\end{DoxyParams}
-
-
-Definition at line 6 of file String.\+cpp.
-
-
-
-\doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{classString_a3768deba69849ed81435fe58fd119480}\label{classString_a3768deba69849ed81435fe58fd119480}} 
-\index{String@{String}!evaluate@{evaluate}}
-\index{evaluate@{evaluate}!String@{String}}
-\doxysubsubsection{\texorpdfstring{evaluate()}{evaluate()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classObjBase}{Obj\+Base}} $\ast$const String\+::evaluate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-The evaluate method is used to interpret a string ast node object. 
-
-\begin{DoxyReturn}{Returns}
-
-\end{DoxyReturn}
-
-
-Definition at line 12 of file String.\+cpp.
+Definition at line 15 of file String.\+h.
 
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-include/ast/expression/String.\+h\item 
 include/common/types/String.\+h\item 
-src/ast/expression/String.\+cpp\item 
 src/common/types/String.\+cpp\end{DoxyCompactItemize}

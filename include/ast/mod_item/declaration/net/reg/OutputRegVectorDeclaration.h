@@ -5,17 +5,17 @@
  *      Author: jacob
  */
 
-#ifndef OUTPUT_VECTOR_DECLARATION_H
-#define OUTPUT_VECTOR_DECLARATION_H
+#ifndef OUTPUT_REG_VECTOR_DECLARATION_H
+#define OUTPUT_REG_VECTOR_DECLARATION_H
 
 #include "ast/mod_item/declaration/net/reg/RegVectorDeclaration.h"
 
 #include "ast/mod_item/declaration/RegValue.h"
 #include <list>
 
-class OutputRegVectorDeclaration: RegVectorDeclaration{
+class OutputRegVectorDeclaration: public RegVectorDeclaration{
 public:
-	OutputRegVectorDeclaration(const Position& position, Expression* const start, Expression* const end, std::list<RegValue* const> &reg_list);
+	OutputRegVectorDeclaration(const Position& position, ConstantExpression* const start, ConstantExpression* const end, std::list<RegValue* const> &reg_list, SymbolTable* const table);
 	OutputRegVectorDeclaration(const OutputRegVectorDeclaration& declaration);
 
 	void code_gen() const;

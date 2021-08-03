@@ -5,7 +5,7 @@
 %%For: 
 %Magnification: 1.00
 %%Orientation: Portrait
-%%BoundingBox: 0 0 500 1951.219482
+%%BoundingBox: 0 0 500 2926.829346
 %%Pages: 0
 %%BeginSetup
 %%EndSetup
@@ -19,12 +19,12 @@
 /marginwidth 10 def
 /distx 20 def
 /disty 40 def
-/boundaspect 0.256250 def  % aspect ratio of the BoundingBox (width/height)
+/boundaspect 0.170833 def  % aspect ratio of the BoundingBox (width/height)
 /boundx 500 def
 /boundy boundx boundaspect div def
 /xspacing 0 def
 /yspacing 0 def
-/rows 16 def
+/rows 24 def
 /cols 2 def
 /scalefactor 0 def
 /boxfont /Times-Roman findfont fontheight scalefont def
@@ -182,11 +182,19 @@ boxfont setfont
 (BXNor) cw
 (BXor) cw
 (Div) cw
+(EQ2) cw
+(EQ3) cw
+(GE) cw
+(GT) cw
 (LAnd) cw
+(LE) cw
 (LOr) cw
 (LShift) cw
+(LT) cw
 (Mod) cw
 (Mult) cw
+(NE1) cw
+(NE2) cw
 (RShift) cw
 (Sub) cw
 /boxwidth boxwidth marginwidth 2 mul add def
@@ -200,35 +208,61 @@ boundx scalefactor div boundy scalefactor div scale
 
 % ----- classes -----
 
- (Binary) 0.000000 13.000000 box
- (Expression) 0.000000 14.000000 box
- (AstNode) 0.000000 15.000000 box
- (Add) 1.000000 12.000000 box
- (BAnd) 1.000000 11.000000 box
- (BOr) 1.000000 10.000000 box
- (BXNor) 1.000000 9.000000 box
- (BXor) 1.000000 8.000000 box
- (Div) 1.000000 7.000000 box
- (LAnd) 1.000000 6.000000 box
- (LOr) 1.000000 5.000000 box
- (LShift) 1.000000 4.000000 box
- (Mod) 1.000000 3.000000 box
- (Mult) 1.000000 2.000000 box
+ (Binary) 0.000000 21.000000 box
+ (Expression) 0.000000 22.000000 box
+dashed
+ (AstNode) 0.000000 23.000000 box
+solid
+ (Add) 1.000000 20.000000 box
+ (BAnd) 1.000000 19.000000 box
+ (BOr) 1.000000 18.000000 box
+ (BXNor) 1.000000 17.000000 box
+ (BXor) 1.000000 16.000000 box
+ (Div) 1.000000 15.000000 box
+ (EQ2) 1.000000 14.000000 box
+ (EQ3) 1.000000 13.000000 box
+ (GE) 1.000000 12.000000 box
+ (GT) 1.000000 11.000000 box
+ (LAnd) 1.000000 10.000000 box
+ (LE) 1.000000 9.000000 box
+ (LOr) 1.000000 8.000000 box
+ (LShift) 1.000000 7.000000 box
+ (LT) 1.000000 6.000000 box
+ (Mod) 1.000000 5.000000 box
+ (Mult) 1.000000 4.000000 box
+ (NE1) 1.000000 3.000000 box
+ (NE2) 1.000000 2.000000 box
  (RShift) 1.000000 1.000000 box
  (Sub) 1.000000 0.000000 box
 
 % ----- relations -----
 
 solid
-0 0.000000 13.000000 out
+0 0.000000 21.000000 out
 solid
-1 0.000000 14.000000 in
+1 0.000000 22.000000 in
 solid
-0 0.000000 14.000000 out
+0 0.000000 22.000000 out
 solid
-1 0.000000 15.000000 in
+1 0.000000 23.000000 in
 solid
-1 0.000000 12.250000 out
+1 0.000000 20.250000 out
+solid
+0 0.000000 20.500000 hedge
+solid
+0 0.000000 19.500000 hedge
+solid
+0 0.000000 18.500000 hedge
+solid
+0 0.000000 17.500000 hedge
+solid
+0 0.000000 16.500000 hedge
+solid
+0 0.000000 15.500000 hedge
+solid
+0 0.000000 14.500000 hedge
+solid
+0 0.000000 13.500000 hedge
 solid
 0 0.000000 12.500000 hedge
 solid
@@ -256,4 +290,4 @@ solid
 solid
 0 0.000000 0.500000 hedge
 solid
-0.000000 13.000000 0.500000 vedge
+0.000000 21.000000 0.500000 vedge

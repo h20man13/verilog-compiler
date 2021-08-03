@@ -3,7 +3,7 @@
 Inheritance diagram for Ternary\+Operation\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2.000000cm]{d3/de2/classTernaryOperation}
+\includegraphics[height=3.000000cm]{d3/de2/classTernaryOperation}
 \end{center}
 \end{figure}
 \doxysubsection*{Public Member Functions}
@@ -18,15 +18,39 @@ Inheritance diagram for Ternary\+Operation\+:\begin{figure}[H]
 \mbox{\Hypertarget{classTernaryOperation_ac37644cd38388ccdfa0344b8c8f59467}\label{classTernaryOperation_ac37644cd38388ccdfa0344b8c8f59467}} 
 void \mbox{\hyperlink{classTernaryOperation_ac37644cd38388ccdfa0344b8c8f59467}{code\+\_\+gen}} () const
 \begin{DoxyCompactList}\small\item\em The code\+\_\+gen method generates the LLVM IR of the \mbox{\hyperlink{classExpression}{Expression}}. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classTernaryOperation_a5c045b9175d8062f58064d830cbad212}\label{classTernaryOperation_a5c045b9175d8062f58064d830cbad212}} 
-\mbox{\hyperlink{classObjBase}{Obj\+Base}} $\ast$const {\bfseries evaluate} ()
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{classObjBase}{Obj\+Base}} $\ast$const \mbox{\hyperlink{classTernaryOperation_a5c045b9175d8062f58064d830cbad212}{evaluate}} ()
+\begin{DoxyCompactList}\small\item\em The interpret method interprets the \mbox{\hyperlink{classExpression}{Expression}} directly and returns the result. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
 
 
 \doxysubsection{Detailed Description}
 
 
 Definition at line 13 of file Ternary\+Operation.\+h.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classTernaryOperation_a5c045b9175d8062f58064d830cbad212}\label{classTernaryOperation_a5c045b9175d8062f58064d830cbad212}} 
+\index{TernaryOperation@{TernaryOperation}!evaluate@{evaluate}}
+\index{evaluate@{evaluate}!TernaryOperation@{TernaryOperation}}
+\doxysubsubsection{\texorpdfstring{evaluate()}{evaluate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classObjBase}{Obj\+Base}} $\ast$const Ternary\+Operation\+::evaluate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+The interpret method interprets the \mbox{\hyperlink{classExpression}{Expression}} directly and returns the result. 
+
+\begin{DoxyReturn}{Returns}
+the result of the computed expression 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classExpression_aded287b288eee88a418e595a63335eaa}{Expression}}.
+
+
+
+Definition at line 11 of file Ternary\+Operation.\+cpp.
 
 
 

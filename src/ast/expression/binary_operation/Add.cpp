@@ -11,9 +11,9 @@
 #include "ast/expression/Expression.h"
 #include "common/types/TypeOpUtils.h"
 
-Add::Add(const Position& position, Expression* const left, Expression* const right): Binary(position, left, right){}
+Add::Add(const Position& position, Expression* const left, Expression* const right): AstNode(position), Binary(position, left, right){}
 
-Add::Add(const Add& binary): Binary(binary){}
+Add::Add(const Add& binary): AstNode(binary), Binary(binary){}
 /**
  * Emits LLVM IR for an addition expression
  */

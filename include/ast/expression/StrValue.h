@@ -15,7 +15,7 @@
  * The string ast node class is used to store string objects
  * @author Jacob Bauer
  */
-class StrValue: Expression{
+class StrValue: public Expression{
 private:
 	const std::string lexeme; //the lexeme of the required string to store
 public:

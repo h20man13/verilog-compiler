@@ -65,7 +65,6 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="../../d8/dd3/classContinuousAssignment-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">ContinuousAssignment Class Reference</div></div>
 </div><!--header-->
@@ -81,12 +80,19 @@ Inheritance diagram for ContinuousAssignment:</div>
  <div class="center">
   <img src="../../de/d4e/classContinuousAssignment.png" usemap="#ContinuousAssignment_map" alt=""/>
   <map id="ContinuousAssignment_map" name="ContinuousAssignment_map">
-<area href="../../d9/d21/classModItem.html" alt="ModItem" shape="rect" coords="0,0,139,24"/>
+<area href="../../d9/d21/classModItem.html" alt="ModItem" shape="rect" coords="0,56,139,80"/>
+<area href="../../dc/da9/classAstNode.html" alt="AstNode" shape="rect" coords="0,0,139,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:ab8d687b0f30ad1f834c82ce1d5ef6d09"><td class="memItemLeft" align="right" valign="top"><a id="ab8d687b0f30ad1f834c82ce1d5ef6d09"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>ContinuousAssignment</b> (const <a class="el" href="../../da/d8b/classPosition.html">Position</a> &amp;position, std::list&lt; <a class="el" href="../../d8/ddb/classContAssignInstance.html">ContAssignInstance</a> *const &gt; &amp;cont_list)</td></tr>
+<tr class="separator:ab8d687b0f30ad1f834c82ce1d5ef6d09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f96b5354148494db3e7ae6bbaa422e4"><td class="memItemLeft" align="right" valign="top"><a id="a3f96b5354148494db3e7ae6bbaa422e4"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>ContinuousAssignment</b> (const <a class="el" href="../../de/d4e/classContinuousAssignment.html">ContinuousAssignment</a> &amp;assignment)</td></tr>
+<tr class="separator:a3f96b5354148494db3e7ae6bbaa422e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a504fd1d2d76e0e61f8d17d2cb605f9be"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d4e/classContinuousAssignment.html#a504fd1d2d76e0e61f8d17d2cb605f9be">perform</a> () const</td></tr>
 <tr class="memdesc:a504fd1d2d76e0e61f8d17d2cb605f9be"><td class="mdescLeft">&#160;</td><td class="mdescRight">The execute method is used to interpret statements.  <a href="../../de/d4e/classContinuousAssignment.html#a504fd1d2d76e0e61f8d17d2cb605f9be">More...</a><br /></td></tr>
 <tr class="separator:a504fd1d2d76e0e61f8d17d2cb605f9be"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -94,15 +100,28 @@ Public Member Functions</h2></td></tr>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d4e/classContinuousAssignment.html#a4b2f8b83f1113693da23c7645ea78b48">code_gen</a> () const</td></tr>
 <tr class="memdesc:a4b2f8b83f1113693da23c7645ea78b48"><td class="mdescLeft">&#160;</td><td class="mdescRight">The code gen method generates the LLVM ir for the statement. <br /></td></tr>
 <tr class="separator:a4b2f8b83f1113693da23c7645ea78b48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classAstNode"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classAstNode')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../dc/da9/classAstNode.html">AstNode</a></td></tr>
+<tr class="memitem:ab1cff05f1258d2529dc8aabc6b727991 inherit pub_methods_classAstNode"><td class="memItemLeft" align="right" valign="top"><a id="ab1cff05f1258d2529dc8aabc6b727991"></a>
+const <a class="el" href="../../da/d8b/classPosition.html">Position</a>&#160;</td><td class="memItemRight" valign="bottom"><b>get_position</b> () const</td></tr>
+<tr class="separator:ab1cff05f1258d2529dc8aabc6b727991 inherit pub_methods_classAstNode"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
-Protected Member Functions</h2></td></tr>
-<tr class="memitem:ab8d687b0f30ad1f834c82ce1d5ef6d09"><td class="memItemLeft" align="right" valign="top"><a id="ab8d687b0f30ad1f834c82ce1d5ef6d09"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>ContinuousAssignment</b> (const <a class="el" href="../../da/d8b/classPosition.html">Position</a> &amp;position, std::list&lt; <a class="el" href="../../d8/ddb/classContAssignInstance.html">ContAssignInstance</a> *const &gt; &amp;cont_list)</td></tr>
-<tr class="separator:ab8d687b0f30ad1f834c82ce1d5ef6d09"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3f96b5354148494db3e7ae6bbaa422e4"><td class="memItemLeft" align="right" valign="top"><a id="a3f96b5354148494db3e7ae6bbaa422e4"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>ContinuousAssignment</b> (const <a class="el" href="../../de/d4e/classContinuousAssignment.html">ContinuousAssignment</a> &amp;assignment)</td></tr>
-<tr class="separator:a3f96b5354148494db3e7ae6bbaa422e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pro_methods_classModItem"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classModItem')"><img src="../../closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="../../d9/d21/classModItem.html">ModItem</a></td></tr>
+<tr class="memitem:ab95083715c01d727e133db8d62463f39 inherit pro_methods_classModItem"><td class="memItemLeft" align="right" valign="top"><a id="ab95083715c01d727e133db8d62463f39"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>ModItem</b> (const <a class="el" href="../../da/d8b/classPosition.html">Position</a> &amp;position)</td></tr>
+<tr class="separator:ab95083715c01d727e133db8d62463f39 inherit pro_methods_classModItem"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_classAstNode"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classAstNode')"><img src="../../closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="../../dc/da9/classAstNode.html">AstNode</a></td></tr>
+<tr class="memitem:ae2434eab6c919bb416e3389d311cade7 inherit pro_methods_classAstNode"><td class="memItemLeft" align="right" valign="top"><a id="ae2434eab6c919bb416e3389d311cade7"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>AstNode</b> (const <a class="el" href="../../da/d8b/classPosition.html">Position</a> &amp;position)</td></tr>
+<tr class="separator:ae2434eab6c919bb416e3389d311cade7 inherit pro_methods_classAstNode"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a654f49c626e442f49c0e47fc3d41ccd9 inherit pro_methods_classAstNode"><td class="memItemLeft" align="right" valign="top"><a id="a654f49c626e442f49c0e47fc3d41ccd9"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>AstNode</b> (const <a class="el" href="../../dc/da9/classAstNode.html">AstNode</a> &amp;node)</td></tr>
+<tr class="separator:a654f49c626e442f49c0e47fc3d41ccd9 inherit pro_methods_classAstNode"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_classAstNode"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classAstNode')"><img src="../../closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="../../dc/da9/classAstNode.html">AstNode</a></td></tr>
+<tr class="memitem:a0e715ef216f101725e271cfbd7c9461c inherit pro_attribs_classAstNode"><td class="memItemLeft" align="right" valign="top"><a id="a0e715ef216f101725e271cfbd7c9461c"></a>
+const <a class="el" href="../../da/d8b/classPosition.html">Position</a>&#160;</td><td class="memItemRight" valign="bottom"><b>position</b></td></tr>
+<tr class="separator:a0e715ef216f101725e271cfbd7c9461c inherit pro_attribs_classAstNode"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >The assignment template is used to create assignments in verilog. </p>

@@ -17,7 +17,7 @@
  * The index class is used so simulate something similar to indexing an array. it contains an identifier that is followed by an expression
  * (Ex: i[4] -- fetches the 4th element in data structure i)
  */
-class Index: Expression, LValue, RegValue{
+class Index: public Expression, public LValue, public RegValue{
 private:
 	const std::string lexeme; //the identifier belonging to the index
 	Expression* const index; //the index of the expression
@@ -30,7 +30,7 @@ public:
 	 * @param index  the index of the element that comes in the form of an expression
 	 */
 
-	Index(const Position& position, const std::string& lexeme, Expression* const index);
+	Index(const Position& position, const std::string& lexeme, Expression* const index, SymbolTable* const table);
 
 	/**
 	 * The Index copy constructor copies an Index ast node into the owning object
@@ -61,6 +61,10 @@ public:
 	ObjBase* const access() const;
 
 	void declare() const;
+
+	SymbolTable::attribute get_attribute_type() const;
+
+	const std::string get_symbol_name() const;
 
 };
 

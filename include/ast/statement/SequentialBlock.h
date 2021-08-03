@@ -18,7 +18,7 @@
  * @author Jacob Bauer
  */
 
-class SequentialBlock: Statement{
+class SequentialBlock: public Statement{
 
 	private:
 	   std::list<Statement* const> statement_list;

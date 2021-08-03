@@ -10,7 +10,7 @@
 
 #include "ast/expression/Expression.h"
 
-class TernaryOperation: Expression{
+class TernaryOperation: public Expression{
 private:
 	Expression* const check;
 	Expression* const left;

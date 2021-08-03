@@ -26,7 +26,7 @@ public:
 	 * @param param_list  the param list is the paramater list of the system function
 	 */
 
-	SystemFunctionCall(const Position& position, const std::string& function_name, const std::list<Expression* const> &param_list);
+	SystemFunctionCall(const Position& position, const std::string& function_name, const std::list<Expression* const> &param_list, SymbolTable* const table);
 
 	/**
 	 * The copy constructor is used to copy a System function call

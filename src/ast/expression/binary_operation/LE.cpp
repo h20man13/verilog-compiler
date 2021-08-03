@@ -10,9 +10,9 @@
 #include "ast/expression/Expression.h"
 #include "common/types/TypeOpUtils.h"
 
-LE::LE(const Position& position, Expression* const left, Expression* const right): Binary(position, left, right){}
+LE::LE(const Position& position, Expression* const left, Expression* const right): AstNode(position), Binary(position, left, right){}
 
-LE::LE(const LE& binary): Binary(binary){}
+LE::LE(const LE& binary): AstNode(binary), Binary(binary){}
 
 void LE::code_gen() const {
 	// TODO -- finish this later

@@ -10,12 +10,7 @@
 
 #include "ast/mod_item/declaration/Declaration.h"
 
-class ScalarDeclaration: Declaration{
-protected:
-	virtual ~ScalarDeclaration() = 0;
-	ScalarDeclaration(const Position& position);
-	ScalarDeclaration(const ScalarDeclaration& declaration);
-
+class ScalarDeclaration: virtual public Declaration{
 public:
 	virtual void code_gen() const = 0;
 

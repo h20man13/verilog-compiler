@@ -10,9 +10,9 @@
 #include "ast/expression/Expression.h"
 #include "common/types/TypeOpUtils.h"
 
-GT::GT(const Position& position, Expression* const left, Expression* const right): Binary(position, left, right){}
+GT::GT(const Position& position, Expression* const left, Expression* const right): AstNode(position), Binary(position, left, right){}
 
-GT::GT(const GT& binary): Binary(binary){}
+GT::GT(const GT& binary): AstNode(binary), Binary(binary){}
 
 void GT::code_gen() const {
 	// TODO -- finish this later

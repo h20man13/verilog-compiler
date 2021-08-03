@@ -18,7 +18,7 @@
  * @author Jacob Bauer
  */
 
-class While: Statement{
+class While: public Statement{
 
 	private:
 	Expression* const check;

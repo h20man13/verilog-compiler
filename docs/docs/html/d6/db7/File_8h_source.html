@@ -86,24 +86,26 @@ $(function() {
 <div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="../../db/d30/classFile.html">   14</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../db/d30/classFile.html">File</a>: <a class="code" href="../../dc/da9/classAstNode.html">AstNode</a>{</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    std::list&lt;Module* const&gt; module_list;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="../../db/d30/classFile.html">File</a>(<span class="keyword">const</span> <a class="code" href="../../da/d8b/classPosition.html">Position</a>&amp; position, std::list&lt;Module* const&gt; module_list);</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="../../db/d30/classFile.html">File</a>(<span class="keyword">const</span> <a class="code" href="../../db/d30/classFile.html">File</a>&amp; module);</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    ~<a class="code" href="../../db/d30/classFile.html">~File</a>();</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">void</span> interpret() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">void</span> code_gen() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;};</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="../../df/dd1/classSymbolTable.html">SymbolTable</a>* <span class="keyword">const</span> table;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="../../db/d30/classFile.html">File</a>(<span class="keyword">const</span> <a class="code" href="../../da/d8b/classPosition.html">Position</a>&amp; position, std::list&lt;Module* const&gt; module_list, <a class="code" href="../../df/dd1/classSymbolTable.html">SymbolTable</a>* <span class="keyword">const</span> table);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="../../db/d30/classFile.html">File</a>(<span class="keyword">const</span> <a class="code" href="../../db/d30/classFile.html">File</a>&amp; module);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    ~<a class="code" href="../../db/d30/classFile.html">~File</a>();</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">void</span> interpret() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">void</span> code_gen() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;};</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* INCLUDE_AST_FILE_H_ */</span><span class="preprocessor"></span></div>
-<div class="ttc" id="aclassAstNode_html"><div class="ttname"><a href="../../dc/da9/classAstNode.html">AstNode</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df6/AstNode_8h_source.html#l00006">AstNode.h:6</a></div></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* INCLUDE_AST_FILE_H_ */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="aclassAstNode_html"><div class="ttname"><a href="../../dc/da9/classAstNode.html">AstNode</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df6/AstNode_8h_source.html#l00007">AstNode.h:7</a></div></div>
 <div class="ttc" id="aclassFile_html"><div class="ttname"><a href="../../db/d30/classFile.html">File</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d6/db7/File_8h_source.html#l00014">File.h:14</a></div></div>
 <div class="ttc" id="aclassPosition_html"><div class="ttname"><a href="../../da/d8b/classPosition.html">Position</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/dff/Position_8h_source.html#l00006">Position.h:6</a></div></div>
+<div class="ttc" id="aclassSymbolTable_html"><div class="ttname"><a href="../../df/dd1/classSymbolTable.html">SymbolTable</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d8/dd9/SymbolTable_8h_source.html#l00019">SymbolTable.h:19</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

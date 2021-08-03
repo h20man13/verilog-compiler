@@ -10,9 +10,9 @@
 #include "ast/expression/Expression.h"
 #include "common/types/TypeOpUtils.h"
 
-Div::Div(const Position& position, Expression* const left, Expression* const right): Binary(position, left, right){}
+Div::Div(const Position& position, Expression* const left, Expression* const right): AstNode(position), Binary(position, left, right){}
 
-Div::Div(const Div& binary): Binary(binary){}
+Div::Div(const Div& binary): AstNode(binary), Binary(binary){}
 
 void Div::code_gen() const {
 	// TODO -- finish this later

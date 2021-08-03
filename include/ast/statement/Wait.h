@@ -18,7 +18,7 @@
  * @author Jacob Bauer
  */
 
-class Wait: Statement{
+class Wait: public Statement{
 
 	private:
 	Expression* const check;

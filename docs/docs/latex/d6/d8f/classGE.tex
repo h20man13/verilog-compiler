@@ -1,0 +1,60 @@
+\hypertarget{classGE}{}\doxysection{GE Class Reference}
+\label{classGE}\index{GE@{GE}}
+Inheritance diagram for GE\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{d6/d8f/classGE}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGE_af86487096101d4118bed8d1192b350e1}\label{classGE_af86487096101d4118bed8d1192b350e1}} 
+{\bfseries GE} (const \mbox{\hyperlink{classPosition}{Position}} \&position, \mbox{\hyperlink{classExpression}{Expression}} $\ast$const left, \mbox{\hyperlink{classExpression}{Expression}} $\ast$const right)
+\item 
+\mbox{\Hypertarget{classGE_a468968b39b4e40453962531193185911}\label{classGE_a468968b39b4e40453962531193185911}} 
+{\bfseries GE} (const \mbox{\hyperlink{classGE}{GE}} \&binary)
+\item 
+\mbox{\hyperlink{classObjBase}{Obj\+Base}} $\ast$const \mbox{\hyperlink{classGE_a2e5c17a676397ffa3217cb85a602bdd8}{evaluate}} ()
+\begin{DoxyCompactList}\small\item\em The evaluate method is used to interpret the Logical and \mbox{\hyperlink{classExpression}{Expression}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGE_a238b11d20abaee51a1496e20ec4824eb}\label{classGE_a238b11d20abaee51a1496e20ec4824eb}} 
+void \mbox{\hyperlink{classGE_a238b11d20abaee51a1496e20ec4824eb}{code\+\_\+gen}} () const
+\begin{DoxyCompactList}\small\item\em The code generation function that is used to emit LLVM IR. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 13 of file GE.\+h.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classGE_a2e5c17a676397ffa3217cb85a602bdd8}\label{classGE_a2e5c17a676397ffa3217cb85a602bdd8}} 
+\index{GE@{GE}!evaluate@{evaluate}}
+\index{evaluate@{evaluate}!GE@{GE}}
+\doxysubsubsection{\texorpdfstring{evaluate()}{evaluate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classObjBase}{Obj\+Base}} $\ast$const GE\+::evaluate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+The evaluate method is used to interpret the Logical and \mbox{\hyperlink{classExpression}{Expression}}. 
+
+\begin{DoxyReturn}{Returns}
+a boolean from the result of the \&\& expression 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classBinary_aa536f32774f268499ac08cb43e025583}{Binary}}.
+
+
+
+Definition at line 21 of file GE.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/ast/expression/binary\+\_\+operation/GE.\+h\item 
+src/ast/expression/binary\+\_\+operation/GE.\+cpp\end{DoxyCompactItemize}

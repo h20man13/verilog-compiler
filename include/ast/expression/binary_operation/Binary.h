@@ -17,7 +17,6 @@ protected:
 	Expression* const right;
 	Binary(const Position& position, Expression* const left, Expression* const right);
 	Binary(const Binary& binop);
-	virtual ~Binary();
 public:
 
 	/**
@@ -31,6 +30,8 @@ public:
 	 * The code_gen method is used to generate the LLVM IR of an expression object
 	 */
 	 virtual void code_gen() const = 0;
+
+	 virtual ~Binary();
 };
 
 

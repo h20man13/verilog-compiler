@@ -75,9 +75,10 @@ Inheritance diagram for RegValue:</div>
  <div class="center">
   <img src="../../dd/dcf/classRegValue.png" usemap="#RegValue_map" alt=""/>
   <map id="RegValue_map" name="RegValue_map">
-<area href="../../d1/de3/classIdentifier.html" title="The identifier class is used to for Identifier AST nodes." alt="Identifier" shape="rect" coords="0,56,67,80"/>
-<area href="../../d9/d55/classIndex.html" title="The index class is used so simulate something similar to indexing an array." alt="Index" shape="rect" coords="77,56,144,80"/>
-<area href="../../db/d40/classSlice.html" alt="Slice" shape="rect" coords="154,56,221,80"/>
+<area href="../../dc/da9/classAstNode.html" alt="AstNode" shape="rect" coords="77,0,144,24"/>
+<area href="../../d1/de3/classIdentifier.html" title="The identifier class is used to for Identifier AST nodes." alt="Identifier" shape="rect" coords="0,112,67,136"/>
+<area href="../../d9/d55/classIndex.html" title="The index class is used so simulate something similar to indexing an array." alt="Index" shape="rect" coords="77,112,144,136"/>
+<area href="../../db/d40/classSlice.html" alt="Slice" shape="rect" coords="154,112,221,136"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -86,9 +87,33 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:afd7013f917a091fc7ce65204836490f4"><td class="memItemLeft" align="right" valign="top"><a id="afd7013f917a091fc7ce65204836490f4"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>declare</b> () const =0</td></tr>
 <tr class="separator:afd7013f917a091fc7ce65204836490f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adea393f1f855a1a3685aeda94a8f2c3d"><td class="memItemLeft" align="right" valign="top"><a id="adea393f1f855a1a3685aeda94a8f2c3d"></a>
+virtual SymbolTable::attribute&#160;</td><td class="memItemRight" valign="bottom"><b>get_attribute_type</b> () const =0</td></tr>
+<tr class="separator:adea393f1f855a1a3685aeda94a8f2c3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a839a2aff97cbd77f7b15f155e61f4235"><td class="memItemLeft" align="right" valign="top"><a id="a839a2aff97cbd77f7b15f155e61f4235"></a>
+virtual const std::string&#160;</td><td class="memItemRight" valign="bottom"><b>get_symbol_name</b> () const =0</td></tr>
+<tr class="separator:a839a2aff97cbd77f7b15f155e61f4235"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afd7013f917a091fc7ce65204836490f4"><td class="memItemLeft" align="right" valign="top"><a id="afd7013f917a091fc7ce65204836490f4"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>declare</b> () const =0</td></tr>
 <tr class="separator:afd7013f917a091fc7ce65204836490f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classAstNode"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classAstNode')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../dc/da9/classAstNode.html">AstNode</a></td></tr>
+<tr class="memitem:ab1cff05f1258d2529dc8aabc6b727991 inherit pub_methods_classAstNode"><td class="memItemLeft" align="right" valign="top"><a id="ab1cff05f1258d2529dc8aabc6b727991"></a>
+const <a class="el" href="../../da/d8b/classPosition.html">Position</a>&#160;</td><td class="memItemRight" valign="bottom"><b>get_position</b> () const</td></tr>
+<tr class="separator:ab1cff05f1258d2529dc8aabc6b727991 inherit pub_methods_classAstNode"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pro_methods_classAstNode"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classAstNode')"><img src="../../closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="../../dc/da9/classAstNode.html">AstNode</a></td></tr>
+<tr class="memitem:ae2434eab6c919bb416e3389d311cade7 inherit pro_methods_classAstNode"><td class="memItemLeft" align="right" valign="top"><a id="ae2434eab6c919bb416e3389d311cade7"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>AstNode</b> (const <a class="el" href="../../da/d8b/classPosition.html">Position</a> &amp;position)</td></tr>
+<tr class="separator:ae2434eab6c919bb416e3389d311cade7 inherit pro_methods_classAstNode"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a654f49c626e442f49c0e47fc3d41ccd9 inherit pro_methods_classAstNode"><td class="memItemLeft" align="right" valign="top"><a id="a654f49c626e442f49c0e47fc3d41ccd9"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>AstNode</b> (const <a class="el" href="../../dc/da9/classAstNode.html">AstNode</a> &amp;node)</td></tr>
+<tr class="separator:a654f49c626e442f49c0e47fc3d41ccd9 inherit pro_methods_classAstNode"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_classAstNode"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classAstNode')"><img src="../../closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="../../dc/da9/classAstNode.html">AstNode</a></td></tr>
+<tr class="memitem:a0e715ef216f101725e271cfbd7c9461c inherit pro_attribs_classAstNode"><td class="memItemLeft" align="right" valign="top"><a id="a0e715ef216f101725e271cfbd7c9461c"></a>
+const <a class="el" href="../../da/d8b/classPosition.html">Position</a>&#160;</td><td class="memItemRight" valign="bottom"><b>position</b></td></tr>
+<tr class="separator:a0e715ef216f101725e271cfbd7c9461c inherit pro_attribs_classAstNode"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">

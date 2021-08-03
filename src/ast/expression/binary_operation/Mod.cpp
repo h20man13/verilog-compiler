@@ -11,9 +11,9 @@
 #include "ast/expression/Expression.h"
 #include "common/types/TypeOpUtils.h"
 
-Mod::Mod(const Position& position, Expression* const left, Expression* const right): Binary(position, left, right){}
+Mod::Mod(const Position& position, Expression* const left, Expression* const right): AstNode(position), Binary(position, left, right){}
 
-Mod::Mod(const Mod& binary): Binary(binary){}
+Mod::Mod(const Mod& binary): AstNode(binary), Binary(binary){}
 
 void Mod::code_gen() const {
 	// TODO -- finish this later

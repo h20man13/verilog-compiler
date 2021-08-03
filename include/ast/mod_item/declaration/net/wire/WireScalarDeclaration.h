@@ -14,9 +14,9 @@
 #include "ast/mod_item/declaration/RegValue.h"
 #include <list>
 
-class WireScalarDeclaration: WireDeclaration, ScalarDeclaration{
+class WireScalarDeclaration: public WireDeclaration, public ScalarDeclaration{
 public:
-	WireScalarDeclaration(const Position& position, std::list<Identifier* const> &reg_list);
+	WireScalarDeclaration(const Position& position, std::list<Identifier* const> &reg_list, SymbolTable* const table);
 	WireScalarDeclaration(const WireScalarDeclaration& declaration);
 
 	virtual void code_gen() const;

@@ -12,11 +12,11 @@
 #include "ast/expression/Identifier.h"
 #include <list>
 
-class RealDeclaration: Declaration{
+class RealDeclaration: public Declaration{
 private:
 	std::list<Identifier* const> ident_list;
 public:
-	RealDeclaration(const Position& position, std::list<Identifier* const> &ident_list);
+	RealDeclaration(const Position& position, std::list<Identifier* const> &ident_list, SymbolTable* const table);
 	RealDeclaration(const RealDeclaration& real_declaration);
 	~RealDeclaration();
 

@@ -9,9 +9,9 @@
 #include "ast/expression/unary_operation/Unary.h"
 #include "common/types/Number.h"
 
-Unary::Unary(const Position& position, Expression* const exp) : Expression(position), exp(exp){}
+Unary::Unary(const Position& position, Expression* const exp) : AstNode(position), exp(exp){}
 
-Unary::Unary(const Unary& binop): Expression(binop.get_position()), exp(binop.exp){}
+Unary::Unary(const Unary& binop): AstNode(binop.get_position()), exp(binop.exp){}
 
 Unary::~Unary(){
 	delete exp;

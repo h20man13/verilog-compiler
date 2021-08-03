@@ -73,9 +73,9 @@ $(function() {
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;ast/statement/EmptyStatement.h&quot;</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;EmptyStatement::~EmptyStatement() {}</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;EmptyStatement::EmptyStatement(<span class="keyword">const</span> <a class="code" href="../../da/d8b/classPosition.html">Position</a>&amp; position): <a class="code" href="../../d6/de7/classStatement.html">Statement</a>(position) {}</div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;EmptyStatement::EmptyStatement(): <a class="code" href="../../d6/de7/classStatement.html">Statement</a>(*(const <a class="code" href="../../da/d8b/classPosition.html">Position</a>*)NULL) {}</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;EmptyStatement::~EmptyStatement(){}</div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
 <div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="../../d1/d77/classEmptyStatement.html#a22563b2d2b37e856195a47304fcb7e68">    9</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d1/d77/classEmptyStatement.html#a22563b2d2b37e856195a47304fcb7e68">EmptyStatement::code_gen</a>()<span class="keyword"> const</span>{}</div>

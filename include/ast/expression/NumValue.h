@@ -5,13 +5,13 @@
  *      Author: jacob
  */
 
-#ifndef NUMBER_H
-#define NUMBER_H
+#ifndef NUMVALUE_H
+#define NUMVALUE_H
 
 #include "ast/expression/Expression.h"
 #include "Token.h"
 
-class NumValue: Expression{
+class NumValue: public Expression{
 private:
 	std::string lexeme;
 public:

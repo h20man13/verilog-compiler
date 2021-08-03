@@ -17,10 +17,7 @@
  */
 
 
-class Expression: public AstNode{
-protected:
-	Expression(const Position& position);
-	Expression(const Expression& expression);
+class Expression: public virtual AstNode{
 public:
 
 	/**

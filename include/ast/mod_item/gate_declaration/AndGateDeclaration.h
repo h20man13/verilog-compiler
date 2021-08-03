@@ -10,7 +10,7 @@
 
 #include "ast/mod_item/gate_declaration/GateDeclaration.h"
 
-class AndGateDeclaration: GateDeclaration{
+class AndGateDeclaration: public GateDeclaration{
 public:
 	AndGateDeclaration(const Position& position, std::list<Expression* const> &gate_param);
 	AndGateDeclaration(const AndGateDeclaration& declaration);

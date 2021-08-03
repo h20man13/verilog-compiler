@@ -82,14 +82,22 @@ $(function() {
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;String::String(<span class="keyword">const</span> std::string value) : <a class="code" href="../../d8/d4b/classObject.html">Object</a>(value) {}</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;String::operator std::string(){</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordflow">return</span> get_value();</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;}</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">const</span> std::string String::get_class()<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordflow">return</span> <span class="stringliteral">&quot;String&quot;</span>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;String::String(<a class="code" href="../../d3/dee/classString.html">String</a> <span class="keyword">const</span>* &amp;<span class="keywordtype">string</span>): <a class="code" href="../../d8/d4b/classObject.html">Object</a>(string-&gt;get_value()){</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordflow">if</span>(<span class="keywordtype">string</span> != NULL){</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <span class="keyword">delete</span> string;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <span class="keywordtype">string</span> = <span class="keyword">this</span>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    }</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;}</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;String::operator std::string(){</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordflow">return</span> get_value();</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;}</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">const</span> std::string String::get_class()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordflow">return</span> <span class="stringliteral">&quot;String&quot;</span>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;}</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
 <div class="ttc" id="aclassObject_html"><div class="ttname"><a href="../../d8/d4b/classObject.html">Object</a></div><div class="ttdef"><b>Definition:</b> <a href="../../db/dbf/Object_8h_source.html#l00016">Object.h:16</a></div></div>
+<div class="ttc" id="aclassString_html"><div class="ttname"><a href="../../d3/dee/classString.html">String</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dba/String_8h_source.html#l00015">String.h:15</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

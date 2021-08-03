@@ -1,6 +1,6 @@
 #include "ast/Module.h"
 
-Module::Module(const Position& position, Identifier* const mod_name,  std::list<Declaration* const> &decl_list, std::list<ModItem* const> &mod_item_list): AstNode(position), mod_name(mod_name){
+Module::Module(const Position& position, Identifier* const mod_name,  std::list<Declaration* const> &decl_list, std::list<ModItem* const> &mod_item_list, SymbolTable* const table): AstNode(position), table(table), mod_name(mod_name){
 	for(std::list<Declaration* const>::const_iterator it = decl_list.begin(); it != decl_list.end(); it++){
 		this->decl_list.push_back(*it);
 	}
@@ -9,7 +9,7 @@ Module::Module(const Position& position, Identifier* const mod_name,  std::list<
 	}
 }
 
-Module::Module(const Module& module): AstNode(module.get_position()), mod_name(module.mod_name){
+Module::Module(const Module& module): AstNode(module), table(module.table), mod_name(module.mod_name){
 	for(std::list<Declaration* const>::const_iterator it = module.decl_list.begin(); it != module.decl_list.end(); it++){
 		this->decl_list.push_back(*it);
 	}

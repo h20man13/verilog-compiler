@@ -9,7 +9,7 @@ Inheritance diagram for Binary\+:\begin{figure}[H]
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-virtual \mbox{\hyperlink{classObjBase}{Obj\+Base}} $\ast$const \mbox{\hyperlink{classBinary_aa80f13396ccee85a8a6515bb16e99f4a}{evaluate}} () const =0
+virtual \mbox{\hyperlink{classObjBase}{Obj\+Base}} $\ast$const \mbox{\hyperlink{classBinary_aa536f32774f268499ac08cb43e025583}{evaluate}} ()=0
 \begin{DoxyCompactList}\small\item\em The evaluate function computes the result of a \mbox{\hyperlink{classBinary}{Binary}} \mbox{\hyperlink{classExpression}{Expression}}. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classBinary_a7b5e81b3115e86f6c326e2272cbc1d82}\label{classBinary_a7b5e81b3115e86f6c326e2272cbc1d82}} 
 virtual void \mbox{\hyperlink{classBinary_a7b5e81b3115e86f6c326e2272cbc1d82}{code\+\_\+gen}} () const =0
@@ -17,8 +17,8 @@ virtual void \mbox{\hyperlink{classBinary_a7b5e81b3115e86f6c326e2272cbc1d82}{cod
 \doxysubsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classBinary_adc082ca246e25c26cc822664f9afb006}\label{classBinary_adc082ca246e25c26cc822664f9afb006}} 
-{\bfseries Binary} (const \mbox{\hyperlink{classPosition}{Position}} \&position, const \mbox{\hyperlink{classExpression}{Expression}} \&left, const \mbox{\hyperlink{classExpression}{Expression}} \&right)
+\mbox{\Hypertarget{classBinary_ab373ca8b1eda25764ea85a6ead6aaacc}\label{classBinary_ab373ca8b1eda25764ea85a6ead6aaacc}} 
+{\bfseries Binary} (const \mbox{\hyperlink{classPosition}{Position}} \&position, \mbox{\hyperlink{classExpression}{Expression}} $\ast$const left, \mbox{\hyperlink{classExpression}{Expression}} $\ast$const right)
 \item 
 \mbox{\Hypertarget{classBinary_a405cf861d5aaa4ba9f4cba1121742d4d}\label{classBinary_a405cf861d5aaa4ba9f4cba1121742d4d}} 
 {\bfseries Binary} (const \mbox{\hyperlink{classBinary}{Binary}} \&binop)
@@ -26,11 +26,11 @@ virtual void \mbox{\hyperlink{classBinary_a7b5e81b3115e86f6c326e2272cbc1d82}{cod
 \doxysubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classBinary_ada4d09f5efeece204e9fc1c8dfbdc475}\label{classBinary_ada4d09f5efeece204e9fc1c8dfbdc475}} 
-const \mbox{\hyperlink{classExpression}{Expression}} $\ast$ {\bfseries left}
+\mbox{\Hypertarget{classBinary_ac07342efe58b61e03cd9226ee2de4126}\label{classBinary_ac07342efe58b61e03cd9226ee2de4126}} 
+\mbox{\hyperlink{classExpression}{Expression}} $\ast$const {\bfseries left}
 \item 
-\mbox{\Hypertarget{classBinary_aa6850ef15347ab02b9a8d2253012c40e}\label{classBinary_aa6850ef15347ab02b9a8d2253012c40e}} 
-const \mbox{\hyperlink{classExpression}{Expression}} $\ast$ {\bfseries right}
+\mbox{\Hypertarget{classBinary_a73255bd461614ee72209f28cf1af6cce}\label{classBinary_a73255bd461614ee72209f28cf1af6cce}} 
+\mbox{\hyperlink{classExpression}{Expression}} $\ast$const {\bfseries right}
 \end{DoxyCompactItemize}
 
 
@@ -42,11 +42,11 @@ Definition at line 14 of file Binary.\+h.
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{classBinary_aa80f13396ccee85a8a6515bb16e99f4a}\label{classBinary_aa80f13396ccee85a8a6515bb16e99f4a}} 
+\mbox{\Hypertarget{classBinary_aa536f32774f268499ac08cb43e025583}\label{classBinary_aa536f32774f268499ac08cb43e025583}} 
 \index{Binary@{Binary}!evaluate@{evaluate}}
 \index{evaluate@{evaluate}!Binary@{Binary}}
 \doxysubsubsection{\texorpdfstring{evaluate()}{evaluate()}}
-{\footnotesize\ttfamily virtual \mbox{\hyperlink{classObjBase}{Obj\+Base}}$\ast$ const Binary\+::evaluate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classObjBase}{Obj\+Base}}$\ast$ const Binary\+::evaluate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
@@ -62,11 +62,11 @@ The evaluate function computes the result of a \mbox{\hyperlink{classBinary}{Bin
 \end{DoxyReturn}
 
 
-Implements \mbox{\hyperlink{classExpression_a99340df9bd2fdefb61d92723c5f44dd3}{Expression}}.
+Implements \mbox{\hyperlink{classExpression_aded287b288eee88a418e595a63335eaa}{Expression}}.
 
 
 
-Implemented in \mbox{\hyperlink{classBAnd_a154e148604da6e09d4e7228915239fdb}{BAnd}}, \mbox{\hyperlink{classBOr_a92aedfbfacc3c13ca147b107164e763e}{BOr}}, \mbox{\hyperlink{classBXNor_abc873ddb16753b04bf424a076b8b8c9b}{BXNor}}, \mbox{\hyperlink{classBXor_a08106c20d48b23645271d3190a5a8a2a}{BXor}}, \mbox{\hyperlink{classDiv_a685fed5d0e7e659d689a1f3d5f28bfa6}{Div}}, \mbox{\hyperlink{classLAnd_acd6a992b539ee5b50419d98ee4eb548a}{LAnd}}, \mbox{\hyperlink{classLOr_a33fcd0248f024cf0afd75cfe11d2fbf4}{LOr}}, \mbox{\hyperlink{classLShift_a642861a37e71f6d1fdc18b71b9df7578}{LShift}}, \mbox{\hyperlink{classMod_a8eb812f7143dda9ae6383706fdc4eb07}{Mod}}, \mbox{\hyperlink{classMult_a3f14174bd9f82673aa75473f94f1e506}{Mult}}, \mbox{\hyperlink{classRShift_a1d68c8f4e7658cae4fc01ce44200ab85}{RShift}}, \mbox{\hyperlink{classSub_a796a2568d44b7cc6c01bf7e069a1c14a}{Sub}}, and \mbox{\hyperlink{classAdd_a449a505a07b000edb0b3fb118727857f}{Add}}.
+Implemented in \mbox{\hyperlink{classAdd_af1e86e2d7b9e53a3171c2072476ec74d}{Add}}, \mbox{\hyperlink{classBAnd_a4623b4636a28025e9b3d205861ab6caf}{BAnd}}, \mbox{\hyperlink{classBOr_a32f9e38d3dff26c8374e5004c79cbe1a}{BOr}}, \mbox{\hyperlink{classBXNor_a77ff69989b8c3a2abdeb2336c0751cf2}{BXNor}}, \mbox{\hyperlink{classBXor_ab31af2819f23b35b806c3ae68819bbca}{BXor}}, \mbox{\hyperlink{classDiv_ac4bb6d759f6924c6c5fc1fe6c17e037c}{Div}}, \mbox{\hyperlink{classEQ2_a9acd4115a29fac66b4cf5cd6bbe0b587}{EQ2}}, \mbox{\hyperlink{classEQ3_a96118c61b4a1576bfdc7f36353a79745}{EQ3}}, \mbox{\hyperlink{classGE_a2e5c17a676397ffa3217cb85a602bdd8}{GE}}, \mbox{\hyperlink{classGT_ad9a143f4bacd3e59eb6f43c692c030c3}{GT}}, \mbox{\hyperlink{classLAnd_ab03c821063b221a70ec530d4d147411c}{LAnd}}, \mbox{\hyperlink{classLE_ac6ee038c36b2484e1b5a6433b70333c0}{LE}}, \mbox{\hyperlink{classLOr_adaea6471f6daee61e09b6011f62db69b}{LOr}}, \mbox{\hyperlink{classLShift_ad81db3925ac4b0267c8e9f94caaaec75}{LShift}}, \mbox{\hyperlink{classLT_a9fbf566d19fed58299c7904dc4b24604}{LT}}, \mbox{\hyperlink{classMod_a19890205fe69fa05fa32773b82b5821e}{Mod}}, \mbox{\hyperlink{classMult_a24d2c0bfec428df01aacfb637a0886d1}{Mult}}, \mbox{\hyperlink{classNE1_a047b34383a28603653dc3efe291b33a1}{NE1}}, \mbox{\hyperlink{classNE2_a7790d2f8c65d136977aaf2ea5e651d6d}{NE2}}, \mbox{\hyperlink{classRShift_a8fea83c5054ca80e695256cb9365a2e3}{RShift}}, and \mbox{\hyperlink{classSub_aad028be3d24658778cc4616e56f9ac6b}{Sub}}.
 
 
 

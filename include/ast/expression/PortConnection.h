@@ -10,15 +10,17 @@
 
 #include "ast/expression/Expression.h"
 #include "ast/expression/ConstantExpression.h"
+#include "SymbolTable.h"
 
 /**
  * The Replication class is for ast nodes representing verilogs replication operator. This operator is used to replicate an arrangement of wires or registers
  * @author Jacob Bauer
  */
-class PortConnection : Expression{
+class PortConnection : public Expression{
 private:
 	const std::string assign; //the number of times the expression should be replicated
-	const std::string value //the expression to be replicated
+	const std::string value; //the expression to be replicated
+	SymbolTable* const table;
 
 public:
 
@@ -28,7 +30,7 @@ public:
 	 * @param times  the amount of times the expression should be replicated
 	 * @param exp  the expression that should be replicated
 	 */
-	PortConnection(const Position& position, const std::string& assign, const std::string& value);
+	PortConnection(const Position& position, const std::string& assign, const std::string& value, SymbolTable* const table);
 
 	/**
 	 * The copy constructor takes in a replication object and it copies it

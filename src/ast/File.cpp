@@ -1,13 +1,13 @@
 #include "ast/File.h"
 
 
-File::File(const Position& position, std::list<Module* const> module_list): AstNode(position){
+File::File(const Position& position, std::list<Module* const> module_list, SymbolTable* const table): table(table), AstNode(position){
 	for(std::list<Module* const>::const_iterator it = module_list.begin(); it != module_list.end(); it++){
 		this->module_list.push_back(*it);
 	}
 }
 
-File::File(const File& module): AstNode(module.get_position()){
+File::File(const File& module): AstNode(module), table(module.table){
 	for(std::list<Module* const>::const_iterator it = module.module_list.begin(); it != module.module_list.end(); it++){
 		this->module_list.push_back(*it);
 	}

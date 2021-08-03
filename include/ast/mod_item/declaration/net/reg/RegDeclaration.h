@@ -12,11 +12,11 @@
 #include "ast/mod_item/declaration/RegValue.h"
 #include <list>
 
-class RegDeclaration: Declaration{
+class RegDeclaration: virtual public Declaration{
 private:
 	std::list<RegValue* const> reg_list;
 protected:
-	RegDeclaration(const Position& position, std::list<RegValue* const> &reg_list);
+	RegDeclaration(std::list<RegValue* const> &reg_list);
 	RegDeclaration(const RegDeclaration& declaration);
 
 	virtual ~RegDeclaration();

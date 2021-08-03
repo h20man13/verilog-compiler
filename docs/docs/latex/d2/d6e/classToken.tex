@@ -3,6 +3,9 @@
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+\mbox{\Hypertarget{classToken_aa52ce69a4e9fa22aa1bec8d019bdde65}\label{classToken_aa52ce69a4e9fa22aa1bec8d019bdde65}} 
+{\bfseries Token} (const tok type, const std\+::string \&lexeme, const \mbox{\hyperlink{classPosition}{Position}} \&position)
+\item 
 const \mbox{\hyperlink{classPosition}{Position}} \mbox{\hyperlink{classToken_add2e46eda0cc728e3ac8149fc0145cff}{get\+\_\+position}} () const
 \begin{DoxyCompactList}\small\item\em Gets the position of the token. \end{DoxyCompactList}\item 
 const tok \mbox{\hyperlink{classToken_a4b6aff1a9d2703b3ea6ce6941f9110f2}{get\+\_\+type}} () const
@@ -15,7 +18,7 @@ const std\+::string \mbox{\hyperlink{classToken_a6ebea2567387ccba0f2c3a8f056408d
 \begin{DoxyCompactItemize}
 \item 
 static const \mbox{\hyperlink{classToken}{Token}} \mbox{\hyperlink{classToken_adebc775df817072f8a7ebf0574ed686c}{make\+\_\+number\+\_\+token}} (const std\+::string \&lexeme, const \mbox{\hyperlink{classPosition}{Position}} \&position)
-\begin{DoxyCompactList}\small\item\em Creates a token representing a Num\+Wrap in the verilog language. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Creates a token representing a number in the verilog language. \end{DoxyCompactList}\item 
 static const \mbox{\hyperlink{classToken}{Token}} \mbox{\hyperlink{classToken_a0d77acdb54e0c7231fd7fc3c3b0d338d}{make\+\_\+identifier\+\_\+token}} (const std\+::string \&lexeme, const \mbox{\hyperlink{classPosition}{Position}} \&position)
 \begin{DoxyCompactList}\small\item\em Creates a token representing a identifier or a keyword in the verilog language. \end{DoxyCompactList}\item 
 static const \mbox{\hyperlink{classToken}{Token}} \mbox{\hyperlink{classToken_ad5f5f43b5feb24a382a8a6d77a0d448a}{make\+\_\+macro\+\_\+token}} (const std\+::string \&lexeme, const \mbox{\hyperlink{classPosition}{Position}} \&position)
@@ -29,7 +32,7 @@ static const \mbox{\hyperlink{classToken}{Token}} \mbox{\hyperlink{classToken_a6
 \doxysubsection{Detailed Description}
 
 
-Definition at line 101 of file Token.\+h.
+Definition at line 102 of file Token.\+h.
 
 
 
@@ -50,13 +53,13 @@ Gets the actual string found when creating the token.
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-The lexeme or the literal text of the token (Ex\+: the text for a token of type LT is \char`\"{}$<$\char`\"{})
+The lexeme or the literal text of the token (Ex\+: the text for a token of type \mbox{\hyperlink{classLT}{LT}} is \char`\"{}$<$\char`\"{})
 
 the lexeme representing the token (ex\+: \char`\"{}while\char`\"{}) 
 \end{DoxyReturn}
 
 
-Definition at line 223 of file Token.\+cpp.
+Definition at line 224 of file Token.\+cpp.
 
 \mbox{\Hypertarget{classToken_add2e46eda0cc728e3ac8149fc0145cff}\label{classToken_add2e46eda0cc728e3ac8149fc0145cff}} 
 \index{Token@{Token}!get\_position@{get\_position}}
@@ -83,7 +86,7 @@ the position of the token object
 \end{DoxySeeAlso}
 
 
-Definition at line 214 of file Token.\+cpp.
+Definition at line 215 of file Token.\+cpp.
 
 \mbox{\Hypertarget{classToken_a4b6aff1a9d2703b3ea6ce6941f9110f2}\label{classToken_a4b6aff1a9d2703b3ea6ce6941f9110f2}} 
 \index{Token@{Token}!get\_type@{get\_type}}
@@ -103,7 +106,7 @@ an enum representation of the token
 \end{DoxyReturn}
 
 
-Definition at line 231 of file Token.\+cpp.
+Definition at line 232 of file Token.\+cpp.
 
 \mbox{\Hypertarget{classToken_a0d77acdb54e0c7231fd7fc3c3b0d338d}\label{classToken_a0d77acdb54e0c7231fd7fc3c3b0d338d}} 
 \index{Token@{Token}!make\_identifier\_token@{make\_identifier\_token}}
@@ -127,7 +130,7 @@ Creates a token representing a identifier or a keyword in the verilog language.
 \end{DoxyReturn}
 
 
-Definition at line 171 of file Token.\+cpp.
+Definition at line 172 of file Token.\+cpp.
 
 \mbox{\Hypertarget{classToken_ad5f5f43b5feb24a382a8a6d77a0d448a}\label{classToken_ad5f5f43b5feb24a382a8a6d77a0d448a}} 
 \index{Token@{Token}!make\_macro\_token@{make\_macro\_token}}
@@ -161,7 +164,7 @@ Creates a token representing a macro or an identifier for a macro in the verilog
 \end{DoxyReturn}
 
 
-Definition at line 186 of file Token.\+cpp.
+Definition at line 187 of file Token.\+cpp.
 
 \mbox{\Hypertarget{classToken_adebc775df817072f8a7ebf0574ed686c}\label{classToken_adebc775df817072f8a7ebf0574ed686c}} 
 \index{Token@{Token}!make\_number\_token@{make\_number\_token}}
@@ -171,8 +174,20 @@ Definition at line 186 of file Token.\+cpp.
 
 
 
-Creates a token representing a Num\+Wrap in the verilog language. 
+Creates a token representing a number in the verilog language. 
 
+Creates a token representing a Num\+Wrap in the verilog language.
+
+
+\begin{DoxyParams}{Parameters}
+{\em lexeme} & string you want representing the number 1, 4, \textquotesingle{}b1101010 etc... \\
+\hline
+{\em position} & the position of the current \mbox{\hyperlink{classToken}{Token}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classToken}{Token}} of the type number
+\end{DoxyReturn}
 
 \begin{DoxyParams}{Parameters}
 {\em lexeme} & string you want representing the Num\+Wrap 1, 4, \textquotesingle{}b1101010 etc... \\
@@ -185,7 +200,7 @@ Creates a token representing a Num\+Wrap in the verilog language.
 \end{DoxyReturn}
 
 
-Definition at line 149 of file Token.\+cpp.
+Definition at line 150 of file Token.\+cpp.
 
 \mbox{\Hypertarget{classToken_a6fff80b9ae258212a35dde2f509b8e2b}\label{classToken_a6fff80b9ae258212a35dde2f509b8e2b}} 
 \index{Token@{Token}!make\_operator\_token@{make\_operator\_token}}
@@ -209,7 +224,7 @@ Creates a token representing an operator in the verilog language.
 \end{DoxyReturn}
 
 
-Definition at line 204 of file Token.\+cpp.
+Definition at line 205 of file Token.\+cpp.
 
 \mbox{\Hypertarget{classToken_ac9556e65013bdc51afdfb78180594aa8}\label{classToken_ac9556e65013bdc51afdfb78180594aa8}} 
 \index{Token@{Token}!make\_string\_token@{make\_string\_token}}
@@ -233,7 +248,7 @@ Creates a token representing a string in the verilog language.
 \end{DoxyReturn}
 
 
-Definition at line 160 of file Token.\+cpp.
+Definition at line 161 of file Token.\+cpp.
 
 \mbox{\Hypertarget{classToken_a6ebea2567387ccba0f2c3a8f056408d2}\label{classToken_a6ebea2567387ccba0f2c3a8f056408d2}} 
 \index{Token@{Token}!to\_string@{to\_string}}
@@ -247,7 +262,7 @@ Definition at line 160 of file Token.\+cpp.
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-A text that displays all of the characteristics of a \mbox{\hyperlink{classToken}{Token}} (Ex\+: the text for a token of type LT is \char`\"{}$<$\char`\"{})
+A text that displays all of the characteristics of a \mbox{\hyperlink{classToken}{Token}} (Ex\+: the text for a token of type \mbox{\hyperlink{classLT}{LT}} is \char`\"{}$<$\char`\"{})
 \end{DoxyReturn}
 
 \begin{DoxyParams}{Parameters}
@@ -259,7 +274,7 @@ a string representing the entire \mbox{\hyperlink{classToken}{Token}} containing
 \end{DoxyReturn}
 
 
-Definition at line 240 of file Token.\+cpp.
+Definition at line 241 of file Token.\+cpp.
 
 
 

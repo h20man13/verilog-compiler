@@ -1,0 +1,113 @@
+\hypertarget{classStrValue}{}\doxysection{Str\+Value Class Reference}
+\label{classStrValue}\index{StrValue@{StrValue}}
+
+
+The string ast node class is used to store string objects.  
+
+
+
+
+{\ttfamily \#include $<$Str\+Value.\+h$>$}
+
+Inheritance diagram for Str\+Value\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{d0/d12/classStrValue}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classStrValue_aa748dbc139a9c37e8733be5c8d63a51c}{Str\+Value}} (const \mbox{\hyperlink{classToken}{Token}} \&tok)
+\begin{DoxyCompactList}\small\item\em The \mbox{\hyperlink{classString}{String}} class is used to store a string object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classStrValue_a7e6d3957091414fed705563b8b57bf65}{Str\+Value}} (const \mbox{\hyperlink{classStrValue}{Str\+Value}} \&str)
+\begin{DoxyCompactList}\small\item\em the copy constructor to create string ast nodes \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classStrValue_ad2bfa1efc08b180df0f4018804103d54}\label{classStrValue_ad2bfa1efc08b180df0f4018804103d54}} 
+void \mbox{\hyperlink{classStrValue_ad2bfa1efc08b180df0f4018804103d54}{code\+\_\+gen}} () const
+\begin{DoxyCompactList}\small\item\em The code gen method is used to emit a string in llvm IR. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classObjBase}{Obj\+Base}} $\ast$const \mbox{\hyperlink{classStrValue_a7d8ff33b20ba4b21b4f146f6e67d29cc}{evaluate}} ()
+\begin{DoxyCompactList}\small\item\em The evaluate method is used to interpret a string ast node object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+The string ast node class is used to store string objects. 
+
+\begin{DoxyAuthor}{Author}
+Jacob Bauer 
+\end{DoxyAuthor}
+
+
+Definition at line 18 of file Str\+Value.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classStrValue_aa748dbc139a9c37e8733be5c8d63a51c}\label{classStrValue_aa748dbc139a9c37e8733be5c8d63a51c}} 
+\index{StrValue@{StrValue}!StrValue@{StrValue}}
+\index{StrValue@{StrValue}!StrValue@{StrValue}}
+\doxysubsubsection{\texorpdfstring{StrValue()}{StrValue()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Str\+Value\+::\+Str\+Value (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classToken}{Token}} \&}]{tok }\end{DoxyParamCaption})}
+
+
+
+The \mbox{\hyperlink{classString}{String}} class is used to store a string object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tok} & the token that represents the string \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 4 of file Str\+Value.\+cpp.
+
+\mbox{\Hypertarget{classStrValue_a7e6d3957091414fed705563b8b57bf65}\label{classStrValue_a7e6d3957091414fed705563b8b57bf65}} 
+\index{StrValue@{StrValue}!StrValue@{StrValue}}
+\index{StrValue@{StrValue}!StrValue@{StrValue}}
+\doxysubsubsection{\texorpdfstring{StrValue()}{StrValue()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Str\+Value\+::\+Str\+Value (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classStrValue}{Str\+Value}} \&}]{str }\end{DoxyParamCaption})}
+
+
+
+the copy constructor to create string ast nodes 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & the string object that will be coppied \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 6 of file Str\+Value.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classStrValue_a7d8ff33b20ba4b21b4f146f6e67d29cc}\label{classStrValue_a7d8ff33b20ba4b21b4f146f6e67d29cc}} 
+\index{StrValue@{StrValue}!evaluate@{evaluate}}
+\index{evaluate@{evaluate}!StrValue@{StrValue}}
+\doxysubsubsection{\texorpdfstring{evaluate()}{evaluate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classObjBase}{Obj\+Base}} $\ast$const Str\+Value\+::evaluate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+The evaluate method is used to interpret a string ast node object. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classExpression_aded287b288eee88a418e595a63335eaa}{Expression}}.
+
+
+
+Definition at line 12 of file Str\+Value.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/ast/expression/Str\+Value.\+h\item 
+src/ast/expression/Str\+Value.\+cpp\end{DoxyCompactItemize}

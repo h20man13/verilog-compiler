@@ -9,6 +9,7 @@
 #define FUNCTIONCALL_H
 
 #include "ast/expression/Expression.h"
+#include "SymbolTable.h"
 #include <list>
 
 /**
@@ -19,9 +20,10 @@ class FunctionCall: public Expression{
 private:
 	const std::string function_name; //the function name being called
 	std::list<Expression* const> param_list; //the list of parameters for the function
+	SymbolTable* const table;
 public:
 
-	FunctionCall(const Position& position, const std::string& function_name, const std::list<Expression* const> &concat_list);
+	FunctionCall(const Position& position, const std::string& function_name, const std::list<Expression* const> &concat_list, SymbolTable* const table);
 
 	FunctionCall(const FunctionCall& func_call);
 

@@ -11,24 +11,24 @@
 #include "common/Position.h"
 #include "common/types/ObjBase.h"
 #include "ast/statement/Statement.h"
-#include "ast/expression/Expression.h"
+#include "ast/expression/ConstantExpression.h"
 
 /**
  * The statement abstract class is used to store statement objects on the ast tree
  * @author Jacob Bauer
  */
 
-class Repeat: Statement{
+class Repeat: public Statement{
 
 	private:
-	Expression* const check;
+	ConstantExpression* const times;
 	Statement* const statement;
 
 	~Repeat();
 
 	public:
 
-	Repeat(const Position& position, Expression* const check, Statement* const statement);
+	Repeat(const Position& position, ConstantExpression* const times, Statement* const statement);
 
 	Repeat(const Repeat& repeat);
 

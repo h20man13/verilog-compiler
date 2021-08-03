@@ -12,13 +12,13 @@ The concatenation ast node class is used to simulate concatenation nodes in veri
 Inheritance diagram for Concatenation\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2.000000cm]{de/dc8/classConcatenation}
+\includegraphics[height=3.000000cm]{de/dc8/classConcatenation}
 \end{center}
 \end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classConcatenation_a54b531f6cf614a70d64f3da83ace5e7f}{Concatenation}} (const \mbox{\hyperlink{classPosition}{Position}} \&position, const std\+::list$<$ \mbox{\hyperlink{classExpression}{Expression}} $\ast$const $>$ concat\+\_\+list)
+\mbox{\hyperlink{classConcatenation_a3fe4ea133dfc0eaecaa3e1bb9c6049c6}{Concatenation}} (const \mbox{\hyperlink{classPosition}{Position}} \&position, const std\+::list$<$ \mbox{\hyperlink{classExpression}{Expression}} $\ast$const $>$ concat\+\_\+list, \mbox{\hyperlink{classSymbolTable}{Symbol\+Table}} $\ast$const table)
 \begin{DoxyCompactList}\small\item\em The default concatenation constructor it takes a position as well as a list of expressions that will be concatenated. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classConcatenation_a6bba03be4704619961e8d8978817de8e}{Concatenation}} (const \mbox{\hyperlink{classConcatenation}{Concatenation}} \&concatenation)
 \begin{DoxyCompactList}\small\item\em The concatenation copy constructor. \end{DoxyCompactList}\item 
@@ -33,6 +33,7 @@ void \mbox{\hyperlink{classConcatenation_a6753bedfe5b5953f96f167eea7b1708c}{code
 \mbox{\Hypertarget{classConcatenation_a1761ff502de6683c4b9af96a769dccb1}\label{classConcatenation_a1761ff502de6683c4b9af96a769dccb1}} 
 \mbox{\hyperlink{classObjBase}{Obj\+Base}} $\ast$const \mbox{\hyperlink{classConcatenation_a1761ff502de6683c4b9af96a769dccb1}{access}} () const
 \begin{DoxyCompactList}\small\item\em The access operator is used to assign elements. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
 
 
 \doxysubsection{Detailed Description}
@@ -48,11 +49,11 @@ Definition at line 21 of file Concatenation.\+h.
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{classConcatenation_a54b531f6cf614a70d64f3da83ace5e7f}\label{classConcatenation_a54b531f6cf614a70d64f3da83ace5e7f}} 
+\mbox{\Hypertarget{classConcatenation_a3fe4ea133dfc0eaecaa3e1bb9c6049c6}\label{classConcatenation_a3fe4ea133dfc0eaecaa3e1bb9c6049c6}} 
 \index{Concatenation@{Concatenation}!Concatenation@{Concatenation}}
 \index{Concatenation@{Concatenation}!Concatenation@{Concatenation}}
 \doxysubsubsection{\texorpdfstring{Concatenation()}{Concatenation()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily Concatenation\+::\+Concatenation (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classPosition}{Position}} \&}]{position,  }\item[{const std\+::list$<$ \mbox{\hyperlink{classExpression}{Expression}} $\ast$const $>$}]{concat\+\_\+list }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily Concatenation\+::\+Concatenation (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classPosition}{Position}} \&}]{position,  }\item[{const std\+::list$<$ \mbox{\hyperlink{classExpression}{Expression}} $\ast$const $>$}]{concat\+\_\+list,  }\item[{\mbox{\hyperlink{classSymbolTable}{Symbol\+Table}} $\ast$const}]{table }\end{DoxyParamCaption})}
 
 
 
@@ -95,7 +96,7 @@ Definition at line 10 of file Concatenation.\+cpp.
 \index{Concatenation@{Concatenation}!evaluate@{evaluate}}
 \index{evaluate@{evaluate}!Concatenation@{Concatenation}}
 \doxysubsubsection{\texorpdfstring{evaluate()}{evaluate()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classObjBase}{Obj\+Base}} $\ast$const Concatenation\+::evaluate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{classObjBase}{Obj\+Base}} $\ast$const Concatenation\+::evaluate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
@@ -104,6 +105,10 @@ The evaluate function will interpret the concatenation and will output the corre
 \begin{DoxyReturn}{Returns}
 an \mbox{\hyperlink{classObject}{Object}} value 
 \end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classExpression_aded287b288eee88a418e595a63335eaa}{Expression}}.
+
 
 
 Definition at line 28 of file Concatenation.\+cpp.

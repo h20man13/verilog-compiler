@@ -15,7 +15,7 @@
  * The Replication class is for ast nodes representing verilogs replication operator. This operator is used to replicate an arrangement of wires or registers
  * @author Jacob Bauer
  */
-class Replication : Expression{
+class Replication : public Expression{
 private:
 	ConstantExpression* const times; //the number of times the expression should be replicated
 	Expression* const exp; //the expression to be replicated

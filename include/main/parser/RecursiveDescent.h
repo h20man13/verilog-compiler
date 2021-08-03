@@ -96,6 +96,7 @@
 #include "ast/expression/ConstantExpression.h"
 #include "ast/expression/Slice.h"
 #include "ast/expression/Index.h"
+#include "ast/expression/EmptyExpression.h"
 #include "ast/expression/unary_operation/BNeg.h"
 #include "ast/expression/unary_operation/LNeg.h"
 #include "ast/expression/unary_operation/Neg.h"
@@ -118,7 +119,7 @@ private:
 	//main parsing methods
 	void eat();
 	bool eat_if_yummy(const tok type);
-	Token match(const tok type, const enum error_action=ABORT, const tok delim=type);
+	Token match(const tok type, const enum error_action=ABORT, const tok delim=tok::SEMI);
 	Token skip();
 	Token peek(int ahead = 0);
 	bool will_match(const tok type, int ahead = 0);
@@ -129,89 +130,87 @@ private:
 	//ast node parsing methods
 	//module
 
-	Declaration* const parse_module_par_declaration();
+	Declaration* const parse_module_par_declaration(SymbolTable* const table);
 	//mod_items
-	ModInstance* const parse_mod_instance();
-	ModInstantiation* const parse_mod_instantiation();
-	AndGateDeclaration* const parse_and_gate_declaration();
-	NandGateDeclaration* const parse_nand_gate_declaration();
-	NorGateDeclaration* const parse_nor_gate_declaration();
-	NotGateDeclaration* const parse_not_gate_declaration();
-	OrGateDeclaration* const parse_or_gate_declaration();
-	XnorGateDeclaration* const parse_xnor_gate_declaration();
-	XorGateDeclaration* const parse_xor_gate_declaration();
-	IntegerDeclaration* const parse_integer_declaration();
-	RealDeclaration* const parse_real_declaration();
-	Declaration* const parse_output_declaration();
-	Declaration* const parse_input_declaration();
-	Declaration* const parse_input_reg_declaration();
-	Declaration* const parse_output_reg_declaration();
-	Declaration* const parse_input_wire_declaration();
-	Declaration* const parse_output_wire_declaration();
-	Declaration* const parse_wire_declaration();
-	Declaration* const parse_reg_declaration();
-	ContinuousAssignment* const parse_continuous_assignment();
-	ContAssignInstance* const parse_cont_assign_instance();
-	AlwaysStatement* const parse_always_statement();
-	InitialStatement* const parse_initial_statement();
-	Declaration* const parse_declaration();
-	TaskDeclaration* const parse_task_declaration();
-	Declaration* const parse_function_name();
-	FunctionDeclaration* const parse_function_declaration();
-	ModItem* const parse_mod_item();
+	ModInstance* const parse_mod_instance(SymbolTable* const table);
+	ModInstantiation* const parse_mod_instantiation(SymbolTable* const table);
+	AndGateDeclaration* const parse_and_gate_declaration(SymbolTable* const table);
+	NandGateDeclaration* const parse_nand_gate_declaration(SymbolTable* const table);
+	NorGateDeclaration* const parse_nor_gate_declaration(SymbolTable* const table);
+	NotGateDeclaration* const parse_not_gate_declaration(SymbolTable* const table);
+	OrGateDeclaration* const parse_or_gate_declaration(SymbolTable* const table);
+	XnorGateDeclaration* const parse_xnor_gate_declaration(SymbolTable* const table);
+	XorGateDeclaration* const parse_xor_gate_declaration(SymbolTable* const table);
+	IntegerDeclaration* const parse_integer_declaration(SymbolTable* const table);
+	RealDeclaration* const parse_real_declaration(SymbolTable* const table);
+	Declaration* const parse_output_declaration(SymbolTable* const table);
+	Declaration* const parse_input_declaration(SymbolTable* const table);
+	Declaration* const parse_input_reg_declaration(SymbolTable* const table);
+	Declaration* const parse_output_reg_declaration(SymbolTable* const table);
+	Declaration* const parse_input_wire_declaration(SymbolTable* const table);
+	Declaration* const parse_output_wire_declaration(SymbolTable* const table);
+	Declaration* const parse_wire_declaration(SymbolTable* const table);
+	Declaration* const parse_reg_declaration(SymbolTable* const table);
+	ContinuousAssignment* const parse_continuous_assignment(SymbolTable* const table);
+	ContAssignInstance* const parse_cont_assign_instance(SymbolTable* const table);
+	AlwaysStatement* const parse_always_statement(SymbolTable* const table);
+	InitialStatement* const parse_initial_statement(SymbolTable* const table);
+	Declaration* const parse_declaration(SymbolTable* const table);
+	TaskDeclaration* const parse_task_declaration(SymbolTable* const table);
+	Declaration* const parse_function_name(SymbolTable* const table);
+	FunctionDeclaration* const parse_function_declaration(SymbolTable* const table);
 
 
 	//statements
 
-	For* const parse_for_statement();
-	SequentialBlock* const parse_sequential_block();
-	Wait* const parse_wait_statement();
-	While* const parse_while_statement();
-	Repeat* const parse_repeat_statement();
-	Forever* const parse_forever_statement();
-	CaseX* const parse_casex_statement();
-	CaseZ* const parse_casez_statement();
-	Case* const parse_case_statement();
-	CaseItem* const parse_case_item();
-	If* const parse_if_statement();
-	ProceduralAssignment* const parse_procedural_assignment(LValue* const lvalue);
-	Statement* const parse_statement_or_null();
-	Blocking* const parse_blocking_assignment_statement();
+	For* const parse_for_statement(SymbolTable* const table);
+	SequentialBlock* const parse_sequential_block(SymbolTable* const table);
+	Wait* const parse_wait_statement(SymbolTable* const table);
+	While* const parse_while_statement(SymbolTable* const table);
+	Repeat* const parse_repeat_statement(SymbolTable* const table);
+	Forever* const parse_forever_statement(SymbolTable* const table);
+	CaseX* const parse_casex_statement(SymbolTable* const table);
+	CaseZ* const parse_casez_statement(SymbolTable* const table);
+	Case* const parse_case_statement(SymbolTable* const table);
+	CaseItem* const parse_case_item(SymbolTable* const table);
+	If* const parse_if_statement(SymbolTable* const table);
+	ProceduralAssignment* const parse_procedural_assignment(LValue* const lvalue, SymbolTable* const table);
+	Statement* const parse_statement_or_null(SymbolTable* const table);
+	Blocking* const parse_blocking_assignment_statement(SymbolTable* const table);
 
 	//expressions
-	LValue* const parse_l_value();
-	RegValue* const parse_reg_value();
-	PortConnection* const parse_port_connection();
-	Expression* const parse_expression_or_null();
-	RegValue* const parse_reg_value();
-	Expression* const parse_logical_or_expression();
-	Expression* const parse_logical_and_expression();
-	Expression* const parse_bitwise_or_expression();
-	Expression* const parse_bitwise_xor_expression();
-	Expression* const parse_bitwise_and_expression();
-	Expression* const parse_equality_expression();
-	Expression* const parse_rel_expression();
-	Expression* const parse_shift_expression();
-	Expression* const parse_add_expression();
-	Expression* const parse_mult_expression();
-	Expression* const parse_unary_expression();
-	ConstantExpression* const parse_constant_expression();
-	Expression* const parse_primary();
-	SystemFunctionCall* const parse_system_function_call()
-	Expression* const parse_concatenation_or_replication();
-	Concatenation* const parse_concatenation();
-	Expression* const parse_macro_identifier();
-	Identifier* const parse_identifier();
-	NumValue* const parse_num_value();
-	StrValue* const parse_str_value();
+	LValue* const parse_l_value(SymbolTable* const table);
+	RegValue* const parse_reg_value(SymbolTable* const table);
+	PortConnection* const parse_port_connection(SymbolTable* const table);
+	Expression* const parse_expression_or_null(SymbolTable* const table);
+	Expression* const parse_logical_or_expression(SymbolTable* const table);
+	Expression* const parse_logical_and_expression(SymbolTable* const table);
+	Expression* const parse_bitwise_or_expression(SymbolTable* const table);
+	Expression* const parse_bitwise_xor_expression(SymbolTable* const table);
+	Expression* const parse_bitwise_and_expression(SymbolTable* const table);
+	Expression* const parse_equality_expression(SymbolTable* const table);
+	Expression* const parse_rel_expression(SymbolTable* const table);
+	Expression* const parse_shift_expression(SymbolTable* const table);
+	Expression* const parse_add_expression(SymbolTable* const table);
+	Expression* const parse_mult_expression(SymbolTable* const table);
+	Expression* const parse_unary_expression(SymbolTable* const table);
+	ConstantExpression* const parse_constant_expression(SymbolTable* const table);
+	Expression* const parse_primary(SymbolTable* const table);
+	SystemFunctionCall* const parse_system_function_call(SymbolTable* const table);
+	Expression* const parse_concatenation_or_replication(SymbolTable* const table);
+	Concatenation* const parse_concatenation(SymbolTable* const table);
+	Expression* const parse_macro_identifier(SymbolTable* const table);
+	Identifier* const parse_identifier(SymbolTable* const table);
+	NumValue* const parse_num_value(SymbolTable* const table);
+	StrValue* const parse_str_value(SymbolTable* const table);
 protected:
 	virtual ~RecursiveDescent();
 public:
-	Expression* const parse_expression() = 0;
-	Statement* const parse_statement() = 0;
-    ModItem* const parse_mod_item() = 0;
-	Module* const parse_module() = 0;
-	File* const parse_file() = 0;
+	Expression* const parse_expression(SymbolTable* const table);
+	Statement* const parse_statement(SymbolTable* const table);
+    ModItem* const parse_mod_item(SymbolTable* const table);
+	Module* const parse_module(SymbolTable* const table);
+	File* const parse_file(SymbolTable* const table);
 };
 
 

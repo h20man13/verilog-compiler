@@ -1,7 +1,7 @@
 #include "ast/mod_item/FunctionDeclaration.h"
 
 
-FunctionDeclaration::FunctionDeclaration(const Position& position, Declaration* const func_name, std::list<Declaration* const> param, std::list<Declaration* const> local, Statement* const statement): ModItem(position), func_name(func_name), statement(statement){
+FunctionDeclaration::FunctionDeclaration(const Position& position, Declaration* const func_name, std::list<Declaration* const> param, std::list<Declaration* const> local, Statement* const statement, SymbolTable* const table): ModItem(position), table(table), func_name(func_name), statement(statement){
 	for(std::list<Declaration* const>::const_iterator it = param.begin(); it != param.end(); it++){
 		this->paramaters.push_back(*it);
 	}
@@ -10,7 +10,7 @@ FunctionDeclaration::FunctionDeclaration(const Position& position, Declaration* 
 	}
 }
 
-FunctionDeclaration::FunctionDeclaration(const FunctionDeclaration& declaration): ModItem(declaration.get_position()), func_name(declaration.func_name), statement(declaration.statement){
+FunctionDeclaration::FunctionDeclaration(const FunctionDeclaration& declaration): ModItem(declaration.get_position()), func_name(declaration.func_name), statement(declaration.statement), table(declaration.table){
 	for(std::list<Declaration* const>::const_iterator it = declaration.paramaters.begin(); it != declaration.paramaters.end(); it++){
 		this->paramaters.push_back(*it);
 	}
