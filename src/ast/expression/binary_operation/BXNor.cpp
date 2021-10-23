@@ -8,7 +8,7 @@
 #include "ast/expression/binary_operation/BXNor.h"
 #include "ast/expression/binary_operation/Binary.h"
 #include "ast/expression/Expression.h"
-#include "common/types/TypeOpUtils.h"
+#include "common/TypeOpUtils.h"
 
 BXNor::BXNor(const Position& position, Expression* const left, Expression* const right): AstNode(position), Binary(position, left, right){}
 
@@ -18,11 +18,16 @@ void BXNor::code_gen() const {
 	// TODO -- finish this later
 }
 
-ObjBase* const BXNor::evaluate() {
-	ObjBase *const left = this->left->evaluate();
-	ObjBase *const right = this->right->evaluate();
+Object* const BXNor::evaluate() {
+	Object *const left = this->left->evaluate();
+	Object *const right = this->right->evaluate();
 
-	return bxnor(left, right);
+	Object* result = bxnor(left, right);
+
+	delete left;
+	delete right;
+
+	return result;
 }
 
 

@@ -8,7 +8,7 @@
 #include "ast/expression/binary_operation/LAnd.h"
 #include "ast/expression/binary_operation/Binary.h"
 #include "ast/expression/Expression.h"
-#include "common/types/TypeOpUtils.h"
+#include "common/TypeOpUtils.h"
 
 LAnd::LAnd(const Position& position, Expression* const left, Expression* const right): AstNode(position), Binary(position, left, right){}
 
@@ -25,8 +25,16 @@ void LAnd::code_gen() const {
  * The evaluate method is used to evaluate
  * @return
  */
-ObjBase* const LAnd::evaluate() {
-	return land(this->left->evaluate(), this->right->evaluate());
+Object* const LAnd::evaluate() {
+	Object *const left = this->left->evaluate();
+	Object *const right = this->right->evaluate();
+
+	Object* result = land(left, right);
+
+	delete left;
+	delete right;
+
+	return result;
 }
 
 

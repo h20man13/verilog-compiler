@@ -9,7 +9,6 @@
 #define BINARY_H
 
 #include "ast/expression/Expression.h"
-#include "common/types/Number.h"
 
 class Binary: public Expression{
 protected:
@@ -24,7 +23,7 @@ public:
 	 * @tparam num_type the return type of the expression
 	 * @return
 	 */
-	 virtual ObjBase* const evaluate() = 0;
+	 virtual Object* const evaluate() = 0;
 
 	/**
 	 * The code_gen method is used to generate the LLVM IR of an expression object

@@ -9,6 +9,6 @@ void StrValue::code_gen() const {
 	//TODO -- emit llvm IR
 }
 
-ObjBase* const StrValue::evaluate() {
+Object* const StrValue::evaluate() {
 	return NULL;
 }

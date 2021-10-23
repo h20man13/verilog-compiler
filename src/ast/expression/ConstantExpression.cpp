@@ -8,7 +8,7 @@ void ConstantExpression::code_gen() const {
 	//LLVM generate llvm
 }
 
-ObjBase* const ConstantExpression::evaluate() {
+Object* const ConstantExpression::evaluate() {
 	return NULL;
 }
 

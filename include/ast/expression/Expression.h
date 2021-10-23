@@ -8,7 +8,6 @@
 #ifndef EXPRESSION_H
 #define EXPRESSION_H
 
-#include "common/types/ObjBase.h"
 #include "ast/AstNode.h"
 
 /**
@@ -29,7 +28,7 @@ public:
 	 * The interpret method interprets the Expression directly and returns the result
 	 * @return the result of the computed expression
 	 */
-	 virtual ObjBase* const evaluate() = 0;
+	 virtual Object* const evaluate() = 0;
 
 	 /**
 	  * The default destructor for expression objects

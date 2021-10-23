@@ -11,7 +11,7 @@ void Slice::code_gen() const {
 	//TODO -- generate llvm IR
 }
 
-ObjBase* const Slice::evaluate() {
+Object* const Slice::evaluate() {
 	//TODO -- evaluate the expression
 	return NULL;
 }

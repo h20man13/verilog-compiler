@@ -43,13 +43,13 @@ public:
 	 * @return  an object representing the result from the evaluation
 	 */
 
-	ObjBase* const evaluate();
+	Object* const evaluate();
 
 	/**
 	 * The access operator is used to access the element that will need to be assigned to
 	 */
 
-	ObjBase* const access() const;
+	Object* const access() const;
 
 	void declare() const;
 

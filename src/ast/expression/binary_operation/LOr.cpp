@@ -8,7 +8,7 @@
 #include "ast/expression/binary_operation/LOr.h"
 #include "ast/expression/binary_operation/Binary.h"
 #include "ast/expression/Expression.h"
-#include "common/types/TypeOpUtils.h"
+#include "common/TypeOpUtils.h"
 
 LOr::LOr(const Position& position, Expression* const left, Expression* const right): AstNode(position), Binary(position, left, right){}
 
@@ -18,8 +18,16 @@ void LOr::code_gen() const {
 	// TODO -- finish this later
 }
 
-ObjBase* const LOr::evaluate() {
-	return lor(this->left->evaluate(),  this->right->evaluate());
+Object* const LOr::evaluate() {
+	Object *const left = this->left->evaluate();
+	Object *const right = this->right->evaluate();
+
+	Object* result = lor(left, right);
+
+	delete left;
+	delete right;
+
+	return result;
 }
 
 

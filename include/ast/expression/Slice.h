@@ -45,14 +45,14 @@ public:
 	 * The evaluate method can be used for interpreting expressions
 	 * @return
 	 */
-	ObjBase* const evaluate();
+	Object* const evaluate();
 
 	~Slice();
 
 	/**
 	 * The evaluate method is used access a range of elements
 	 */
-	ObjBase* const access() const;
+	Object* const access() const;
 
 	void declare() const;
 

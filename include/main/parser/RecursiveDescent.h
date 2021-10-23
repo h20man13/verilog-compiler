@@ -203,14 +203,15 @@ private:
 	Identifier* const parse_identifier(SymbolTable* const table);
 	NumValue* const parse_num_value(SymbolTable* const table);
 	StrValue* const parse_str_value(SymbolTable* const table);
-protected:
-	virtual ~RecursiveDescent();
 public:
+	virtual ~RecursiveDescent();
 	Expression* const parse_expression(SymbolTable* const table);
 	Statement* const parse_statement(SymbolTable* const table);
     ModItem* const parse_mod_item(SymbolTable* const table);
 	Module* const parse_module(SymbolTable* const table);
 	File* const parse_file(SymbolTable* const table);
+	RecursiveDescent(const ErrorLog &error_log, std::list<const Token> &token_list);
+	RecursiveDescent(const RecursiveDescent& parser);
 };
 
 

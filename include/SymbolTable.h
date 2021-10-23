@@ -39,26 +39,33 @@ public:
 	};
 
 	struct Entry{
+			Entry(const std::string identifier, unsigned int data, const Position position, AstNode* const address);
+			Entry(const Entry& entry);
 			const std::string identifier;
 			unsigned int data;
 			const Position position;
 			AstNode* const address;
 	};
 
-	SymbolTable(ErrorLog& error_log, SymbolTable const* const parent = NULL);
+	SymbolTable(const std::string& scope_name, ErrorLog& error_log, SymbolTable const* const parent = NULL);
+	~SymbolTable();
 
-	Entry const* const lookup(const std::string& key, const unsigned int data_type=ANY, const bool in_scope = false) const;
+	Entry* const lookup(const std::string& key, const unsigned int data_type=ANY, const bool in_scope = false) const;
 	void insert(const std::string& key, const unsigned int data_mask, const Position& position, AstNode* const address = NULL);
 	void set_attribute(const std::string& key, const unsigned int data);
 	bool get_attribute(const std::string& key, const unsigned int data);
+
+	const std::string to_string() const;
 
 private:
 
 	ErrorLog error_log;
 
-	std::list<const Entry> entries;
+	std::list<Entry* const> entries;
 
 	SymbolTable const* const parent;
+
+	const std::string scope_name;
 };
 
 

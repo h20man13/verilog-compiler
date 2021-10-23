@@ -17,7 +17,7 @@ void FunctionCall::code_gen() const{
 	//LLVM ir goes here
 }
 
-ObjBase* const FunctionCall::evaluate(){
+Object* const FunctionCall::evaluate(){
 	return NULL;
 }
 

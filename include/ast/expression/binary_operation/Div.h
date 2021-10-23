@@ -9,7 +9,6 @@
 #define DIV_H
 
 #include "ast/expression/binary_operation/Binary.h"
-#include "common/types/Real.h"
 
 /**
  * The Div class can be used to divide two numbers
@@ -26,7 +25,7 @@ public:
 	 * @return a NumWrap object
 	 */
 
-	ObjBase* const evaluate();
+	Object* const evaluate();
 
 	/**
 	 * The code_gen method is used to generate LLVM IR for a Div expression

@@ -7,7 +7,7 @@
 
 #include "ast/expression/Expression.h"
 #include "ast/expression/unary_operation/Unary.h"
-#include "common/types/Number.h"
+#include "OO-Types/include/Number.h"
 
 Unary::Unary(const Position& position, Expression* const exp) : AstNode(position), exp(exp){}
 

@@ -47,7 +47,7 @@ public:
 	 * The evaluate function will interpret the concatenation and will output the corresponding vector
 	 * @return an Object value
 	 */
-	ObjBase* const evaluate();
+	Object* const evaluate();
 
 	/**
 	 * The destructor of the Concatenation class it will delete all of the corresponding expressions in the list
@@ -58,7 +58,7 @@ public:
 	 * The access operator is used to assign elements
 	 */
 
-	ObjBase* const access() const;
+	Object* const access() const;
 
 };
 

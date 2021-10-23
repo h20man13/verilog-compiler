@@ -8,7 +8,7 @@ void PortConnection::code_gen() const {
 	//TODO - ADD llvm emit code here
 }
 
-ObjBase* const PortConnection::evaluate(){
+Object* const PortConnection::evaluate(){
 	return NULL;
 }
 

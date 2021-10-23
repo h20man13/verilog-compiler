@@ -9,7 +9,7 @@
 #define BXor_H
 
 #include "ast/expression/binary_operation/Binary.h"
-#include "common/types/Number.h"
+#include "OO-Types/include/Number.h"
 
 /**
  * The binary Xnor operation performs a bitwise or with a bitwise negation at the end
@@ -24,7 +24,7 @@ public:
 	 * The interpret function interprets the node and it returns an integer
 	 * @return an Integer or an int object representing the function
 	 */
-	 ObjBase* const evaluate();
+	 Object* const evaluate();
 
 	/**
 	 * The code gen function generates the LLVM code to be used for the Binary Xnor operation

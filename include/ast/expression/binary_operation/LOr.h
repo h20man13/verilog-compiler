@@ -19,7 +19,7 @@ public:
 	 * @tparam num_type
 	 * @return a boolean from the result of the && expression
 	 */
-	ObjBase* const evaluate();
+	Object* const evaluate();
 
 	/**
 	 * The code generation function that is used to emit LLVM IR

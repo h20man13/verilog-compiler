@@ -23,15 +23,22 @@ file(GLOB_RECURSE SRCFILES "${SRCDIR}/*.cpp")
 file(GLOB_RECURSE TESTFILES "${TESTDIR}/*.cpp")
 
 #set project name
-project(emulator_ide VERSION 1.0)
+project(verilog_compiler VERSION 1.0)
 
-include_directories(${INCLUDEDIR})
+add_subdirectory(lib) #add libraries used to build this project
 
-add_library(SRCLIB STATIC ${SRCFILES})
+include_directories(${INCLUDEDIR} ${LIBDIR})
+
+
+add_library(VERILOG_COMP STATIC ${SRCFILES})
+target_link_libraries(VERILOG_COMP OBJTYPES)
 
 add_subdirectory(bin)
 
-add_custom_target(check COMMAND ${CMAKE_CTEST_COMMAND} --verbose)
-add_custom_target(delete COMMAND find . -type f -name '*~' -delete)
-add_custom_target(document COMMAND doxygen ${ROOTDIR}/dconfig)
-add_custom_target(cmake COMMAND cmake ${ROOTDIR}/CMakeLists.txt)
+get_directory_property(hasParent PARENT_DIRECTORY)
+if(NOT hasParent)
+    add_custom_target(check COMMAND ${CMAKE_CTEST_COMMAND} --verbose)
+    add_custom_target(delete COMMAND find . -type f -name '*~' -delete)
+    add_custom_target(document COMMAND doxygen ${ROOTDIR}/dconfig)
+    add_custom_target(cmake COMMAND cmake ${ROOTDIR}/CMakeLists.txt)
+endif()

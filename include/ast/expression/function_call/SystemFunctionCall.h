@@ -43,7 +43,7 @@ public:
 	 * The evaluate method evaluates a system function and it returns a value of type object
 	 * @return  an object
 	 */
-	ObjBase* const evaluate();
+	Object* const evaluate();
 
 
 };

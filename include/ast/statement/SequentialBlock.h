@@ -10,7 +10,7 @@
 
 #include "ast/statement/Statement.h"
 #include "common/Position.h"
-#include "common/types/ObjBase.h"
+#include "OO-Types/include/Object.h"
 #include <list>
 
 /**

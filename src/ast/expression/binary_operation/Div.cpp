@@ -8,7 +8,7 @@
 #include "ast/expression/binary_operation/Div.h"
 #include "ast/expression/binary_operation/Binary.h"
 #include "ast/expression/Expression.h"
-#include "common/types/TypeOpUtils.h"
+#include "common/TypeOpUtils.h"
 
 Div::Div(const Position& position, Expression* const left, Expression* const right): AstNode(position), Binary(position, left, right){}
 
@@ -18,10 +18,15 @@ void Div::code_gen() const {
 	// TODO -- finish this later
 }
 
-ObjBase* const Div::evaluate() {
-	ObjBase *const left = this->left->evaluate();
-	ObjBase *const right = this->right->evaluate();
+Object* const Div::evaluate() {
+	Object *const left = this->left->evaluate();
+	Object *const right = this->right->evaluate();
 
-	return div(left, right);
+	Object* result = div(left, right);
+
+	delete left;
+	delete right;
+
+	return result;
 }
 

@@ -1,6 +1,10 @@
 #include "main/parser/RecursiveDescent.h"
 #include "Token.h"
 
+RecursiveDescent::RecursiveDescent(const ErrorLog& error_log, std::list<const Token> &token_list): Parser(error_log, token_list){}
+
+RecursiveDescent::RecursiveDescent(const RecursiveDescent& parser): Parser(parser){}
+
 void RecursiveDescent::eat(){
 	if(!token_list.empty()){
 		token_list.pop_front();
@@ -59,7 +63,7 @@ File* const RecursiveDescent::parse_file(SymbolTable* const table){
 }
 
 Module* const RecursiveDescent::parse_module(SymbolTable* const table){
-	SymbolTable* const mod_table = new SymbolTable(error_log, table);
+	SymbolTable* const mod_table = new SymbolTable("Module ", error_log, table);
 	Position start = get_start();
 	match(tok::MODULE);
 	Identifier* ident = parse_identifier(mod_table);
@@ -213,7 +217,7 @@ ModItem* const RecursiveDescent::parse_mod_item(SymbolTable* const table){
 
 
 FunctionDeclaration* const RecursiveDescent::parse_function_declaration(SymbolTable* const table){
-	SymbolTable* const func_table = new SymbolTable(error_log, table);
+	SymbolTable* const func_table = new SymbolTable("Function Declaration", error_log, table);
 	const Position start = get_start();
 	match(tok::FUNCTION);
 	Declaration* const func_name = parse_function_name(func_table);
@@ -290,7 +294,7 @@ Declaration* const RecursiveDescent::parse_function_name(SymbolTable* const tabl
 }
 
 TaskDeclaration* const RecursiveDescent::parse_task_declaration(SymbolTable* const table) {
-	SymbolTable* const task_table = new SymbolTable(error_log, table);
+	SymbolTable* const task_table = new SymbolTable("Task Declaration", error_log, table);
 	const Position start = get_start();
 	match(tok::TASK);
 	Identifier* const task_name = parse_identifier(task_table);
@@ -1146,7 +1150,7 @@ Wait* const RecursiveDescent::parse_wait_statement(SymbolTable* const table){
 
 SequentialBlock* const RecursiveDescent::parse_sequential_block(SymbolTable* const table){
 	const Position start = get_start();
-	SymbolTable* const block_table = new SymbolTable(error_log, table);
+	SymbolTable* const block_table = new SymbolTable("Seq Block", error_log, table);
 	match(tok::BEGIN);
 
 	std::list<Statement* const> stats;

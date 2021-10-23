@@ -116,11 +116,11 @@ protected:
 	Parser(const Parser& parser);
 	const Position get_start() const;
 public:
-	virtual Expression* const parse_expression() = 0;
-	virtual Statement* const parse_statement() = 0;
-	virtual ModItem* const parse_mod_item() = 0;
-	virtual Module*  const parse_module() = 0;
-	virtual File*  const parse_file() = 0;
+	virtual Expression* const parse_expression(SymbolTable* const table) = 0;
+	virtual Statement* const parse_statement(SymbolTable* const table) = 0;
+	virtual ModItem* const parse_mod_item(SymbolTable* const table) = 0;
+	virtual Module*  const parse_module(SymbolTable* const table) = 0;
+	virtual File*  const parse_file(SymbolTable* const table) = 0;
 };
 
 

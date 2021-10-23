@@ -17,10 +17,10 @@ void Identifier::code_gen() const{
 	//TODO -- code gen function to generate LLVM bytecode
 }
 
-ObjBase* const Identifier::evaluate(){
+Object* const Identifier::evaluate(){
 	return NULL;
 }
 
-ObjBase* const Identifier::access() const{
+Object* const Identifier::access() const{
 	return NULL;
 }

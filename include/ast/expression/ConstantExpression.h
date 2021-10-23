@@ -41,7 +41,7 @@ public:
 	 * The evaluate function is used to evaluate expressions and determine their result
 	 * @return  an object representing the result of the function
 	 */
-	ObjBase* const evaluate();
+	Object* const evaluate();
 
 	/**
 	 * The constant expression desturctor

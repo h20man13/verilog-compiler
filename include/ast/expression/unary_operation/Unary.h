@@ -9,7 +9,7 @@
 #define UNARY_H
 
 #include "ast/expression/Expression.h"
-#include "common/types/Number.h"
+#include "OO-Types/include/Number.h"
 
 /**
  * The unary super class defines unary operations
@@ -27,7 +27,7 @@ public:
 	 * @tparam num_type the return type of the expression
 	 * @return a type
 	 */
-	 virtual ObjBase* const evaluate() = 0;
+	 virtual Object* const evaluate() = 0;
 
 	/**
 	 * The code_gen method is used to generate the LLVM IR of an expression object

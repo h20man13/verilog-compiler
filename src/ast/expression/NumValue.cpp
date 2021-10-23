@@ -9,7 +9,7 @@ void NumValue::code_gen() const {
 	//TODO -- add llvm ir code here
 }
 
-ObjBase* const NumValue::evaluate() {
+Object* const NumValue::evaluate() {
 	return NULL;
 }
 

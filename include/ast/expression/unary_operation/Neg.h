@@ -17,7 +17,7 @@ public:
 	 * The evaluate method is used to interpret the Logical and Expression
 	 * @return an value of type object or a NULL value
 	 */
-	ObjBase* const evaluate();
+	Object* const evaluate();
 
 	/**
 	 * The code generation function that is used to emit LLVM IR

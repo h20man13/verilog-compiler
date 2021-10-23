@@ -9,7 +9,7 @@
 #define SUB_H
 
 #include "ast/expression/binary_operation/Binary.h"
-#include "common/types/Number.h"
+#include "OO-Types/include/Number.h"
 
 /**
  * The subtract class is used for subtract operations.
@@ -24,7 +24,7 @@ public:
 	 * A function to perform interpretation on the subtraction operation
 	 * @return an integer that is the result of the binary operation
 	 */
-	ObjBase* const evaluate();
+	Object* const evaluate();
 
 	/**
 	 * The code_gen function is used to generate the code for the subtraction expression via syntax directed translation

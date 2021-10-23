@@ -7,7 +7,7 @@
 
 #include "ast/expression/Expression.h"
 #include "ast/expression/binary_operation/Binary.h"
-#include "common/types/Number.h"
+#include "OO-Types/include/Number.h"
 
 Binary::Binary(const Position& position, Expression* const left, Expression* const right) : AstNode(position), left(left), right(right){}
 

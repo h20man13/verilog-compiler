@@ -8,7 +8,7 @@
 #include "ast/expression/binary_operation/LT.h"
 #include "ast/expression/binary_operation/Binary.h"
 #include "ast/expression/Expression.h"
-#include "common/types/TypeOpUtils.h"
+#include "common/TypeOpUtils.h"
 
 LT::LT(const Position& position, Expression* const left, Expression* const right): AstNode(position), Binary(position, left, right){}
 
@@ -18,9 +18,9 @@ void LT::code_gen() const {
 	// TODO -- finish this later
 }
 
-ObjBase* const LT::evaluate() {
-	ObjBase *const left = this->left->evaluate();
-	ObjBase *const right = this->right->evaluate();
+Object* const LT::evaluate() {
+	Object *const left = this->left->evaluate();
+	Object *const right = this->right->evaluate();
 
 	return bor(left, right);
 }

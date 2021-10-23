@@ -1,5 +1,5 @@
 #include "common/Position.h"
-#include "common/types/ObjBase.h"
+#include "OO-Types/include/Object.h"
 #include "ast/expression/Expression.h"
 #include "ast/statement/Forever.h"
 

@@ -10,7 +10,7 @@ void SystemFunctionCall::code_gen() const{
 	//TODO -- generate LLVM
 }
 
-ObjBase* const SystemFunctionCall::evaluate(){
+Object* const SystemFunctionCall::evaluate(){
 	return NULL;
 }
 

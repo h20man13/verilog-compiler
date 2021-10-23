@@ -20,7 +20,7 @@ public:
 	 * The evaluate method is used to interpret the ~ Expression
 	 * @return a boolean from the result of the && expression
 	 */
-	ObjBase* const evaluate();
+	Object* const evaluate();
 
 	/**
 	 * The code generation function that is used to emit LLVM IR

@@ -8,7 +8,8 @@
 #ifndef LVALUE_H
 #define LVALUE_H
 
-#include "common/types/ObjBase.h"
+
+#include "OO-Types/include/Object.h"
 #include "ast/AstNode.h"
 #include "SymbolTable.h"
 
@@ -19,7 +20,7 @@ public:
    LValue(SymbolTable* const table);
    LValue(const LValue& lvalue);
    virtual ~LValue() = 0;
-   virtual ObjBase* const access() const = 0;
+   virtual Object* const access() const = 0;
 };
 
 

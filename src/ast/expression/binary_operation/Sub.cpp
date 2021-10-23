@@ -8,7 +8,7 @@
 #include "ast/expression/binary_operation/Sub.h"
 #include "ast/expression/binary_operation/Binary.h"
 #include "ast/expression/Expression.h"
-#include "common/types/TypeOpUtils.h"
+#include "common/TypeOpUtils.h"
 
 Sub::Sub(const Position& position, Expression* const left, Expression* const right): AstNode(position), Binary(position, left, right){}
 
@@ -18,9 +18,9 @@ void Sub::code_gen() const {
 	// TODO -- finish this later
 }
 
-ObjBase* const Sub::evaluate(){
-	ObjBase *const left = this->left->evaluate();
-	ObjBase *const right = this->right->evaluate();
+Object* const Sub::evaluate(){
+	Object *const left = this->left->evaluate();
+	Object *const right = this->right->evaluate();
 
 	return sub(left, right);
 }

@@ -9,7 +9,7 @@
 #define REPEAT_H
 
 #include "common/Position.h"
-#include "common/types/ObjBase.h"
+#include "OO-Types/include/Object.h"
 #include "ast/statement/Statement.h"
 #include "ast/expression/ConstantExpression.h"
 

@@ -40,7 +40,7 @@ public:
 	 * The evaluate method is used to interpret a string ast node object
 	 * @return
 	 */
-	ObjBase* const evaluate();
+	Object* const evaluate();
 };
 
 

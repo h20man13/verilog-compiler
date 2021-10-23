@@ -29,7 +29,7 @@ public:
 
 	virtual void code_gen() const;
 
-	virtual ObjBase* const evaluate();
+	virtual Object* const evaluate();
 
 	~FunctionCall();
 

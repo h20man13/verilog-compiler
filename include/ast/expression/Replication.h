@@ -46,7 +46,7 @@ public:
 	 * @return  the replication to be evaluated
 	 */
 
-	ObjBase* const evaluate();
+	Object* const evaluate();
 
 	/**
 	 * The destructor for replications deletes all of the expressions associated with the replication

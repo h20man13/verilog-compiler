@@ -22,7 +22,7 @@ public:
 
 	void code_gen() const;
 
-	ObjBase* const evaluate();
+	Object* const evaluate();
 
 	~TernaryOperation();
 };

@@ -50,7 +50,7 @@ public:
 	 * @return  an object value from the index
 	 */
 
-	ObjBase* const evaluate();
+	Object* const evaluate();
 
 	/**
 	 * The destructor is used to destroy index expressions
@@ -58,7 +58,7 @@ public:
 
 	~Index();
 
-	ObjBase* const access() const;
+	Object* const access() const;
 
 	void declare() const;
 

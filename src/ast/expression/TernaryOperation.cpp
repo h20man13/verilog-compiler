@@ -8,10 +8,10 @@ void TernaryOperation::code_gen() const {
 	//TODO -- generate llvm code
 }
 
-ObjBase* const TernaryOperation::evaluate(){
-	ObjBase* const check = this->check->evaluate();
+Object* const TernaryOperation::evaluate(){
+	Object* const check = this->check->evaluate();
 
-	ObjBase* to_ret;
+	Object* to_ret;
 	if(check->bool_value()){
 		to_ret = left->evaluate();
 	} else {

@@ -9,8 +9,8 @@
 #define BAnd_H
 
 #include "ast/expression/binary_operation/Binary.h"
-#include "common/types/Number.h"
-#include "common/types/Object.h"
+#include "OO-Types/include/Number.h"
+#include "OO-Types/include/Object.h"
 
 /**
  * The bitwise and class is used to perform bitwise and operation
@@ -25,7 +25,7 @@ public:
 	 * @param None
 	 * @return an Integer object
 	 */
-	ObjBase* const evaluate();
+	Object* const evaluate();
 
 	/**
 	 * The code gen method emits the LLVM code to be used to generate a bitwise and expression

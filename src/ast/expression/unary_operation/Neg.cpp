@@ -8,7 +8,7 @@
 
 Neg::Neg(const Position& start, Expression* const exp): AstNode(start), Unary(start, exp){};
 
-ObjBase* const Neg::evaluate(){
+Object* const Neg::evaluate(){
 	return NULL;
 }
 

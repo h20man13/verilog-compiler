@@ -6,10 +6,10 @@
  */
 
 #include "ast/expression/binary_operation/Mod.h"
-#include "common/types/ObjBase.h"
+#include "OO-Types/include/Object.h"
 #include "ast/expression/binary_operation/Binary.h"
 #include "ast/expression/Expression.h"
-#include "common/types/TypeOpUtils.h"
+#include "common/TypeOpUtils.h"
 
 Mod::Mod(const Position& position, Expression* const left, Expression* const right): AstNode(position), Binary(position, left, right){}
 
@@ -19,12 +19,17 @@ void Mod::code_gen() const {
 	// TODO -- finish this later
 }
 
-ObjBase* const Mod::evaluate() {
+Object* const Mod::evaluate() {
 
-	ObjBase *const left = this->left->evaluate();
-	ObjBase *const right = this->right->evaluate();
+	Object *const left = this->left->evaluate();
+	Object *const right = this->right->evaluate();
 
-	return mod(left, right);
+	Object* result = mod(left, right);
+
+	delete left;
+	delete right;
+
+	return result;
 }
 
 

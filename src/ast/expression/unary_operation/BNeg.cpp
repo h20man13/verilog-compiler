@@ -7,11 +7,11 @@
 
 #include "ast/expression/unary_operation/Unary.h"
 #include "ast/expression/unary_operation/BNeg.h"
-#include "common/types/TypeOpUtils.h"
+#include "common/TypeOpUtils.h"
 
 BNeg::BNeg(const Position& start, Expression* const exp): AstNode(start), Unary(start, exp){};
 
-ObjBase* const BNeg::evaluate(){
+Object* const BNeg::evaluate(){
 	return bneg(this->exp->evaluate());
 }
 

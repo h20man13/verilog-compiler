@@ -8,7 +8,7 @@
 #include "ast/expression/binary_operation/BXor.h"
 #include "ast/expression/binary_operation/Binary.h"
 #include "ast/expression/Expression.h"
-#include "common/types/TypeOpUtils.h"
+#include "common/TypeOpUtils.h"
 
 
 BXor::BXor(const Position& position, Expression* const left, Expression* const right): AstNode(position), Binary(position, left, right){}
@@ -19,10 +19,15 @@ void BXor::code_gen() const {
 	// TODO -- finish this later
 }
 
-ObjBase* const BXor::evaluate() {
-	ObjBase *const left = this->left->evaluate();
-	ObjBase *const right = this->right->evaluate();
+Object* const BXor::evaluate() {
+	Object *const left = this->left->evaluate();
+	Object *const right = this->right->evaluate();
 
-	return bxor(left, right);
+	Object* result = bxor(left, right);
+
+	delete left;
+	delete right;
+
+	return result;
 }
 

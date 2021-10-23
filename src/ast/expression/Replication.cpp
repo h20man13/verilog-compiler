@@ -8,7 +8,7 @@ void Replication::code_gen() const {
 	//TODO - ADD llvm emit code here
 }
 
-ObjBase* const Replication::evaluate(){
+Object* const Replication::evaluate(){
 	return NULL;
 }
 

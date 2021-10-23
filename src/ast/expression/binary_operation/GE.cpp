@@ -8,7 +8,7 @@
 #include "ast/expression/binary_operation/GE.h"
 #include "ast/expression/binary_operation/Binary.h"
 #include "ast/expression/Expression.h"
-#include "common/types/TypeOpUtils.h"
+#include "common/TypeOpUtils.h"
 
 GE::GE(const Position& position, Expression* const left, Expression* const right): AstNode(position), Binary(position, left, right){}
 
@@ -18,9 +18,9 @@ void GE::code_gen() const {
 	// TODO -- finish this later
 }
 
-ObjBase* const GE::evaluate() {
-	ObjBase *const left = this->left->evaluate();
-	ObjBase *const right = this->right->evaluate();
+Object* const GE::evaluate() {
+	Object *const left = this->left->evaluate();
+	Object *const right = this->right->evaluate();
 
 	return bor(left, right);
 }

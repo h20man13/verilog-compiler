@@ -6,7 +6,7 @@ void Index::code_gen() const{
 	//TODO -- generate llvm code here
 }
 
-ObjBase* const Index::evaluate(){
+Object* const Index::evaluate(){
 	return NULL;
 }
 

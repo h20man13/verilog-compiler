@@ -25,7 +25,7 @@ void Concatenation::code_gen() const {
 	//TODO -- generate llvm code
 }
 
-ObjBase* const Concatenation::evaluate() {
+Object* const Concatenation::evaluate() {
 	return NULL;
 }
 

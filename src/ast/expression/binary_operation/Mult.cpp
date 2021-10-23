@@ -8,7 +8,7 @@
 #include "ast/expression/binary_operation/Mult.h"
 #include "ast/expression/binary_operation/Binary.h"
 #include "ast/expression/Expression.h"
-#include "common/types/TypeOpUtils.h"
+#include "common/TypeOpUtils.h"
 
 Mult::Mult(const Position& position, Expression* const left, Expression* const right): AstNode(position), Binary(position, left, right){}
 
@@ -18,10 +18,15 @@ void Mult::code_gen() const {
 	// TODO -- finish this later
 }
 
-ObjBase* const Mult::evaluate() {
-	ObjBase *const left = this->left->evaluate();
-	ObjBase *const right = this->right->evaluate();
+Object* const Mult::evaluate() {
+	Object *const left = this->left->evaluate();
+	Object *const right = this->right->evaluate();
 
-	return mult(left, right);
+	Object* result = mult(left, right);
+
+	delete left;
+	delete right;
+
+	return result;
 }
 
